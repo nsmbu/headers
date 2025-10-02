@@ -13,7 +13,7 @@ private:
     static_assert(N >= 1);
 
     // Deleted
-    void set(Actor* p_owner, const InitArg& arg, s32 point_num, sead::Heap* heap = nullptr);
+    void set(Actor* owner, const InitArg& arg, s32 point_num, sead::Heap* heap = nullptr);
 
 public:
     ActorPolylineBgCollision()
@@ -32,9 +32,9 @@ public:
         }
     }
 
-    void set(Actor* p_owner, const InitArg& base_arg)
+    void set(Actor* owner, const InitArg& base_arg)
     {
-        BasicRideLineBgCollision::set(p_owner, base_arg);
+        BasicRideLineBgCollision::set(owner, base_arg);
     }
 
 protected:

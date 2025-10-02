@@ -13,9 +13,9 @@ class BrosDrcTouchCB : public ActorCollisionDrcTouchCallback    // vtbl Address:
 {
 public:
     // Address: 0x022DD974
-    bool ccSetTouchNormal(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    bool ccSetTouchNormal(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
     // Address: 0x022DDAEC
-    void ccOnTouch(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    void ccOnTouch(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
 };
 static_assert(sizeof(BrosDrcTouchCB) == sizeof(ActorCollisionDrcTouchCallback));
 
@@ -247,7 +247,7 @@ public:
     bool calcTurnAngle();
 
 protected:
-    BlendModel*                 mpBlendModel;
+    BlendModel*                 mBlendModel;
     sead::Matrixf               mBone6Transform;
     sead::Matrixf               mBone4Transform;
     sead::Matrixf               mBone0Transform;

@@ -74,22 +74,22 @@ public:
 
     void startSaveGame()
     {
-        startSaveGame(mpSavedata->header.last_file);
+        startSaveGame(mSavedata->header.last_file);
     }
 
     void startQuickSaveGame()
     {
-        startQuickSaveGame(mpSavedata->header.last_file);
+        startQuickSaveGame(mSavedata->header.last_file);
     }
 
 protected:
-    sead::DelegateThread*   mpDelegateThread;
+    sead::DelegateThread*   mDelegateThread;
     Status                  mStatus;
     ReadError               mReadError;
     WriteError              mWriteError;
     s32                     _20;                    // enum ?
-    const SaveData*         mpSavedata;             // rp_savedata
-    void*                   mpPersonalSavedata;     // rp_personal_savedata
+    const SaveData*         mSavedata;              // rp_savedata
+    void*                   mPersonalSavedata;      // rp_personal_savedata
     bool                    mButtonLayoutChanged;
     u8                      _2d;
     u8                      _2e;

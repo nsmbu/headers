@@ -112,7 +112,7 @@ public:
     void setPlayerMode(PlayerMode mode);
 
     // Address: 0x0291ADF0
-    bool getHeadPropelJointMtx(sead::Matrixf* p_mtx);
+    bool getHeadPropelJointMtx(sead::Matrixf* mtx);
 
     // Address: 0x0291AE58
     bool checkChange_MusaPtoNml();
@@ -170,16 +170,16 @@ public:
     virtual void setTexAnmTypeImpl(TexAnmType type) = 0;
 
     // Address: 0x0291C4D8
-    bool getPlayerModeAnmResInfo(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id, bool body) override;
+    bool getPlayerModeAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id, bool body) override;
     // Address: 0x0291DDE4
-    bool getPlayerModeRideAnmResInfo(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id) override;
+    bool getPlayerModeRideAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id) override;
 
     // Address: 0x0291E8C0
     void setAnm(s32 anm_id, f32 rate, f32 blend_duration = 0.0f, f32 frame = 0.0f) override;
     // Address: 0x0291E9A8
-    void setFootAnmImpl(const ModelResource* p_anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) override;
+    void setFootAnmImpl(const ModelResource* anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) override;
     // Address: 0x0291EB30
-    void setBodyAnmImpl(const ModelResource* p_anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) override;
+    void setBodyAnmImpl(const ModelResource* anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) override;
     // Address: 0x0291ED04
     void releaseBodyAnm(f32 blend_duration) override;
     // Address: 0x0291EF78
@@ -213,7 +213,7 @@ public:
     virtual void setJointMap();
 
     // Address: 0x02920118
-    void getJointMtx(sead::Matrixf* p_mtx, const sead::SafeString& name) override;
+    void getJointMtx(sead::Matrixf* mtx, const sead::SafeString& name) override;
 
     void setPropelRollAngle(const Angle& angle)
     {
@@ -244,7 +244,7 @@ protected:
     sead::SafeArray<AnimModel*, cPlayerModeModel_Num>   mModelArray;
     sead::SafeArray<AnimModel*, cPlayerModeModel_Num>   mHeadModelArray;
     const PlayerObjectResHIO&                           mResHio;
-    AnimModel*                                          mpHeadModel;
+    AnimModel*                                          mHeadModel;
     PlayerModeModel                                     mOldModeModel;
     PlayerModeModel                                     mNowModeModel;
     sead::BitFlag16                                     mModeModelLoadFlag;

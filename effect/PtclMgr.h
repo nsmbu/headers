@@ -80,7 +80,7 @@ public:
 
     sead::ptcl::PtclSystem* getPtclSystem()
     {
-        return mpPtclSystem;
+        return mPtclSystem;
     }
 
     // Address: 0x022AC984
@@ -90,7 +90,7 @@ public:
     static s32 compare(const nw::eft::EmitterInstance* a, const nw::eft::EmitterInstance* b);
 
     // Address: 0x022ACA44
-    void draw(const agl::lyr::RenderInfo& render_info, s32 type, const sead::PtrArray<nw::eft::EmitterInstance>* p_emitters = nullptr);
+    void draw(const agl::lyr::RenderInfo& render_info, s32 type, const sead::PtrArray<nw::eft::EmitterInstance>* emitters = nullptr);
 
     // Address: 0x022ACE58
     s32 getEmitterSetGroupID(s32 set_id, u32 res_id = 0) const;
@@ -124,7 +124,7 @@ public:
     void drawRange(const agl::lyr::RenderInfo& render_info, s32 typeMin, s32 typeMax);
 
     // Address: 0x022AD948
-    bool createEmitterSet(nw::eft::Handle* p_handle, const sead::Matrix34f& mtxRT, EffectID id);
+    bool createEmitterSet(nw::eft::Handle* handle, const sead::Matrix34f& mtxRT, EffectID id);
 
     // Address: 0x022AD930
     const PtclParam* getParam(EffectID id) const;
@@ -134,16 +134,16 @@ public:
 
 protected:
     // Address: 0x022AC8F8
-    void setEmitterColor_(nw::eft::EmitterSet* p_emitter_set);
+    void setEmitterColor_(nw::eft::EmitterSet* emitter_set);
 
 protected:
-    sead::ptcl::PtclSystem*                             mpPtclSystem;
-    PtclParallelExecuter*                               mpParallelExecuter;
-    PtclEmitterColorMgr*                                mpEmitterColorMgr;
-    PtclParamMgr*                                       mpParamMgr;
+    sead::ptcl::PtclSystem*                             mPtclSystem;
+    PtclParallelExecuter*                               mParallelExecuter;
+    PtclEmitterColorMgr*                                mEmitterColorMgr;
+    PtclParamMgr*                                       mParamMgr;
     sead::TList<EffectObjBase*>                         mEffects;
-    sead::FixedPtrArray<nw::eft::EmitterInstance, 256>  mpEmitter1;
-    sead::FixedPtrArray<nw::eft::EmitterInstance, 256>  mpEmitter2;
+    sead::FixedPtrArray<nw::eft::EmitterInstance, 256>  mEmitter1;
+    sead::FixedPtrArray<nw::eft::EmitterInstance, 256>  mEmitter2;
     s32                                                 mPlayerNo;
     bool                                                mIsUseDisplayList;
     bool                                                mIsDrawDisable;

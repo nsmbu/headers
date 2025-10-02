@@ -10,7 +10,7 @@ class BossDrcTouchCB : public ActorCollisionDrcTouchCallback    // vtbl Address:
 {
 public:
     // Address: 0x0202b8c0
-    bool ccSetTouchNormal(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    bool ccSetTouchNormal(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
 };
 static_assert(sizeof(BossDrcTouchCB) == sizeof(ActorCollisionDrcTouchCallback));
 
@@ -266,14 +266,14 @@ public:
         return 24;
     }
 
-    virtual void createCBSmallScoreDamage(Actor* p_actor) const
+    virtual void createCBSmallScoreDamage(Actor* actor) const
     {
-        createCoinBattleSmallScore_(p_actor, mPos, 3);
+        createCoinBattleSmallScore_(actor, mPos, 3);
     }
 
-    virtual void createCBSmallScoreDead(Actor* p_actor) const
+    virtual void createCBSmallScoreDead(Actor* actor) const
     {
-        createCoinBattleSmallScore_(p_actor, mPos, 4);
+        createCoinBattleSmallScore_(actor, mPos, 4);
     }
 
     // Address: 0x0202D120
@@ -282,52 +282,52 @@ public:
     // Address: 0x0202D214
     virtual void fumiProc(Actor*);
 
-    virtual void setFumiDamage(Actor* p_actor)
+    virtual void setFumiDamage(Actor* actor)
     {
     }
 
-    virtual void setFumiDead(Actor* p_actor)
+    virtual void setFumiDead(Actor* actor)
     {
         changeState(StateID_DieFumi);
     }
 
-    virtual void setFireDamage(Actor* p_actor)
+    virtual void setFireDamage(Actor* actor)
     {
     }
 
-    virtual void setFireDead(Actor* p_actor)
+    virtual void setFireDead(Actor* actor)
     {
         changeState(StateID_DieFire);
     }
 
-    virtual void setHipatkDamage(Actor* p_actor)
+    virtual void setHipatkDamage(Actor* actor)
     {
-        setFumiDamage(p_actor);
+        setFumiDamage(actor);
     }
 
-    virtual void setHipatkDead(Actor* p_actor)
+    virtual void setHipatkDead(Actor* actor)
     {
-        setFumiDead(p_actor);
-    }
-
-    // Address: Deleted
-    virtual void setSlideDamage(Actor* p_actor)
-    {
+        setFumiDead(actor);
     }
 
     // Address: Deleted
-    virtual void setSlideDead(Actor* p_actor)
+    virtual void setSlideDamage(Actor* actor)
+    {
+    }
+
+    // Address: Deleted
+    virtual void setSlideDead(Actor* actor)
     {
         changeState(StateID_DieSlide);
     }
 
     // Address: Deleted
-    virtual void setStarDamage(Actor* p_actor)
+    virtual void setStarDamage(Actor* actor)
     {
     }
 
     // Address: Deleted
-    virtual void setStarDead(Actor* p_actor)
+    virtual void setStarDead(Actor* actor)
     {
         changeState(StateID_DieStar);
     }
@@ -341,11 +341,11 @@ public:
         changeState(StateID_DieQuake);
     }
 
-    virtual void setShellDamage(Actor* p_actor)
+    virtual void setShellDamage(Actor* actor)
     {
     }
 
-    virtual void setShellDead(Actor* p_actor)
+    virtual void setShellDead(Actor* actor)
     {
         changeState(StateID_DieShell);
     }
@@ -555,7 +555,7 @@ public:
 
 protected:
     // Address: 0x0202D0F8
-    void createCoinBattleSmallScore_(Actor* p_actor, const sead::Vector3f& pos, u32 type) const;
+    void createCoinBattleSmallScore_(Actor* actor, const sead::Vector3f& pos, u32 type) const;
 
 protected:
     s32                         mLifeHP;

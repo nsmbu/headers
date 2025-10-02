@@ -148,9 +148,9 @@ public:
     virtual u32 vf2C(u32*);
     virtual void vf34() = 0;
     virtual void execute() = 0;
-    virtual bool checkAreaBasic(BgCollisionCheckResultArea* p_res, const BasicBgCollisionCheck& bc, const sead::Vector2f& p0, const sead::Vector2f& p1, u8 hit_dir_mask) = 0;
+    virtual bool checkAreaBasic(BgCollisionCheckResultArea* res, const BasicBgCollisionCheck& bc, const sead::Vector2f& p0, const sead::Vector2f& p1, u8 hit_dir_mask) = 0;
     virtual bool checkAreaActor(ActorBgCollisionCheckResult*, sead::Vector2f*, sead::Vector2f*, u8 direction, ActorBgCollisionCheck*) = 0;
-    virtual bool checkPointInside(bool* p_on_edge, const sead::Vector2f& p) const = 0;
+    virtual bool checkPointInside(bool* on_edge, const sead::Vector2f& p) const = 0;
     virtual bool vf5C(u32*) = 0;
     // Address: 0x021A680C
     virtual void vf64();
@@ -165,18 +165,18 @@ public:
 
     Actor* getOwner() const
     {
-        return mpOwner;
+        return mOwner;
     }
 
     template <typename T>
     T* getOwner() const
     {
-        return sead::DynamicCast<T>(mpOwner);
+        return sead::DynamicCast<T>(mOwner);
     }
 
     Actor* getIgnoreActor() const
     {
-        return mpIgnoreActor;
+        return mIgnoreActor;
     }
 
     const FollowArg& getFollowArg() const
@@ -211,34 +211,34 @@ public:
 
     f32 getPosX() const
     {
-        return mFollowArg.p_position->x + mPosOffset.x;
+        return mFollowArg.position->x + mPosOffset.x;
     }
 
     f32 getPosY() const
     {
-        return mFollowArg.p_position->y + mPosOffset.y;
+        return mFollowArg.position->y + mPosOffset.y;
     }
 
     sead::Vector2f getPos() const
     {
         // Not inline in NSMB2
-        return *reinterpret_cast<sead::Vector2f*>(mFollowArg.p_position) + mPosOffset;
+        return *reinterpret_cast<sead::Vector2f*>(mFollowArg.position) + mPosOffset;
     }
 
     f32 getPosPrevX() const
     {
-        return mFollowArg.p_position_prev->x + mPosOffsetPrev.x;
+        return mFollowArg.position_prev->x + mPosOffsetPrev.x;
     }
 
     f32 getPosPrevY() const
     {
-        return mFollowArg.p_position_prev->y + mPosOffsetPrev.y;
+        return mFollowArg.position_prev->y + mPosOffsetPrev.y;
     }
 
     sead::Vector2f getPosPrev() const
     {
         // Not inline in NSMB2
-        return *reinterpret_cast<sead::Vector2f*>(mFollowArg.p_position_prev) + mPosOffsetPrev;
+        return *reinterpret_cast<sead::Vector2f*>(mFollowArg.position_prev) + mPosOffsetPrev;
     }
 
     f32 getTypePosX() const
@@ -363,35 +363,35 @@ public:
         mCheckRevWall = check_rev_wall;
     }
 
-    void setDrcTouchCallback(ActorCollisionDrcTouchCallback* p_drc_touch_callback)
+    void setDrcTouchCallback(ActorCollisionDrcTouchCallback* drc_touch_callback)
     {
-        mpDrcTouchCallback = p_drc_touch_callback;
+        mDrcTouchCallback = drc_touch_callback;
     }
 
 public:
     // Use this as default for mCheckRevFoot
-    static bool CheckRevUpperSpeed(Actor* p_actor_self, Actor* p_actor_other)
+    static bool CheckRevUpperSpeed(Actor* actor_self, Actor* actor_other)
     {
-        return p_actor_self->getSpeedVec().y > 0.0f;
+        return actor_self->getSpeedVec().y > 0.0f;
     }
 
     // Use this as default for mCheckRevHead
-    static bool CheckRevUnderSpeed(Actor* p_actor_self, Actor* p_actor_other)
+    static bool CheckRevUnderSpeed(Actor* actor_self, Actor* actor_other)
     {
-        return p_actor_self->getSpeedVec().y < 0.0f;
+        return actor_self->getSpeedVec().y < 0.0f;
     }
 
     // Use this as default for mCheckRevWall
-    static bool CheckRevSideSpeed(Actor* p_actor_self, Actor* p_actor_other, u8 direction)
+    static bool CheckRevSideSpeed(Actor* actor_self, Actor* actor_other, u8 direction)
     {
         if (direction == cDirType_Right)
         {
-            if (p_actor_self->getSpeedVec().x > 0.0f)
+            if (actor_self->getSpeedVec().x > 0.0f)
                 return true;
         }
         else
         {
-            if (p_actor_self->getSpeedVec().x < 0.0f)
+            if (actor_self->getSpeedVec().x < 0.0f)
                 return true;
         }
         return false;
@@ -412,8 +412,8 @@ protected:
     sead::Vector2f                  mPosOffset2;    // Additional position offset set when area loop is on, not even used by all collision types...
     sead::BitFlag32                 mFlag;
     sead::BitFlag32                 mCheckRevFlag;  // ^^^
-    Actor*                          mpOwner;
-    Actor*                          mpIgnoreActor;  // Force BasicBgCollisionCheck owned by this actor to ignore this BgCollision
+    Actor*                          mOwner;
+    Actor*                          mIgnoreActor;  // Force BasicBgCollisionCheck owned by this actor to ignore this BgCollision
     FollowArg                       mFollowArg;
     sead::Vector2f                  mPosOffset;
     sead::Vector2f                  mPosOffsetPrev;
@@ -438,7 +438,7 @@ protected:
     CheckRev                        mCheckRevFoot;
     CheckRev                        mCheckRevHead;
     CheckRevWall                    mCheckRevWall;
-    ActorCollisionDrcTouchCallback* mpDrcTouchCallback;
+    ActorCollisionDrcTouchCallback* mDrcTouchCallback;
     u32                             _154;
 };
 static_assert(sizeof(BgCollision) == 0x158);

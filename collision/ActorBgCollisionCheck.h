@@ -44,7 +44,7 @@ private:
     sead::Vector2f  _c;
     sead::Vector2f  _14;
     ActorUniqueID   mActorUniqueID;
-    BgCollision*    mpOwner;
+    BgCollision*    mOwner;
   //u32             _24[4 / sizeof(u32)];   // Alignment???
     u64             mBgCheckData;           // See BgUnitCode
     f32             _30;
@@ -291,17 +291,17 @@ protected:
 
 public:
     // Address: 0x0218AF6C
-    void set(Actor* p_owner, const Sensor* p_foot, const Sensor* p_head, const Sensor* p_wall);
+    void set(Actor* owner, const Sensor* foot, const Sensor* head, const Sensor* wall);
 
     Actor* getOwner() const
     {
-        return mpOwner;
+        return mOwner;
     }
 
     template <typename T>
     T* getOwner() const
     {
-        return sead::DynamicCast<T>(mpOwner);
+        return sead::DynamicCast<T>(mOwner);
     }
 
     // Address: 0x0218AEFC
@@ -346,12 +346,12 @@ public:
 
     Actor* getIgnoreActor() const
     {
-        return mpIgnoreActor;
+        return mIgnoreActor;
     }
 
-    void setIgnoreActor(Actor* p_actor)
+    void setIgnoreActor(Actor* actor)
     {
-        mpIgnoreActor = p_actor;
+        mIgnoreActor = actor;
     }
 
     const FollowArg& getFollowArg() const { return mFollowArg; }
@@ -449,9 +449,9 @@ public:
     void initBgCheck();
 
     // Address: 0x0218F0C0
-    static WaterType checkWater(f32* p_surface_pos_y, const sead::Vector3f& pos, u8 layer);
+    static WaterType checkWater(f32* surface_pos_y, const sead::Vector3f& pos, u8 layer);
     // Address: 0x0218F72C
-    static WaterType checkWater(f32* p_surface_pos_y, BgCollisionCheckHitResult* p_hit_result, const sead::Vector3f& pos, u8 layer);
+    static WaterType checkWater(f32* surface_pos_y, BgCollisionCheckHitResult* hit_result, const sead::Vector3f& pos, u8 layer);
     // Address: 0x0219047C
     static WaterType checkWater(const sead::Vector3f& pos, u8 layer);
 
@@ -468,8 +468,8 @@ protected:
     List::Node                              mListNodeHead;
     List::Node                              mListNodeWallR;
     List::Node                              mListNodeWallL;
-    Actor*                                  mpOwner;
-    Actor*                                  mpIgnoreActor;          // Force mBgCheck to ignore BgCollision owned by this actor
+    Actor*                                  mOwner;
+    Actor*                                  mIgnoreActor;          // Force mBgCheck to ignore BgCollision owned by this actor
     FollowArg                               mFollowArg;
     Output                                  mOutput;
     Output                                  mOutputPrev;

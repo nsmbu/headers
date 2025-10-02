@@ -35,13 +35,13 @@ protected:
 
 public:
     // Address: 0x022AF060
-    PtclParallelExecuter(sead::Heap* heap, PtclMgr* p_mgr, sead::ptcl::PtclSystem* p_system);
+    PtclParallelExecuter(sead::Heap* heap, PtclMgr* mgr, sead::ptcl::PtclSystem* system);
 
     // Address: 0x022AF420
     void execute();
 
 protected:
-    sead::ptcl::PtclSystem* mpPtclSystem;
+    sead::ptcl::PtclSystem* mPtclSystem;
     sead::FixedPtrArray<
         ParallelExecuter,
         cExecuterNum

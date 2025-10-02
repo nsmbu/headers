@@ -97,7 +97,7 @@ public:
     // Address: 0x02329250
     virtual bool playerDamageCheck(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);
     // Address: 0x02329520
-    virtual bool enemyPreDamageCheck(bool* p_no_respawn, ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);
+    virtual bool enemyPreDamageCheck(bool* no_respawn, ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);
     // Address: 0x02329578
     virtual bool hitYoshiEat(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);
     // Address: 0x0232957C
@@ -152,7 +152,7 @@ public:
     virtual bool hitCallback_ChibiYoshiStar(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);
 
     // Address: 0x0232DA24
-    virtual bool hitCallback_AttackUnk27(bool* p_no_respawn, ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);
+    virtual bool hitCallback_AttackUnk27(bool* no_respawn, ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);
 
     // Address: 0x0232DAF0
     virtual void setDeathInfo_Quake(s32);
@@ -303,7 +303,7 @@ public:
     // ---------------------------------------------------------------------------------------- //
 
     // Address: 0x02328C24
-    static bool ceilCheck(f32 pos_y, ActorCollisionCheck* p_cc);
+    static bool ceilCheck(f32 pos_y, ActorCollisionCheck* cc);
 
     // Address: 0x02328C50
     static void normal_collcheck(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);
@@ -334,7 +334,7 @@ public:
     FumiType fumiCheck(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other, FumiSeType se_type);
 
     // Address: 0x02329130
-    s32 calcComboPlFumiCnt(Actor* p_player);
+    s32 calcComboPlFumiCnt(Actor* player);
 
     // Address: 0x02329168
     void bound(f32, f32, f32);
@@ -363,9 +363,9 @@ public:
         startSound("SE_EMY_YOSHI_STEP");
     }
 
-    void spinFumiJumpSet(Actor* p_actor)
+    void spinFumiJumpSet(Actor* actor)
     {
-        fumiJumpSet(p_actor);
+        fumiJumpSet(actor);
     }
 
     // Address: 0x02329B6C

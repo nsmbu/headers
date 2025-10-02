@@ -5,8 +5,8 @@
 class PairObjChildDrcTouchCB : public ActorCollisionDrcTouchCallback
 {
 public:
-    bool bcSetTouchNormal(BgCollision* p_bg_collision, const sead::Vector2f& pos) override;
-    void bcOnTouch(BgCollision* p_bg_collision, const sead::Vector2f& pos) override;
+    bool bcSetTouchNormal(BgCollision* bg_collision, const sead::Vector2f& pos) override;
+    void bcOnTouch(BgCollision* bg_collision, const sead::Vector2f& pos) override;
 };
 static_assert(sizeof(PairObjChildDrcTouchCB) == sizeof(ActorCollisionDrcTouchCallback));
 

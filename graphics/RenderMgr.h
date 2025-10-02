@@ -24,11 +24,11 @@ class RenderMgr : public sead::IDisposer, public sead::INamable // vtbl Address:
 public:
     struct ViewInfo
     {
-        RenderObjLayerBase*     p_layer;
+        RenderObjLayerBase*     layer;
         sead::Matrix34f         view_mtx;
         sead::Matrix44f         proj_mtx;
-        const sead::Matrix44f*  p_depth_shadow_mtx;
-        const CullViewFrustum*  p_cull;
+        const sead::Matrix44f*  depth_shadow_mtx;
+        const CullViewFrustum*  cull;
         void*                   _7c; // pointer to struct of two f32 and one sead::Color4f for fog color
     };
     static_assert(sizeof(ViewInfo) == 0x80);
@@ -63,7 +63,7 @@ public:
     void clear();
 
     // Address: 0x024FBF6C
-    void calcView(s32 view_index, const sead::Camera& camera, const sead::Projection& projection, const sead::Matrix44f* p_depth_shadow_mtx, const CullViewFrustum* p_cull, void* param_6);
+    void calcView(s32 view_index, const sead::Camera& camera, const sead::Projection& projection, const sead::Matrix44f* depth_shadow_mtx, const CullViewFrustum* cull, void* param_6);
     // Address: 0x024FC090
     void calcGPU(s32 view_index);
     // Address: 0x024FC158
@@ -83,25 +83,25 @@ public:
     void pushBackRenderObj(RenderObj* obj, s32 opa_buffer_index, s32 xlu_buffer_index, const sead::Vector3f& order_pos);
 
     // Address: 0x024FC738
-    s32 createView(RenderObjLayerBase* p_layer);
+    s32 createView(RenderObjLayerBase* layer);
 
     // Address: 0x024FC798
-    void loadEnvRes(const void* p_file);
+    void loadEnvRes(const void* file);
 
     // Address: 0x024FC7EC
-    void calcViewShapeShadowFlags(agl::sdw::DepthShadow* p_depth_shadow, RenderObjLayerBase* p_shadow_layer);
+    void calcViewShapeShadowFlags(agl::sdw::DepthShadow* depth_shadow, RenderObjLayerBase* shadow_layer);
 
     ModelEnvView& getModelEnvView() { return mModelEnvView; }
     const ModelEnvView& getModelEnvView() const { return mModelEnvView; }
 
-    CallbackBase* getDrawCallback() const { return mpCallback; }
-    void setDrawCallback(CallbackBase* p_callback) { mpCallback = p_callback; }
+    CallbackBase* getDrawCallback() const { return mCallback; }
+    void setDrawCallback(CallbackBase* callback) { mCallback = callback; }
 
-    agl::TextureSampler* getShadowMap() const { return mpShadowMap; }
-    agl::TextureSampler* getReflectionMap() const { return mpReflectionMap; }
+    agl::TextureSampler* getShadowMap() const { return mShadowMap; }
+    agl::TextureSampler* getReflectionMap() const { return mReflectionMap; }
 
-    void setShadowMap(agl::TextureSampler* p_sampler) { mpShadowMap = p_sampler; }
-    void setReflectionMap(agl::TextureSampler* p_sampler) { mpReflectionMap = p_sampler; }
+    void setShadowMap(agl::TextureSampler* sampler) { mShadowMap = sampler; }
+    void setReflectionMap(agl::TextureSampler* sampler) { mReflectionMap = sampler; }
 
     agl::env::EnvObjMgr& getEnvObjMgr() { return mEnvObjMgr; }
     const agl::env::EnvObjMgr& getEnvObjMgr() const { return mEnvObjMgr; }
@@ -124,10 +124,10 @@ private:
     sead::PtrArray<RenderObj>                   mRenderObjShadow;
     agl::env::EnvObjMgr                         mEnvObjMgr;
     ModelEnvView                                mModelEnvView;
-    CallbackBase*                               mpCallback;
+    CallbackBase*                               mCallback;
     bool                                        mDrawShadow;        // I think
-    agl::TextureSampler*                        mpShadowMap;
-    agl::TextureSampler*                        mpReflectionMap;
+    agl::TextureSampler*                        mShadowMap;
+    agl::TextureSampler*                        mReflectionMap;
     sead::Buffer<ViewInfo>                      mViewInfo;
     sead::ListNode                              mListNode;          // For sead::OffsetList in LayerMgr
 };

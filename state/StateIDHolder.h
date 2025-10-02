@@ -12,27 +12,27 @@ public:
         reset();
     }
 
-    void set(const StateID* p_state_id)
+    void set(const StateID*state_id)
     {
-        mpStateID = p_state_id;
+        mStateID = state_id;
     }
 
     void reset()
     {
-        mpStateID = nullptr;
+        mStateID = nullptr;
     }
 
     bool isSet() const
     {
-        return mpStateID != nullptr;
+        return mStateID != nullptr;
     }
 
     const StateID* get() const
     {
-        return mpStateID;
+        return mStateID;
     }
 
 protected:
-    const StateID*  mpStateID;
+    const StateID*  mStateID;
 };
 static_assert(sizeof(StateIDHolder) == 4);

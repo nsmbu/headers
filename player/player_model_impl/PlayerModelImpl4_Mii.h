@@ -28,7 +28,7 @@ public:
 
 public:
     // Address: 0x029735D8
-    MiiModel(Type type, PlayerMode mode, SceneType scene_type, PlayerCharacter color, const Mii::SlotID& slot_id, sead::Heap* p_ffl_tmp_heap, bool override_lightmap);
+    MiiModel(Type type, PlayerMode mode, SceneType scene_type, PlayerCharacter color, const Mii::SlotID& slot_id, sead::Heap* ffl_tmp_heap, bool override_lightmap);
 
     // Address: 0x02973800
     void play() override;
@@ -67,9 +67,9 @@ public:
     void setTexAnmTypeImpl(TexAnmType type) override;
 
     // Address: 0x0297453C
-    bool getPlayerModeAnmResInfo(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id, bool body) override;
+    bool getPlayerModeAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id, bool body) override;
     // Address: 0x029748B4
-    bool getPlayerModeRideAnmResInfo(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id) override;
+    bool getPlayerModeRideAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id) override;
 
     // Address: 0x029749F0
     f32 vf13C() override;
@@ -103,10 +103,10 @@ public:
     void setTevKColor3(f32 value) override;
 
 protected:
-    ModelResource*                          mpMiiAnmRes;
+    ModelResource*                          mMiiAnmRes;
     PlayerCharacter                         mColor;
     Mii::SlotID                             mSlotID;
-    ModelFFL*                               mpFaceModel;
+    ModelFFL*                               mFaceModel;
     agl::TextureData                        mEnvTexture_Star;
     agl::TextureData                        mEnvTexture_P;
     f32                                     mHeadPatAnmFrame;
@@ -119,7 +119,7 @@ protected:
         AnimModel*,
         cModeHeadModel_Num
     >                                       mModeHeadModelArray;
-    AnimModel*                              mpModeHeadModel;
+    AnimModel*                              mModeHeadModel;
     sead::BitFlag16                         mModeHeadModelLoadFlag;
     bool                                    mIsCapVisible;
 };

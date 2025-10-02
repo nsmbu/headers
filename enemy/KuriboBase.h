@@ -12,9 +12,9 @@ class KuriboDrcTouchCB : public ActorCollisionDrcTouchCallback  // vtbl Address:
 {
 public:
     // Address: 0x023DDBF8
-    bool ccSetTouchNormal(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    bool ccSetTouchNormal(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
     // Address: 0x023DDC90
-    void ccOnTouch(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    void ccOnTouch(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
 };
 static_assert(sizeof(KuriboDrcTouchCB) == sizeof(ActorCollisionDrcTouchCallback));
 
@@ -132,17 +132,17 @@ public:
     {
     }
 
-    virtual void reactSpinFumiProc(Actor* p_player)
+    virtual void reactSpinFumiProc(Actor* player)
     {
-        setDeathInfo_SpinFumi(p_player);
+        setDeathInfo_SpinFumi(player);
     }
 
-    virtual void reactYoshiFumiProc(Actor* p_yoshi)
+    virtual void reactYoshiFumiProc(Actor* yoshi)
     {
-        if (mpParentMiddleKuribo != nullptr)
-            mpParentMiddleKuribo->_1b0c++;
+        if (mParentMiddleKuribo != nullptr)
+            mParentMiddleKuribo->_1b0c++;
 
-        setDeathInfo_YoshiFumi(p_yoshi);
+        setDeathInfo_YoshiFumi(yoshi);
     }
 
     virtual void vf53C(const ActorCollisionCheck&)  // Seems to detach the actor from its balloon in Kuribo
@@ -223,17 +223,17 @@ public:
 
 protected:
     // Address: 0x023DC4AC
-    void calcModel_(BlendModel* p_model);
+    void calcModel_(BlendModel* model);
 
     // Address: 0x023DD708
-    static BlendModel* createModel_(ModelResource* p_mdl_res, const sead::SafeString& name, bool not_set_walk_anm);
+    static BlendModel* createModel_(ModelResource* mdl_res, const sead::SafeString& name, bool not_set_walk_anm);
 
 protected:
-    ModelResource*              mpModelResource;
-    BlendModel*                 mpBlendModel;
-    TexturePatternAnimation*    mpTexAnim;
+    ModelResource*              mModelResource;
+    BlendModel*                 mBlendModel;
+    TexturePatternAnimation*    mTexAnim;
     CalcRatioSRT                mCalcRatio;
-    MiddleKuribo*               mpParentMiddleKuribo;
+    MiddleKuribo*               mParentMiddleKuribo;
     ActorCollisionCheck         mCollisionCheckDrcTouch;    // Maybe?
     f32                         mWalkAnmRate;               // Stored, but never read
     f32                         mZOffset;

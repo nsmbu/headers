@@ -40,9 +40,9 @@ public:
     // Address: 0x0240A8D8
     void reactFumiProc(Actor*) override;
     // Address: 0x0240A968
-    void reactSpinFumiProc(Actor* p_player) override;
+    void reactSpinFumiProc(Actor* player) override;
     // Address: 0x0240A9C4
-    void reactYoshiFumiProc(Actor* p_yoshi) override;
+    void reactYoshiFumiProc(Actor* yoshi) override;
     // Address: 0x0240B150
     void onDrcTouch() override;
 
@@ -63,7 +63,7 @@ public:
     DECLARE_STATE_ID(PataKuribo, Pata_Turn)
 
 protected:
-    BlendModel*     mpBlendModelWing;
+    BlendModel*     mBlendModelWing;
     sead::Vector3f  mWingRootPos;
     u8              _1a98;
     u8              _1a99;

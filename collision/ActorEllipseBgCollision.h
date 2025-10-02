@@ -22,11 +22,11 @@ public:
     // Address: 0x0219EDF8
     void execute() override;
     // Address: 0x0219F260
-    bool checkAreaBasic(BgCollisionCheckResultArea* p_res, const BasicBgCollisionCheck& bc, const sead::Vector2f& p0, const sead::Vector2f& p1, u8 hit_dir_mask) override;
+    bool checkAreaBasic(BgCollisionCheckResultArea* res, const BasicBgCollisionCheck& bc, const sead::Vector2f& p0, const sead::Vector2f& p1, u8 hit_dir_mask) override;
     // Address: 0x021A035C
     bool checkAreaActor(ActorBgCollisionCheckResult*, sead::Vector2f*, sead::Vector2f*, u8 direction, ActorBgCollisionCheck*) override;
     // Address: 0x0219FCF4
-    bool checkPointInside(bool* p_on_edge, const sead::Vector2f& p) const override;
+    bool checkPointInside(bool* on_edge, const sead::Vector2f& p) const override;
     // Address: Deleted
     bool vf5C(u32*) override;
     // Address: 0x0219FDFC
@@ -41,7 +41,7 @@ public:
     void setCommon(const FollowArg& follow_arg, const EllipseInitArg& init_arg);
 
     // Address: 0x0219ED80
-    void set(Actor* p_owner, const EllipseInitArg& arg);
+    void set(Actor* owner, const EllipseInitArg& arg);
 
     f32 getCenterPosX() const
     {

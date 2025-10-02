@@ -42,9 +42,9 @@ public:
             Renderer::instance()->setLayer(sead::DynamicCast<RenderObjLayerBase>(agl::lyr::Renderer::instance()->getLayer(layer_id)), type);
         }
 
-        LayerSetter(RenderObjLayerBase* p_layer, GatherType type)
+        LayerSetter(RenderObjLayerBase* layer, GatherType type)
         {
-            Renderer::instance()->setLayer(p_layer, type);
+            Renderer::instance()->setLayer(layer, type);
         }
 
         ~LayerSetter()
@@ -66,16 +66,16 @@ public:
     void calcForAreaTask();
 
     // Address: 0x024FAA50
-    void setLayer(agl::lyr::Layer* p_layer, GatherType type);
+    void setLayer(agl::lyr::Layer* layer, GatherType type);
     // Address: 0x024FAB4C
     void resetLayer();
 
     // Address: 0x024FAB58
-    void drawModel(Model* p_model);
+    void drawModel(Model* model);
     // Address: 0x024FAC98
-    void drawModel(const AnimModel* p_model);
+    void drawModel(const AnimModel* model);
     // Address: 0x024FACA0
-    void drawModel(ModelFFL* p_model);
+    void drawModel(ModelFFL* model);
 
     // Address: 0x024FAD28
     void drawActorBgUnit(UnitID unit, const sead::Vector3f& pos, Angle angle, const sead::Vector3f& scale);
@@ -86,7 +86,7 @@ private:
     sead::BoundBox2f        mViewBoundBox;
     sead::OrthoProjection   mProjection3D;
     sead::OrthoCamera       mCamera3D;
-    RenderObjLayerBase*     mpLayer;
+    RenderObjLayerBase*     mLayer;
     s32                     mDefaultOpaBufferIdx;
     s32                     mDefaultXluBufferIdx;
     sead::OrthoProjection   mProjectionFinalKoopa;

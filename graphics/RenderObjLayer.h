@@ -24,16 +24,16 @@ public:
 
     RenderMgr* getRenderMgr() const
     {
-        return mpRenderMgr;
+        return mRenderMgr;
     }
 
     // Address: 0x024FCA24
-    void setRenderMgr(RenderMgr* p_render_mgr);
+    void setRenderMgr(RenderMgr* render_mgr);
 
     // ...
 
 protected:
-    RenderMgr*  mpRenderMgr;
+    RenderMgr*  mRenderMgr;
     s32         mViewIndex;
     void*       _428;
 };

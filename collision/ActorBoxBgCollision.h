@@ -20,9 +20,9 @@ public:
         LoopRideLineBgCollisionUtil::setCommon(this, follow_arg, init_arg);
     }
 
-    void set(Actor* p_owner, const BoxInitArg& arg)
+    void set(Actor* owner, const BoxInitArg& arg)
     {
-        LoopRideLineBgCollisionUtil::set(this, p_owner, arg);
+        LoopRideLineBgCollisionUtil::set(this, owner, arg);
     }
 };
 static_assert(sizeof(ActorBoxBgCollision) == sizeof(SimpleBoxBgCollision));

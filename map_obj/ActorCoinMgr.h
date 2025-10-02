@@ -41,5 +41,5 @@ public:
     // Address: 0x026CBA7C
     void spawnCoinJump(const CoinJumpArg& arg, bool alter_dir, s32 player_no) const;
     // Address: 0x026CBD10
-    void spawnCoinSpringFunsui(const sead::Vector3f& pos, s32 player_no, s32 coin_count, s32 angle_type, Actor* p_eat_die_actor);
+    void spawnCoinSpringFunsui(const sead::Vector3f& pos, s32 player_no, s32 coin_count, s32 angle_type, Actor* eat_die_actor);
 };

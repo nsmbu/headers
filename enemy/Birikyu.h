@@ -13,9 +13,9 @@ class BirikyuDrcTouchCB : public ActorCollisionDrcTouchCallback // vtbl Address:
 {
 public:
     // Address: 0x022CF75C
-    bool ccSetTouchNormal(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    bool ccSetTouchNormal(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
     // Address: 0x022CF7E8
-    void ccOnTouch(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    void ccOnTouch(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
 };
 static_assert(sizeof(BirikyuDrcTouchCB) == sizeof(ActorCollisionDrcTouchCallback));
 
@@ -107,7 +107,7 @@ public:
     DECLARE_STATE_ID(Birikyu, Touch)
 
 protected:
-    AnimModel*          mpAnimModel;
+    AnimModel*          mAnimModel;
     sead::Vector3f      mEffectPos;
     EffectObj           mEffect;
     s32                 mAttackTimer;

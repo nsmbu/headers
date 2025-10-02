@@ -20,7 +20,7 @@ protected:
 
     void beginFunsui_() override
     {
-        mpBlendModel->getCurSklAnim()->getFrameCtrl().setRate(3.0f);
+        mBlendModel->getCurSklAnim()->getFrameCtrl().setRate(3.0f);
         mPreFunsuiSpeedX = mSpeed.x;
         mSpeed.set(0.0f, 0.0f, 0.0f);
         mIsFunsui = true;
@@ -28,7 +28,7 @@ protected:
 
     void endFunsui_(f32 speed_y) override
     {
-        mpBlendModel->getCurSklAnim()->getFrameCtrl().setRate(2.0f);
+        mBlendModel->getCurSklAnim()->getFrameCtrl().setRate(2.0f);
         mSpeed.x = mPreFunsuiSpeedX;
         mIsFunsui = false;
     }

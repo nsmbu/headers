@@ -26,7 +26,7 @@ public:
 
 public:
     // Address: 0x024ECF98
-    static bool getStoreData(FFLStoreData* p_store_data, const SlotID& slot_id);
+    static bool getStoreData(FFLStoreData* store_data, const SlotID& slot_id);
 
 private:
     u32 mSlotNum;

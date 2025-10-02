@@ -21,25 +21,25 @@ public:
 
     void returnStateMethod()
     {
-        mpOldStateID = mpState->getStateID();
-        mFactory.disposeWithFinalize(mpState);
+        mOldStateID = mState->getStateID();
+        mFactory.disposeWithFinalize(mState);
         const StateID& main_state_id = *(mMain.get());
         mMain.reset();
-        mpState = mFactory.build(main_state_id);
+        mState = mFactory.build(main_state_id);
     }
 
     void replaceStateMethod(const StateID& state_id)
     {
-        mFactory.disposeWithFinalize(mpState);
-        mpState = mFactory.buildWithInitialize(state_id);
+        mFactory.disposeWithFinalize(mState);
+        mState = mFactory.buildWithInitialize(state_id);
     }
 
     const StateID* getMainStateID() const
     {
-        const StateID* p_state_id = mMain.get();
-        if (p_state_id == nullptr)
-            p_state_id = getStateID();
-        return p_state_id;
+        const StateID* state_id = mMain.get();
+        if (state_id == nullptr)
+            state_id = getStateID();
+        return state_id;
     }
 
 protected:

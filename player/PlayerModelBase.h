@@ -149,11 +149,11 @@ public:
 
     virtual void setTexAnmType(TexAnmType type) = 0;
 
-    virtual bool getPlayerModeAnmResInfo(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id, bool body) = 0;
-    virtual bool getPlayerModeRideAnmResInfo(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id) = 0;
+    virtual bool getPlayerModeAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id, bool body) = 0;
+    virtual bool getPlayerModeRideAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id) = 0;
 
-    virtual void setFootAnmImpl(const ModelResource* p_anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) = 0;
-    virtual void setBodyAnmImpl(const ModelResource* p_anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) = 0;
+    virtual void setFootAnmImpl(const ModelResource* anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) = 0;
+    virtual void setBodyAnmImpl(const ModelResource* anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) = 0;
 
     virtual void setAnmBind() = 0;
 
@@ -192,7 +192,7 @@ public:
     // Address: 0x02921DB4
     void setJumpIndex(s32 rnd_type);
     // Address: 0x02921E50
-    virtual bool getJumpAnmName(sead::BufferedSafeString* p_anm_name, s32 anm_id, bool body);
+    virtual bool getJumpAnmName(sead::BufferedSafeString* anm_name, s32 anm_id, bool body);
 
     // Address: 0x02921088
     void setRate(f32 rate);
@@ -245,14 +245,14 @@ public:
     bool isBodyAnmOn();
 
     // Address: 0x029221B0
-    void getJointMtx(sead::Matrixf* p_mtx, s32 index);
+    void getJointMtx(sead::Matrixf* mtx, s32 index);
     // Address: 0x029221D4
-    void getJointPos(sead::Vector3f* p_pos, s32 index);
+    void getJointPos(sead::Vector3f* pos, s32 index);
 
     // Address: 0x02922210
-    virtual void getJointMtx(sead::Matrixf* p_mtx, const sead::SafeString& name);
+    virtual void getJointMtx(sead::Matrixf* mtx, const sead::SafeString& name);
     // Address: 0x029222BC
-    void getJointPos(sead::Vector3f* p_pos, const sead::SafeString& name);
+    void getJointPos(sead::Vector3f* pos, const sead::SafeString& name);
 
     virtual void play() = 0;
 
@@ -316,12 +316,12 @@ public:
 
     ModelResource* getModelResFile() const
     {
-        return mpModelRes;
+        return mModelRes;
     }
 
     ModelResource* getAnmResFile() const
     {
-        return mpAnmRes;
+        return mAnmRes;
     }
 
     sead::Vector3f* getHeadTopPosP()
@@ -367,13 +367,13 @@ public:
     }
 
 protected:
-    ModelResource*          mpModelRes;
-    ModelResource*          mpAnmRes;
-    AnimModel*              mpModel;
+    ModelResource*          mModelRes;
+    ModelResource*          mAnmRes;
+    AnimModel*              mModel;
     s32                     mAnm;
     s32                     mBodyAnm;
     s32                     mRideAnm;
-    PlayerModelBase*        mpLinkPlayer;
+    PlayerModelBase*        mLinkPlayer;
     sead::Matrixf           mMtxSrt;
     sead::Matrixf           mMtxSr;
     sead::Vector3f          mHeadTopPos;

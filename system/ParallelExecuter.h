@@ -18,8 +18,8 @@ static_assert(sizeof(ParallelExecuterID) == 8);
 
 struct ParallelExecuter
 {
-    sead::DelegateThread*   p_thread;
-    sead::Event*            p_event;
-    ParallelExecuterID*     p_id;
+    sead::DelegateThread*   thread;
+    sead::Event*            event;
+    ParallelExecuterID*     id;
 };
 static_assert(sizeof(ParallelExecuter) == 0xC);

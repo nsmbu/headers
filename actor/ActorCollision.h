@@ -89,7 +89,7 @@ protected:
     // Address: 0x0200375C
     virtual void vf144(s32);            // nullsub, parameter is based on the flag bit in Quake (either 0 or 1, can even be 2 in NSMB2 but that was removed here)
     // Address: 0x02003760
-    virtual void setSmokeDamage_(Actor* p_actor);
+    virtual void setSmokeDamage_(Actor* actor);
 
 public:
     ActorBgCollisionCheck* getBgCheck() override
@@ -160,7 +160,7 @@ protected:
     void calcJumpSpeedF_();
 
     // Address: 0x02003C58
-    WaterType checkWater_(f32* p_surface_pos_y);
+    WaterType checkWater_(f32* surface_pos_y);
     // Address: 0x02003120
     void enterWater_();
 
@@ -194,7 +194,7 @@ private:
     void calcWater_();
 
     // Address: 0x02003148
-    WaterType checkEnterWater_(f32* p_surface_pos_y, const sead::Vector3f& check_pos);
+    WaterType checkEnterWater_(f32* surface_pos_y, const sead::Vector3f& check_pos);
     // Address: 0x020030F4
     void clampWaterSpeedY_();
 
@@ -215,7 +215,7 @@ protected:
     ActorBgCollisionObjCheck    mBgCheckObj;
     f32                         mJumpSpeedF;
     f32                         mJumpAccelF;
-    sead::Vector3f*             mpWaterCheckPos;
+    sead::Vector3f*             mWaterCheckPos;
     bool                        mUseWaterTypeOverride;
     WaterType                   mWaterTypeOverride;
     f32                         _1774;

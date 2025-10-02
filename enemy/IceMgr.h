@@ -23,7 +23,7 @@ struct IceInfo
     u32                 ice_param_0;
     sead::Vector3f      position;
     sead::Vector3f      scale;
-    const IceEfScale*   p_ef_scale;     // Was actually applied in NSMBW, but no longer does anything in NSMBU
+    const IceEfScale*   ef_scale;     // Was actually applied in NSMBW, but no longer does anything in NSMBU
 
     static u32 makeParam(IceType type, bool unk_1 = false, u32 unk_2 = 0, bool unk_3 = false)
     {
@@ -82,7 +82,7 @@ public:
 
 public:
     // Address: 0x0237CBBC
-    IceMgr(Enemy* p_owner);
+    IceMgr(Enemy* owner);
     // Address: 0x0237CD54
     ~IceMgr();
 
@@ -90,7 +90,7 @@ public:
     void setIceStatus(const IceStatus& status);
 
     // Address: 0x0237D63C
-    bool createIce(IceInfo* p_info, s32 num);
+    bool createIce(IceInfo* info, s32 num);
     // Address: 0x0237CCC8
     void removeIce();
 
@@ -103,8 +103,8 @@ protected:
     u8                                          mIceNum;
     sead::SafeArray<ActorUniqueID, cIceMaxNum>  mIceID;
     IceStatus                                   mIceStatus;
-    TimeInfo*                                   mpTimeInfo;
-    Enemy*                                      mpOwner;
+    TimeInfo*                                   mTimeInfo;
+    Enemy*                                      mOwner;
     s16                                         mTimer1;
     s16                                         mTimer2;
     bool                                        mHasIce;  // Maybe?

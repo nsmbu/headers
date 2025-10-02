@@ -7,8 +7,8 @@ class PlayerObject : public PlayerBase
 {
 public:
     // ...
-    bool setDamage(Actor* p_actor, DamageType type) override;
-    bool setForcedDamage(Actor* p_actor, DamageType type) override;
+    bool setDamage(Actor* actor, DamageType type) override;
+    bool setForcedDamage(Actor* actor, DamageType type) override;
     // ...
     bool isStar() const override;
     // ...
@@ -33,7 +33,7 @@ public:
 
     // ------------------------------------ PlayerObjectCc.cpp ------------------------------------ //
 
-    void getSpinLiftUpCcSizeInfo(sead::Vector2f* p_center_offset, sead::Vector2f* p_half_size);
+    void getSpinLiftUpCcSizeInfo(sead::Vector2f* center_offset, sead::Vector2f* half_size);
 
     // ------------------------------------ PlayerObjectMain.cpp ------------------------------------ //
 

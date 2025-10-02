@@ -7,7 +7,7 @@ class ActorAdditionalHeap : public sead::IDisposer
 public:
     ActorAdditionalHeap()
         : sead::IDisposer()
-        , mpHeap(nullptr)
+        , mHeap(nullptr)
     {
     }
 
@@ -23,10 +23,10 @@ public:
 
     sead::Heap* getHeap() const
     {
-        return mpHeap;
+        return mHeap;
     }
 
 protected:
-    sead::Heap* mpHeap;
+    sead::Heap* mHeap;
 };
 static_assert(sizeof(ActorAdditionalHeap) == 0x14);

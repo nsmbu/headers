@@ -23,7 +23,7 @@ public:
 
     GamesceneBase* getGamescene()
     {
-        return mpGamescene;
+        return mGamescene;
     }
 
     FieldGameData* getGameData()
@@ -43,7 +43,7 @@ public:
 
 private:
     bool            mCourseRestart;
-    GamesceneBase*  mpGamescene;
+    GamesceneBase*  mGamescene;
     u32             _d0[(0x124 - 0xD0) / sizeof(u32)];
     FieldGameData   mGameData;
     u32             _308[(0x5A4 - 0x308) / sizeof(u32)];

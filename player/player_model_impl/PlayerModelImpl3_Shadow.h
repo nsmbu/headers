@@ -19,7 +19,7 @@ public:
     // void func(); // Sets _22C and _230
 
     // Address: 0x02971B4C
-    void getBottomJointPos(sead::Vector3f* p_pos);
+    void getBottomJointPos(sead::Vector3f* pos);
 
     // Address: 0x02971BC4
     void play() override;
@@ -58,13 +58,13 @@ public:
     // Address: 0x02971FE8
     void setTexAnmType(TexAnmType type) override;
 
-    bool getPlayerModeAnmResInfo(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id, bool body) override
+    bool getPlayerModeAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id, bool body) override
     {
         return false;
     }
 
     // Address: 0x02971FEC
-    bool getPlayerModeRideAnmResInfo(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id) override;
+    bool getPlayerModeRideAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id) override;
 
     f32 vf13C() override
     {
@@ -79,9 +79,9 @@ public:
     // Address: 0x029720E4
     void setAnm(s32 anm_id, f32 rate, f32 blend_duration = 0.0f, f32 frame = 0.0f) override;
     // Address: 0x029724C4
-    void setFootAnmImpl(const ModelResource* p_anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) override;
+    void setFootAnmImpl(const ModelResource* anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) override;
     // Address: 0x029725A0
-    void setBodyAnmImpl(const ModelResource* p_anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) override;
+    void setBodyAnmImpl(const ModelResource* anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) override;
 
     void releaseBodyAnm(f32 blend_duration) override
     {
@@ -123,7 +123,7 @@ public:
     void setJointMap() override;
 
 protected:
-    ModelResource*                          mpShadowAnmRes;
+    ModelResource*                          mShadowAnmRes;
     sead::SafeArray<f32, cMaterialMaxNum>   mTevColor0Alpha;
     s32                                     _22C;
     f32                                     _230;

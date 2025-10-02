@@ -6,5 +6,5 @@ class PentaroIce : public ActorCollision
 {
 public:
     // Address: 0x02414760
-    void breakReq(const Actor* p_actor);
+    void breakReq(const Actor* actor);
 };

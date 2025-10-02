@@ -52,7 +52,7 @@ public:
     void setTexAnmTypeImpl(TexAnmType type) override;
 
     // Address: 0x0296D884
-    bool getPlayerModeAnmResInfo(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id, bool body) override;
+    bool getPlayerModeAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id, bool body) override;
 
     // Address: 0x0296E140
     f32 vf13C() override;
@@ -73,7 +73,7 @@ public:
     void setMusaPtoNmlAnm() override;
 
 protected:
-    ModelResource*                              mpLuigiAnmRes;
+    ModelResource*                              mLuigiAnmRes;
     sead::SafeArray<AnimModel*, cBonusCap_Num>  mBonusCap;
     CapMode                                     mCapMode;
     BonusCapType                                mBonusCapType;

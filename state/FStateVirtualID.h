@@ -9,9 +9,9 @@ public:
     typedef typename FStateID<T>::FunctionPtr FunctionPtr;
 
 public:
-    FStateVirtualID(FunctionPtr p_initialize, FunctionPtr p_execute, FunctionPtr p_finalize, const StateID& super_id)
-        : FStateID<T>(p_initialize, p_execute, p_finalize)
-        , mpSuperID(&super_id)
+    FStateVirtualID(FunctionPtr initialize, FunctionPtr execute, FunctionPtr finalize, const StateID& super_id)
+        : FStateID<T>(initialize, execute, finalize)
+        , mSuperID(&super_id)
     {
     }
 
@@ -21,19 +21,19 @@ public:
 
     s32 number() const override
     {
-        if (!mpSuperID->isNull())
-            return mpSuperID->number();
+        if (!mSuperID->isNull())
+            return mSuperID->number();
 
         return mNumber;
     }
 
     const StateID* superID() const
     {
-        return mpSuperID;
+        return mSuperID;
     }
 
 protected:
-    const StateID* mpSuperID;
+    const StateID* mSuperID;
 };
 
 #define DECLARE_STATE_VIRTUAL_ID_BASE(CLASS, NAME)          \

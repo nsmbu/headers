@@ -22,7 +22,7 @@ public:
     Scene();
 
     // Address: 0x02994164
-    bool createScene(sead::TaskBase* p_src_task, const sead::TaskClassID& next_scene, u32 param_0, u32 param_1);
+    bool createScene(sead::TaskBase* src_task, const sead::TaskClassID& next_scene, u32 param_0, u32 param_1);
 
     // Address: 0x029945B8
     bool isFadein() const;
@@ -34,7 +34,7 @@ public:
 
     sead::TaskMgr* getTaskMgr()
     {
-        return mpTaskMgr;
+        return mTaskMgr;
     }
 
 protected:
@@ -42,8 +42,8 @@ protected:
     sead::TaskClassID                           mOldScene;
     sead::TaskClassID                           mNowScene;
     sead::TaskClassID                           mNextScene;
-    sead::TaskMgr*                              mpTaskMgr;
-    Fader*                                      mpFader;
+    sead::TaskMgr*                              mTaskMgr;
+    Fader*                                      mFader;
     u32                                         _6c;
     u8                                          _70;
     sead::Vector3f                              mFadeCenter;    // I think

@@ -74,7 +74,7 @@ public:
     }
 
     // Address: 0x02000394
-    bool checkCarried(s32* p_player_no);
+    bool checkCarried(s32* player_no);
 
     s32 getComboCnt() const
     {
@@ -300,15 +300,15 @@ protected:
     bool setPressIceHeadBreak_(const ActorBgCollisionCheck& bc);
 
     // Address: 0x02002390
-    bool setPressBreakIce_(const BgCollision* p_bg_collision);
+    bool setPressBreakIce_(const BgCollision* bg_collision);
     // Address: 0x020024E0
-    bool setPressBreakBlockDRC_(const BgCollision* p_bg_collision);
+    bool setPressBreakBlockDRC_(const BgCollision* bg_collision);
 
 private:
     inline Actor* searchCarryFukidashiPlayer_(s32 action);
 
     // Address: 0x02001AF4
-    bool canPress_(const BgCollision* p_bg_collision);
+    bool canPress_(const BgCollision* bg_collision);
 
     // Address: 0x02001C08
     bool checkPressLR_(const ActorBgCollisionCheck& bc, u32 direction);
@@ -318,7 +318,7 @@ private:
     bool checkPressD_(const ActorBgCollisionCheck& bc);
 
     // Address: 0x02001B2C
-    bool canPressIfApproaching_(const BgCollision* p_bgcol_approaching_side, const BgCollision* p_bgcol_fixed_side);
+    bool canPressIfApproaching_(const BgCollision* bgcol_approaching_side, const BgCollision* bgcol_fixed_side);
 
     // Address: 0x02000720
     u32 calcTottenToSrcDir_(const sead::BoundBox2f& src_range) const;
@@ -370,12 +370,12 @@ protected:
     sead::Vector3f          mPosPrev;                   // At frame start
     sead::Vector3f          mPosPrevPostExec;
     sead::Vector3f          mPosPrev2;                  // At frame end
-    EatData*                mpEatData;
-    ChibiYoshiEatData*      mpChibiYoshiEatData;
-    PropelParts*            mpPropelParts;
+    EatData*                mEatData;
+    ChibiYoshiEatData*      mChibiYoshiEatData;
+    PropelParts*            mPropelParts;
     u8*                     _270;                       // Inited to ActorCreateParam::_28
     f32                     mAddSpeedF;
-    ChibiYoshiAwaData*      mpChibiYoshiAwaData;
+    ChibiYoshiAwaData*      mChibiYoshiAwaData;
 
     // Address: 0x10000B64
     static const f32 cCullXLimit;

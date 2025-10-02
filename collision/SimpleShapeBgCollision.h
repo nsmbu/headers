@@ -22,6 +22,6 @@ public:
     }
 
     // Address: 0x021B096C
-    bool checkPointInside(bool* p_on_edge, const sead::Vector2f& p) const override;
+    bool checkPointInside(bool* on_edge, const sead::Vector2f& p) const override;
 };
 static_assert(sizeof(SimpleShapeBgCollision) == sizeof(LoopRideLineBgCollision));

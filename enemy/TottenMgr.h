@@ -17,12 +17,12 @@ class TottenMgr
 public:
     Actor* getTottenActor()
     {
-        return mpTottenActor;
+        return mTottenActor;
     }
 
 protected:
     u32     _10[(0x68 - 0x10) / sizeof(u32)];
-    Actor*  mpTottenActor;
+    Actor*  mTottenActor;
     u32     _6c[(0x198 - 0x6C) / sizeof(u32)];
 };
 static_assert(sizeof(TottenMgr) == 0x198);

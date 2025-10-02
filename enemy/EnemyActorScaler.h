@@ -13,11 +13,11 @@ public:
     static f32 sDefaultStep;    // 0.0625
 
 public:
-    EnemyActorScaler(Actor* p_owner)
+    EnemyActorScaler(Actor* owner)
         : mScale(1.0f, 1.0f, 1.0f)
         , mScaleFactor(1.0f)
         , mDuration(0)
-        , mpOwner(p_owner)
+        , mOwner(owner)
     {
     }
 
@@ -47,6 +47,6 @@ protected:
     f32             mScaleFactor;
     f32             mStep;
     u32             mDuration;
-    Actor*          mpOwner;
+    Actor*          mOwner;
 };
 static_assert(sizeof(EnemyActorScaler) == 0x20);

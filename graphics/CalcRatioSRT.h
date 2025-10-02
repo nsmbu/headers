@@ -23,9 +23,9 @@ public:
     void calc();
 
     // Address: 0x024D5354
-    void applyTo(sead::Matrixf* p_bone_rt, sead::Vector3f* p_bone_scale, s32 bone_index);
+    void applyTo(sead::Matrixf* bone_rt, sead::Vector3f* bone_scale, s32 bone_index);
     // Address: 0x024D5710
-    void applyTo(Model* p_model);
+    void applyTo(Model* model);
 
     // Address: 0x024D56FC
     void offUpdate();

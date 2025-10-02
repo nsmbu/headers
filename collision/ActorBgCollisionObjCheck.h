@@ -14,17 +14,17 @@ public:
 
     Actor* getOwnerAtRevCheck(f32 bg_collision_pos_y) const override
     {
-        return mpOwner;
+        return mOwner;
     }
 
     Actor* getOwnerAtHit(const BgCollision& bg_collision, u8 direction) const override
     {
-        return mpOwner;
+        return mOwner;
     }
 
     s8* vf4C(f32) const override
     {
-        return mFollowArg.p_player_no;
+        return mFollowArg.player_no;
     }
 };
 static_assert(sizeof(ActorBgCollisionObjCheck) == sizeof(ActorBgCollisionCheck));

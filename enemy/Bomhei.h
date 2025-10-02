@@ -19,9 +19,9 @@ public:
     }
 
     // Address: 0x022D053C
-    bool ccSetTouchNormal(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    bool ccSetTouchNormal(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
     // Address: 0x022D0584
-    void ccOnTouch(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    void ccOnTouch(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
 
 protected:
     u32 _4;
@@ -219,8 +219,8 @@ public:
     void explode();
 
 protected:
-    BlendModel*             mpBlendModel;
-    ModelResource*          mpModelResource;
+    BlendModel*             mBlendModel;
+    ModelResource*          mModelResource;
     s32                     mCurrentSklAnimIndex;
     sead::BitFlag16         mBomHeiFlag;
     EnemyEatData            mEatData;
@@ -243,7 +243,7 @@ protected:
     EnemyActorScaler        mScaler;
     BomheiDrcTouchCB        mDrcTouchCallback;
     f32                     _1a44;
-    ActorState*             mpKoopaJr;
+    ActorState*             mKoopaJr;
     ActorCollisionCheck     mCollisionCheck2;
     u8                      _1b74;
     u8                      _1b75;

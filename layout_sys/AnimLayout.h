@@ -69,37 +69,37 @@ public:
     nw::lyt::Pane* getRootPane();
 
     // Address: 0x02671C54
-    void animResRegister(const sead::SafeString* p_anim_res_names, const s32& anim_res_num);
+    void animResRegister(const sead::SafeString* anim_res_names, const s32& anim_res_num);
 
     // Address: 0x02671D3C
-    void NPaneRegister(nw::lyt::Pane** pp_panes, const sead::SafeString* p_names, const s32& num);
+    void NPaneRegister(nw::lyt::Pane** panes, const sead::SafeString* names, const s32& num);
     // Address: 0x02671E90
-    void PPaneRegister(nw::lyt::Picture** pp_panes, const sead::SafeString* p_names, const s32& num);
+    void PPaneRegister(nw::lyt::Picture** panes, const sead::SafeString* names, const s32& num);
     // Address: 0x02672010
-    void TPaneRegister(TextBox** pp_panes, const sead::SafeString* p_names, const s32& num);
+    void TPaneRegister(TextBox** panes, const sead::SafeString* names, const s32& num);
     // Address: 0x02672164
-    void BPaneRegister(nw::lyt::Bounding** pp_panes, const sead::SafeString* p_names, const s32& num);
+    void BPaneRegister(nw::lyt::Bounding** panes, const sead::SafeString* names, const s32& num);
     // Address: 0x026722B8
-    void WPaneRegister(nw::lyt::Window** pp_panes, const sead::SafeString* p_names, const s32 num); // Whoops, somebody forgot the `&`
+    void WPaneRegister(nw::lyt::Window** panes, const sead::SafeString* names, const s32 num); // Whoops, somebody forgot the `&`
 
     // Address: 0x026724D8
-    void PaRootPaneRegister(nw::lyt::Pane** pp_panes, const sead::SafeString* p_parts_pane_names, const s32& num);
+    void PaRootPaneRegister(nw::lyt::Pane** panes, const sead::SafeString* parts_pane_names, const s32& num);
     // Address: 0x02672544
-    void PaTPaneRegister(TextBox** pp_panes, const sead::SafeString& parts_pane_name, const sead::SafeString* p_names, const s32& num);
+    void PaTPaneRegister(TextBox** panes, const sead::SafeString& parts_pane_name, const sead::SafeString* names, const s32& num);
     // Address: 0x026725B8
-    void PaBPaneRegister(nw::lyt::Bounding** pp_panes, const sead::SafeString& parts_pane_name, const sead::SafeString* p_names, const s32& num);
+    void PaBPaneRegister(nw::lyt::Bounding** panes, const sead::SafeString& parts_pane_name, const sead::SafeString* names, const s32& num);
     // Address: 0x0267262C
-    void PaPPaneRegister(nw::lyt::Picture** pp_panes, const sead::SafeString& parts_pane_name, const sead::SafeString* p_names, const s32& num);
+    void PaPPaneRegister(nw::lyt::Picture** panes, const sead::SafeString& parts_pane_name, const sead::SafeString* names, const s32& num);
     // Address: 0x026726A0
-    void PaNPaneRegister(nw::lyt::Pane** pp_panes, const sead::SafeString& parts_pane_name, const sead::SafeString* p_names, const s32& num);
+    void PaNPaneRegister(nw::lyt::Pane** panes, const sead::SafeString& parts_pane_name, const sead::SafeString* names, const s32& num);
 
     // Address: 0x02672828
-    void PaPaneRegister(nw::lyt::Parts** pp_panes, const sead::SafeString* p_names, const s32& num);
+    void PaPaneRegister(nw::lyt::Parts** panes, const sead::SafeString* names, const s32& num);
 
     // Address: 0x02672890
-    void animPlay(const sead::Matrix34f& view_mtx, const sead::Matrix34f* p_model_mtx = nullptr);
+    void animPlay(const sead::Matrix34f& view_mtx, const sead::Matrix34f* model_mtx = nullptr);
     // Address: 0x02672A4C
-    void animPlay(s32 view_layer_id, const sead::Matrix34f* p_model_mtx = nullptr); // See: LayerMgr::Layer
+    void animPlay(s32 view_layer_id, const sead::Matrix34f* model_mtx = nullptr); // See: LayerMgr::Layer
 
     // Address: 0x02672A78
     void setPlayerColor(const sead::SafeString& color_anim_res_name, s32 player_no, s32 view_layer_id, bool force_5th_color);
@@ -116,15 +116,15 @@ public:
 protected:
     struct AnimRes
     {
-        nw::lyt::GroupArrayAnimator*    p_group_array_animator;
+        nw::lyt::GroupArrayAnimator*    group_array_animator;
         u32                             group_num;
-        nw::lyt::Animator**             p_animators;
+        nw::lyt::Animator**             animators;
     };
     static_assert(sizeof(AnimRes) == 0xC);
 
     struct Animation
     {
-        nw::lyt::Animator*  p_animator;
+        nw::lyt::Animator*  animator;
         sead::SafeString    anim_res_name;
         u32                 _c;
         bool                oneshot_playback_done;
@@ -133,12 +133,12 @@ protected:
 
 protected:
     // Address: 0x02672D5C
-    Multi2D(Animation* p_anim_buf, s32 anim_buf_size);
+    Multi2D(Animation* anim_buf, s32 anim_buf_size);
     // Address: 0x02672E98
     virtual ~Multi2D();
 
     // Address: 0x0267153C
-    void animStartBaseSetup_(s32 anim_index, const sead::SafeString& anim_res_name, nw::lyt::Animator::PlayType type, f32 speed, nw::lyt::Animator* p_animator);
+    void animStartBaseSetup_(s32 anim_index, const sead::SafeString& anim_res_name, nw::lyt::Animator::PlayType type, f32 speed, nw::lyt::Animator* animator);
 
     // Address: 0x02671CCC
     nw::lyt::Pane* findPaneByName_(const sead::SafeString& name);
@@ -160,7 +160,7 @@ protected:
     LayoutObj* getPartsLayoutObj_(const sead::SafeString& parts_pane_name);
 
 protected:
-    LayoutObj*              mpObj;
+    LayoutObj*              mObj;
     LayoutAllocator         mAllocator;
     nw::lyt::DrawInfo       mDrawInfo;
     sead::FixedStrTreeMap<
@@ -182,7 +182,7 @@ class AnimLayoutBase : public Multi2D   // vtbl Address: 0x100E2A2C
 {
 public:
     // Address: 0x02672F04
-    AnimLayoutBase(Animation* p_anim_buf, s32 anim_buf_size);
+    AnimLayoutBase(Animation* anim_buf, s32 anim_buf_size);
     // Address: 0x02672F80
     virtual ~AnimLayoutBase();
 
@@ -190,10 +190,10 @@ public:
     void readResource(const sead::SafeString& res_name);
 
     // Address: 0x02673050
-    void build(const sead::SafeString& lyt_filename, UtilCursorButtonMgr* p_cursor_btn_mgr = nullptr, sead::OffsetList<FlexibleTextBox>* p_flexible_text_box_list = nullptr, sead::OffsetList<AnimText>* p_anim_text_list = nullptr);
+    void build(const sead::SafeString& lyt_filename, UtilCursorButtonMgr* cursor_btn_mgr = nullptr, sead::OffsetList<FlexibleTextBox>* flexible_text_box_list = nullptr, sead::OffsetList<AnimText>* anim_text_list = nullptr);
 
 protected:
-    ArcResAccMulti* mpResAcc;
+    ArcResAccMulti* mResAcc;
 };
 static_assert(sizeof(AnimLayoutBase) == 0xE8C);
 
@@ -201,14 +201,14 @@ class PartsAnimLayoutBase : public Multi2D  // vtbl Address: 0x100E29D0
 {
 public:
     // Address: 0x02673124
-    PartsAnimLayoutBase(Animation* p_anim_buf, s32 anim_buf_size);
+    PartsAnimLayoutBase(Animation* anim_buf, s32 anim_buf_size);
 
     // Address: 0x026731A0
-    void createLayoutObj(const Multi2D& p_parent, const sead::SafeString& parts_name);
+    void createLayoutObj(const Multi2D& parent, const sead::SafeString& parts_name);
 
 protected:
     // Address: 0x02673198
-    void setLayoutObj_(LayoutObj* p_obj);
+    void setLayoutObj_(LayoutObj* obj);
 };
 static_assert(sizeof(PartsAnimLayoutBase) == 0xE88);
 

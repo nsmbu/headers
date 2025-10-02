@@ -12,7 +12,7 @@ public:
 
 public:
     // Address: 0x02857AF8
-    static u32 getRideFlag(ActorUniqueID* p_ice_actor_id_array, u32* p_ice_actor_id_num, const BgCollision& bg_collision);
+    static u32 getRideFlag(ActorUniqueID* ice_actor_id_array, u32* ice_actor_id_num, const BgCollision& bg_collision);
 
     static u32 getRideFlag(const BgCollision& bg_collision)
     {

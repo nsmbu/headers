@@ -35,25 +35,25 @@ public:
     // Address: 0x0200D4B8
     virtual void setAfterEatScale();
     // Address: 0x0200D504
-    virtual void calcSpitOutPos(Actor* p_yoshi);
+    virtual void calcSpitOutPos(Actor* yoshi);
     // Address: 0x0200D5F0
-    virtual f32 calcEatScaleRate(Actor* p_yoshi);
+    virtual f32 calcEatScaleRate(Actor* yoshi);
     // Address: 0x0200D76C
-    virtual void eatMove(Actor* p_yoshi);
+    virtual void eatMove(Actor* yoshi);
     // Address: 0x0200DA8C
     virtual void vf2C();
     // Address: 0x0200D830
-    virtual bool setEatTongue(Actor* p_yoshi);
+    virtual bool setEatTongue(Actor* yoshi);
     // Address: 0x0200DA90
-    virtual void setEatTongueOff(Actor* p_yoshi);
+    virtual void setEatTongueOff(Actor* yoshi);
     // Address: 0x0200DA94
-    virtual void setEatMouth(Actor* p_yoshi);
+    virtual void setEatMouth(Actor* yoshi);
     // Address: 0x0200DA98
-    virtual bool setEatSpitOut(Actor* p_yoshi);
+    virtual bool setEatSpitOut(Actor* yoshi);
     // Address: 0x0200D880
-    virtual bool setEatGlupDown(Actor* p_yoshi);
+    virtual bool setEatGlupDown(Actor* yoshi);
     // Address: 0x0200D9AC
-    virtual void calcEatInScale(Actor* p_yoshi);
+    virtual void calcEatInScale(Actor* yoshi);
 
     u32 getState() const
     {

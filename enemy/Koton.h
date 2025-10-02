@@ -12,9 +12,9 @@ class KotonDrcTouchCB : public ActorCollisionDrcTouchCallback   // vtbl Address:
 {
 public:
     // Address: 0x023D5334
-    bool ccSetTouchNormal(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    bool ccSetTouchNormal(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
     // Address: 0x023D53C0
-    void ccOnTouch(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    void ccOnTouch(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
 };
 static_assert(sizeof(KotonDrcTouchCB) == sizeof(ActorCollisionDrcTouchCallback));
 
@@ -78,7 +78,7 @@ protected:
     virtual void setCc_();
 
 protected:
-    AnimModel*              mpAnimModel;
+    AnimModel*              mAnimModel;
     u32                     mJumpTimer;
     u32                     _1888;
     bool                    mJumpLeft;

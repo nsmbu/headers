@@ -12,7 +12,7 @@ public:
     NW_UT_RUNTIME_TYPEINFO(nw::ut::IAllocator);
 
     LayoutAllocator()
-        : mpHeap(nullptr)
+        : mHeap(nullptr)
     {
     }
 
@@ -25,6 +25,6 @@ public:
     void setHeap(sead::Heap* heap);
 
 protected:
-    sead::Heap* mpHeap;
+    sead::Heap* mHeap;
 };
 static_assert(sizeof(LayoutAllocator) == 8);

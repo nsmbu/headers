@@ -19,7 +19,7 @@ public:
 
 public:
     // Address: 0x029BBC44
-    NMSndObjectBase(ObjType type, sead::AudioPlayer* p_player);
+    NMSndObjectBase(ObjType type, sead::AudioPlayer* player);
     // Address: 0x029BBBD8
     virtual ~NMSndObjectBase();
 
@@ -29,7 +29,7 @@ public:
 protected:
     u32                 mHandleNum;
     nw::snd::OutputLine mOutputLine;
-    Snd2DCalc*          mpSnd2DCalc;
+    Snd2DCalc*          mSnd2DCalc;
     ObjType             mType;
 };
 static_assert(sizeof(NMSndObjectBase) == 0x74);

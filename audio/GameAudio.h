@@ -8,11 +8,11 @@ class GameAudio
 {
 public:
     // Address: 0x02029368
-    static void convertAudioObjctPos(sead::Vector2f* p_screen_pos, const sead::Vector2f& bg_pos);
+    static void convertAudioObjctPos(sead::Vector2f* screen_pos, const sead::Vector2f& bg_pos);
 
-    static void convertAudioObjctPos(sead::Vector2f* p_screen_pos, const sead::Vector3f& bg_pos)
+    static void convertAudioObjctPos(sead::Vector2f* screen_pos, const sead::Vector3f& bg_pos)
     {
-        convertAudioObjctPos(p_screen_pos, sead::Vector2f(bg_pos.x, bg_pos.y));
+        convertAudioObjctPos(screen_pos, sead::Vector2f(bg_pos.x, bg_pos.y));
     }
 
     // Address: 0x02029ACC

@@ -33,7 +33,7 @@ public:
     ScoreMgr::ScoreType getComboScore(s32 combo_cnt);
 
     // Address: 0x02303024
-    void setScore(Actor* p_actor, ScoreMgr::ScoreType score_type, s32 player_no);
+    void setScore(Actor* actor, ScoreMgr::ScoreType score_type, s32 player_no);
 
     // Address: 0x02303070
     ScoreMgr::ScoreType getDamageScore();
@@ -42,11 +42,11 @@ public:
     ScoreMgr::ScoreType getQuakeScore(s32 quake_cnt);
 
     // Address: 0x0230309C
-    s32 calcPlFumiCnt(Actor* p_player);
+    s32 calcPlFumiCnt(Actor* player);
     // Address: 0x02303154
-    static s32 calcPlStarCnt(Actor* p_player);
+    static s32 calcPlStarCnt(Actor* player);
     // Address: 0x02303234
-    static s32 calcPlComboCnt(Actor* p_player);
+    static s32 calcPlComboCnt(Actor* player);
 
 protected:
     Type mType;

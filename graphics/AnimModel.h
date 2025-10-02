@@ -18,15 +18,15 @@ class AnimModel
 {
 public:
     static AnimModel* create(
-        ModelResource* p_mdl_res,
-        Model* p_model,
+        ModelResource* mdl_res,
+        Model* model,
         s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
         sead::Heap* heap = nullptr,
-        const sead::PtrArray<ModelResource>* p_anim_mdl_res_array = nullptr
+        const sead::PtrArray<ModelResource>* anim_mdl_res_array = nullptr
     );
 
     static AnimModel* create(
-        ModelResource* p_mdl_res,
+        ModelResource* mdl_res,
         const sead::SafeString& name,
         s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
         Model::BoundingMode bounding_mode = Model::cBoundingMode_Disable,
@@ -34,7 +34,7 @@ public:
     );
 
     static AnimModel* create(
-        ModelResource* p_mdl_res,
+        ModelResource* mdl_res,
         const sead::SafeString& name,
         s32 view_num,
         s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
@@ -61,19 +61,19 @@ public:
 
 public:
     // Address: 0x024D4798
-    AnimModel(Model* p_model, u32 skl_anim_num, u32 tex_anim_num, u32 shu_anim_num, u32 vis_anim_num, u32 sha_anim_num);
+    AnimModel(Model* model, u32 skl_anim_num, u32 tex_anim_num, u32 shu_anim_num, u32 vis_anim_num, u32 sha_anim_num);
 
-    Model* getModel() const { return mpModel; }
-    ModelResource* getModelResource() const { return mpModelResource; }
+    Model* getModel() const { return mModel; }
+    ModelResource* getModelResource() const { return mModelResource; }
 
-    SkeletalAnimation*          getSklAnim(s32 index) const { return mpSklAnim[index]; }
-    TexturePatternAnimation*    getTexAnim(s32 index) const { return mpTexAnim[index]; }
-    ShaderParamAnimation*       getShuAnim(s32 index) const { return mpShuAnim[index]; }
-    VisibilityAnimation*        getVisAnim(s32 index) const { return mpVisAnim[index]; }
-    ShapeAnimation*             getShaAnim(s32 index) const { return mpShaAnim[index]; }
+    SkeletalAnimation*          getSklAnim(s32 index) const { return mSklAnim[index]; }
+    TexturePatternAnimation*    getTexAnim(s32 index) const { return mTexAnim[index]; }
+    ShaderParamAnimation*       getShuAnim(s32 index) const { return mShuAnim[index]; }
+    VisibilityAnimation*        getVisAnim(s32 index) const { return mVisAnim[index]; }
+    ShapeAnimation*             getShaAnim(s32 index) const { return mShaAnim[index]; }
 
     // Address: 0x024D49A0
-    void init(ModelResource* p_mdl_res, const sead::PtrArray<ModelResource>* p_anim_mdl_res_array = nullptr, sead::Heap* heap = nullptr);
+    void init(ModelResource* mdl_res, const sead::PtrArray<ModelResource>* anim_mdl_res_array = nullptr, sead::Heap* heap = nullptr);
 
     // Address: 0x024D4D20
     void playAnmFrameCtrl();
@@ -82,43 +82,43 @@ public:
     void calcMdl();
 
 private:
-    Model*                                  mpModel;
-    ModelResource*                          mpModelResource;
-    sead::Buffer<SkeletalAnimation*>        mpSklAnim;
-    sead::Buffer<TexturePatternAnimation*>  mpTexAnim;
-    sead::Buffer<ShaderParamAnimation*>     mpShuAnim;
-    sead::Buffer<VisibilityAnimation*>      mpVisAnim;
-    sead::Buffer<ShapeAnimation*>           mpShaAnim;
+    Model*                                  mModel;
+    ModelResource*                          mModelResource;
+    sead::Buffer<SkeletalAnimation*>        mSklAnim;
+    sead::Buffer<TexturePatternAnimation*>  mTexAnim;
+    sead::Buffer<ShaderParamAnimation*>     mShuAnim;
+    sead::Buffer<VisibilityAnimation*>      mVisAnim;
+    sead::Buffer<ShapeAnimation*>           mShaAnim;
 };
 static_assert(sizeof(AnimModel) == 0x30);
 
 inline AnimModel* AnimModel::create(
-    ModelResource* p_mdl_res,
-    Model* p_model,
+    ModelResource* mdl_res,
+    Model* model,
     s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
     sead::Heap* heap,
-    const sead::PtrArray<ModelResource>* p_anim_mdl_res_array
+    const sead::PtrArray<ModelResource>* anim_mdl_res_array
 )
 {
-    AnimModel* p_anim_model = new (heap) AnimModel(p_model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num);
-    p_anim_model->init(p_mdl_res, p_anim_mdl_res_array, heap);
-    return p_anim_model;
+    AnimModel* anim_model = new (heap) AnimModel(model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num);
+    anim_model->init(mdl_res, anim_mdl_res_array, heap);
+    return anim_model;
 }
 
 inline AnimModel* AnimModel::create(
-    ModelResource* p_mdl_res,
+    ModelResource* mdl_res,
     const sead::SafeString& name,
     s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
     Model::BoundingMode bounding_mode,
     sead::Heap* heap
 )
 {
-    Model* p_model = Model::createG3d(*p_mdl_res, name, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
-    return create(p_mdl_res, p_model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, heap);
+    Model* model = Model::createG3d(*mdl_res, name, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
+    return create(mdl_res, model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, heap);
 }
 
 inline AnimModel* AnimModel::create(
-    ModelResource* p_mdl_res,
+    ModelResource* mdl_res,
     const sead::SafeString& name,
     s32 view_num,
     s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
@@ -126,8 +126,8 @@ inline AnimModel* AnimModel::create(
     sead::Heap* heap
 )
 {
-    Model* p_model = Model::createG3d(*p_mdl_res, name, view_num, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
-    return create(p_mdl_res, p_model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, heap);
+    Model* model = Model::createG3d(*mdl_res, name, view_num, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
+    return create(mdl_res, model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, heap);
 }
 
 inline AnimModel* AnimModel::create(
@@ -138,8 +138,8 @@ inline AnimModel* AnimModel::create(
     sead::Heap* heap
 )
 {
-    ModelResource* p_mdl_res = ModelResourceMgr::instance()->getResource(resource_key);
-    return create(p_mdl_res, name, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
+    ModelResource* mdl_res = ModelResourceMgr::instance()->getResource(resource_key);
+    return create(mdl_res, name, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
 }
 
 inline AnimModel* AnimModel::create(
@@ -151,6 +151,6 @@ inline AnimModel* AnimModel::create(
     sead::Heap* heap
 )
 {
-    ModelResource* p_mdl_res = ModelResourceMgr::instance()->getResource(resource_key);
-    return create(p_mdl_res, name, view_num, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
+    ModelResource* mdl_res = ModelResourceMgr::instance()->getResource(resource_key);
+    return create(mdl_res, name, view_num, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
 }

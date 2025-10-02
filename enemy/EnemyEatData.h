@@ -11,11 +11,11 @@ public:
     EnemyEatData(ActorUniqueID owner_id);
 
     // Address: 0x0232F124
-    bool setEatTongue(Actor* p_yoshi) override;
+    bool setEatTongue(Actor* yoshi) override;
     // Address: 0x0232F208
-    void setEatTongueOff(Actor* p_yoshi) override;
+    void setEatTongueOff(Actor* yoshi) override;
     // Address: 0x0232F28C
-    bool setEatSpitOut(Actor* p_yoshi) override;
+    bool setEatSpitOut(Actor* yoshi) override;
 
 protected:
     // Address: 0x0232F074

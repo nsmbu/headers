@@ -63,7 +63,7 @@ public:
     void setRandomSeed(u32 seed);
 
     // Address: 0x022AAB48
-    bool follow(const sead::Vector3f* p_trans = nullptr, const Angle3* p_angle = nullptr, const sead::Vector3f* p_scale = nullptr);
+    bool follow(const sead::Vector3f* trans = nullptr, const Angle3* angle = nullptr, const sead::Vector3f* scale = nullptr);
     // Address: 0x022AAD70
     bool follow(const sead::Matrixf& mtx, bool mtx_has_scale);
 
@@ -77,12 +77,12 @@ public:
     // Address: 0x022AAE8C
     void setVisible(bool visible, s32 emitter_controller_index);
 
-    const PtclParam* getParam() const { return mpParam; }
+    const PtclParam* getParam() const { return mParam; }
 
 protected:
     sead::Matrixf       mMtx;
     bool                mMtxHasScale;
     nw::eft::Handle     mHandle;
-    const PtclParam*    mpParam;
+    const PtclParam*    mParam;
 };
 static_assert(sizeof(Effect) == 0x40);

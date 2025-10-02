@@ -9,9 +9,9 @@ class MechaKoopaDrcTouchCB : public ActorCollisionDrcTouchCallback  // vtbl Addr
 {
 public:
     // Address: 0x023E8F9C
-    bool ccSetTouchNormal(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    bool ccSetTouchNormal(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
     // Address: 0x023E8FA4
-    void ccOnTouch(ActorCollisionCheck* p_cc, const sead::Vector2f& pos) override;
+    void ccOnTouch(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
 };
 static_assert(sizeof(MechaKoopaDrcTouchCB) == sizeof(ActorCollisionDrcTouchCallback));
 
@@ -126,8 +126,8 @@ public:
     DECLARE_STATE_ID(MechaKoopa, Recover)
 
 protected:
-    ModelResource*          mpModelResource;
-    AnimModel*              mpAnimModel;
+    ModelResource*          mModelResource;
+    AnimModel*              mAnimModel;
     u32                     mNextTurnTimer;
     u32                     mDownTimer;
     u32                     mCurrentAnim;

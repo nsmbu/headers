@@ -8,6 +8,6 @@ class Yoshi : public PlayerBase
 
 public:
     // ...
-    bool setDamage(Actor* p_actor, DamageType type) override;
+    bool setDamage(Actor* actor, DamageType type) override;
     // ...
 };

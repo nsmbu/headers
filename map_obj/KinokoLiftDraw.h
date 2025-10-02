@@ -21,7 +21,7 @@ class KinokoLiftDraw
 public:
     KinokoLiftDraw(const KinokoLiftResHIO& res_hio)
         : mResHio(res_hio)
-        , mpAnimModel(nullptr)
+        , mAnimModel(nullptr)
         , mMatIndex(0)
         , mMatIndexG(0)
       //, mRotNodeTransform()
@@ -33,10 +33,10 @@ public:
     }
 
     // Address: 0x027A7BA0
-    void initialize(const ModelResource* p_mdl_res, bool kasa_use_actor_zpos, f32 kasa_mid_half_width, f32 stem_height, f32 tex_anm_frame);
+    void initialize(const ModelResource* mdl_res, bool kasa_use_actor_zpos, f32 kasa_mid_half_width, f32 stem_height, f32 tex_anm_frame);
 
     // Address: 0x027A7D70
-    void calc(sead::Vector3f* p_kasa_pos, const sead::Vector3f& pos, f32 height, Angle = 0, Angle = 0);
+    void calc(sead::Vector3f* kasa_pos, const sead::Vector3f& pos, f32 height, Angle = 0, Angle = 0);
 
     // Address: 0x027A7E44
     void draw();
@@ -53,7 +53,7 @@ public:
 
 protected:
     const KinokoLiftResHIO&             mResHio;
-    AnimModel*                          mpAnimModel;
+    AnimModel*                          mAnimModel;
     s32                                 mMatIndex;
     s32                                 mMatIndexG;
     sead::SafeArray<NodeTransform, 9>   mRotNodeTransform;

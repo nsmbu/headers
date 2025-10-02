@@ -8,7 +8,7 @@ class MathUtil
 
 public:
     template <typename T>
-    static T calcTimer(T* p_value);
+    static T calcTimer(T* value);
 
     static u32 absAngle(s32 value);
 
@@ -17,11 +17,11 @@ public:
 };
 
 template <typename T>
-T MathUtil::calcTimer(T* p_value)
+T MathUtil::calcTimer(T* value)
 {
-    if (*p_value != 0)
-        (*p_value)--;
-    return *p_value;
+    if (*value != 0)
+        (*value)--;
+    return *value;
 }
 
 inline u32 MathUtil::absAngle(s32 value)

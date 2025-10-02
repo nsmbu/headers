@@ -98,15 +98,15 @@ public:
     // Address: 0x02027C80
     void ScoreSet(const sead::Vector3f& small_score_pos, ScoreType type, s32 player_no, bool rest_sound = true);
     // Address: 0x02027DA8
-    void ScoreSet(Actor* p_actor_for_small_score_pos, ScoreType type, s32 player_no, f32 small_score_offset_x = 0.0f, f32 small_score_offset_y = 24.0f);
+    void ScoreSet(Actor* actor_for_small_score_pos, ScoreType type, s32 player_no, f32 small_score_offset_x = 0.0f, f32 small_score_offset_y = 24.0f);
     // Address: 0x02027DF4
     void ScoreSet2(const sead::Vector3f& small_score_pos, ScoreType type, s32 player_no);
     // Address: 0x02027EBC
-    void ScoreSet2(Actor* p_actor_for_small_score_pos, ScoreType type, s32 player_no, f32 small_score_offset_x = 0.0f, f32 small_score_offset_y = 24.0f);
+    void ScoreSet2(Actor* actor_for_small_score_pos, ScoreType type, s32 player_no, f32 small_score_offset_x = 0.0f, f32 small_score_offset_y = 24.0f);
     // Address: 0x02027F04
     void UnKnownScoreCreate(const sead::Vector3f& small_score_pos, ScoreType type);
     // Address: 0x02027FCC
-    void UnKnownScoreSet(Actor* p_actor_for_small_score_pos, ScoreType type, f32 small_score_offset_x = 0.0f, f32 small_score_offset_y = 24.0f);
+    void UnKnownScoreSet(Actor* actor_for_small_score_pos, ScoreType type, f32 small_score_offset_x = 0.0f, f32 small_score_offset_y = 24.0f);
     // Address: 0x0202821C
     void incRestAllWithSmallScore(bool sound);
 };

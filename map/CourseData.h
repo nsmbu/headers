@@ -190,14 +190,14 @@ public:
     }
 
     const DistantViewData* getBg2Data(u16 id) const;
-    const MapActorData* getMapActor(u16 type, const MapActorData* p_start = nullptr) const;
-    const AreaData* getAreaData(u8 id, sead::BoundBox2f* p_box = nullptr) const;
-    const Location* getLocation(sead::BoundBox2f* p_box, u8 id) const;
+    const MapActorData* getMapActor(u16 type, const MapActorData* start = nullptr) const;
+    const AreaData* getAreaData(u8 id, sead::BoundBox2f* box = nullptr) const;
+    const Location* getLocation(sead::BoundBox2f* box, u8 id) const;
     const RailInfo* getRailInfo(u8 id) const;
     const RailPoint* getRailPoint(u8 rail_id) const;
 
 private:
-    void getAreaBox_(sead::BoundBox2f* p_box, const AreaData& area_data, f32 delta = 0.0f) const;
+    void getAreaBox_(sead::BoundBox2f* box, const AreaData& area_data, f32 delta = 0.0f) const;
 
 private:
     u32                                         mIndex;

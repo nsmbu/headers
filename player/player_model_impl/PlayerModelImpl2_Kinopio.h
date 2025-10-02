@@ -31,9 +31,9 @@ public:
     void setTexAnmTypeImpl(TexAnmType type) override;
 
     // Address: 0x0296FAD4
-    bool getPlayerModeAnmResInfo(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id, bool body) override;
+    bool getPlayerModeAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id, bool body) override;
     // Address: 0x02971078
-    bool getPlayerModeRideAnmResInfo(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id) override;
+    bool getPlayerModeRideAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id) override;
 
     // Address: 0x029711B4
     f32 vf13C() override;
@@ -52,7 +52,7 @@ public:
     void setMusaPtoNmlAnm() override;
 
 protected:
-    ModelResource*                          mpKinopioAnmRes;
+    ModelResource*                          mKinopioAnmRes;
     sead::SafeArray<f32, cMaterialMaxNum>   mTevColor0Alpha;
 };
 static_assert(sizeof(KinopioModel) == 0x22C);

@@ -17,7 +17,7 @@ public:
     const PtclParam* getParam(u32 index) const;
 
 protected:
-    const PtclParam*    mpParam;
+    const PtclParam*    mParam;
     u32                 mParamNum;
 };
 static_assert(sizeof(PtclParamMgr) == 8);

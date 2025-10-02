@@ -10,7 +10,7 @@ class BgCollision;
 struct BgCollisionCheckResultPoint
 {
     u64             bg_check_data;          // See BgUnitCode
-    BgCollision*    p_bg_collision;
+    BgCollision*    bg_collision;
   //u32             _c[4 / sizeof(u32)];    // Alignment???
 };
 static_assert(sizeof(BgCollisionCheckResultPoint) == 0x10);
@@ -23,7 +23,7 @@ struct BgCollisionCheckResultArea
     Angle           _10;
   //u32             _14[4 / sizeof(u32)];   // Alignment???
     u64             bg_check_data;          // See BgUnitCode
-    BgCollision*    p_bg_collision;
+    BgCollision*    bg_collision;
   //u32             _24[4 / sizeof(u32)];   // More alignment???
 
     BgCollisionCheckResultArea()

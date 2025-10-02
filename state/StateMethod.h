@@ -16,11 +16,11 @@ public:
     // Address: 0x029C4AF0
     void changeStateMethod(const StateID& state_id);
 
-    IState* getState() const { return mpState; }
-    const StateID* getNewStateID() const { return mpNewStateID; }
+    IState* getState() const { return mState; }
+    const StateID* getNewStateID() const { return mNewStateID; }
     // Address: 0x029C4B88
     const StateID* getStateID() const;
-    const StateID* getOldStateID() const { return mpOldStateID; }
+    const StateID* getOldStateID() const { return mOldStateID; }
 
 protected:
     void initializeStateLocalMethod_();
@@ -30,18 +30,18 @@ protected:
 
 protected:
     IStateFactory&  mFactory;
-    const StateID*  mpNewStateID;
-    IState*         mpState;
-    const StateID*  mpOldStateID;
+    const StateID*  mNewStateID;
+    IState*         mState;
+    const StateID*  mOldStateID;
 };
 static_assert(sizeof(StateMethod) == 0x10);
 
 inline void StateMethod::initializeStateLocalMethod_()
 {
-    if (mpNewStateID != nullptr)
+    if (mNewStateID != nullptr)
     {
-        mpState = mFactory.buildWithInitialize(*mpNewStateID);
-        mpNewStateID = nullptr;
+        mState = mFactory.buildWithInitialize(*mNewStateID);
+        mNewStateID = nullptr;
     }
 }
 
@@ -49,16 +49,16 @@ inline void StateMethod::executeStateLocalMethod_()
 {
     initializeStateLocalMethod_();
 
-    if (mpState != nullptr)
-        mpState->execute();
+    if (mState != nullptr)
+        mState->execute();
 }
 
 inline void StateMethod::finalizeStateLocalMethod_()
 {
-    if (mpState != nullptr && mpNewStateID != nullptr)
+    if (mState != nullptr && mNewStateID != nullptr)
     {
-        mpOldStateID = mpState->getStateID();
-        mFactory.disposeWithFinalize(mpState);
+        mOldStateID = mState->getStateID();
+        mFactory.disposeWithFinalize(mState);
     }
 }
 

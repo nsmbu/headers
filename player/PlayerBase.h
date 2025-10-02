@@ -702,7 +702,7 @@ public:
     virtual PlayerTallType getTallType(PlayerMode mode) = 0;
 
     virtual void getMaskPos(sead::Vector3f& pos) = 0;
-    virtual void getMaskCaveCheckPos(sead::Vector3f* p_pos, f32* p_y_offset) = 0;
+    virtual void getMaskCaveCheckPos(sead::Vector3f* pos, f32* y_offset) = 0;
 
     // Address: 0x028F3854
     virtual bool vf154();
@@ -717,7 +717,7 @@ public:
     void dokanAdjustMaskPos(sead::Vector3f& mask_pos);
 
     // Address: 0x028F3948
-    bool checkRideActor(PlayerBase* p_player_other);
+    bool checkRideActor(PlayerBase* player_other);
     // Address: 0x028F3978
     void setRideNat(f32 value);
     // Address: 0x028F398C
@@ -1238,7 +1238,7 @@ public:
     // Address: 0x028F3B44
     void coinJumpOnStampCB(s32 coin_num);
     // Address: 0x028F3C34
-    void coinFunsuiOnDamageCB(s32 type, Actor* p_eat_die_actor);
+    void coinFunsuiOnDamageCB(s32 type, Actor* eat_die_actor);
 
 private:
     inline void reduceCoinNum_(s32 coin_num);
@@ -1285,7 +1285,7 @@ public:
     const PlayerModelBase* getModel() const;
 
     // Address: 0x028F4008
-    void getAnkleCenterPos(sead::Vector3f* p_pos);
+    void getAnkleCenterPos(sead::Vector3f* pos);
 
     virtual bool isFaceRot()
     {
@@ -1332,11 +1332,11 @@ public:
 
     virtual bool isNoDamage() = 0;
     virtual bool isNoDamagePlayer() = 0;  // Only used by Yoshi, called at 0x0295FAF8
-    virtual bool setNormalDamage(ActorCollisionCheck* p_cc) = 0;
-    virtual bool setDamage(Actor* p_actor, DamageType type) = 0;
-    virtual bool setForcedDamage(Actor* p_actor, DamageType type) = 0;
+    virtual bool setNormalDamage(ActorCollisionCheck* cc) = 0;
+    virtual bool setDamage(Actor* actor, DamageType type) = 0;
+    virtual bool setForcedDamage(Actor* actor, DamageType type) = 0;
     virtual bool setFlyDamage(DamageType type, s32 dir, bool, bool, f32 speed_F, f32 speed_y) = 0;
-    virtual bool setDamage2(Actor* p_actor, DamageType type) = 0;
+    virtual bool setDamage2(Actor* actor, DamageType type) = 0;
     virtual bool setPressBgDamage(DamageType type, bool) = 0;
 
     // Address: 0x028F4F48
@@ -1356,7 +1356,7 @@ public:
     virtual void setStar(StarSet, s32 time) = 0;
     virtual bool isStar() const = 0;
     virtual void endStar() = 0;
-    virtual void setVirusStar(PlayerBase* p_other) = 0;
+    virtual void setVirusStar(PlayerBase* other) = 0;
 
     virtual void resetLight() // Not exactly sure
     {
@@ -1510,7 +1510,7 @@ public:
 
 protected:
     s32                             mExecuteFreezeTimer;
-    PlayerModelBaseMgr*             mpModelBaseMgr;
+    PlayerModelBaseMgr*             mModelBaseMgr;
     sead::Vector3f                  _284;
     s32                             mMaskPosInterpSrcType;  // Interpolation source; 1 = ankle joints center pos, everything else = player pos
     s32                             mMaskPosInterpTimer;
@@ -1524,9 +1524,9 @@ protected:
     u32                             _4b8;
     sead::Vector3f                  mFrameEndPosDelta;
     sead::Vector3f                  _4c8;
-    PlayerSpeedHIO*                 mpSpeedData_Normal;
-    PlayerSpeedHIO*                 mpSpeedData_Star;
-    PlayerGravityHIO*               mpGravityData;
+    PlayerSpeedHIO*                 mSpeedData_Normal;
+    PlayerSpeedHIO*                 mSpeedData_Star;
+    PlayerGravityHIO*               mGravityData;
     s32                             mNoGravityTimer;
     f32                             _4e4;
     bool                            _4e8;
@@ -1647,13 +1647,13 @@ protected:
     f32                             _217c;
     u32                             _2180;
     u32                             _2184;
-    ActorBoxBgCollision*            mpDokanBgCollision;
+    ActorBoxBgCollision*            mDokanBgCollision;
     bool                            mIsDokanSwim;           // Maybe?
     f32                             _2190;
     u32                             _2194;
     bool                            _2198;
     FStateMgr<PlayerBase>           mStateMgr;
-    JumpInf*                        mpChangeStateJmpInf;
+    JumpInf*                        mChangeStateJmpInf;
     s32                             mChangeStateParam;
     s32                             mAction;                // See ActionType
     s32                             mActionTimer;

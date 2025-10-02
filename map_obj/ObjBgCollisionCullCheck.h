@@ -13,7 +13,7 @@ public:
     bool cullCheck(const sead::Vector3f& pos);
 
 protected:
-    const BgCollision*  mpBgCollision;
+    const BgCollision*  mBgCollision;
     sead::Vector2f      mCenterOffset;
     sead::Vector2f      mSize;
     struct

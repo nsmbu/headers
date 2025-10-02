@@ -40,9 +40,9 @@ protected:
     bool tryShoot_() const;
 
 protected:
-    AnimModel*                          mpAnimModelA;
-    AnimModel*                          mpAnimModelB;
-    sead::SafeArray<AnimModel*, 16>     mpAnimModelC;
+    AnimModel*                          mAnimModelA;
+    AnimModel*                          mAnimModelB;
+    sead::SafeArray<AnimModel*, 16>     mAnimModelC;
     ActorBoxBgCollision                 mBoxBgCollision;
     u32                                 _1aa0[0x50 / sizeof(u32)];
     sead::Vector3f                      _1af0;

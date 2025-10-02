@@ -44,18 +44,18 @@ public:
     void initialize(const BgCollisionCheckParam& param);
 
     // Address: 0x021A0D40
-    bool checkAreaUnit(BgCollisionCheckResultArea* p_res, const sead::Vector2f& p0, const sead::Vector2f& p1, u8 hit_dir_mask = cHitDirMaskAll) const;
+    bool checkAreaUnit(BgCollisionCheckResultArea* res, const sead::Vector2f& p0, const sead::Vector2f& p1, u8 hit_dir_mask = cHitDirMaskAll) const;
     // Address: 0x021A1184
-    bool checkAreaActor(BgCollisionCheckResultArea* p_res, const sead::Vector2f& p0, const sead::Vector2f& p1, u8 hit_dir_mask = cHitDirMaskAll) const;
+    bool checkAreaActor(BgCollisionCheckResultArea* res, const sead::Vector2f& p0, const sead::Vector2f& p1, u8 hit_dir_mask = cHitDirMaskAll) const;
     // Address: 0x021A13F0
-    bool checkArea(BgCollisionCheckResultArea* p_res, const sead::Vector2f& p0, const sead::Vector2f& p1, u8 hit_dir_mask = cHitDirMaskAll) const;
+    bool checkArea(BgCollisionCheckResultArea* res, const sead::Vector2f& p0, const sead::Vector2f& p1, u8 hit_dir_mask = cHitDirMaskAll) const;
 
     // Address: 0x021A1610
-    bool checkPointUnit(BgCollisionCheckResultPoint* p_res, const sead::Vector2f& p) const;
+    bool checkPointUnit(BgCollisionCheckResultPoint* res, const sead::Vector2f& p) const;
     // Address: 0x021A1828
-    bool checkPointActor(BgCollisionCheckResultPoint* p_res, const sead::Vector2f& p) const;
+    bool checkPointActor(BgCollisionCheckResultPoint* res, const sead::Vector2f& p) const;
     // Address: 0x021A1988
-    bool checkPoint(BgCollisionCheckResultPoint* p_res, const sead::Vector2f& p) const;
+    bool checkPoint(BgCollisionCheckResultPoint* res, const sead::Vector2f& p) const;
 
     void setLayer(u8 layer)
     {
@@ -68,8 +68,8 @@ private:
     u8                      mLayer;
     sead::BitFlag8          mCollisionMask;
     BgCollisionCheckType    mType;
-    Actor*                  mpActor;
-    BgHitCheckCallback*     mpCallback;
+    Actor*                  mActor;
+    BgHitCheckCallback*     mCallback;
     u32                     mIgnoreActor[(0x48 - 0x10) / sizeof(u32)]; // sead::FixedRingBuffer<Actor*, 10> mIgnoreActor; // Actors to ignore their BgCollision
     u32                     _48;
 };

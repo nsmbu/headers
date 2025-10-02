@@ -22,25 +22,25 @@ public:
 
     PlayerModelBase* getModelBase()
     {
-        return mpModelBase;
+        return mModelBase;
     }
 
     // Address: 0x02922B3C
-    void setModelBase(PlayerModelBase* p_mdl_base);
+    void setModelBase(PlayerModelBase* mdl_base);
 
     void reset()
     {
-        mpModelBase->reset();
+        mModelBase->reset();
     }
 
     f32 getAnmRate(s32 anm_id)
     {
-        return mpModelBase->getAnmRate(anm_id);
+        return mModelBase->getAnmRate(anm_id);
     }
 
     f32 getAnmBlendDuration(s32 anm_id)
     {
-        return mpModelBase->getAnmBlendDuration(anm_id);
+        return mModelBase->getAnmBlendDuration(anm_id);
     }
 
     // Address: 0x02922A84
@@ -50,7 +50,7 @@ public:
 
     void setAnm(s32 anm_id, f32 rate, f32 blend_duration, f32 frame)
     {
-        mpModelBase->setAnm(anm_id, rate, blend_duration, frame);
+        mModelBase->setAnm(anm_id, rate, blend_duration, frame);
     }
 
     // Address: 0x02922C40
@@ -58,152 +58,152 @@ public:
 
     void setBodyAnm(s32 anm_id, f32 rate, f32 frame = 0.0f, f32 blend_duration = 0.0f)
     {
-        mpModelBase->setBodyAnm(anm_id, rate, frame, blend_duration);
+        mModelBase->setBodyAnm(anm_id, rate, frame, blend_duration);
     }
 
     void copyLinkAnm(f32 blend_duration)
     {
-        mpModelBase->copyLinkAnm(blend_duration);
+        mModelBase->copyLinkAnm(blend_duration);
     }
 
     void setJumpIndex(s32 rnd_type)
     {
-        mpModelBase->setJumpIndex(rnd_type);
+        mModelBase->setJumpIndex(rnd_type);
     }
 
     void setRate(f32 rate)
     {
-        mpModelBase->setRate(rate);
+        mModelBase->setRate(rate);
     }
 
     f32 getRate()
     {
-        return mpModelBase->getRate();
+        return mModelBase->getRate();
     }
 
     void setRateDirect(f32 rate)
     {
-        mpModelBase->setRateDirect(rate);
+        mModelBase->setRateDirect(rate);
     }
 
     f32 getRateDirect()
     {
-        return mpModelBase->getRateDirect();
+        return mModelBase->getRateDirect();
     }
 
     void setBodyRate(f32 rate)
     {
-        mpModelBase->setBodyRate(rate);
+        mModelBase->setBodyRate(rate);
     }
 
     f32 getBodyRate()
     {
-        return mpModelBase->getBodyRate();
+        return mModelBase->getBodyRate();
     }
 
     bool isAnmStop()
     {
-        return mpModelBase->isAnmStop();
+        return mModelBase->isAnmStop();
     }
 
     bool isBodyAnmStop()
     {
-        return mpModelBase->isBodyAnmStop();
+        return mModelBase->isBodyAnmStop();
     }
 
     void setFrame(f32 frame)
     {
-        mpModelBase->setFrame(frame);
+        mModelBase->setFrame(frame);
     }
 
     f32 getFrame()
     {
-        return mpModelBase->getFrame();
+        return mModelBase->getFrame();
     }
 
     void setFrameDirect(f32 frame)
     {
-        mpModelBase->setFrameDirect(frame);
+        mModelBase->setFrameDirect(frame);
     }
 
     f32 getFrameDirect()
     {
-        return mpModelBase->getFrameDirect();
+        return mModelBase->getFrameDirect();
     }
 
     void setBodyFrame(f32 frame)
     {
-        mpModelBase->setBodyFrame(frame);
+        mModelBase->setBodyFrame(frame);
     }
 
     f32 getBodyFrame()
     {
-        return mpModelBase->getBodyFrame();
+        return mModelBase->getBodyFrame();
     }
 
     bool checkFrame(f32 frame)
     {
-        return mpModelBase->checkFrame(frame);
+        return mModelBase->checkFrame(frame);
     }
 
     bool checkBodyFrame(f32 frame)
     {
-        return mpModelBase->checkBodyFrame(frame);
+        return mModelBase->checkBodyFrame(frame);
     }
 
     bool checkFrameCtrlFlagUnk2()
     {
-        return mpModelBase->checkFrameCtrlFlagUnk2();
+        return mModelBase->checkFrameCtrlFlagUnk2();
     }
 
     bool checkBodyFrameCtrlFlagUnk2()
     {
-        return mpModelBase->checkBodyFrameCtrlFlagUnk2();
+        return mModelBase->checkBodyFrameCtrlFlagUnk2();
     }
 
     f32 getFrameEnd()
     {
-        return mpModelBase->getFrameEnd();
+        return mModelBase->getFrameEnd();
     }
 
     bool isBodyAnmOn()
     {
-        return mpModelBase->isBodyAnmOn();
+        return mModelBase->isBodyAnmOn();
     }
 
-    void getJointMtx(sead::Matrixf* p_mtx, s32 index)
+    void getJointMtx(sead::Matrixf* mtx, s32 index)
     {
-        mpModelBase->getJointMtx(p_mtx, index);
+        mModelBase->getJointMtx(mtx, index);
     }
 
-    void getJointPos(sead::Vector3f* p_pos, s32 index)
+    void getJointPos(sead::Vector3f* pos, s32 index)
     {
-        mpModelBase->getJointPos(p_pos, index);
+        mModelBase->getJointPos(pos, index);
     }
 
-    void getJointMtx(sead::Matrixf* p_mtx, const sead::SafeString& name)
+    void getJointMtx(sead::Matrixf* mtx, const sead::SafeString& name)
     {
-        mpModelBase->getJointMtx(p_mtx, name);
+        mModelBase->getJointMtx(mtx, name);
     }
 
-    void getJointPos(sead::Vector3f* p_pos, const sead::SafeString& name)
+    void getJointPos(sead::Vector3f* pos, const sead::SafeString& name)
     {
-        mpModelBase->getJointPos(p_pos, name);
+        mModelBase->getJointPos(pos, name);
     }
 
     void play()
     {
-        mpModelBase->play();
+        mModelBase->play();
     }
 
     void calc(const sead::Matrixf& mtx)
     {
-        mpModelBase->calc(mtx);
+        mModelBase->calc(mtx);
     }
 
     void calc2()
     {
-        mpModelBase->calc2();
+        mModelBase->calc2();
     }
 
     // Address: 0x02922CA0
@@ -211,122 +211,122 @@ public:
 
     void cancelCarry()
     {
-        mpModelBase->cancelCarry();
+        mModelBase->cancelCarry();
     }
 
     void onCarry()
     {
-        mpModelBase->onCarry();
+        mModelBase->onCarry();
     }
 
     void onLiftUp()
     {
-        mpModelBase->onLiftUp();
+        mModelBase->onLiftUp();
     }
 
     void onBalloonChibiYoshiFly()
     {
-        mpModelBase->onBalloonChibiYoshiFly();
+        mModelBase->onBalloonChibiYoshiFly();
     }
 
     void onBubbleChibiYoshiShake()
     {
-        mpModelBase->onBubbleChibiYoshiShake();
+        mModelBase->onBubbleChibiYoshiShake();
     }
 
     void offCarry()
     {
-        mpModelBase->offCarry();
+        mModelBase->offCarry();
     }
 
     void offLiftUp()
     {
-        mpModelBase->offLiftUp();
+        mModelBase->offLiftUp();
     }
 
     void offBalloonChibiYoshiFly()
     {
-        mpModelBase->offBalloonChibiYoshiFly();
+        mModelBase->offBalloonChibiYoshiFly();
     }
 
     void offBubbleChibiYoshiShake()
     {
-        mpModelBase->offBubbleChibiYoshiShake();
+        mModelBase->offBubbleChibiYoshiShake();
     }
 
     bool isCarry()
     {
-        return mpModelBase->isCarry();
+        return mModelBase->isCarry();
     }
 
     bool isLiftUp()
     {
-        return mpModelBase->isLiftUp();
+        return mModelBase->isLiftUp();
     }
 
     void onStarAnm()
     {
-        mpModelBase->onStarAnm();
+        mModelBase->onStarAnm();
     }
 
     void offStarAnm()
     {
-        mpModelBase->offStarAnm();
+        mModelBase->offStarAnm();
     }
 
     bool isFootStepTiming()
     {
-        return mpModelBase->isFootStepTiming();
+        return mModelBase->isFootStepTiming();
     }
 
     bool isCourseSelectScene()
     {
-        return mpModelBase->isCourseSelectScene();
+        return mModelBase->isCourseSelectScene();
     }
 
     f32 getBaseScale()
     {
-        return mpModelBase->getBaseScale();
+        return mModelBase->getBaseScale();
     }
 
     sead::Vector3f* getHeadTopPosP()
     {
-        return mpModelBase->getHeadTopPosP();
+        return mModelBase->getHeadTopPosP();
     }
 
     sead::Vector3f* getHeadPosP()
     {
-        return mpModelBase->getHeadPosP();
+        return mModelBase->getHeadPosP();
     }
 
     u32 getAnmFlag(PlayerModelBase::AnmFlagType type) const
     {
-        return mpModelBase->getAnmFlag(type);
+        return mModelBase->getAnmFlag(type);
     }
 
     void changeFaceAngleOverrideFlag(PlayerModelBase::FaceAngleOverrideFlag flag, bool enable)
     {
-        mpModelBase->changeFaceAngleOverrideFlag(flag, enable);
+        mModelBase->changeFaceAngleOverrideFlag(flag, enable);
     }
 
     const Angle3& getFaceAngleOverride() const
     {
-        return mpModelBase->getFaceAngleOverride();
+        return mModelBase->getFaceAngleOverride();
     }
 
     void setFaceAngleOverride(const Angle3& angle)
     {
-        mpModelBase->setFaceAngleOverride(angle);
+        mModelBase->setFaceAngleOverride(angle);
     }
 
     void resetFaceAngleOverride()
     {
-        mpModelBase->resetFaceAngleOverride();
+        mModelBase->resetFaceAngleOverride();
     }
 
     void resetFaceAngleOverrideFlag()
     {
-        mpModelBase->resetFaceAngleOverrideFlag();
+        mModelBase->resetFaceAngleOverrideFlag();
     }
 
     // Address: 0x02922D8C
@@ -334,21 +334,21 @@ public:
 
     void setTexAnmType(PlayerModelBase::TexAnmType type)
     {
-        mpModelBase->setTexAnmType(type);
+        mModelBase->setTexAnmType(type);
     }
 
     ModelResource* getModelResFile() const
     {
-        return mpModelBase->getModelResFile();
+        return mModelBase->getModelResFile();
     }
 
     ModelResource* getAnmResFile() const
     {
-        return mpModelBase->getAnmResFile();
+        return mModelBase->getAnmResFile();
     }
 
 protected:
-    PlayerModelBase*    mpModelBase;
+    PlayerModelBase*    mModelBase;
     DrawType            mDrawType;
 };
 static_assert(sizeof(PlayerModelBaseMgr) == 0xC);

@@ -23,11 +23,11 @@ public:
     void vf34() override;
     // Address: 0x021AE0AC
     void execute() override;
-    bool checkAreaBasic(BgCollisionCheckResultArea* p_res, const BasicBgCollisionCheck& bc, const sead::Vector2f& p0, const sead::Vector2f& p1, u8 hit_dir_mask) override { return false; }
+    bool checkAreaBasic(BgCollisionCheckResultArea* res, const BasicBgCollisionCheck& bc, const sead::Vector2f& p0, const sead::Vector2f& p1, u8 hit_dir_mask) override { return false; }
     // Address: 0x021AE13C
     bool checkAreaActor(ActorBgCollisionCheckResult*, sead::Vector2f*, sead::Vector2f*, u8 direction, ActorBgCollisionCheck*) override;
     // Address: 0x021AEB48
-    bool checkPointInside(bool* p_on_edge, const sead::Vector2f& p) const override;
+    bool checkPointInside(bool* on_edge, const sead::Vector2f& p) const override;
     // Address: Deleted
     bool vf5C(u32*) override;
     // Address: 0x021AEE08
@@ -42,9 +42,9 @@ public:
     void setCommon(const FollowArg& follow_arg, const PoleRopeInitArg& init_arg);
 
     // Address: 0x021ADACC
-    void set(Actor* p_owner, const PoleRopeInitArg& arg);
+    void set(Actor* owner, const PoleRopeInitArg& arg);
     // Address: 0x021ADB34
-    void set(Actor* p_owner, const PoleRopeInitArg& arg, s32 line_num, sead::Heap* heap = nullptr);
+    void set(Actor* owner, const PoleRopeInitArg& arg, s32 line_num, sead::Heap* heap = nullptr);
 
     const sead::Buffer<sead::Vector2f>& getPoints() const
     {

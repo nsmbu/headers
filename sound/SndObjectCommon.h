@@ -235,6 +235,6 @@ public:
     }
 
 protected:
-    SoundHandlePrm* mpSoundHandlePrm;
+    SoundHandlePrm* mSoundHandlePrm;
 };
 static_assert(sizeof(NMNonPosSndObject) == 0x78);

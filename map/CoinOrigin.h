@@ -55,8 +55,8 @@ private:
 
 private:
     Angle                   mCoinAngle;
-    Model*                  mpModelCoin;
-    Model*                  mpModelBlueCoin;
+    Model*                  mModelCoin;
+    Model*                  mModelBlueCoin;
     sead::OrthoProjection   mProjection;
     sead::OrthoCamera       mCamera;
     agl::lyr::DrawMethod    mDrawMethod;

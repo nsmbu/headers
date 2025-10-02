@@ -25,7 +25,7 @@ private:
     // Address: 0x024FDF40
     agl::ShaderProgramArchive* createShaderArchive_(const sead::SafeString& filename, sead::Heap* heap) const;
     // Address: 0x024FE030
-    void pushBackShaderArchive_(const sead::SafeString& filename, agl::ShaderProgramArchive* p_archive, sead::Heap* heap);
+    void pushBackShaderArchive_(const sead::SafeString& filename, agl::ShaderProgramArchive* archive, sead::Heap* heap);
 
     // Address: 0x024FE21C
     void createAndPushBackShaderArchive_(const sead::SafeString& filename, sead::Heap* heap);
