@@ -24,6 +24,9 @@ public:
     // Address: 0x02994164
     bool createScene(sead::TaskBase* src_task, const sead::TaskClassID& next_scene, u32 param_0, u32 param_1);
 
+    // Address: 0x029941D0
+    bool setCourse_Story(sead::TaskBase* src_task, s32 world_no, s32 course_no);
+
     // Address: 0x029945B8
     bool isFadein() const;
 
@@ -49,4 +52,4 @@ protected:
     sead::Vector3f                              mFadeCenter;    // I think
     u32                                         _80;
 };
-static_assert(sizeof(Scene) == 0x84);
+static_assert(sizeof(Scene) == 0x84, "Scene size mismatch");
