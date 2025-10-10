@@ -40,6 +40,16 @@ public:
         return mTaskMgr;
     }
 
+    sead::Vector3f& getFadeCenter()
+    {
+        return mFadeCenter;
+    }
+
+    const sead::Vector3f& getFadeCenter() const
+    {
+        return mFadeCenter;
+    }
+
 protected:
     sead::DelegateEvent<sead::TaskBase*>::Slot  mCreateCallback;
     sead::TaskClassID                           mOldScene;
