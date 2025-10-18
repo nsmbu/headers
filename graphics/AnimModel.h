@@ -59,6 +59,10 @@ public:
         sead::Heap* heap = nullptr
     );
 
+    static void destroy(
+        AnimModel*& anim_model
+    );
+
 public:
     // Address: 0x024D4798
     AnimModel(Model* model, u32 skl_anim_num, u32 tex_anim_num, u32 shu_anim_num, u32 vis_anim_num, u32 sha_anim_num);
@@ -153,4 +157,17 @@ inline AnimModel* AnimModel::create(
 {
     ModelResource* mdl_res = ModelResourceMgr::instance()->getResource(resource_key);
     return create(mdl_res, name, view_num, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
+}
+
+inline void AnimModel::destroy(
+    AnimModel*& anim_model
+)
+{
+    if (anim_model != nullptr)
+    {
+        Model* model = anim_model->getModel();
+        delete model;
+        delete anim_model;
+        anim_model = nullptr;
+    }
 }
