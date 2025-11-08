@@ -125,6 +125,7 @@ protected:
     // Address: 0x101ED8DC
     static sead::SafeArray<Profile*, cProfileID_Max>    sProfile;
 
+public:
     // Address: 0x10001940
     static const s16                cDrawPriority[cProfileID_Max];
     // Address: 0x10002064
