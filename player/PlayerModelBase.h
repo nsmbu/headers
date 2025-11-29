@@ -149,8 +149,8 @@ public:
 
     virtual void setTexAnmType(TexAnmType type) = 0;
 
-    virtual bool getPlayerModeAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id, bool body) = 0;
-    virtual bool getPlayerModeRideAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id) = 0;
+    virtual bool setPersonalAnm(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id, bool body) = 0;
+    virtual bool setPersonalRideAnm(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id) = 0;
 
     virtual void setFootAnmImpl(const ModelResource* anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) = 0;
     virtual void setBodyAnmImpl(const ModelResource* anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) = 0;

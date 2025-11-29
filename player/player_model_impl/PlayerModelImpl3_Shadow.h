@@ -58,13 +58,13 @@ public:
     // Address: 0x02971FE8
     void setTexAnmType(TexAnmType type) override;
 
-    bool getPlayerModeAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id, bool body) override
+    bool setPersonalAnm(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id, bool body) override
     {
         return false;
     }
 
     // Address: 0x02971FEC
-    bool getPlayerModeRideAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id) override;
+    bool setPersonalRideAnm(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id) override;
 
     f32 vf13C() override
     {

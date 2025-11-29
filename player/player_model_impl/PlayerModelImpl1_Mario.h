@@ -52,7 +52,7 @@ public:
     void setTexAnmTypeImpl(TexAnmType type) override;
 
     // Address: 0x0296D884
-    bool getPlayerModeAnmResInfo(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id, bool body) override;
+    bool setPersonalAnm(ModelResource** anm_res, sead::BufferedSafeString* anm_name, s32 anm_id, bool body) override;
 
     // Address: 0x0296E140
     f32 vf13C() override;
