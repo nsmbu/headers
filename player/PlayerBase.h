@@ -1299,7 +1299,7 @@ public:
 
     virtual PlayerGravityHIO* getGravityData()
     {
-        return mpGravityData;
+        return mGravityData;
     }
 
     // Address: 0x02904CF4
