@@ -24,7 +24,7 @@ public:
         if (!mSuperID->isNull())
             return mSuperID->number();
 
-        return mNumber;
+        return this->mNumber;
     }
 
     const StateID* superID() const
