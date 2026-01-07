@@ -29,6 +29,8 @@ public:
     bool triggerUp() const;
     bool triggerDown() const;
 
+    bool buttonWalk(s32* dir = nullptr) const;
+
     bool buttonJump() const;
 
     bool triggerShakeJump() const;
