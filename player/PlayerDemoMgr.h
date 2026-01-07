@@ -52,6 +52,11 @@ public:
         mIsEnableCheckDemoNo = true;
     }
 
+    bool checkDemoNo(s8* player_no)
+    {
+        return isEnableCheckDemoNo() && getNextDemoNo() == *player_no;
+    }
+
     s32 getNextDemoNo();
     s32 getNumDemoNo();
     void turnNextDemoNo();
