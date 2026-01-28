@@ -6,8 +6,8 @@
 #include <heap/seadHeap.h>
 #include <math/seadVector.h>
 
-enum LayerID;
-enum UnitID;
+enum LayerID : int;
+enum UnitID : int;
 
 class BgRenderer
 {
