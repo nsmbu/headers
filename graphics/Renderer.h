@@ -12,7 +12,7 @@ class   Angle;
 class   AnimModel;
 class   Model;
 class   ModelFFL;
-enum    UnitID;
+enum    UnitID : int;
 
 class Renderer
 {
