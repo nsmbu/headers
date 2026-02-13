@@ -40,6 +40,9 @@ public:
     {
     }
 
+    // Address: 0x020272DC
+    void create(Actor* owner);
+
 private:
     Actor*                      mOwner;
     Mode                        mMode;
