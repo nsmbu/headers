@@ -43,6 +43,9 @@ public:
     // Address: 0x020272DC
     void create(Actor* owner);
 
+    // Address: 0x02027790
+    void setSpinEffect(const sead::Matrixf& mtx);
+
 private:
     Actor*                      mOwner;
     Mode                        mMode;
