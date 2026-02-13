@@ -357,6 +357,76 @@ public:
         return mModelBase->getAnmID();
     }
 
+    void onOnHDokan()
+    {
+        mModelBase->onOnHDokan();
+    }
+
+    void offOnHDokan()
+    {
+        mModelBase->offOnHDokan();
+    }
+
+    bool isOnHDokan() const
+    {
+        return mModelBase->isOnHDokan();
+    }
+
+    void onWaitL()
+    {
+        mModelBase->onWaitL();
+    }
+
+    void onWaitR()
+    {
+        mModelBase->onWaitR();
+    }
+
+    void offWait()
+    {
+        mModelBase->offWait();
+    }
+
+    bool isWaitL() const
+    {
+        return mModelBase->isWaitL();
+    }
+
+    bool isWaitR() const
+    {
+        return mModelBase->isWaitR();
+    }
+
+    void onRideCloudWait()
+    {
+        mModelBase->onRideCloudWait();
+    }
+
+    void offRideCloudWait()
+    {
+        mModelBase->offRideCloudWait();
+    }
+
+    bool isRideCloudWait() const
+    {
+        return mModelBase->isRideCloudWait();
+    }
+
+    void onRideLiftWait()
+    {
+        mModelBase->onRideLiftWait();
+    }
+
+    void offRideLiftWait()
+    {
+        mModelBase->offRideLiftWait();
+    }
+
+    bool isRideLiftWait() const
+    {
+        return mModelBase->isRideLiftWait();
+    }
+
 protected:
     PlayerModelBase*    mModelBase;
     DrawType            mDrawType;
