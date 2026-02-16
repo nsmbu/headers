@@ -2318,9 +2318,9 @@ public:
     PlayerSpeedHIO* getSpeedData() const
     {
         if (isStar())
-            return mpSpeedData_Star;
+            return mSpeedData_Star;
         else
-            return mpSpeedData_Normal;
+            return mSpeedData_Normal;
     }
 
     // Address: 0x0290587C
