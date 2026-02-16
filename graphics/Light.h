@@ -4,7 +4,7 @@
 #include <heap/seadDisposer.h>
 #include <math/seadVector.h>
 
-enum LightType;
+enum LightType : int;
 
 class Light : public sead::IDisposer    // vtbl Address: 0x100BB350
 {
