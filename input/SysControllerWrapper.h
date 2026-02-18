@@ -14,7 +14,7 @@ public:
     SysControllerWrapper();
     ~SysControllerWrapper() override;
 
-    void calc(u32, bool) override;
+    void calc(u32 prev_hold, bool prev_pointer_on) override;
 
     void registerWith(SysController::Id id);
 };
