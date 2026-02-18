@@ -44,15 +44,15 @@ protected:
     ActorCollision(const ActorCreateParam& param);
 
     // Address: 0x0200354C
-    void postCreate_(MainState state) override;
+    void postCreate(MainState state) override;
 
     // Address: 0x020035FC
-    bool preExecute_() override;
+    bool preExecute() override;
     // Address: 0x020036D8
-    void postExecute_(MainState state) override;
+    void postExecute(MainState state) override;
 
     // Address: 0x02003724
-    Result doDelete_() override;
+    Result doDelete() override;
 
     virtual void setWaterFunsui_(bool enable)
     {

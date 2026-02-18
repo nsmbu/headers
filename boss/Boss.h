@@ -26,13 +26,13 @@ public:
 
 protected:
     // Address: 0x0202BB68
-    Result create_() override;
+    Result create() override;
     // Address: 0x0202BD0C
-    bool preExecute_() override;
+    bool preExecute() override;
     // Address: 0x0202BDDC
-    void postExecute_(MainState state) override;
+    void postExecute(MainState state) override;
 
-    Result doDelete_() override
+    Result doDelete() override
     {
         AttentionMgr::instance()->release(mAttentionLookat);
         ActorCollisionCheckMgr::instance()->release(mCollisionCheckDrcTouch);

@@ -25,13 +25,13 @@ public:
 
 protected:
     // Address: 0x023BE448
-    Result create_() override;
+    Result create() override;
     // Address: 0x023BEEAc
-    bool execute_() override;
+    bool execute() override;
     // Address: 0x023BF214
-    bool draw_() override;
+    bool draw() override;
     // Address: 0x023BF2C4
-    Result doDelete_() override;
+    Result doDelete() override;
 
     // Address: 0x023BFBF8
     virtual void createMdlMag_();

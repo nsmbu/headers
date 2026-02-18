@@ -13,7 +13,7 @@ public:
     bool init();
 
 protected:
-    bool draw_() override;
+    bool draw() override;
 
 public:
     sead::Vector3f getItemCreatePos() const override;

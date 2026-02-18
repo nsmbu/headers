@@ -971,15 +971,15 @@ public:
 
 protected:
     // Address: 0x028F2E78
-    Result create_() override;
+    Result create() override;
     // Address: 0x028F2F0C
-    bool preExecute_() override;
+    bool preExecute() override;
     // Address: 0x028F3078
-    bool execute_() override;
+    bool execute() override;
     // Address: 0x028F3534
-    void postExecute_(MainState state) override;
+    void postExecute(MainState state) override;
     // Address: 0x028F36BC
-    bool preDraw_() override;
+    bool preDraw() override;
 
     // Address: 0x028F372C
     void blockHitInit_() override;

@@ -46,13 +46,13 @@ public:
 
 protected:
     // Address: 0x022CE4B0
-    Result create_() override;
+    Result create() override;
     // Address: 0x022CE7C8
-    bool execute_() override;
+    bool execute() override;
     // Address: 0x022CE9B4
-    bool draw_() override;
+    bool draw() override;
     // Address: 0x022D00E8
-    Result doDelete_() override;
+    Result doDelete() override;
 
 public:
     // Address: 0x022CF414

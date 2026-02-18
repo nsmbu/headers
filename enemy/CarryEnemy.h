@@ -21,9 +21,9 @@ public:
 
 protected:
     // Address: 0x022EB18C
-    bool preExecute_() override;
+    bool preExecute() override;
     // Address: 0x022EB218
-    Result doDelete_() override;
+    Result doDelete() override;
 
 public:
     bool isSpinLiftUpEnable() override

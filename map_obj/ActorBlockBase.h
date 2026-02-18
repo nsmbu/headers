@@ -17,7 +17,7 @@ public:
 
 public:
     ActorBlockBase(const ActorCreateParam& param);
-    virtual ~ActorBlockBase() { }
+    ~ActorBlockBase() override { }
 
     bool init(bool register_collider, bool);
     void initMover();
@@ -38,8 +38,8 @@ public:
     }
 
 protected:
-    bool execute_() override;
-    bool draw_() override;
+    bool execute() override;
+    bool draw() override;
 
 public:
     void onDownMove_DiffStart() override;

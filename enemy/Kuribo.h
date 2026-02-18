@@ -16,7 +16,7 @@ public:
 
 protected:
     // Address: 0x023D6F74
-    Result doDelete_() override;
+    Result doDelete() override;
 
     void beginFunsui_() override
     {

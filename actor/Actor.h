@@ -268,15 +268,15 @@ protected:
 
 protected:
     // Address: 0x02000FB8
-    void postCreate_(MainState state) override;
+    void postCreate(MainState state) override;
 
     // Address: 0x02000FE8
-    bool preExecute_() override;
+    bool preExecute() override;
     // Address: 0x020010BC
-    void postExecute_(MainState state) override;
+    void postExecute(MainState state) override;
 
     // Address: 0x020011A0
-    bool preDraw_() override;
+    bool preDraw() override;
 
     // Address: 0x02001254
     virtual bool drawCullCheck_();

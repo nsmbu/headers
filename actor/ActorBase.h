@@ -79,34 +79,34 @@ protected:
 
 protected:
     // Address: 0x02002F7C
-    virtual bool preCreate_();
+    virtual bool preCreate();
     // Address: 0x02002F84
-    virtual Result create_();
+    virtual Result create();
     // Address: 0x02002F00
-    virtual void postCreate_(MainState state);
+    virtual void postCreate(MainState state);
 
     // Address: 0x02002F04
-    virtual bool preExecute_();
+    virtual bool preExecute();
     // Address: 0x02002F8C
-    virtual bool execute_();
+    virtual bool execute();
     // Address: 0x02002F34
-    virtual void postExecute_(MainState state);
+    virtual void postExecute(MainState state);
     // Address: 0x02002F94
-    virtual void finalUpdate_();
+    virtual void finalUpdate();
 
     // Address: 0x02002F98
-    virtual bool preDraw_();
+    virtual bool preDraw();
     // Address: 0x02002FA0
-    virtual bool draw_();
+    virtual bool draw();
     // Address: 0x02002F38
-    virtual void postDraw_(MainState state);
+    virtual void postDraw(MainState state);
 
     // Address: 0x02002FA8
-    virtual bool preDelete_();
+    virtual bool preDelete();
     // Address: 0x02002FB0
-    virtual Result doDelete_();
+    virtual Result doDelete();
     // Address: 0x02002F3C
-    virtual void postDelete_(MainState state);
+    virtual void postDelete(MainState state);
 
 protected:
     void setActive_(bool active)

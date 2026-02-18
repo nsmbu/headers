@@ -13,15 +13,15 @@ class BossDemo : public ActorState  // vtbl Address: 0x10005FC0
 public:
     // Address: 0x0202E448
     BossDemo(const ActorCreateParam& param);
-    virtual ~BossDemo() { }
+    ~BossDemo() override { }
 
 protected:
     // Address: 0x0202E4DC
-    Result create_() override;
+    Result create() override;
     // Address: 0x0202E578
-    bool execute_() override;
+    bool execute() override;
     // Address: 0x0202E5A0
-    Result doDelete_() override;
+    Result doDelete() override;
 
 public:
     // StateID_Ready            Address: 0x101F0AA0

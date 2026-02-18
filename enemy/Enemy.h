@@ -65,7 +65,7 @@ public:
 
 protected:
     // Address: 0x02328644
-    bool preExecute_() override;
+    bool preExecute() override;
 
     // Address: 0x02328914
     void blockHitInit_() override;

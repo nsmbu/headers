@@ -113,17 +113,17 @@ public:
 
 protected:
     // Address: 0x02923DB0
-    Result create_() override;
+    Result create() override;
     // Address: 0x02923F04
-    Result doDelete_() override;
+    Result doDelete() override;
     // Address: 0x02923F44
-    bool preDraw_() override;
+    bool preDraw() override;
     // Address: 0x02923FA0
-    bool draw_() override;
+    bool draw() override;
     // Address: 0x02923FF8
-    bool preExecute_() override;
+    bool preExecute() override;
     // Address: 0x029242F4
-    void postExecute_(MainState state) override;
+    void postExecute(MainState state) override;
 
 public:
     // Address: 0x029246FC
