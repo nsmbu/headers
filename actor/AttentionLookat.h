@@ -25,7 +25,7 @@ public:
     // Address: 0x0200CA58
     AttentionLookat(ActorUniqueID id);
     // Address: 0x0200CB10
-    virtual ~AttentionLookat();
+    ~AttentionLookat() override;
 
     const ActorUniqueID& getOwnerID() const
     {
