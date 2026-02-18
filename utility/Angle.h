@@ -14,6 +14,8 @@ public:
         : mValue(value)
     {
     }
+    
+    Angle(const Angle& other) = default;
 
     operator s32() const
     {

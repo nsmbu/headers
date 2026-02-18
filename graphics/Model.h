@@ -36,7 +36,7 @@ public:
     // Address: 0x024EE298
     Model();
     // Address: 0x024EE230
-    virtual ~Model();
+    ~Model() override;
 
     virtual void calcAnm() = 0;
     virtual void calcMdl() = 0;

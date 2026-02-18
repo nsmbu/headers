@@ -17,6 +17,8 @@ public:
         , mZ(z)
     {
     }
+    
+    Angle3(const Angle3& other) = default;
 
     explicit Angle3(const Angle* p)
         : mX(p[0])

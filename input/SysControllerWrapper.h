@@ -12,9 +12,9 @@ public:
 
 public:
     SysControllerWrapper();
-    virtual ~SysControllerWrapper();
+    ~SysControllerWrapper() override;
 
-    virtual void calc(u32, bool);
+    void calc(u32, bool) override;
 
     void registerWith(SysController::Id id);
 };

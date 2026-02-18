@@ -21,7 +21,7 @@ public:
     // Address: 0x029BBC44
     NMSndObjectBase(ObjType type, sead::AudioPlayer* player);
     // Address: 0x029BBBD8
-    virtual ~NMSndObjectBase();
+    ~NMSndObjectBase() override;
 
     // Address: 0x029BBE20
     virtual u8 vf34(const char* label, s32 actor_player_id);

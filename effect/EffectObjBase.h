@@ -17,7 +17,7 @@ public:
     // Address: 0x022AB868
     EffectObjBase();
 
-    virtual ~EffectObjBase()
+    ~EffectObjBase() override
     {
         cleanup();
     }

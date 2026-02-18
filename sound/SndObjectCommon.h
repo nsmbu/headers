@@ -34,7 +34,7 @@ public:
         {
         }
 
-        virtual ~SoundHandlePrm()
+        ~SoundHandlePrm() override
         {
         }
 
@@ -200,7 +200,7 @@ public:
     // Address: 0x029BE2F0
     NMNonPosSndObject(nw::snd::OutputLine line_flag, s32 playable_sound_num);
     // Address: 0x029BE3A4
-    virtual ~NMNonPosSndObject();
+    ~NMNonPosSndObject() override;
 
 protected:
     // Address: 0x029BE428

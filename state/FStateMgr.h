@@ -12,7 +12,7 @@ public:
     {
     }
 
-    virtual ~FStateMgr()
+    ~FStateMgr() override
     {
     }
 };

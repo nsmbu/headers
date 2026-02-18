@@ -14,7 +14,7 @@ public:
     // Address: 0x024FC968
     RenderObjLayerBase();
     // Address: 0x024FC9D0
-    virtual ~RenderObjLayerBase();
+    ~RenderObjLayerBase() override;
 
     s32 getViewIndex() const { return mViewIndex; }
 
@@ -58,7 +58,7 @@ public:
     // Address: 0x024FCA6C
     RenderObjLayer();
     // Address: 0x024FCB18
-    virtual ~RenderObjLayer();
+    ~RenderObjLayer() override;
 
     u32 getRenderStepNum() const override { return cRenderStep_Num; }
     // Address: 0x024FCB6C

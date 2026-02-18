@@ -16,7 +16,7 @@ private:
     public:
         ResHolder(const sead::SafeString& key, sead::ArchiveRes* archive);
 
-        virtual ~ResHolder()
+        ~ResHolder() override
         {
             ResMgr::instance()->remove(mKey);
         }
@@ -34,7 +34,7 @@ private:
     public:
         CourseArchiveResHolder(sead::ArchiveRes* archive);
 
-        virtual ~CourseArchiveResHolder()
+        ~CourseArchiveResHolder() override
         {
             ResMgr::instance()->mCourseArchiveRes = nullptr;
         }

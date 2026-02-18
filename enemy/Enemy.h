@@ -61,7 +61,7 @@ public:
 public:
     // Address: 0x02328494
     Enemy(const ActorCreateParam& param);
-    virtual ~Enemy() { }
+    ~Enemy() override { }
 
 protected:
     // Address: 0x02328644

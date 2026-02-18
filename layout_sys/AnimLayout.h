@@ -135,7 +135,7 @@ protected:
     // Address: 0x02672D5C
     Multi2D(Animation* anim_buf, s32 anim_buf_size);
     // Address: 0x02672E98
-    virtual ~Multi2D();
+    ~Multi2D() override;
 
     // Address: 0x0267153C
     void animStartBaseSetup_(s32 anim_index, const sead::SafeString& anim_res_name, nw::lyt::Animator::PlayType type, f32 speed, nw::lyt::Animator* animator);
@@ -184,7 +184,7 @@ public:
     // Address: 0x02672F04
     AnimLayoutBase(Animation* anim_buf, s32 anim_buf_size);
     // Address: 0x02672F80
-    virtual ~AnimLayoutBase();
+    ~AnimLayoutBase() override;
 
     // Address: 0x02673008
     void readResource(const sead::SafeString& res_name);

@@ -23,7 +23,7 @@ private:
         // Address: 0x024F5F88
         ModelResourceHolder(const sead::SafeString& key, ModelResource* mdl_res);
 
-        virtual ~ModelResourceHolder()
+        ~ModelResourceHolder() override
         {
             if (ModelResourceMgr::instance() != nullptr)
                 ModelResourceMgr::instance()->remove(mKey);

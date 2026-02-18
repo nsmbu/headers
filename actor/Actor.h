@@ -264,7 +264,7 @@ protected:
     // Address: 0x02000AC8
     Actor(const ActorCreateParam& param);
     // Address: 0x02000F18
-    virtual ~Actor();
+    ~Actor() override;
 
 protected:
     // Address: 0x02000FB8
@@ -410,12 +410,12 @@ protected:
     sead::Vector3f          mPosPrev;                   // At frame start
     sead::Vector3f          mPosPrevPostExec;
     sead::Vector3f          mPosPrev2;                  // At frame end
-    EatData*                mEatData;
+    EatData*                mEatDataPtr;
     ChibiYoshiEatData*      mChibiYoshiEatData;
     PropelParts*            mPropelParts;
     u8*                     _270;                       // Inited to ActorCreateParam::_28
     f32                     mAddSpeedF;
-    ChibiYoshiAwaData*      mChibiYoshiAwaData;
+    ChibiYoshiAwaData*      mChibiYoshiAwaDataPtr;
 
     // Address: 0x10000B64
     static const f32 cCullXLimit;

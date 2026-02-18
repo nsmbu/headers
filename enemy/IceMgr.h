@@ -65,9 +65,9 @@ public:
         }
 
         IceStatus(s32 melt_time_type_, s32 ice_act_1_, s32 ice_act_2_)
-            : melt_time_type(melt_time_type_)
-            , ice_act_1(ice_act_1_)
-            , ice_act_2(ice_act_2_)
+            : melt_time_type(u8(melt_time_type_))
+            , ice_act_1(u8(ice_act_1_))
+            , ice_act_2(u8(ice_act_2_))
         {
         }
     };

@@ -14,7 +14,7 @@ public:
     // Address: 0x024F9290
     Layer();
     // Address: 0x024F92EC
-    virtual ~Layer();
+    ~Layer() override;
 
     // Address: 0x024F9340
     void preDraw(const agl::lyr::RenderInfo& render_info) const override;

@@ -285,7 +285,7 @@ public:
     // Address: 0x0219A960
     ActorCollisionCheck();
     // Address: 0x0219AB90
-    virtual ~ActorCollisionCheck();
+    ~ActorCollisionCheck() override;
 
 public:
     // Address: 0x0219AC24

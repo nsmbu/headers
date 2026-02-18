@@ -12,7 +12,7 @@ public:
     {
     }
 
-    virtual ~FStateFactory()
+    ~FStateFactory() override
     {
     }
 

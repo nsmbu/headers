@@ -12,7 +12,7 @@ public:
     {
     }
 
-    virtual ~EffectObj()
+    ~EffectObj() override
     {
     }
 

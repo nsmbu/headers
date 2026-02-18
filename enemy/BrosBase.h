@@ -31,7 +31,7 @@ public:
     // Address: 0x022DA0AC
     BrosBase(const ActorCreateParam& param);
 
-    virtual ~BrosBase()
+    ~BrosBase() override
     {
     }
 

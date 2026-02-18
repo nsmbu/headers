@@ -16,7 +16,7 @@ public:
     {
     }
 
-    virtual ~FStateID()
+    ~FStateID() override
     {
     }
 

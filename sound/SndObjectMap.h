@@ -11,7 +11,7 @@ public:
     }
 
     // Address: 0x029BECD4
-    virtual ~SndObjctCmnMap();
+    ~SndObjctCmnMap() override;
 
     // Address: 0x029BED48
     void startSound(const char* label, const sead::Vector2f& pos, nw::snd::OutputLine line_flag) override;

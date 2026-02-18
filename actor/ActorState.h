@@ -13,7 +13,7 @@ class ActorState : public ActorCollision    // vtbl Address: 0x10000EC8
 public:
     // Address: 0x0200A9C0
     ActorState(const ActorCreateParam& param);
-    virtual ~ActorState() { }
+    ~ActorState() override { }
 
     void changeState(const StateID& state_id)
     {
@@ -35,7 +35,7 @@ class ActorMultiState : public ActorCollision   // vtbl Address: 0x10001048
 public:
     // Address: 0x0200AA8C
     ActorMultiState(const ActorCreateParam& param);
-    virtual ~ActorMultiState() { }
+    ~ActorMultiState() override { }
 
     virtual void changeState(const StateID& state_id)
     {

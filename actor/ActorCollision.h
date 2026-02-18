@@ -131,7 +131,7 @@ protected:
         );
     }
 
-    virtual ~ActorCollision()
+    ~ActorCollision() override
     {
     }
 
