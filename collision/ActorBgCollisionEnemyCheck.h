@@ -32,6 +32,8 @@ public:
 
     // Address: 0x02192044
     void vf54() override;
+
+protected:
     // Address: 0x021920FC
     void checkFoot_() override;
     // Address: 0x0219215C
