@@ -309,6 +309,21 @@ public:
         return mModelBase->isAnmFlag(type, bit);
     }
 
+    bool isSitAnm() const
+    {
+        return mModelBase->isSitAnm();
+    }
+
+    bool isHangAnm() const
+    {
+        return mModelBase->isHangAnm();
+    }
+
+    bool isSwimAnm() const
+    {
+        return mModelBase->isSwimAnm();
+    }
+
     void changeFaceAngleOverrideFlag(PlayerModelBase::FaceAngleOverrideFlag flag, bool enable)
     {
         mModelBase->changeFaceAngleOverrideFlag(flag, enable);
