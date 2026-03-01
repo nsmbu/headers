@@ -9,12 +9,12 @@ public:
     EnemyChibiYoshiAwaData(ActorUniqueID owner_id);
 
     // Address: 0x0232ABFC
-    void vf0C(Actor*) override;
+    void setAwaHit(Actor* awa) override;
     // Address: 0x0232AC3C
-    void vf14(Actor*) override;
+    void awaCatchMove(Actor* awa) override;
     // Address: 0x0232AC7C
-    void vf1C(Actor*) override;
+    void setAwaCatchEnd(Actor* awa) override;
     // Address: 0x0232ACBC
-    void vf24(Actor*) override;
+    void setAwaInvalid(Actor* awa) override;
 };
 static_assert(sizeof(EnemyChibiYoshiAwaData) == sizeof(ChibiYoshiAwaData));
