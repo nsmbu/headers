@@ -3,6 +3,7 @@
 #include <actor/ActorUniqueID.h>
 
 #include <container/seadSafeArray.h>
+#include <math/seadVector.h>
 
 struct IceEfScale;
 
@@ -91,6 +92,18 @@ public:
 
     // Address: 0x0237D63C
     bool createIce(IceInfo* info, s32 num);
+
+    bool createIce(IceInfo& info)
+    {
+        return createIce(&info, 1);
+    }
+
+    template <s32 N>
+    bool createIce(IceInfo (&info_array)[N])
+    {
+        return createIce(info_array, N);
+    }
+
     // Address: 0x0237CCC8
     void removeIce();
 
