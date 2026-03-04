@@ -1,14 +1,12 @@
 #pragma once
 
 #include <graphics/AnimModel.h>
-#include <graphics/CalcRatio.h>
+#include <graphics/JointBlendModelCalcRatio.h>
 
-class BlendModel : public AnimModel
+class JointBlendModel : public AnimModel
 {
-    // Actual name of this class is unknown.
-
 public:
-    static BlendModel* create(
+    static JointBlendModel* create(
         ModelResource* mdl_res,
         Model* model,
         s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
@@ -16,7 +14,7 @@ public:
         const sead::PtrArray<ModelResource>* anim_mdl_res_array = nullptr
     );
 
-    static BlendModel* create(
+    static JointBlendModel* create(
         ModelResource* mdl_res,
         const sead::SafeString& name,
         s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
@@ -24,7 +22,7 @@ public:
         sead::Heap* heap = nullptr
     );
 
-    static BlendModel* create(
+    static JointBlendModel* create(
         ModelResource* mdl_res,
         const sead::SafeString& name,
         s32 view_num,
@@ -33,7 +31,7 @@ public:
         sead::Heap* heap = nullptr
     );
 
-    static BlendModel* create(
+    static JointBlendModel* create(
         const sead::SafeString& resource_key,
         const sead::SafeString& name,
         s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
@@ -41,7 +39,7 @@ public:
         sead::Heap* heap = nullptr
     );
 
-    static BlendModel* create(
+    static JointBlendModel* create(
         const sead::SafeString& resource_key,
         const sead::SafeString& name,
         s32 view_num,
@@ -52,7 +50,7 @@ public:
 
 public:
     // Address: 0x024DFBF0
-    BlendModel(Model* model, u32 skl_anim_num, u32 tex_anim_num, u32 shu_anim_num, u32 vis_anim_num, u32 sha_anim_num);
+    JointBlendModel(Model* model, u32 skl_anim_num, u32 tex_anim_num, u32 shu_anim_num, u32 vis_anim_num, u32 sha_anim_num);
 
     // Address: 0x024DFC78
     void init(ModelResource* mdl_res, const sead::PtrArray<ModelResource>* anim_mdl_res_array = nullptr, sead::Heap* heap = nullptr);
@@ -106,12 +104,12 @@ private:
     );
 
 private:
-    CalcRatio   mCalcRatio;
-    u32         mCurAnmIdx;
+    JointBlendModelCalcRatio    mCalcRatio;
+    u32                         mCurAnmIdx;
 };
-static_assert(sizeof(BlendModel) == 0x48);
+static_assert(sizeof(JointBlendModel) == 0x48);
 
-inline BlendModel* BlendModel::create(
+inline JointBlendModel* JointBlendModel::create(
     ModelResource* mdl_res,
     Model* model,
     s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
@@ -119,12 +117,12 @@ inline BlendModel* BlendModel::create(
     const sead::PtrArray<ModelResource>* anim_mdl_res_array
 )
 {
-    BlendModel* blend_model = new (heap) BlendModel(model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num);
+    JointBlendModel* blend_model = new (heap) JointBlendModel(model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num);
     blend_model->init(mdl_res, anim_mdl_res_array, heap);
     return blend_model;
 }
 
-inline BlendModel* BlendModel::create(
+inline JointBlendModel* JointBlendModel::create(
     ModelResource* mdl_res,
     const sead::SafeString& name,
     s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
@@ -136,7 +134,7 @@ inline BlendModel* BlendModel::create(
     return create(mdl_res, model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, heap);
 }
 
-inline BlendModel* BlendModel::create(
+inline JointBlendModel* JointBlendModel::create(
     ModelResource* mdl_res,
     const sead::SafeString& name,
     s32 view_num,
@@ -149,7 +147,7 @@ inline BlendModel* BlendModel::create(
     return create(mdl_res, model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, heap);
 }
 
-inline BlendModel* BlendModel::create(
+inline JointBlendModel* JointBlendModel::create(
     const sead::SafeString& resource_key,
     const sead::SafeString& name,
     s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
@@ -161,7 +159,7 @@ inline BlendModel* BlendModel::create(
     return create(mdl_res, name, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
 }
 
-inline BlendModel* BlendModel::create(
+inline JointBlendModel* JointBlendModel::create(
     const sead::SafeString& resource_key,
     const sead::SafeString& name,
     s32 view_num,

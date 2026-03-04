@@ -7,9 +7,9 @@
 #include <enemy/EnemyChibiYoshiEatData.h>
 #include <enemy/EnemyEatData.h>
 #include <enemy/MiddleKuribo.h>
-#include <graphics/CalcRatioSRT.h>
+#include <graphics/AnimBlendSklCalcRatio.h>
 
-class BlendModel;
+class JointBlendModel;
 class ModelResource;
 class TexturePatternAnimation;
 
@@ -189,7 +189,7 @@ public:
     DECLARE_STATE_VIRTUAL_ID_OVERRIDE(KuriboBase, DieFall)
 
     // Address: 0x023DD708
-    static BlendModel* createModel(ModelResource* mdl_res, const sead::SafeString& name, bool not_set_walk_anm);
+    static JointBlendModel* createModel(ModelResource* mdl_res, const sead::SafeString& name, bool not_set_walk_anm);
 
     // Address: 0x023DD7E4
     virtual void setWalkAnm();
@@ -240,7 +240,7 @@ public:
 
 protected:
     // Address: 0x023DC4AC
-    void calcModelBase_(BlendModel* blend_model);
+    void calcModelBase_(JointBlendModel* blend_model);
 
     void calcModelBase_()
     {
@@ -270,9 +270,9 @@ protected:
 
 protected:
     ModelResource*              mModelResource;
-    BlendModel*                 mBlendModel;
+    JointBlendModel*            mBlendModel;
     TexturePatternAnimation*    mTexAnim;
-    CalcRatioSRT                mCalcRatio;
+    AnimBlendSklCalcRatio       mCalcRatio;
     MiddleKuribo*               mParentMiddleKuribo;
     ActorCollisionCheck         mCollisionCheckDrcTouch;
     f32                         mWalkAnmRate;               // Stored, but never read
