@@ -61,10 +61,10 @@ public:
 public:
     enum FumiType
     {
-        cFumiType_Hit = 0,
-        cFumiType_Fumi,
-        cFumiType_MameFumi,
-        cFumiType_SpinFumi
+        cFumiType_Hit = 0,  // Moving into the enemy; this includes penguin slides and slope slides
+        cFumiType_Fumi,     // Jumping onto the enemy; this includes ground pounds
+        cFumiType_MameFumi, // Jumping onto the enemy as Mini Mario; this includes Mini Mario spin-jump
+        cFumiType_SpinFumi  // Spin-jumping onto the enemy; this includes Propeller Mario drills
     };
 
     enum FumiSeType
