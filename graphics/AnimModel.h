@@ -2,6 +2,7 @@
 
 #include <graphics/Model.h>
 #include <graphics/ModelResourceMgr.h>
+#include <graphics/Renderer.h>
 
 #include <container/seadBuffer.h>
 #include <container/seadPtrArray.h>
@@ -69,6 +70,8 @@ public:
 
     Model* getModel() const { return mModel; }
     ModelResource* getModelResource() const { return mModelResource; }
+    
+    void draw() const { Renderer::instance()->drawModel(this); }
 
     SkeletalAnimation*          getSklAnim(s32 index) const { return mSklAnim[index]; }
     TexturePatternAnimation*    getTexAnim(s32 index) const { return mTexAnim[index]; }
