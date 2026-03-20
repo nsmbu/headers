@@ -35,9 +35,9 @@ public:
     }
 
     explicit Angle3(const sead::Vector3u& v)
-        : mX(v.x)
-        , mY(v.y)
-        , mZ(v.z)
+        : mX(static_cast<s32>(v.x))
+        , mY(static_cast<s32>(v.y))
+        , mZ(static_cast<s32>(v.z))
     {
     }
 
@@ -88,7 +88,7 @@ public:
 
     operator sead::Vector3u() const
     {
-        return sead::Vector3u(s32(mX), s32(mY), s32(mZ));
+        return sead::Vector3u(u32(mX), u32(mY), u32(mZ));
     }
 
     Angle3& operator=(const Angle3& rhs)

@@ -35,12 +35,12 @@ public:
 
     bool isOnBit(u32 bit) const
     {
-        return (mBitArray[bitToIndex(bit)] & makeMask(bit)) != 0;
+        return (mBitArray[bitToIndex(static_cast<s32>(bit))] & makeMask(bit)) != 0;
     }
 
     void setBit(u32 bit)
     {
-        mBitArray[bitToIndex(bit)] |= makeMask(bit);
+        mBitArray[bitToIndex(static_cast<s32>(bit))] |= makeMask(bit);
     }
 
     void resetBit(u32 bit)

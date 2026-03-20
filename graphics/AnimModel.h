@@ -66,18 +66,18 @@ public:
 
 public:
     // Address: 0x024D4798
-    AnimModel(Model* model, u32 skl_anim_num, u32 tex_anim_num, u32 shu_anim_num, u32 vis_anim_num, u32 sha_anim_num);
+    AnimModel(Model* model, s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num);
 
     Model* getModel() const { return mModel; }
     ModelResource* getModelResource() const { return mModelResource; }
     
     void draw() const { Renderer::instance()->drawModel(this); }
 
-    SkeletalAnimation*          getSklAnim(s32 index) const { return mSklAnim[index]; }
-    TexturePatternAnimation*    getTexAnim(s32 index) const { return mTexAnim[index]; }
-    ShaderParamAnimation*       getShuAnim(s32 index) const { return mShuAnim[index]; }
-    VisibilityAnimation*        getVisAnim(s32 index) const { return mVisAnim[index]; }
-    ShapeAnimation*             getShaAnim(s32 index) const { return mShaAnim[index]; }
+    SkeletalAnimation*          getSklAnim(u32 index) const { return mSklAnim[index]; }
+    TexturePatternAnimation*    getTexAnim(u32 index) const { return mTexAnim[index]; }
+    ShaderParamAnimation*       getShuAnim(u32 index) const { return mShuAnim[index]; }
+    VisibilityAnimation*        getVisAnim(u32 index) const { return mVisAnim[index]; }
+    ShapeAnimation*             getShaAnim(u32 index) const { return mShaAnim[index]; }
 
     // Address: 0x024D49A0
     void init(ModelResource* mdl_res, const sead::PtrArray<ModelResource>* anim_mdl_res_array = nullptr, sead::Heap* heap = nullptr);

@@ -495,7 +495,7 @@ public:
 
     s32 getIndex() const
     {
-        return mIndex;
+        return static_cast<s32>(mIndex);
     }
 
     u8 getLayer() const

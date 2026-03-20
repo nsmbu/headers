@@ -50,7 +50,7 @@ public:
 
 public:
     // Address: 0x024DFBF0
-    JointBlendModel(Model* model, u32 skl_anim_num, u32 tex_anim_num, u32 shu_anim_num, u32 vis_anim_num, u32 sha_anim_num);
+    JointBlendModel(Model* model, s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num);
 
     // Address: 0x024DFC78
     void init(ModelResource* mdl_res, const sead::PtrArray<ModelResource>* anim_mdl_res_array = nullptr, sead::Heap* heap = nullptr);

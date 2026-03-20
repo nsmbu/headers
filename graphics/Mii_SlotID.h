@@ -35,7 +35,7 @@ public:
 
     void setValue(Source source, u32 index)
     {
-        mValue = source << 24 | (index & 0xffffff);
+        mValue = static_cast<u32>(source) << 24 | (index & 0xffffff);
     }
 
     u32 getValue() const
