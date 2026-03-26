@@ -186,7 +186,7 @@ public:
         TargetKind  vs_kind;            // Mask of owner types to interact with
         DamageFrom  vs_damage;          // Mask of attack types to receive
         Status      status;             // Sets allowed interactions, such as being pick-able
-        CallBack    call_back;
+        CallBack    callback;
 
         // Address: 0x10041BC0
         static const CollisionData cDefault;
@@ -503,14 +503,14 @@ public:
         return mLayer;
     }
 
-    void setCallBack(CallBack call_back)
+    void setCallBack(CallBack callback)
     {
-        mCollisionData.call_back = call_back;
+        mCollisionData.callback = callback;
     }
 
     CallBack getCallBack() const
     {
-        return mCollisionData.call_back;
+        return mCollisionData.callback;
     }
 
     bool isDisableCallback() const
