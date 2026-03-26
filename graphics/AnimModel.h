@@ -46,7 +46,7 @@ public:
     static AnimModel* create(
         const sead::SafeString& resource_key,
         const sead::SafeString& name,
-        s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
+        s32 skl_anim_num = 0, s32 tex_anim_num = 0, s32 shu_anim_num = 0, s32 vis_anim_num = 0, s32 sha_anim_num = 0,
         Model::BoundingMode bounding_mode = Model::cBoundingMode_Disable,
         sead::Heap* heap = nullptr
     );
