@@ -72,6 +72,8 @@ public:
     ModelResource* getModelResource() const { return mModelResource; }
     
     void draw() const { Renderer::instance()->drawModel(this); }
+    void setMtxRT(const sead::Matrix34f& rt) { mModel->setMtxRT(rt); }
+    void setScale(const sead::Vector3f& scale) { mModel->setScale(scale); }
 
     SkeletalAnimation*          getSklAnim(u32 index) const { return mSklAnim[index]; }
     TexturePatternAnimation*    getTexAnim(u32 index) const { return mTexAnim[index]; }
