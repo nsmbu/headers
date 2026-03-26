@@ -422,7 +422,7 @@ protected:
     sead::Vector3f          mPosPrevPostExec;
     sead::Vector3f          mPosPrev2;                  // At frame end
     EatData*                mEatDataPtr;
-    ChibiYoshiEatData*      mChibiYoshiEatData;
+    ChibiYoshiEatData*      mChibiYoshiEatDataPtr;
     PropelParts*            mPropelParts;
     u8*                     _270;                       // Inited to ActorCreateParam::_28
     f32                     mAddSpeedF;
