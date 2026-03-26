@@ -28,6 +28,22 @@ public:
     {
         mFreezeTime++;
     }
+    
+    // Address: 0x024C14C0
+    void addTimeLimitSeconds(u32 seconds);
+    
+    // Address: 0x024C134C
+    void setTimer(u32 seconds);
+    
+    // Address: 0x024C1344
+    [[nodiscard]]
+    u32 toUnits(u32 seconds);
+    
+    [[nodiscard]]
+    u32 getTime() const
+    {
+        return mTime;
+    }
 
 protected:
     u32             mFreezeTime;
