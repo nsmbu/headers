@@ -1,10 +1,9 @@
 #pragma once
 
 #include <container/seadPtrArray.h>
+#include <graphics/RenderObj.h>
+#include <system/ParallelExecuter.h>
 #include <thread/seadAtomic.h>
-
-class RenderObjBase;
-class ParallelExecuter;
 
 class CourseSelectParallelExecuter
 {
