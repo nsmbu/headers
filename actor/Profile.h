@@ -2,6 +2,7 @@
 
 #include <actor/ProfileInfo.h>
 
+#include <basis/seadAssert.h>
 #include <container/seadSafeArray.h>
 #include <heap/seadHeap.h>
 #include <math/seadVector.h>
@@ -96,7 +97,7 @@ public:
 
     ActorFactory getActorFactory() const
     {
-        // SEAD_ASSERT(mFactory);
+        SEAD_ASSERT(mFactory);
         return mFactory;
     }
 

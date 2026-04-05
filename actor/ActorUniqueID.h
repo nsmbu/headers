@@ -1,5 +1,6 @@
 #pragma once
 
+#include <basis/seadAssert.h>
 #include <basis/seadTypes.h>
 
 class ActorUniqueID
@@ -32,8 +33,8 @@ public:
 
     void setValue(u32 i_array_index, u32 i_create_index)
     {
-        // SEAD_ASSERT(i_array_index <= cArrayIndexMax);
-        // SEAD_ASSERT(i_create_index <= cCreateIndexMax);
+        SEAD_ASSERT(i_array_index <= cArrayIndexMax);
+        SEAD_ASSERT(i_create_index <= cCreateIndexMax);
         mValue = i_array_index << /* log2(cCreateIndexMax + 1) */ 22 | i_create_index;
     }
 

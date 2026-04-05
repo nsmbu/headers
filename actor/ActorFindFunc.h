@@ -1,5 +1,6 @@
 #pragma once
 
+#include <basis/seadAssert.h>
 #include <basis/seadTypes.h>
 
 class ActorBase;
@@ -33,12 +34,12 @@ public:
     ActorCreateIndexFindFunc(u32 i_create_index)
         : mCreateIndex(i_create_index)
     {
-        // SEAD_ASSERT(i_create_index <= ActorUniqueId::cCreateIndexMax);
+        SEAD_ASSERT(i_create_index <= ActorUniqueId::cCreateIndexMax);
     }
 
     void setCreateIndex(u32 i_create_index)
     {
-        // SEAD_ASSERT(i_create_index <= ActorUniqueId::cCreateIndexMax);
+        SEAD_ASSERT(i_create_index <= ActorUniqueId::cCreateIndexMax);
         mCreateIndex = i_create_index;
     }
 

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <basis/seadAssert.h>
 #include <basis/seadTypes.h>
 
 #include <container/seadBuffer.h>
@@ -30,7 +31,7 @@ public:
 
     iterator getActorBegin() const
     {
-        // SEAD_ASSERT(mActorPtrArray.isBufferReady());
+        SEAD_ASSERT(mActorPtrArray.isBufferReady());
         return mActorPtrArray.unsafeGet(0);
     }
 
