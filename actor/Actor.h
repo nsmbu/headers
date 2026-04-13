@@ -225,6 +225,16 @@ public:
     {
         return mSpeed;
     }
+    
+    sead::Vector3f& getSpeedMaxVec()
+    {
+        return mSpeedMax;
+    }
+    
+    const sead::Vector3f& getSpeedMaxVec() const
+    {
+        return mSpeedMax;
+    }
 
     sead::Vector3f& getScale()
     {
