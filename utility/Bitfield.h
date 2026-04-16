@@ -1,6 +1,7 @@
 #pragma once
 
 #include <prim/seadMemUtil.h>
+#include <concepts>
 
 // TODO: Investigate if this is a sead type
 
@@ -38,9 +39,9 @@ public:
         return (mBitArray[bitToIndex(static_cast<s32>(bit))] & makeMask(bit)) != 0;
     }
 
-    void setBit(u32 bit)
+    void setBit(std::convertible_to<u32> auto... bits)
     {
-        mBitArray[bitToIndex(static_cast<s32>(bit))] |= makeMask(bit);
+        (setBit_(bits), ...); 
     }
 
     void resetBit(u32 bit)
@@ -59,6 +60,12 @@ public:
     void toggleBit(u32 bit)
     {
         mBitArray[bitToIndex(bit)] ^= makeMask(bit);
+    }
+
+private:
+    void setBit_(u32 bit)
+    {
+        mBitArray[bitToIndex(static_cast<s32>(bit))] |= makeMask(bit);
     }
 
 private:
