@@ -233,16 +233,22 @@ public:
 
             cBit_Inactive = 30,
 
+            cBit_36 = 36,
+            
             cBit_38 = 38,
+            
+            cBit_43 = 43,
 
             cBit_46 = 46,
+            cBit_BreakBlocks,
 
             cBit_50 = 50,
             cBit_51,
             cBit_52,
 
             cBit_54 = 54,
-            cBit_55
+            cBit_55,
+            cBit_56
         };
     };
     static_assert(sizeof(SensorFlag) == 8);
