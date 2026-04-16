@@ -240,7 +240,7 @@ public:
             cBit_43 = 43,
 
             cBit_46 = 46,
-            cBit_BreakBlocks,
+            cBit_BreakBlocks,   // Destroys brick and question blocks
 
             cBit_50 = 50,
             cBit_51,
