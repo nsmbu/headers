@@ -3,17 +3,17 @@
 #include <graphics/Model.h>
 #include <graphics/ModelResourceMgr.h>
 #include <graphics/Renderer.h>
+#include <graphics/SkeletalAnimation.h>
+#include <graphics/TexturePatternAnimation.h>
+#include <graphics/ShaderParamAnimation.h>
+#include <graphics/VisibilityAnimation.h>
+#include <graphics/ShapeAnimation.h>
 
 #include <container/seadBuffer.h>
 #include <container/seadPtrArray.h>
 #include <heap/seadHeap.h>
 
 class ModelResource;
-class ShaderParamAnimation;
-class ShapeAnimation;
-class SkeletalAnimation;
-class TexturePatternAnimation;
-class VisibilityAnimation;
 
 class AnimModel
 {
@@ -74,12 +74,51 @@ public:
     void draw() const { Renderer::instance()->drawModel(this); }
     void setMtxRT(const sead::Matrix34f& rt) { mModel->setMtxRT(rt); }
     void setScale(const sead::Vector3f& scale) { mModel->setScale(scale); }
+    
+    void update(const sead::Vector3f& pos, const sead::Vector3u& rot, const sead::Vector3f& scale, bool animate = true) {
+        sead::Matrix34f mtx;
+        mtx.makeRTIdx(rot, pos);
+        setMtxRT(mtx);
+        setScale(scale);
+        calcMdl();
+        
+        if (animate)
+            playAnmFrameCtrl();
+    }
 
     SkeletalAnimation*          getSklAnim(u32 index) const { return mSklAnim[index]; }
     TexturePatternAnimation*    getTexAnim(u32 index) const { return mTexAnim[index]; }
     ShaderParamAnimation*       getShuAnim(u32 index) const { return mShuAnim[index]; }
     VisibilityAnimation*        getVisAnim(u32 index) const { return mVisAnim[index]; }
     ShapeAnimation*             getShaAnim(u32 index) const { return mShaAnim[index]; }
+    
+    void playSklAnim(const sead::SafeString& name, u32 idx = 0) {
+        mSklAnim[idx]->play(mModelResource, name);
+    }
+    
+    void playTexAnim(const sead::SafeString& name, u32 idx = 0) {
+        mTexAnim[idx]->play(mModelResource, name);
+    }
+    
+    void playColorAnim(const sead::SafeString& name, u32 idx = 0) {
+        mShuAnim[idx]->playColorAnim(mModelResource, name);
+    }
+    
+    void playTexSrtAnim(const sead::SafeString& name, u32 idx = 0) {
+        mShuAnim[idx]->playTexSrtAnim(mModelResource, name);
+    }
+    
+    void playBoneVisAnim(const sead::SafeString& name, u32 idx = 0) {
+        mVisAnim[idx]->playBoneVisAnim(mModelResource, name);
+    }
+    
+    void playMatVisAnim(const sead::SafeString& name, u32 idx = 0) {
+        mVisAnim[idx]->playMatVisAnim(mModelResource, name);
+    }
+    
+    void playShapeAnim(const sead::SafeString& name, u32 idx = 0) {
+        mShaAnim[idx]->play(mModelResource, name);
+    }
 
     // Address: 0x024D49A0
     void init(ModelResource* mdl_res, const sead::PtrArray<ModelResource>* anim_mdl_res_array = nullptr, sead::Heap* heap = nullptr);
