@@ -62,6 +62,17 @@ public:
     void calcMdl();
     // Address: 0x024DFC80
     void calcBlend();
+    
+    void update(const sead::Vector3f& pos, const sead::Vector3u& rot, const sead::Vector3f& scale, bool animate = true) {
+        sead::Matrix34f mtx;
+        mtx.makeRTIdx(rot, pos);
+        setMtxRT(mtx);
+        setScale(scale);
+        calcMdl();
+        
+        if (animate)
+            playAnmFrameCtrl();
+    }
 
     SkeletalAnimation* getCurSklAnim() const { return getSklAnim(mCurAnmIdx); }
 
