@@ -86,6 +86,13 @@ public:
     // Address: 0x022A94B8
     void getBoneWorldMatrix(s32 index, sead::Matrix34f* mtx) const;
 
+public:
+    [[nodiscard]]
+    AnimModel* getModel()
+    {
+        return mAnimModel;
+    }
+
 private:
     f32                         mNear;
     f32                         mFar;
