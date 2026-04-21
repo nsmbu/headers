@@ -51,20 +51,46 @@ public:
     // Address: 0x102010AC
     static const f32 cDieFallGravity; // 1.3 * cDefaultGravity
 
-    // Address: 0x10200DD8
+    /**
+     * @brief Maps a 2D direction to a "facing" Y-angle.
+     * @details Applies a slight rotational bias towards the camera that prevents the actor from facing perfectly perpendicular to the viewer.
+     *          This ensures actors remain visually clear and recognizable when facing either direction.
+     * @warning Only indexable with `cDirType_Right` and `cDirType_Left`. Anything else is out of bounds.
+     * @endcode
+     * ---
+     * Address: 0x10200DD8
+     */
     static const Angle cBaseAngleY[cDirType_NumX];
-    // Address: 0x10072094
+    
+    /**
+     * @brief Maps a 2D direction to a sign multiplier (`1` or `-1`).
+     * @details Useful for compacting ternaries for left/right->negative/positive into a multiplication operation.
+     * @code{.cpp}
+     * // Instead of branching:
+     * float speed = (mDirection == cDirType_Right) ? 2.0f : -2.0f;
+     * // Use multiplication:
+     * float speed = cEnMuki[mDirection] * 2.0f;
+     * @endcode
+     * @warning Only indexable with `cDirType_Right` and `cDirType_Left`. Anything else is out of bounds.
+     * @endcode 
+     * ---
+     * Address: 0x10200DD8
+     */
     static const s8 cEnMuki[cDirType_NumX];
 
     static const s32 cNoHitPlayerTimerDefault = 5;
 
 public:
+    /**
+     * @brief Defines the classification of player-enemy stomp and collision interactions.
+     * @note "Fumi" (踏み) translates to "stomp" in Japanese.
+     */
     enum FumiType
     {
-        cFumiType_Hit = 0,  // Moving into the enemy; this includes penguin slides and slope slides
-        cFumiType_Fumi,     // Jumping onto the enemy; this includes ground pounds
-        cFumiType_MameFumi, // Jumping onto the enemy as Mini Mario; this includes Mini Mario spin-jump
-        cFumiType_SpinFumi  // Spin-jumping onto the enemy; this includes Propeller Mario drills
+        cFumiType_Hit = 0,  ///< **Lateral Impact:** Moving into the enemy (also includes penguin slides & slope slides).
+        cFumiType_Fumi,     ///< **Standard Stomp:** Jumping onto the enemy (e.g. normal jumps, ground pounds).
+        cFumiType_MameFumi, ///< **Mini Stomp:** Jumping onto the enemy as Mini ("Mame") Mario. Also includes Mini Mario's spin-jump.
+        cFumiType_SpinFumi  ///< **Spin Stomp:** Spin-jumping onto the enemy. Also includes Propeller Mario drills.
     };
 
     enum FumiSeType
@@ -85,7 +111,7 @@ public:
 public:
     // Address: 0x02328494
     Enemy(const ActorCreateParam& param);
-    ~Enemy() override { }
+    ~Enemy() override = default;
 
 protected:
     // Address: 0x02328644
@@ -114,7 +140,14 @@ public:
     // Address: 0x0232910C
     virtual bool checkComboClap(s32 combo_cnt);
 
-    // Address: 0x023304F8
+    /**
+     * @brief Callback for spawning ice blocks when frozen by an ice flower.
+     * @return Forward the return value of the `createIce()` method call.
+     * @details Implement this function by calling `mIceMgr.createIce()` with your custom `IceInfo`.
+     * @endcode
+     * ---
+     * Address: 0x023304F8
+     */
     virtual bool createIceActor();
     // Address: 0x023310BC
     virtual void setIceAnm();
@@ -197,8 +230,13 @@ public:
     // Address: 0x0232E048
     virtual bool setDeathInfo_Star(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);
 
-    // Address: 0x0232E2EC
-    virtual bool isQuakeDamage();   // Return if enemy is on ground && damageable by quake
+    /**
+     * @return Enemy is on ground and can be damaged by quake (e.g. POW block).
+     * @endcode
+     * ---
+     * Address: 0x0232E2EC
+     */
+    virtual bool isQuakeDamage();
 
     // Address: 0x0232E2F8
     virtual void setDeathSound_Fire();
@@ -243,8 +281,13 @@ public:
     // Address: 0x0232A2E4
     virtual void vf34C(); // Adds 2.0f to y speed
 
-    // Address: 0x0232A2FC
-    virtual bool checkDispIn(); // Checks if enemy is inside the camera view
+    /**
+     * @return Enemy is inside the camera view.
+     * @endcode
+     * ---
+     * Address: 0x0232A2FC
+     */
+    virtual bool checkDispIn();
 
     // Address: 0x0232A364
     virtual void setAwaHit(Actor* awa); // Callback for ChibiYoshiAwaData
@@ -378,7 +421,13 @@ public:
     // Address: 0x02329AA8
     void startSound(const char* name);
 
-    // Address: 0x02329B88
+    /**
+     * @brief Process a collision with a player and return which type occurred.
+     * @param se_type Which type of sounds/particles to play for this collision.
+     * @endcode
+     * ---
+     * Address: 0x02329B88
+     */
     FumiType fumiCheck(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other, FumiSeType se_type);
 
     // Address: 0x02329130
