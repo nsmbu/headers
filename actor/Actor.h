@@ -40,6 +40,18 @@ public:
         cCarryFlag_None         = 0,
         cCarryFlag_All          = cCarryFlag_Release | cCarryFlag_Throw | cCarryFlag_ThrowHard
     };
+    
+    /**
+     * @brief Flags to pass to `screenOutCheck` to skip checks or actions during the evaluation.
+     */
+    enum ScreenOutFlag
+    {
+        cScreenOutFlag_SkipNone           = 0,      ///< Perform all checks and delete the actor if they pass.
+        cScreenOutFlag_SkipDeletion       = 1 << 1, ///< Skip deleting the actor if the checks do pass. 
+        cScreenOutFlag_SkipCameraCheck    = 1 << 2, ///< Skip checking if the actor is outside of the visible camera.
+        cScreenOutFlag_SkipRideCheck      = 1 << 3, ///< Skip checking if the actor is riding another actor/platform.
+        cScreenOutFlag_SkipTottenCheck    = 1 << 4  ///< Skip checking if Nabbit has passed to the right of the actor's visible range.
+    };
 
 public:
     virtual void setPlayerNo(s8 id)
@@ -116,8 +128,20 @@ public:
     {
         return getPlayerDirUD(mPos);
     }
-
-    // Address: 0x020007A0
+    
+    /**
+     * @brief Checks if the actor is out of gameplay and optionally deletes it.
+     * @param flag Specify checks to skip, and whether to delete the actor if they all passed. See the `ScreenOutFlag` enum.
+     * @return Whether the actor is out of gameplay.
+     * @details When considering if the actor is "out of gameplay" the following is checked respectively:
+     * * The actor is not eaten.
+     * * The actor is not riding another actor/platform (unless skipped by flag).
+     * * Nabbit has passed to the **right** of the actor's visible range.
+     * * The actor is out of the zone bounds OR the actor is off-screen.
+     * @endcode
+     * ---
+     * Address: 0x020007A0
+     */
     bool screenOutCheck(u16 flag);
 
     // Address: 0x02002AD8
