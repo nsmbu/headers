@@ -11,8 +11,8 @@ class ChibiYoshiEatData // vtbl Address: 0x1000145C
 public:
     enum EatType
     {
-        cEatType_None = 0,
-        cEatType_Drink,
+        cEatType_None = 0,  ///< Damages the player when trying to eat
+        cEatType_Drink,     ///< Swallow the food
     };
     static_assert(sizeof(EatType) == 4);
 
