@@ -9,12 +9,13 @@ struct IceEfScale;
 
 enum IceType
 {
-    cIceType_Square = 0,
-    cIceType_Tate,
-    cIceType_Yoko,
-    cIceType_BigSquare,
-    cIceType_BigTate,
-    cIceType_BigYoko,
+    cIceType_Square = 0,    ///< Square
+    cIceType_Tate,          ///< Vertical rectangle
+    cIceType_Yoko,          ///< Horizontal rectangle
+    cIceType_BigSquare,     ///< Square that isn't carryable
+    cIceType_BigTate,       ///< Vertical rectangle that isn't carryable
+    cIceType_BigYoko,       ///< Horizontal rectangle that isn't carryable
+    
     cIceType_Num
 };
 static_assert(cIceType_Num == 6);
