@@ -11,13 +11,13 @@ class EatData   // vtbl Address: 0x10001594
 public:
     enum EatType
     {
-        cEatType_None = 0,
-        cEatType_Eat,
-        cEatType_EatPermanent,
-        cEatType_Drink,
-        cEatType_DrinkBig,
-        cEatType_YoshiFire,
-        cEatType_YoshiFire_Ice
+        cEatType_None = 0,      ///< Tongue hits actor with no result
+        cEatType_Eat,           ///< Hold the food in Yoshi's mouth
+        cEatType_EatPermanent,  ///< Hold the food in Yoshi's mouth, but can't spit it out
+        cEatType_Drink,         ///< Swallow the food
+        cEatType_DrinkBig,      ///< Swallow the food, plays a longer animation
+        cEatType_YoshiFire,     ///< Hold the food in Yoshi's mouth, turns into fire when spat
+        cEatType_YoshiFire_Ice  ///< Hold the food in Yoshi's mouth, turns into ice when spat
     };
     static_assert(sizeof(EatType) == 4);
 
