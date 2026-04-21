@@ -133,11 +133,11 @@ public:
      * @brief Checks if the actor is out of gameplay and optionally deletes it.
      * @param flag Specify checks to skip, and whether to delete the actor if they all passed. See the `ScreenOutFlag` enum.
      * @return Whether the actor is out of gameplay.
-     * @details When considering if the actor is "out of gameplay" the following is checked respectively:
-     * * The actor is not eaten.
-     * * The actor is not riding another actor/platform (unless skipped by flag).
+     * @details The actor is considered "out of gameplay" if:
+     * * It has not been eaten.
+     * * It is not riding another actor/platform (unless skipped by flag).
      * * Nabbit has passed to the **right** of the actor's visible range.
-     * * The actor is out of the zone bounds OR the actor is off-screen.
+     * * The actor is out of the zone bounds OR the actor is outside of the visible camera.
      * @endcode
      * ---
      * Address: 0x020007A0
