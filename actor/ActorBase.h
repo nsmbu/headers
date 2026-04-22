@@ -23,7 +23,7 @@ class ActorBase
 
 public:
     /**
-     * @brief Defines which signal was returned from the main operation callback, and whether it was skipped.
+     * @brief Represents the execution state of a main operation, and whether it was skipped.
      * @details In the case of `preX` skipping the main callback, `cState_None` will be passed to `postX`. Otherwise, the signal is forwarded.
      */
     enum MainState
@@ -49,7 +49,7 @@ public:
 
 public:
     /**
-     * @return Whether this actor has been successfuly created and is now active.
+     * @return Whether this actor has been successfully created and is now active.
      */
     bool isActive() const
     {
@@ -57,7 +57,7 @@ public:
     }
 
     /**
-     * @brief Requests this actor to be deleted on the next frame.
+     * @brief Schedule this actor for deletion on the next frame.
      */
     void deleteRequest()
     {
@@ -65,7 +65,7 @@ public:
     }
 
     /**
-     * @brief Whether this actor is about to be deleted on the next frame.
+     * @brief Whether this actor has been scheduled for deletion on the next frame.
      */
     bool isRequestedDelete() const
     {
@@ -81,7 +81,7 @@ public:
     }
 
     /**
-     * @return The specific profile ID which this actor was instanciated from.
+     * @return The specific profile ID which this actor was instantiated from.
      * @endcode
      * ---
      * Address: 0x02002C80
@@ -132,7 +132,7 @@ protected:
      */
     virtual Result create();
     /**
-     * @brief Unconditionally called callback for after the `create` operation.
+     * @brief Callback invoked unconditionally after the `create` phase completes. It executes even if `preCreate()` bypassed the main `create()` operation.
      * @param state The signal which `create()` returned, or `cState_None` if `preCreate()` skipped it.
      * @endcode
      * ---
@@ -158,7 +158,7 @@ protected:
      */
     virtual bool execute();
     /**
-     * @brief Unconditionally called callback for after the `execute` operation.
+     * @brief Callback invoked unconditionally after the `execute` phase completes. It executes even if `preExecute()` bypassed the main `execute()` operation.
      * @param state The signal which `execute()` returned, or `cState_None` if `preExecute()` skipped it.
      * @endcode
      * ---
@@ -193,7 +193,7 @@ protected:
      */
     virtual bool draw();
     /**
-     * @brief Unconditionally called callback for after the `execute` operation.
+     * @brief Callback invoked unconditionally after the `draw` phase completes. It executes even if `preDraw()` bypassed the main `draw()` operation.
      * @param state The signal which `draw()` returned, or `cState_None` if `preDraw()` skipped it.
      * @endcode
      * ---
@@ -237,15 +237,15 @@ protected:
 protected:
     sead::Heap*     mActorHeap;         ///< Personal heap for this actor of type `sead::FrameHeap`. Capacity of `0x20200`, but profiles in the player whitelist get `0x1A0200`.
     ActorUniqueID   mActorUniqueID;     ///< The unique identifier handle for this actor.
-    Profile*        mActorProfile;      ///< The specific profile which this actor was instanciated from.
+    Profile*        mActorProfile;      ///< The specific profile which this actor was instantiated from.
     bool            mCreateImmediately; ///< Whether the actor was created with `ActorMgr::createImmediately()`, rather than deferred with `ActorMgr::createLater()`.
-    bool            mIsMapActor;        ///< Whether the actor was spawned from the map with `ActorCreateMgr`, rather than spawned by another actor.
+    bool            mIsMapActor;        ///< Whether the actor was spawned from the level with `ActorCreateMgr`, rather than dynamically spawned by another actor.
     bool            mIsActive;          ///< Whether the `create` operation has completed and the actor is executing.
     bool            mDeleteRequestFlag; ///< Whether to delete this actor on the next frame.
-    u32             mParam0;            ///< User configuration. Also known as "nybbles" or "spritedata".
-    u32             mParam1;            ///< User configuration. Also known as "nybbles" or "spritedata".
-    ActorParamEx1   mParamEx;           ///< Extra configuration. Also known as "nybbles" or "spritedata".
-    List            mChildList;         ///< OffsetList used for holding spawned actors from this one. Managed automatically if `param.parent_id` is set when spawning.
+    u32             mParam0;            ///< Level designer configuration. Also known as "nybbles" or "spritedata".
+    u32             mParam1;            ///< Level designer configuration. Also known as "nybbles" or "spritedata".
+    ActorParamEx1   mParamEx;           ///< Extra level designer configuration. Also known as "nybbles" or "spritedata".
+    List            mChildList;         ///< OffsetList used for holding child actors spawned by this actor. Managed automatically if `param.parent_id` is set when spawning.
     sead::ListNode  mChildNode;         ///< Implementation detail. Used to track our position in the parent's `mChildList`.
     ActorBase*      mParent;            ///< The parent actor if this actor is a child. Automatically set to `nullptr` if orphaned.
     sead::ListNode  mExecuteNode;       ///< Implementation detail. Used to track our position in `ActorMgr`'s lists.
