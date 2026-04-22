@@ -193,7 +193,7 @@ protected:
      */
     virtual bool draw();
     /**
-     * @brief Unconditionally executed callback for after the `execute` operation.
+     * @brief Unconditionally called callback for after the `execute` operation.
      * @param state The signal which `draw()` returned, or `cState_None` if `preDraw()` skipped it.
      * @endcode
      * ---
@@ -219,7 +219,7 @@ protected:
      */
     virtual Result doDelete();
     /**
-     * @brief Unconditionally executed callback for after the `delete` operation.
+     * @brief Unconditionally called callback for after the `delete` operation.
      * @param state The signal which `doDelete()` returned, or `cState_None` if `preDelete()` skipped it.
      * @note The actor has still technically not been deleted yet at this point, that occurs right after this call.
      * @endcode
