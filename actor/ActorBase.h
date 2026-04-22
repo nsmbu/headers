@@ -185,7 +185,7 @@ protected:
     /**
      * @brief Main rendering callback for the actor. Called every frame (the game runs at exactly 60 FPS).
      * @note This is only for scheduling deferred render tasks; actual rendering may not be performed at this stage.
-     * @return A signal for how to handle the operation. `true`/`false` imply `cState_Success`/`cState_Failed`.
+     * @return A signal for how to handle the operation. `true`/`false` imply `cState_Success`/`cState_Failed`. However, signaling failure does not delete the actor.
      * @details Returns `true` by default.
      * @endcode
      * ---
