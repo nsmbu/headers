@@ -5,16 +5,19 @@
 
 /**
  * @brief Safe identifier handle used as an alternative to raw actor pointers.
- * @details Combines a physical `ActorPtrCache` array index with a global generation
+ * @details Combines a physical @c ActorPtrCache array index with a global generation
  *          counter. This ensures that recycled array slots are never misidentified
  *          as the original actor.
  */
 class ActorUniqueID
 {
 public:
-    static const u32 cInvalidID         = 0;        ///< Represents an invalid or uninitialized ID.
-    static const u32 cArrayIndexMax     = 0x3ff;    ///< The maximum allowed array index (10 bits; 1023).
-    static const u32 cCreateIndexMax    = 0x3fffff; ///< The maximum allowed global create index (22 bits; 4,194,303)
+    /// Represents an invalid or uninitialized ID.
+    static const u32 cInvalidID         = 0;
+    /// The maximum allowed array index (10 bits; 1023).
+    static const u32 cArrayIndexMax     = 0x3ff;
+    /// The maximum allowed global create index (22 bits; 4,194,303)
+    static const u32 cCreateIndexMax    = 0x3fffff;
 
 public:
     /**
@@ -55,8 +58,8 @@ public:
 
     /**
      * @brief Overwrites the ID by packing a physical index and a global generation index.
-     * @param i_array_index The 10-bit physical index in the ActorPtrCache array. Must be `<= cArrayIndexMax`.
-     * @param i_create_index The 22-bit global generation counter. Must be `<= cCreateIndexMax`.
+     * @param i_array_index The 10-bit physical index in the ActorPtrCache array. Must be <= @c cArrayIndexMax.
+     * @param i_create_index The 22-bit global generation counter. Must be <= @c cCreateIndexMax.
      */
     void setValue(u32 i_array_index, u32 i_create_index)
     {
@@ -66,7 +69,7 @@ public:
     }
 
     /**
-     * @return The raw 32-bit packed value of this ID.
+     * @brief The raw 32-bit packed value of this ID.
      */
     u32 getValue() const
     {
@@ -92,7 +95,7 @@ public:
     }
 
     /**
-     * @return Whether this ID has been assigned a valid value (not equal to `cInvalidID`).
+     * @brief Whether this ID has been assigned a valid value (not equal to @c cInvalidID).
      */
     bool isValid() const
     {
@@ -100,7 +103,7 @@ public:
     }
 
     /**
-     * @brief Clears the ID, setting it back to `cInvalidID`.
+     * @brief Clears the ID, setting it back to @c cInvalidID.
      */
     void invalidate()
     {
@@ -124,6 +127,7 @@ public:
     }
 
 private:
-    u32 mValue; ///< The raw 32-bit packed value containing both the array index and create index.
+    /// The raw 32-bit packed value containing both the array index and create index.
+    u32 mValue;
 };
 static_assert(sizeof(ActorUniqueID) == 4);
