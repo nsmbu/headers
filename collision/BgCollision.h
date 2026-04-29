@@ -359,6 +359,12 @@ public:
         return mFlag.isOnBit(bit);
     }
 
+    /**
+     * @brief Register callbacks for interacting with a sensor of another actor.
+     * @param callback_foot Callback for when the @c foot sensor touches the collider, or @c nullptr for no callback.
+     * @param callback_head Callback for when the @c head sensor touches the collider, or @c nullptr for no callback.
+     * @param callback_wall Callback for when the @c wall sensor touches the collider, or @c nullptr for no callback.
+     */
     void setCallback(Callback callback_foot, Callback callback_head, CallbackWall callback_wall)
     {
         mCallbackFoot = callback_foot;
