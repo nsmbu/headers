@@ -2,10 +2,14 @@
 
 #include <collision/BasicRideLineBgCollision.h>
 
+/**
+ * @brief A ride collider which is shaped using a polyline and stores the points which make it up.
+ * @tparam N Number of @b lines in the polyline shape.
+ */
 template <s32 N>
 class ActorPolylineBgCollision : public BasicRideLineBgCollision
 {
-    SEAD_RTTI_OVERRIDE(ActorPolylineBgCollision, BasicRideLineBgCollision)
+    SEAD_RTTI_OVERRIDE_INLINE(ActorPolylineBgCollision, BasicRideLineBgCollision)
 
 private:
     static_assert(N >= 1);
