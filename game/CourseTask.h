@@ -26,6 +26,9 @@ public:
     // Address: 0x024C01F4
     void setSubjectFail();
 
+    // Address: 0x024C0D20
+    void doTimerIncreaseLayout(u32);
+
     GamesceneBase* getGamescene()
     {
         return mGamescene;
