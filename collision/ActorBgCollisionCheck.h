@@ -304,7 +304,14 @@ protected:
     virtual void checkWall_(u8 direction);
 
 public:
-    // Address: 0x0218AF6C
+    /**
+     * @brief Initialize the checker with the owner and sensors.
+     * @param owner The actor which the sensors belong to and will follow.
+     * @param foot The sensor to go below and check for floor collision, or @c nullptr if skipping this sensor.
+     * @param head The sensor to go above and check for ceiling collision, or @c nullptr if skipping this sensor.
+     * @param wall The sensor to go on either side and check for wall collision, or @c nullptr if skipping this sensor.
+     * @par Address: 0x0218AF6C
+     */
     void set(Actor* owner, const Sensor* foot, const Sensor* head, const Sensor* wall);
 
     Actor* getOwner() const
