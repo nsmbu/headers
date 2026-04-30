@@ -45,12 +45,16 @@ public:
         return mTime;
     }
 
+    void setBonusTime(u16 time) {
+        mBonusTime = time;
+    }
+
 protected:
     u32             mFreezeTime;
     u32             mTime;          // seconds << 12
     u32             mBeginTime;
     bool            mIsHurryUp;
     sead::BitFlag8  mStopTimerInfo;
-    u16             _1e;
+    u16             mBonusTime;
 };
 static_assert(sizeof(CourseTimer) == 0x20, "CourseTimer size mismatch");
