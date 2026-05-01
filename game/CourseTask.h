@@ -26,8 +26,12 @@ public:
     // Address: 0x024C01F4
     void setSubjectFail();
 
-    // Address: 0x024C0D20
-    void doTimerIncreaseLayout(u32);
+    /**
+     * @brief Activates the bonus time animation and adds the amount to the clock when it's done.
+     * @param player_id Which player's location to display the animation from.
+     * @par Address: 0x024C0D20
+     */
+    void doBonusTime(s8 player_id);
 
     GamesceneBase* getGamescene()
     {
