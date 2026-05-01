@@ -45,7 +45,11 @@ public:
         return mTime;
     }
 
-    void setBonusTime(u16 time) {
+    /**
+     * @brief The value which the bonus time animation is loaded with and will add to the clock when it's done.
+     */
+    void setBonusTime(u16 time)
+    {
         mBonusTime = time;
     }
 
@@ -55,6 +59,6 @@ protected:
     u32             mBeginTime;
     bool            mIsHurryUp;
     sead::BitFlag8  mStopTimerInfo;
-    u16             mBonusTime;
+    u16             mBonusTime;     ///< The value which the bonus time animation is loaded with and will add to the clock when it's done.
 };
 static_assert(sizeof(CourseTimer) == 0x20, "CourseTimer size mismatch");
