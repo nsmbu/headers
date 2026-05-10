@@ -70,6 +70,12 @@ public:
     {
         return isEnableCheckDemoNo() && getNextDemoNo() == *player_no;
     }
+    
+    void setDemoNo(s32 player_no)
+    {
+        if (!mDemoNoRingBuffer.isFull())
+            mDemoNoRingBuffer.pushBack(player_no);
+    }
 
     s32 getNextDemoNo();
     s32 getNumDemoNo();
@@ -180,7 +186,8 @@ protected:
     sead::Vector3f                  mHanabiPos;
     u32                             _134[(0x158 - 0x134) / sizeof(u32)];
     sead::FixedRingBuffer<s32, 4>   mCourseOutList;
-    u32                             _178[(0x1B8 - 0x178) / sizeof(u32)];
+    sead::FixedRingBuffer<s32, 4>   mDemoNoRingBuffer;
+    sead::FixedRingBuffer<s32, 4>   mDemoNoRingBufferCopy;
     s32                             mCourseOutPlayerNo;
     u32                             _1bc;
     bool                            mIsEnableCheckDemoNo;
