@@ -10,7 +10,7 @@ class ResMgr
 {
     SEAD_SINGLETON_DISPOSER(ResMgr)
 
-private:
+protected:
     class ResHolder : public sead::IDisposer
     {
     public:
@@ -19,6 +19,16 @@ private:
         ~ResHolder() override
         {
             ResMgr::instance()->remove(mKey);
+        }
+
+        const sead::SafeString& getKey() const
+        {
+            return mKey;
+        }
+        
+        sead::ArchiveRes* getArchiveRes() const
+        {
+            return mArchiveRes;
         }
 
     private:
@@ -80,7 +90,7 @@ public:
     void add(const sead::SafeString& key, sead::ArchiveRes* archive, sead::Heap* heap);
     void remove(const sead::SafeString& key);
 
-private:
+protected:
     sead::ArchiveRes* loadCourseResPackImpl_(const sead::SafeString& level_name, const sead::SafeString& archive_path, sead::Heap* heap, bool decompress);
 
     static sead::ArchiveRes* loadArchiveResImpl_(const sead::SafeString& archive_path, sead::Heap* heap, sead::Decompressor* decompressor);
@@ -88,7 +98,7 @@ private:
 
     static void* getFileFromArchiveResImpl_(sead::ArchiveRes* archive, const sead::SafeString& filename, u32* length);
 
-private:
+protected:
     sead::ArchiveRes*                           mCourseArchiveRes;
     sead::FixedStrTreeMap<32, ResHolder*, 256>  mResHolderTreeMap;
     sead::SZSDecompressor*                      mSZSDecompressor;
