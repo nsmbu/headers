@@ -794,6 +794,9 @@ public:
     virtual bool isEnableRDashLuigiGravity();
 
     // ------------------------------------ Uncategorized ------------------------------------ //
+    
+    // Address: 0x02931C1C
+    bool setItem(PlayerMode mode);
 
     void executeMain() override;
 
