@@ -84,6 +84,54 @@ public:
      * @par Address: 0x02002C80
      */
     s32 getProfileID() const;
+    
+    /**
+     * @brief The specific profile which this actor was instantiated from.
+     */
+    Profile* getProfile() const
+    {
+        return mActorProfile;
+    }
+    
+    /**
+     * @brief Whether the actor was created with @c ActorMgr::createImmediately(), rather than deferred with @c ActorMgr::createLater().
+     */
+    bool isCreatedImmediately() const
+    {
+        return mCreatedImmediately;
+    }
+    
+    /**
+     * @brief Whether the actor was spawned from the level with @c ActorCreateMgr, rather than dynamically spawned by another actor.
+     */
+    bool isMapActor() const
+    {
+        return mIsMapActor;
+    }
+    
+    /**
+     * @brief Level designer configuration. Also known as "nybbles" or "spritedata".
+     */
+    u32 getParam0() const
+    {
+        return mParam0;
+    }
+    
+    /**
+     * @brief Level designer configuration. Also known as "nybbles" or "spritedata".
+     */
+    u32 getParam1() const
+    {
+        return mParam1;
+    }
+    
+    /**
+     * @brief @c sead::OffsetList used for holding child actors spawned by this actor. Managed automatically if @c param.parent_id is set when spawning.
+     */
+    const List& getChildList() const
+    {
+        return mChildList;
+    }
 
     /**
      * @brief The personal heap for this actor.
@@ -233,7 +281,7 @@ protected:
     sead::Heap*     mActorHeap;             ///< Personal heap for this actor of type @c sead::FrameHeap. Capacity of @c 0x20200, but profiles in the player whitelist get @c 0x1A0200.
     ActorUniqueID   mActorUniqueID;         ///< The unique identifier handle for this actor.
     Profile*        mActorProfile;          ///< The specific profile which this actor was instantiated from.
-    bool            mCreateImmediately;     ///< Whether the actor was created with @c ActorMgr::createImmediately(), rather than deferred with @c ActorMgr::createLater().
+    bool            mCreatedImmediately;    ///< Whether the actor was created with @c ActorMgr::createImmediately(), rather than deferred with @c ActorMgr::createLater().
     bool            mIsMapActor;            ///< Whether the actor was spawned from the level with @c ActorCreateMgr, rather than dynamically spawned by another actor.
     bool            mIsActive;              ///< Whether the @c create operation has completed and the actor is executing.
     bool            mDeleteRequestFlag;     ///< Whether to delete this actor on the next frame.
