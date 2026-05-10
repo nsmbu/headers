@@ -444,7 +444,7 @@ public:
     {
         cDokanType_Invalid = 0,
         cDokanType_Normal,
-        cDokanType_ForwardPipe      // Broken (most likely leftover from NSMBW that wasn't fully stripped)
+        cDokanType_Rail         // Broken (leftover from NSMBW that wasn't fully stripped)
     };
     static_assert(sizeof(DokanType) == 4);
 
