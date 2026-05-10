@@ -73,6 +73,53 @@ struct NextGoto
     } rail;
     u8  wipe_type;
     u8  _pad[1];
+
+    enum Type
+    {
+        cType_Normal,
+        cType_Checkpoint,
+        cType_DoorExit,
+        cType_PipeUp,
+        cType_PipeDown,
+        cType_PipeLeft,
+        cType_PipeRight,
+        cType_Falling,
+        cType_HipAttack,
+        cType_Slip,
+        cType_Swim,
+        
+        // TODO: weird ones here
+        
+        cType_MiniPipeUp = 16,
+        cType_MiniPipeDown,
+        cType_MiniPipeLeft,
+        cType_MiniPipeRight,
+        cType_Jump,
+        cType_Vine,
+        cType_ForwardPipe,
+        cType_Boss,
+        cType_BossWalk,
+        cType_BossJump,
+        cType_BossFall,
+        cType_DoorEnter,
+        
+        cType_CreditsP1 = 29,
+        cType_CreditsP2,
+        cType_CreditsP3,
+        cType_CreditsP4,
+        cType_Title,
+        cType_Ambush,
+        
+        cType_Num
+    };
+
+    enum Flag
+    {
+        cFlag_FaceLeft  = 1 << 0,   ///< Spawns the player facing left.
+        cFlag_RailPipe  = 1 << 1,   ///< An unused and broken DokanType, leftover from NSMBW that wasn't fully stripped.
+        
+        cFlag_Enterable   = 1 << 7, ///< Allows the player to enter.
+    };
 };
 static_assert(sizeof(NextGoto) == 0x18);
 
