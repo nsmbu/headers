@@ -194,6 +194,56 @@ public:
     {
         mDirection = dir;
     }
+    
+    f32 getSpeedF() const
+    {
+        return mSpeedF;
+    }
+    
+    void setSpeedF(f32 speedF)
+    {
+        mSpeedF = speedF;
+    }
+    
+    f32 getMaxSpeedF() const
+    {
+        return mMaxSpeedF;
+    }
+    
+    void setMaxSpeedF(f32 maxSpeedF)
+    {
+        mMaxSpeedF = maxSpeedF;
+    }
+    
+    f32 getMaxFallSpeed() const
+    {
+        return mMaxFallSpeed;
+    }
+    
+    void setMaxFallSpeed(f32 maxFallSpeed)
+    {
+        mMaxFallSpeed = maxFallSpeed;
+    }
+    
+    f32 getAccelY() const
+    {
+        return mAccelY;
+    }
+    
+    void setAccelY(f32 accelY)
+    {
+        mAccelY = accelY;
+    }
+    
+    f32 getAccelF() const
+    {
+        return mAccelF;
+    }
+    
+    void setAccelF(f32 accelF)
+    {
+        mAccelF = accelF;
+    }
 
     sead::Vector3f& getPos()
     {
