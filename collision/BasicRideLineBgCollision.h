@@ -65,6 +65,11 @@ public:
     {
         return mRideLinePrev;
     }
+    
+    void set_170(f32 value)
+    {
+        _170 = value;
+    }
 
 protected:
     sead::Buffer<sead::Vector2f>    mPoint;
