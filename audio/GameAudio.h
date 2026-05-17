@@ -7,6 +7,9 @@
 class GameAudio
 {
 public:
+    static GameAudio* instance() { return sInstance; }
+
+public:
     // Address: 0x02029368
     static void convertAudioObjctPos(sead::Vector2f* screen_pos, const sead::Vector2f& bg_pos);
 
@@ -342,10 +345,16 @@ public:
     static_assert(sizeof(AudioObjctPly) == sizeof(SndObjctPly));
 
 public:
+    // 0x02028F2C
+    void initSound();
+
+public:
     static AudioObjctCmnEmy* getAudioObjEmy() { return sAudioObjEmy; }
     static AudioObjctCmnMap* getAudioObjMap() { return sAudioObjMap; }
 
 private:
+    // Address: 0x101C63E0
+    static GameAudio* sInstance;
     // Address: 0x101C63CC
     static AudioObjctCmnEmy* sAudioObjEmy;
     // Address: 0x101C63D0
