@@ -8,6 +8,8 @@
 #include <nw/snd/snd_SoundArchive.h>
 #include <nw/snd/snd_SoundHandle.h>
 
+class AudAudioPlayer;
+
 class SndAudioMgr : public AudAudioMgr
 {
     SEAD_SINGLETON_DISPOSER(SndAudioMgr)
@@ -27,4 +29,7 @@ public:
 
     // Address: 0x029B5934
     void startDrcTouchSound(const sead::Vector2f& world_pos, u32 type);
+
+    // Address: 0x029B1BD0
+    AudAudioPlayer* getAudioPlayer();
 };
