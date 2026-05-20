@@ -408,6 +408,11 @@ public:
         setDeathInfo_Fumi(player, speed, StateID_DieFumi);
     }
 
+    void setDeathInfo_FumiFall(Actor* player, const sead::Vector2f& speed)
+    {
+        setDeathInfo_Fumi(player, speed, StateID_DieFall);
+    }
+
     void setDeathInfo_FumiOther(Actor* player, const sead::Vector2f& speed)
     {
         setDeathInfo_Fumi(player, speed, StateID_DieOther);
