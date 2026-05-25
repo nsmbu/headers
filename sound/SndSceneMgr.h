@@ -61,6 +61,12 @@ public:
 
     void startBossClearFanfare(BossClearType type);
 
+    // Address: 0x029BFE44
+    void loadBaseSndGroup();
+
+    // Address: 0x029BFE1C
+    bool loadData(u32 itemId);
+
     SEAD_SINGLETON_DISPOSER(SndSceneMgr)
 
 protected:
