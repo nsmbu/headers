@@ -269,9 +269,15 @@ public:
 public:
     CourseDataFile();
 
-    const void* getBlock(Block block)
+    const void* getBlock(Block block) const 
     {
         return mBlock[block];
+    }
+    
+    template <typename T>
+    const T* getBlock(Block block) const
+    {
+        return static_cast<const T*>(getBlock(block));
     }
 
     const DistantViewData* getBg2Data(u16 id) const;
