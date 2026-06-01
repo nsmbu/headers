@@ -114,6 +114,12 @@ public:
         return mActorPtrCache.getActorPtr(id);
     }
 
+    template <typename T>
+    T* getActorPtr(ActorUniqueID id) const
+    {
+        return static_cast<T*>(mActorPtrCache.getActorPtr(id));
+    }
+
     u32 count(ActorFindFunc* io_find_func) const
     {
         return mActorPtrCache.count(io_find_func);
