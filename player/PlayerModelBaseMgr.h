@@ -442,6 +442,16 @@ public:
         return mModelBase->isRideLiftWait();
     }
 
+    void releaseBodyAnm(f32 blend_duration)
+    {
+        mModelBase->releaseBodyAnm(blend_duration);
+    }
+
+    void setCarryBodyAnm(f32 blend_duration, bool bubble_reset_frame)
+    {
+        mModelBase->setCarryBodyAnm(blend_duration, bubble_reset_frame);
+    }
+
     bool isBalloonChibiYoshiFly() const
     {
         return mModelBase->isBalloonChibiYoshiFly();
