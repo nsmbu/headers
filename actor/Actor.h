@@ -138,9 +138,7 @@ public:
      * * It is not riding another actor/platform (unless skipped by flag).
      * * Nabbit has passed to the **right** of the actor's visible range.
      * * The actor is out of the zone bounds OR the actor is outside of the visible camera.
-     * @endcode
-     * ---
-     * Address: 0x020007A0
+     * @par Address: 0x020007A0
      */
     bool screenOutCheck(u16 flag);
 
@@ -161,7 +159,11 @@ public:
     // Address: 0x02000A70
     bool checkEat() const;
 
-    // Address: 0x02000774
+    /**
+     * @brief Schedule this actor for deletion on the next frame.
+     * @param manual_deleted Prevents respawning.
+     * @par Address: 0x02000774
+     */
     void deleteActor(bool manual_deleted);
 
 public:
