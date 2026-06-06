@@ -37,8 +37,14 @@ public:
     
     // Address: 0x024C1344
     [[nodiscard]]
-    u32 toUnits(u32 seconds);
-    
+    static u32 toUnits(u32 seconds);
+
+    [[nodiscard]]
+    static u32 fromUnits(u32 units)
+    {
+        return units >> 0xC;
+    }
+
     [[nodiscard]]
     u32 getTime() const
     {
