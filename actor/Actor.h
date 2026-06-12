@@ -196,7 +196,12 @@ public:
     {
         mDirection = dir;
     }
-    
+
+    u8 getLayer() const
+    {
+        return mLayer;
+    }
+
     f32 getSpeedF() const
     {
         return mSpeedF;
@@ -350,6 +355,16 @@ public:
     CarryFlag getCarryFlag() const
     {
         return CarryFlag(mCarryFlag);
+    }
+
+    u8 getSwitchFlag0() const
+    {
+        return mSwitchFlag0;
+    }
+
+    u8 getSwitchFlag1() const
+    {
+        return mSwitchFlag1;
     }
 
     u32 getProfFlag() const
