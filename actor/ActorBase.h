@@ -124,7 +124,15 @@ public:
     {
         return mParam1;
     }
-    
+
+    /**
+     * @brief Extra level designer configuration. Also known as "nybbles" or "spritedata".
+     */
+    ActorParamEx1 getParamEx() const
+    {
+        return mParamEx;
+    }
+
     /**
      * @brief @c sead::OffsetList used for holding child actors spawned by this actor. Managed automatically if @c param.parent_id is set when spawning.
      */
