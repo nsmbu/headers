@@ -39,6 +39,11 @@ public:
         return mPos;
     }
 
+    bool isState(const StateID& state_id) const
+    {
+        return *mStateMgr.getStateID() == state_id;
+    }
+
 public:
     // StateID_FallDown                 Address: 0x101ECA8C
     // initializeState_FallDown         Address: 0x0201371C
@@ -141,7 +146,7 @@ public:
     // finalizeState_Circle4x4RightUp   Address: 0x02017144
     DECLARE_STATE_ID(LineMgr, Circle4x4RightUp)
 
-public:
+protected:
     FStateMgr<LineMgr>                      mStateMgr;
     sead::UnsafeArray<sead::Vector2f, 7>    _24;
     sead::Vector2f                          mSpeed;
