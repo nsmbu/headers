@@ -1,6 +1,7 @@
 #pragma once
 
 #include <sound/AudAudioMgr.h>
+#include <sound/SndItemID.h>
 
 #include <heap/seadDisposer.h>
 #include <math/seadVector.h>
@@ -32,4 +33,7 @@ public:
 
     // Address: 0x029B1BD0
     AudAudioPlayer* getAudioPlayer();
+
+    // Address: 0x029B7548
+    bool loadData(SndItemID item_id);
 };
