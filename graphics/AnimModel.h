@@ -192,6 +192,13 @@ inline void AnimModel::destroy(
     {
         Model* model = anim_model->getModel();
         delete model;
+
+        anim_model->mSklAnim.freeBuffer();
+        anim_model->mTexAnim.freeBuffer();
+        anim_model->mShuAnim.freeBuffer();
+        anim_model->mVisAnim.freeBuffer();
+        anim_model->mShaAnim.freeBuffer();
+
         delete anim_model;
         anim_model = nullptr;
     }
