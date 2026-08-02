@@ -44,6 +44,11 @@ public:
         return *mStateMgr.getStateID() == state_id;
     }
 
+    u8 getDir() const
+    {
+        return mDir;
+    }
+
 public:
     // StateID_FallDown                 Address: 0x101ECA8C
     // initializeState_FallDown         Address: 0x0201371C
