@@ -53,6 +53,11 @@ public:
     // Address: 0x021A7BF0
     void set(Actor* owner, const InitArg& arg, s32 point_num, sead::Heap* heap = nullptr);
 
+    sead::Buffer<sead::Vector2f>& getPoints()
+    {
+        return mPoint;
+    }
+
     const sead::Buffer<sead::Vector2f>& getPoints() const
     {
         return mPoint;
