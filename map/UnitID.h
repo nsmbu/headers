@@ -2,7 +2,7 @@
 
 #include <basis/seadTypes.h>
 
-enum UnitID
+enum UnitID : int
 {
     cUnitID_Invalid = -1,
     cUnitID_Null = 0,
