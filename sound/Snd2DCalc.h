@@ -1,6 +1,7 @@
 #pragma once
 
 #include <basis/seadTypes.h>
+#include <math/seadVector.h>
 
 class Snd2DCalc
 {
@@ -23,5 +24,7 @@ public:
     static_assert(sizeof(Param) == 0x10);
 
 public:
+    void calcParam(Param* out, const sead::Vector2f& pos, u32 flags, const sead::Vector2f& screenSize);
+
     // TODO
 };
