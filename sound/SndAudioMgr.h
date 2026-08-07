@@ -36,4 +36,7 @@ public:
 
     // Address: 0x029B7548
     bool loadData(SndItemID item_id);
+
+    // Address: 0x029B554C
+    void setSoundOutputLine(nw::snd::SoundHandle* handle);
 };
