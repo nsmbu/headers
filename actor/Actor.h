@@ -87,11 +87,17 @@ public:
     {
     }
 
-    virtual void vfC4()
+    /**
+     * @brief Called by Group Controller when "activating" the target group.
+     */
+    virtual void groupActivate()
     {
     }
 
-    virtual void vfCC()
+    /**
+     * @brief Called by Group Controller when "deactivating" the target group.
+     */
+    virtual void groupDeactivate()
     {
     }
 
