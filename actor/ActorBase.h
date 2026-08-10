@@ -43,6 +43,15 @@ public:
         cResult_Failed      ///< Cancel the operation. This deletes the actor.
     };
 
+    /**
+     * @brief Properties which control execution policy during events.
+     */
+    enum Flag
+    {
+        cFlag_NoEventFreeze         = 1 << 1, ///< Always execute during event freezes. See @c EventMgr::isJoin()
+        cFlag_NoNormalEventFreeze   = 1 << 2, ///< Always execute during "normal" event freezes. See @c EventMgr::isNormal()
+    };
+
 public:
     typedef sead::OffsetList<ActorBase> List;
 
@@ -301,7 +310,7 @@ protected:
     ActorBase*      mParent;                ///< The parent actor if this actor is a child. Automatically set to @c nullptr if orphaned.
     sead::ListNode  mExecuteNode;           ///< Implementation detail. Used to track our position in @c ActorMgr lists.
     sead::ListNode  mDrawNode;              ///< Implementation detail. Used to track our position in @c ActorMgr `mDrawManage` list.
-    sead::BitFlag32 mFlag;
+    sead::BitFlag32 mFlag;                  ///< Properties which control execution policy during events. See @c ActorBase::Flag enum.
 
     friend class ActorMgr;
 };
