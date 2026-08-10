@@ -9,13 +9,19 @@
 
 struct ActorCreateInfo
 {
-    enum Flag
+    enum Flag : u16
     {
-        cFlag_IgnoreSpawnRange  = 0x0002,
-        cFlag_MapObj            = 0x0008,
-        cFlag_Grouped           = 0x0010,
-        cFlag_Unknown           = 0x0020,
-        cFlag_Unknown2          = 0x0100
+        cFlag_IgnoreSpawnRange           = 1 << 1,  ///< Creates the actor regardless of camera proximity.
+        cFlag_ScrollSetupDeferred        = 1 << 2,  ///< Queues the actor for creation only after scroll limiters and other camera properties have been applied.
+        cFlag_MapObj                     = 1 << 3,  ///< Avoids blocking boost mode block placement and adjusts the Z-position to be further in front.
+        cFlag_Grouped                    = 1 << 4,  ///< Marks the actor as Group Controller-managed, using nybbles 5-6 (high byte of mParam0) as the group ID. Also implies @c cFlag_IgnoreSpawnRange.
+        cFlag_NoCoinEdit                 = 1 << 5,  ///< Prevents spawning in Coin Edit mode.
+        cFlag_CoinEditPatternControlled  = 1 << 6,  ///< Prevents spawning in Coin Edit mode and is marked as being controlled by a coin edit pattern.
+        cFlag_Coin                       = 1 << 7,  ///< Participates in coin counting routines.
+        cFlag_CoinBlock                  = 1 << 8,  ///< Participates in coin-block counting routines, but only if nybble 20 is 0 and nybble 13 & 1 is 0 (aka mParam1 & 0x1000000F)
+        cFlag_PakkunBlack                = 1 << 9,  ///< Spawns as a muncher tile instead of constructing an Actor instance.
+        cFlag_ManagedChildTemplate       = 1 << 10, ///< Treats creation of the map actor as a reusable operation from an external manager actor.
+        cFlag_GroupedScrollSetupDeferred = 1 << 11, ///< Both @c cFlag_ScrollSetupDeferred and @c cFlag_Grouped
     };
 
     s32 offset_x;           // (X) Offset to be added to the initial actor position
@@ -33,7 +39,7 @@ struct ActorCreateInfo
         u16 left;
         u16 right;
     } cull_range;
-    u16 flag;               // See enum Flag
+    Flag flag;
 
     // Address: 0x100018F4
     static const ActorCreateInfo cDefault;
