@@ -2,12 +2,30 @@
 
 #include <actor/ActorState.h>
 #include <state/FStateVirtualID.h>
+#include <graphics/AnimModel.h>
+#include <actor/EatData.h>
+#include <collision/BgCollisionCheckHitResult.h>
 
 class Yoshi;
 
 class ItemBase : public ActorMultiState
 {
     SEAD_RTTI_OVERRIDE(ItemBase, ActorMultiState)
+protected:
+    enum ItemTypes
+    {
+        cItemType_Mushroom = 0,
+        cItemType_FireFlower,
+        cItemType_Star,
+        cItemType_IceFlower,
+        cItemType_1UP,
+        cItemType_Propeller,
+        cItemType_MiniMushroom,
+        cItemType_Penguin,
+        cItemType_Acorn,
+        cItemType_Moon = 0xC,
+        cItemType_DRCStar = 0xD
+    };
 
 public:
     ItemBase(const ActorCreateParam& param);
@@ -91,15 +109,51 @@ public:
     void despawnRelated();
     // Address: 0x025183AC
     void setLogAndWigglerColToFalse();
-    // Address: 025196E8
-    void trySetPlayerPowerUp(void*, u32 PowerUp, u32);
+    // Address: 0x025196E8
+    u32 trySetPlayerPowerUp(void*, u32 PowerUp, u32);
 
     // Address: 0x02519580
-    bool handleCollectResponse(u32, u32);
+    bool handleCollectResponse(u32, u32 Player);
 
     Yoshi* getEatenByYoshi() const;
 
 protected:
-    u32 _17c8[(0x1A90 - 0x17C8) / sizeof(u32)];
+    sead::Vector2f                  _17c8;                                    
+    sead::Vector3f                  mPos;                                      
+    sead::Vector3f                  mEffectPos;                                
+    u8                              _17e8[0x1800 - 0x17E8];                    
+    AnimModel*                      mItemModel;                                
+    Animation*                      mItemAnim;                                 
+    ItemTypes                       mItemType;                             
+    u32                             _180c;                                    
+    u32                             mAnimIDX;                            
+    u32                             _1814;                                    
+    u32                             mUnkPlayerID;                             
+    u8                              _181c[0x1827 - 0x181C];                    
+    bool                            mOnCreateCalled;                          
+    bool                            mCollidedWithLog;                        
+    u8                              _1829[0x1830 - 0x1829];                    
+    s32                             mCollidingPlayerID;                        
+    u8                              _1834[0x1858 - 0x1834];                 
+    u16                             _1858;                                  
+    s8                              mYoshiEatenPlayerID;                      
+    u8                              _185B;                                     
+    u16                             _185c;                                
+    u8                              _185e;                               
+    bool                            mCollidedWithGiantWiggler;                 
+    u8                              _1860[0x1864 - 0x1860];                  
+    EatData                         mEatData;                    
+    u8                              _1888[0x188C - 0x1888]; 
+    u8                              mScaler[0x20];
+    ActorCollisionCheck             mACollider2;  
+    BgCollisionCheckHitResult       mAirWaterHitRes;
+    u8                              _19e4[0x1A00 - 0x19E4];
+    u8                              mEffect[0x68];
+    u8                              _1a6c[0x1A7E - 0x1A6C];
+    bool                            mParentIsFlyingQBlockSpawner;
+    u8                              _1a7f;
+    sead::Vector3f                  _1a80;
+    void*                           mCallbackTable;
 };
+
 static_assert(sizeof(ItemBase) == 0x1A90);
