@@ -8,12 +8,16 @@
 
 class CommentMgr : public sead::CalculateTask
 {
+    // setInstance_()                               Address: 0x029C6B74
+    // deleteInstance()                             Address: Deleted
+    // sInstance                                    Address: 0x101E7D58
     SEAD_TASK_SINGLETON_DISPOSER(CommentMgr)
 
 public:
+    // Address: 0x029C6B94
     CommentMgr(const sead::TaskConstructArg& arg);
 
-//protected:
+protected:
     u8                                      _c8;
     u32                                     _cc;
     u8                                      _d0;
