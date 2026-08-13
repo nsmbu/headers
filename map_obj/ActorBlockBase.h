@@ -7,19 +7,24 @@ class ActorBlockBase : public ChangeBlockCoinBase
     SEAD_RTTI_OVERRIDE(ActorBlockBase, ChangeBlockCoinBase)
 
 public:
+    /**
+     * @brief Defines the type of block.
+     */
     enum Type
     {
-        cType_Hatena = 0,
-        cType_Renga,
-        cType_Hit,
-        cType_Clear
+        cType_Hatena    = 0, ///< Question Block
+        cType_Renga     = 1, ///< Brick Block
+        cType_Hit       = 2, ///< Used Block
+        cType_Clear     = 3  ///< Invisible Block
     };
 
 public:
     ActorBlockBase(const ActorCreateParam& param);
     ~ActorBlockBase() override { }
 
-    bool init(bool register_collider, bool);
+    // Address: 0x0269F6C8
+    bool init(bool register_collider, bool set_revision_wall_callback);
+    // Address: 0x0269FB30
     void initMover();
 
     Type getBlockType() const
@@ -38,7 +43,9 @@ public:
     }
 
 protected:
+    // Address: 0x0269E6C4
     bool execute() override;
+    // Address: 0x0269E77C
     bool draw() override;
 
 public:
@@ -50,7 +57,11 @@ public:
 
     bool vf2C4() override;
 
-    virtual bool isBlockActive();
+    /**
+     * @brief Restores the persistent state of the block across scene transitions, so that a destroyed/hit block stays that way.
+     * @return Whether the block should still be active as opposed to destroyed.
+     */
+    virtual bool restoreState();
 
     virtual void vf2DC()
     {
@@ -68,19 +79,19 @@ public:
         return mPos;
     }
 
-    virtual void executeBlock();
+    virtual void updateMovement();
     virtual void destroy();
     virtual void destroy2();
 
-    virtual void vf314()
+    virtual void updateLiquidEffects()
     {
     }
 
-    virtual void vf31C()
+    virtual void onBumpDiff()
     {
     }
 
-    virtual void vf324()
+    virtual void postBump()
     {
     }
 
@@ -97,10 +108,10 @@ protected:
 
 protected:
     f32     mItemCreateZPos;
-    f32     mItemCreateAddYPosUp1;
-    f32     mItemCreateAddYPosDown1;
-    f32     mItemCreateAddYPosUp2;
-    f32     mItemCreateAddYPosDown2;
+    f32     mItemCreateYOffsetUpSingle;
+    f32     mItemCreateYOffsetDownSingle;
+    f32     mItemCreateYOffsetUpMulti;
+    f32     mItemCreateYOffsetDownMulti;
     Type    mType;
     u32     _1cc0;
     u8      _1cc4;
