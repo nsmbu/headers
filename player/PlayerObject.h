@@ -1087,6 +1087,16 @@ public:
         return DirType(param_0 >> 24 & 0xF);
     }
 
+    PlayerMode getModePrev()
+    {
+        return mModePrev;
+    }
+
+    DirType getDirection()
+    {
+        return _2a00;
+    }
+
 protected:
     PlayerModelMgr                  mModelMgr;
     ActorBgCollisionCheck::Sensor   mBcSensorVine;

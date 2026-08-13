@@ -35,6 +35,11 @@ public:
         return *mStateMgr.getOldStateID() == state_id;
     }
 
+    const StateID* getCurrentState()
+    {
+        return mStateMgr.getStateID();
+    }
+
 protected:
     FStateMgr<ActorState>   mStateMgr;
   //u32                     _17c4[4 / sizeof(u32)]; // Alignment???
