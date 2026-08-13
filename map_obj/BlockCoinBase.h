@@ -252,7 +252,7 @@ protected:
     u32                             _1ac8;
     bool                            mBlockHitNotBoundable;
     u8                              _1acd;
-    u8                              _1ace;
+    u8                              mSpawnPowerupAsChild;
     bool                            mNoAddScoreOnDestroy;
     MoveType                        mMoveType;
     f32                             mDeltaX;
