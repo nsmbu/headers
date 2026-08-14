@@ -11,19 +11,20 @@ class Yoshi;
 class ItemBase : public ActorMultiState
 {
     SEAD_RTTI_OVERRIDE(ItemBase, ActorMultiState)
+
 protected:
-    enum ItemTypes
+    enum ItemType
     {
         cItemType_Mushroom = 0,
         cItemType_FireFlower,
         cItemType_Star,
         cItemType_IceFlower,
-        cItemType_1UP,
-        cItemType_Propeller,
+        cItemType_LifeMushroom,
+        cItemType_PropellerMushroom,
         cItemType_MiniMushroom,
-        cItemType_Penguin,
-        cItemType_Acorn,
-        cItemType_Moon = 0xC,
+        cItemType_PenguinMushroom,
+        cItemType_SquirrelMushroom,
+        cItemType_LifeMoon = 0xC,
         cItemType_DRCStar = 0xD
     };
 
@@ -31,51 +32,66 @@ public:
     ItemBase(const ActorCreateParam& param);
     virtual ~ItemBase();
 
-    bool draw()override;
+    // Address: 0x025176EC
+    bool draw() override;
 
-    void setPlayerNo(s8 ID)override;
-    ActorBgCollisionCheck* getBgCheck()override;
-    void setCarryFall(Actor*, s32)override;
-    bool isSpinLiftUpEnable()override;
-    void setSpinLiftUpActor(Actor* player)override;
-    void vfC4()override;
-    void vfCC()override;
-    void allEnemyDeathEffSet()override;
-    void waterSplashEffect(const sead::Vector3f& pos)override;
-    void yoganSplashEffect(const sead::Vector3f& pos)override;
-    void yoganWaveSplashEffect(const sead::Vector3f& pos)override;
-    void poisonSplashEffect(const sead::Vector3f& pos)override;
-    void blockHitInit_()override;
+    void setPlayerNo(s8 ID) override;
+    ActorBgCollisionCheck* getBgCheck() override;
+    void setCarryFall(Actor*, s32) override;
+    bool isSpinLiftUpEnable() override;
+    void setSpinLiftUpActor(Actor* player) override;
+    void vfC4() override;
+    void vfCC() override;
+    // Address: 0x02517BD0
+    void allEnemyDeathEffSet() override;
+    // Address: 0x02517C20
+    void waterSplashEffect(const sead::Vector3f& pos) override;
+    // Address: 0x02517D5C
+    void yoganSplashEffect(const sead::Vector3f& pos) override;
+    // Address: 0x02517E18
+    void yoganWaveSplashEffect(const sead::Vector3f& pos) override;
+    // Address: 0x02517ED4
+    void poisonSplashEffect(const sead::Vector3f& pos) override;
+    void blockHitInit_() override;
 
-    void setWaterFunsui_(bool enable)override;
-    void beginFunsui_()override;
-    void endFunsui_(f32 speed_y)override;
-    bool isFunsui_()const override;
-    bool vf13C()override;
-    void vf144(s32)override;
+    void setWaterFunsui_(bool enable) override;
+    void beginFunsui_() override;
+    void endFunsui_(f32 speed_y) override;
+    bool isFunsui_() const override;
+    bool vf13C() override;
+    // Address: 0x0251771C
+    void vf144(s32) override;
     
-    bool setTouchDrcDamage_(const sead::Vector2f& pos)override;
-    void setFunsuiPos_(sead::Vector2f dst)override;
-    void setFunsuiSpeedY_(f32 speed)override;
-    bool smokeDamageEnable_Yogan_(f32 surface_pos_y)override;
-    bool smokeDamageEnable_Poison_(f32 surface_pos_y)override;
-    void changeState(const StateID& state_id)override;
+    bool setTouchDrcDamage_(const sead::Vector2f& pos) override;
+    void setFunsuiPos_(sead::Vector2f dst) override;
+    void setFunsuiSpeedY_(f32 speed) override;
+    bool smokeDamageEnable_Yogan_(f32 surface_pos_y) override;
+    bool smokeDamageEnable_Poison_(f32 surface_pos_y) override;
+    void changeState(const StateID& state_id) override;
 
     virtual void vf18C();                       // nullsub
     virtual void playBlockReleaseUpAnim();      // nullsub
     virtual void playBlockReleaseDownAnim();    // nullsub
     virtual void playIdleAnim();                // nullsub
-    virtual void playFloatAnim();               // nullsub
+    virtual void playFloatAnim();                // nullsub
     virtual void vf1B4();                       // nullsub
+    // Address: 0x0251784C
     virtual void initHitboxes();
     virtual u32  vf1C4(); // Player collision
+    // Address: 0x025178C0
     virtual void vf1CC();
+    // Address: 0x02517908
     virtual void vf1D4();
+    // Address: 0x02517950
     virtual void vf1DC();
+    // Address: 0x02517A40
     virtual void vf1E4();
+    // Address: 0x02517A84
     virtual void vf1EC();
+    // Address: 0x02517B3C
     virtual void vf1F4();
     virtual void vf1FC(); // nullsub
+    // Address: 0x02517B4C
     virtual u32  vf204();
 
     DECLARE_STATE_VIRTUAL_ID_BASE(ItemBase, ItemBaseState12);

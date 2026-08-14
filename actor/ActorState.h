@@ -35,7 +35,7 @@ public:
         return *mStateMgr.getOldStateID() == state_id;
     }
 
-    const StateID* getCurrentState()
+    const StateID* getState() const
     {
         return mStateMgr.getStateID();
     }
