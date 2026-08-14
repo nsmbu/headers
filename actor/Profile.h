@@ -57,15 +57,23 @@ class Profile
 public:
     enum Flag
     {
-        cFlag_DrawCullCheck = 1 <<  1,
-        cFlag_Unk3          = 1 <<  3,
-        cFlag_Unk4          = 1 <<  4,
-        cFlag_Unk7          = 1 <<  7,
-        cFlag_Unk8          = 1 <<  8,
-        cFlag_NoLoopPosX    = 1 << 10,
-        cFlag_Unk12         = 1 << 12,
+        cFlag_DrawCullCheck     = 1 <<  1, ///< Enables calling @c Actor::drawCullCheck_() to skip drawing if the actor is considered offscreen.
+        cFlag_NoComboScore      = 1 <<  2, ///< Disables awarding Combo scores.
+        cFlag_Unk3              = 1 <<  3, ///< Possibly unused.
+        cFlag_WinKill           = 1 <<  4, ///< Kills the actor and awards score when completing the course.
+        cFlag_WinKillNoScore    = 1 <<  5, ///< Kills the actor when completing the course but does not award score.
+        cFlag_Unk6              = 1 <<  6, ///< Possibly unused.
+        cFlag_Projectile        = 1 <<  7, ///< Used for special collision logic, and kills the actor when completing the course by defeating a boss.
+        cFlag_Unk8              = 1 <<  8, ///< Possibly unused.
+        cFlag_NoFumi            = 1 <<  9, ///< Bypasses stomp classification and always damages the player (applies knockback when penguin-sliding).
+        cFlag_NoLoopPosX        = 1 << 10, ///< Disables horizontal screen-wrapping for this actor.
+        cFlag_Carryable         = 1 << 11, ///< Allows other carryable blocks to bounce off this actor, kills the actor when catching Nabbit, and counts as a weighted rider on Floating Box.
+        cFlag_Unk12             = 1 << 12, ///< Possibly unused.
+        cFlag_Coin              = 1 << 13, ///< Counts as a weighted rider on platforms.
+        cFlag_Item              = 1 << 14, ///< Allows being bumped around by Bump Platforms through the @c ItemBase bump-related members.
+        cFlag_FunsuiFollowY     = 1 << 15, ///< Causes geysers to drag this actor's position upwards. Only used by Piranha Plants in NSLU.
 
-        cFlag_None          = 0
+        cFlag_None              = 0
     };
     static_assert(sizeof(Flag) == 4);
 
