@@ -1087,6 +1087,16 @@ public:
         return DirType(param_0 >> 24 & 0xF);
     }
 
+    PlayerMode getModePrev() const
+    {
+        return mModePrev;
+    }
+
+    DirType getDirection() const 
+    {
+        return mDirection;
+    }
+
 protected:
     PlayerModelMgr                  mModelMgr;
     ActorBgCollisionCheck::Sensor   mBcSensorVine;
@@ -1130,7 +1140,7 @@ protected:
     DokanCannonType                 mDokanCannonType;
     sead::Vector2f                  mDemoInBossMoveTarget;
     u32                             mPMusaTransformStep;
-    DirType                         _2a00;
+    DirType                         mDirection;
     bool                            _2a04;
     u32                             _2a08;
     u32                             _2a0c;
