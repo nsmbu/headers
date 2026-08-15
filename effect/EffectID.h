@@ -2,6 +2,9 @@
 
 #include <basis/seadTypes.h>
 
+constexpr f32 EFFECT_Z_POS_DEFAULT        = 4500.0f;
+constexpr f32 EFFECT_Z_POS_BEHIND_LAYER_0 = 3300.0f;
+
 typedef s32 EffectID;
 
 enum EffectID_

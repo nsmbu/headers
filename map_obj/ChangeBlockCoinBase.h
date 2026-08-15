@@ -18,7 +18,7 @@ class ChangeBlockCoinBase : public BlockCoinBase
     SEAD_RTTI_OVERRIDE(ChangeBlockCoinBase, BlockCoinBase)
 
 public:
-    enum Form {
+    enum Form : u32 {
         cForm_Coin = 0,
         cForm_Block = 1
     };
@@ -73,6 +73,6 @@ protected:
     bool                            mDisablePSwitchTransform;
     u8                              _1c89[0x1CA0 - 0x1C89];
     ChangeBlockCoinDrcTouchCB       mDrcTouchCallback;
-    u8                              _1ca4[4];
+  //u32                             _1ca4[4 / sizeof(u32)]; // Alignment???
 };
 static_assert(sizeof(ChangeBlockCoinBase) == 0x1CA8);

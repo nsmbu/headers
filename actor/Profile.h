@@ -22,7 +22,15 @@ struct ActorCreateInfo
         cFlag_PakkunBlack                = 1 << 9,  ///< Spawns as a muncher tile instead of constructing an Actor instance.
         cFlag_ManagedChildTemplate       = 1 << 10, ///< Treats creation of the map actor as a reusable operation from an external manager actor.
         cFlag_GroupedScrollSetupDeferred = 1 << 11, ///< Both @c cFlag_ScrollSetupDeferred and @c cFlag_Grouped
+
+        cFlag_None = 0
     };
+    friend constexpr Flag operator|(Flag lhs, Flag rhs)
+    {
+        return static_cast<Flag>(
+            static_cast<u16>(lhs) | static_cast<u16>(rhs)
+        );
+    }
 
     s32 offset_x;           // (X) Offset to be added to the initial actor position
     s32 offset_y;           // (Y) ^^^

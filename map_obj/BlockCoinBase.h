@@ -3,6 +3,7 @@
 #include <actor/ActorState.h>
 #include <actor/ScoreMgr.h>
 #include <collision/ActorBoxBgCollision.h>
+#include <player/PlayerEnum.h>
 #include <state/FStateVirtualID.h>
 
 class BlockCoinBase : public ActorMultiState
@@ -209,61 +210,61 @@ protected:
     void executeCommon_();
 
 protected:
-    ActorBgCollisionCheck::Sensor   mHeadSensor;
+    ActorBgCollisionCheck::Sensor          mHeadSensor;
   //u32                             _17d4[4 / sizeof(u32)]; // Alignment???
-    ActorBoxBgCollision             mBoxBgCollision;
+    ActorBoxBgCollision                    mBoxBgCollision;
     struct
     {
         sead::Vector2f  p0;
         sead::Vector2f  p1;
-    }                               mBoxBgCollision_Ofs;
-    f32                             mInitialY;
-    f32                             mBumpOffsetY;
-    f32                             mBumpScaleMin;
-    f32                             mBumpScaleStep;
-    f32                             mBumpScaleMax;
-    f32                             mBumpAccelY;
-    u32                             mBumpReturnTimer;
-    u32                             _1a94;
-    DirType                         mDestroyHitDirection;
-    u32                             _1a9c;
-    u16                             _1aa0;
-    u16                             _1aa2;
-    u16                             _1aa4;
-    u8                              _1aa6;
-    u8                              _1aa7;
-    s8                              mSideHitPlayerNo;
-    s8                              _1aa9;
-    u8                              _1aaa;
-    u8                              mBumpUpTimer;
-    bool                            mSideHitBumping;
-    HitFace                         mHitFace;
-    BumpMode                        mBumpMode;
-    u8                              _1aaf;
-    u8                              _1ab0;
-    u8                              _1ab1;                  // DirType
-    u8                              mPlayerNo2;
-    u8                              _1ab3;
-    u32                             _1ab4;
-    Content                         mContent;
-    s32                             mHitPlayerNo;
-    DirType                         mSpawnDirection;
-    u8                              mForceUpwardSpawn;
-    u32                             _1ac8;
-    bool                            mBlockHitNotBoundable;
-    u8                              _1acd;
-    bool                            mSpawnContentAsChild;
-    bool                            mNoAddScoreOnDestroy;
-    MoveType                        mMoveType;
-    f32                             mDeltaX;
-    f32                             mDeltaY;
-    u32                             _1adc;
-    u32                             _1ae0;
-    ScoreMgr::ScoreType             mScore;
-    u32                             _1ae8;
-    u32                             _1aec;
-    sead::SafeArray<PlayerHit, 4>   mPlayerHit;
-    bool                            mBumpCoinSpawned;
-    u32                             mCoinSpawnCooldown;
+    }                                      mBoxBgCollision_Ofs;
+    f32                                    mInitialY;
+    f32                                    mBumpOffsetY;
+    f32                                    mBumpScaleMin;
+    f32                                    mBumpScaleStep;
+    f32                                    mBumpScaleMax;
+    f32                                    mBumpAccelY;
+    u32                                    mBumpReturnTimer;
+    u32                                    _1a94;
+    DirType                                mDestroyHitDirection;
+    u32                                    _1a9c;
+    u16                                    _1aa0;
+    u16                                    _1aa2;
+    u16                                    _1aa4;
+    u8                                     _1aa6;
+    u8                                     _1aa7;
+    s8                                     mSideHitPlayerNo;
+    s8                                     _1aa9;
+    u8                                     _1aaa;
+    u8                                     mBumpUpTimer;
+    bool                                   mSideHitBumping;
+    HitFace                                mHitFace;
+    BumpMode                               mBumpMode;
+    u8                                     _1aaf;
+    u8                                     _1ab0;
+    u8                                     _1ab1;                  // DirType
+    u8                                     mPlayerNo2;
+    u8                                     _1ab3;
+    u32                                    _1ab4;
+    Content                                mContent;
+    s32                                    mHitPlayerNo;
+    DirType                                mSpawnDirection;
+    u8                                     mForceUpwardSpawn;
+    u32                                    _1ac8;
+    bool                                   mBlockHitNotBoundable;
+    u8                                     _1acd;
+    bool                                   mSpawnContentAsChild;
+    bool                                   mNoAddScoreOnDestroy;
+    MoveType                               mMoveType;
+    f32                                    mDeltaX;
+    f32                                    mDeltaY;
+    u32                                    _1adc;
+    u32                                    _1ae0;
+    ScoreMgr::ScoreType                    mScore;
+    u32                                    _1ae8;
+    u32                                    _1aec;
+    sead::SafeArray<PlayerHit, cPlayerNum> mPlayerHit;
+    bool                                   mBumpCoinSpawned;
+    u32                                    mCoinSpawnCooldown;
 };
 static_assert(sizeof(BlockCoinBase) == 0x1B28);

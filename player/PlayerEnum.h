@@ -2,6 +2,8 @@
 
 #include <basis/seadTypes.h>
 
+constexpr s32 cPlayerNum = 4;
+
 enum PlayerMode
 {
     cPlayerMode_Invalid = -1,
