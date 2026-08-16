@@ -28,6 +28,11 @@ public:
     void setDemoMode(Mode mode);
     bool isDemoMode(const StateID& state_id) const;
 
+    // Address: 0x029103A4
+    void endControlDemoAll();
+    // Address: 0x0290F584
+    bool startControlDemoAll();
+
     bool isGoalDemoMode() const;
 
     bool isPlayerGameStop();
