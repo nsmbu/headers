@@ -46,6 +46,14 @@ public:
     static const s32 cIceMaxNum = 12;
 
 public:
+    enum Proc
+    {
+        cProc_Ice = 0,
+        cProc_Melt,
+        cProc_2,
+        cProc_Return
+    };
+
     enum DestroyMode
     {
         cDestroyMode_None = 0,
@@ -102,6 +110,9 @@ public:
 
     // Address: 0x0237D068
     void initialize();
+
+    // Address: 0x0237D540
+    Proc manageProc();
 
     // Address: 0x0237D63C
     bool createIce(IceInfo* info, s32 num);
