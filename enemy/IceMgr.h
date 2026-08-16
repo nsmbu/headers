@@ -141,6 +141,11 @@ public:
         return mHasIce;
     }
 
+    bool isYoganDive() const
+    {
+        return mYoganDive;
+    }
+
     bool isDestroy() const
     {
         return mDestroyMode != cDestroyMode_None;
@@ -166,7 +171,7 @@ protected:
     s16                                         mTimer2;
     bool                                        mHasIce;  // Maybe?
     bool                                        mPermanent; // Maybe??
-    u8                                          _46;
+    bool                                        mYoganDive;
     u8                                          _47;
     u8                                          _48;
     u8                                          _49;
