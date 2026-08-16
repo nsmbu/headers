@@ -9,11 +9,10 @@
 #include <player/PlayerEnum.h>
 #include <state/FStateVirtualID.h>
 
-constexpr f32 ENEMY_DEFAULT_GRAVITY = -0.1875f;
-constexpr f32 ENEMY_DEFAULT_MAX_FALL_SPEED = -4.0f;
 constexpr f32 ENEMY_DIE_FALL_INIT_SPEED_X = 1.5f;
 constexpr f32 ENEMY_DIE_FALL_INIT_SPEED_Y = 3.9f;
 constexpr f32 ENEMY_DIE_FALL_BOUND_SPEED_Y = 3.0f;
+
 constexpr f32 ENEMY_FUMI_JUMP_SPEED = 0.2815f;
 
 // TODO: Move to own header
