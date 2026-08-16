@@ -24,7 +24,8 @@ public:
     static_assert(sizeof(Param) == 0x10);
 
 public:
-    void calcParam(Param* out, const sead::Vector2f& pos, u32 flags, const sead::Vector2f& screenSize);
+    // Address: 0x029BB8C0
+    void calcParam(Param* out, const sead::Vector2f& pos, u32 flags, const sead::Vector2f* screenSize);
 
     // TODO
 };
