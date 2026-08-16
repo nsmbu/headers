@@ -149,6 +149,11 @@ public:
         return mYoganDive;
     }
 
+    bool isDrcBreakSound() const
+    {
+        return mDrcBreakSound;
+    }
+
     bool isDestroy() const
     {
         return mDestroyMode != cDestroyMode_None;
@@ -175,7 +180,7 @@ protected:
     bool                                        mHasIce;  // Maybe?
     bool                                        mPermanent; // Maybe??
     bool                                        mYoganDive;
-    u8                                          _47;
+    bool                                        mDrcBreakSound;
     u8                                          _48;
     u8                                          _49;
     s8                                          mDestroyMode;
