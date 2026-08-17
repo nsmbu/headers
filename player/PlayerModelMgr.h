@@ -61,9 +61,9 @@ public:
         mModel->setMiiColor(mii_color);
     }
 
-    void setCapMode(PlayerModelBase::CapMode mode) override
+    void setHeadID(PlayerModelBase::HeadType id) override
     {
-        mModel->setCapMode(mode);
+        mModel->setHeadID(id);
     }
 
     void setMusaPtoNmlAnm()
