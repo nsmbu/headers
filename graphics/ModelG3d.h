@@ -32,9 +32,9 @@ class ModelG3d : public Model    // vtbl Address: 0x100BCF30
 public:
     struct ShaderAssign
     {
-        void initialize(const agl::ShaderProgram* shader_program)
+        void initialize(const agl::ShaderProgram* program)
         {
-            this->shader_program = shader_program;
+            shader_program = program;
 
             env_location.setName("MdlEnvView");
             mtx_location.setName("MdlMtx");
@@ -375,9 +375,19 @@ public:
         return const_cast<SkeletalAnimation**>(reinterpret_cast<SkeletalAnimation* const*>(getSklAnims()));
     }
 
+    u32 getSklAnimBufferSize() const
+    {
+        return mSklAnim.size();
+    }
+
     TexturePatternAnimation** getTexAnimBuffer()
     {
         return const_cast<TexturePatternAnimation**>(reinterpret_cast<TexturePatternAnimation* const*>(getTexAnims()));
+    }
+
+    u32 getTexAnimBufferSize() const
+    {
+        return mTexAnim.size();
     }
 
     ShaderParamAnimation** getShuAnimBuffer()
@@ -385,14 +395,30 @@ public:
         return const_cast<ShaderParamAnimation**>(reinterpret_cast<ShaderParamAnimation* const*>(getShuAnims()));
     }
 
+    u32 getShuAnimBufferSize() const
+    {
+        return mShuAnim.size();
+    }
+
     VisibilityAnimation** getVisAnimBuffer()
     {
         return const_cast<VisibilityAnimation**>(reinterpret_cast<VisibilityAnimation* const*>(getVisAnims()));
     }
 
+
+    u32 getVisAnimBufferSize() const
+    {
+        return mVisAnim.size();
+    }
+
     ShapeAnimation** getShaAnimBuffer()
     {
         return const_cast<ShapeAnimation**>(reinterpret_cast<ShapeAnimation* const*>(getShaAnims()));
+    }
+
+    u32 getShaAnimBufferSize() const
+    {
+        return mShaAnim.size();
     }
 
 public:
