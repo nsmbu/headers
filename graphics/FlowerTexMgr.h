@@ -94,3 +94,5 @@ protected:
     agl::TextureData mGrassTextures[5];
     DecorationSettings mSettings;
 };
+
+static_assert(sizeof(FlowerTexMgr) == 0x3e90);
