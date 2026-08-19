@@ -1,6 +1,7 @@
 #pragma once
 
 #include <basis/seadTypes.h>
+#include <math/seadMathCalcCommon.h>
 
 class Angle
 {
@@ -12,6 +13,11 @@ public:
 
     Angle(s32 value)
         : mValue(value)
+    {
+    }
+
+    explicit Angle(f32 degrees)
+        : mValue(sead::Mathf::deg2idx(degrees))
     {
     }
     
