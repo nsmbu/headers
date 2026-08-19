@@ -1,5 +1,9 @@
 #pragma once
 
+#include <input/SysController.h>
+#include <utility/Angle.h>
+
+#include <controller/seadControllerBase.h>
 #include <heap/seadDisposer.h>
 #include <random/seadRandom.h>
 
@@ -14,8 +18,34 @@ class InputMgr
     SEAD_SINGLETON_DISPOSER(InputMgr)
 
 public:
+    class Controller : public sead::ControllerBase
+    {
+    public:
+        // Address: 0x0250EC54
+        Controller();
+
+        // Address: 0x0250ECAC
+        Angle getTilt(const Angle& dead_zone = Angle(5.0f), f32 scale = 1.0f);
+
+    private:
+        u16 mTilt;
+        u8 _132;
+    };
+    static_assert(sizeof(Controller) == 0x134, "InputMgr::Controller size mismatch");
+
+public:
     // Address: 0x0250C1A0
     InputMgr();
+
+    Controller& getController(s32 player_no)
+    {
+        return mControllers[player_no];
+    }
+
+    const Controller& getController(s32 player_no) const
+    {
+        return mControllers[player_no];
+    }
 
     sead::Random& getRandom()
     {
@@ -73,7 +103,15 @@ public:
     }
 
 protected:
-    u32             _10[(0x52C - 0x10) / sizeof(u32)];
+    Controller      mControllers[4];
+    u32             _4e0[4];
+    u32             _4f0;
+    u32             _4f4[4];
+    u32             _504[4];
+    u32             _514;
+    bool            _518;
+    u8              _519[3];
+    u32             _51c[4];
     sead::Random    mRandom;
     bool            mControllersRegistered;
     u16             mBgmTempo;
