@@ -82,7 +82,7 @@ public:
 
     // Address: 0x0268B974
     void updateFlower(f32 x, f32 y, u8 index, bool enabled);
-    
+
     // Address: 0x0268B908
     void deleteFlower(u8 index);
 
@@ -127,7 +127,7 @@ private:
     u8 _32d4[0x88];
     u8 _335c[800];
     u8 _367c[100];
-    u8 _36E0[100];
+    u8 _36e0[100];
     u32 _3744[100];
     DecorationInfo* mGrassDecorationInfo;
     DecorationInfo* mFlowerDecorationInfo;
