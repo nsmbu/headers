@@ -140,7 +140,7 @@ private:
     u32 _3f88;
     u8 mFlowerType;
     bool mHasFlowers;
-    BgDeco mBgDecoMgr;
+    BgDeco mBgDeco;
     u8 _7e20[0x1D64];
 };
 static_assert(sizeof(Bg) == 0x9b88, "Bg size mismatch");
