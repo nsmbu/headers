@@ -2,12 +2,12 @@
 
 #include <graphics/TexQuadGrass.h>
 
-class FlowerTexMgr {
+class BgDecoMgr {
 public:
     struct DecorationSettings 
     {
         u8 _0[12];
-        float _c;
+        f32 _c;
         u8 _10[24];
         u32 _28;
         u32 _2c;
@@ -78,6 +78,7 @@ public:
     DecorationSettings& getDecorationSettings() {
         return mSettings;
     }
+
 protected:
     TexQuadGrass mFlowerRenderer;
     TexQuadGrass mFlowerStalkRenderer;
@@ -94,5 +95,4 @@ protected:
     agl::TextureData mGrassTextures[5];
     DecorationSettings mSettings;
 };
-
-static_assert(sizeof(FlowerTexMgr) == 0x3e90);
+static_assert(sizeof(BgDecoMgr) == 0x3e90, "BgDecoMgr size mismatch");
