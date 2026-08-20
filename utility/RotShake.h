@@ -7,15 +7,15 @@ class RotShake
 public:
     struct Arg
     {
-        Angle   _0;
-        Angle   _4;
-        s32     _8;
-        Angle   _c;
-        Angle   _10;
-        Angle   _14;
-        Angle   _18;
-        Angle   _1c;
-
+        Angle   mInitialSpeed;
+        Angle   mInitialRotation;
+        s32     mFrameCount;
+        Angle   mDampening;
+        Angle   mSpeed;
+        Angle   mMinimumAngle;
+        Angle   mMaximumAngle;
+        Angle   mAmplitude;
+ 
         Arg(
             const Angle& field_0 = 0,
             const Angle& field_4 = 0,
@@ -26,39 +26,41 @@ public:
             const Angle& field_18 = 0x00800000,
             const Angle& field_1c = 0x00400000
         )
-            : _0(field_0)
-            , _4(field_4)
-            , _8(field_8)
-            , _c(field_c)
-            , _10(field_10)
-            , _14(field_14)
-            , _18(field_18)
-            , _1c(field_1c)
+            : mInitialSpeed(field_0)
+            , mInitialRotation(field_4)
+            , mFrameCount(field_8)
+            , mDampening(field_c)
+            , mSpeed(field_10)
+            , mMinimumAngle(field_14)
+            , mMaximumAngle(field_18)
+            , mAmplitude(field_1c)
         {
         }
     };
     static_assert(sizeof(Arg) == 0x20);
-
+ 
 public:
     RotShake()
         : mArg()
         , _20(false)
     {
     }
-
+ 
     // Address: 0x029E2CE8
     void init(const Arg& arg);
-
+    // Address: 0x029E2D34
+    int move();
+ 
     Arg& getArg()
     {
         return mArg;
     }
-
+ 
     const Arg& getArg() const
     {
         return mArg;
     }
-
+ 
 protected:
     Arg     mArg;
     bool    _20;
