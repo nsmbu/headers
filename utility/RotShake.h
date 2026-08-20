@@ -7,15 +7,15 @@ class RotShake
 public:
     struct Arg
     {
-        Angle   _0;
-        Angle   _4;
-        s32     _8;
-        Angle   _c;
-        Angle   _10;
-        Angle   _14;
-        Angle   _18;
-        Angle   _1c;
-
+        Angle initial_speed;
+        Angle initial_rotation;
+        s32   frame_count;
+        Angle dampening;
+        Angle speed;
+        Angle minimum_angle;
+        Angle maximum_angle;
+        Angle amplitude;
+ 
         Arg(
             const Angle& field_0 = 0,
             const Angle& field_4 = 0,
@@ -26,14 +26,14 @@ public:
             const Angle& field_18 = 0x00800000,
             const Angle& field_1c = 0x00400000
         )
-            : _0(field_0)
-            , _4(field_4)
-            , _8(field_8)
-            , _c(field_c)
-            , _10(field_10)
-            , _14(field_14)
-            , _18(field_18)
-            , _1c(field_1c)
+            : initial_speed(field_0)
+            , initial_rotation(field_4)
+            , frame_count(field_8)
+            , dampening(field_c)
+            , speed(field_10)
+            , minimum_angle(field_14)
+            , maximum_angle(field_18)
+            , amplitude(field_1c)
         {
         }
     };
@@ -48,6 +48,8 @@ public:
 
     // Address: 0x029E2CE8
     void init(const Arg& arg);
+    // Address: 0x029E2D34
+    int move();
 
     Arg& getArg()
     {
