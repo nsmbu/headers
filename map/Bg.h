@@ -1,6 +1,6 @@
 #pragma once
 
-#include <map/BgDecoMgr.h>
+#include <map/BgDeco.h>
 #include <collision/BgUnitCode.h>
 
 #include <heap/seadDisposer.h>
@@ -110,8 +110,8 @@ public:
         mFlowerType = type;
     }
 
-    BgDecoMgr& getBgDecoMgr() {
-        return mBgDecoMgr;
+    BgDeco& getBgDeco() {
+        return mBgDeco;
     }
 
 private:
@@ -140,7 +140,7 @@ private:
     u32 _3f88;
     u8 mFlowerType;
     bool mHasFlowers;
-    FlowerTexMgr mBgDecoMgr;
+    BgDeco mBgDecoMgr;
     u8 _7e20[0x1D64];
 };
 static_assert(sizeof(Bg) == 0x9b88, "Bg size mismatch");
