@@ -7,14 +7,14 @@ class RotShake
 public:
     struct Arg
     {
-        Angle   cInitialSpeed;
-        Angle   cInitialRotation;
-        s32     cFrameCount;
-        Angle   cDampening;
-        Angle   cSpeed;
-        Angle   cMinimumAngle;
-        Angle   cMaximumAngle;
-        Angle   cAmplitude;
+        Angle   cArg_InitialSpeed;
+        Angle   cArg_InitialRotation;
+        s32     cArg_FrameCount;
+        Angle   cArg_Dampening;
+        Angle   cArg_Speed;
+        Angle   cArg_MinimumAngle;
+        Angle   cArg_MaximumAngle;
+        Angle   cArg_Amplitude;
  
         Arg(
             const Angle& field_0 = 0,
@@ -26,14 +26,14 @@ public:
             const Angle& field_18 = 0x00800000,
             const Angle& field_1c = 0x00400000
         )
-            : cInitialSpeed(field_0)
-            , cInitialRotation(field_4)
-            , cFrameCount(field_8)
-            , cDampening(field_c)
-            , cSpeed(field_10)
-            , cMinimumAngle(field_14)
-            , cMaximumAngle(field_18)
-            , cAmplitude(field_1c)
+            : cArg_InitialSpeed(field_0)
+            , cArg_InitialRotation(field_4)
+            , cArg_FrameCount(field_8)
+            , cArg_Dampening(field_c)
+            , cArg_Speed(field_10)
+            , cArg_MinimumAngle(field_14)
+            , cArg_MaximumAngle(field_18)
+            , cArg_Amplitude(field_1c)
         {
         }
     };
