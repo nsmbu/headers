@@ -3,6 +3,7 @@
 #include <heap/seadDisposer.h>
 #include <thread/seadDelegateThread.h>
 #include <nn/ffl.h>
+#include <math/seadVector.h>
 
 struct SaveData
 {
@@ -353,6 +354,10 @@ struct SaveData
     };
     static_assert(sizeof(MiiData) == 0x274, "SaveData::MiiData size mismatch");
     
+    u8 getLastSlot() const {
+        return header.last_file;
+    }
+
     Header header;
     SaveSlots main_slots;
     SaveSlots quick_save_slots;
@@ -423,6 +428,10 @@ public:
     void startQuickSaveGame()
     {
         startQuickSaveGame(mSavedata->header.last_file);
+    }
+
+    const SaveData* getSaveData() const {
+        return mSavedata;
     }
 
 protected:
