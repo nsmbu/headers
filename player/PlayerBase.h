@@ -2741,7 +2741,7 @@ public:
         return mMode;
     }
 
-    PlayerCharacter getPlayerCharacter() {
+    PlayerCharacter getPlayerCharacter() const {
         return mCharacter;
     }
 
