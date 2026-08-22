@@ -2741,6 +2741,10 @@ public:
         return mMode;
     }
 
+    PlayerCharacter getPlayerCharacter() const {
+        return mCharacter;
+    }
+
 protected:
     s32                                 mExecuteFreezeTimer;
     PlayerModelBaseMgr*                 mModelBaseMgr;
