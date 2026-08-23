@@ -156,6 +156,9 @@ public:
 
     s32 getCoinNumMin();
 
+    // Address: 0x02918144
+    s32 getYoshiNum();
+
 private:
     u32                     _10[(0x20 - 0x10) / sizeof(u32)];
     sead::SafeArray<
