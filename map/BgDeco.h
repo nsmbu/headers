@@ -1,6 +1,6 @@
 #pragma once
 
-#include <graphics/TexQuadGrass.h>
+#include <graphics/TexQuadDeco.h>
 
 class BgDeco {
 public:
@@ -31,19 +31,19 @@ public:
     // Address: 0x02686428
     void updateGrassAndFlowers(bool init);
 
-    TexQuadGrass& getFlowerRenderer() {
+    TexQuadDeco& getFlowerRenderer() {
         return mFlowerRenderer;
     }
 
-    TexQuadGrass& getFlowerStalkRenderer() {
+    TexQuadDeco& getFlowerStalkRenderer() {
         return mFlowerStalkRenderer;
     }
 
-    TexQuadGrass& getGrassRenderer() {
+    TexQuadDeco& getGrassRenderer() {
         return mGrassRenderer;
     }
 
-    TexQuadGrass& getButterflyRenderer() {
+    TexQuadDeco& getButterflyRenderer() {
         return mButterflyRenderer;
     }
 
@@ -80,10 +80,10 @@ public:
     }
 
 protected:
-    TexQuadGrass mFlowerRenderer;
-    TexQuadGrass mFlowerStalkRenderer;
-    TexQuadGrass mGrassRenderer;
-    TexQuadGrass mButterflyRenderer;
+    TexQuadDeco mFlowerRenderer;
+    TexQuadDeco mFlowerStalkRenderer;
+    TexQuadDeco mGrassRenderer;
+    TexQuadDeco mButterflyRenderer;
     nw::g3d::res::ResFile* mResFile;
     agl::TextureData mFlowerTextures[5];    // The values of the first two are copied into the last two
     agl::TextureData mFlowerStalkTexture;
