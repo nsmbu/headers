@@ -35,43 +35,43 @@ public:
         mTexture5 = tex;
     }
 
-    agl::TextureData* getTextureNormal1() const {
+    agl::TextureData* getTexture1Normal() const {
         return mTexture1Normal;
     }
     
-    void setTextureNormal1(agl::TextureData* tex) {
+    void setTexture1Normal(agl::TextureData* tex) {
         mTexture1Normal = tex;
     }
 
-    agl::TextureData* getTextureNormal2() const {
+    agl::TextureData* getTexture2Normal() const {
         return mTexture2Normal;
     }
 
-    void setTextureNormal2(agl::TextureData* tex) {
+    void setTexture2Normal(agl::TextureData* tex) {
         mTexture2Normal = tex;
     }
 
-    agl::TextureData* getTextureNormal3() const {
+    agl::TextureData* getTexture3Normal() const {
         return mTexture3Normal;
     }
 
-    void setTextureNormal3(agl::TextureData* tex) {
+    void setTexture3Normal(agl::TextureData* tex) {
         mTexture3Normal = tex;
     }
 
-    agl::TextureData* getTextureNormal4() const {
+    agl::TextureData* getTexture4Normal() const {
         return mTexture4Normal;
     }
 
-    void setTextureNormal4(agl::TextureData* tex) {
+    void setTexture4Normal(agl::TextureData* tex) {
         mTexture4Normal = tex;
     }
 
-    agl::TextureData* getTextureNormal5() const {
+    agl::TextureData* getTexture5Normal() const {
         return mTexture5Normal;
     }
 
-    void setTextureNormal5(agl::TextureData* tex) {
+    void setTexture5Normal(agl::TextureData* tex) {
         mTexture5Normal = tex;
     }
 
