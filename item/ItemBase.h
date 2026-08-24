@@ -40,8 +40,6 @@ public:
     void setCarryFall(Actor*, s32) override;
     bool isSpinLiftUpEnable() override;
     void setSpinLiftUpActor(Actor* player) override;
-    void vfC4() override;
-    void vfCC() override;
     // Address: 0x02517BD0
     void allEnemyDeathEffSet() override;
     // Address: 0x02517C20
@@ -58,11 +56,11 @@ public:
     void beginFunsui_() override;
     void endFunsui_(f32 speed_y) override;
     bool isFunsui_() const override;
-    bool vf13C() override;
+    bool isQuakeEnable_() override;
     // Address: 0x0251771C
-    void vf144(s32) override;
+    void setQuake_(QuakeType type) override;
     
-    bool setTouchDrcDamage_(const sead::Vector2f& pos) override;
+    bool setTouchDrcDamage_(const sead::Vector3f& pos) override;
     void setFunsuiPos_(sead::Vector2f dst) override;
     void setFunsuiSpeedY_(f32 speed) override;
     bool smokeDamageEnable_Yogan_(f32 surface_pos_y) override;
@@ -140,7 +138,7 @@ protected:
     u8                              _17e8[0x1800 - 0x17E8];                    
     AnimModel*                      mItemModel;                                
     Animation*                      mItemAnim;                                 
-    ItemTypes                       mItemType;                             
+    ItemType                        mItemType;                             
     u32                             _180c;                                    
     u32                             mAnimIDX;                            
     u32                             _1814;                                    

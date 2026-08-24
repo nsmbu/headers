@@ -22,10 +22,6 @@ public:
     bool isSpinLiftUpEnable() override;
     // Address: 0x0251FB04
     void setSpinLiftUpActor(Actor* player) override;
-    // Address: 0x0251FB08
-    void vfC4() override;
-    // Address: 0x0251FB0C
-    void vfCC() override;
 
     // Address: 0x0251D8FC
     void blockHitInit_() override;
@@ -38,10 +34,10 @@ public:
     // Address: 0x0251FC5C
     bool isFunsui_() const override;
     // Address: 0x0251FC4C
-    bool vf13C() override;
+    bool isQuakeEnable_() override;
 
     // Address: 0x0251D918
-    bool setTouchDrcDamage_(const sead::Vector2f& pos) override;
+    bool setTouchDrcDamage_(const sead::Vector3f& pos) override;
     // Address: 0x0251FB2C
     void setFunsuiPos_(sead::Vector2f dst) override;
     // Address: 0x0251FB40
