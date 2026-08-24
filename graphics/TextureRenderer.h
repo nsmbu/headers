@@ -10,7 +10,7 @@ class TextureRenderer : public TextureRendererBase // vtbl Address: 0x100655FC
 {
 public:
     TextureRenderer(); // TODO: implement
-    
+
     // 0x02500374
     ~TextureRenderer();
 
@@ -18,7 +18,7 @@ public:
     static void loadTexture(const sead::SafeString& archiveName, const sead::SafeString& textureName, agl::TextureData* texture, nw::g3d::res::ResFile*& res, agl::TextureSampler* sampler);
 
     // Address: 0x02500858
-    virtual void allocLists();
+    virtual void allocLists(s32 bufferSize);
 
     agl::TextureData* getTexture1() const {
         return mTexture1;
