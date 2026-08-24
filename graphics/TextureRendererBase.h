@@ -5,6 +5,7 @@
 class TextureRendererBase
 {
 public:
+    // Address: 0x02500304
     TextureRendererBase();
 
 protected:

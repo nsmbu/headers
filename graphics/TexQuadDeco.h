@@ -14,7 +14,7 @@ public:
     };
 
 public:
-    TexQuadDeco();
+    TexQuadDeco(); // TODO: implement
    
     // Address: 0x02503ABC
     void create(agl::TextureData* tex1, agl::TextureData* tex2, agl::TextureData* tex3, agl::TextureData* tex4, agl::TextureData* tex5, agl::TextureData* nml1, agl::TextureData* nml2, agl::TextureData* nml3, agl::TextureData* nml4, agl::TextureData* nml5, u32, s32);
