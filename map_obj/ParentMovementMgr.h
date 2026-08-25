@@ -37,8 +37,10 @@ enum RectPlatformInfo : u32
     cRectPlatformInfo_FollowNone    = 2,
 };
 
+
 class ParentMovementMgr
 {
+public:
     struct MovementProperty
     {
         u32     _0;
