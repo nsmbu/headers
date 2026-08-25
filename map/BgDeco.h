@@ -95,4 +95,4 @@ protected:
     agl::TextureData mGrassTextures[5];
     DecorationSettings mSettings;
 };
-static_assert(sizeof(BgDeco) == 0x3e90, "BgDecoMgr size mismatch");
+static_assert(sizeof(BgDeco) == 0x3E90, "BgDecoMgr size mismatch");

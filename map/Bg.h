@@ -123,8 +123,8 @@ private:
     bool mHasLavaWaves;
     bool mHasTerrain;
     u32 _2820;
-    u8 _2824[0x588];
-    u8 _2d7c[0x588];
+    u8 _2824[0x558];
+    u8 _2d7c[0x558];
     u8 _32d4[0x88];
     u8 _335c[800];
     u8 _367c[100];
@@ -143,4 +143,4 @@ private:
     BgDeco mBgDeco;
     u8 _7e20[0x1D64];
 };
-static_assert(sizeof(Bg) == 0x9b88, "Bg size mismatch");
+static_assert(sizeof(Bg) == 0x9B88, "Bg size mismatch");
