@@ -76,6 +76,11 @@ public:
         return mAngle;
     }
 
+    u8 getMovementID() const
+    {
+        return mMovementId;
+    }
+
     f32 getTwoWayDistanceMultiplier() const
     {
         return mTwoWayDistanceMultiplier;
