@@ -22,17 +22,16 @@ enum ParentMovementType
     cPos_KinokoLift                 = 11,   // Mushroom Lift
 };
 
-enum BoltDirectionOrRectPlatformInfo : u32
+enum BoltDirection : u32
 {
-    // This same enum is used for both Bolt movement and Shifting Rectangle Platform movement
-
-    // Bolt Direction
     cBoltDirection_Right            = 0,
     cBoltDirection_Left             = 1,
     cBoltDirection_Up               = 2,
     cBoltDirection_Down             = 3,
+};
 
-    // Shifting Rectangle Platforms Info
+enum RectPlatformInfo : u32
+{
     cRectPlatformInfo_FollowTop     = 0,
     cRectPlatformInfo_FollowBottom  = 1,
     cRectPlatformInfo_FollowNone    = 2,
@@ -90,9 +89,14 @@ public:
         return mBoltSpeed;
     }
 
-    BoltDirectionOrRectPlatformInfo getBoltDirectionOrRectPlatformInfo() const
+    BoltDirection getBoltDirection() const
     {
-        return mBoltDirectionOrRectPlatformInfo;
+        return mBoltDirection;
+    }
+
+    RectPlatformInfo getRectPlatformInfo() const
+    {
+        return mRectPlatformInfo;
     }
 
     MovementProperty getMovementProperty() const
@@ -120,9 +124,14 @@ public:
         mBoltSpeed = settervar;
     }
 
-    void setBoltDirectionOrRectPlatformInfo(BoltDirectionOrRectPlatformInfo settervar) 
+    void setBoltDirection(BoltDirection settervar) 
     {
-        mBoltDirectionOrRectPlatformInfo = settervar;
+        mBoltDirection = settervar;
+    }
+
+    void setRectPlatformInfo(RectPlatformInfo settervar) 
+    {
+        mRectPlatformInfo = settervar;
     }
 
     void setMovementProperty(MovementProperty settervar) 
@@ -151,22 +160,20 @@ private:
     u8  _5c[0x74-0x5C];
 
 private:
-    Angle   mFloorGyrationAngle;
-    u32     _78;
-    u32     _7c;
-    u32     _80;
-    u8      _84;
-    u8      _85;
-    u8      _86;
-    u8      _87;
-    u8      _88;
-    u8      _89;
-    u32     _8c;
-    f32     _90;
-    f32     mBoltSpeed;
-
-private:
-    BoltDirectionOrRectPlatformInfo mBoltDirectionOrRectPlatformInfo;
+    Angle               mFloorGyrationAngle;
+    u32                 _78;
+    u32                 _7c;
+    u32                 _80;
+    u8                  _84;
+    u8                  _85;
+    u8                  _86;
+    u8                  _87;
+    u8                  _88;
+    u8                  _89;
+    u32                 _8c;
+    BoltDirection       mBoltDirection;
+    f32                 mBoltSpeed;
+    RectPlatformInfo    mRectPlatformInfo;
 
 private:
     u32 _9c;
