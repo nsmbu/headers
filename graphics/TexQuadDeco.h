@@ -86,7 +86,6 @@ public:
 protected:
     u32 _9c;
     agl::TextureData* mTexture4;
-    agl::TextureData* mTexture4;
     agl::TextureData* mTexture5;
     agl::TextureData* mTexture1Normal;
     agl::TextureData* mTexture2Normal;
