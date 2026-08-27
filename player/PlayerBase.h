@@ -8,11 +8,13 @@
 #include <effect/FollowEffect.h>
 #include <game/Quake.h>
 #include <map/NextGotoType.h>
+#include <player/HipdropExEffect.h>
 #include <player/PlayerDrcTouchCB.h>
 #include <player/PlayerEnum.h>
-#include <player/PlayerHIO_Gravity.h>
+#include <player/PlayerGravityData.h>
 #include <player/PlayerKey.h>
-#include <player/util/HipdropExEffect.h>
+#include <player/PlayerSpeedData.h>
+#include <player/PlayerTurnData.h>
 #include <state/FStateMgr.h>
 #include <state/FStateVirtualID.h>
 
@@ -2295,7 +2297,7 @@ public:
         return false;
     }
 
-    virtual const PlayerGravityHIO* getGravityData()
+    virtual const PlayerGravityData* getGravityData()
     {
         return mGravityData;
     }
@@ -2376,7 +2378,7 @@ public:
     // Address: 0x029056C8
     void icePowerChange(bool slip);
 
-    PlayerSpeedHIO* getSpeedData() const
+    const PlayerSpeedData* getSpeedData() const
     {
         if (isStar())
             return mSpeedData_Star;
@@ -2385,9 +2387,9 @@ public:
     }
 
     // Address: 0x0290587C
-    void getPowerData(PlayerPowerData& out_data);
+    void getSpeedPowerData(PlayerSpeedPowerData& out_data);
     // Address: 0x02906238
-    void getPowerTurnData(PlayerPowerTurnData& out_data);
+    void getTurnPowerData(PlayerTurnPowerData& out_data);
 
     // Address: 0x029063AC
     void setHopAirDrift();
@@ -2761,9 +2763,9 @@ protected:
     u32                                 _4b8;
     sead::Vector3f                      mFrameEndPosDelta;
     sead::Vector3f                      _4c8;
-    PlayerSpeedHIO*                     mSpeedData_Normal;
-    PlayerSpeedHIO*                     mSpeedData_Star;
-    const PlayerGravityHIO*             mGravityData;
+    const PlayerSpeedData*              mSpeedData_Normal;
+    const PlayerSpeedData*              mSpeedData_Star;
+    const PlayerGravityData*            mGravityData;
     s32                                 mNoGravityTimer;
     f32                                 _4e4;
     bool                                _4e8;

@@ -676,7 +676,7 @@ protected:
         cDrawPriority_323                                       = 642,
         cDrawPriority_324                                       = 643,
         cDrawPriority_325                                       = 644,
-        cDrawPriority_PlyIce                                    = 645,
+        cDrawPriority_PlayerIce                                 = 645,
         cDrawPriority_326                                       = 646,
         cDrawPriority_144                                       = 647,
         cDrawPriority_145                                       = 648,
@@ -740,7 +740,7 @@ protected:
         cDrawPriority_0FD                                       = 706,
         cDrawPriority_0FE                                       = 707,
         cDrawPriority_0FF                                       = 708,
-        cDrawPriority_SlotYoshiChibi                            = 709,
+        cDrawPriority_SlotChibiYoshi                            = 709,
         cDrawPriority_MiniGamePanelItem                         = 710,
         cDrawPriority_SlotItem                                  = 711,
         cDrawPriority_ShuffleBlock                              = 712,
@@ -760,14 +760,14 @@ protected:
         cDrawPriority_350                                       = 726,
         cDrawPriority_StaffRollMgr                              = 727,
         cDrawPriority_StaffRollMgrRDash                         = 728,
-        cDrawPriority_StaffCreditChibiYoshiABC                  = 729,
-        cDrawPriority_StaffCreditChibiYoshiBalloon              = 730,
-        cDrawPriority_StaffCreditChibiYoshiBalloonCheer         = 731,
-        cDrawPriority_StaffCreditChibiYoshiLight                = 732,
-        cDrawPriority_StaffCreditChibiYoshiLightCheer           = 733,
-        cDrawPriority_StaffCreditSoapABC                        = 734,
-        cDrawPriority_StaffCreditSoapCoin                       = 735,
-        cDrawPriority_StaffCreditTottenKun                      = 736,
+        cDrawPriority_StaffRollChibiYoshiChar                   = 729,
+        cDrawPriority_StaffRollChibiYoshiBalloon                = 730,
+        cDrawPriority_StaffRollChibiYoshiBalloonCheer           = 731,
+        cDrawPriority_StaffRollChibiYoshiLight                  = 732,
+        cDrawPriority_StaffRollChibiYoshiLightCheer             = 733,
+        cDrawPriority_StaffRollAwaChar                          = 734,
+        cDrawPriority_StaffRollAwaCoin                          = 735,
+        cDrawPriority_StaffRollTottenKun                        = 736,
         cDrawPriority_CourseSelectPlayer                        = 737,
         cDrawPriority_CourseSelectPlayer2PSub                   = 738,
         cDrawPriority_CourseSelectChibiYoshi                    = 739,
@@ -1433,7 +1433,7 @@ public:
     // Address: 0x10004104
     static const s32 cProfileID_0EC;                                       // 236
     // Address: 0x10004108
-    static const s32 cProfileID_PlyIce;                                    // 237
+    static const s32 cProfileID_PlayerIce;                                 // 237
     // Address: 0x1000410C
     static const s32 cProfileID_TarzanIvy;                                 // 238
     // Address: 0x10004110
@@ -1865,7 +1865,7 @@ public:
     // Address: 0x10004464
     static const s32 cProfileID_1C4;                                       // 452
     // Address: 0x10004468
-    static const s32 cProfileID_SlotYoshiChibi;                            // 453
+    static const s32 cProfileID_SlotChibiYoshi;                            // 453
     // Address: 0x1000446C
     static const s32 cProfileID_1C6;                                       // 454
     // Address: 0x10004470
@@ -2639,21 +2639,21 @@ public:
     // Address: 0x10004A70
     static const s32 cProfileID_347;                                       // 839
     // Address: 0x10004A74
-    static const s32 cProfileID_StaffCreditChibiYoshiABC;                  // 840
+    static const s32 cProfileID_StaffRollChibiYoshiChar;                   // 840
     // Address: 0x10004A78
-    static const s32 cProfileID_StaffCreditChibiYoshiBalloon;              // 841
+    static const s32 cProfileID_StaffRollChibiYoshiBalloon;                // 841
     // Address: 0x10004A7C
-    static const s32 cProfileID_StaffCreditChibiYoshiBalloonCheer;         // 842
+    static const s32 cProfileID_StaffRollChibiYoshiBalloonCheer;           // 842
     // Address: 0x10004A80
-    static const s32 cProfileID_StaffCreditChibiYoshiLight;                // 843
+    static const s32 cProfileID_StaffRollChibiYoshiLight;                  // 843
     // Address: 0x10004A84
-    static const s32 cProfileID_StaffCreditChibiYoshiLightCheer;           // 844
+    static const s32 cProfileID_StaffRollChibiYoshiLightCheer;             // 844
     // Address: 0x10004A88
-    static const s32 cProfileID_StaffCreditSoapABC;                        // 845
+    static const s32 cProfileID_StaffRollAwaChar;                          // 845
     // Address: 0x10004A8C
-    static const s32 cProfileID_StaffCreditSoapCoin;                       // 846
+    static const s32 cProfileID_StaffRollAwaCoin;                          // 846
     // Address: 0x10004A90
-    static const s32 cProfileID_StaffCreditTottenKun;                      // 847
+    static const s32 cProfileID_StaffRollTottenKun;                        // 847
     // Address: 0x10004A94
     static const s32 cProfileID_350;                                       // 848
     // Address: 0x10004A98
