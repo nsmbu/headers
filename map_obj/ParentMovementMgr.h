@@ -3,6 +3,7 @@
 #include <actor/ActorUniqueID.h>
 #include <state/FStateMgr.h>
 #include <utility/Angle.h>
+#include <utility/Direction.h>
 
 #include <math/seadVector.h>
 
@@ -22,14 +23,6 @@ enum ParentMovementType
     cPos_KinokoLift                 = 11,   // Mushroom Lift
 };
 
-enum BoltDirection : u32
-{
-    cBoltDirection_Right            = 0,
-    cBoltDirection_Left             = 1,
-    cBoltDirection_Up               = 2,
-    cBoltDirection_Down             = 3,
-};
-
 enum RectPlatformInfo : u32
 {
     cRectPlatformInfo_FollowTop     = 0,
@@ -37,19 +30,18 @@ enum RectPlatformInfo : u32
     cRectPlatformInfo_FollowNone    = 2,
 };
 
-
 class ParentMovementMgr
 {
 public:
-    struct MovementProperty
+    struct MovementProperties
     {
-        u32     _0;
-        u32     _4;
-        u32     _8;
-        u32     _c;
-        f32     hill_distance_offset;
+        u32 _0;
+        u32 _4;
+        u32 _8;
+        u32 _c;
+        f32 hill_distance_offset;
     };
-    static_assert(sizeof(MovementProperty) == 0x14, "ParentMovementMgr::MovementProperty size mismatch");
+    static_assert(sizeof(MovementProperties) == 0x14, "ParentMovementMgr::MovementProperties size mismatch");
 
 public:
     ParentMovementMgr();
@@ -96,7 +88,7 @@ public:
         return mBoltSpeed;
     }
 
-    BoltDirection getBoltDirection() const
+    DirType getBoltDirection() const
     {
         return mBoltDirection;
     }
@@ -106,7 +98,7 @@ public:
         return mRectPlatformInfo;
     }
 
-    MovementProperty getMovementProperty() const
+    MovementProperties getMovementProperties() const
     {
         return mMovementProperties;
     }
@@ -116,34 +108,34 @@ public:
         mAngle = settervar;
     }
 
-    void setTwoWayDistanceMultiplier(f32 settervar) 
+    void setTwoWayDistanceMultiplier(f32 multiplier) 
     {
-        mTwoWayDistanceMultiplier = settervar;
+        mTwoWayDistanceMultiplier = multiplier;
     }
 
-    void setFloorGyrationAngle(Angle settervar) 
+    void setFloorGyrationAngle(Angle angle) 
     {
-        mFloorGyrationAngle = settervar;
+        mFloorGyrationAngle = angle;
     }
 
-    void setBoltSpeed(f32 settervar) 
+    void setBoltSpeed(f32 speed) 
     {
-        mBoltSpeed = settervar;
+        mBoltSpeed = speed;
     }
 
-    void setBoltDirection(BoltDirection settervar) 
+    void setBoltDirection(DirType direction) 
     {
-        mBoltDirection = settervar;
+        mBoltDirection = direction;
     }
 
-    void setRectPlatformInfo(RectPlatformInfo settervar) 
+    void setRectPlatformInfo(RectPlatformInfo info) 
     {
-        mRectPlatformInfo = settervar;
+        mRectPlatformInfo = info;
     }
 
-    void setMovementProperty(MovementProperty settervar) 
+    void setMovementProperties(const MovementProperties& properties) 
     {
-        mMovementProperties = settervar;
+        mMovementProperties = property;
     }
 
 private:
@@ -174,7 +166,7 @@ private:
     u8               _88;
     u8               _89;
     u32              _8c;
-    BoltDirection    mBoltDirection;
+    DirType          mBoltDirection;
     f32              mBoltSpeed;
     RectPlatformInfo mRectPlatformInfo;
     u32              _9c;
@@ -186,7 +178,7 @@ private:
     u32              _b4;
     u32              _b8;
     u32              _bc;
-    MovementProperty mMovementProperties;
+    MovementProperties mMovementProperties;
     FStateMgr<ParentMovementMgr> mFStateMgr;
 };
 static_assert(sizeof(ParentMovementMgr) == 0xF8, "ParentMovementMgr size mismatch");
