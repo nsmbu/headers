@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <actor/ActorUniqueID.h>
 #include <state/FStateMgr.h>
 #include <utility/Angle.h>
 
@@ -49,7 +49,7 @@ public:
         u32     _c;
         f32     hill_distance_offset;
     };
-    static_assert(sizeof(MovementProperty) == 0x14);
+    static_assert(sizeof(MovementProperty) == 0x14, "ParentMovementMgr::MovementProperty size mismatch");
 
 public:
     ParentMovementMgr();
@@ -147,57 +147,46 @@ public:
     }
 
 private:
-    sead::Vector3f  mPosition;
-    sead::Vector3f  _c;
-    sead::Vector3f  _18;
-    sead::Vector3f  _24;
-    u32             _30;
-    u32             _34;
-    ActorUniqueID   mParentActorID;
-    u32             _3c;
-    u32             _40;
-    u32             _44;
-    u32             mTypeMask;
-    u8              mMovementId;
-    Angle           mAngle;
-    u8              _54;
-    f32             mTwoWayDistanceMultiplier;
-
-private:
-    u8  _5c[0x74-0x5C];
-
-private:
-    Angle               mFloorGyrationAngle;
-    u32                 _78;
-    u32                 _7c;
-    u32                 _80;
-    u8                  _84;
-    u8                  _85;
-    u8                  _86;
-    u8                  _87;
-    u8                  _88;
-    u8                  _89;
-    u32                 _8c;
-    BoltDirection       mBoltDirection;
-    f32                 mBoltSpeed;
-    RectPlatformInfo    mRectPlatformInfo;
-
-private:
-    u32 _9c;
-    u32 _a0;
-    u32 _a4;
-    u32 _a8;
-    u32 _ac;
-    u32 _b0;
-    u32 _b4;
-    u32 _b8;
-    u32 _bc;
-
-private:
-    MovementProperty        mMovementProperties;
-
-    FStateMgr<
-        ParentMovementMgr
-    >                       mFStateMgr;
+    sead::Vector3f   mPosition;
+    sead::Vector3f   _c;
+    sead::Vector3f   _18;
+    sead::Vector3f   _24;
+    u32              _30;
+    u32              _34;
+    ActorUniqueID    mParentActorID;
+    u32              _3c;
+    u32              _40;
+    u32              _44;
+    u32              mTypeMask;
+    u8               mMovementId;
+    Angle            mAngle;
+    u8               _54;
+    f32              mTwoWayDistanceMultiplier;
+    u8               _5c[0x74-0x5C];
+    Angle            mFloorGyrationAngle;
+    u32              _78;
+    u32              _7c;
+    u32              _80;
+    u8               _84;
+    u8               _85;
+    u8               _86;
+    u8               _87;
+    u8               _88;
+    u8               _89;
+    u32              _8c;
+    BoltDirection    mBoltDirection;
+    f32              mBoltSpeed;
+    RectPlatformInfo mRectPlatformInfo;
+    u32              _9c;
+    u32              _a0;
+    u32              _a4;
+    u32              _a8;
+    u32              _ac;
+    u32              _b0;
+    u32              _b4;
+    u32              _b8;
+    u32              _bc;
+    MovementProperty mMovementProperties;
+    FStateMgr<ParentMovementMgr> mFStateMgr;
 };
-static_assert(sizeof(ParentMovementMgr) == 0xF8);
+static_assert(sizeof(ParentMovementMgr) == 0xF8, "ParentMovementMgr size mismatch");
