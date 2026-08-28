@@ -14,20 +14,24 @@ public:
     struct DecorationInfo
     {
         sead::Vector3f pos;
-        union {
-            struct {
+        union
+        {
+            struct
+            {
                 u8 _c;
                 u8 _d;
                 u8 _e;
             } grass_settings;
 
-            struct {
+            struct
+            {
                 u8 color;
                 u8 index;
                 u8 _e;
             } flower_settings;
 
-            struct {
+            struct
+            {
                 u8 _c;
                 u8 index;
                 u8 _e;
@@ -86,31 +90,48 @@ public:
     // Address: 0x0268B908
     void deleteFlower(u8 index);
 
-    DecorationInfo& getGrassDecorationInfo(u32 index) {
+    f32 getWaveSurfaceX(s32 index) const
+    {
+        return mWaveSurfaceX[index];
+    }
+
+    f32 getWaveSurfaceY(s32 index) const
+    {
+        return mWaveSurfaceY[index];
+    }
+
+    DecorationInfo& getGrassDecorationInfo(u32 index)
+    {
         return mGrassDecorationInfo[index];
     }
 
-    DecorationInfo& getFlowerDecorationInfo(u32 index) {
+    DecorationInfo& getFlowerDecorationInfo(u32 index)
+    {
         return mFlowerDecorationInfo[index];
     }
 
-    DecorationInfo& getButterflyDecorationInfo(u32 index) {
+    DecorationInfo& getButterflyDecorationInfo(u32 index)
+    {
         return mButterflyDecorationInfo[index];
     }
 
-    u32 getFlowerCount() const {
+    u32 getFlowerCount() const
+    {
         return mFlowerNo;
     }
 
-    u8 getFlowerType() const {
+    u8 getFlowerType() const
+    {
         return mFlowerType;
     }
 
-    void setFlowerType(u8 type) {
+    void setFlowerType(u8 type)
+    {
         mFlowerType = type;
     }
 
-    BgDeco& getBgDeco() {
+    BgDeco& getBgDeco()
+    {
         return mBgDeco;
     }
 
@@ -118,8 +139,8 @@ private:
     u32 _10;
     f32 _14;
     f32 _18;
-    f32 _1c[1280];
-    f32 _141c[1280];
+    f32 mWaveSurfaceX[1280];
+    f32 mWaveSurfaceY[1280];
     bool mHasLavaWaves;
     bool mHasTerrain;
     u32 _2820;
