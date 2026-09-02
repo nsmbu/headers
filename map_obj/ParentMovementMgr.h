@@ -49,6 +49,8 @@ public:
     void link(const sead::Vector3f& position, u32 type_mask, u8 movement_id);
     void execute();
     u32 getTypeMask(ParentMovementType type);
+    // Address: 0x0284B824
+    void init(sead::Vector3f *position,u32 movement_mask,s8 movement_id,sead::Vector3f *pivot_center,u8 param_6 = 0,u8 param_7 = 0,u8 param_8 = 0,bool param_9 = true);
 
     DECLARE_STATE_ID(ParentMovementType, Search)
     DECLARE_STATE_ID(ParentMovementType, Move)
