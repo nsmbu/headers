@@ -924,9 +924,18 @@ public:
 
     // ------------------------------------ Uncategorized ------------------------------------ //
     
+    // Address: 0x02931B34
+    bool canChangeTo(PlayerMode mode) const;
+    
     // Address: 0x02931C1C
     bool setItem(PlayerMode mode);
+    
+    // Address: 0x0293A314
+    void setFlagPassEffect();
 
+    // Address: 0x0293A388
+    void setItemGetEffect();
+    
     void executeMain() override;
 
     bool vf19C() override;
