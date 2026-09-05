@@ -137,7 +137,7 @@ public:
 
     void setMovementProperties(const MovementProperties& properties) 
     {
-        mMovementProperties = property;
+        mMovementProperties = properties;
     }
 
 private:
