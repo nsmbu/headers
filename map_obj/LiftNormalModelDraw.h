@@ -39,111 +39,138 @@ public:
     // Address: 0x027BE4FC
     void draw();
 
-    ModelResource* getModelResource() const {
+    ModelResource* getModelResource() const
+    {
         return mModelResource;
     }
 
-    void setModelResource(ModelResource* res) {
+    void setModelResource(ModelResource* res)
+    {
         mModelResource = res;
     }
 
-    AnimModel* getShortAnimModel(u32 index) const {
+    AnimModel* getShortAnimModel(u32 index) const
+    {
         return mShortAnimModel[index];
     }
 
-    void setShortAnimModel(u32 index, AnimModel* model) {
+    void setShortAnimModel(u32 index, AnimModel* model)
+    {
         mShortAnimModel[index] = model;
     }
 
-    AnimModel* getLongAnimModel(u32 index) const {
+    AnimModel* getLongAnimModel(u32 index) const
+    {
         return mLongAnimModel[index];
     }
 
-    void setLongAnimModel(u32 index, AnimModel* model) {
+    void setLongAnimModel(u32 index, AnimModel* model)
+    {
         mLongAnimModel[index] = model;
     }
 
-    sead::Vector3f& getPos() {
+    sead::Vector3f& getPos()
+    {
         return mPos;
     }
 
-    const sead::Vector3f& getPos() const {
+    const sead::Vector3f& getPos() const
+    {
         return mPos;
     }
 
-    sead::Vector3f& getCenterPos() {
+    sead::Vector3f& getCenterPos()
+    {
         return mCenterPos;
     }
 
-    const sead::Vector3f& getCenterPos() const {
+    const sead::Vector3f& getCenterPos() const
+    {
         return mCenterPos;
     }
 
-    sead::Vector3f& getModelOffset() {
+    sead::Vector3f& getModelOffset()
+    {
         return mModelOffset;
     }
 
-    const sead::Vector3f& getModelOffset() const {
+    const sead::Vector3f& getModelOffset() const
+    {
         return mModelOffset;
     }
 
-    Angle3& getAngle() {
+    Angle3& getAngle()
+    {
         return mAngle;
     }
 
-    const Angle3& getAngle() const {
+    const Angle3& getAngle() const
+    {
         return mAngle;
     }
 
-    f32 getMiddlePlatformModelWidth() const {
+    f32 getMiddlePlatformModelWidth() const
+    {
         return mMiddlePlatformModelWidth;
     }
 
-    void setMiddlePlatformModelWidth(f32 width) {
+    void setMiddlePlatformModelWidth(f32 width)
+    {
         mMiddlePlatformModelWidth = width;
     }
 
-    f32 getPlatformWidth() const {
+    f32 getPlatformWidth() const
+    {
         return mPlatformWidth;
     }
 
-    void setPlatformWidth(f32 width) {
+    void setPlatformWidth(f32 width)
+    {
         mPlatformWidth = width;
     }
 
-    u32 getLength() const {
+    u32 getLength() const
+    {
         return mLength;
     }
 
-    void setLength(u32 length) {
+    void setLength(u32 length)
+    {
         mLength = length;
     }
 
-    ModelType getModelType() const {
+    ModelType getModelType() const
+    {
         return mModelType;
     }
 
-    void setModelType(ModelType modelType) {
+    void setModelType(ModelType modelType)
+    {
         mModelType = modelType;
     }
 
-    f32 getModelScale() const {
+    f32 getModelScale() const
+    {
         return mModelScale;
     }
 
-    void setModelScale(f32 scale) {
+    void setModelScale(f32 scale)
+    {
         mModelScale = scale;
     }
 
-    bool usesAdditionalHeap() const {
+    bool usesAdditionalHeap() const
+    {
         return mUseAdditionalHeap;
     }
 
-    void setUseAdditionalHeap(bool use) {
+    void setUseAdditionalHeap(bool use)
+    {
         mUseAdditionalHeap = use;
     }
     
-    ActorAdditionalHeap& getActorAdditionalHeap() {
+    ActorAdditionalHeap& getActorAdditionalHeap()
+    {
         return mActorAdditionalHeap;
     }
 
