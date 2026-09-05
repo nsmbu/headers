@@ -32,7 +32,7 @@ public:
      * @brief Constructs an ActorUniqueID from a raw 32-bit packed value containing both the array index and create index.
      * @param id The raw 32-bit representation of the desired ID to create.
      */
-    ActorUniqueID(u32 id)
+    explicit ActorUniqueID(u32 id)
     {
         setValue(id);
     }
