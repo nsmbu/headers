@@ -170,8 +170,8 @@ private:
     sead::Vector3f _ac;
     sead::Vector3f _b8;
     Angle3 mAngle;
-    f32 mMiddlePlatformModelWidth;  ///< the width, in tiles, of the middle part of the platform model
-    f32 mPlatformWidth;             ///< the width, in tile units, of the platform
+    f32 mMiddlePlatformModelWidth;  ///< The width, in tiles, of the middle part of the platform model
+    f32 mPlatformWidth;             ///< The width, in tile units, of the platform
     f32 _d8;
     u32 mLength;
     ModelType mModelType;
