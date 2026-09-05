@@ -2,7 +2,7 @@
 
 #include <basis/seadTypes.h>
 
-enum LightType
+enum LightType : u32
 {
     cLightType_FireBall = 0,
     cLightType_IceBall,
