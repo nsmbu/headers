@@ -1,5 +1,6 @@
 #pragma once
 
+#include <prim/seadRuntimeTypeInfo.h>
 #include <system/LineNodeMgr.h>
 
 #include <container/seadSafeArray.h>
