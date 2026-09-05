@@ -7,9 +7,11 @@
 #include <graphics/ModelResource.h>
 #include <utility/Angle3.h>
 
-class LiftNormalModelDraw {
+class LiftNormalModelDraw
+{
 public:
-    enum ModelType : u32 {
+    enum ModelType : u32
+    {
         cModelType_Wood,
         cModelType_Stone,
         cModelType_PinkMushroom,
@@ -25,8 +27,8 @@ public:
     };
 
 public:
-    LiftNormalModelDraw() { }
-    ~LiftNormalModelDraw() { }
+    LiftNormalModelDraw() = default;
+    ~LiftNormalModelDraw() = default;
 
     // Address: 0x027BE110
     void init();
@@ -46,19 +48,19 @@ public:
     }
 
     AnimModel* getShortAnimModel(u32 index) const {
-        return mShortAnimModels[index];
+        return mShortAnimModel[index];
     }
 
     void setShortAnimModel(u32 index, AnimModel* model) {
-        mShortAnimModels[index] = model;
+        mShortAnimModel[index] = model;
     }
 
     AnimModel* getLongAnimModel(u32 index) const {
-        return mLongAnimModels[index];
+        return mLongAnimModel[index];
     }
 
     void setLongAnimModel(u32 index, AnimModel* model) {
-        mLongAnimModels[index] = model;
+        mLongAnimModel[index] = model;
     }
 
     sead::Vector3f& getPos() {
@@ -160,16 +162,16 @@ private:
 
 private:
     ModelResource* mModelResource;
-    AnimModel* mShortAnimModels[3];
-    AnimModel* mLongAnimModels[30];
+    AnimModel* mShortAnimModel[3];
+    AnimModel* mLongAnimModel[30];
     sead::Vector3f mPos;
     sead::Vector3f mCenterPos;
     sead::Vector3f mModelOffset;
     sead::Vector3f _ac;
     sead::Vector3f _b8;
     Angle3 mAngle;
-    f32 mMiddlePlatformModelWidth;  // the width, in tiles, of the middle part of the platform model
-    f32 mPlatformWidth;             // the width, in tile units, of the platform
+    f32 mMiddlePlatformModelWidth;  ///< the width, in tiles, of the middle part of the platform model
+    f32 mPlatformWidth;             ///< the width, in tile units, of the platform
     f32 _d8;
     u32 mLength;
     ModelType mModelType;
