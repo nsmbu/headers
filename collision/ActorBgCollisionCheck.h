@@ -62,18 +62,26 @@ class ActorBgCollisionCheck // vtbl Address: 0x10041364
     SEAD_RTTI_BASE(ActorBgCollisionCheck)
 
 public:
+    /**
+    * @brief Defines the classification of terrain slope angles.
+    * @note "Saka" (坂) translates to "slope" in Japanese.
+    */
     enum SakaType
     {
-        cSakaType_None      = 0,    // Saka angle (abs): [0 deg, 7.0175 deg)
-        cSakaType_Gentle,           // Saka angle (abs): [7.0175 deg, 20.3165 deg)
-        cSakaType_Moderate,         // Saka angle (abs): [20.3165 deg, 35.7990 deg)
-        cSakaType_Steep,            // Saka angle (abs): [35.7990 deg, 54.2010 deg)
-        cSakaType_VerySteep,        // Saka angle (abs): >= 54.2010 deg
+        cSakaType_None      = 0,    ///< Slope angle (abs): [0 deg, 7.0175 deg)
+        cSakaType_Gentle,           ///< Slope angle (abs): [7.0175 deg, 20.3165 deg)
+        cSakaType_Moderate,         ///< Slope angle (abs): [20.3165 deg, 35.7990 deg)
+        cSakaType_Steep,            ///< Slope angle (abs): [35.7990 deg, 54.2010 deg)
+        cSakaType_VerySteep,        ///< Slope angle (abs): >= 54.2010 deg
         cSakaType_Num
     };
     static_assert(sizeof(SakaType) == 4);
     static_assert(cSakaType_Num == 5);
 
+    /**
+    * @brief Defines the classification of terrain slope incline directions.
+    * @note "Saka" (坂) translates to "slope" in Japanese.
+    */
     enum SakaDir
     {
         cSakaDir_Right = 0,
