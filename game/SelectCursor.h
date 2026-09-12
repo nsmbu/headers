@@ -2,6 +2,7 @@
 
 #include <container/seadSafeArray.h>
 #include <heap/seadDisposer.h>
+#include <layer/aglRenderInfo.h>
 
 class SelectCursor
 {
