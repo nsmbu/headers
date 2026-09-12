@@ -12,9 +12,9 @@ class RootTask : public sead::CalculateTask
 public:
     RootTask(const sead::TaskConstructArg& arg);
 
-    virtual void prepare();
-    virtual void enter();
-    virtual void calc();
+    void prepare() override;
+    void enter() override;
+    void calc() override;
 
 protected:
     sead::FileDevice*               mCommonFileDevice;     // sead::AliasFileDevice*
