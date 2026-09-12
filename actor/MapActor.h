@@ -23,6 +23,6 @@ public:
     };
 
 public:
-    // Address 0x101ECD8C
+    // Address: 0x101ECD8C
     static const Profile    cProfileID[];
 };
