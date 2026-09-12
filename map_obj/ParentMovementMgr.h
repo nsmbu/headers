@@ -43,17 +43,41 @@ public:
     };
     static_assert(sizeof(MovementProperties) == 0x14, "ParentMovementMgr::MovementProperties size mismatch");
 
+    struct PivotalRotationSettings
+    {
+        sead::Vector3f  position;
+        u32             movement_mask;
+        u8              movement_id;
+        sead::Vector3f  pivot_center;
+        bool            tilted;
+        bool            _21;
+        bool            upside_down;
+        u32             movement_param;
+        bool            gyroscopic;
+    };
+    static_assert(sizeof(PivotalRotationSettings) == 0x2C, "ParentMovementMgr::PivotalRotationSettings size mismatch");
+
 public:
     ParentMovementMgr();
 
+    /**
+     * @brief Links to movement controllers with the matching movement id and type mask.
+     * @warning Use linkPivotal or linkPivotal2 when using pivotal-rotation or else it will bug out.
+     */
     void link(const sead::Vector3f& position, u32 type_mask, u8 movement_id);
     void execute();
     u32 getTypeMask(ParentMovementType type);
-    // Address: 0x0284B824
-    void linkPivotal(const sead::Vector3f& position, u32 movement_mask, s8 movement_id, const sead::Vector3f& pivot_center = sead::Vector3f(0.0f, 0.0f, 0.0f), u8 param_6 = 0, u8 param_7 = 0, u8 param_8 = 0, bool param_9 = true);
+    /**
+     * @brief Links to movement controllers with the matching movement id and type mask.
+     * @note Cannot be used to make it gyroscopic.
+     * @par Address: 0x0284B824
+     */
+    void linkPivotal(const sead::Vector3f& position, u32 movement_mask, s8 movement_id, const sead::Vector3f& pivot_center = sead::Vector3f(0.0f, 0.0f, 0.0f), bool tilted = false, bool unk_8 = false, bool upside_down = false, bool movement_param = true);
+    // Address: 0x0284B7C8
+    void linkPivotal2(PivotalRotationSettings pivot_settings);
 
-    DECLARE_STATE_ID(ParentMovementType, Search)
-    DECLARE_STATE_ID(ParentMovementType, Move)
+    DECLARE_STATE_ID(ParentMovementType, Search);
+    DECLARE_STATE_ID(ParentMovementType, Move);
 
     const sead::Vector3f& getPosition() const
     {
@@ -105,9 +129,29 @@ public:
         return mMovementProperties;
     }
 
-    void setAngle(Angle settervar) 
+    bool getPivotalUpsideDown() const
     {
-        mAngle = settervar;
+        return mPivotalUpsideDown;
+    }
+
+    bool getPivotalTilted() const
+    {
+        return mPivotalTilted;
+    }
+
+    bool getPivotalUnknown() const
+    {
+        return mPivotalUnknown;
+    }
+
+    bool getPivotalGyroscopic() const
+    {
+        return mPivotalGyroscopic;
+    }
+
+    void setAngle(Angle angle) 
+    {
+        mAngle = angle;
     }
 
     void setTwoWayDistanceMultiplier(f32 multiplier) 
@@ -140,11 +184,31 @@ public:
         mMovementProperties = properties;
     }
 
+    void setPivotalUpsideDown(bool pivotal_upside_down)
+    {
+        mPivotalUpsideDown = pivotal_upside_down;
+    }
+
+    void setPivotalTilted(bool pivotal_tilted)
+    {
+        mPivotalTilted = pivotal_tilted;
+    }
+
+    void setPivotalUnknown(bool pivotal_unknown)
+    {
+        mPivotalUnknown = pivotal_unknown;
+    }
+
+    void setPivotalGyroscopic(bool pivotal_gyroscopic)
+    {
+        mPivotalGyroscopic = pivotal_gyroscopic;
+    }
+
 private:
     sead::Vector3f   mPosition;
     sead::Vector3f   _c;
     sead::Vector3f   _18;
-    sead::Vector3f   _24;
+    sead::Vector3f   mPivotCenter;
     u32              _30;
     u32              _34;
     ActorUniqueID    mParentActorID;
@@ -161,10 +225,10 @@ private:
     u32              _78;
     u32              _7c;
     u32              _80;
-    u8               _84;
-    u8               _85;
-    u8               _86;
-    u8               _87;
+    bool             mPivotalUpsideDown;
+    bool             mPivotalTilted;
+    bool             mPivotalUnknown;
+    bool             mPivotalGyroscopic;
     u8               _88;
     u8               _89;
     u32              _8c;
