@@ -17,6 +17,6 @@ protected:
 
 public:
     sead::Vector3f getItemCreatePos() const override;
-    void executeBlock() override;
+    void updateMovement() override;
 };
 static_assert(sizeof(ActorBlockAngle) == sizeof(ActorBlockBase));
