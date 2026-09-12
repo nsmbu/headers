@@ -54,7 +54,8 @@ class TarzanIvyBase : public Actor  // vtbl Address: 0x1015682C
     static_assert(sizeof(Unk3) == 0x30);
 
 public:
-    noinline TarzanIvyBase(const ActorCreateParam& param)
+    [[clang::noinline]]
+    TarzanIvyBase(const ActorCreateParam& param)
         : Actor(param)
     {
         _2c4 = 0;
