@@ -1,5 +1,7 @@
 #pragma once
 
+#include <actor/ActorUniqueID.h>
+
 #include <basis/seadTypes.h>
 
 class ActorUniqueID;
