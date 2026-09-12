@@ -62,7 +62,7 @@ public:
 
     /**
      * @brief Links to movement controllers with the matching movement id and type mask.
-     * @warning Using this and this only is known to cause problems with pivotal rotation controllers, use the linkPivotal function for pivotal rotation instead.
+     * @warning Use linkPivotal or linkPivotal2 when using pivotal-rotation or else it will bug out.
      */
     void link(const sead::Vector3f& position, u32 type_mask, u8 movement_id);
     void execute();
@@ -70,7 +70,6 @@ public:
     /**
      * @brief Links to movement controllers with the matching movement id and type mask.
      * @note Cannot be used to make it gyroscopic.
-     * @warning Using this and this only is known to cause problems with pivotal rotation controllers, use the linkPivotal function for pivotal rotation instead.
      * @par Address: 0x0284B824
      */
     void linkPivotal(const sead::Vector3f& position, u32 movement_mask, s8 movement_id, const sead::Vector3f& pivot_center = sead::Vector3f(0.0f, 0.0f, 0.0f), bool tilted = false, bool unk_8 = false, bool upside_down = false, bool movement_param = true);
