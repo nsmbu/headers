@@ -1,6 +1,7 @@
 #pragma once
 
 #include <math/seadMathCalcCommon.h>
+#include <math/seadVector.h>
 
 class MathUtil
 {
@@ -31,7 +32,7 @@ inline u32 MathUtil::absAngle(s32 value)
 {
     if (value >= 0)
         return value;
-    else if (value == -sead::Mathi::cHalfRoundIdx)
+    else if (value == static_cast<s32>(-sead::Mathi::cHalfRoundIdx))
         return sead::Mathu::cHalfRoundIdx;
     else
         return -value;
