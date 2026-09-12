@@ -1,5 +1,7 @@
 #pragma once
 
+#include <enemy/Enemy.h>
+
 #include <basis/seadTypes.h>
 
 class LkuriboBase : public Enemy
