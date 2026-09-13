@@ -65,20 +65,20 @@ public:
     // executeState_Right45		        Address: 0x020139A0
     // finalizeState_Right45	        Address: 0x020170FC
     DECLARE_STATE_ID(LineMgr, Right45)
-    //StateID_Side				        Address: 0x101ECAEC
-    //initializeState_Side		        Address: 0x02013AE0
-    //executeState_Side			        Address: 0x02013B1C
-    //finalizeState_Side		        Address: 0x02017100
+    // StateID_Side				        Address: 0x101ECAEC
+    // initializeState_Side		        Address: 0x02013AE0
+    // executeState_Side			    Address: 0x02013B1C
+    // finalizeState_Side		        Address: 0x02017100
     DECLARE_STATE_ID(LineMgr, Side)
-    //StateID_Height			        Address: 0x101ECB0C
-    //initializeState_Height	        Address: 0x02013CE0
-    //executeState_Height	            Address: 0x02013D1C
-    //finalizeState_Height		        Address: 0x02017104
+    // StateID_Height			        Address: 0x101ECB0C
+    // initializeState_Height	        Address: 0x02013CE0
+    // executeState_Height	            Address: 0x02013D1C
+    // finalizeState_Height		        Address: 0x02017104
     DECLARE_STATE_ID(LineMgr, Height)
-    //StateID_CornerHeightLine		    Address: 0x101ECB2C
-    //initializeState_CornerHeightLine	Address: 0x02013E30
-    //executeState_CornerHeightLine		Address: 0x02013E6C
-    //finalizeState_CornerHeightLine    Address: 0x02017108
+    // StateID_CornerHeightLine		    Address: 0x101ECB2C
+    // initializeState_CornerHeightLine	Address: 0x02013E30
+    // executeState_CornerHeightLine    Address: 0x02013E6C
+    // finalizeState_CornerHeightLine   Address: 0x02017108
     DECLARE_STATE_ID(LineMgr, CornerHeightLine)
     // StateID_Left30Left               Address: 0x101ECB6C
     // initializeState_Left30Left       Address: 0x020140DC
