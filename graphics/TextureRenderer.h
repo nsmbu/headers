@@ -11,7 +11,7 @@ class TextureRenderer : public TextureRendererBase // vtbl Address: 0x100655FC
 public:
     TextureRenderer(); // TODO: implement
 
-    // 0x02500374
+    // Address: 0x02500374
     ~TextureRenderer();
 
     // Address: 0x02500388
