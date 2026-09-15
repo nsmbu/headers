@@ -39,7 +39,7 @@ public:
         };
     };
 
-    enum WaveType
+    enum WaveType : u8
     {
         cWaveType_None      = 0,
         cWaveType_Lava      = 1,
@@ -149,7 +149,8 @@ public:
         return mHasLavaWaves;
     }
 
-    void setHasLavaWaves(u8 has_waves) {
+    void setHasLavaWaves(u8 has_waves)
+    {
         mHasLavaWaves = has_waves;
     }
 
@@ -158,7 +159,8 @@ public:
         return mHasTerrain;
     }
 
-    void setHasTerrain(bool has_terrain) {
+    void setHasTerrain(bool has_terrain)
+    {
         mHasTerrain = has_terrain;
     }
 
@@ -168,7 +170,7 @@ private:
     f32                 _18;
     f32                 mWaveSurfaceX[1280];
     f32                 mWaveSurfaceY[1280];
-    u8                  mHasLavaWaves; // Is really a bool but needs to be a u8 for wavy liquids to work
+    WaveType            mHasLavaWaves;
     bool                mHasTerrain;
     u32                 _2820;
     u8                  _2824[0x558];
