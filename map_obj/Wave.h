@@ -5,11 +5,10 @@
 
 #include <utility/Angle.h>
 
-class WaveRenderer;
+class WaveRenderer; // TODO: see what this is really called
 
 class Wave
 {
-
 public:
     enum TerrainType : u8
     {
@@ -23,14 +22,14 @@ public:
     struct Impact
     {
         f32     scale;
-        f32     segment_heights[100];
+        f32     segment_height[100];
         f32     segment_dampening[100];
-        u32     segment_phases[100];
+        u32     segment_phase[100];
         u32     origin_segment;
-        u8      segment_states[100];
+        u8      segment_state[100];
         f32     impact_velocity;
         bool    is_active;
-        void*   event; // lumi is not happy about void star
+        void*   event;
         f32     max_radius;
         f32     _52c;
         u32     phase_rate;
@@ -39,15 +38,20 @@ public:
         f32     scale_min;
         f32     dampening_max;
     };
-    static_assert(sizeof(Impact) == 0x544, "Wave::Impact size mismatch");
+    static_assert(sizeof(Impact) == 0x544, "Wave::Impact size mismatch"); // TODO: check these to see if they are good
 
 public:
+    // TODO!: Not sure if this class actually has c/dtors
     Wave();
-    ~Wave(); // nullsub
+    // TODO!: Not sure if this class actually has c/dtors
+    ~Wave();
 
-    virtual void vfC();  // deleted
-    virtual void vf10(); // deleted
+    virtual void vfC(); 
+    // Address: Deleted
+    virtual void vf10();
+    // Address: Deleted
 
+    // TODO: Address: Not in my RE
     void playerLavaWaveBurn();
     // Address: 0x028B8D5C
     void updateWaveCollisions();
@@ -93,7 +97,7 @@ protected:
     f32                             mMinorSineWaveMult;
     u32                             mMinorSineWaveRate;
     u32                             mMajorSineWaveRate;
-    u32                             _cc; // TODO: what??? make it good
+    u32                             _cc;
     u32                             _d0;
     u32                             mMajorSineWaveFrequency;
     u32                             mMinorSineWaveFrequency;
