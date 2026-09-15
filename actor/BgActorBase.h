@@ -7,10 +7,11 @@
 
 class BgActorBase : public ActorMultiState
 {
-
 public:
+    // Address: 0x026F0A88
     BgActorBase(const ActorCreateParam& param);
-    virtual ~BgActorBase();
+    // Address: 0x026F36E8
+    ~BgActorBase() override;
 
 public:
     // Address: 0x026F0E9C
@@ -36,16 +37,16 @@ protected:
     u8                          _17cc[4]; // Unknown values
     sead::Vector3f              _17d0;
     sead::Vector3f              _17dc;
-    ActorBoxBgCollision         mRectCollider;
+    ActorBoxBgCollision         mCollider;
     BgCollision::LineInitArg    mColliderInfo;
     sead::Vector2f              _1a9c;
     u32                         _1aa4;
     u32                         _1aa8;
     f32                         _1aac;
     f32                         _1ab0;
-    f32                         mWidth;
-    f32                         mBaselineHeight;
-    f32                         mEffectiveHeight;
+    f32                         mWidth;             // TODO*: Verify these
+    f32                         mBaselineHeight;    // TODO*: Verify these
+    f32                         mEffectiveHeight;   // TODO*: Verify these
     f32                         _1ac0;
     f32                         _1ac4;
     f32                         _1ac8;
