@@ -354,7 +354,8 @@ struct SaveData
     };
     static_assert(sizeof(MiiData) == 0x274, "SaveData::MiiData size mismatch");
     
-    u8 getLastSlot() const {
+    u8 getLastSlot() const
+    {
         return header.last_file;
     }
 
@@ -430,7 +431,8 @@ public:
         startQuickSaveGame(mSavedata->header.last_file);
     }
 
-    const SaveData* getSaveData() const {
+    const SaveData* getSaveData() const
+    {
         return mSavedata;
     }
 
