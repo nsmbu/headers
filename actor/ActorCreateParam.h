@@ -75,7 +75,7 @@ struct ActorParamEx1
         }   course;
         struct
         {
-            u8  node_id;
+            u8  point_no;
             u8  _1;
             u8  _2;
         }   course_select;
