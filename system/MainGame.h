@@ -3,6 +3,8 @@
 #include <heap/seadDisposer.h>
 #include <prim/seadBitFlag.h>
 
+#include <system/SaveMgr.h>
+
 enum CourseExitType
 {
     cCourseExitType_ChallengeRetry = 0,
@@ -90,6 +92,11 @@ public:
         return mReplayFlag.isOnBit(0);
     }
 
+    SaveData::LevelStat& getLevelStat()
+    {
+        return mLevelStat;
+    }
+
 protected:
     u32                 _10;
     bool                mIsSinglePlayerDRC;
@@ -99,7 +106,9 @@ protected:
     CourseBeatenType    mCourseBeatenType;
     u32                 _28;
     sead::BitFlag32     mReplayFlag;
-    u32                 _30[(0x21DDC - 0x30) / sizeof(u32)];
+    u32                 _30[(0x31C - 0x30) / sizeof(u32)];
+    SaveData::LevelStat mLevelStat;
+    u32                 _3d8[(0x21DDC - 0x3D8) / sizeof(u32)];
     u8                  _21ddc[30];
     bool                mIsShadowkunQuest;
     u32                 _21dfc[(0x21E18 - 0x21DFC) / sizeof(u32)];
