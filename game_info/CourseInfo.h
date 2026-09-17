@@ -23,6 +23,31 @@ public:
     u32 getAreaNo() const { return mCourseNow.area_no; }
     u32 getSceneEnterType() const { return mCourseNow.scene_enter_type; }
 
+    u8 getNextWorldNo() const
+    {
+        return mCourseNext.world_no;
+    }
+
+    u8 getNextCourseNo() const
+    {
+        return mCourseNext.course_no;
+    }
+
+    u8 getNextFileNo() const
+    {
+        return mCourseNext.file_no;
+    }
+
+    u8 getNextNextGotoNo() const
+    {
+        return mCourseNext.next_goto_no;
+    }
+
+    u8 getNextNextSceneEnterType() const
+    {
+        return mCourseNext.scene_enter_type;
+    }
+    
     // Address: 0x024D293C
     void setNextWorldNo(u8);
     // Address: 0x024D2954
