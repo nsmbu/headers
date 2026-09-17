@@ -4,6 +4,8 @@
 
 #include <heap/seadDisposer.h>
 
+class CourseSelectPath;
+
 class CourseSelectMgr   // vtbl Address: 0x10047B48
 {
     // createInstance()                             Address: 0x021F8A40
@@ -24,6 +26,9 @@ public:
     {
         return mChangePlayerNum;
     }
+
+    // Address: 0x021F9FC8
+    CourseSelectPath* getPath(u8 world_no, u8 sub_world_no);
 
 protected:
     u32             _10[(0x2CC88 - 0x10) / sizeof(u32)];
