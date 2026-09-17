@@ -43,7 +43,7 @@ public:
         return mCourseNext.next_goto_no;
     }
 
-    u32 getNextNextSceneEnterType() const
+    u32 getNextSceneEnterType() const
     {
         return mCourseNext.scene_enter_type;
     }
