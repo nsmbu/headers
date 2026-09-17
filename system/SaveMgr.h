@@ -20,16 +20,16 @@ struct SaveData
         u32 crc32;
     };
     static_assert(sizeof(Header) == 0x10, "SaveData::Header size mismatch");
-    
+
     struct CSLocation
     {
-        u8 world;       // 0-indexed
-        u8 subworld;    // Per-world worldmap sections. Used for W5 Haunted section, W8 and W9.
-        u8 node;        // 0-indexed, does not follow the visible order of paths in-game at all.
+        u8 world_no;        // 0-indexed
+        u8 sub_world_no;    // Per-world worldmap sections. Used for W5 Haunted section, W8 and W9.
+        u8 point_idx;       // 0-indexed, does not follow the visible order of paths in-game at all.
     };
     static_assert(sizeof(CSLocation) == 0x3, "SaveData::CSLocation size mismatch");
-    
-    enum class WorldCompletionFlag : u16
+
+    enum WorldCompletionFlag : u16
     {
         cWorldCompletionFlag_Opening = 1 << 0,
         cWorldCompletionFlag_1       = 1 << 1,
@@ -45,7 +45,7 @@ struct SaveData
     };
     static_assert(sizeof(WorldCompletionFlag) == 0x2, "SaveData::WorldCompletionFlag size mismatch");
     
-    enum class GameCompletionFlag : u8
+    enum GameCompletionFlag : u8
     {
         cGameCompletionFlag_Unknown1     = 1 << 0,
         cGameCompletionFlag_AllLevels    = 1 << 1,
@@ -55,7 +55,7 @@ struct SaveData
     };
     static_assert(sizeof(GameCompletionFlag) == 0x1, "SaveData::GameCompletionFlag size mismatch");
     
-    enum class ChibiYoshiAvailableFlag : u8
+    enum ChibiYoshiAvailableFlag : u8
     {
         cChibiYoshiAvailableFlag_World1 = 1 << 0,
         cChibiYoshiAvailableFlag_World3 = 1 << 1,
@@ -65,7 +65,7 @@ struct SaveData
     };
     static_assert(sizeof(ChibiYoshiAvailableFlag) == 0x1, "SaveData::ChibiYoshiAvailableFlag size mismatch");
     
-    enum class ActiveChibiYoshi : u8
+    enum ActiveChibiYoshi : u8
     {
         cActiveChibiYoshi_World1,
         cActiveChibiYoshi_World3,
@@ -75,33 +75,37 @@ struct SaveData
     };
     static_assert(sizeof(ActiveChibiYoshi) == 0x1, "SaveData::ActiveChibiYoshi size mismatch");
     
-    enum class LevelCompletionFlag : u8 // TODO: More research, not all values are here, some are incomplete
+    enum LevelCompletionFlag : u8 // TODO: More research, not all values are here, some are incomplete
     {
-        cLevelCompletionFlag_Locked                      = 0x0,
-        cLevelCompletionFlag_Unlocked                    = 0x1,
-        cLevelCompletionFlag_PlayedOnce                  = 0x2,
-        cLevelCompletionFlag_ForeverUnlockedToadHouse    = 0x3,
-        cLevelCompletionFlag_AmbushCleared               = 0x42,
-        cLevelCompletionFlag_ClearedOrUsedToadHouse      = 0x43,
-        cLevelCompletionFlag_ClearedOrSecretExitCleared  = 0xC3,
+        cLevelCompletionFlag_Unlocked                    = 1 << 0,
+        cLevelCompletionFlag_PlayedOnce                  = 1 << 1,
+        cLevelCompletionFlag_BeatenOtehonReplay          = 1 << 2,
+        cLevelCompletionFlag_SecretBeatenOtehonReplay    = 1 << 3,
+        cLevelCompletionFlag_BeatenReserved              = 1 << 4, ///< Cleared but never set.
+        cLevelCompletionFlag_SecretBeatenReserved        = 1 << 5, ///< Cleared but never set.
+        cLevelCompletionFlag_Beaten                      = 1 << 6,
+        cLevelCompletionFlag_SecretBeaten                = 1 << 7,
     };
     static_assert(sizeof(LevelCompletionFlag) == 0x1, "SaveData::LevelCompletionFlag size mismatch");
     
-    struct LevelStatData
+    struct LevelStat
     {
         LevelCompletionFlag completion_flag[123];
         u8 death_counter[62];
+
+        // Address: 0x024BB028
+        LevelCompletionFlag* getCompletionFlag(u8 worldNo, u8 courseNo);
     };
-    static_assert(sizeof(LevelStatData) == 0xB9, "SaveData::LevelStatData size mismatch");
+    static_assert(sizeof(LevelStat) == 0xB9, "SaveData::LevelStat size mismatch");
     
-    enum class LevelStarCoinFlag : u8 // TODO: More research, not all values are here
+    enum LevelStarCoinFlag : u8 // TODO: More research, not all values are here
     {
         cLevelStarCoinFlag_None = 0x0,
         cLevelStarCoinFlag_All  = 0x77
     };
     static_assert(sizeof(LevelStarCoinFlag) == 0x1, "SaveData::LevelStarCoinFlag size mismatch");
     
-    enum class InventoryItem : u8 //? The missing 0x4 entry is not a mistake, it doesn't seem to be anything.
+    enum InventoryItem : u8 //? The missing 0x4 entry is not a mistake, it doesn't seem to be anything.
     {
         cInventoryItem_Mushroom   = 0x0,
         cInventoryItem_FireFlower = 0x1,
@@ -203,7 +207,7 @@ struct SaveData
         u8 ambush_item_reappear_counter[4];    // TODO: Map out order
         u8 ambush_items[4];                    // TODO: Figure out values, maybe PlayerMode but untested
         bool is_nabbit_in_world[7];
-        LevelStatData level_stat;
+        LevelStat level_stat;
         LevelStarCoinFlag level_star_coins[41];
         InventoryItem inventory[10];
         AmbushData ambush;
