@@ -388,6 +388,16 @@ public:
         mSpeedF = speedF;
     }
 
+    f32 getAddSpeedF() const
+    {
+        return mAddSpeedF;
+    }
+
+    void setAddSpeedF(f32 speedF)
+    {
+        mAddSpeedF = speedF;
+    }
+
 protected:
     // Address: 0x02000AC8
     Actor(const ActorCreateParam& param);
