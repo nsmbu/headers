@@ -43,11 +43,11 @@ public:
         return mCourseNext.next_goto_no;
     }
 
-    u8 getNextNextSceneEnterType() const
+    u32 getNextNextSceneEnterType() const
     {
         return mCourseNext.scene_enter_type;
     }
-    
+
     // Address: 0x024D293C
     void setNextWorldNo(u8);
     // Address: 0x024D2954
