@@ -51,6 +51,11 @@ public:
     // Address: 0x0269D654
     u64 condenseEventIds(u32 event_id_1, u32 event_id_2);
 
+    u64 getSwitchFlag() const
+    {
+        return mSwitchFlag;
+    }
+
     bool isActivated(u8 flag_bit) const
     {
         return mSwitchFlag & (1ULL << flag_bit);
