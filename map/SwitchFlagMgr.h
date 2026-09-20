@@ -48,6 +48,9 @@ public:
     // duration: 0 = permanent, N = 10 * N sec
     void set(u8 flag_bit, u8 duration, bool activate, bool timed_reverse = false, bool = false, u32 = 0, FlagType type = cFlagType_Normal);
 
+    // Address: 0x0269D654
+    u64 condenseEventIds(u32 event_id_1, u32 event_id_2);
+
     bool isActivated(u8 flag_bit) const
     {
         return mSwitchFlag & (1ULL << flag_bit);
