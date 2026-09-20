@@ -44,6 +44,7 @@ public:
     const nw::g3d::ShaderParamAnimObj& getAnimObj() const { return mAnimObj; }
 
     nw::g3d::res::ResShaderParamAnim* getResource() const { return mRes; }
+    void unbind() { mRes = nullptr; }
 
     const ModelG3d* getModel() const { return mModel; }
     s32 getIndex() const { return mIndex; }
