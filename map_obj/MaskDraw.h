@@ -17,10 +17,14 @@ static_assert(sizeof(LightMask) == 4);
 class CircleLightMask : public LightMask
 {
 public:
+    // Address: 0x02815C9C
     CircleLightMask();
 
+    // Address: 0x02815D20
     bool create(sead::Heap* heap, Mask::TexName) override;
+    // Address: 0x02815DCC
     bool execute() override;
+    // Address: 0x028160C8
     bool draw() override;
 
     void setRadius(f32 radius)
