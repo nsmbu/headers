@@ -39,6 +39,15 @@ public:
         };
     };
 
+    enum WaveType : u8
+    {
+        cWaveType_None      = 0,
+        cWaveType_Lava      = 1,
+        cWaveType_Water     = 2,
+        cWaveType_Poison    = 3,
+        cWaveType_Quicksand = 4
+    };
+
 public:
     Bg();
     virtual ~Bg();
@@ -135,33 +144,53 @@ public:
         return mBgDeco;
     }
 
+    bool getHasLavaWaves() const
+    {
+        return mHasLavaWaves;
+    }
+
+    void setHasLavaWaves(u8 has_waves)
+    {
+        mHasLavaWaves = has_waves;
+    }
+
+    bool getHasTerrain() const
+    {
+        return mHasTerrain;
+    }
+
+    void setHasTerrain(bool has_terrain)
+    {
+        mHasTerrain = has_terrain;
+    }
+
 private:
-    u32 _10;
-    f32 _14;
-    f32 _18;
-    f32 mWaveSurfaceX[1280];
-    f32 mWaveSurfaceY[1280];
-    bool mHasLavaWaves;
-    bool mHasTerrain;
-    u32 _2820;
-    u8 _2824[0x558];
-    u8 _2d7c[0x558];
-    u8 _32d4[0x88];
-    u8 _335c[800];
-    u8 _367c[100];
-    u8 _36e0[100];
-    u32 _3744[100];
-    DecorationInfo* mGrassDecorationInfo;
-    DecorationInfo* mFlowerDecorationInfo;
-    DecorationInfo* mButterflyDecorationInfo;
-    u32 mFlowerNo;
-    u8 _38e4[0x320];
-    sead::Vector2f mFlowerPositions[100];
-    u8 _3f24[100];
-    u32 _3f88;
-    u8 mFlowerType;
-    bool mHasFlowers;
-    BgDeco mBgDeco;
-    u8 _7e20[0x1D64];
+    u32                 _10;
+    f32                 _14;
+    f32                 _18;
+    f32                 mWaveSurfaceX[1280];
+    f32                 mWaveSurfaceY[1280];
+    WaveType            mHasLavaWaves;
+    bool                mHasTerrain;
+    u32                 _2820;
+    u8                  _2824[0x558];
+    u8                  _2d7c[0x558];
+    u8                  _32d4[0x88];
+    u8                  _335c[800];
+    u8                  _367c[100];
+    u8                  _36e0[100];
+    u32                 _3744[100];
+    DecorationInfo*     mGrassDecorationInfo;
+    DecorationInfo*     mFlowerDecorationInfo;
+    DecorationInfo*     mButterflyDecorationInfo;
+    u32                 mFlowerNo;
+    u8                  _38e4[0x320];
+    sead::Vector2f      mFlowerPositions[100];
+    u8                  _3f24[100];
+    u32                 _3f88;
+    u8                  mFlowerType;
+    bool                mHasFlowers;
+    BgDeco              mBgDeco;
+    u8                  _7e20[0x1D64];
 };
 static_assert(sizeof(Bg) == 0x9B88, "Bg size mismatch");

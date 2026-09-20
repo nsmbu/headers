@@ -378,6 +378,11 @@ public:
         return mProfFlag;
     }
 
+    void setProfFlag(u32 flag)
+    {
+        mProfFlag = flag;
+    }
+
     f32 getSpeedF() const
     {
         return mSpeedF;
