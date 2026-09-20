@@ -31,51 +31,63 @@ public:
     // Address: 0x02686428
     void updateGrassAndFlowers(bool init);
 
-    TexQuadDeco& getFlowerRenderer() {
+    TexQuadDeco& getFlowerRenderer()
+    {
         return mFlowerRenderer;
     }
 
-    TexQuadDeco& getFlowerStalkRenderer() {
+    TexQuadDeco& getFlowerStalkRenderer()
+    {
         return mFlowerStalkRenderer;
     }
 
-    TexQuadDeco& getGrassRenderer() {
+    TexQuadDeco& getGrassRenderer()
+    {
         return mGrassRenderer;
     }
 
-    TexQuadDeco& getButterflyRenderer() {
+    TexQuadDeco& getButterflyRenderer()
+    {
         return mButterflyRenderer;
     }
 
-    agl::TextureData& getFlowerTexture(u32 index) {
+    agl::TextureData& getFlowerTexture(u32 index)
+    {
         return mFlowerTextures[index];
     }
 
-    agl::TextureData& getFlowerStalkTexture() {
+    agl::TextureData& getFlowerStalkTexture()
+    {
         return mFlowerStalkTexture;
     }
 
-    agl::TextureData& getButterflyTexture() {
+    agl::TextureData& getButterflyTexture()
+    {
         return mButterflyTexture;
     }
 
-    agl::TextureData& getFlowerTextureNormal() {
+    agl::TextureData& getFlowerTextureNormal()
+    {
         return mFlowerTextureNormal;
     }
 
-    agl::TextureData& getFlowerStalkTextureNormal() {
+    agl::TextureData& getFlowerStalkTextureNormal()
+    {
         return mFlowerStalkTextureNormal;
     }
 
-    agl::TextureData& getGrassTextureNormal(u32 index) {
+    agl::TextureData& getGrassTextureNormal(u32 index)
+    {
         return mGrassTextureNormals[index];
     }
 
-    agl::TextureData& getGrassTexture(u32 index) {
+    agl::TextureData& getGrassTexture(u32 index)
+    {
         return mGrassTextures[index];
     }
 
-    DecorationSettings& getDecorationSettings() {
+    DecorationSettings& getDecorationSettings()
+    {
         return mSettings;
     }
 
