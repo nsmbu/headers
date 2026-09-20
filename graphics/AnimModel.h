@@ -31,7 +31,8 @@ public:
         const sead::SafeString& name,
         s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
         Model::BoundingMode bounding_mode = Model::cBoundingMode_Disable,
-        sead::Heap* heap = nullptr
+        sead::Heap* heap = nullptr,
+        const sead::PtrArray<ModelResource>* anim_mdl_res_array = nullptr
     );
 
     static AnimModel* create(
@@ -40,7 +41,8 @@ public:
         s32 view_num,
         s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
         Model::BoundingMode bounding_mode,
-        sead::Heap* heap = nullptr
+        sead::Heap* heap = nullptr,
+        const sead::PtrArray<ModelResource>* anim_mdl_res_array = nullptr
     );
 
     static AnimModel* create(
@@ -48,7 +50,8 @@ public:
         const sead::SafeString& name,
         s32 skl_anim_num = 0, s32 tex_anim_num = 0, s32 shu_anim_num = 0, s32 vis_anim_num = 0, s32 sha_anim_num = 0,
         Model::BoundingMode bounding_mode = Model::cBoundingMode_Disable,
-        sead::Heap* heap = nullptr
+        sead::Heap* heap = nullptr,
+        const sead::PtrArray<ModelResource>* anim_mdl_res_array = nullptr
     );
 
     static AnimModel* create(
@@ -57,7 +60,8 @@ public:
         s32 view_num,
         s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
         Model::BoundingMode bounding_mode,
-        sead::Heap* heap = nullptr
+        sead::Heap* heap = nullptr,
+        const sead::PtrArray<ModelResource>* anim_mdl_res_array = nullptr
     );
 
     static void destroy(
@@ -139,11 +143,12 @@ inline AnimModel* AnimModel::create(
     const sead::SafeString& name,
     s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
     Model::BoundingMode bounding_mode,
-    sead::Heap* heap
+    sead::Heap* heap,
+    const sead::PtrArray<ModelResource>* anim_mdl_res_array
 )
 {
     Model* model = ModelUtil::createG3d(*mdl_res, name, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
-    return create(mdl_res, model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, heap);
+    return create(mdl_res, model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, heap, anim_mdl_res_array);
 }
 
 inline AnimModel* AnimModel::create(
@@ -152,11 +157,12 @@ inline AnimModel* AnimModel::create(
     s32 view_num,
     s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
     Model::BoundingMode bounding_mode,
-    sead::Heap* heap
+    sead::Heap* heap,
+    const sead::PtrArray<ModelResource>* anim_mdl_res_array
 )
 {
     Model* model = ModelUtil::createG3d(*mdl_res, name, view_num, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
-    return create(mdl_res, model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, heap);
+    return create(mdl_res, model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, heap, anim_mdl_res_array);
 }
 
 inline AnimModel* AnimModel::create(
@@ -164,11 +170,12 @@ inline AnimModel* AnimModel::create(
     const sead::SafeString& name,
     s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
     Model::BoundingMode bounding_mode,
-    sead::Heap* heap
+    sead::Heap* heap,
+    const sead::PtrArray<ModelResource>* anim_mdl_res_array
 )
 {
     ModelResource* mdl_res = ModelResourceMgr::instance()->getResource(resource_key);
-    return create(mdl_res, name, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
+    return create(mdl_res, name, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap, anim_mdl_res_array);
 }
 
 inline AnimModel* AnimModel::create(
@@ -177,11 +184,12 @@ inline AnimModel* AnimModel::create(
     s32 view_num,
     s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
     Model::BoundingMode bounding_mode,
-    sead::Heap* heap
+    sead::Heap* heap,
+    const sead::PtrArray<ModelResource>* anim_mdl_res_array
 )
 {
     ModelResource* mdl_res = ModelResourceMgr::instance()->getResource(resource_key);
-    return create(mdl_res, name, view_num, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
+    return create(mdl_res, name, view_num, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap, anim_mdl_res_array);
 }
 
 inline void AnimModel::destroy(
