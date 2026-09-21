@@ -2,6 +2,7 @@
 
 #include <map/BgDeco.h>
 #include <collision/BgUnitCode.h>
+#include <utility/Direction.h>
 
 #include <heap/seadDisposer.h>
 #include <math/seadVector.h>
@@ -38,6 +39,25 @@ public:
             } butterfly_settings;
         };
     };
+
+    enum GustType : u8
+    {
+        cGustType_Invalid   = 0,
+        cGustType_1         = 1,
+        cGustType_2         = 2,
+        cGustType_Spin      = 3,
+        cGustType_Run       = 4
+    };
+    static_assert(sizeof(GustType) == 1, "Bg::GustType size mismatch");
+
+    struct Gust
+    {
+        sead::Vector3f pos;
+        f32 radius;
+        u8 _11;
+        s8 direction;
+    };
+    static_assert(sizeof(Gust) == 0x14, "Bg::Gust size mismatch");
 
 public:
     Bg();
@@ -89,6 +109,16 @@ public:
 
     // Address: 0x0268B908
     void deleteFlower(u8 index);
+
+    // Address: 0x02686080
+    void registerGust(GustType type, const sead::Vector3f& pos, u8, s8 direction);
+
+    /**
+     * @brief Checks for gusts of wind caused by players affecting grass/flowers.
+     * @return @c 0 for nothing, otherwise @c -1 or @c 1 for left and right respectively.
+     * @par Address: 0x02685FB0
+     */
+    s8 checkGust(GustType type, const sead::Vector3f& pos, f32* dist);
 
     f32 getWaveSurfaceX(s32 index) const
     {
@@ -155,7 +185,7 @@ private:
     DecorationInfo* mFlowerDecorationInfo;
     DecorationInfo* mButterflyDecorationInfo;
     u32 mFlowerNo;
-    u8 _38e4[0x320];
+    Gust mGust[40];
     sead::Vector2f mFlowerPositions[100];
     u8 _3f24[100];
     u32 _3f88;
