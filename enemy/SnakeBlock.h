@@ -77,6 +77,11 @@ public:
             return mPathIdx;
         }
 
+        const sead::Vector3f& getWorldPos() const
+        {
+            return mWorldPos;
+        }
+
         // Address: 0x0245A074
         void init(SnakeBlock* parent, const sead::Vector3f& pos, SnakeType type);
 
@@ -87,7 +92,7 @@ public:
         u32 mPieceIdx;
         u32 _294;
         AnimModel* mModel;
-        sead::Vector3f mPos;
+        sead::Vector3f mWorldPos;
         sead::Vector3f _2a8;
         sead::Vector3f _2b4;
         sead::Vector3f _2c0;
@@ -148,6 +153,17 @@ protected:
 
     // Address: 0x0245CE3C
     virtual bool toDelete_() const;
+
+public:
+    const EdgePiece& getEdgePiece(u32 idx) const
+    {
+        return mEdgePiece[idx];
+    }
+
+    const Piece& getMiddlePiece(u32 idx) const
+    {
+        return mMiddlePiece[idx];
+    }
 
     // StateID_Wait                       Address: 0x1020740C
     // initializeState_Wait               Address: 0x0245B818
