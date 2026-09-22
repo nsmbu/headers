@@ -88,6 +88,10 @@ public:
         // Address: 0x0245A2D0
         void drawModel() const;
 
+    public:
+        // Address: 0x024598AC
+        static void callbackFoot(BgCollision* bc_self, ActorBgCollisionCheck* cc_other);
+
     protected:
         u32 mPieceIdx;
         u32 _294;
