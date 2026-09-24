@@ -257,6 +257,12 @@ protected:
     void blockHitInit_() override;
 
 public:
+    const EnemyDeathInfo& getDeathInfo() const
+    {
+        return mDeathInfo;
+    }
+
+public:
     // Address: 0x02330404
     void changeState(const StateID& state_id) override;
 
