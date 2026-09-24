@@ -76,16 +76,16 @@ public:
     ModelResource* getModelResource() const { return mModelResource; }
     
     void draw() const { Renderer::instance()->drawModel(this); }
-    void setMtxRT(const sead::Matrix34f& rt) { mModel->setMtxRT(rt); }
-    void setScale(const sead::Vector3f& scale) { mModel->setScale(scale); }
+    void setBaseModelMtx(const sead::Matrix34f& rt) { mModel->setBaseModelMtx(rt); }
+    void setLocalScale(const sead::Vector3f& scale) { mModel->setLocalScale(scale); }
     
     void update(const sead::Vector3f& pos, const sead::Vector3u& rot, const sead::Vector3f& scale, bool animate = true)
     {
         sead::Matrix34f mtx;
         mtx.makeRTIdx(rot, pos);
-        setMtxRT(mtx);
-        setScale(scale);
-        calcMdl();
+        setBaseModelMtx(mtx);
+        setLocalScale(scale);
+        calc();
         
         if (animate)
             playAnmFrameCtrl();
