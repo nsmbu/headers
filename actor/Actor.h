@@ -211,6 +211,10 @@ public:
         return mLayer;
     }
 
+    sead::BitFlag8 getCollisionMask() const
+    {
+        return mCollisionMask;
+    }
     
     f32 getMaxSpeedF() const
     {
