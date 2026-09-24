@@ -75,9 +75,9 @@ public:
     {
         sead::Matrix34f mtx;
         mtx.makeRTIdx(rot, pos);
-        setMtxRT(mtx);
-        setScale(scale);
-        calcMdl();
+        setBaseModelMtx(mtx);
+        setLocalScale(scale);
+        calc();
         
         if (animate)
             playAnmFrameCtrl();
