@@ -19,33 +19,33 @@ public:
     };
 
     /**
-     * @brief State of the block.
+     * @brief Persistent state of the block across area reloads.
      */
-    enum ActiveStates
+    enum ActiveState
     {
-        cActiveStates_Active    = 0,
-        cActiveStates_Used      = 1,
-        cActiveStates_Destroyed = 2,
-        cActiveStates_Unknown   = 3 
+        cActiveState_Active           = 0,
+        cActiveState_Used             = 1,
+        cActiveState_Destroyed        = 2,
+        cActiveState_MultiCoinExpired = 3
     };
 
     struct DestroyedParam
     {
         sead::Vector2f  position;
-        u8              destroy_direction_maybe;
+        u8              destroy_direction;
         u8              state_type;
         u8              _a;
-        s8              player_id;
-        u16             fragments_idx;
+        s8              player_no;
+        u16             fragment_idx;
     };
     static_assert(sizeof(DestroyedParam) == 0x10, "DestroyedParam size mismatch");
 
     struct DestroyedParam2
     {
         sead::Vector2f  position;
-        u8              destroy_direction_maybe;
-        s8              player_id;
-        u16             fragments_idx;
+        u8              destroy_direction;
+        s8              player_no;
+        u16             fragment_idx;
     };
     static_assert(sizeof(DestroyedParam2) == 0xC, "DestroyedParam2 size mismatch");   
 
