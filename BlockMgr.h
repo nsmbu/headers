@@ -5,14 +5,14 @@
 #include <map_obj/ActorBlockBase.h>
 #include <collision/BgUnitCode.h>
 
-struct BlockStateHolder
+struct BlockState
 {
     sead::Vector3f                  position;
-    ActorBlockBase::ActiveStates    state;
-    u16                             area_ID;
+    ActorBlockBase::ActiveState     state;
+    u16                             area_no;
     u8                              _12[2];
 };
-static_assert(sizeof(BlockStateHolder) == 0x14, "BlockStateHolder size mismatch");
+static_assert(sizeof(BlockState) == 0x14, "BlockState size mismatch");
 
 class BlockMgr
 {
@@ -20,11 +20,12 @@ class BlockMgr
     // deleteInstance() Address: Deleted
     // sInstance        Address: 0x101DB964
     SEAD_SINGLETON_DISPOSER(BlockMgr);
+
 public:
     struct DestroyParam
     {
         sead::Vector2f          position;
-        u32                     fragments_type;
+        u32                     fragment_type;
         u32                     _c;
         s8                      sensor_id;
         s8                      player_id;
@@ -43,18 +44,18 @@ public:
     void doDestroyAt(DestroyParam& param);
 
     // Address: 0x0270D2F4
-    ActorBlockBase::ActiveStates getBlockActiveState(sead::Vector3f& pos_for_state, u32 area_id);
+    ActorBlockBase::ActiveState getBlockActiveState(sead::Vector3f& pos_for_state, u32 area_no);
     // Address: 0x0270B7EC
-    ActorBlockBase::ActiveStates getMultiCoinStateAt(sead::Vector3f& at);
+    ActorBlockBase::ActiveState getMultiCoinStateAt(sead::Vector3f& at);
     // Address: 0x0270D420
-    void setStateForBlockAt(sead::Vector3f& at, ActorBlockBase::ActiveStates state, u32 area_id);
+    void setStateForBlockAt(sead::Vector3f& at, ActorBlockBase::ActiveState state, u32 area_no);
     // Address: 0x0270D294
     void update();
 
-private:
-    u8                  mArr1[101][16];
-    BlockStateHolder    mBlockStates[3001];
-    u32                 mArr1Count;
-    u32                 mBlockStatesCount;
+protected:
+    u8                  _0[101][16];
+    BlockState          mBlockState[3001];
+    u32                 _f0d4; // Used to call it mArr1Count
+    u32                 mBlockStateCount;
 };
 static_assert(sizeof(BlockMgr) == 0xF0DC, "BlockMgr size mismatch");
