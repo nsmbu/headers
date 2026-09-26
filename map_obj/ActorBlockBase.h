@@ -41,6 +41,7 @@ public:
         preSpawnItem();
         spawnItemUp();
     }
+
     // Address: 0x0269FAB0
     Content getContent(u32 index);
 
