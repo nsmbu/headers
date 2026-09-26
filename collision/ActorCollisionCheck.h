@@ -549,6 +549,11 @@ public:
         return mDaikei[index];
     }
 
+    void setDaikei(s32 index, f32 daikei)
+    {
+        mDaikei[index] = daikei;
+    }
+
     f32 getRevisionX(Kind kind) const
     {
         return mMoveX[kind];
