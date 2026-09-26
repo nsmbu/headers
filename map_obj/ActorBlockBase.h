@@ -18,6 +18,37 @@ public:
         cType_Clear     = 3  ///< Invisible Block
     };
 
+    /**
+     * @brief State of the block.
+     */
+    enum ActiveStates
+    {
+        cActiveStates_Active    = 0,
+        cActiveStates_Used      = 1,
+        cActiveStates_Destroyed = 2,
+        cActiveStates_Unknown   = 3 
+    };
+
+    struct DestroyedParam
+    {
+        sead::Vector2f  position;
+        u8              destroy_direction_maybe;
+        u8              state_type;
+        u8              _a;
+        s8              player_id;
+        u16             fragments_idx;
+    };
+    static_assert(sizeof(DestroyedParam) == 0x10, "DestroyedParam size mismatch");
+
+    struct DestroyedParam2
+    {
+        sead::Vector2f  position;
+        u8              destroy_direction_maybe;
+        s8              player_id;
+        u16             fragments_idx;
+    };
+    static_assert(sizeof(DestroyedParam2) == 0xC, "DestroyedParam2 size mismatch");   
+
 public:
     ActorBlockBase(const ActorCreateParam& param);
     ~ActorBlockBase() override { }
