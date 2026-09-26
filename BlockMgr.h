@@ -1,6 +1,5 @@
 #pragma once
 
-#include <math/seadVector.h>
 #include <heap/seadDisposer.h>
 #include <map_obj/ActorBlockBase.h>
 #include <collision/BgUnitCode.h>
