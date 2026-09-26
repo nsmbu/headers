@@ -42,6 +42,9 @@ public:
         spawnItemUp();
     }
 
+    // Address: 0x0269FAB0
+    Content getContent(u32 index);
+
 protected:
     // Address: 0x0269E6C4
     bool execute() override;
