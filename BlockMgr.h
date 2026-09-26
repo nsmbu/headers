@@ -1,5 +1,6 @@
 #pragma once
 
+#include <math/seadVector.h>
 #include <heap/seadDisposer.h>
 #include <map_obj/ActorBlockBase.h>
 #include <collision/BgUnitCode.h>
@@ -27,10 +28,10 @@ public:
         u32                     fragment_type;
         u32                     _c;
         s8                      sensor_id;
-        s8                      player_id;
+        s8                      player_no;
         s8                      player_type;
         u8                      _13;
-        ActorBgCollisionCheck*  collision_mgr;
+        ActorBgCollisionCheck*  collision_check;
     };
     static_assert(sizeof(DestroyParam) == 0x18, "DestroyParam size mismatch");
 
