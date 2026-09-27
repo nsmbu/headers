@@ -60,12 +60,17 @@ public:
     static_assert(sizeof(Gust) == 0x14, "Bg::Gust size mismatch");
 
 public:
+    // Address: 0x02684480
     Bg();
+    // Address: 0x0268BB9C
     virtual ~Bg();
 
+    // Address: 0x02684F74
     static u16* getUnit(u16 x, u16 y, u32 file, u8 layer, s32* block_idx = nullptr);
+    // Address: 0x02685000
     static u16* getUnitCurrentCdFile(u16 x, u16 y, u8 layer, s32* block_idx = nullptr);
 
+    // Address: 0x026850F0
     u64 getBgCheckData(u16 x, u16 y, u8 layer, bool with_p_sw = true);  // See BgUnitCode
     u64 getBgCheckData(f32 x, f32 y, u8 layer, bool with_p_sw = true)   // ^^^
     {
@@ -89,6 +94,11 @@ public:
     {
         return getUnitTypeInfo(u16(x), u16(-y), layer);
     }
+
+    // Address: 0x02685378
+    void setUnit(u16 x, u16 y, u32 file, u8 layer, u16 unit);
+    // Address: 0x026854A8
+    void setUnitCurrentCdFile(u16 x, u16 y, u8 layer, u16 unit);
 
     void setWaterInWave(const sead::Vector2f& pos, u8 wave_scale);
 
