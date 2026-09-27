@@ -141,32 +141,32 @@ protected:
     void preSpawnItem_PropellerOrCoin_();
 
 public:
-    f32 getmItemCreateZPos() const
+    f32 getItemCreateZPos() const
     {
         return mItemCreateZPos;
     }
 
-    f32 getmItemCreateYOffsetUpSingle() const
+    f32 getItemCreateYOffsetUpSingle() const
     {
         return mItemCreateYOffsetUpSingle;
     }
 
-    f32 getmItemCreateYOffsetDownSingle() const
+    f32 getItemCreateYOffsetDownSingle() const
     {
         return mItemCreateYOffsetDownSingle;
     }
 
-    f32 getmItemCreateYOffsetUpMulti() const
+    f32 getItemCreateYOffsetUpMulti() const
     {
         return mItemCreateYOffsetUpMulti;
     }
 
-    f32 getmItemCreateYOffsetDownMulti() const
+    f32 getItemCreateYOffsetDownMulti() const
     {
         return mItemCreateYOffsetDownMulti;
     }
 
-    Type getmType() const
+    Type getType() const
     {
         return mType;
     }
@@ -196,7 +196,7 @@ public:
         return _1cc8;
     }
 
-    bool getmScreenOutCheckEnable() const
+    bool getScreenOutCheckEnable() const
     {
         return mScreenOutCheckEnable;
     }
@@ -206,32 +206,32 @@ public:
         return _1ccd;
     }
 
-    void setmItemCreateZPos(f32 pos)
+    void setItemCreateZPos(f32 pos)
     {
         mItemCreateZPos = pos;
     }
 
-    void setmItemCreateYOffsetUpSingle(f32 offset)
+    void setItemCreateYOffsetUpSingle(f32 offset)
     {
         mItemCreateYOffsetUpSingle = offset;
     }
 
-    void setmItemCreateYOffsetDownSingle(f32 offset)
+    void setItemCreateYOffsetDownSingle(f32 offset)
     {
         mItemCreateYOffsetDownSingle = offset;
     }
 
-    void setmItemCreateYOffsetUpMulti(f32 offset)
+    void setItemCreateYOffsetUpMulti(f32 offset)
     {
         mItemCreateYOffsetUpMulti = offset;
     }
 
-    void setmItemCreateYOffsetDownMulti(f32 offset)
+    void setItemCreateYOffsetDownMulti(f32 offset)
     {
         mItemCreateYOffsetDownMulti = offset;
     }
 
-    void setmType(Type setter)
+    void setType(Type setter)
     {
         mType = setter;
     }
@@ -261,7 +261,7 @@ public:
         _1cc8 = setter;
     }
 
-    void setmScreenOutCheckEnable(bool screen_out_check)
+    void setScreenOutCheckEnable(bool screen_out_check)
     {
         mScreenOutCheckEnable = screen_out_check;
     }
