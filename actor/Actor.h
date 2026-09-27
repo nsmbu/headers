@@ -47,7 +47,7 @@ public:
     /**
      * @brief Flags to pass to `screenOutCheck` to skip checks or actions during the evaluation.
      */
-    enum ScreenOutFlag
+    enum ScreenOutFlag : u16
     {
         cScreenOutFlag_SkipNone           = 0,      ///< Perform all checks and delete the actor if they pass.
         cScreenOutFlag_SkipDeletion       = 1 << 1, ///< Skip deleting the actor if the checks do pass. 
@@ -140,7 +140,7 @@ public:
     
     /**
      * @brief Checks if the actor is out of gameplay and optionally deletes it.
-     * @param flag Specify checks to skip, and whether to delete the actor if they all passed. See the `ScreenOutFlag` enum.
+     * @param flag Specify checks to skip, and whether to delete the actor if they all passed.
      * @return Whether the actor is out of gameplay.
      * @details The actor is considered "out of gameplay" if:
      * * It has not been eaten.
@@ -149,7 +149,7 @@ public:
      * * The actor is out of the zone bounds OR the actor is outside of the visible camera.
      * @par Address: 0x020007A0
      */
-    bool screenOutCheck(u16 flag);
+    bool screenOutCheck(ScreenOutFlag flag);
 
     // Address: 0x02002AD8
     virtual void allEnemyDeathEffSet(); // Spawn burst effect at instances where all enemies die (such as touching goal pole or defeating boss), called if profile flag bit 4, 5 or 7 is set
