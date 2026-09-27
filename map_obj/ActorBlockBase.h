@@ -18,6 +18,37 @@ public:
         cType_Clear     = 3  ///< Invisible Block
     };
 
+    /**
+     * @brief Persistent state of the block across area reloads.
+     */
+    enum ActiveState
+    {
+        cActiveState_Active           = 0,
+        cActiveState_Used             = 1,
+        cActiveState_Destroyed        = 2,
+        cActiveState_MultiCoinExpired = 3
+    };
+
+    struct DestroyedParam
+    {
+        sead::Vector2f  position;
+        u8              destroy_direction;
+        u8              state_type;
+        u8              _a;
+        s8              player_no;
+        u16             fragment_idx;
+    };
+    static_assert(sizeof(DestroyedParam) == 0x10, "DestroyedParam size mismatch");
+
+    struct DestroyedParam2
+    {
+        sead::Vector2f  position;
+        u8              destroy_direction;
+        s8              player_no;
+        u16             fragment_idx;
+    };
+    static_assert(sizeof(DestroyedParam2) == 0xC, "DestroyedParam2 size mismatch");   
+
 public:
     ActorBlockBase(const ActorCreateParam& param);
     ~ActorBlockBase() override { }
@@ -108,6 +139,77 @@ public:
 
 protected:
     void preSpawnItem_PropellerOrCoin_();
+
+public:
+    f32 getItemCreateZPos() const
+    {
+        return mItemCreateZPos;
+    }
+
+    f32 getItemCreateYOffsetUpSingle() const
+    {
+        return mItemCreateYOffsetUpSingle;
+    }
+
+    f32 getItemCreateYOffsetDownSingle() const
+    {
+        return mItemCreateYOffsetDownSingle;
+    }
+
+    f32 getItemCreateYOffsetUpMulti() const
+    {
+        return mItemCreateYOffsetUpMulti;
+    }
+
+    f32 getItemCreateYOffsetDownMulti() const
+    {
+        return mItemCreateYOffsetDownMulti;
+    }
+
+    Type getType() const
+    {
+        return mType;
+    }
+
+    bool getScreenOutCheckEnable() const
+    {
+        return mScreenOutCheckEnable;
+    }
+
+    void setItemCreateZPos(f32 pos)
+    {
+        mItemCreateZPos = pos;
+    }
+
+    void setItemCreateYOffsetUpSingle(f32 offset)
+    {
+        mItemCreateYOffsetUpSingle = offset;
+    }
+
+    void setItemCreateYOffsetDownSingle(f32 offset)
+    {
+        mItemCreateYOffsetDownSingle = offset;
+    }
+
+    void setItemCreateYOffsetUpMulti(f32 offset)
+    {
+        mItemCreateYOffsetUpMulti = offset;
+    }
+
+    void setItemCreateYOffsetDownMulti(f32 offset)
+    {
+        mItemCreateYOffsetDownMulti = offset;
+    }
+
+    void setType(Type type)
+    {
+        mType = type;
+    }
+
+    void setScreenOutCheckEnable(bool screen_out_check)
+    {
+        mScreenOutCheckEnable = screen_out_check;
+    }
 
 protected:
     f32     mItemCreateZPos;
