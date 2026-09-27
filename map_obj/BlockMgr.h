@@ -42,6 +42,13 @@ public:
     void destroy2(ActorBlockBase::DestroyedParam2& param, bool no_play_sound, bool no_add_score);
     // Address: 0x0270C798
     void doDestroyAt(DestroyParam& param);
+    
+    // Address: 0x0270C18C
+    void feverModeBlockReact(sead::Vector2f& at);
+    // Address: 0x0270BBB4
+    void feverModeHitBlockAt(sead::Vector2f& at);
+    // Address: 0x0270C9D0
+    void hitBlockAt(sead::Vector2f& at);
 
     // Address: 0x0270D2F4
     ActorBlockBase::ActiveState getBlockActiveState(sead::Vector3f& pos_for_state, u32 area_no);
