@@ -140,6 +140,137 @@ public:
 protected:
     void preSpawnItem_PropellerOrCoin_();
 
+public:
+    f32 getmItemCreateZPos() const
+    {
+        return mItemCreateZPos;
+    }
+
+    f32 getmItemCreateYOffsetUpSingle() const
+    {
+        return mItemCreateYOffsetUpSingle;
+    }
+
+    f32 getmItemCreateYOffsetDownSingle() const
+    {
+        return mItemCreateYOffsetDownSingle;
+    }
+
+    f32 getmItemCreateYOffsetUpMulti() const
+    {
+        return mItemCreateYOffsetUpMulti;
+    }
+
+    f32 getmItemCreateYOffsetDownMulti() const
+    {
+        return mItemCreateYOffsetDownMulti;
+    }
+
+    Type getmType() const
+    {
+        return mType;
+    }
+
+    u32 get_1cc0() const
+    {
+        return _1cc0;
+    }
+
+    u8 get_1cc4() const
+    {
+        return _1cc4;
+    }
+
+    u8 get_1cc5() const
+    {
+        return _1cc5;
+    }
+
+    u8 get_1cc6() const
+    {
+        return _1cc6;
+    }
+
+    u32 get_1cc8() const
+    {
+        return _1cc8;
+    }
+
+    bool getmScreenOutCheckEnable() const
+    {
+        return mScreenOutCheckEnable;
+    }
+
+    u8 get_1ccd() const
+    {
+        return _1ccd;
+    }
+
+    void setmItemCreateZPos(f32 pos)
+    {
+        mItemCreateZPos = pos;
+    }
+
+    void setmItemCreateYOffsetUpSingle(f32 offset)
+    {
+        mItemCreateYOffsetUpSingle = offset;
+    }
+
+    void setmItemCreateYOffsetDownSingle(f32 offset)
+    {
+        mItemCreateYOffsetDownSingle = offset;
+    }
+
+    void setmItemCreateYOffsetUpMulti(f32 offset)
+    {
+        mItemCreateYOffsetUpMulti = offset;
+    }
+
+    void setmItemCreateYOffsetDownMulti(f32 offset)
+    {
+        mItemCreateYOffsetDownMulti = offset;
+    }
+
+    void setmType(Type setter)
+    {
+        mType = setter;
+    }
+
+    void set_1cc0(u32 setter)
+    {
+        _1cc0 = setter;
+    }
+
+    void set_1cc4(u8 setter)
+    {
+        _1cc4 = setter;
+    }
+
+    void set_1cc5(u8 setter)
+    {
+        _1cc5 = setter;
+    }
+
+    void set_1cc6(u8 setter)
+    {
+        _1cc6 = setter;
+    }
+
+    void set_1cc8(u32 setter)
+    {
+        _1cc8 = setter;
+    }
+
+    void setmScreenOutCheckEnable(bool screen_out_check)
+    {
+        mScreenOutCheckEnable = screen_out_check;
+    }
+
+    void set_1ccd(u8 setter)
+    {
+        _1ccd = setter;
+    }
+
 protected:
     f32     mItemCreateZPos;
     f32     mItemCreateYOffsetUpSingle;
