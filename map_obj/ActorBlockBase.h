@@ -171,39 +171,9 @@ public:
         return mType;
     }
 
-    u32 get_1cc0() const
-    {
-        return _1cc0;
-    }
-
-    u8 get_1cc4() const
-    {
-        return _1cc4;
-    }
-
-    u8 get_1cc5() const
-    {
-        return _1cc5;
-    }
-
-    u8 get_1cc6() const
-    {
-        return _1cc6;
-    }
-
-    u32 get_1cc8() const
-    {
-        return _1cc8;
-    }
-
     bool getScreenOutCheckEnable() const
     {
         return mScreenOutCheckEnable;
-    }
-
-    u8 get_1ccd() const
-    {
-        return _1ccd;
     }
 
     void setItemCreateZPos(f32 pos)
@@ -231,44 +201,14 @@ public:
         mItemCreateYOffsetDownMulti = offset;
     }
 
-    void setType(Type setter)
+    void setType(Type type)
     {
-        mType = setter;
-    }
-
-    void set_1cc0(u32 setter)
-    {
-        _1cc0 = setter;
-    }
-
-    void set_1cc4(u8 setter)
-    {
-        _1cc4 = setter;
-    }
-
-    void set_1cc5(u8 setter)
-    {
-        _1cc5 = setter;
-    }
-
-    void set_1cc6(u8 setter)
-    {
-        _1cc6 = setter;
-    }
-
-    void set_1cc8(u32 setter)
-    {
-        _1cc8 = setter;
+        mType = type;
     }
 
     void setScreenOutCheckEnable(bool screen_out_check)
     {
         mScreenOutCheckEnable = screen_out_check;
-    }
-
-    void set_1ccd(u8 setter)
-    {
-        _1ccd = setter;
     }
 
 protected:
