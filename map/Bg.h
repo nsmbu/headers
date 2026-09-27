@@ -70,7 +70,6 @@ public:
     // Address: 0x02685000
     static u16* getUnitCurrentCdFile(u16 x, u16 y, u8 layer, s32* block_idx = nullptr);
 
-    // Address: 0x026850F0
     u64 getBgCheckData(u16 x, u16 y, u8 layer, bool with_p_sw = true);  // See BgUnitCode
     u64 getBgCheckData(f32 x, f32 y, u8 layer, bool with_p_sw = true)   // ^^^
     {
