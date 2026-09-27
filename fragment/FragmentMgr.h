@@ -18,4 +18,6 @@ class FragmentMgr   // vtbl Address: 0x100B6098
 public:
     // Address: 0x024B15AC
     void createWaterSplashEff(const sead::Vector3f& pos, u8 layer, EffectID effect_id);
+    // Address: 0x024B1754
+    void createBigBlockFragEff(const sead::Vector3f& pos, s32);
 };
