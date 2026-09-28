@@ -1,5 +1,6 @@
 #pragma once
 
+#include "types.h"
 #include <game/FieldGame.h>
 
 #include <framework/seadCalculateTask.h>
@@ -85,11 +86,18 @@ public:
         getPlayerData(player_no)->enemy_down_cnt++;
     }
 
+    u32 getExeFrame() const
+    {
+        return mExeFrame;
+    }
+
 private:
     bool            mCourseRestart;
     GamesceneBase*  mGamescene;
     u32             _d0[(0x124 - 0xD0) / sizeof(u32)];
     FieldGameData   mGameData;
-    u32             _308[(0x5A4 - 0x308) / sizeof(u32)];
+    u32             _308[(0x44C - 0x308) / sizeof(u32)];
+    u32             mExeFrame;
+    u32             _450[(0x5A4 - 0x450) / sizeof(u32)];
 };
 static_assert(sizeof(CourseTask) == 0x5A4);
