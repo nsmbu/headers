@@ -16,7 +16,7 @@ public:
     // Address: 0x02923394
     PlayerModelMgr(PlayerMode mode, PlayerCharacter mii_color, Mii::SlotID slot_id, sead::Heap* ffl_tmp_heap, bool override_lightmap = true);
 
-    PlayerMode getPlayerMode()
+    PlayerMode getPlayerMode() const
     {
         return mModel->getPlayerMode();
     }
