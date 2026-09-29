@@ -35,6 +35,9 @@ public:
     };
     static_assert(sizeof(DestroyParam) == 0x18, "DestroyParam size mismatch");
 
+    /**
+     * @brief When getting a unit, if you bit shift it 10 right and mask 0xF, you will get either this or HatenaConentIndex depending on if the unit code is cType_BreakBlock or cType_Q_Block. RengaContentIndex is for brick blocks.
+     */
     enum RengaContentIndex
     {
         cRengaContentIndex_None             = 0,
@@ -49,9 +52,13 @@ public:
         cRengaContentIndex_Penguin          = 9,
         cRengaContentIndex_Yoshi            = 10,
         cRengaContentIndex_IceFlower        = 11,
-        cRengaContentIndex_SquirrelMushroom = 12,
+        cRengaContentIndex_Num              = 12,
+        cRengaContentIndex_SquirrelMushroom = 13,
     };
 
+    /**
+     * @brief When getting a unit, if you bit shift it 10 right and mask 0xF, you will get either this or RengaContentIndex depending on if the unit code is cType_BreakBlock or cType_Q_Block. HatenaConentIndex is for question.
+     */
     enum HatenaConentIndex
     {
         cHatenaConentIndex_Coin             = 0,
@@ -73,7 +80,7 @@ public:
         sead::Vector2f          position;
         u32                     content_index; // use Renga/Hatena content index
         s8                      sensor_id;
-        u8                      player_breaks_bricks;
+        bool                    player_breaks_bricks;
         s8                      player_no;
         s8                      player_type;
         ActorBgCollisionCheck*  collision_check;
