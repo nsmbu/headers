@@ -1,6 +1,5 @@
 #pragma once
 
-#include "types.h"
 #include <game/FieldGame.h>
 
 #include <framework/seadCalculateTask.h>
