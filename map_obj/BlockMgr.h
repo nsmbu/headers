@@ -77,10 +77,16 @@ public:
         cHatenaContentIndex_SquirrelMushroom = 11,
     };
 
+    union ContentIndex
+    {
+        RengaContentIndex renga; // Brick Block
+        HatenaContentIndex hatena; // Question Block
+    };
+
     struct HitParam
     {
         sead::Vector2f          position;
-        u32                     content_index; // use Renga/Hatena content index
+        ContentIndex            content_index; // use Renga/Hatena content index
         s8                      sensor_id;
         bool                    player_breaks_bricks;
         s8                      player_no;
