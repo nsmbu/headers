@@ -26,22 +26,22 @@ public:
     // Address: 0x0251D8FC
     void blockHitInit_() override;
     // Address: 0x0251FB14
-    void setWaterFunsui_(bool enable) override;
+    void setWaterFunsui(bool enable) override;
     // Address: 0x0251FC54
-    void beginFunsui_() override;
+    void beginFunsui() override;
     // Address: 0x0251FC58
-    void endFunsui_(f32 speed_y) override;
+    void endFunsui(f32 speed_y) override;
     // Address: 0x0251FC5C
-    bool isFunsui_() const override;
+    bool isFunsui() const override;
     // Address: 0x0251FC4C
     bool isQuakeEnable_() override;
 
     // Address: 0x0251D918
     bool setTouchDrcDamage_(const sead::Vector3f& pos) override;
     // Address: 0x0251FB2C
-    void setFunsuiPos_(sead::Vector2f dst) override;
+    void setFunsuiPos(sead::Vector2f dst) override;
     // Address: 0x0251FB40
-    void setFunsuiSpeedY_(f32 speed) override;
+    void setFunsuiSpeedY(f32 speed) override;
     // Address: 0x0251FB48
     bool smokeDamageEnable_Yogan_(f32 surface_pos_y) override;
     // Address: 0x0251FB50

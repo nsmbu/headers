@@ -52,17 +52,17 @@ public:
     void poisonSplashEffect(const sead::Vector3f& pos) override;
     void blockHitInit_() override;
 
-    void setWaterFunsui_(bool enable) override;
-    void beginFunsui_() override;
-    void endFunsui_(f32 speed_y) override;
-    bool isFunsui_() const override;
+    void setWaterFunsui(bool enable) override;
+    void beginFunsui() override;
+    void endFunsui(f32 speed_y) override;
+    bool isFunsui() const override;
     bool isQuakeEnable_() override;
     // Address: 0x0251771C
     void setQuake_(QuakeType type) override;
     
     bool setTouchDrcDamage_(const sead::Vector3f& pos) override;
-    void setFunsuiPos_(sead::Vector2f dst) override;
-    void setFunsuiSpeedY_(f32 speed) override;
+    void setFunsuiPos(sead::Vector2f dst) override;
+    void setFunsuiSpeedY(f32 speed) override;
     bool smokeDamageEnable_Yogan_(f32 surface_pos_y) override;
     bool smokeDamageEnable_Poison_(f32 surface_pos_y) override;
     void changeState(const StateID& state_id) override;
