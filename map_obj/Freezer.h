@@ -1,6 +1,5 @@
 #pragma once
 
-#include "types.h"
 #include <actor/ActorState.h>
 #include <graphics/AnimModel.h>
 #include <collision/ActorBoxBgCollision.h>
@@ -19,8 +18,8 @@ public:
 
 protected:
     AnimModel*              mIceModel;
-    AnimModel*              mCoinModel;
-    ShaderParamAnimation*   mCoinShaderAnim;
+    AnimModel*              mIceChunkModel;
+    ShaderParamAnimation*   mIceChunkShaderAnim;
     u8                      _17D4[4];
     ActorBoxBgCollision     mBoxCollision;
     sead::Vector3f          _1A68;
