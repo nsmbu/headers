@@ -25,7 +25,7 @@ public:
         mFeverMode = fever_mode;
     }
 
-private:
+public:
     sead::Vector2f  _10;
     sead::Vector2f  _18;
     sead::Vector2f  _20;
@@ -54,6 +54,9 @@ private:
     u32             _80;
     u32             _84;
     u8              _88;
+    u8              _89;
+    u8              _8a;
+    u8              _8b;
     u8              _8c;
     u8              _90;
     u8              _91;
