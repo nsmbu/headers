@@ -1525,7 +1525,7 @@ public:
     // Address: 0x100041BC
     static const s32 cProfileID_11A;                                       // 282
     // Address: 0x100041C0
-    static const s32 cProfileID_11B;                                       // 283
+    static const s32 cProfileID_Freezer;                                   // 283
     // Address: 0x100041C4
     static const s32 cProfileID_11C;                                       // 284
     // Address: 0x100041C8
