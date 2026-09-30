@@ -9,9 +9,12 @@ class Freezer : public ActorState
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EAB74
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EAB78
     SEAD_RTTI_OVERRIDE(Freezer, ActorState)
+
 public:
     // Address: 0x02779968
     Freezer(const ActorCreateParam& param);
+
+    // TODO: other methods, states
 
     u32 getIsMelting() const
     {
@@ -31,4 +34,4 @@ protected:
     u8                      mIceEfMaker[0x234]; // TODO: IceEfMaker
     u8                      _1cb4[4];
 };
-static_assert(sizeof(Freezer) == 0x1CB8);
+static_assert(sizeof(Freezer) == 0x1CB8, "Freezer size mismatch");
