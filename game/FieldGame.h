@@ -39,7 +39,7 @@ public:
         return mCoinNum;
     }
 
-    u32 getCurrentScrore() const
+    u32 getCurrentScore() const
     {
         return mCurrentScore;
     }
