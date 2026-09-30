@@ -39,6 +39,16 @@ public:
         return mCoinNum;
     }
 
+    u32 getCurrentScrore() const
+    {
+        return mCurrentScore;
+    }
+
+    bool getStarCoinCollection(u32 index) const
+    {
+        return mCollectedStarCoins[index];
+    }
+
     const FieldGameMode& getGameMode() const
     {
         return mGameMode;
@@ -61,7 +71,14 @@ private:
         cPlayerNum
     >                   mPlayerData;
     s32                 mCoinNum;
-    u32                 _138[(0x15C - 0x138) / sizeof(u32)];
+    u32                 mCurrentScore;
+    u8                  _13c;
+    sead::SafeArray<
+        u8,
+        3
+    >                   mCollectedStarCoins;
+    u8                  mExistingStarCoinsFlag;
+    u32                 _144[(0x15C - 0x144) / sizeof(u32)];
     FieldGameMode       mGameMode;
     u32                 _160[(0x1A8 - 0x160) / sizeof(u32)];
     InfoStats           mStatsData;
