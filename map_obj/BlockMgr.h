@@ -77,17 +77,15 @@ public:
         cHatenaContentIndex_SquirrelMushroom = 11,
     };
 
-    union ContentIndex
-    {
-        u32                any;
-        RengaContentIndex  renga; // cType_BreakBlock
-        HatenaContentIndex hatena; // cType_Q_Block
-    };
-    
     struct HitParam
     {
         sead::Vector2f          position;
-        ContentIndex            content_index;
+        union
+        {
+            u32                content_index;
+            RengaContentIndex  renga_content_index; // cType_BreakBlock
+            HatenaContentIndex hatena_content_index; // cType_Q_Block
+        };
         s8                      sensor_id;
         bool                    player_breaks_bricks;
         s8                      player_no;
