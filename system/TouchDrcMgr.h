@@ -25,7 +25,7 @@ public:
         mFeverMode = fever_mode;
     }
 
-public:
+private:
     sead::Vector2f  _10;
     sead::Vector2f  _18;
     sead::Vector2f  _20;
