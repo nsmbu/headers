@@ -36,11 +36,12 @@ public:
     static_assert(sizeof(DestroyParam) == 0x18, "DestroyParam size mismatch");
 
     /**
-     * @brief When getting a unit, if you bit shift it 10 right and mask 0xF, you will get either this or HatenaConentIndex depending on if the unit code is cType_BreakBlock or cType_Q_Block. RengaContentIndex is for brick blocks.
+     * @brief Content enum for cType_BreakBlock units.
+     * @details Bit shift the unit 10 right and mask 0xF to get this.
      */
     enum RengaContentIndex
     {
-        cRengaContentIndex_None             = 0,
+        cRengaContentIndex_Empty            = 0,
         cRengaContentIndex_Coin             = 1,
         cRengaContentIndex_MultiCoin        = 2,
         cRengaContentIndex_FireFlower       = 3,
@@ -52,27 +53,28 @@ public:
         cRengaContentIndex_Penguin          = 9,
         cRengaContentIndex_Yoshi            = 10,
         cRengaContentIndex_IceFlower        = 11,
-        cRengaContentIndex_Num              = 12,
+        cRengaContentIndex_None             = 12, // Used by Pa0 Object #XX (Replace with the buggy brick block's object no.)
         cRengaContentIndex_SquirrelMushroom = 13,
     };
 
     /**
-     * @brief When getting a unit, if you bit shift it 10 right and mask 0xF, you will get either this or RengaContentIndex depending on if the unit code is cType_BreakBlock or cType_Q_Block. HatenaConentIndex is for question.
+     * @brief Content enum for cType_Q_Block units.
+     * @details Bit shift the unit 10 right and mask 0xF to get this.
      */
-    enum HatenaConentIndex
+    enum HatenaContentIndex
     {
-        cHatenaConentIndex_Coin             = 0,
-        cHatenaConentIndex_FireFlower       = 1,
-        cHatenaConentIndex_Star             = 2,
-        cHatenaConentIndex_ContinuousStar   = 3,
-        cHatenaConentIndex_Vine             = 4,
-        cHatenaConentIndex_Spring           = 5,
-        cHatenaConentIndex_MiniMushroom     = 6,
-        cHatenaConentIndex_Propeller        = 7,
-        cHatenaConentIndex_Penguin          = 8,
-        cHatenaConentIndex_Yoshi            = 9,
-        cHatenaConentIndex_IceFlower        = 10,
-        cHatenaConentIndex_SquirrelMushroom = 11,
+        cHatenaContentIndex_Coin             = 0,
+        cHatenaContentIndex_FireFlower       = 1,
+        cHatenaContentIndex_Star             = 2,
+        cHatenaContentIndex_ContinuousStar   = 3,
+        cHatenaContentIndex_Vine             = 4,
+        cHatenaContentIndex_Spring           = 5,
+        cHatenaContentIndex_MiniMushroom     = 6,
+        cHatenaContentIndex_Propeller        = 7,
+        cHatenaContentIndex_Penguin          = 8,
+        cHatenaContentIndex_Yoshi            = 9,
+        cHatenaContentIndex_IceFlower        = 10,
+        cHatenaContentIndex_SquirrelMushroom = 11,
     };
 
     struct HitParam
