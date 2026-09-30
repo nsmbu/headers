@@ -41,7 +41,7 @@ public:
      */
     enum RengaContentIndex
     {
-        cRengaContentIndex_Empty            = 0,
+        cRengaContentIndex_Empty            = 0,  // Can be broken by big players
         cRengaContentIndex_Coin             = 1,
         cRengaContentIndex_MultiCoin        = 2,
         cRengaContentIndex_FireFlower       = 3,
@@ -53,7 +53,7 @@ public:
         cRengaContentIndex_Penguin          = 9,
         cRengaContentIndex_Yoshi            = 10,
         cRengaContentIndex_IceFlower        = 11,
-        cRengaContentIndex_None             = 12, // Used by Pa0 Object #XX (Replace with the buggy brick block's object no.)
+        cRengaContentIndex_None             = 12, // Used by Pa0 Object #83
         cRengaContentIndex_SquirrelMushroom = 13,
     };
 
@@ -79,14 +79,14 @@ public:
 
     union ContentIndex
     {
-        RengaContentIndex renga; // Brick Block
-        HatenaContentIndex hatena; // Question Block
+        RengaContentIndex  renga; // cType_BreakBlock
+        HatenaContentIndex hatena; // cType_Q_Block
     };
-
+    
     struct HitParam
     {
         sead::Vector2f          position;
-        ContentIndex            content_index; // use Renga/Hatena content index
+        ContentIndex            content_index;
         s8                      sensor_id;
         bool                    player_breaks_bricks;
         s8                      player_no;
@@ -122,9 +122,9 @@ public:
     ActorBlockBase::Type unitToBlockType(u16 unit);
 
 protected:
-    u8                  _0[101][16];
-    BlockState          mBlockState[3001];
-    u32                 _f0d4; // Used to call it mArr1Count
-    u32                 mBlockStateCount;
+    u8         _0[101][16];
+    BlockState mBlockState[3001];
+    u32        _f0d4; // Used to call it mArr1Count
+    u32        mBlockStateCount;
 };
 static_assert(sizeof(BlockMgr) == 0xF0DC, "BlockMgr size mismatch");
