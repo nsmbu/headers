@@ -41,7 +41,7 @@ public:
      */
     enum RengaContentIndex
     {
-        cRengaContentIndex_Empty            = 0,  // Can be broken by big players
+        cRengaContentIndex_Empty            = 0,
         cRengaContentIndex_Coin             = 1,
         cRengaContentIndex_MultiCoin        = 2,
         cRengaContentIndex_FireFlower       = 3,
@@ -79,6 +79,7 @@ public:
 
     union ContentIndex
     {
+        u32                any;
         RengaContentIndex  renga; // cType_BreakBlock
         HatenaContentIndex hatena; // cType_Q_Block
     };
@@ -114,12 +115,13 @@ public:
     ActorBlockBase::ActiveState getBlockActiveState(sead::Vector3f& pos_for_state, u32 area_no);
     // Address: 0x0270B7EC
     ActorBlockBase::ActiveState getMultiCoinStateAt(sead::Vector3f& at);
+
     // Address: 0x0270D420
     void setStateForBlockAt(sead::Vector3f& at, ActorBlockBase::ActiveState state, u32 area_no);
+    // Address: 0x0270B6E0
+    ActorBlockBase::Type unitToType(u16 unit);
     // Address: 0x0270D294
     void update();
-    // Address: 0x0270B6E0
-    ActorBlockBase::Type unitToBlockType(u16 unit);
 
 protected:
     u8         _0[101][16];
