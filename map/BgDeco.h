@@ -56,9 +56,9 @@ public:
         return mResFile;
     }
 
-    void setResFile(nw::g3d::ResFile* resFile)
+    void setResFile(nw::g3d::ResFile* res_file)
     {
-        mResFile = resFile;
+        mResFile = res_file;
     }
 
     agl::TextureData& getFlowerTexture(u32 index)
