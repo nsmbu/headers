@@ -41,8 +41,6 @@ public:
     // Address: 0x024C46CC
     Quake();
 
-    // Address: 0x024C4834
-    u32 getRandomU32(u32 ceiling);
     // Address: 0x024C4B78
     void shockCamera(s8 player_no, ShockType type, s32 unk_flag);
     // Address: 0x024C4AEC
@@ -51,7 +49,7 @@ public:
     // Address: 0x024C4BD8
     void startShock(s8 player_no, ShockType type, s32 shock_flag, s32 combo_flag, bool motor_related);
     // Address: 0x024C4D3C
-    void startShockAll(ShockType type, s32 shock_flag, s32 combo_flag, bool param_5);
+    void startShockAll(ShockType type, s32 shock_flag, s32 combo_flag, bool);
 
     // Address: 0x024C4870
     void update();
@@ -59,7 +57,6 @@ public:
     u32 getFlag() const
     {
         return mFlag;
-    
     }
 
     const sead::Vector2f& getOffset() const
