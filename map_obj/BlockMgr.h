@@ -39,42 +39,44 @@ public:
      * @brief Content enum for cType_BreakBlock units.
      * @details Bit shift the unit 10 right and mask 0xF to get this.
      */
-    enum RengaContentIndex
+    enum RengaContent
     {
-        cRengaContentIndex_Empty            = 0,
-        cRengaContentIndex_Coin             = 1,
-        cRengaContentIndex_MultiCoin        = 2,
-        cRengaContentIndex_FireFlower       = 3,
-        cRengaContentIndex_Star             = 4,
-        cRengaContentIndex_1UP              = 5,
-        cRengaContentIndex_Vine             = 6,
-        cRengaContentIndex_MiniMushroom     = 7,
-        cRengaContentIndex_Propeller        = 8,
-        cRengaContentIndex_Penguin          = 9,
-        cRengaContentIndex_Yoshi            = 10,
-        cRengaContentIndex_IceFlower        = 11,
-        cRengaContentIndex_None             = 12, // Used by Pa0 Object #83
-        cRengaContentIndex_SquirrelMushroom = 13,
+        cRengaContent_Empty            = 0,
+        cRengaContent_Coin             = 1,
+        cRengaContent_MultiCoin        = 2,
+        cRengaContent_FireFlower       = 3,
+        cRengaContent_Star             = 4,
+        cRengaContent_1UP              = 5,
+        cRengaContent_Vine             = 6,
+        cRengaContent_MiniMushroom     = 7,
+        cRengaContent_Propeller        = 8,
+        cRengaContent_Penguin          = 9,
+        cRengaContent_Yoshi            = 10,
+        cRengaContent_IceFlower        = 11,
+        cRengaContent_None             = 12, // Used by Pa0 Object #83
+        cRengaContent_SquirrelMushroom = 13,
+        cRengaContent_Num              = 14,
     };
 
     /**
      * @brief Content enum for cType_Q_Block units.
      * @details Bit shift the unit 10 right and mask 0xF to get this.
      */
-    enum HatenaContentIndex
+    enum HatenaContent
     {
-        cHatenaContentIndex_Coin             = 0,
-        cHatenaContentIndex_FireFlower       = 1,
-        cHatenaContentIndex_Star             = 2,
-        cHatenaContentIndex_ContinuousStar   = 3,
-        cHatenaContentIndex_Vine             = 4,
-        cHatenaContentIndex_Spring           = 5,
-        cHatenaContentIndex_MiniMushroom     = 6,
-        cHatenaContentIndex_Propeller        = 7,
-        cHatenaContentIndex_Penguin          = 8,
-        cHatenaContentIndex_Yoshi            = 9,
-        cHatenaContentIndex_IceFlower        = 10,
-        cHatenaContentIndex_SquirrelMushroom = 11,
+        cHatenaContent_Coin             = 0,
+        cHatenaContent_FireFlower       = 1,
+        cHatenaContent_Star             = 2,
+        cHatenaContent_ContinuousStar   = 3,
+        cHatenaContent_Vine             = 4,
+        cHatenaContent_Spring           = 5,
+        cHatenaContent_MiniMushroom     = 6,
+        cHatenaContent_Propeller        = 7,
+        cHatenaContent_Penguin          = 8,
+        cHatenaContent_Yoshi            = 9,
+        cHatenaContent_IceFlower        = 10,
+        cHatenaContent_SquirrelMushroom = 11,
+        cHatenaContent_Num              = 12,
     };
 
     struct HitParam
@@ -82,12 +84,16 @@ public:
         sead::Vector2f          position;
         union
         {
-            u32                content_index;
-            RengaContentIndex  renga_content_index; // cType_BreakBlock
-            HatenaContentIndex hatena_content_index; // cType_Q_Block
-        };
+            u32           index;
+            RengaContent  renga; // cType_BreakBlock
+            HatenaContent hatena; // cType_Q_Block
+        } content;
         s8                      sensor_id;
-        bool                    player_breaks_bricks;
+        union
+        {
+            bool    player_breaks_bricks;
+            u8      _d;
+        };
         s8                      player_no;
         s8                      player_type;
         ActorBgCollisionCheck*  collision_check;
