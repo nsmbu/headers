@@ -49,7 +49,7 @@ public:
     void shockMotor(s8 player_no, ShockType type, s32 unk_flag = 0, bool motor_related = false);
 
     // Address: 0x024C4BD8
-    void startShock(s8 player_no, ShockType type, s32 shock_flag, s32 unk_flag, bool motor_related);
+    void startShock(s8 player_no, ShockType type, s32 shock_flag, s32 combo_flag, bool motor_related);
     // Address: 0x024C4D3C
     void startShockAll(ShockType type, s32 shock_flag, s32 combo_flag, bool param_5);
 
