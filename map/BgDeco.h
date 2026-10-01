@@ -51,6 +51,16 @@ public:
         return mButterflyRenderer;
     }
 
+    nw::g3d::ResFile*& getResFile()
+    {
+        return mResFile;
+    }
+
+    void setResFile(nw::g3d::ResFile* resFile)
+    {
+        mResFile = resFile;
+    }
+
     agl::TextureData& getFlowerTexture(u32 index)
     {
         return mFlowerTextures[index];
