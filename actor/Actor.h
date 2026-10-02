@@ -56,6 +56,18 @@ public:
         cScreenOutFlag_SkipTottenCheck    = 1 << 4  ///< Skip checking if Nabbit has passed to the right of the actor's visible range.
     };
 
+    /**
+     * @brief Defines which face was hit for block actors.
+     */
+    enum BlockHitFace : u8
+    {
+        cHitFace_None   = 0,
+        cHitFace_Bottom = 1,
+        cHitFace_Top    = 2,
+        cHitFace_Side   = 3
+    };
+    static_assert(sizeof(BlockHitFace) == 1);
+
 public:
     virtual void setPlayerNo(s8 id)
     {
@@ -377,6 +389,16 @@ public:
         return mSwitchFlag1;
     }
 
+    BlockHitFace getBlockHitFace() const
+    {
+        return mBlockHitFace;
+    }
+
+    void setBlockHitFace(BlockHitFace face)
+    {
+        mBlockHitFace = face;
+    }
+
     u32 getProfFlag() const
     {
         return mProfFlag;
@@ -543,7 +565,7 @@ protected:
     u16                     mCreateFlag;                // Inited to ActorCreateInfo::flag
     u32                     mBlockHitTimer;
     DirType                 mBlockHitDirection;
-    u8                      _220;
+    BlockHitFace            mBlockHitFace;
     DirType                 mCarryDirection;
     u32                     mThrowPlayerNo;
     s32                     mComboCnt;
