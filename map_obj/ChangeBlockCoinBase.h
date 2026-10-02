@@ -54,6 +54,7 @@ public:
     // TODO: inline
     virtual bool vf2C4(); // Checks if current state is StateID_Wait or equivalent
 
+    // Address: 0x02726654
     virtual void onDrcTouch();
 
     // Address: 0x02726760
