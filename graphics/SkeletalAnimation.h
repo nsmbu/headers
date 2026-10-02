@@ -11,7 +11,7 @@
 class ModelG3d;
 class ModelResource;
 
-class SkeletalAnimation : public Animation
+class SkeletalAnimation : public Animation  // vtbl Address: 0x100BDF44
 {
 public:
     // Address: 0x024FD7E8
@@ -55,6 +55,7 @@ public:
     s32 getIndex() const { return mIndex; }
 
 private:
+    // Address: 0x024FD86C
     static void updateInitArg_(nw::g3d::SkeletalAnimObj::InitArg* arg, const ModelResource* mdl_res);
 
 private:
