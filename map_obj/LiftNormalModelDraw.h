@@ -18,12 +18,12 @@ public:
         cModelType_BoltPlatform,
         cModelType_BossKoopaLift,
         cModelType_BossKoopaLiftDown,
-        cModelType_YellowMushroom,
+        cModelType_YellowSeesawMushroom,
         cModelType_WoodSnow,
         cModelType_Cloud,
         cModelType_Tower,
         cModelType_FerrisWheel,
-        cModelType_YellowMushroom2,
+        cModelType_BlueSeesawMushroom,
     };
 
 public:
