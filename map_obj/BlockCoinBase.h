@@ -55,18 +55,6 @@ public:
     };
     static_assert(sizeof(MoveType) == 4);
 
-    /**
-     * @brief Defines which face of the block was hit.
-     */
-    enum HitFace : u8
-    {
-        cHitFace_None   = 0,
-        cHitFace_Bottom = 1,
-        cHitFace_Top    = 2,
-        cHitFace_Side   = 3
-    };
-    static_assert(sizeof(HitFace) == 1);
-
     struct PlayerHit
     {
         u8 _0[4];
@@ -238,7 +226,7 @@ protected:
     u8                                     _1aaa;
     u8                                     mBumpUpTimer;
     bool                                   mSideHitBumping;
-    HitFace                                mHitFace;
+    BlockHitFace                           mHitFace;
     BumpMode                               mBumpMode;
     u8                                     _1aaf;
     u8                                     _1ab0;
