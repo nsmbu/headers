@@ -65,7 +65,7 @@ public:
         return mDrcTouchCallback;
     }
 
-    const sead::Vector3f& getPosForState()
+    const sead::Vector3f& getPosForState() const
     {
         return mPosForState;
     }
