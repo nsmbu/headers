@@ -126,7 +126,7 @@ public:
     virtual void beginPoisonSplash(f32);
 
     // Address: 0x02171858
-    virtual f64 getLightRad()
+    virtual f32 getLightRad()
     {
         return 120.0;
     }
