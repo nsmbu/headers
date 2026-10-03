@@ -186,6 +186,16 @@ public:
         return mBoxBgCollision;
     }
 
+    u8 getBumpUpTimer() const
+    {
+        return mBumpUpTimer;
+    }
+
+    void setBumpUpTimer(u8 timer)
+    {
+        mBumpUpTimer = timer;
+    }
+
     BumpMode getBumpMode() const
     {
         return mBumpMode;
