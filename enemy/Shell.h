@@ -54,7 +54,7 @@ public:
     // Address: 0x024521A0
     Shell(const ActorCreateParam& param);
     // Address: 0x02459724
-    virtual ~Shell();
+    virtual ~Shell(); //! Not sure
 
 protected:
     // Address: 0x02452EAC
@@ -89,17 +89,17 @@ public:
     }
 
     // Address: 0x024573D4
-    virtual bool vf11C(); //! not sure
+    void beginFunsui_() override;
     // Address: 0x02457508
-    virtual void vf124(); //! not sure
+    void endFunsui_(f32 speed_y) override;
     // Address: 0x024596E4
-    virtual bool vf12C(); //! not sure
+    bool isFunsui_() const override;
 
     // Address: 0x02457550
-    virtual void getRect(); //! not sure
+    void getBox_(sead::BoundBox2f& box) override;
 
     // Address: 0x024572C4
-    bool vf18C() override; //! not sure
+    bool vf18C() override;
 
     // Address: 0x024562C4
     void setIceAnm() override;
@@ -164,7 +164,9 @@ public:
     // executeState_Sleep       Address: 0x02457788
     // finalizeState_Sleep      Address: 0x02457A90
     DECLARE_STATE_VIRTUAL_ID_OVERRIDE(Shell, Sleep);
-    
+
+    virtual void vf574() = 0;
+
     // Address: 0x02452A3C
     virtual void vf57C(Actor*);
     // Address: 0x02454E04
@@ -205,6 +207,9 @@ public:
     
     // Address: 0x02456EE4
     virtual bool vf5CC();
+
+    virtual void vf5D4() = 0;
+
     // Address: 0x024575AC
     virtual EffectID vf5DC();
     
@@ -226,12 +231,19 @@ public:
     }
     // Address: 0x024575C0
     virtual EffectID vf604();
+
+    virtual void vf60C() = 0;
+
+    virtual void vf614() = 0;
+
+    // Address: Deleted
+    virtual void vf61C();
     
-    // StateID_Slide            Address: 0x102072C0 // ! Hmmm. this should get checked over
-    // initializeState_Slide    Address: 0x02457CE8 // ! Hmmm. this should get checked over
-    // executeState_Slide       Address: 0x02457F60 // ! Hmmm. this should get checked over
-    // finalizeState_Slide      Address: 0x02458368 // ! Hmmm. this should get checked over
-    DECLARE_STATE_VIRTUAL_ID_OVERRIDE(Shell, Slide); // ! Hmmm. this should get checked over
+    // StateID_Slide            Address: 0x102072C0
+    // initializeState_Slide    Address: 0x02457CE8
+    // executeState_Slide       Address: 0x02457F60
+    // finalizeState_Slide      Address: 0x02458368
+    DECLARE_STATE_VIRTUAL_ID_OVERRIDE(Shell, Slide);
     
     // Address: 0x02458614
     virtual void vf63C();
