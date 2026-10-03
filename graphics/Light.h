@@ -26,6 +26,9 @@ public:
         f32* = nullptr
     );
 
+    // Address: 0x024E2784
+    void calcLayerOverlap();
+
 private:
     bool            _10;
     void*           _14;
