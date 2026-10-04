@@ -377,6 +377,26 @@ public:
         return mSwitchFlag1;
     }
 
+    u32 getBlockHitTimer() const
+    {
+        return mBlockHitTimer;
+    }
+
+    DirType getBlockHitDirection() const
+    {
+        return mBlockHitDirection;
+    }
+
+    void setBlockHitTimer(u32 hit)
+    {
+        mBlockHitTimer = hit;
+    }
+
+    void setBlockHitDirection(DirType hit)
+    {
+        mBlockHitDirection = hit;
+    }
+
     u32 getProfFlag() const
     {
         return mProfFlag;
