@@ -102,7 +102,7 @@ protected:
     u8                       _1cfc[4];
     u32                      _1d00;
     u32                      _1d04;
-    EnemyBoyoMgr             mBoyoMgr;
+    EnemyBoyoMgr*            mBoyoMgr;
     RouletteBlockDrcTouchCB  mDrcTouchCallback;
 };
 static_assert(sizeof(RouletteBlock) == 0x1D10, "RouletteBlock size mismatch");
