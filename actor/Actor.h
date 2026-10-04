@@ -387,14 +387,14 @@ public:
         return mBlockHitDirection;
     }
 
-    void setBlockHitTimer(u32 hit)
+    void setBlockHitTimer(u32 time)
     {
-        mBlockHitTimer = hit;
+        mBlockHitTimer = time;
     }
 
-    void setBlockHitDirection(DirType hit)
+    void setBlockHitDirection(DirType dir)
     {
-        mBlockHitDirection = hit;
+        mBlockHitDirection = dir;
     }
 
     u32 getProfFlag() const
