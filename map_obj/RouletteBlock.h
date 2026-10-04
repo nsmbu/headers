@@ -82,7 +82,7 @@ public:
         return mRouletteRollIndex;
     }
 
-    void setRouletteRollIndex(u32 index)
+    void setRouletteRollIndex(u8 index)
     {
         mRouletteRollIndex = index;
     }
