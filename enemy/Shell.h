@@ -23,7 +23,7 @@ public:
 protected:
     u32 _4;
 };
-static_assert(sizeof(ShellDrcTouchCB) == 4);
+static_assert(sizeof(ShellDrcTouchCB) == 8);
 
 class Shell : public CarryEnemy // vtbl Address: 0x100A6578
 {
@@ -71,23 +71,19 @@ public:
     // Address: 0x02456948
     void setCarryFall(Actor*, s32) override;
     // Address: 0x02459650
-    bool isSpinLiftUpEnable() override;
+    // bool isSpinLiftUpEnable() override; //! Probably fake
 
     // Address: 0x0245766C
     void allEnemyDeathEffSet() override;
     
-    void waterSplashEffect(const sead::Vector3f&) override
-    {
-    }
+    // Address: 0x0245970C
+    void waterSplashEffect(const sead::Vector3f&) override;
+    // Address: 0x02459710
+    void yoganSplashEffect(const sead::Vector3f&) override;
+    // Address: 0x02459714
+    void poisonSplashEffect(const sead::Vector3f&) override;
 
-    void yoganSplashEffect(const sead::Vector3f&) override
-    {
-    }
-
-    void poisonSplashEffect(const sead::Vector3f&) override
-    {
-    }
-
+protected:
     // Address: 0x024573D4
     void beginFunsui_() override;
     // Address: 0x02457508
@@ -95,9 +91,7 @@ public:
     // Address: 0x024596E4
     bool isFunsui_() const override;
 
-    // Address: 0x02457550
-    void getBox_(sead::BoundBox2f& box) override;
-
+public:
     // Address: 0x024572C4
     bool vf18C() override;
 
@@ -217,18 +211,22 @@ public:
     {
         return RP_Cmn_WaterSplash_05;
     }
+
     virtual EffectID vf5EC()
     {
         return RP_Cmn_PoisonSplash_05;
     }
+    
     virtual EffectID vf5F4()
     {
         return RP_Cmn_LavaSplash_05;
     }
+    
     virtual EffectID vf5FC()
     {
         return RP_Enm_Collision_1;
     }
+
     // Address: 0x024575C0
     virtual EffectID vf604();
 
