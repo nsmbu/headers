@@ -5,23 +5,20 @@
 #include <graphics/AnimModel.h>
 #include <actor/Profile.h>
 
-class RouletteBlockDrcTouchCB : public ActorCollisionDrcTouchCallback // vtbl Address: 0x10151534
-{
-public:
-    // Address: 0x02879160
-    bool bcSetTouchNormal(BgCollision* bg_collision, const sead::Vector2f& pos) override;
-};
-static_assert(sizeof(RouletteBlockDrcTouchCB) == 4, "RouletteBlockDrcTouchCB size mismatch");
-
 class RouletteBlock : public ActorBlockBase // vtbl Address: 0x101511D4
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EB8C4
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EB8C8
     SEAD_RTTI_OVERRIDE(RouletteBlock, ActorBlockBase);
 
-public:
-    // Address: 0x10151098
-    static const ActorCreateInfo cActorCreateInfo;
+protected:
+    class RouletteBlockDrcTouchCB : public ActorCollisionDrcTouchCallback // vtbl Address: 0x10151534
+    {
+    public:
+        // Address: 0x02879160
+        bool bcSetTouchNormal(BgCollision* bg_collision, const sead::Vector2f& pos) override;
+    };
+    static_assert(sizeof(RouletteBlockDrcTouchCB) == 4, "RouletteBlockDrcTouchCB size mismatch");
 
 public:
     // Address: 0x02879078
@@ -87,16 +84,18 @@ public:
         mRouletteRollIndex = index;
     }
 
+public:
+    // Address: 0x10151098
+    static const ActorCreateInfo cActorCreateInfo;
+
 protected:
     AnimModel*               mModelActive;
     AnimModel*               mModelUsed;
     TexturePatternAnimation* mTexAnim;
     FrameCtrl*               mFrameCtrl;
     bool                     mAlreadyUsed;
-    u8                       _1ce1[3]; // align
     u32                      mRouletteCountdown; // resets to 9 at 0
     u8                       mRouletteRollIndex; // is indexed into array for texture pattern frame; values go 0.0, <CONTENT>, 1.0, 2.0
-    u8                       _1ce9[3]; // align
     sead::Vector3f           mScaleFactor;
     f32                      _1cf8;
     u8                       _1cfc[4];
