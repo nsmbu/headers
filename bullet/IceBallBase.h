@@ -107,7 +107,7 @@ public:
     // Address: 0x02180D9C
     virtual f32 getLightRad()
     {
-        return 120.0;
+        return 120.0f;
     }
 
     // Address: 0x0217FCD0
