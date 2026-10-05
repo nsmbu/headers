@@ -14,10 +14,10 @@ class Shell : public CarryEnemy // vtbl Address: 0x100A6578
     SEAD_RTTI_OVERRIDE(Shell, CarryEnemy);
 
 protected:
-    class ShellDrcTouchCB : public ActorCollisionDrcTouchCallback // vtbl Address: 0x100A6520
+    class DrcTouchCB : public ActorCollisionDrcTouchCallback // vtbl Address: 0x100A6520
     {
     public:
-        ShellDrcTouchCB()
+        DrcTouchCB()
             : _4(0)
         {
         }
@@ -30,7 +30,7 @@ protected:
     protected:
         u32 _4;
     };
-    static_assert(sizeof(ShellDrcTouchCB) == 8);
+    static_assert(sizeof(DrcTouchCB) == 8);
 
 public:
     enum State : s32
@@ -247,7 +247,7 @@ public:
     virtual void vf67C();
 
 public:
-    ShellDrcTouchCB getDrcTouchCallback() const
+    DrcTouchCB getDrcTouchCallback() const
     {
         return mDrcTouchCallback;
     }
@@ -284,7 +284,7 @@ protected:
     u32                    _1910;
     EatData                mYoshiEatData;
     EnemyChibiYoshiEatData mChibiYoshiEatData;
-    ShellDrcTouchCB        mDrcTouchCallback;
+    DrcTouchCB             mDrcTouchCallback;
     EnemyBoyoMgr           mBoyoMgr;
     u8                     _1984;
     u8                     _1985;
