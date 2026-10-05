@@ -7,29 +7,30 @@
 #include <enemy/CarryEnemy.h>
 #include <enemy/EnemyChibiYoshiEatData.h>
 
-class ShellDrcTouchCB : public ActorCollisionDrcTouchCallback // vtbl Address: 0x100A6520
-{
-public:
-    ShellDrcTouchCB()
-        : _4(0)
-    {
-    }
-
-    // Address: 0x024520F4
-    bool ccSetTouchNormal(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
-    // Address: 0x0245213C
-    void ccOnTouch(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
-
-protected:
-    u32 _4;
-};
-static_assert(sizeof(ShellDrcTouchCB) == 8);
-
 class Shell : public CarryEnemy // vtbl Address: 0x100A6578
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA158
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA154
     SEAD_RTTI_OVERRIDE(Shell, CarryEnemy);
+
+protected:
+    class ShellDrcTouchCB : public ActorCollisionDrcTouchCallback // vtbl Address: 0x100A6520
+    {
+    public:
+        ShellDrcTouchCB()
+            : _4(0)
+        {
+        }
+
+        // Address: 0x024520F4
+        bool ccSetTouchNormal(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
+        // Address: 0x0245213C
+        void ccOnTouch(ActorCollisionCheck* cc, const sead::Vector2f& pos) override;
+
+    protected:
+        u32 _4;
+    };
+    static_assert(sizeof(ShellDrcTouchCB) == 8);
 
 public:
     enum State : s32
@@ -44,7 +45,6 @@ public:
     struct ShellStruct
     {
         u8             _0;
-        u8             _1[3]; // align
         sead::Vector2f _4;
         u32            _c;
     };
@@ -54,7 +54,7 @@ public:
     // Address: 0x024521A0
     Shell(const ActorCreateParam& param);
     // Address: 0x02459724
-    virtual ~Shell(); //! Not sure
+    virtual ~Shell();
 
 protected:
     // Address: 0x02452EAC
@@ -70,8 +70,6 @@ protected:
 public:
     // Address: 0x02456948
     void setCarryFall(Actor*, s32) override;
-    // Address: 0x02459650
-    // bool isSpinLiftUpEnable() override; //! Probably fake
 
     // Address: 0x0245766C
     void allEnemyDeathEffSet() override;
@@ -168,36 +166,26 @@ public:
     // Address: 0x02455F5C
     virtual u32 vf58C(u32, f32);
     
-    virtual void vf594()
-    {
-    }
+    // Address: 0x02459624
+    virtual void vf594();
     
-    virtual void vf59C()
-    {
-    }
+    // Address: 0x02459628
+    virtual void vf59C();
     
-    virtual u32 vf5A4()
-    {
-        return 1;
-    }
+    // Address: 0x0245962C
+    virtual u32 vf5A4();
     
-    virtual u32 vf5AC()
-    {
-        return 0;
-    }
+    // Address: 0x02459634
+    virtual u32 vf5AC();
     
     // Address: 0x024564F0
     virtual bool vf5B4();
     
-    virtual u32 vf5BC()
-    {
-        return 0;
-    }
+    // Address: 0x02459640
+    virtual u32 vf5BC();
     
-    virtual u32 vf5C4()
-    {
-        return 0;
-    }
+    // Address: 0x02459648
+    virtual u32 vf5C4();
     
     // Address: 0x02456EE4
     virtual bool vf5CC();
@@ -207,25 +195,17 @@ public:
     // Address: 0x024575AC
     virtual EffectID vf5DC();
     
-    virtual EffectID vf5E4()
-    {
-        return RP_Cmn_WaterSplash_05;
-    }
+    // Address: 0x024596EC
+    virtual EffectID vf5E4();
 
-    virtual EffectID vf5EC()
-    {
-        return RP_Cmn_PoisonSplash_05;
-    }
+    // Address: 0x024596F4
+    virtual EffectID vf5EC();
     
-    virtual EffectID vf5F4()
-    {
-        return RP_Cmn_LavaSplash_05;
-    }
+    // Address: 0x024596FC
+    virtual EffectID vf5F4();
     
-    virtual EffectID vf5FC()
-    {
-        return RP_Enm_Collision_1;
-    }
+    // Address: 0x02459704
+    virtual EffectID vf5FC();
 
     // Address: 0x024575C0
     virtual EffectID vf604();
@@ -248,90 +228,93 @@ public:
     // Address: 0x02458680
     virtual void vf644();
 
-    virtual void vf64C()
-    {
-    }
+    // Address: 0x02459718
+    virtual void vf64C();
 
     // Address: 0x02458754
     virtual void vf654();
     // Address: 0x02458794
     virtual void vf65C();
 
-    virtual void vf664()
-    {
-    }
+    // Address: 0x0245971C
+    virtual void vf664();
 
     // Address: 0x0245887C
     virtual void vf66C();
     // Address: 0x024588D8
     virtual void vf674();
 
-    virtual void vf67C()
+    // Address: 0x02459720
+    virtual void vf67C();
+
+public:
+    ShellDrcTouchCB getDrcTouchCallback() const
     {
+        return mDrcTouchCallback;
     }
 
 protected:
-    State             mState;
-    State             mPreviousState;
-    sead::Vector3u    _18c0;
-    u32               _18cc;
-    u32               _18d0;
-    u32               _18d4;
-    u16               _18d8;
-    bool              _18da;
-    u8                _18db;
-    u32               _18dc;
-    bool              mBig;
-    bool              _18e1;
-    u8          	  _18e2;
-    u8                _18e3;
-    f32               _18e4;
-    ActorUniqueID     _18e8;
-    u32               _18ec;
-    bool              _18f0;
-    u8                _18f1;
-    u8                _18f2;
-    u8                _18f3;
-    u32               _18f4;
-    u32               _18f8;
-    u32               _18fc;
-    u32               _1900;
-    u32               _1904;
-    u32               _1908;
-    u32               _190c;
-    u32               _1910;
-    EatData           mYoshiEatData;
-    ChibiYoshiEatData mChibiYoshiEatData; // could be EnemyChibiYoshiEatData but idk
-    ShellDrcTouchCB   mDrcTouchCallback;
-    EnemyBoyoMgr      mBoyoMgr;
-    u8                _1984;
-    u8                _1985;
-    u8                _1986;
-    u8                _1987;
-    u32               _1988;
-    u8                _198c;
-    u8                _198d;
-    u8                _198e;
-    u8                _198f;
-    u32               _1990;
-    u32               _1994;
-    f32               _1998;
-    f32               _199c;
-    u8                _19a0;
-    u8                _19a1;
-    u8                _19a2;
-    u8                _19a3;
-    u32               _19a4;
-    ShellStruct       _19a8;
-    bool              _19b8;
-    u8                _19b9;
-    u8                _19ba;
-    u8                _19bb;
-    EffectObj         _19bc;
-    EffectObj         _1a24;
-    u8                _1a8c;
-    u8                _1a8d;
-    u8                _1a8e;
-    u8                _1a8f;
+    State                  mState;
+    State                  mPreviousState;
+    sead::Vector3u         _18c0;
+    u32                    _18cc;
+    u32                    _18d0;
+    u32                    _18d4;
+    u16                    _18d8;
+    bool                   _18da;
+    u8                     _18db;
+    u32                    _18dc;
+    bool                   mBig;
+    bool                   _18e1;
+    u8          	       _18e2;
+    u8                     _18e3;
+    f32                    _18e4;
+    ActorUniqueID          _18e8;
+    u32                    _18ec;
+    bool                   _18f0;
+    u8                     _18f1;
+    u8                     _18f2;
+    u8                     _18f3;
+    u32                    _18f4;
+    u32                    _18f8;
+    u32                    _18fc;
+    u32                    _1900;
+    u32                    _1904;
+    u32                    _1908;
+    u32                    _190c;
+    u32                    _1910;
+    EatData                mYoshiEatData;
+    EnemyChibiYoshiEatData mChibiYoshiEatData;
+    ShellDrcTouchCB        mDrcTouchCallback;
+    EnemyBoyoMgr           mBoyoMgr;
+    u8                     _1984;
+    u8                     _1985;
+    u8                     _1986;
+    u8                     _1987;
+    u32                    _1988;
+    u8                     _198c;
+    u8                     _198d;
+    u8                     _198e;
+    u8                     _198f;
+    u32                    _1990;
+    u32                    _1994;
+    f32                    _1998;
+    f32                    _199c;
+    u8                     _19a0;
+    u8                     _19a1;
+    u8                     _19a2;
+    u8                     _19a3;
+    u32                    _19a4;
+    ShellStruct            _19a8;
+    bool                   _19b8;
+    u8                     _19b9;
+    u8                     _19ba;
+    u8                     _19bb;
+    EffectObj              _19bc;
+    EffectObj              _1a24;
+    u8                     _1a8c;
+    u8                     _1a8d;
+    u8                     _1a8e;
+    u8                     _1a8f;
 };
 static_assert(sizeof(Shell) == 0x1A90, "Shell size mismatch");
