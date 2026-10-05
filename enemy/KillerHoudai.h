@@ -26,7 +26,7 @@ public:
 protected:
     // Address: 0x023BE448
     Result create() override;
-    // Address: 0x023BEEAc
+    // Address: 0x023BEEAC
     bool execute() override;
     // Address: 0x023BF214
     bool draw() override;
