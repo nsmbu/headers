@@ -16,7 +16,7 @@ public:
     
     /**
      * @brief Returns the player which is riding the Yoshi, or @c nullptr if there is none.
-     * @par Address 0x0296B3C4
+     * @par Address: 0x0296B3C4
      */
     PlayerObject* getPlayerRideOn() const;
     
