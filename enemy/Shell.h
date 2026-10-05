@@ -41,14 +41,13 @@ public:
         cState_Flying = 2,
     };
 
-    // TODO: Name this
-    struct ShellStruct
+    struct WaterCheckInfo
     {
         u8             _0;
         sead::Vector2f _4;
         u32            _c;
     };
-    static_assert(sizeof(ShellStruct) == 0x10, "ShellStruct size mismatch");
+    static_assert(sizeof(WaterCheckInfo) == 0x10, "WaterCheckInfo size mismatch");
 
 public:
     // Address: 0x024521A0
@@ -305,7 +304,7 @@ protected:
     u8                     _19a2;
     u8                     _19a3;
     u32                    _19a4;
-    ShellStruct            _19a8;
+    WaterCheckInfo         _19a8;
     bool                   _19b8;
     u8                     _19b9;
     u8                     _19ba;
