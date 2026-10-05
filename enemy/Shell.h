@@ -80,13 +80,12 @@ public:
     // Address: 0x02459714
     void poisonSplashEffect(const sead::Vector3f&) override;
 
-protected:
     // Address: 0x024573D4
-    void beginFunsui_() override;
+    void beginFunsui() override;
     // Address: 0x02457508
-    void endFunsui_(f32 speed_y) override;
+    void endFunsui(f32 speed_y) override;
     // Address: 0x024596E4
-    bool isFunsui_() const override;
+    bool isFunsui() const override;
 
 public:
     // Address: 0x024572C4
