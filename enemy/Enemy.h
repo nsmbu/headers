@@ -188,9 +188,7 @@ public:
      * @details Applies a slight rotational bias towards the camera that prevents the actor from facing perfectly perpendicular to the viewer.
      *          This ensures actors remain visually clear and recognizable when facing either direction.
      * @warning Only indexable with `cDirType_Right` and `cDirType_Left`. Anything else is out of bounds.
-     * @endcode
-     * ---
-     * Address: 0x10200DD8
+     * @par Address: 0x10200DD8
      */
     static const Angle cBaseAngleY[cDirType_NumX];
     // Address: 0x10200DE0
@@ -206,9 +204,7 @@ public:
      * float speed = cEnMuki[mDirection] * 2.0f;
      * @endcode
      * @warning Only indexable with `cDirType_Right` and `cDirType_Left`. Anything else is out of bounds.
-     * @endcode 
-     * ---
-     * Address: 0x10072094
+     * @par Address: 0x10072094
      */
     static const s8 cEnMuki[cDirType_NumX];
 
@@ -311,9 +307,7 @@ public:
      * @brief Callback for spawning ice blocks when frozen by an ice flower.
      * @return Forward the return value of the `createIce()` method call.
      * @details Implement this function by calling `mIceMgr.createIce()` with your custom `IceInfo`.
-     * @endcode
-     * ---
-     * Address: 0x023304F8
+     * @par Address: 0x023304F8
      */
     virtual bool createIceActor();
     // Address: 0x023310BC
@@ -459,9 +453,7 @@ protected:
 public:
     /**
     * @return Enemy is on ground and can be damaged by quake (e.g. POW block).
-    * @endcode
-    * ---
-    * Address: 0x0232E2EC
+    * @par Address: 0x0232E2EC
     */
     virtual bool isQuakeDamage();
 
@@ -492,9 +484,7 @@ public:
     /**
      * @brief Process a collision with a player and return which type occurred.
      * @param se_type Which type of sounds/particles to play for this collision.
-     * @endcode
-     * ---
-     * Address: 0x02329B88
+     * @par Address: 0x02329B88
      */
     FumiType fumiCheck(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other, FumiSeType se_type);
 
@@ -587,9 +577,7 @@ public:
 
     /**
      * @return Enemy is inside the camera view.
-     * @endcode
-     * ---
-     * Address: 0x0232A2FC
+     * @par Address: 0x0232A2FC
      */
     virtual bool checkDispIn();
 
