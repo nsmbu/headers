@@ -281,11 +281,16 @@ public:
     }
 
     const DistantViewData* getBg2Data(u16 id) const;
+    // Address: 0x02699BD8
     const NextGoto* getNextGoto(u8 id) const;
+    // Address: 0x02699C08
     const MapActorData* getMapActor(u16 type, const MapActorData* start = nullptr) const;
     const AreaData* getAreaData(u8 id, sead::BoundBox2f* box = nullptr) const;
+    // Address: 0x0269A020
     const Location* getLocation(sead::BoundBox2f* box, u8 id) const;
+    // Address: 0x0269A0A8
     const RailInfo* getRailInfo(u8 id) const;
+    // Address: 0x0269A0F4
     const RailPoint* getRailPoint(u8 rail_id) const;
 
 private:
