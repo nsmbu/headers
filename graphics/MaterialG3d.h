@@ -33,8 +33,7 @@ public:
 
     sead::Matrix34f& getTexSrtMtx(s32 index) { return mTexSrtMtx[index]; }
     const sead::Matrix34f& getTexSrtMtx(s32 index) const { return mTexSrtMtx[index]; }
-    
-    [[nodiscard]]
+
     nw::g3d::MaterialObj* getMaterialObj() { return mMaterialObj; }
 
 private:
