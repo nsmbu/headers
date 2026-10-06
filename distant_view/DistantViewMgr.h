@@ -87,8 +87,7 @@ public:
     void getBoneWorldMatrix(s32 index, sead::Matrix34f* mtx) const;
 
 public:
-    [[nodiscard]]
-    AnimModel* getModel()
+    AnimModel* getModel() const
     {
         return mAnimModel;
     }
