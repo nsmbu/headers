@@ -12,13 +12,13 @@ class RouletteBlock : public ActorBlockBase // vtbl Address: 0x101511D4
     SEAD_RTTI_OVERRIDE(RouletteBlock, ActorBlockBase);
 
 protected:
-    class RouletteBlockDrcTouchCB : public ActorCollisionDrcTouchCallback // vtbl Address: 0x10151534
+    class DrcTouchCB : public ActorCollisionDrcTouchCallback // vtbl Address: 0x10151534
     {
     public:
         // Address: 0x02879160
         bool bcSetTouchNormal(BgCollision* bg_collision, const sead::Vector2f& pos) override;
     };
-    static_assert(sizeof(RouletteBlockDrcTouchCB) == 4, "RouletteBlockDrcTouchCB size mismatch");
+    static_assert(sizeof(DrcTouchCB) == 4, "DrcTouchCB size mismatch");
 
 public:
     // Address: 0x02879078
@@ -102,6 +102,6 @@ protected:
     u32                      _1d00;
     u32                      _1d04;
     EnemyBoyoMgr*            mBoyoMgr;
-    RouletteBlockDrcTouchCB  mDrcTouchCallback;
+    DrcTouchCB               mDrcTouchCallback;
 };
 static_assert(sizeof(RouletteBlock) == 0x1D10, "RouletteBlock size mismatch");
