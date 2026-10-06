@@ -58,14 +58,18 @@ public:
     static_assert(sizeof(PivotalRotationSettings) == 0x2C, "ParentMovementMgr::PivotalRotationSettings size mismatch");
 
 public:
+    // Address: 0x02849C40
     ParentMovementMgr();
 
     /**
      * @brief Links to movement controllers with the matching movement id and type mask.
      * @warning Use linkPivotal or linkPivotal2 when using pivotal-rotation or else it will bug out.
+     * @par Address: 0x0284B6F4
      */
     void link(const sead::Vector3f& position, u32 type_mask, u8 movement_id);
+    // Address: 0x0284B8C4
     void execute();
+    // Address: 0x0284A37C
     u32 getTypeMask(ParentMovementType type);
     /**
      * @brief Links to movement controllers with the matching movement id and type mask.
