@@ -114,7 +114,6 @@ public:
     }
 
 public:
-    // Address: 0x02019554
     Profile(ActorFactory factory, s32 id, const sead::SafeString& name, const ActorCreateInfo* create_info = nullptr, Flag flag = cFlag_None);
 
     ActorFactory getActorFactory() const
@@ -150,7 +149,6 @@ public:
     // Address: 0x020196E4
     ModelResource* getResource(u32 index) const;
 
-    // Address: 0x02019774
     static Profile* get(s32 id);
 
 protected:
