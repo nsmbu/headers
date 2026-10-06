@@ -142,7 +142,8 @@ public:
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9FA4
     SEAD_RTTI_BASE(BgCollision)
 
-    // Address: 0x021A7688 (TODO: This should be inline)
+    // Address: 0x021A7688
+    // TODO: This should be inline
     virtual bool vf24(u32*, u32);
     // Address: Deleted
     virtual u32 vf2C(u32*);
