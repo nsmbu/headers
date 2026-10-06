@@ -55,7 +55,8 @@ static_assert(sizeof(ActorBgCollisionCheckResult) == 0x38);
 class   Actor;
 struct  BgCollisionCheckHitResult;
 
-class ActorBgCollisionCheck // vtbl Address: 0x10041364
+// vtbl Address: 0x10041364
+class ActorBgCollisionCheck
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: Deleted
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: Deleted

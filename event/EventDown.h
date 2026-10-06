@@ -2,7 +2,8 @@
 
 #include <event/EventBase.h>
 
-class EventDown : public EventBase  // vtbl Address: 0x100B4754
+// vtbl Address: 0x100B4754
+class EventDown : public EventBase
 {
 public:
     enum DieType

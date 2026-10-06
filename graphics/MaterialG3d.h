@@ -7,7 +7,8 @@
 
 #include <nw/g3d/g3d_MaterialObj.h>
 
-class MaterialG3d : public Material  // vtbl Address: 0x100BBC1C
+// vtbl Address: 0x100BBC1C
+class MaterialG3d : public Material
 {
 public:
     MaterialG3d(nw::g3d::MaterialObj* material)

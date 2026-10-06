@@ -11,7 +11,8 @@
 
 class ModelResource;
 
-class Model : public RenderObj, public sead::IDisposer  // vtbl Address: 0x100BC908
+// vtbl Address: 0x100BC908
+class Model : public RenderObj, public sead::IDisposer
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9D08
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9F9C

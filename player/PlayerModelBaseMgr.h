@@ -2,7 +2,8 @@
 
 #include <player/PlayerModelBase.h>
 
-class PlayerModelBaseMgr    // vtbl Address: 0x1016BE5C
+// vtbl Address: 0x1016BE5C
+class PlayerModelBaseMgr
 {
 public:
     enum DrawType

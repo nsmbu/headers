@@ -2,7 +2,8 @@
 
 #include <graphics/FrameCtrl.h>
 
-class Animation // vtbl Address: 0x100B9AB8
+// vtbl Address: 0x100B9AB8
+class Animation
 {
 public:
     // Address: 0x024D4740

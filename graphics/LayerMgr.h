@@ -9,7 +9,8 @@
 
 class RenderObjRenderMgr;
 
-class LayerMgr : public sead::TaskBase  // vtbl Address: 0x100BB268
+// vtbl Address: 0x100BB268
+class LayerMgr : public sead::TaskBase
 {
     // setInstance_()                               Address: 0x024E013C
     // deleteInstance()                             Address: Deleted

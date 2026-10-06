@@ -4,7 +4,8 @@
 #include <state/FStateMgr.h>
 #include <state/FStateStateMgr.h>
 
-class ActorState : public ActorCollision    // vtbl Address: 0x10000EC8
+// vtbl Address: 0x10000EC8
+class ActorState : public ActorCollision
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9CDC
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9CE0
@@ -46,7 +47,8 @@ protected:
 };
 static_assert(sizeof(ActorState) == 0x17C8);
 
-class ActorMultiState : public ActorCollision   // vtbl Address: 0x10001048
+// vtbl Address: 0x10001048
+class ActorMultiState : public ActorCollision
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9CE4
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9CE8

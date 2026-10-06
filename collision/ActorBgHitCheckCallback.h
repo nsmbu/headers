@@ -4,7 +4,8 @@
 
 class ActorBgCollisionCheck;
 
-class ActorBgHitCheckCallback : public BgHitCheckCallback   // vtbl Address: 0x10041A30
+// vtbl Address: 0x10041A30
+class ActorBgHitCheckCallback : public BgHitCheckCallback
 {
 public:
     ActorBgHitCheckCallback(ActorBgCollisionCheck* bc)

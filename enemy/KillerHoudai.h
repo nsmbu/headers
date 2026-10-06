@@ -6,7 +6,8 @@
 
 class AnimModel;
 
-class KillerHoudai : public ActorState  // vtbl Address: 0x1008C448
+// vtbl Address: 0x1008C448
+class KillerHoudai : public ActorState
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EAAE8
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EAAEC

@@ -10,7 +10,8 @@ class EmitterController;
 
 } }
 
-class PtclEmitterColorMgr : public sead::IDisposer // vtbl Address: 0x10058888
+// vtbl Address: 0x10058888
+class PtclEmitterColorMgr : public sead::IDisposer
 {
     static const s32 cColorMax = 6;
 

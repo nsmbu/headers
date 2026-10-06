@@ -9,7 +9,8 @@
 #include <enemy/EnemyBoyoMgr.h>
 #include <graphics/Light.h>
 
-class BirikyuDrcTouchCB : public ActorCollisionDrcTouchCallback // vtbl Address: 0x1005CD9C
+// vtbl Address: 0x1005CD9C
+class BirikyuDrcTouchCB : public ActorCollisionDrcTouchCallback
 {
 public:
     // Address: 0x022CF75C
@@ -21,7 +22,8 @@ static_assert(sizeof(BirikyuDrcTouchCB) == sizeof(ActorCollisionDrcTouchCallback
 
 class AnimModel;
 
-class Birikyu : public Enemy    // vtbl Address: 0x1005CDF4
+// vtbl Address: 0x1005CDF4
+class Birikyu : public Enemy
 {
 public:
     // Address: 0x1005CC30

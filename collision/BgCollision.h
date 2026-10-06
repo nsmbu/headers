@@ -15,7 +15,8 @@ class   BasicBgCollisionCheck;
 struct  BgCollisionCheckResultArea;
 class   ActorCollisionDrcTouchCallback;
 
-class BgCollision : public sead::IDisposer  // vtbl Address: 0x10042528
+// vtbl Address: 0x10042528
+class BgCollision : public sead::IDisposer
 {
 public:
     typedef LineNodeMgr<ActorBgCollisionCheck> BcList;

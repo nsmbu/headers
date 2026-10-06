@@ -4,7 +4,8 @@
 
 // TODO: methods, members
 
-class IceBallBros : public IceBallBase // vtbl Address: 0x1003EFC8
+// vtbl Address: 0x1003EFC8
+class IceBallBros : public IceBallBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA348
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA34C

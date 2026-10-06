@@ -11,7 +11,8 @@
 class ModelG3d;
 class ModelResource;
 
-class SkeletalAnimation : public Animation  // vtbl Address: 0x100BDF44
+// vtbl Address: 0x100BDF44
+class SkeletalAnimation : public Animation
 {
 public:
     // Address: 0x024FD7E8

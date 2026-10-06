@@ -7,7 +7,8 @@
 #include <enemy/EnemyBoyoMgr.h>
 #include <player/PlayerEnum.h>
 
-class BossDrcTouchCB : public ActorCollisionDrcTouchCallback    // vtbl Address: 0x10005E2C
+// vtbl Address: 0x10005E2C
+class BossDrcTouchCB : public ActorCollisionDrcTouchCallback
 {
 public:
     // Address: 0x0202b8c0
@@ -15,7 +16,8 @@ public:
 };
 static_assert(sizeof(BossDrcTouchCB) == sizeof(ActorCollisionDrcTouchCallback));
 
-class Boss : public Enemy   // vtbl Address: 0x1000562C
+// vtbl Address: 0x1000562C
+class Boss : public Enemy
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9F20
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9F24

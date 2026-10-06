@@ -2,7 +2,8 @@
 
 #include <player/PlayerModel.h>
 
-class TottenPlayerModel : public PlayerModel    // vtbl Address: 0x101748B8
+// vtbl Address: 0x101748B8
+class TottenPlayerModel : public PlayerModel
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EBA84
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EBA90

@@ -2,7 +2,8 @@
 
 #include <event/EventBase.h>
 
-class EventPlayerChange : public EventBase  // vtbl Address: 0x100B4B3C
+// vtbl Address: 0x100B4B3C
+class EventPlayerChange : public EventBase
 {
 public:
     // Address: 0x024A6194

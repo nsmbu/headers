@@ -17,7 +17,8 @@ class ModelResourceMgr
     SEAD_SINGLETON_DISPOSER(ModelResourceMgr)
 
 private:
-    class ModelResourceHolder : public sead::IDisposer  // vtbl Address: 0x100BD364
+    // vtbl Address: 0x100BD364
+    class ModelResourceHolder : public sead::IDisposer
     {
     public:
         // Address: 0x024F5F88

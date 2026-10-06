@@ -10,14 +10,16 @@
 #include <effect/EffectObj.h>
 #include <graphics/Light.h>
 
-class IceBallBase : public ActorState // vtbl Address: 0x1003EA18
+// vtbl Address: 0x1003EA18
+class IceBallBase : public ActorState
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9fAC
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA0B0
     SEAD_RTTI_OVERRIDE(IceBallBase, ActorState)
 
 protected:
-    class DrcTouchCB : public ActorCollisionDrcTouchCallback    // vtbl Address: 0x1003E9C0
+    // vtbl Address: 0x1003E9C0
+    class DrcTouchCB : public ActorCollisionDrcTouchCallback
     {
     public:
         // Address: 0x0217F5D4

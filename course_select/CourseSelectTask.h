@@ -3,7 +3,8 @@
 #include <framework/seadCalculateTask.h>
 #include <framework/seadTaskMgr.h>
 
-class CourseSelectTask : public sead::CalculateTask // vtbl Address: 0x1005345C
+// vtbl Address: 0x1005345C
+class CourseSelectTask : public sead::CalculateTask
 {
     // setInstance_()                               Address: 0x022656C0
     // deleteInstance()                             Address: Deleted

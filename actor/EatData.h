@@ -6,7 +6,8 @@
 
 class Actor;
 
-class EatData   // vtbl Address: 0x10001594
+// vtbl Address: 0x10001594
+class EatData
 {
 public:
     enum State

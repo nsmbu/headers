@@ -6,7 +6,8 @@
 
 class ActorBase;
 
-class AttentionMgr  // vtbl Address: 0x10001364
+// vtbl Address: 0x10001364
+class AttentionMgr
 {
     // createInstance()                             Address: 0x0200CC0C
     // deleteInstance()                             Address: Deleted

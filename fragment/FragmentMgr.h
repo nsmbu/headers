@@ -5,7 +5,8 @@
 
 typedef s32 EffectID;
 
-class FragmentMgr   // vtbl Address: 0x100B6098
+// vtbl Address: 0x100B6098
+class FragmentMgr
 {
     // createInstance()                             Address: 0x024B0FBC
     // deleteInstance()                             Address: Deleted

@@ -4,7 +4,8 @@
 #include <math/seadBoundBox.h>
 #include <utility/Angle3.h>
 
-class CourseSelectActor : public ActorBase  // vtbl Address: 0x10042DBC
+// vtbl Address: 0x10042DBC
+class CourseSelectActor : public ActorBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA3CC
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA3C8

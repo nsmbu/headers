@@ -2,7 +2,8 @@
 
 #include <actor/ActorCollision.h>
 
-class ChibiYoshiBase : public ActorCollision    // vtbl Address: 0x101084FC
+// vtbl Address: 0x101084FC
+class ChibiYoshiBase : public ActorCollision
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9ED4
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9ED8

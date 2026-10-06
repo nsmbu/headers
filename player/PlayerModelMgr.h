@@ -6,7 +6,8 @@
 
 #include <heap/seadHeap.h>
 
-class PlayerModelMgr : public PlayerModelBaseMgr    // vtbl Address: 0x1016BF00
+// vtbl Address: 0x1016BF00
+class PlayerModelMgr : public PlayerModelBaseMgr
 {
 public:
     // Address: 0x02922F3C

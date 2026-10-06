@@ -19,7 +19,8 @@ class CullViewFrustum;
 class RenderObj;
 class RenderObjLayerBase;
 
-class RenderObjRenderMgr : public sead::IDisposer, public sead::INamable    // vtbl Address: 0x100BDBA4
+// vtbl Address: 0x100BDBA4
+class RenderObjRenderMgr : public sead::IDisposer, public sead::INamable
 {
 public:
     struct ViewInfo

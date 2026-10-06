@@ -304,15 +304,18 @@ static_assert(sizeof(CourseDataFile) == 0x3B8);
 
 class CourseData
 {
+    // sInstance    Address: 0x101DB048
     SEAD_SINGLETON_DISPOSER(CourseData)
 
 public:
+    // Address: 0x0269A144
     CourseData();
     ~CourseData();
 
+    // Address: 0x0269A2DC
     CourseDataFile* getFile(s32 index);
 
 private:
     sead::SafeArray<CourseDataFile, 4> mFile;
 };
-static_assert(sizeof(CourseData) == 0xEF0);
+static_assert(sizeof(CourseData) == 0xEF0, "CourseData size mismatch");

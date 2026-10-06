@@ -18,7 +18,8 @@ class EventPlayerChange;
 class PropBlock;
 class Yoshi;
 
-class PlayerObject : public PlayerBase  // vtbl Address: 0x1016C150
+// vtbl Address: 0x1016C150
+class PlayerObject : public PlayerBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9C9C
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9CA0

@@ -6,7 +6,8 @@
 
 class Actor;
 
-class ChibiYoshiEatData // vtbl Address: 0x1000145C
+// vtbl Address: 0x1000145C
+class ChibiYoshiEatData
 {
 public:
     enum State

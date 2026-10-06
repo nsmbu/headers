@@ -2,7 +2,8 @@
 
 #include <player/PlayerModel.h>
 
-class KinopioModel : public PlayerModel   // vtbl Address: 0x10174520
+// vtbl Address: 0x10174520
+class KinopioModel : public PlayerModel
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EBA80
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EBA9C

@@ -3,7 +3,8 @@
 #include <player/PlayerBase.h>
 #include <player/PlayerObject.h>
 
-class Yoshi : public PlayerBase // vtbl Address: 0x10171B28
+// vtbl Address: 0x10171B28
+class Yoshi : public PlayerBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9ECC
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9ED0

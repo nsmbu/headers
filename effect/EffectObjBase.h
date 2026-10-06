@@ -5,7 +5,8 @@
 #include <container/seadTList.h>
 #include <heap/seadDisposer.h>
 
-class EffectObjBase : public sead::IDisposer, public Effect  // vtbl Address: 0x10058734
+// vtbl Address: 0x10058734
+class EffectObjBase : public sead::IDisposer, public Effect
 {
     // NSMBW: Part of mEf::levelEffect_c
 

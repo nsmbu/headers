@@ -6,7 +6,8 @@
 
 class CommonWindowMgr;
 
-class CommonWindow  // vtbl Address: 0x100CCD58
+// vtbl Address: 0x100CCD58
+class CommonWindow
 {
 public:
     enum Type

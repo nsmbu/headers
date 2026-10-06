@@ -7,7 +7,8 @@
 
 class GamesceneBase;
 
-class CourseTask : public sead::CalculateTask   // vtbl Address: 0x100B734C
+// vtbl Address: 0x100B734C
+class CourseTask : public sead::CalculateTask
 {
     // setInstance_()                               Address: 0x024BCA80
     // deleteInstance()                             Address: Deleted

@@ -9,6 +9,8 @@
 
 class Bg
 {
+    // createInstance() Address: 0x02684EF0
+    // sInstance        Address: 0x101DAB94
     SEAD_SINGLETON_DISPOSER(Bg)
 
 public:
@@ -99,6 +101,7 @@ public:
     // Address: 0x026854A8
     void setUnitCurrentCdFile(u16 x, u16 y, u8 layer, u16 unit);
 
+    // Address: 0x0268B71C
     void setWaterInWave(const sead::Vector2f& pos, u8 wave_scale);
 
     // Address: 0x0268B8E4

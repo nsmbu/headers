@@ -5,7 +5,8 @@
 
 #include <container/seadBuffer.h>
 
-class BasicRideLineBgCollision : public BgCollision // vtbl Address: 0x10042238
+// vtbl Address: 0x10042238
+class BasicRideLineBgCollision : public BgCollision
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9D48
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9FA8

@@ -5,7 +5,8 @@
 
 #include <layer/aglRenderInfo.h>
 
-class AttentionScreen   // vtbl Address: 0x100C52A0
+// vtbl Address: 0x100C52A0
+class AttentionScreen
 {
 public:
     enum Type

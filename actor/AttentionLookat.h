@@ -9,7 +9,8 @@
 
 class AttentionMgr;
 
-class AttentionLookat : public sead::IDisposer  // vtbl Address: 0x10001340
+// vtbl Address: 0x10001340
+class AttentionLookat : public sead::IDisposer
 {
 public:
     enum DistanceType

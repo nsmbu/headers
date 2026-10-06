@@ -148,7 +148,8 @@ static_assert(sizeof(EnemyCounter) == 8);
 
 class ActorCollisionCheck;
 
-class Enemy : public ActorMultiState    // vtbl Address: 0x1007209C
+// vtbl Address: 0x1007209C
+class Enemy : public ActorMultiState
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9EEC
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9EF0

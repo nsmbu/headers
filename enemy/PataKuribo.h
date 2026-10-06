@@ -2,7 +2,8 @@
 
 #include <enemy/KuriboBase.h>
 
-class PataKuribo : public KuriboBase    // vtbl Address: 0x10098FC0
+// vtbl Address: 0x10098FC0
+class PataKuribo : public KuriboBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EAB10
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EAB84

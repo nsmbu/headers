@@ -2,7 +2,8 @@
 
 #include <enemy/Enemy.h>
 
-class BalloonHangActor : public Enemy   // vtbl Address: 0x1005A150
+// vtbl Address: 0x1005A150
+class BalloonHangActor : public Enemy
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA148
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA82C

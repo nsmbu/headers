@@ -18,7 +18,8 @@ class PropelParts;
 
 typedef s32 EffectID;
 
-class Actor : public ActorBase  // vtbl Address: 0x10000268
+// vtbl Address: 0x10000268
+class Actor : public ActorBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9CBC
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9CC0
