@@ -12,37 +12,31 @@ class CourseSelectActor : public ActorBase
     SEAD_RTTI_OVERRIDE(CourseSelectActor, ActorBase)
 
 public:
-    [[nodiscard]]
     sead::Vector3f& getPos()
     {
         return mPos;
     }
     
-    [[nodiscard]]
     const sead::Vector3f& getPos() const
     {
         return mPos;
     }
     
-    [[nodiscard]]
     sead::Vector3f& getScale()
     {
         return mScale;
     }
     
-    [[nodiscard]]
     const sead::Vector3f& getScale() const
     {
         return mScale;
     }
     
-    [[nodiscard]]
     Angle3& getAngle()
     {
         return mAngle;
     }
     
-    [[nodiscard]]
     const Angle3& getAngle() const
     {
         return mAngle;
