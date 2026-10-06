@@ -51,17 +51,13 @@ public:
     // Address: 0x026C1084
     virtual void vf2EC();
     // Address: 0x026C1DCC
-    virtual void vf2F4()
-    {
-    }
+    virtual void vf2F4();
     // Address: 0x026C11F8
     virtual void vf2FC();
     // Address: 0x026C1300;
     virtual void vf304();
     // Address: 0x026C1DD0
-    virtual void vf30C()
-    {
-    }
+    virtual void vf30C();
 
     // StateID_EatIn          Address: 0x1021F09C
     // initializeState_EatIn  Address: 0x026C1DD4
