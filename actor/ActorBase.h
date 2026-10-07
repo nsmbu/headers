@@ -249,6 +249,7 @@ protected:
      * @brief Callback invoked before the @c draw operation.
      * @return Whether to continue to the main @c draw callback, rather than skip to @c postDraw().
      * @details Returns @c true by default.
+     * @par Address: 0x02002F98
      */
     virtual bool preDraw();
     /**
