@@ -4,7 +4,8 @@
 
 class Actor;
 
-class EnemyBoyoMgr  // vtbl Address: 0x10072588
+// vtbl Address: 0x10072588
+class EnemyBoyoMgr
 {
     // Used to make the Enemy's scale fluctuate when breaking out of ice, and when touched using the Wii U gamepad.
 

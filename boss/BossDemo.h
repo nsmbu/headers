@@ -4,7 +4,8 @@
 #include <sound/SndSceneMgr.h>
 #include <state/FStateVirtualID.h>
 
-class BossDemo : public ActorState  // vtbl Address: 0x10005FC0
+// vtbl Address: 0x10005FC0
+class BossDemo : public ActorState
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9F28
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9F2C

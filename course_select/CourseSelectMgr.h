@@ -6,7 +6,8 @@
 
 class CourseSelectPath;
 
-class CourseSelectMgr   // vtbl Address: 0x10047B48
+// vtbl Address: 0x10047B48
+class CourseSelectMgr
 {
     // createInstance()                             Address: 0x021F8A40
     // deleteInstance()                             Address: Deleted

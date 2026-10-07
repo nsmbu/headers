@@ -249,6 +249,7 @@ protected:
      * @brief Callback invoked before the @c draw operation.
      * @return Whether to continue to the main @c draw callback, rather than skip to @c postDraw().
      * @details Returns @c true by default.
+     * @par Address: 0x02002F98
      */
     virtual bool preDraw();
     /**
@@ -256,13 +257,13 @@ protected:
      * @note This is only for scheduling deferred render tasks; actual rendering may not be performed at this stage.
      * @return A signal for how to handle the operation. @c true / @c false imply @c cState_Success / @c cState_Failed. However, signaling failure does not delete the actor.
      * @details Returns @c true by default.
-     * @par Address 0x02002FA0
+     * @par Address: 0x02002FA0
      */
     virtual bool draw();
     /**
      * @brief Callback invoked unconditionally after the @c draw phase completes. It executes even if @c preDraw() bypassed the main @c draw() operation.
      * @param state The signal which @c draw() returned, or @c cState_None if @c preDraw() skipped it.
-     * @par Address 0x02002F38
+     * @par Address: 0x02002F38
      */
     virtual void postDraw(MainState state);
 

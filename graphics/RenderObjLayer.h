@@ -4,7 +4,8 @@
 
 class RenderObjRenderMgr;
 
-class RenderObjLayerBase : public ProcLayerBase // vtbl Address: 0x100BDCE8
+// vtbl Address: 0x100BDCE8
+class RenderObjLayerBase : public ProcLayerBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9E60
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA074
@@ -39,7 +40,8 @@ protected:
 };
 static_assert(sizeof(RenderObjLayerBase) == 0x42C);
 
-class RenderObjLayer : public RenderObjLayerBase    // vtbl Address: 0x100BDD50
+// vtbl Address: 0x100BDD50
+class RenderObjLayer : public RenderObjLayerBase
 {
 public:
     enum RenderStep

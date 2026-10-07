@@ -4,7 +4,8 @@
 #include <collision/ActorBgCollisionObjCheck.h>
 #include <collision/BgCollisionCheckParam.h>
 
-class ActorCollision : public Actor // vtbl Address: 0x1000084C
+// vtbl Address: 0x1000084C
+class ActorCollision : public Actor
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9CD4
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9CD8

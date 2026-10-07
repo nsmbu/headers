@@ -4,7 +4,8 @@
 
 class Enemy;
 
-class EnemyEatData : public EatData // vtbl Address: 0x10072F9C
+// vtbl Address: 0x10072F9C
+class EnemyEatData : public EatData
 {
 public:
     // Address: 0x0232F00C

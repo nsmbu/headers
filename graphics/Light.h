@@ -6,7 +6,8 @@
 
 enum LightType : u32;
 
-class Light : public sead::IDisposer    // vtbl Address: 0x100BB350
+// vtbl Address: 0x100BB350
+class Light : public sead::IDisposer
 {
 public:
     // Address: 0x024E24BC
@@ -25,6 +26,9 @@ public:
         f32* = nullptr,
         f32* = nullptr
     );
+
+    // Address: 0x024E2784
+    void calcLayerOverlap();
 
 private:
     bool            _10;

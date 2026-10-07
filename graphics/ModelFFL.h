@@ -10,7 +10,8 @@
 
 #include <nn/ffl.h>
 
-class ModelFFL : public RenderObj, sead::IDisposer    // vtbl Address: 0x100BCCF8
+// vtbl Address: 0x100BCCF8
+class ModelFFL : public RenderObj, sead::IDisposer
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9E80
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EAE5C

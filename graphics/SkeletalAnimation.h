@@ -11,6 +11,7 @@
 class ModelG3d;
 class ModelResource;
 
+// vtbl Address: 0x100BDF44
 class SkeletalAnimation : public Animation
 {
 public:
@@ -43,6 +44,9 @@ public:
     // Address: 0x024FDCF8
     void enableBindFlag(s32 idx_bone);
 
+    // Address: Deleted
+    void disableBindFlag(s32 idx_bone);
+
     // Address: 0x024FDD1C
     void calc() override;
 
@@ -55,6 +59,7 @@ public:
     s32 getIndex() const { return mIndex; }
 
 private:
+    // Address: 0x024FD86C
     static void updateInitArg_(nw::g3d::SkeletalAnimObj::InitArg* arg, const ModelResource* mdl_res);
 
 private:

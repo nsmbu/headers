@@ -35,7 +35,8 @@ class   ActorBoxBgCollision;
 class   PlayerModelBase;
 class   PlayerModelBaseMgr;
 
-class PlayerBase : public Actor // vtbl Address: 0x10166E84
+// vtbl Address: 0x10166E84
+class PlayerBase : public Actor
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9CCC
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9CD0

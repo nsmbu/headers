@@ -10,7 +10,8 @@
 #include <graphics/Light.h>
 #include <map_obj/MaskDraw.h>
 
-class BomheiDrcTouchCB : public ActorCollisionDrcTouchCallback  // vtbl Address: 0x1005D73C
+// vtbl Address: 0x1005D73C
+class BomheiDrcTouchCB : public ActorCollisionDrcTouchCallback
 {
 public:
     BomheiDrcTouchCB()
@@ -31,7 +32,8 @@ static_assert(sizeof(BomheiDrcTouchCB) == 8);
 class JointBlendModel;
 class ModelResource;
 
-class Bomhei : public CarryEnemy    // vtbl Address: 0x1005D794
+// vtbl Address: 0x1005D794
+class Bomhei : public CarryEnemy
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9F80
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9FC4

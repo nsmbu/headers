@@ -1,8 +1,8 @@
 #pragma once
 
-#include <actor/ActorState.h>
+#include <bullet/IceBallBase.h>
 
-class IceBallPakkun : /* IceBallBase */ public ActorState
+class IceBallPakkun : public IceBallBase
 {
 public:
     void setExludeActor(const ActorUniqueID& id)
@@ -16,7 +16,7 @@ public:
     }
 
 protected:
-    u32             _17c8[(0x1A44 - 0x17C8) / sizeof(u32)];
+    u8              _1a40;
     ActorUniqueID   mExcludeActor;
     u32             _1a48[(0x1A50 - 0x1A48) / sizeof(u32)];
 };

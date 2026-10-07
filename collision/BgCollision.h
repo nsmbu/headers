@@ -15,7 +15,8 @@ class   BasicBgCollisionCheck;
 struct  BgCollisionCheckResultArea;
 class   ActorCollisionDrcTouchCallback;
 
-class BgCollision : public sead::IDisposer  // vtbl Address: 0x10042528
+// vtbl Address: 0x10042528
+class BgCollision : public sead::IDisposer
 {
 public:
     typedef LineNodeMgr<ActorBgCollisionCheck> BcList;
@@ -142,7 +143,8 @@ public:
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9FA4
     SEAD_RTTI_BASE(BgCollision)
 
-    // Address: 0x021A7688 (TODO: This should be inline)
+    // Address: 0x021A7688
+    // TODO: This should be inline
     virtual bool vf24(u32*, u32);
     // Address: Deleted
     virtual u32 vf2C(u32*);

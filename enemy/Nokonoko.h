@@ -1,8 +1,8 @@
 #pragma once
 
-#include <enemy/Enemy.h>
+#include <enemy/Shell.h>
 
-class Nokonoko : public /* Shell */ Enemy   // TODO
+class Nokonoko : public Shell
 {
 public:
     // Address: 0x10205668

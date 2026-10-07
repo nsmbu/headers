@@ -4,7 +4,8 @@
 
 class ActorBoxBgCollision;
 
-class CarryBlockBase : public CarryObjBase  // vtbl Address: 0x10105988
+// vtbl Address: 0x10105988
+class CarryBlockBase : public CarryObjBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA8D4
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA8D8

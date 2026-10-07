@@ -2,7 +2,8 @@
 
 #include <actor/EatData.h>
 
-class PlayerEatData : public EatData    // vtbl Address: 0x10169524
+// vtbl Address: 0x10169524
+class PlayerEatData : public EatData
 {
 public:
     // Address: 0x02911918

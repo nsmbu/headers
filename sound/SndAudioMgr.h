@@ -11,8 +11,10 @@
 
 class AudAudioPlayer;
 
-class SndAudioMgr : public AudAudioMgr  // vtbl Address: 0x1017C814
+// vtbl Address: 0x1017C814
+class SndAudioMgr : public AudAudioMgr
 {
+    // sInstance    Address: 0x101E7C84
     SEAD_SINGLETON_DISPOSER(SndAudioMgr)
 
 public:

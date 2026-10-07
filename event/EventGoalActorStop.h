@@ -2,7 +2,8 @@
 
 #include <event/EventBase.h>
 
-class EventGoalActorStop : public EventBase // vtbl Address: 0x100B47C4
+// vtbl Address: 0x100B47C4
+class EventGoalActorStop : public EventBase
 {
 public:
     // Address: 0x024A5624

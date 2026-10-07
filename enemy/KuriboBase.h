@@ -13,14 +13,16 @@ class JointBlendModel;
 class ModelResource;
 class TexturePatternAnimation;
 
-class KuriboBase : public Enemy // vtbl Address: 0x100916DC
+// vtbl Address: 0x100916DC
+class KuriboBase : public Enemy
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA144
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA140
     SEAD_RTTI_OVERRIDE(KuriboBase, Enemy)
 
 protected:
-    class DrcTouchCB : public ActorCollisionDrcTouchCallback    // vtbl Address: 0x10091CD4
+    // vtbl Address: 0x10091CD4
+    class DrcTouchCB : public ActorCollisionDrcTouchCallback
     {
     public:
         // Address: 0x023DDBF8

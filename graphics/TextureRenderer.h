@@ -6,7 +6,8 @@
 #include <graphics/TextureRendererBase.h>
 #include <nw/g3d.h>
 
-class TextureRenderer : public TextureRendererBase // vtbl Address: 0x100655FC
+// vtbl Address: 0x100655FC
+class TextureRenderer : public TextureRendererBase
 {
 public:
     TextureRenderer(); // TODO: implement

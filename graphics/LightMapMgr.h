@@ -14,7 +14,8 @@
 
 class ModelG3d;
 
-class LightMapMgr : public sead::CalculateTask  // vtbl Address: 0x100BBA94
+// vtbl Address: 0x100BBA94
+class LightMapMgr : public sead::CalculateTask
 {
     // setInstance_()                               Address: 0x024E3A78
     // deleteInstance()                             Address: Deleted

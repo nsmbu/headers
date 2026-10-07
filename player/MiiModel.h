@@ -7,7 +7,8 @@
 
 class ModelFFL;
 
-class MiiModel : public PlayerModel   // vtbl Address: 0x10174D6C
+// vtbl Address: 0x10174D6C
+class MiiModel : public PlayerModel
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9E84
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EBA70

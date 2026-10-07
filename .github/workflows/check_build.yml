@@ -1,0 +1,114 @@
+name: "Check Build"
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check-build:
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 1
+          path: headers
+
+      - uses: actions/checkout@v4
+        with:
+          repository: nsmbu/Eft
+          submodules: recursive
+          fetch-depth: 1
+          path: Eft
+
+      - uses: actions/checkout@v4
+        with:
+          repository: nsmbu/FFL
+          submodules: recursive
+          fetch-depth: 1
+          path: FFL
+
+      - uses: actions/checkout@v4
+        with:
+          repository: nsmbu/G3d
+          submodules: recursive
+          fetch-depth: 1
+          path: G3d
+
+      - uses: actions/checkout@v4
+        with:
+          repository: nsmbu/Lyt
+          submodules: recursive
+          fetch-depth: 1
+          path: Lyt
+
+      - uses: actions/checkout@v4
+        with:
+          repository: nsmbu/sead
+          submodules: recursive
+          fetch-depth: 1
+          path: sead
+
+      - uses: actions/checkout@v4
+        with:
+          repository: nsmbu/Snd
+          submodules: recursive
+          fetch-depth: 1
+          path: Snd
+
+      - uses: actions/checkout@v4
+        with:
+          repository: nsmbu/Sys
+          submodules: recursive
+          fetch-depth: 1
+          path: Sys
+
+      - uses: actions/checkout@v4
+        with:
+          repository: Zenith-Team/DynamicLibs
+          submodules: recursive
+          fetch-depth: 1
+          path: DynamicLibs
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lld
+
+      - name: Download Tachyon
+        run: npm i -g --allow-remote=root https://github.com/Zenith-Team/Tachyon/releases/latest/download/tachyon.tgz
+
+      - name: Setup Tachyon
+        run: TACHYON_HOME=../ttools tachyon setup
+
+      - name: Compile
+        run: |
+          set -euo pipefail
+
+          compiler="../ttools/toolchain/clang-19"
+          flags=(
+            -std=c++23
+            --driver-mode=g++
+            -ffreestanding -fno-builtin -nostdlib -nobuiltininc
+            -Wno-switch -Werror -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wno-missing-exception-spec -Wno-gcc-compat -Wno-invalid-offsetof -Wno-invalid-source-encoding -Wno-deprecated-enum-enum-conversion -Wno-pragma-once-outside-header -Wshadow
+            -ferror-limit=1
+            -mregnames
+            -Dcafe -D_LIBCPP_HAS_NO_THREADS -D_LIBCPP_HAS_NO_LOCALIZATION -DDISABLE_PS -DNW_RELEASE
+            -mcpu=750 -fno-sized-deallocation -funsigned-char -mhard-float -mno-altivec -fno-fast-math -fno-new-infallible -fshort-wchar -fno-strict-aliasing
+            -I../ttools/toolchain/RedStandard-main/cxx -I../ttools/toolchain/RedStandard-main/c -I../ttools/toolchain/RedStandard-main/lib
+            -IEft/include -IFFL/include -IG3d/include -Iheaders -ILyt/include -Isead/engine/library/include -Isead/engine/library/modules/include -Isead/packages/agl/include -Isead/packages/nw_ptcl/library/include -ISnd/include -ISys/include -IDynamicLibs/dynamic_libs/include -IDynamicLibs/cafe_sdk/include
+          )
+
+          find headers -type f \( -name '*.h' \) -print0 |
+          while IFS= read -r -d '' header; do
+            echo "Checking: $header"
+            "$compiler" "${flags[@]}" -x c++ -fsyntax-only "$header"
+          done
+
+          echo "All headers compiled successfully."

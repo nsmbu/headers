@@ -5,7 +5,8 @@
 #include <nw/font/font_TagProcessorBase.h>
 #include <nw/lyt/lyt_TextBox.h>
 
-class TagProcessor : public nw::lyt::TextBox::TagProcessor  // vtbl Address: 0x100E4580
+// vtbl Address: 0x100E4580
+class TagProcessor : public nw::lyt::TextBox::TagProcessor
 {
 public:
     TagProcessor()

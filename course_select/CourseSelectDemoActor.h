@@ -2,7 +2,8 @@
 
 #include <course_select/CourseSelectActor.h>
 
-class CourseSelectDemoActor : public CourseSelectActor  // vtbl Address: 0x10044AE0
+// vtbl Address: 0x10044AE0
+class CourseSelectDemoActor : public CourseSelectActor
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA3D0
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA3F4

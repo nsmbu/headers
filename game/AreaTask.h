@@ -8,7 +8,8 @@
 #include <layer/aglRenderInfo.h>
 #include <math/seadBoundBox.h>
 
-class AreaTask : public sead::CalculateTask // vtbl Address: 0x100B6984
+// vtbl Address: 0x100B6984
+class AreaTask : public sead::CalculateTask
 {
     // setInstance_()                               Address: 0x024B5378
     // deleteInstance()                             Address: Deleted

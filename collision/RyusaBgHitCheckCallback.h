@@ -2,7 +2,8 @@
 
 #include <collision/BgHitCheckCallback.h>
 
-class RyusaBgHitCheckCallback : public BgHitCheckCallback   // vtbl Address: 0x100428A8
+// vtbl Address: 0x100428A8
+class RyusaBgHitCheckCallback : public BgHitCheckCallback
 {
 public:
     // Address: 0x021AF6AC

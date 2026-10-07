@@ -3,7 +3,8 @@
 #include <actor/Actor.h>
 #include <collision/PoleRopeBgCollision.h>
 
-class TarzanIvyBase : public Actor  // vtbl Address: 0x1015682C
+// vtbl Address: 0x1015682C
+class TarzanIvyBase : public Actor
 {
     static const s32 cNodeMax = 16;
 
@@ -94,7 +95,8 @@ protected:
 };
 static_assert(sizeof(TarzanIvyBase) == 0xA08);
 
-class TarzanIvy : public TarzanIvyBase  // vtbl Address: 0x101565E8
+// vtbl Address: 0x101565E8
+class TarzanIvy : public TarzanIvyBase
 {
 public:
     TarzanIvy(const ActorCreateParam& param)

@@ -53,10 +53,22 @@ public:
 
     // TODO: inline
     virtual bool vf2C4(); // Checks if current state is StateID_Wait or equivalent
-    virtual void vf2CC();
+
+    // Address: 0x02726654
+    virtual void onDrcTouch();
 
     // Address: 0x02726760
     bool registerColliderActiveInfo();
+
+    ChangeBlockCoinDrcTouchCB getDrcTouchCallback() const
+    {
+        return mDrcTouchCallback;
+    }
+
+    const sead::Vector3f& getPosForState() const
+    {
+        return mPosForState;
+    }
 
 protected:
     ActorBgCollisionCheck::Sensor   mFootSensor;

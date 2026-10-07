@@ -2,7 +2,8 @@
 
 #include <controller/seadController.h>
 
-class SysController : public sead::Controller  // vtbl Address: 0x100BF504
+// vtbl Address: 0x100BF504
+class SysController : public sead::Controller
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9D40
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EAE78

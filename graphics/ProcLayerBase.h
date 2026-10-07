@@ -2,7 +2,8 @@
 
 #include <layer/aglLayer.h>
 
-class ProcLayerBase : public agl::lyr::Layer    // vtbl Address: 0x100BD6B8
+// vtbl Address: 0x100BD6B8
+class ProcLayerBase : public agl::lyr::Layer
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9E5C
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA070

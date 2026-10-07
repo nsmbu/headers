@@ -7,7 +7,8 @@
 
 #include <nw/g3d/g3d_MaterialObj.h>
 
-class MaterialG3d : public Material  // vtbl Address: 0x100BBC1C
+// vtbl Address: 0x100BBC1C
+class MaterialG3d : public Material
 {
 public:
     MaterialG3d(nw::g3d::MaterialObj* material)
@@ -32,8 +33,7 @@ public:
 
     sead::Matrix34f& getTexSrtMtx(s32 index) { return mTexSrtMtx[index]; }
     const sead::Matrix34f& getTexSrtMtx(s32 index) const { return mTexSrtMtx[index]; }
-    
-    [[nodiscard]]
+
     nw::g3d::MaterialObj* getMaterialObj() { return mMaterialObj; }
 
 private:

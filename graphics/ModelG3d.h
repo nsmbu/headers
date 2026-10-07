@@ -23,7 +23,8 @@
 
 class CullViewFrustum;
 
-class ModelG3d : public Model    // vtbl Address: 0x100BCF30
+// vtbl Address: 0x100BCF30
+class ModelG3d : public Model
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9F78
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9FA0

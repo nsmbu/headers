@@ -18,7 +18,8 @@ class PropelParts;
 
 typedef s32 EffectID;
 
-class Actor : public ActorBase  // vtbl Address: 0x10000268
+// vtbl Address: 0x10000268
+class Actor : public ActorBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9CBC
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9CC0
@@ -397,6 +398,26 @@ public:
     void setBlockHitFace(BlockHitFace face)
     {
         mBlockHitFace = face;
+    }
+
+    u32 getBlockHitTimer() const
+    {
+        return mBlockHitTimer;
+    }
+
+    void setBlockHitTimer(u32 time)
+    {
+        mBlockHitTimer = time;
+    }
+
+    DirType getBlockHitDirection() const
+    {
+        return mBlockHitDirection;
+    }
+
+    void setBlockHitDirection(DirType dir)
+    {
+        mBlockHitDirection = dir;
     }
 
     u32 getProfFlag() const

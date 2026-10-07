@@ -8,6 +8,7 @@
 
 class ResMgr
 {
+    // sInstance    Address: 0x101E7D94
     SEAD_SINGLETON_DISPOSER(ResMgr)
 
 protected:
@@ -72,6 +73,7 @@ public:
         return mCourseArchiveRes;
     }
 
+    // Address: 0x029D33EC
     void* getFileFromCourseArchiveRes(const sead::SafeString& filename, u32* length = nullptr) const;
 
 public:
@@ -79,6 +81,7 @@ public:
 
     bool isArchiveResLoaded(const sead::SafeString& key) const;
 
+    // Address: 0x029D3CA0
     sead::ArchiveRes* getArchiveRes(const sead::SafeString& key) const;
 
     void* getFileFromArchiveRes(const sead::SafeString& key, const sead::SafeString& filename, u32* length = nullptr) const;
@@ -96,6 +99,7 @@ protected:
     static sead::ArchiveRes* loadArchiveResImpl_(const sead::SafeString& archive_path, sead::Heap* heap, sead::Decompressor* decompressor);
     static sead::ArchiveRes* loadArchiveResImpl_(const sead::SafeString& archive_path, sead::Heap* heap);
 
+    // Address: 0x029D338C
     static void* getFileFromArchiveResImpl_(sead::ArchiveRes* archive, const sead::SafeString& filename, u32* length);
 
 protected:

@@ -3,7 +3,8 @@
 #include <collision/BgCollision.h>
 #include <utility/Angle.h>
 
-class ActorCircleBgCollision : public BgCollision   // vtbl Address: 0x10041B28
+// vtbl Address: 0x10041B28
+class ActorCircleBgCollision : public BgCollision
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9F88
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA398
@@ -14,9 +15,11 @@ public:
     ActorCircleBgCollision();
     virtual ~ActorCircleBgCollision() { }
 
-    // Address: 0x0219A6D0 (TODO: This should be inline)
+    // Address: 0x0219A6D0
+    // TODO: This should be inline
     bool vf24(u32*, u32) override;
-    // Address: 0x0219A710 (TODO: This should be inline)
+    // Address: 0x0219A710
+    // TODO: This should be inline
     u32 vf2C(u32*) override;
     // Address: 0x021980B0
     void vf34() override;

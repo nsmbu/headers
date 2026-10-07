@@ -12,7 +12,8 @@
 class AnimModel;
 class ModelResource;
 
-class PlayerModelBase : public sead::IDisposer  // vtbl Address: 0x1016BCE4
+// vtbl Address: 0x1016BCE4
+class PlayerModelBase : public sead::IDisposer
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9D24
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EBA78

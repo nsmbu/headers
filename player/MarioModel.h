@@ -2,7 +2,8 @@
 
 #include <player/PlayerModel.h>
 
-class MarioModel : public PlayerModel   // vtbl Address: 0x10173EBC
+// vtbl Address: 0x10173EBC
+class MarioModel : public PlayerModel
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EBA7C
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EBA98

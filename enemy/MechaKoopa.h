@@ -5,7 +5,8 @@
 #include <enemy/CarryEnemy.h>
 #include <enemy/EnemyBoyoMgr.h>
 
-class MechaKoopaDrcTouchCB : public ActorCollisionDrcTouchCallback  // vtbl Address: 0x100945D4
+// vtbl Address: 0x100945D4
+class MechaKoopaDrcTouchCB : public ActorCollisionDrcTouchCallback
 {
 public:
     // Address: 0x023E8F9C
@@ -18,7 +19,8 @@ static_assert(sizeof(MechaKoopaDrcTouchCB) == sizeof(ActorCollisionDrcTouchCallb
 class AnimModel;
 class ModelResource;
 
-class MechaKoopa : public CarryEnemy    // vtbl Address: 0x10094064
+// vtbl Address: 0x10094064
+class MechaKoopa : public CarryEnemy
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EAB30
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EAB34
