@@ -5,7 +5,8 @@
 #include <graphics/AnimModel.h>
 #include <actor/Profile.h>
 
-class RouletteBlock : public ActorBlockBase // vtbl Address: 0x101511D4
+// vtbl Address: 0x101511D4
+class RouletteBlock : public ActorBlockBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EB8C4
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EB8C8
