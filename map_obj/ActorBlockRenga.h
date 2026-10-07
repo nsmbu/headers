@@ -8,6 +8,7 @@ class ActorBlockRenga : public ActorBlockBase
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EB010
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EB014
     SEAD_RTTI_OVERRIDE(ActorBlockRenga, ActorBlockBase)
+
 public:
     // Address: 0x026B5134
     ActorBlockRenga(const ActorCreateParam& param);
