@@ -28,7 +28,9 @@ public:
     ChangeBlockCoinBase(const ActorCreateParam& param);
     virtual ~ChangeBlockCoinBase() { }
 
+    // Address: 0x02726610
     void spawnItemUp() override;
+    // Address: 0x02726634
     void spawnItemDown() override;
     u32 getMultiCoinState() override;
 
@@ -52,6 +54,7 @@ public:
     }
 
     // TODO: inline
+    // Address: 0x02727998
     virtual bool vf2C4(); // Checks if current state is StateID_Wait or equivalent
 
     // Address: 0x02726654
