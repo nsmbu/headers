@@ -3,7 +3,8 @@
 #include <actor/Profile.h>
 #include <map_obj/ActorBlockBase.h>
 
-class ActorBlockSwitch : public ActorBlockBase // vtbl Address: 0x100EF330
+// vtbl Address: 0x100EF330
+class ActorBlockSwitch : public ActorBlockBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EB050
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EB054
@@ -15,10 +16,6 @@ public:
         cSwitchType_Hatena  = 0,
         cSwitchType_SwitchP = 1
     };
-
-public:
-    // Address: 0x100EF29C
-    static const ActorCreateInfo cActorCreateInfo;
 
 public:
     // Address: 0x026BA304
@@ -50,6 +47,10 @@ public:
     {
         mSwitchType = type;
     }
+
+public:
+    // Address: 0x100EF29C
+    static const ActorCreateInfo cCreateInfo;
 
 protected:
     SwitchType  mSwitchType;
