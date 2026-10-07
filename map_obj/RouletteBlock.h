@@ -87,7 +87,7 @@ public:
 
 public:
     // Address: 0x10151098
-    static const ActorCreateInfo cActorCreateInfo;
+    static const ActorCreateInfo cCreateInfo;
 
 protected:
     AnimModel*               mModelActive;
