@@ -46,7 +46,7 @@ public:
     }
     // Address: 0x026BFD40
     virtual void vf2DC();
-    // Address: 0x026C0F7C;
+    // Address: 0x026C0F7C
     virtual void vf2E4();
     // Address: 0x026C1084
     virtual void vf2EC();
@@ -54,7 +54,7 @@ public:
     virtual void vf2F4();
     // Address: 0x026C11F8
     virtual void vf2FC();
-    // Address: 0x026C1300;
+    // Address: 0x026C1300
     virtual void vf304();
     // Address: 0x026C1DD0
     virtual void vf30C();
