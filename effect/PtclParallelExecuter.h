@@ -9,7 +9,8 @@
 class ParallelExecuter;
 class PtclMgr;
 
-class PtclParallelExecuter : public sead::IDisposer // vtbl Address: 0x10058B74
+// vtbl Address: 0x10058B74
+class PtclParallelExecuter : public sead::IDisposer
 {
 public:
     static const s32 cExecuterNum = 2;

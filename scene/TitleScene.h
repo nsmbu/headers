@@ -3,7 +3,8 @@
 #include <framework/seadCalculateTask.h>
 #include <framework/seadTaskMgr.h>
 
-class TitleScene : public sead::CalculateTask   // vtbl Address: 0x10179C74
+// vtbl Address: 0x10179C74
+class TitleScene : public sead::CalculateTask
 {
 public:
     // Address: 0x0299AC54

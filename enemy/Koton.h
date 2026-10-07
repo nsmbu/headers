@@ -8,7 +8,8 @@
 #include <enemy/EnemyBoyoMgr.h>
 #include <enemy/EnemyChibiYoshiEatData.h>
 
-class KotonDrcTouchCB : public ActorCollisionDrcTouchCallback   // vtbl Address: 0x10090654
+// vtbl Address: 0x10090654
+class KotonDrcTouchCB : public ActorCollisionDrcTouchCallback
 {
 public:
     // Address: 0x023D5334
@@ -20,7 +21,8 @@ static_assert(sizeof(KotonDrcTouchCB) == sizeof(ActorCollisionDrcTouchCallback))
 
 class AnimModel;
 
-class Koton : public Enemy  // vtbl Address: 0x100906AC
+// vtbl Address: 0x100906AC
+class Koton : public Enemy
 {
 public:
     // Address: 0x100904E0

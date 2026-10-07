@@ -2,7 +2,8 @@
 
 #include <actor/ActorUniqueID.h>
 
-class GamesceneBase // vtbl Address: 0x100D3C2C
+// vtbl Address: 0x100D3C2C
+class GamesceneBase
 {
 public:
     virtual void create()

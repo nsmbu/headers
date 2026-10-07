@@ -6,7 +6,8 @@
 
 class Snd2DCalc;
 
-class NMSndObjectBase : public nw::snd::SoundActor  // vtbl Address: 0x1017DA3C
+// vtbl Address: 0x1017DA3C
+class NMSndObjectBase : public nw::snd::SoundActor
 {
 public:
     static const u32 cExtraHandleNum = 2;

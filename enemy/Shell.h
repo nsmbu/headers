@@ -7,14 +7,16 @@
 #include <enemy/CarryEnemy.h>
 #include <enemy/EnemyChibiYoshiEatData.h>
 
-class Shell : public CarryEnemy // vtbl Address: 0x100A6578
+// vtbl Address: 0x100A6578
+class Shell : public CarryEnemy
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA158
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA154
     SEAD_RTTI_OVERRIDE(Shell, CarryEnemy);
 
 protected:
-    class DrcTouchCB : public ActorCollisionDrcTouchCallback // vtbl Address: 0x100A6520
+    // vtbl Address: 0x100A6520
+    class DrcTouchCB : public ActorCollisionDrcTouchCallback
     {
     public:
         DrcTouchCB()

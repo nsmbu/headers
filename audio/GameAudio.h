@@ -348,7 +348,7 @@ public:
     static_assert(sizeof(AudioObjctPly) == sizeof(SndObjctPly));
 
 public:
-    // 0x02028F2C
+    // Address: 0x02028F2C
     void initSound();
 
 public:

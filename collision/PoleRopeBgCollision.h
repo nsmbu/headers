@@ -8,7 +8,8 @@
 
 class ActorBgCollisionPlayerCheck;
 
-class PoleRopeBgCollision : public BgCollision  // vtbl Address: 0x10042828
+// vtbl Address: 0x10042828
+class PoleRopeBgCollision : public BgCollision
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA380
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA384

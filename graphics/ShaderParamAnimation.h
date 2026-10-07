@@ -11,7 +11,8 @@
 class ModelG3d;
 class ModelResource;
 
-class ShaderParamAnimation : public Animation   // vtbl Address: 0x100BE204
+// vtbl Address: 0x100BE204
+class ShaderParamAnimation : public Animation
 {
 public:
     // Address: 0x024FE8E4

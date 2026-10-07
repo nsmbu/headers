@@ -3,10 +3,12 @@
 #include <container/seadSafeArray.h>
 #include <heap/seadDisposer.h>
 
+/**
+ * @details Combination of NSMBW's @c dSwitchFlagMng_c & @c dPSwManager_c
+ */
 class SwitchFlagMgr
 {
-    // Combination of NSMBW's dSwitchFlagMng_c & dPSwManager_c
-
+    // sInstance    Address: 0x101DB06C
     SEAD_SINGLETON_DISPOSER(SwitchFlagMgr)
 
 public:
@@ -46,6 +48,10 @@ private:
 
 public:
     // duration: 0 = permanent, N = 10 * N sec
+    /**
+     * @param duration 0 = permanent, N = 10*N seconds.
+     * @par Address: 0x0269CD68
+     */
     void set(u8 flag_bit, u8 duration, bool activate, bool timed_reverse = false, bool = false, u32 = 0, FlagType type = cFlagType_Normal);
 
     // Address: 0x0269D654

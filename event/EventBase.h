@@ -7,7 +7,8 @@
 class ActorBase;
 class EventMgr;
 
-class EventBase : public sead::IDisposer    // vtbl Address: 0x100B4480
+// vtbl Address: 0x100B4480
+class EventBase : public sead::IDisposer
 {
 public:
     enum Result

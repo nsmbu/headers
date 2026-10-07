@@ -2,7 +2,8 @@
 
 #include <collision/ActorBgCollisionCheck.h>
 
-class ActorBgCollisionObjCheck : public ActorBgCollisionCheck   // vtbl Address: 0x1004165C
+// vtbl Address: 0x1004165C
+class ActorBgCollisionObjCheck : public ActorBgCollisionCheck
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: Deleted
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: Deleted

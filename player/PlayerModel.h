@@ -6,7 +6,8 @@
 
 struct PlayerObjectResHIO;
 
-class PlayerModel : public PlayerModelBase // vtbl Address: 0x1016BA2C
+// vtbl Address: 0x1016BA2C
+class PlayerModel : public PlayerModelBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9D28
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EBA74

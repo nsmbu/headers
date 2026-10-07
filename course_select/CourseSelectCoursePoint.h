@@ -4,7 +4,8 @@
 #include <effect/Effect.h>
 #include <graphics/AnimModel.h>
 
-class CourseSelectCoursePoint : public CourseSelectObjActor // vtbl Address: 0x10044418
+// vtbl Address: 0x10044418
+class CourseSelectCoursePoint : public CourseSelectObjActor
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA450
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA44C

@@ -19,7 +19,8 @@ enum CcLineKind
 class Actor;
 class ActorCollisionDrcTouchCallback;
 
-class ActorCollisionCheck : public sead::IDisposer  // vtbl Address: 0x10041C18
+// vtbl Address: 0x10041C18
+class ActorCollisionCheck : public sead::IDisposer
 {
 public:
     struct Vec2 // POD variant

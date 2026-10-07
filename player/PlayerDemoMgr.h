@@ -12,6 +12,7 @@ class EventGoalActorStop;
 
 class PlayerDemoMgr
 {
+    // sInstance    Address: 0x101E2238
     SEAD_SINGLETON_DISPOSER(PlayerDemoMgr)
 
 public:

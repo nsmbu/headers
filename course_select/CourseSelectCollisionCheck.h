@@ -32,19 +32,16 @@ public:
     // Address: //!!!
     void set(CourseSelectActor* owner, const CollisionData& collision_data);
 
-    [[nodiscard]]
     ActorUniqueID& getOwnerID()
     {
         return mOwnerID;
     }
     
-    [[nodiscard]]
     const ActorUniqueID& getOwnerID() const
     {
         return mOwnerID;
     }
     
-    [[nodiscard]]
     f32 getSize() const
     {
         return mCollisionData.size;
@@ -55,13 +52,11 @@ public:
         mCollisionData.size = size;
     }
     
-    [[nodiscard]]
     Vec3& getCenterOffset()
     {
         return mCollisionData.center_offset;
     }
     
-    [[nodiscard]]
     const Vec3& getCenterOffset() const
     {
         return mCollisionData.center_offset;

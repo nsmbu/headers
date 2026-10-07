@@ -11,7 +11,8 @@
 class ModelG3d;
 class ModelResource;
 
-class SkeletalAnimation : public Animation  // vtbl Address: 0x100BDF44
+// vtbl Address: 0x100BDF44
+class SkeletalAnimation : public Animation
 {
 public:
     // Address: 0x024FD7E8
@@ -42,6 +43,9 @@ public:
     void disableBindFlag();
     // Address: 0x024FDCF8
     void enableBindFlag(s32 idx_bone);
+
+    // Address: Deleted
+    void disableBindFlag(s32 idx_bone);
 
     // Address: 0x024FDD1C
     void calc() override;

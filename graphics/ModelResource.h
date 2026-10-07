@@ -9,7 +9,8 @@
 
 #include <nw/g3d/res/g3d_ResFile.h>
 
-class ModelResource : public sead::IDisposer    // vtbl Address: 0x100BD17C
+// vtbl Address: 0x100BD17C
+class ModelResource : public sead::IDisposer
 {
 public:
     // Address: 0x024F5548

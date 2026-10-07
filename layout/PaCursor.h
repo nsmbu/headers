@@ -8,7 +8,8 @@
 #include <container/seadSafeArray.h>
 #include <prim/seadSafeString.h>
 
-class PaCursor  // vtbl Address: 0x100D6B34
+// vtbl Address: 0x100D6B34
+class PaCursor
 {
 public:
     static const s32 cButtonMax = 41;

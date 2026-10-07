@@ -8,7 +8,8 @@ namespace Mii {
 
 class SlotID;
 
-class SlotMgr : public sead::IDisposer  // vtbl Address: 0x100BBE24
+// vtbl Address: 0x100BBE24
+class SlotMgr : public sead::IDisposer
 {
 public:
     // Address: 0x024ECA98

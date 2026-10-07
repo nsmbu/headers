@@ -2,7 +2,8 @@
 
 #include <collision/ActorCollisionDrcTouchCallback.h>
 
-class PlayerDrcTouchCB : public ActorCollisionDrcTouchCallback  // vtbl Address: 0x101693FC
+// vtbl Address: 0x101693FC
+class PlayerDrcTouchCB : public ActorCollisionDrcTouchCallback
 {
 public:
     // Address: 0x029117C0

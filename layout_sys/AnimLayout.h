@@ -26,7 +26,8 @@ class LayoutObj;
 class PartsLayoutObj;
 class TextBox;
 
-class Multi2D : public sead::IDisposer  // vtbl Address: 0x100E2A1C
+// vtbl Address: 0x100E2A1C
+class Multi2D : public sead::IDisposer
 {
 public:
     // Address: 0x026711C8
@@ -178,7 +179,8 @@ class ArcResAccMulti;
 class FlexibleTextBox;
 class UtilCursorButtonMgr;
 
-class AnimLayoutBase : public Multi2D   // vtbl Address: 0x100E2A2C
+// vtbl Address: 0x100E2A2C
+class AnimLayoutBase : public Multi2D
 {
 public:
     // Address: 0x02672F04
@@ -197,7 +199,8 @@ protected:
 };
 static_assert(sizeof(AnimLayoutBase) == 0xE8C);
 
-class PartsAnimLayoutBase : public Multi2D  // vtbl Address: 0x100E29D0
+// vtbl Address: 0x100E29D0
+class PartsAnimLayoutBase : public Multi2D
 {
 public:
     // Address: 0x02673124

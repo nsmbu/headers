@@ -6,7 +6,8 @@
 class PlayerBase;
 class PlayerObject;
 
-class CarryEnemy : public Enemy // vtbl Address: 0x100625BC
+// vtbl Address: 0x100625BC
+class CarryEnemy : public Enemy
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9F7C
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9FC0

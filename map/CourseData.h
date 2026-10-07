@@ -281,11 +281,16 @@ public:
     }
 
     const DistantViewData* getBg2Data(u16 id) const;
+    // Address: 0x02699BD8
     const NextGoto* getNextGoto(u8 id) const;
+    // Address: 0x02699C08
     const MapActorData* getMapActor(u16 type, const MapActorData* start = nullptr) const;
     const AreaData* getAreaData(u8 id, sead::BoundBox2f* box = nullptr) const;
+    // Address: 0x0269A020
     const Location* getLocation(sead::BoundBox2f* box, u8 id) const;
+    // Address: 0x0269A0A8
     const RailInfo* getRailInfo(u8 id) const;
+    // Address: 0x0269A0F4
     const RailPoint* getRailPoint(u8 rail_id) const;
 
 private:
@@ -304,15 +309,18 @@ static_assert(sizeof(CourseDataFile) == 0x3B8);
 
 class CourseData
 {
+    // sInstance    Address: 0x101DB048
     SEAD_SINGLETON_DISPOSER(CourseData)
 
 public:
+    // Address: 0x0269A144
     CourseData();
     ~CourseData();
 
+    // Address: 0x0269A2DC
     CourseDataFile* getFile(s32 index);
 
 private:
     sead::SafeArray<CourseDataFile, 4> mFile;
 };
-static_assert(sizeof(CourseData) == 0xEF0);
+static_assert(sizeof(CourseData) == 0xEF0, "CourseData size mismatch");

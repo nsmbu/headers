@@ -9,7 +9,8 @@
 
 #include <math/seadMatrix.h>
 
-class BrosDrcTouchCB : public ActorCollisionDrcTouchCallback    // vtbl Address: 0x1005F6E8
+// vtbl Address: 0x1005F6E8
+class BrosDrcTouchCB : public ActorCollisionDrcTouchCallback
 {
 public:
     // Address: 0x022DD974
@@ -21,7 +22,8 @@ static_assert(sizeof(BrosDrcTouchCB) == sizeof(ActorCollisionDrcTouchCallback));
 
 class JointBlendModel;
 
-class BrosBase : public Enemy   // vtbl Address: 0x1005F078
+// vtbl Address: 0x1005F078
+class BrosBase : public Enemy
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA308
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA30C

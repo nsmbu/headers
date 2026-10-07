@@ -10,7 +10,8 @@ namespace Mii {
 
 class IconRenderBuffer;
 
-class IconFacelineObj : public RenderObj    // vtbl Address: 0x100BBF7C
+// vtbl Address: 0x100BBF7C
+class IconFacelineObj : public RenderObj
 {
 public:
     struct Vertex

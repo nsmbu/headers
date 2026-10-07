@@ -6,7 +6,8 @@
 #include <enemy/EnemyBoyoMgr.h>
 #include <enemy/Enemy.h>
 
-class SnakeBlockBoyoMgr : public EnemyBoyoMgr // vtbl Address: 0x100A6D94
+// vtbl Address: 0x100A6D94
+class SnakeBlockBoyoMgr : public EnemyBoyoMgr
 {
 public:
     SnakeBlockBoyoMgr()
@@ -25,7 +26,8 @@ protected:
     const sead::Vector3f* mBaseScale;
 };
 
-class SnakeBlock : public Enemy // vtbl Address: 0x100A717C
+// vtbl Address: 0x100A717C
+class SnakeBlock : public Enemy
 {
     // No RTTI
 
@@ -44,7 +46,8 @@ public:
     };
 
 public:
-    class DrcTouchCB : public ActorCollisionDrcTouchCallback // vtbl Address: 0x100A7124
+    // vtbl Address: 0x100A7124
+    class DrcTouchCB : public ActorCollisionDrcTouchCallback
     {
     public:
         // Address: 0x0245CF04
@@ -54,7 +57,8 @@ public:
     };
     static_assert(sizeof(DrcTouchCB) == 0x4, "SnakeBlock::DrcTouchCB size mismatch");
 
-    class Piece : public ActorBoxBgCollision // vtbl Address: 0x100A6F4C
+    // vtbl Address: 0x100A6F4C
+    class Piece : public ActorBoxBgCollision
     {
     public:
         Piece()
@@ -110,7 +114,8 @@ public:
     };
     static_assert(sizeof(Piece) == 0x310, "SnakeBlock::Piece size mismatch");
 
-    class EdgePiece : public Piece // vtbl Address: 0x100A6F4C
+    // vtbl Address: 0x100A6F4C
+    class EdgePiece : public Piece
     {
     public:
         EdgePiece()

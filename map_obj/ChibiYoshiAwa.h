@@ -2,7 +2,8 @@
 
 #include <actor/Actor.h>
 
-class ChibiYoshiAwa : public Actor  // vtbl Address: 0x10108010
+// vtbl Address: 0x10108010
+class ChibiYoshiAwa : public Actor
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA250
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA254

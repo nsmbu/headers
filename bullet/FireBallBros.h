@@ -4,7 +4,8 @@
 
 // TODO: methods, members
 
-class FireBallBros : public FireBallBase // vtbl Address: 0x1003B710
+// vtbl Address: 0x1003B710
+class FireBallBros : public FireBallBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA310
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA314

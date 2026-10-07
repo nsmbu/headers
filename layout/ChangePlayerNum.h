@@ -5,7 +5,8 @@
 
 #include <layer/aglRenderInfo.h>
 
-class ChangePlayerNum   // vtbl Address: 0x100C8CE0
+// vtbl Address: 0x100C8CE0
+class ChangePlayerNum
 {
 public:
     // Address: 0x02553AB8

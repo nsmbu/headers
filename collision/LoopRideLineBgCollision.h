@@ -7,7 +7,8 @@
 
 class LoopRideLineBgCollisionUtil;
 
-class LoopRideLineBgCollision : public BgCollision  // vtbl Address: 0x10042688
+// vtbl Address: 0x10042688
+class LoopRideLineBgCollision : public BgCollision
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9D30
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9FB4

@@ -6,7 +6,8 @@
 
 class BalloonHangActor;
 
-class Kuribo : public KuriboBase    // vtbl Address: 0x10090E2C
+// vtbl Address: 0x10090E2C
+class Kuribo : public KuriboBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EA150
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EA14C

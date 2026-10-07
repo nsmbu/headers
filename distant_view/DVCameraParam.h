@@ -7,7 +7,8 @@
 
 class DistantViewMgr;
 
-class DVCameraParam : public sead::IDisposer    // vtbl Address: 0x100584D4
+// vtbl Address: 0x100584D4
+class DVCameraParam : public sead::IDisposer
 {
 public:
     // Address: 0x022A98DC

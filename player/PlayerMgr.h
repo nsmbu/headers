@@ -22,6 +22,7 @@ class Yoshi;
 
 class PlayerMgr
 {
+    // sInstance    Address: 0x101E6994
     SEAD_SINGLETON_DISPOSER(PlayerMgr)
 
 public:

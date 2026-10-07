@@ -4,7 +4,8 @@
 #include <resource/seadSharcArchiveRes.h>
 #include <utility/aglParameterIO.h>
 
-class GfxParameter  // vtbl Address: 0x100BAD04
+// vtbl Address: 0x100BAD04
+class GfxParameter
 {
     // createInstance()                             Address: 0x024DF350
     // deleteInstance()                             Address: Deleted

@@ -4,7 +4,8 @@
 
 class Enemy;
 
-class EnemyChibiYoshiEatData : public ChibiYoshiEatData // vtbl Address: 0x10072738
+// vtbl Address: 0x10072738
+class EnemyChibiYoshiEatData : public ChibiYoshiEatData
 {
 public:
     // Address: 0x0232ADAC

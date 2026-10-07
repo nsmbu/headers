@@ -4,7 +4,8 @@
 
 class PlayerObject;
 
-class BalloonChibiYoshi : public ChibiYoshiBase // vtbl Address: 0x100FA7FC
+// vtbl Address: 0x100FA7FC
+class BalloonChibiYoshi : public ChibiYoshiBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EB178
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EB174

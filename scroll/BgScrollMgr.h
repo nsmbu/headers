@@ -116,6 +116,7 @@ public:
 
 class BgScrollMgr
 {
+    // sInstance    Address: 0x101E7C54
     SEAD_SINGLETON_DISPOSER(BgScrollMgr)
 
 public:

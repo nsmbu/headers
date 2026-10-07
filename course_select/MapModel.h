@@ -11,43 +11,32 @@ public:
     
     // Address: 0x02297A24
     void draw();
-    
-    [[nodiscard]]
-    AnimModel* getModel()
+
+    AnimModel* getModel() const
     {
         return mModel;
     }
-    
-    [[nodiscard]]
-    const AnimModel* getModel() const
-    {
-        return mModel;
-    }
-    
-    [[nodiscard]]
+
     AnimModel* getModelWorld()
     {
         return mModelWorld;
     }
-    
-    [[nodiscard]]
+
     const AnimModel* getModelWorld() const
     {
         return mModelWorld;
     }
-    
-    [[nodiscard]]
+
     AnimModel* getModelTrap()
     {
         return mModelTrap;
     }
-    
-    [[nodiscard]]
+
     const AnimModel* getModelTrap() const
     {
         return mModelTrap;
     }
-    
+
 private:
     u8 _0[0x4 - 0x0];
     AnimModel* mModel;

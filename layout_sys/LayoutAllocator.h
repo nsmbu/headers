@@ -4,7 +4,8 @@
 
 #include <nw/ut/ut_Memory.h>
 
-class LayoutAllocator : public nw::ut::IAllocator // vtbl Address: 0x100E38C0
+// vtbl Address: 0x100E38C0
+class LayoutAllocator : public nw::ut::IAllocator
 {
 public:
     // GetRuntimeTypeInfoStatic()::s_TypeInfo initialization guard variable Address: 0x101E9DC4

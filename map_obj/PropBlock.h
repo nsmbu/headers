@@ -2,7 +2,8 @@
 
 #include <map_obj/CarryBlockBase.h>
 
-class PropBlock : public CarryBlockBase // vtbl Address: 0x1014CF64
+// vtbl Address: 0x1014CF64
+class PropBlock : public CarryBlockBase
 {
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EB87C
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EB880
