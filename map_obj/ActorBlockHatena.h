@@ -8,6 +8,7 @@ class ActorBlockHatena : public ActorBlockBase
     // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101EAFAC
     // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EAFB0
     SEAD_RTTI_OVERRIDE(ActorBlockHatena, ActorBlockBase)
+
 public:
     // Address: 0x026A4FAC
     ActorBlockHatena(const ActorCreateParam& param);
