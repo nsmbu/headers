@@ -46,4 +46,7 @@ public:
 
     // Address: 0x026CBD10
     void spawnCoinSpringFunsui(const sead::Vector3f& pos, s32 player_no, s32 coin_count, s32 angle_type, Actor* eat_die_actor);
+
+    // Address: 0x026CCE14
+    void collectCoinForPlayerNo(s32 player_no, u32);
 };
