@@ -6,19 +6,21 @@
 #include <map_obj/ObjBgCollisionCullCheck.h>
 #include <map_obj/ParentMovementMgr.h>
 
-class ChangeBlockCoinDrcTouchCB : public ActorCollisionDrcTouchCallback
-{
-public:
-    bool bcSetTouchNormal(BgCollision* bg_collision, const sead::Vector2f& pos) override;
-};
-static_assert(sizeof(ChangeBlockCoinDrcTouchCB) == 4);
-
 class ChangeBlockCoinBase : public BlockCoinBase
 {
     SEAD_RTTI_OVERRIDE(ChangeBlockCoinBase, BlockCoinBase)
 
 public:
-    enum Form : u32 {
+    class DrcTouchCB : public ActorCollisionDrcTouchCallback
+    {
+    public:
+        bool bcSetTouchNormal(BgCollision* bg_collision, const sead::Vector2f& pos) override;
+    };
+    static_assert(sizeof(DrcTouchCB) == 4);
+
+public:
+    enum Form : u32
+    {
         cForm_Coin = 0,
         cForm_Block = 1
     };
@@ -63,7 +65,7 @@ public:
     // Address: 0x02726760
     bool registerColliderActiveInfo();
 
-    ChangeBlockCoinDrcTouchCB getDrcTouchCallback() const
+    DrcTouchCB getDrcTouchCallback() const
     {
         return mDrcTouchCallback;
     }
@@ -86,8 +88,12 @@ protected:
     u32                             mParentMovementID;
     u8                              _1c7c[0x1C88 - 0x1C7C];
     bool                            mDisablePSwitchTransform;
-    u8                              _1c89[0x1CA0 - 0x1C89];
-    ChangeBlockCoinDrcTouchCB       mDrcTouchCallback;
+    bool                            mIsCoin;
+    u8                              _1c8a[0x1C90 - 0x1C8A];
+    s32                             mCoinCollectPlayerNo;
+    u16                             _1c94;
+    u8                              _1c96[0x1CA0 - 0x1C98];
+    DrcTouchCB                      mDrcTouchCallback;
   //u32                             _1ca4[4 / sizeof(u32)]; // Alignment???
 };
 static_assert(sizeof(ChangeBlockCoinBase) == 0x1CA8);
