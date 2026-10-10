@@ -25,12 +25,12 @@ enum CourseBeatenType
 };
 static_assert(sizeof(CourseBeatenType) == 4, "CourseBeatenType size mismatch");
 
-enum W6SwitchState : u8
+enum CSSwitchState : u8
 {
-    cW6SwitchState_Red = 0,
-    cW6SwitchState_Blue
+    cCSSwitchState_Red = 0,
+    cCSSwitchState_Blue
 };
-static_assert(sizeof(W6SwitchState) == 1, "W6SwitchState size mismatch");
+static_assert(sizeof(CSSwitchState) == 1, "W6SwitchState size mismatch");
 
 class MainGame
 {
@@ -99,9 +99,9 @@ public:
         return mReplayFlag.isOnBit(0);
     }
 
-    W6SwitchState getW6SwitchState() const
+    CSSwitchState getCSSwitchState() const
     {
-        return mW6SwitchState;
+        return mCSSwitchState;
     }
 
     SaveData::LevelStat& getLevelStat()
@@ -119,7 +119,7 @@ protected:
     u32                 _28;
     sead::BitFlag32     mReplayFlag;
     u32                 _30[(0x78 - 0x30) / sizeof(u32)];
-    W6SwitchState       mW6SwitchState;
+    CSSwitchState       mCSSwitchState;
     u32                 _7c[(0x31C - 0x7C) / sizeof(u32)];
     SaveData::LevelStat mLevelStat;
     u32                 _3d8[(0x21DDC - 0x3D8) / sizeof(u32)];
