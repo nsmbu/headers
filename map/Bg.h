@@ -9,6 +9,8 @@
 
 class Bg
 {
+    // createInstance() Address: 0x02684EF0
+    // sInstance        Address: 0x101DAB94
     SEAD_SINGLETON_DISPOSER(Bg)
 
 public:
