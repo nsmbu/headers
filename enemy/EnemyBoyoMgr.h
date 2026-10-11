@@ -11,8 +11,11 @@ class EnemyBoyoMgr
 
 public:
     static const s32 cBoyonTime = 24;
-    // Address: 0x10200DF0
-    static const f32 cDeltaScale;       // 0.0625
+    /**
+     * @brief 0.0625
+     * @par Address: 0x10200DF0
+     */
+    static const f32 cDeltaScale;
 
 public:
     EnemyBoyoMgr(Actor* owner)

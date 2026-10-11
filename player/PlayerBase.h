@@ -974,20 +974,41 @@ public:
 
     // Address: 0x10166E60
     static const f32 cDirSpeed[cDirType_NumX];
-    // Address: 0x10166E68
-    static const f32 cJumpSpeedBase;                // 3.628f
-    // Address: 0x10166E6C
-    static const f32 cUnkZero;                      // 0.0f
-    // Address: 0x10166E70
-    static const f32 cWaterNumaJumpSpeed;           // 0.75f
-    // Address: 0x10166E74
-    static const f32 cMaxFallSpeed;                 // -4.0f
-    // Address: 0x10166E78
-    static const f32 cMaxFallSpeed_Foot;            // -2.0f
-    // Address: 0x10166E7C
-    static const f32 cTurnPowerUpRate;              // 3.0f
-    // Address: 0x10166E80
-    static const f32 cWaterCancelCrouchAnmSpeed;    // 0.1f
+    /**
+     * @brief 3.628f
+     * @par Address: 0x10166E68
+     */
+    static const f32 cJumpSpeedBase;
+    /**
+     * @brief 0.0f
+     * @par Address: 0x10166E6C
+     */
+    static const f32 cUnkZero;
+    /**
+     * @brief 0.75f
+     * @par Address: 0x10166E70
+     */
+    static const f32 cWaterNumaJumpSpeed;
+    /**
+     * @brief -4.0f
+     * @par Address: 0x10166E74
+     */
+    static const f32 cMaxFallSpeed;
+    /**
+     * @brief -2.0f
+     * @par Address: 0x10166E78
+     */
+    static const f32 cMaxFallSpeed_Foot;
+    /**
+     * @brief 3.0f
+     * @par Address: 0x10166E7C
+     */
+    static const f32 cTurnPowerUpRate;
+    /**
+     * @brief 0.1f
+     * @par Address: 0x10166E80
+     */
+    static const f32 cWaterCancelCrouchAnmSpeed;
 
     static const s32 cAddCalcAngleYFrameNum_Default = 10;
     static const s32 cAddCalcAngleYFrameNum_DemoOutDoor = 5;

@@ -261,8 +261,11 @@ protected:
     BalloonHangActor*               mpBalloon;
     ActorUniqueID                   mBalloonID;
 
-    // Address: 0x102047A4
-    static const f32 cWalkSpeed[cDirType_NumX]; // 0.5f, -0.5f
+    /**
+     * @brief 0.5f, -0.5f
+     * @par Address: 0x102047A4
+     */
+    static const f32 cWalkSpeed[cDirType_NumX];
 
     static f32 getWalkSpeed()
     {

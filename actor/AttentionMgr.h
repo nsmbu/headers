@@ -36,8 +36,11 @@ public:
 protected:
     sead::OffsetList<AttentionLookat>   mLookatList;
 
-    // Address: 0x10001350
-    static const f32 cMaxDistanceSqMax;   // Square of maximum possible value of all max-distances (square of 32 blocks = 262144 sq units)
+    /**
+     * @brief Square of maximum possible value of all max-distances (square of 32 blocks = 262144 sq units)
+     * @par Address: 0x10001350
+     */
+    static const f32 cMaxDistanceSqMax;
     // Address: 0x101C30D8
     static f32 sMaxDistanceSq[AttentionLookat::cDistance_Num];
 };

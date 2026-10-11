@@ -958,1824 +958,4554 @@ protected:
     static const sead::SafeString* cResList[cProfileID_Max];
 
 public:
-    // Address: 0x10003D54
-    static const s32 cProfileID_000;                                       //   0
-    // Address: 0x10003D58
-    static const s32 cProfileID_001;                                       //   1
-    // Address: 0x10003D5C
-    static const s32 cProfileID_002;                                       //   2
-    // Address: 0x10003D60
-    static const s32 cProfileID_003;                                       //   3
-    // Address: 0x10003D64
-    static const s32 cProfileID_004;                                       //   4
-    // Address: 0x10003D68
-    static const s32 cProfileID_005;                                       //   5
-    // Address: 0x10003D6C
-    static const s32 cProfileID_006;                                       //   6
-    // Address: 0x10003D70
-    static const s32 cProfileID_007;                                       //   7
-    // Address: 0x10003D74
-    static const s32 cProfileID_008;                                       //   8
-    // Address: 0x10003D78
-    static const s32 cProfileID_009;                                       //   9
-    // Address: 0x10003D7C
-    static const s32 cProfileID_00A;                                       //  10
-    // Address: 0x10003D80
-    static const s32 cProfileID_00B;                                       //  11
-    // Address: 0x10003D84
-    static const s32 cProfileID_00C;                                       //  12
-    // Address: 0x10003D88
-    static const s32 cProfileID_00D;                                       //  13
-    // Address: 0x10003D8C
-    static const s32 cProfileID_00E;                                       //  14
-    // Address: 0x10003D90
-    static const s32 cProfileID_00F;                                       //  15
-    // Address: 0x10003D94
-    static const s32 cProfileID_010;                                       //  16
-    // Address: 0x10003D98
-    static const s32 cProfileID_011;                                       //  17
-    // Address: 0x10003D9C
-    static const s32 cProfileID_012;                                       //  18
-    // Address: 0x10003DA0
-    static const s32 cProfileID_013;                                       //  19
-    // Address: 0x10003DA4
-    static const s32 cProfileID_014;                                       //  20
-    // Address: 0x10003DA8
-    static const s32 cProfileID_015;                                       //  21
-    // Address: 0x10003DAC
-    static const s32 cProfileID_016;                                       //  22
-    // Address: 0x10003DB0
-    static const s32 cProfileID_017;                                       //  23
-    // Address: 0x10003DB4
-    static const s32 cProfileID_MiniGameMgr;                               //  24
-    // Address: 0x10003DB8
-    static const s32 cProfileID_MiniGameMgrRDash;                          //  25
-    // Address: 0x10003DBC
-    static const s32 cProfileID_ShuffleBlockMgr;                           //  26
-    // Address: 0x10003DC0
-    static const s32 cProfileID_SlotMgr;                                   //  27
-    // Address: 0x10003DC4
-    static const s32 cProfileID_CoinmakiMgr;                               //  28
-    // Address: 0x10003DC8
-    static const s32 cProfileID_01D;                                       //  29
-    // Address: 0x10003DCC
-    static const s32 cProfileID_01E;                                       //  30
-    // Address: 0x10003DD0
-    static const s32 cProfileID_01F;                                       //  31
-    // Address: 0x10003DD4
-    static const s32 cProfileID_020;                                       //  32
-    // Address: 0x10003DD8
-    static const s32 cProfileID_ShootingStar;                              //  33
-    // Address: 0x10003DDC
-    static const s32 cProfileID_StaffRollMgr;                              //  34
-    // Address: 0x10003DE0
-    static const s32 cProfileID_StaffRollMgrRDash;                         //  35
-    // Address: 0x10003DE4
-    static const s32 cProfileID_024;                                       //  36
-    // Address: 0x10003DE8
-    static const s32 cProfileID_025;                                       //  37
-    // Address: 0x10003DEC
-    static const s32 cProfileID_026;                                       //  38
-    // Address: 0x10003DF0
-    static const s32 cProfileID_027;                                       //  39
-    // Address: 0x10003DF4
-    static const s32 cProfileID_028;                                       //  40
-    // Address: 0x10003DF8
-    static const s32 cProfileID_029;                                       //  41
-    // Address: 0x10003DFC
-    static const s32 cProfileID_02A;                                       //  42
-    // Address: 0x10003E00
-    static const s32 cProfileID_02B;                                       //  43
-    // Address: 0x10003E04
-    static const s32 cProfileID_02C;                                       //  44
-    // Address: 0x10003E08
-    static const s32 cProfileID_02D;                                       //  45
-    // Address: 0x10003E0C
-    static const s32 cProfileID_02E;                                       //  46
-    // Address: 0x10003E10
-    static const s32 cProfileID_02F;                                       //  47
-    // Address: 0x10003E14
-    static const s32 cProfileID_030;                                       //  48
-    // Address: 0x10003E18
-    static const s32 cProfileID_031;                                       //  49
-    // Address: 0x10003E1C
-    static const s32 cProfileID_032;                                       //  50
-    // Address: 0x10003E20
-    static const s32 cProfileID_033;                                       //  51
-    // Address: 0x10003E24
-    static const s32 cProfileID_ElasticKinokoParent;                       //  52
-    // Address: 0x10003E28
-    static const s32 cProfileID_FloorGyration;                             //  53
-    // Address: 0x10003E2C
-    static const s32 cProfileID_036;                                       //  54
-    // Address: 0x10003E30
-    static const s32 cProfileID_037;                                       //  55
-    // Address: 0x10003E34
-    static const s32 cProfileID_038;                                       //  56
-    // Address: 0x10003E38
-    static const s32 cProfileID_039;                                       //  57
-    // Address: 0x10003E3C
-    static const s32 cProfileID_03A;                                       //  58
-    // Address: 0x10003E40
-    static const s32 cProfileID_03B;                                       //  59
-    // Address: 0x10003E44
-    static const s32 cProfileID_PairObjChild;                              //  60
-    // Address: 0x10003E48
-    static const s32 cProfileID_03D;                                       //  61
-    // Address: 0x10003E4C
-    static const s32 cProfileID_03E;                                       //  62
-    // Address: 0x10003E50
-    static const s32 cProfileID_03F;                                       //  63
-    // Address: 0x10003E54
-    static const s32 cProfileID_040;                                       //  64
-    // Address: 0x10003E58
-    static const s32 cProfileID_041;                                       //  65
-    // Address: 0x10003E5C
-    static const s32 cProfileID_042;                                       //  66
-    // Address: 0x10003E60
-    static const s32 cProfileID_043;                                       //  67
-    // Address: 0x10003E64
-    static const s32 cProfileID_044;                                       //  68
-    // Address: 0x10003E68
-    static const s32 cProfileID_045;                                       //  69
-    // Address: 0x10003E6C
-    static const s32 cProfileID_046;                                       //  70
-    // Address: 0x10003E70
-    static const s32 cProfileID_047;                                       //  71
-    // Address: 0x10003E74
-    static const s32 cProfileID_048;                                       //  72
-    // Address: 0x10003E78
-    static const s32 cProfileID_049;                                       //  73
-    // Address: 0x10003E7C
-    static const s32 cProfileID_04A;                                       //  74
-    // Address: 0x10003E80
-    static const s32 cProfileID_04B;                                       //  75
-    // Address: 0x10003E84
-    static const s32 cProfileID_04C;                                       //  76
-    // Address: 0x10003E88
-    static const s32 cProfileID_KinokoLift;                                //  77
-    // Address: 0x10003E8C
-    static const s32 cProfileID_KinokoLiftColor;                           //  78
-    // Address: 0x10003E90
-    static const s32 cProfileID_LiftZenStar;                               //  79
-    // Address: 0x10003E94
-    static const s32 cProfileID_050;                                       //  80
-    // Address: 0x10003E98
-    static const s32 cProfileID_051;                                       //  81
-    // Address: 0x10003E9C
-    static const s32 cProfileID_052;                                       //  82
-    // Address: 0x10003EA0
-    static const s32 cProfileID_053;                                       //  83
-    // Address: 0x10003EA4
-    static const s32 cProfileID_054;                                       //  84
-    // Address: 0x10003EA8
-    static const s32 cProfileID_055;                                       //  85
-    // Address: 0x10003EAC
-    static const s32 cProfileID_056;                                       //  86
-    // Address: 0x10003EB0
-    static const s32 cProfileID_057;                                       //  87
-    // Address: 0x10003EB4
-    static const s32 cProfileID_058;                                       //  88
-    // Address: 0x10003EB8
-    static const s32 cProfileID_059;                                       //  89
-    // Address: 0x10003EBC
-    static const s32 cProfileID_BgActorYukaMario;                          //  90
-    // Address: 0x10003EC0
-    static const s32 cProfileID_05B;                                       //  91
-    // Address: 0x10003EC4
-    static const s32 cProfileID_05C;                                       //  92
-    // Address: 0x10003EC8
-    static const s32 cProfileID_05D;                                       //  93
-    // Address: 0x10003ECC
-    static const s32 cProfileID_05E;                                       //  94
-    // Address: 0x10003ED0
-    static const s32 cProfileID_05F;                                       //  95
-    // Address: 0x10003ED4
-    static const s32 cProfileID_060;                                       //  96
-    // Address: 0x10003ED8
-    static const s32 cProfileID_061;                                       //  97
-    // Address: 0x10003EDC
-    static const s32 cProfileID_062;                                       //  98
-    // Address: 0x10003EE0
-    static const s32 cProfileID_063;                                       //  99
-    // Address: 0x10003EE4
-    static const s32 cProfileID_064;                                       // 100
-    // Address: 0x10003EE8
-    static const s32 cProfileID_KillerHoudai;                              // 101
-    // Address: 0x10003EEC
-    static const s32 cProfileID_StretchKillerHoudai;                       // 102
-    // Address: 0x10003EF0
-    static const s32 cProfileID_MagnumKillerHoudai;                        // 103
-    // Address: 0x10003EF4
-    static const s32 cProfileID_MagnumKillerHoudaiDown;                    // 104
-    // Address: 0x10003EF8
-    static const s32 cProfileID_SearchKillerHoudai;                        // 105
-    // Address: 0x10003EFC
-    static const s32 cProfileID_SearchMagnumKillerHoudai;                  // 106
-    // Address: 0x10003F00
-    static const s32 cProfileID_SearchMagnumKillerHoudaiDown;              // 107
-    // Address: 0x10003F04
-    static const s32 cProfileID_MagnumKillerHoudaiRDash;                   // 108
-    // Address: 0x10003F08
-    static const s32 cProfileID_MagnumKillerHoudaiDownRDash;               // 109
-    // Address: 0x10003F0C
-    static const s32 cProfileID_SearchMagnumKillerHoudaiRDash;             // 110
-    // Address: 0x10003F10
-    static const s32 cProfileID_SearchMagnumKillerHoudaiDownRDash;         // 111
-    // Address: 0x10003F14
-    static const s32 cProfileID_070;                                       // 112
-    // Address: 0x10003F18
-    static const s32 cProfileID_071;                                       // 113
-    // Address: 0x10003F1C
-    static const s32 cProfileID_072;                                       // 114
-    // Address: 0x10003F20
-    static const s32 cProfileID_073;                                       // 115
-    // Address: 0x10003F24
-    static const s32 cProfileID_074;                                       // 116
-    // Address: 0x10003F28
-    static const s32 cProfileID_075;                                       // 117
-    // Address: 0x10003F2C
-    static const s32 cProfileID_076;                                       // 118
-    // Address: 0x10003F30
-    static const s32 cProfileID_077;                                       // 119
-    // Address: 0x10003F34
-    static const s32 cProfileID_078;                                       // 120
-    // Address: 0x10003F38
-    static const s32 cProfileID_Intermittent;                              // 121
-    // Address: 0x10003F3C
-    static const s32 cProfileID_IntermittentPermanent;                     // 122
-    // Address: 0x10003F40
-    static const s32 cProfileID_WaterIntermittent;                         // 123
-    // Address: 0x10003F44
-    static const s32 cProfileID_WaterIntermittentPermanent;                // 124
-    // Address: 0x10003F48
-    static const s32 cProfileID_WaterIntermittentPermanentRD3_3;           // 125
-    // Address: 0x10003F4C
-    static const s32 cProfileID_07E;                                       // 126
-    // Address: 0x10003F50
-    static const s32 cProfileID_WaterIntermittentBossChild;                // 127
-    // Address: 0x10003F54
-    static const s32 cProfileID_YoganIntermittent;                         // 128
-    // Address: 0x10003F58
-    static const s32 cProfileID_081;                                       // 129
-    // Address: 0x10003F5C
-    static const s32 cProfileID_082;                                       // 130
-    // Address: 0x10003F60
-    static const s32 cProfileID_083;                                       // 131
-    // Address: 0x10003F64
-    static const s32 cProfileID_084;                                       // 132
-    // Address: 0x10003F68
-    static const s32 cProfileID_085;                                       // 133
-    // Address: 0x10003F6C
-    static const s32 cProfileID_ObjPipeDownNG;                             // 134
-    // Address: 0x10003F70
-    static const s32 cProfileID_087;                                       // 135
-    // Address: 0x10003F74
-    static const s32 cProfileID_088;                                       // 136
-    // Address: 0x10003F78
-    static const s32 cProfileID_089;                                       // 137
-    // Address: 0x10003F7C
-    static const s32 cProfileID_08A;                                       // 138
-    // Address: 0x10003F80
-    static const s32 cProfileID_08B;                                       // 139
-    // Address: 0x10003F84
-    static const s32 cProfileID_08C;                                       // 140
-    // Address: 0x10003F88
-    static const s32 cProfileID_08D;                                       // 141
-    // Address: 0x10003F8C
-    static const s32 cProfileID_08E;                                       // 142
-    // Address: 0x10003F90
-    static const s32 cProfileID_08F;                                       // 143
-    // Address: 0x10003F94
-    static const s32 cProfileID_090;                                       // 144
-    // Address: 0x10003F98
-    static const s32 cProfileID_091;                                       // 145
-    // Address: 0x10003F9C
-    static const s32 cProfileID_092;                                       // 146
-    // Address: 0x10003FA0
-    static const s32 cProfileID_093;                                       // 147
-    // Address: 0x10003FA4
-    static const s32 cProfileID_094;                                       // 148
-    // Address: 0x10003FA8
-    static const s32 cProfileID_095;                                       // 149
-    // Address: 0x10003FAC
-    static const s32 cProfileID_096;                                       // 150
-    // Address: 0x10003FB0
-    static const s32 cProfileID_097;                                       // 151
-    // Address: 0x10003FB4
-    static const s32 cProfileID_098;                                       // 152
-    // Address: 0x10003FB8
-    static const s32 cProfileID_099;                                       // 153
-    // Address: 0x10003FBC
-    static const s32 cProfileID_09A;                                       // 154
-    // Address: 0x10003FC0
-    static const s32 cProfileID_09B;                                       // 155
-    // Address: 0x10003FC4
-    static const s32 cProfileID_09C;                                       // 156
-    // Address: 0x10003FC8
-    static const s32 cProfileID_09D;                                       // 157
-    // Address: 0x10003FCC
-    static const s32 cProfileID_09E;                                       // 158
-    // Address: 0x10003FD0
-    static const s32 cProfileID_09F;                                       // 159
-    // Address: 0x10003FD4
-    static const s32 cProfileID_0A0;                                       // 160
-    // Address: 0x10003FD8
-    static const s32 cProfileID_0A1;                                       // 161
-    // Address: 0x10003FDC
-    static const s32 cProfileID_0A2;                                       // 162
-    // Address: 0x10003FE0
-    static const s32 cProfileID_0A3;                                       // 163
-    // Address: 0x10003FE4
-    static const s32 cProfileID_0A4;                                       // 164
-    // Address: 0x10003FE8
-    static const s32 cProfileID_0A5;                                       // 165
-    // Address: 0x10003FEC
-    static const s32 cProfileID_0A6;                                       // 166
-    // Address: 0x10003FF0
-    static const s32 cProfileID_0A7;                                       // 167
-    // Address: 0x10003FF4
-    static const s32 cProfileID_0A8;                                       // 168
-    // Address: 0x10003FF8
-    static const s32 cProfileID_0A9;                                       // 169
-    // Address: 0x10003FFC
-    static const s32 cProfileID_0AA;                                       // 170
-    // Address: 0x10004000
-    static const s32 cProfileID_0AB;                                       // 171
-    // Address: 0x10004004
-    static const s32 cProfileID_0AC;                                       // 172
-    // Address: 0x10004008
-    static const s32 cProfileID_0AD;                                       // 173
-    // Address: 0x1000400C
-    static const s32 cProfileID_0AE;                                       // 174
-    // Address: 0x10004010
-    static const s32 cProfileID_0AF;                                       // 175
-    // Address: 0x10004014
-    static const s32 cProfileID_0B0;                                       // 176
-    // Address: 0x10004018
-    static const s32 cProfileID_0B1;                                       // 177
-    // Address: 0x1000401C
-    static const s32 cProfileID_0B2;                                       // 178
-    // Address: 0x10004020
-    static const s32 cProfileID_0B3;                                       // 179
-    // Address: 0x10004024
-    static const s32 cProfileID_0B4;                                       // 180
-    // Address: 0x10004028
-    static const s32 cProfileID_0B5;                                       // 181
-    // Address: 0x1000402C
-    static const s32 cProfileID_0B6;                                       // 182
-    // Address: 0x10004030
-    static const s32 cProfileID_0B7;                                       // 183
-    // Address: 0x10004034
-    static const s32 cProfileID_LineSpinLift;                              // 184
-    // Address: 0x10004038
-    static const s32 cProfileID_LineSpinLiftParentRDash;                   // 185
-    // Address: 0x1000403C
-    static const s32 cProfileID_LineSpinLiftChildRDash;                    // 186
-    // Address: 0x10004040
-    static const s32 cProfileID_0BB;                                       // 187
-    // Address: 0x10004044
-    static const s32 cProfileID_0BC;                                       // 188
-    // Address: 0x10004048
-    static const s32 cProfileID_0BD;                                       // 189
-    // Address: 0x1000404C
-    static const s32 cProfileID_0BE;                                       // 190
-    // Address: 0x10004050
-    static const s32 cProfileID_0BF;                                       // 191
-    // Address: 0x10004054
-    static const s32 cProfileID_0C0;                                       // 192
-    // Address: 0x10004058
-    static const s32 cProfileID_0C1;                                       // 193
-    // Address: 0x1000405C
-    static const s32 cProfileID_SnakeBlock;                                // 194
-    // Address: 0x10004060
-    static const s32 cProfileID_0C3;                                       // 195
-    // Address: 0x10004064
-    static const s32 cProfileID_0C4;                                       // 196
-    // Address: 0x10004068
-    static const s32 cProfileID_0C5;                                       // 197
-    // Address: 0x1000406C
-    static const s32 cProfileID_0C6;                                       // 198
-    // Address: 0x10004070
-    static const s32 cProfileID_0C7;                                       // 199
-    // Address: 0x10004074
-    static const s32 cProfileID_0C8;                                       // 200
-    // Address: 0x10004078
-    static const s32 cProfileID_0C9;                                       // 201
-    // Address: 0x1000407C
-    static const s32 cProfileID_0CA;                                       // 202
-    // Address: 0x10004080
-    static const s32 cProfileID_0CB;                                       // 203
-    // Address: 0x10004084
-    static const s32 cProfileID_0CC;                                       // 204
-    // Address: 0x10004088
-    static const s32 cProfileID_0CD;                                       // 205
-    // Address: 0x1000408C
-    static const s32 cProfileID_0CE;                                       // 206
-    // Address: 0x10004090
-    static const s32 cProfileID_0CF;                                       // 207
-    // Address: 0x10004094
-    static const s32 cProfileID_0D0;                                       // 208
-    // Address: 0x10004098
-    static const s32 cProfileID_0D1;                                       // 209
-    // Address: 0x1000409C
-    static const s32 cProfileID_FloorHoleDokan;                            // 210
-    // Address: 0x100040A0
-    static const s32 cProfileID_0D3;                                       // 211
-    // Address: 0x100040A4
-    static const s32 cProfileID_0D4;                                       // 212
-    // Address: 0x100040A8
-    static const s32 cProfileID_0D5;                                       // 213
-    // Address: 0x100040AC
-    static const s32 cProfileID_0D6;                                       // 214
-    // Address: 0x100040B0
-    static const s32 cProfileID_0D7;                                       // 215
-    // Address: 0x100040B4
-    static const s32 cProfileID_0D8;                                       // 216
-    // Address: 0x100040B8
-    static const s32 cProfileID_0D9;                                       // 217
-    // Address: 0x100040BC
-    static const s32 cProfileID_0DA;                                       // 218
-    // Address: 0x100040C0
-    static const s32 cProfileID_0DB;                                       // 219
-    // Address: 0x100040C4
-    static const s32 cProfileID_0DC;                                       // 220
-    // Address: 0x100040C8
-    static const s32 cProfileID_0DD;                                       // 221
-    // Address: 0x100040CC
-    static const s32 cProfileID_Maruta;                                    // 222
-    // Address: 0x100040D0
-    static const s32 cProfileID_0DF;                                       // 223
-    // Address: 0x100040D4
-    static const s32 cProfileID_Burner;                                    // 224
-    // Address: 0x100040D8
-    static const s32 cProfileID_0E1;                                       // 225
-    // Address: 0x100040DC
-    static const s32 cProfileID_0E2;                                       // 226
-    // Address: 0x100040E0
-    static const s32 cProfileID_0E3;                                       // 227
-    // Address: 0x100040E4
-    static const s32 cProfileID_0E4;                                       // 228
-    // Address: 0x100040E8
-    static const s32 cProfileID_0E5;                                       // 229
-    // Address: 0x100040EC
-    static const s32 cProfileID_0E6;                                       // 230
-    // Address: 0x100040F0
-    static const s32 cProfileID_0E7;                                       // 231
-    // Address: 0x100040F4
-    static const s32 cProfileID_0E8;                                       // 232
-    // Address: 0x100040F8
-    static const s32 cProfileID_0E9;                                       // 233
-    // Address: 0x100040FC
-    static const s32 cProfileID_0EA;                                       // 234
-    // Address: 0x10004100
-    static const s32 cProfileID_0EB;                                       // 235
-    // Address: 0x10004104
-    static const s32 cProfileID_0EC;                                       // 236
-    // Address: 0x10004108
-    static const s32 cProfileID_PlayerIce;                                 // 237
-    // Address: 0x1000410C
-    static const s32 cProfileID_TarzanIvy;                                 // 238
-    // Address: 0x10004110
-    static const s32 cProfileID_0EF;                                       // 239
-    // Address: 0x10004114
-    static const s32 cProfileID_0F0;                                       // 240
-    // Address: 0x10004118
-    static const s32 cProfileID_0F1;                                       // 241
-    // Address: 0x1000411C
-    static const s32 cProfileID_0F2;                                       // 242
-    // Address: 0x10004120
-    static const s32 cProfileID_0F3;                                       // 243
-    // Address: 0x10004124
-    static const s32 cProfileID_0F4;                                       // 244
-    // Address: 0x10004128
-    static const s32 cProfileID_0F5;                                       // 245
-    // Address: 0x1000412C
-    static const s32 cProfileID_0F6;                                       // 246
-    // Address: 0x10004130
-    static const s32 cProfileID_0F7;                                       // 247
-    // Address: 0x10004134
-    static const s32 cProfileID_0F8;                                       // 248
-    // Address: 0x10004138
-    static const s32 cProfileID_0F9;                                       // 249
-    // Address: 0x1000413C
-    static const s32 cProfileID_0FA;                                       // 250
-    // Address: 0x10004140
-    static const s32 cProfileID_0FB;                                       // 251
-    // Address: 0x10004144
-    static const s32 cProfileID_0FC;                                       // 252
-    // Address: 0x10004148
-    static const s32 cProfileID_0FD;                                       // 253
-    // Address: 0x1000414C
-    static const s32 cProfileID_0FE;                                       // 254
-    // Address: 0x10004150
-    static const s32 cProfileID_0FF;                                       // 255
-    // Address: 0x10004154
-    static const s32 cProfileID_100;                                       // 256
-    // Address: 0x10004158
-    static const s32 cProfileID_101;                                       // 257
-    // Address: 0x1000415C
-    static const s32 cProfileID_102;                                       // 258
-    // Address: 0x10004160
-    static const s32 cProfileID_103;                                       // 259
-    // Address: 0x10004164
-    static const s32 cProfileID_104;                                       // 260
-    // Address: 0x10004168
-    static const s32 cProfileID_ShuffleBlock;                              // 261
-    // Address: 0x1000416C
-    static const s32 cProfileID_KokoopaShipWarpCannon;                     // 262
-    // Address: 0x10004170
-    static const s32 cProfileID_107;                                       // 263
-    // Address: 0x10004174
-    static const s32 cProfileID_108;                                       // 264
-    // Address: 0x10004178
-    static const s32 cProfileID_KoopaShutter;                              // 265
-    // Address: 0x1000417C
-    static const s32 cProfileID_10A;                                       // 266
-    // Address: 0x10004180
-    static const s32 cProfileID_10B;                                       // 267
-    // Address: 0x10004184
-    static const s32 cProfileID_10C;                                       // 268
-    // Address: 0x10004188
-    static const s32 cProfileID_PeachFinalCastleKoopaJrLift;               // 269
-    // Address: 0x1000418C
-    static const s32 cProfileID_PeachFinalCastleKoopaJrLiftHmove;          // 270
-    // Address: 0x10004190
-    static const s32 cProfileID_PeachFinalCastleKoopaJrLiftPairObj;        // 271
-    // Address: 0x10004194
-    static const s32 cProfileID_RoyLiftWakiStep;                           // 272
-    // Address: 0x10004198
-    static const s32 cProfileID_WendyFloor;                                // 273
-    // Address: 0x1000419C
-    static const s32 cProfileID_IggyRoom;                                  // 274
-    // Address: 0x100041A0
-    static const s32 cProfileID_113;                                       // 275
-    // Address: 0x100041A4
-    static const s32 cProfileID_114;                                       // 276
-    // Address: 0x100041A8
-    static const s32 cProfileID_115;                                       // 277
-    // Address: 0x100041AC
-    static const s32 cProfileID_116;                                       // 278
-    // Address: 0x100041B0
-    static const s32 cProfileID_117;                                       // 279
-    // Address: 0x100041B4
-    static const s32 cProfileID_118;                                       // 280
-    // Address: 0x100041B8
-    static const s32 cProfileID_119;                                       // 281
-    // Address: 0x100041BC
-    static const s32 cProfileID_11A;                                       // 282
-    // Address: 0x100041C0
-    static const s32 cProfileID_Freezer;                                   // 283
-    // Address: 0x100041C4
-    static const s32 cProfileID_11C;                                       // 284
-    // Address: 0x100041C8
-    static const s32 cProfileID_11D;                                       // 285
-    // Address: 0x100041CC
-    static const s32 cProfileID_11E;                                       // 286
-    // Address: 0x100041D0
-    static const s32 cProfileID_Block;                                     // 287
-    // Address: 0x100041D4
-    static const s32 cProfileID_120;                                       // 288
-    // Address: 0x100041D8
-    static const s32 cProfileID_121;                                       // 289
-    // Address: 0x100041DC
-    static const s32 cProfileID_122;                                       // 290
-    // Address: 0x100041E0
-    static const s32 cProfileID_ActorBlockRenga;                           // 291
-    // Address: 0x100041E4
-    static const s32 cProfileID_124;                                       // 292
-    // Address: 0x100041E8
-    static const s32 cProfileID_125;                                       // 293
-    // Address: 0x100041EC
-    static const s32 cProfileID_126;                                       // 294
-    // Address: 0x100041F0
-    static const s32 cProfileID_127;                                       // 295
-    // Address: 0x100041F4
-    static const s32 cProfileID_128;                                       // 296
-    // Address: 0x100041F8
-    static const s32 cProfileID_129;                                       // 297
-    // Address: 0x100041FC
-    static const s32 cProfileID_12A;                                       // 298
-    // Address: 0x10004200
-    static const s32 cProfileID_12B;                                       // 299
-    // Address: 0x10004204
-    static const s32 cProfileID_12C;                                       // 300
-    // Address: 0x10004208
-    static const s32 cProfileID_12D;                                       // 301
-    // Address: 0x1000420C
-    static const s32 cProfileID_12E;                                       // 302
-    // Address: 0x10004210
-    static const s32 cProfileID_12F;                                       // 303
-    // Address: 0x10004214
-    static const s32 cProfileID_130;                                       // 304
-    // Address: 0x10004218
-    static const s32 cProfileID_131;                                       // 305
-    // Address: 0x1000421C
-    static const s32 cProfileID_132;                                       // 306
-    // Address: 0x10004220
-    static const s32 cProfileID_133;                                       // 307
-    // Address: 0x10004224
-    static const s32 cProfileID_134;                                       // 308
-    // Address: 0x10004228
-    static const s32 cProfileID_ActorBlockMakeDRC;                         // 309
-    // Address: 0x1000422C
-    static const s32 cProfileID_136;                                       // 310
-    // Address: 0x10004230
-    static const s32 cProfileID_137;                                       // 311
-    // Address: 0x10004234
-    static const s32 cProfileID_138;                                       // 312
-    // Address: 0x10004238
-    static const s32 cProfileID_139;                                       // 313
-    // Address: 0x1000423C
-    static const s32 cProfileID_13A;                                       // 314
-    // Address: 0x10004240
-    static const s32 cProfileID_13B;                                       // 315
-    // Address: 0x10004244
-    static const s32 cProfileID_13C;                                       // 316
-    // Address: 0x10004248
-    static const s32 cProfileID_13D;                                       // 317
-    // Address: 0x1000424C
-    static const s32 cProfileID_13E;                                       // 318
-    // Address: 0x10004250
-    static const s32 cProfileID_13F;                                       // 319
-    // Address: 0x10004254
-    static const s32 cProfileID_140;                                       // 320
-    // Address: 0x10004258
-    static const s32 cProfileID_141;                                       // 321
-    // Address: 0x1000425C
-    static const s32 cProfileID_142;                                       // 322
-    // Address: 0x10004260
-    static const s32 cProfileID_143;                                       // 323
-    // Address: 0x10004264
-    static const s32 cProfileID_144;                                       // 324
-    // Address: 0x10004268
-    static const s32 cProfileID_145;                                       // 325
-    // Address: 0x1000426C
-    static const s32 cProfileID_146;                                       // 326
-    // Address: 0x10004270
-    static const s32 cProfileID_147;                                       // 327
-    // Address: 0x10004274
-    static const s32 cProfileID_148;                                       // 328
-    // Address: 0x10004278
-    static const s32 cProfileID_149;                                       // 329
-    // Address: 0x1000427C
-    static const s32 cProfileID_14A;                                       // 330
-    // Address: 0x10004280
-    static const s32 cProfileID_14B;                                       // 331
-    // Address: 0x10004284
-    static const s32 cProfileID_14C;                                       // 332
-    // Address: 0x10004288
-    static const s32 cProfileID_14D;                                       // 333
-    // Address: 0x1000428C
-    static const s32 cProfileID_14E;                                       // 334
-    // Address: 0x10004290
-    static const s32 cProfileID_14F;                                       // 335
-    // Address: 0x10004294
-    static const s32 cProfileID_ObjPipeDown;                               // 336
-    // Address: 0x10004298
-    static const s32 cProfileID_151;                                       // 337
-    // Address: 0x1000429C
-    static const s32 cProfileID_152;                                       // 338
-    // Address: 0x100042A0
-    static const s32 cProfileID_153;                                       // 339
-    // Address: 0x100042A4
-    static const s32 cProfileID_ObjPipeDownGroup;                          // 340
-    // Address: 0x100042A8
-    static const s32 cProfileID_155;                                       // 341
-    // Address: 0x100042AC
-    static const s32 cProfileID_156;                                       // 342
-    // Address: 0x100042B0
-    static const s32 cProfileID_157;                                       // 343
-    // Address: 0x100042B4
-    static const s32 cProfileID_SwitchHatenaButton;                        // 344
-    // Address: 0x100042B8
-    static const s32 cProfileID_SwitchPbutton;                             // 345
-    // Address: 0x100042BC
-    static const s32 cProfileID_SwitchPbuttonRDash;                        // 346
-    // Address: 0x100042C0
-    static const s32 cProfileID_SwitchPbuttonNoWallKick;                   // 347
-    // Address: 0x100042C4
-    static const s32 cProfileID_15C;                                       // 348
-    // Address: 0x100042C8
-    static const s32 cProfileID_15D;                                       // 349
-    // Address: 0x100042CC
-    static const s32 cProfileID_IcicleBig;                                 // 350
-    // Address: 0x100042D0
-    static const s32 cProfileID_LemmyBall;                                 // 351
-    // Address: 0x100042D4
-    static const s32 cProfileID_LemmyBomb;                                 // 352
-    // Address: 0x100042D8
-    static const s32 cProfileID_161;                                       // 353
-    // Address: 0x100042DC
-    static const s32 cProfileID_162;                                       // 354
-    // Address: 0x100042E0
-    static const s32 cProfileID_163;                                       // 355
-    // Address: 0x100042E4
-    static const s32 cProfileID_164;                                       // 356
-    // Address: 0x100042E8
-    static const s32 cProfileID_165;                                       // 357
-    // Address: 0x100042EC
-    static const s32 cProfileID_166;                                       // 358
-    // Address: 0x100042F0
-    static const s32 cProfileID_167;                                       // 359
-    // Address: 0x100042F4
-    static const s32 cProfileID_168;                                       // 360
-    // Address: 0x100042F8
-    static const s32 cProfileID_169;                                       // 361
-    // Address: 0x100042FC
-    static const s32 cProfileID_PentaroIce;                                // 362
-    // Address: 0x10004300
-    static const s32 cProfileID_16B;                                       // 363
-    // Address: 0x10004304
-    static const s32 cProfileID_16C;                                       // 364
-    // Address: 0x10004308
-    static const s32 cProfileID_16D;                                       // 365
-    // Address: 0x1000430C
-    static const s32 cProfileID_16E;                                       // 366
-    // Address: 0x10004310
-    static const s32 cProfileID_16F;                                       // 367
-    // Address: 0x10004314
-    static const s32 cProfileID_KameckIce;                                 // 368
-    // Address: 0x10004318
-    static const s32 cProfileID_WendyIcicle;                               // 369
-    // Address: 0x1000431C
-    static const s32 cProfileID_PeachFinalCastleKoopaJrClown;              // 370
-    // Address: 0x10004320
-    static const s32 cProfileID_BoxingKoopaJrClown;                        // 371
-    // Address: 0x10004324
-    static const s32 cProfileID_174;                                       // 372
-    // Address: 0x10004328
-    static const s32 cProfileID_FinalKoopaJrClown;                         // 373
-    // Address: 0x1000432C
-    static const s32 cProfileID_FinalKoopa;                                // 374
-    // Address: 0x10004330
-    static const s32 cProfileID_FireBar;                                   // 375
-    // Address: 0x10004334
-    static const s32 cProfileID_FireBarSync;                               // 376
-    // Address: 0x10004338
-    static const s32 cProfileID_179;                                       // 377
-    // Address: 0x1000433C
-    static const s32 cProfileID_17A;                                       // 378
-    // Address: 0x10004340
-    static const s32 cProfileID_17B;                                       // 379
-    // Address: 0x10004344
-    static const s32 cProfileID_17C;                                       // 380
-    // Address: 0x10004348
-    static const s32 cProfileID_17D;                                       // 381
-    // Address: 0x1000434C
-    static const s32 cProfileID_17E;                                       // 382
-    // Address: 0x10004350
-    static const s32 cProfileID_17F;                                       // 383
-    // Address: 0x10004354
-    static const s32 cProfileID_180;                                       // 384
-    // Address: 0x10004358
-    static const s32 cProfileID_181;                                       // 385
-    // Address: 0x1000435C
-    static const s32 cProfileID_182;                                       // 386
-    // Address: 0x10004360
-    static const s32 cProfileID_183;                                       // 387
-    // Address: 0x10004364
-    static const s32 cProfileID_184;                                       // 388
-    // Address: 0x10004368
-    static const s32 cProfileID_185;                                       // 389
-    // Address: 0x1000436C
-    static const s32 cProfileID_186;                                       // 390
-    // Address: 0x10004370
-    static const s32 cProfileID_187;                                       // 391
-    // Address: 0x10004374
-    static const s32 cProfileID_188;                                       // 392
-    // Address: 0x10004378
-    static const s32 cProfileID_189;                                       // 393
-    // Address: 0x1000437C
-    static const s32 cProfileID_18A;                                       // 394
-    // Address: 0x10004380
-    static const s32 cProfileID_ActorCoin;                                 // 395
-    // Address: 0x10004384
-    static const s32 cProfileID_18C;                                       // 396
-    // Address: 0x10004388
-    static const s32 cProfileID_18D;                                       // 397
-    // Address: 0x1000438C
-    static const s32 cProfileID_18E;                                       // 398
-    // Address: 0x10004390
-    static const s32 cProfileID_18F;                                       // 399
-    // Address: 0x10004394
-    static const s32 cProfileID_190;                                       // 400
-    // Address: 0x10004398
-    static const s32 cProfileID_191;                                       // 401
-    // Address: 0x1000439C
-    static const s32 cProfileID_192;                                       // 402
-    // Address: 0x100043A0
-    static const s32 cProfileID_193;                                       // 403
-    // Address: 0x100043A4
-    static const s32 cProfileID_194;                                       // 404
-    // Address: 0x100043A8
-    static const s32 cProfileID_195;                                       // 405
-    // Address: 0x100043AC
-    static const s32 cProfileID_196;                                       // 406
-    // Address: 0x100043B0
-    static const s32 cProfileID_197;                                       // 407
-    // Address: 0x100043B4
-    static const s32 cProfileID_198;                                       // 408
-    // Address: 0x100043B8
-    static const s32 cProfileID_199;                                       // 409
-    // Address: 0x100043BC
-    static const s32 cProfileID_19A;                                       // 410
-    // Address: 0x100043C0
-    static const s32 cProfileID_19B;                                       // 411
-    // Address: 0x100043C4
-    static const s32 cProfileID_19C;                                       // 412
-    // Address: 0x100043C8
-    static const s32 cProfileID_19D;                                       // 413
-    // Address: 0x100043CC
-    static const s32 cProfileID_19E;                                       // 414
-    // Address: 0x100043D0
-    static const s32 cProfileID_19F;                                       // 415
-    // Address: 0x100043D4
-    static const s32 cProfileID_1A0;                                       // 416
-    // Address: 0x100043D8
-    static const s32 cProfileID_1A1;                                       // 417
-    // Address: 0x100043DC
-    static const s32 cProfileID_1A2;                                       // 418
-    // Address: 0x100043E0
-    static const s32 cProfileID_1A3;                                       // 419
-    // Address: 0x100043E4
-    static const s32 cProfileID_1A4;                                       // 420
-    // Address: 0x100043E8
-    static const s32 cProfileID_1A5;                                       // 421
-    // Address: 0x100043EC
-    static const s32 cProfileID_1A6;                                       // 422
-    // Address: 0x100043F0
-    static const s32 cProfileID_1A7;                                       // 423
-    // Address: 0x100043F4
-    static const s32 cProfileID_1A8;                                       // 424
-    // Address: 0x100043F8
-    static const s32 cProfileID_BlueCoin;                                  // 425
-    // Address: 0x100043FC
-    static const s32 cProfileID_1AA;                                       // 426
-    // Address: 0x10004400
-    static const s32 cProfileID_1AB;                                       // 427
-    // Address: 0x10004404
-    static const s32 cProfileID_1AC;                                       // 428
-    // Address: 0x10004408
-    static const s32 cProfileID_1AD;                                       // 429
-    // Address: 0x1000440C
-    static const s32 cProfileID_1AE;                                       // 430
-    // Address: 0x10004410
-    static const s32 cProfileID_1AF;                                       // 431
-    // Address: 0x10004414
-    static const s32 cProfileID_1B0;                                       // 432
-    // Address: 0x10004418
-    static const s32 cProfileID_1B1;                                       // 433
-    // Address: 0x1000441C
-    static const s32 cProfileID_1B2;                                       // 434
-    // Address: 0x10004420
-    static const s32 cProfileID_1B3;                                       // 435
-    // Address: 0x10004424
-    static const s32 cProfileID_1B4;                                       // 436
-    // Address: 0x10004428
-    static const s32 cProfileID_1B5;                                       // 437
-    // Address: 0x1000442C
-    static const s32 cProfileID_CoinmakiCoin;                              // 438
-    // Address: 0x10004430
-    static const s32 cProfileID_1B7;                                       // 439
-    // Address: 0x10004434
-    static const s32 cProfileID_1B8;                                       // 440
-    // Address: 0x10004438
-    static const s32 cProfileID_1B9;                                       // 441
-    // Address: 0x1000443C
-    static const s32 cProfileID_Yoshi;                                     // 442
-    // Address: 0x10004440
-    static const s32 cProfileID_TottenPlayer;                              // 443
-    // Address: 0x10004444
-    static const s32 cProfileID_PlayerObject;                              // 444
-    // Address: 0x10004448
-    static const s32 cProfileID_1BD;                                       // 445
-    // Address: 0x1000444C
-    static const s32 cProfileID_1BE;                                       // 446
-    // Address: 0x10004450
-    static const s32 cProfileID_1BF;                                       // 447
-    // Address: 0x10004454
-    static const s32 cProfileID_1C0;                                       // 448
-    // Address: 0x10004458
-    static const s32 cProfileID_1C1;                                       // 449
-    // Address: 0x1000445C
-    static const s32 cProfileID_1C2;                                       // 450
-    // Address: 0x10004460
-    static const s32 cProfileID_1C3;                                       // 451
-    // Address: 0x10004464
-    static const s32 cProfileID_1C4;                                       // 452
-    // Address: 0x10004468
-    static const s32 cProfileID_SlotChibiYoshi;                            // 453
-    // Address: 0x1000446C
-    static const s32 cProfileID_1C6;                                       // 454
-    // Address: 0x10004470
-    static const s32 cProfileID_1C7;                                       // 455
-    // Address: 0x10004474
-    static const s32 cProfileID_1C8;                                       // 456
-    // Address: 0x10004478
-    static const s32 cProfileID_1C9;                                       // 457
-    // Address: 0x1000447C
-    static const s32 cProfileID_1CA;                                       // 458
-    // Address: 0x10004480
-    static const s32 cProfileID_1CB;                                       // 459
-    // Address: 0x10004484
-    static const s32 cProfileID_1CC;                                       // 460
-    // Address: 0x10004488
-    static const s32 cProfileID_1CD;                                       // 461
-    // Address: 0x1000448C
-    static const s32 cProfileID_1CE;                                       // 462
-    // Address: 0x10004490
-    static const s32 cProfileID_QuestPrizeItem;                            // 463
-    // Address: 0x10004494
-    static const s32 cProfileID_1D0;                                       // 464
-    // Address: 0x10004498
-    static const s32 cProfileID_1D1;                                       // 465
-    // Address: 0x1000449C
-    static const s32 cProfileID_1D2;                                       // 466
-    // Address: 0x100044A0
-    static const s32 cProfileID_Kuribo;                                    // 467
-    // Address: 0x100044A4
-    static const s32 cProfileID_Kakibo;                                    // 468
-    // Address: 0x100044A8
-    static const s32 cProfileID_PataKuribo;                                // 469
-    // Address: 0x100044AC
-    static const s32 cProfileID_1D6;                                       // 470
-    // Address: 0x100044B0
-    static const s32 cProfileID_1D7;                                       // 471
-    // Address: 0x100044B4
-    static const s32 cProfileID_1D8;                                       // 472
-    // Address: 0x100044B8
-    static const s32 cProfileID_1D9;                                       // 473
-    // Address: 0x100044BC
-    static const s32 cProfileID_IceBall;                                   // 474
-    // Address: 0x100044C0
-    static const s32 cProfileID_IceBallPakkun;                             // 475
-    // Address: 0x100044C4
-    static const s32 cProfileID_FireBallPlayer;                            // 476
-    // Address: 0x100044C8
-    static const s32 cProfileID_FireBallPakkun;                            // 477
-    // Address: 0x100044CC
-    static const s32 cProfileID_YoshiFire;                                 // 478
-    // Address: 0x100044D0
-    static const s32 cProfileID_1DF;                                       // 479
-    // Address: 0x100044D4
-    static const s32 cProfileID_1E0;                                       // 480
-    // Address: 0x100044D8
-    static const s32 cProfileID_1E1;                                       // 481
-    // Address: 0x100044DC
-    static const s32 cProfileID_1E2;                                       // 482
-    // Address: 0x100044E0
-    static const s32 cProfileID_1E3;                                       // 483
-    // Address: 0x100044E4
-    static const s32 cProfileID_1E4;                                       // 484
-    // Address: 0x100044E8
-    static const s32 cProfileID_1E5;                                       // 485
-    // Address: 0x100044EC
-    static const s32 cProfileID_1E6;                                       // 486
-    // Address: 0x100044F0
-    static const s32 cProfileID_1E7;                                       // 487
-    // Address: 0x100044F4
-    static const s32 cProfileID_1E8;                                       // 488
-    // Address: 0x100044F8
-    static const s32 cProfileID_1E9;                                       // 489
-    // Address: 0x100044FC
-    static const s32 cProfileID_1EA;                                       // 490
-    // Address: 0x10004500
-    static const s32 cProfileID_1EB;                                       // 491
-    // Address: 0x10004504
-    static const s32 cProfileID_1EC;                                       // 492
-    // Address: 0x10004508
-    static const s32 cProfileID_1ED;                                       // 493
-    // Address: 0x1000450C
-    static const s32 cProfileID_1EE;                                       // 494
-    // Address: 0x10004510
-    static const s32 cProfileID_1EF;                                       // 495
-    // Address: 0x10004514
-    static const s32 cProfileID_1F0;                                       // 496
-    // Address: 0x10004518
-    static const s32 cProfileID_1F1;                                       // 497
-    // Address: 0x1000451C
-    static const s32 cProfileID_1F2;                                       // 498
-    // Address: 0x10004520
-    static const s32 cProfileID_1F3;                                       // 499
-    // Address: 0x10004524
-    static const s32 cProfileID_1F4;                                       // 500
-    // Address: 0x10004528
-    static const s32 cProfileID_1F5;                                       // 501
-    // Address: 0x1000452C
-    static const s32 cProfileID_1F6;                                       // 502
-    // Address: 0x10004530
-    static const s32 cProfileID_1F7;                                       // 503
-    // Address: 0x10004534
-    static const s32 cProfileID_1F8;                                       // 504
-    // Address: 0x10004538
-    static const s32 cProfileID_1F9;                                       // 505
-    // Address: 0x1000453C
-    static const s32 cProfileID_1FA;                                       // 506
-    // Address: 0x10004540
-    static const s32 cProfileID_1FB;                                       // 507
-    // Address: 0x10004544
-    static const s32 cProfileID_1FC;                                       // 508
-    // Address: 0x10004548
-    static const s32 cProfileID_1FD;                                       // 509
-    // Address: 0x1000454C
-    static const s32 cProfileID_1FE;                                       // 510
-    // Address: 0x10004550
-    static const s32 cProfileID_1FF;                                       // 511
-    // Address: 0x10004554
-    static const s32 cProfileID_Nokonoko;                                  // 512
-    // Address: 0x10004558
-    static const s32 cProfileID_201;                                       // 513
-    // Address: 0x1000455C
-    static const s32 cProfileID_202;                                       // 514
-    // Address: 0x10004560
-    static const s32 cProfileID_203;                                       // 515
-    // Address: 0x10004564
-    static const s32 cProfileID_204;                                       // 516
-    // Address: 0x10004568
-    static const s32 cProfileID_205;                                       // 517
-    // Address: 0x1000456C
-    static const s32 cProfileID_206;                                       // 518
-    // Address: 0x10004570
-    static const s32 cProfileID_207;                                       // 519
-    // Address: 0x10004574
-    static const s32 cProfileID_208;                                       // 520
-    // Address: 0x10004578
-    static const s32 cProfileID_209;                                       // 521
-    // Address: 0x1000457C
-    static const s32 cProfileID_20A;                                       // 522
-    // Address: 0x10004580
-    static const s32 cProfileID_20B;                                       // 523
-    // Address: 0x10004584
-    static const s32 cProfileID_MechaKoopa;                                // 524
-    // Address: 0x10004588
-    static const s32 cProfileID_20D;                                       // 525
-    // Address: 0x1000458C
-    static const s32 cProfileID_20E;                                       // 526
-    // Address: 0x10004590
-    static const s32 cProfileID_20F;                                       // 527
-    // Address: 0x10004594
-    static const s32 cProfileID_210;                                       // 528
-    // Address: 0x10004598
-    static const s32 cProfileID_211;                                       // 529
-    // Address: 0x1000459C
-    static const s32 cProfileID_212;                                       // 530
-    // Address: 0x100045A0
-    static const s32 cProfileID_213;                                       // 531
-    // Address: 0x100045A4
-    static const s32 cProfileID_214;                                       // 532
-    // Address: 0x100045A8
-    static const s32 cProfileID_215;                                       // 533
-    // Address: 0x100045AC
-    static const s32 cProfileID_216;                                       // 534
-    // Address: 0x100045B0
-    static const s32 cProfileID_217;                                       // 535
-    // Address: 0x100045B4
-    static const s32 cProfileID_218;                                       // 536
-    // Address: 0x100045B8
-    static const s32 cProfileID_219;                                       // 537
-    // Address: 0x100045BC
-    static const s32 cProfileID_21A;                                       // 538
-    // Address: 0x100045C0
-    static const s32 cProfileID_21B;                                       // 539
-    // Address: 0x100045C4
-    static const s32 cProfileID_21C;                                       // 540
-    // Address: 0x100045C8
-    static const s32 cProfileID_21D;                                       // 541
-    // Address: 0x100045CC
-    static const s32 cProfileID_21E;                                       // 542
-    // Address: 0x100045D0
-    static const s32 cProfileID_21F;                                       // 543
-    // Address: 0x100045D4
-    static const s32 cProfileID_220;                                       // 544
-    // Address: 0x100045D8
-    static const s32 cProfileID_221;                                       // 545
-    // Address: 0x100045DC
-    static const s32 cProfileID_222;                                       // 546
-    // Address: 0x100045E0
-    static const s32 cProfileID_223;                                       // 547
-    // Address: 0x100045E4
-    static const s32 cProfileID_224;                                       // 548
-    // Address: 0x100045E8
-    static const s32 cProfileID_225;                                       // 549
-    // Address: 0x100045EC
-    static const s32 cProfileID_226;                                       // 550
-    // Address: 0x100045F0
-    static const s32 cProfileID_227;                                       // 551
-    // Address: 0x100045F4
-    static const s32 cProfileID_228;                                       // 552
-    // Address: 0x100045F8
-    static const s32 cProfileID_229;                                       // 553
-    // Address: 0x100045FC
-    static const s32 cProfileID_22A;                                       // 554
-    // Address: 0x10004600
-    static const s32 cProfileID_22B;                                       // 555
-    // Address: 0x10004604
-    static const s32 cProfileID_22C;                                       // 556
-    // Address: 0x10004608
-    static const s32 cProfileID_22D;                                       // 557
-    // Address: 0x1000460C
-    static const s32 cProfileID_FireBallKeronpa;                           // 558
-    // Address: 0x10004610
-    static const s32 cProfileID_FireBallKeronpaRDash;                      // 559
-    // Address: 0x10004614
-    static const s32 cProfileID_230;                                       // 560
-    // Address: 0x10004618
-    static const s32 cProfileID_FireSnake;                                 // 561
-    // Address: 0x1000461C
-    static const s32 cProfileID_232;                                       // 562
-    // Address: 0x10004620
-    static const s32 cProfileID_233;                                       // 563
-    // Address: 0x10004624
-    static const s32 cProfileID_234;                                       // 564
-    // Address: 0x10004628
-    static const s32 cProfileID_235;                                       // 565
-    // Address: 0x1000462C
-    static const s32 cProfileID_236;                                       // 566
-    // Address: 0x10004630
-    static const s32 cProfileID_237;                                       // 567
-    // Address: 0x10004634
-    static const s32 cProfileID_238;                                       // 568
-    // Address: 0x10004638
-    static const s32 cProfileID_239;                                       // 569
-    // Address: 0x1000463C
-    static const s32 cProfileID_23A;                                       // 570
-    // Address: 0x10004640
-    static const s32 cProfileID_23B;                                       // 571
-    // Address: 0x10004644
-    static const s32 cProfileID_23C;                                       // 572
-    // Address: 0x10004648
-    static const s32 cProfileID_23D;                                       // 573
-    // Address: 0x1000464C
-    static const s32 cProfileID_Kazandan;                                  // 574
-    // Address: 0x10004650
-    static const s32 cProfileID_23F;                                       // 575
-    // Address: 0x10004654
-    static const s32 cProfileID_240;                                       // 576
-    // Address: 0x10004658
-    static const s32 cProfileID_241;                                       // 577
-    // Address: 0x1000465C
-    static const s32 cProfileID_242;                                       // 578
-    // Address: 0x10004660
-    static const s32 cProfileID_243;                                       // 579
-    // Address: 0x10004664
-    static const s32 cProfileID_244;                                       // 580
-    // Address: 0x10004668
-    static const s32 cProfileID_245;                                       // 581
-    // Address: 0x1000466C
-    static const s32 cProfileID_246;                                       // 582
-    // Address: 0x10004670
-    static const s32 cProfileID_247;                                       // 583
-    // Address: 0x10004674
-    static const s32 cProfileID_248;                                       // 584
-    // Address: 0x10004678
-    static const s32 cProfileID_249;                                       // 585
-    // Address: 0x1000467C
-    static const s32 cProfileID_24A;                                       // 586
-    // Address: 0x10004680
-    static const s32 cProfileID_BgCenter;                                  // 587
-    // Address: 0x10004684
-    static const s32 cProfileID_24C;                                       // 588
-    // Address: 0x10004688
-    static const s32 cProfileID_24D;                                       // 589
-    // Address: 0x1000468C
-    static const s32 cProfileID_24E;                                       // 590
-    // Address: 0x10004690
-    static const s32 cProfileID_Kinoko;                                    // 591
-    // Address: 0x10004694
-    static const s32 cProfileID_FireFlower;                                // 592
-    // Address: 0x10004698
-    static const s32 cProfileID_MameKinoko;                                // 593
-    // Address: 0x1000469C
-    static const s32 cProfileID_IceFlower;                                 // 594
-    // Address: 0x100046A0
-    static const s32 cProfileID_Propeller;                                 // 595
-    // Address: 0x100046A4
-    static const s32 cProfileID_Penguin;                                   // 596
-    // Address: 0x100046A8
-    static const s32 cProfileID_OneUpKinoko;                               // 597
-    // Address: 0x100046AC
-    static const s32 cProfileID_Musasabi;                                  // 598
-    // Address: 0x100046B0
-    static const s32 cProfileID_SuperMoon;                                 // 599
-    // Address: 0x100046B4
-    static const s32 cProfileID_TitleDemoItem;                             // 600
-    // Address: 0x100046B8
-    static const s32 cProfileID_259;                                       // 601
-    // Address: 0x100046BC
-    static const s32 cProfileID_25A;                                       // 602
-    // Address: 0x100046C0
-    static const s32 cProfileID_25B;                                       // 603
-    // Address: 0x100046C4
-    static const s32 cProfileID_25C;                                       // 604
-    // Address: 0x100046C8
-    static const s32 cProfileID_25D;                                       // 605
-    // Address: 0x100046CC
-    static const s32 cProfileID_25E;                                       // 606
-    // Address: 0x100046D0
-    static const s32 cProfileID_25F;                                       // 607
-    // Address: 0x100046D4
-    static const s32 cProfileID_260;                                       // 608
-    // Address: 0x100046D8
-    static const s32 cProfileID_261;                                       // 609
-    // Address: 0x100046DC
-    static const s32 cProfileID_262;                                       // 610
-    // Address: 0x100046E0
-    static const s32 cProfileID_263;                                       // 611
-    // Address: 0x100046E4
-    static const s32 cProfileID_264;                                       // 612
-    // Address: 0x100046E8
-    static const s32 cProfileID_265;                                       // 613
-    // Address: 0x100046EC
-    static const s32 cProfileID_266;                                       // 614
-    // Address: 0x100046F0
-    static const s32 cProfileID_267;                                       // 615
-    // Address: 0x100046F4
-    static const s32 cProfileID_268;                                       // 616
-    // Address: 0x100046F8
-    static const s32 cProfileID_Spanner;                                   // 617
-    // Address: 0x100046FC
-    static const s32 cProfileID_26A;                                       // 618
-    // Address: 0x10004700
-    static const s32 cProfileID_26B;                                       // 619
-    // Address: 0x10004704
-    static const s32 cProfileID_26C;                                       // 620
-    // Address: 0x10004708
-    static const s32 cProfileID_26D;                                       // 621
-    // Address: 0x1000470C
-    static const s32 cProfileID_26E;                                       // 622
-    // Address: 0x10004710
-    static const s32 cProfileID_26F;                                       // 623
-    // Address: 0x10004714
-    static const s32 cProfileID_270;                                       // 624
-    // Address: 0x10004718
-    static const s32 cProfileID_271;                                       // 625
-    // Address: 0x1000471C
-    static const s32 cProfileID_272;                                       // 626
-    // Address: 0x10004720
-    static const s32 cProfileID_273;                                       // 627
-    // Address: 0x10004724
-    static const s32 cProfileID_274;                                       // 628
-    // Address: 0x10004728
-    static const s32 cProfileID_275;                                       // 629
-    // Address: 0x1000472C
-    static const s32 cProfileID_SearchKiller;                              // 630
-    // Address: 0x10004730
-    static const s32 cProfileID_277;                                       // 631
-    // Address: 0x10004734
-    static const s32 cProfileID_278;                                       // 632
-    // Address: 0x10004738
-    static const s32 cProfileID_279;                                       // 633
-    // Address: 0x1000473C
-    static const s32 cProfileID_WakiSearchMagKiller;                       // 634
-    // Address: 0x10004740
-    static const s32 cProfileID_27B;                                       // 635
-    // Address: 0x10004744
-    static const s32 cProfileID_27C;                                       // 636
-    // Address: 0x10004748
-    static const s32 cProfileID_27D;                                       // 637
-    // Address: 0x1000474C
-    static const s32 cProfileID_27E;                                       // 638
-    // Address: 0x10004750
-    static const s32 cProfileID_27F;                                       // 639
-    // Address: 0x10004754
-    static const s32 cProfileID_GabonRock;                                 // 640
-    // Address: 0x10004758
-    static const s32 cProfileID_281;                                       // 641
-    // Address: 0x1000475C
-    static const s32 cProfileID_282;                                       // 642
-    // Address: 0x10004760
-    static const s32 cProfileID_RockGabonRock;                             // 643
-    // Address: 0x10004764
-    static const s32 cProfileID_284;                                       // 644
-    // Address: 0x10004768
-    static const s32 cProfileID_SeichanSnowBall;                           // 645
-    // Address: 0x1000476C
-    static const s32 cProfileID_286;                                       // 646
-    // Address: 0x10004770
-    static const s32 cProfileID_287;                                       // 647
-    // Address: 0x10004774
-    static const s32 cProfileID_288;                                       // 648
-    // Address: 0x10004778
-    static const s32 cProfileID_289;                                       // 649
-    // Address: 0x1000477C
-    static const s32 cProfileID_Woochan;                                   // 650
-    // Address: 0x10004780
-    static const s32 cProfileID_28B;                                       // 651
-    // Address: 0x10004784
-    static const s32 cProfileID_28C;                                       // 652
-    // Address: 0x10004788
-    static const s32 cProfileID_28D;                                       // 653
-    // Address: 0x1000478C
-    static const s32 cProfileID_Bubble;                                    // 654
-    // Address: 0x10004790
-    static const s32 cProfileID_BubbleSync;                                // 655
-    // Address: 0x10004794
-    static const s32 cProfileID_BubbleRDash;                               // 656
-    // Address: 0x10004798
-    static const s32 cProfileID_BubbleSyncRDash;                           // 657
-    // Address: 0x1000479C
-    static const s32 cProfileID_292;                                       // 658
-    // Address: 0x100047A0
-    static const s32 cProfileID_293;                                       // 659
-    // Address: 0x100047A4
-    static const s32 cProfileID_294;                                       // 660
-    // Address: 0x100047A8
-    static const s32 cProfileID_295;                                       // 661
-    // Address: 0x100047AC
-    static const s32 cProfileID_296;                                       // 662
-    // Address: 0x100047B0
-    static const s32 cProfileID_297;                                       // 663
-    // Address: 0x100047B4
-    static const s32 cProfileID_298;                                       // 664
-    // Address: 0x100047B8
-    static const s32 cProfileID_299;                                       // 665
-    // Address: 0x100047BC
-    static const s32 cProfileID_29A;                                       // 666
-    // Address: 0x100047C0
-    static const s32 cProfileID_29B;                                       // 667
-    // Address: 0x100047C4
-    static const s32 cProfileID_29C;                                       // 668
-    // Address: 0x100047C8
-    static const s32 cProfileID_29D;                                       // 669
-    // Address: 0x100047CC
-    static const s32 cProfileID_29E;                                       // 670
-    // Address: 0x100047D0
-    static const s32 cProfileID_29F;                                       // 671
-    // Address: 0x100047D4
-    static const s32 cProfileID_2A0;                                       // 672
-    // Address: 0x100047D8
-    static const s32 cProfileID_2A1;                                       // 673
-    // Address: 0x100047DC
-    static const s32 cProfileID_2A2;                                       // 674
-    // Address: 0x100047E0
-    static const s32 cProfileID_2A3;                                       // 675
-    // Address: 0x100047E4
-    static const s32 cProfileID_2A4;                                       // 676
-    // Address: 0x100047E8
-    static const s32 cProfileID_2A5;                                       // 677
-    // Address: 0x100047EC
-    static const s32 cProfileID_Bun;                                       // 678
-    // Address: 0x100047F0
-    static const s32 cProfileID_BunW2;                                     // 679
-    // Address: 0x100047F4
-    static const s32 cProfileID_BunW3;                                     // 680
-    // Address: 0x100047F8
-    static const s32 cProfileID_BunW4;                                     // 681
-    // Address: 0x100047FC
-    static const s32 cProfileID_BunW5;                                     // 682
-    // Address: 0x10004800
-    static const s32 cProfileID_BunW6;                                     // 683
-    // Address: 0x10004804
-    static const s32 cProfileID_BunDemo;                                   // 684
-    // Address: 0x10004808
-    static const s32 cProfileID_KokoopaDemo;                               // 685
-    // Address: 0x1000480C
-    static const s32 cProfileID_KoopaJrDemo;                               // 686
-    // Address: 0x10004810
-    static const s32 cProfileID_KameckDemo;                                // 687
-    // Address: 0x10004814
-    static const s32 cProfileID_BossKKDemo;                                // 688
-    // Address: 0x10004818
-    static const s32 cProfileID_PeachFinalCastleKoopaJrDemo;               // 689
-    // Address: 0x1000481C
-    static const s32 cProfileID_KoopaDemo;                                 // 690
-    // Address: 0x10004820
-    static const s32 cProfileID_FinalKoopaDemo;                            // 691
-    // Address: 0x10004824
-    static const s32 cProfileID_PeachDemo;                                 // 692
-    // Address: 0x10004828
-    static const s32 cProfileID_Larry;                                     // 693
-    // Address: 0x1000482C
-    static const s32 cProfileID_KokoopaSearchFire;                         // 694
-    // Address: 0x10004830
-    static const s32 cProfileID_Lemmy;                                     // 695
-    // Address: 0x10004834
-    static const s32 cProfileID_Morton;                                    // 696
-    // Address: 0x10004838
-    static const s32 cProfileID_MortonSanbo;                               // 697
-    // Address: 0x1000483C
-    static const s32 cProfileID_MortonSanboParts;                          // 698
-    // Address: 0x10004840
-    static const s32 cProfileID_Wendy;                                     // 699
-    // Address: 0x10004844
-    static const s32 cProfileID_WendyRing;                                 // 700
-    // Address: 0x10004848
-    static const s32 cProfileID_Ludwig;                                    // 701
-    // Address: 0x1000484C
-    static const s32 cProfileID_LudwigAlterEgo;                            // 702
-    // Address: 0x10004850
-    static const s32 cProfileID_Iggy;                                      // 703
-    // Address: 0x10004854
-    static const s32 cProfileID_IggyMagic;                                 // 704
-    // Address: 0x10004858
-    static const s32 cProfileID_Woogan;                                    // 705
-    // Address: 0x1000485C
-    static const s32 cProfileID_Roy;                                       // 706
-    // Address: 0x10004860
-    static const s32 cProfileID_RoyLiftWaki;                               // 707
-    // Address: 0x10004864
-    static const s32 cProfileID_BossKK;                                    // 708
-    // Address: 0x10004868
-    static const s32 cProfileID_BossKKThunder;                             // 709
-    // Address: 0x1000486C
-    static const s32 cProfileID_Kameck;                                    // 710
-    // Address: 0x10004870
-    static const s32 cProfileID_KameckIceConfig;                           // 711
-    // Address: 0x10004874
-    static const s32 cProfileID_KameckWarpPos;                             // 712
-    // Address: 0x10004878
-    static const s32 cProfileID_KameckMagic;                               // 713
-    // Address: 0x1000487C
-    static const s32 cProfileID_PeachFinalCastleKoopaJr;                   // 714
-    // Address: 0x10004880
-    static const s32 cProfileID_Koopa;                                     // 715
-    // Address: 0x10004884
-    static const s32 cProfileID_KoopaFireWaki;                             // 716
-    // Address: 0x10004888
-    static const s32 cProfileID_KoopaFire;                                 // 717
-    // Address: 0x1000488C
-    static const s32 cProfileID_DemoKoopaJrClown;                          // 718
-    // Address: 0x10004890
-    static const s32 cProfileID_DemoKoopaJr;                               // 719
-    // Address: 0x10004894
-    static const s32 cProfileID_BunDemoKameck;                             // 720
-    // Address: 0x10004898
-    static const s32 cProfileID_KoopaDemoKameck;                           // 721
-    // Address: 0x1000489C
-    static const s32 cProfileID_BossKKDemoKameck;                          // 722
-    // Address: 0x100048A0
-    static const s32 cProfileID_BossKKDemoKK;                              // 723
-    // Address: 0x100048A4
-    static const s32 cProfileID_FinalKoopaFire;                            // 724
-    // Address: 0x100048A8
-    static const s32 cProfileID_FinalKoopaJr;                              // 725
-    // Address: 0x100048AC
-    static const s32 cProfileID_FinalKoopaJrFire;                          // 726
-    // Address: 0x100048B0
-    static const s32 cProfileID_FinalBomhei;                               // 727
-    // Address: 0x100048B4
-    static const s32 cProfileID_KokoopaShipLemmy;                          // 728
-    // Address: 0x100048B8
-    static const s32 cProfileID_KokoopaShipMorton;                         // 729
-    // Address: 0x100048BC
-    static const s32 cProfileID_KokoopaShipLarry;                          // 730
-    // Address: 0x100048C0
-    static const s32 cProfileID_KokoopaShipWendy;                          // 731
-    // Address: 0x100048C4
-    static const s32 cProfileID_KokoopaShipIggy;                           // 732
-    // Address: 0x100048C8
-    static const s32 cProfileID_KokoopaShipRoy;                            // 733
-    // Address: 0x100048CC
-    static const s32 cProfileID_KokoopaShipLudwig;                         // 734
-    // Address: 0x100048D0
-    static const s32 cProfileID_Peach;                                     // 735
-    // Address: 0x100048D4
-    static const s32 cProfileID_2E0;                                       // 736
-    // Address: 0x100048D8
-    static const s32 cProfileID_FinalDVPeach;                              // 737
-    // Address: 0x100048DC
-    static const s32 cProfileID_FinalDVShutter;                            // 738
-    // Address: 0x100048E0
-    static const s32 cProfileID_2E3;                                       // 739
-    // Address: 0x100048E4
-    static const s32 cProfileID_2E4;                                       // 740
-    // Address: 0x100048E8
-    static const s32 cProfileID_2E5;                                       // 741
-    // Address: 0x100048EC
-    static const s32 cProfileID_2E6;                                       // 742
-    // Address: 0x100048F0
-    static const s32 cProfileID_2E7;                                       // 743
-    // Address: 0x100048F4
-    static const s32 cProfileID_2E8;                                       // 744
-    // Address: 0x100048F8
-    static const s32 cProfileID_2E9;                                       // 745
-    // Address: 0x100048FC
-    static const s32 cProfileID_2EA;                                       // 746
-    // Address: 0x10004900
-    static const s32 cProfileID_2EB;                                       // 747
-    // Address: 0x10004904
-    static const s32 cProfileID_2EC;                                       // 748
-    // Address: 0x10004908
-    static const s32 cProfileID_2ED;                                       // 749
-    // Address: 0x1000490C
-    static const s32 cProfileID_2EE;                                       // 750
-    // Address: 0x10004910
-    static const s32 cProfileID_2EF;                                       // 751
-    // Address: 0x10004914
-    static const s32 cProfileID_2F0;                                       // 752
-    // Address: 0x10004918
-    static const s32 cProfileID_2F1;                                       // 753
-    // Address: 0x1000491C
-    static const s32 cProfileID_2F2;                                       // 754
-    // Address: 0x10004920
-    static const s32 cProfileID_2F3;                                       // 755
-    // Address: 0x10004924
-    static const s32 cProfileID_2F4;                                       // 756
-    // Address: 0x10004928
-    static const s32 cProfileID_2F5;                                       // 757
-    // Address: 0x1000492C
-    static const s32 cProfileID_Hammer;                                    // 758
-    // Address: 0x10004930
-    static const s32 cProfileID_2F7;                                       // 759
-    // Address: 0x10004934
-    static const s32 cProfileID_Boomerang;                                 // 760
-    // Address: 0x10004938
-    static const s32 cProfileID_2F9;                                       // 761
-    // Address: 0x1000493C
-    static const s32 cProfileID_FireBallBros;                              // 762
-    // Address: 0x10004940
-    static const s32 cProfileID_2FB;                                       // 763
-    // Address: 0x10004944
-    static const s32 cProfileID_IceBallBros;                               // 764
-    // Address: 0x10004948
-    static const s32 cProfileID_2FD;                                       // 765
-    // Address: 0x1000494C
-    static const s32 cProfileID_MegaHammer;                                // 766
-    // Address: 0x10004950
-    static const s32 cProfileID_2FF;                                       // 767
-    // Address: 0x10004954
-    static const s32 cProfileID_300;                                       // 768
-    // Address: 0x10004958
-    static const s32 cProfileID_301;                                       // 769
-    // Address: 0x1000495C
-    static const s32 cProfileID_302;                                       // 770
-    // Address: 0x10004960
-    static const s32 cProfileID_303;                                       // 771
-    // Address: 0x10004964
-    static const s32 cProfileID_304;                                       // 772
-    // Address: 0x10004968
-    static const s32 cProfileID_305;                                       // 773
-    // Address: 0x1000496C
-    static const s32 cProfileID_306;                                       // 774
-    // Address: 0x10004970
-    static const s32 cProfileID_307;                                       // 775
-    // Address: 0x10004974
-    static const s32 cProfileID_308;                                       // 776
-    // Address: 0x10004978
-    static const s32 cProfileID_309;                                       // 777
-    // Address: 0x1000497C
-    static const s32 cProfileID_30A;                                       // 778
-    // Address: 0x10004980
-    static const s32 cProfileID_30B;                                       // 779
-    // Address: 0x10004984
-    static const s32 cProfileID_30C;                                       // 780
-    // Address: 0x10004988
-    static const s32 cProfileID_30D;                                       // 781
-    // Address: 0x1000498C
-    static const s32 cProfileID_30E;                                       // 782
-    // Address: 0x10004990
-    static const s32 cProfileID_30F;                                       // 783
-    // Address: 0x10004994
-    static const s32 cProfileID_310;                                       // 784
-    // Address: 0x10004998
-    static const s32 cProfileID_311;                                       // 785
-    // Address: 0x1000499C
-    static const s32 cProfileID_312;                                       // 786
-    // Address: 0x100049A0
-    static const s32 cProfileID_313;                                       // 787
-    // Address: 0x100049A4
-    static const s32 cProfileID_314;                                       // 788
-    // Address: 0x100049A8
-    static const s32 cProfileID_315;                                       // 789
-    // Address: 0x100049AC
-    static const s32 cProfileID_316;                                       // 790
-    // Address: 0x100049B0
-    static const s32 cProfileID_317;                                       // 791
-    // Address: 0x100049B4
-    static const s32 cProfileID_318;                                       // 792
-    // Address: 0x100049B8
-    static const s32 cProfileID_319;                                       // 793
-    // Address: 0x100049BC
-    static const s32 cProfileID_31A;                                       // 794
-    // Address: 0x100049C0
-    static const s32 cProfileID_31B;                                       // 795
-    // Address: 0x100049C4
-    static const s32 cProfileID_31C;                                       // 796
-    // Address: 0x100049C8
-    static const s32 cProfileID_31D;                                       // 797
-    // Address: 0x100049CC
-    static const s32 cProfileID_31E;                                       // 798
-    // Address: 0x100049D0
-    static const s32 cProfileID_31F;                                       // 799
-    // Address: 0x100049D4
-    static const s32 cProfileID_320;                                       // 800
-    // Address: 0x100049D8
-    static const s32 cProfileID_321;                                       // 801
-    // Address: 0x100049DC
-    static const s32 cProfileID_322;                                       // 802
-    // Address: 0x100049E0
-    static const s32 cProfileID_323;                                       // 803
-    // Address: 0x100049E4
-    static const s32 cProfileID_324;                                       // 804
-    // Address: 0x100049E8
-    static const s32 cProfileID_325;                                       // 805
-    // Address: 0x100049EC
-    static const s32 cProfileID_326;                                       // 806
-    // Address: 0x100049F0
-    static const s32 cProfileID_327;                                       // 807
-    // Address: 0x100049F4
-    static const s32 cProfileID_328;                                       // 808
-    // Address: 0x100049F8
-    static const s32 cProfileID_BattleItem;                                // 809
-    // Address: 0x100049FC
-    static const s32 cProfileID_32A;                                       // 810
-    // Address: 0x10004A00
-    static const s32 cProfileID_VsBattleItem;                              // 811
-    // Address: 0x10004A04
-    static const s32 cProfileID_32C;                                       // 812
-    // Address: 0x10004A08
-    static const s32 cProfileID_32D;                                       // 813
-    // Address: 0x10004A0C
-    static const s32 cProfileID_32E;                                       // 814
-    // Address: 0x10004A10
-    static const s32 cProfileID_32F;                                       // 815
-    // Address: 0x10004A14
-    static const s32 cProfileID_330;                                       // 816
-    // Address: 0x10004A18
-    static const s32 cProfileID_331;                                       // 817
-    // Address: 0x10004A1C
-    static const s32 cProfileID_KoopaJrFire;                               // 818
-    // Address: 0x10004A20
-    static const s32 cProfileID_KoopaJrBall;                               // 819
-    // Address: 0x10004A24
-    static const s32 cProfileID_UnderwaterKoopaJr;                         // 820
-    // Address: 0x10004A28
-    static const s32 cProfileID_UnderwaterKoopaJrClown;                    // 821
-    // Address: 0x10004A2C
-    static const s32 cProfileID_UnderwaterKoopaJrRetreatPos;               // 822
-    // Address: 0x10004A30
-    static const s32 cProfileID_BoxingKoopaJr;                             // 823
-    // Address: 0x10004A34
-    static const s32 cProfileID_BoxingKoopaJrPostBattleDemo;               // 824
-    // Address: 0x10004A38
-    static const s32 cProfileID_BoxingKoopaJrClownPostBattleDemo;          // 825
-    // Address: 0x10004A3C
-    static const s32 cProfileID_MiniGamePanelItem;                         // 826
-    // Address: 0x10004A40
-    static const s32 cProfileID_SlotItem;                                  // 827
-    // Address: 0x10004A44
-    static const s32 cProfileID_CoinmakiCannon;                            // 828
-    // Address: 0x10004A48
-    static const s32 cProfileID_CoinmakiItem;                              // 829
-    // Address: 0x10004A4C
-    static const s32 cProfileID_MiniGameKinopio;                           // 830
-    // Address: 0x10004A50
-    static const s32 cProfileID_33F;                                       // 831
-    // Address: 0x10004A54
-    static const s32 cProfileID_340;                                       // 832
-    // Address: 0x10004A58
-    static const s32 cProfileID_341;                                       // 833
-    // Address: 0x10004A5C
-    static const s32 cProfileID_342;                                       // 834
-    // Address: 0x10004A60
-    static const s32 cProfileID_343;                                       // 835
-    // Address: 0x10004A64
-    static const s32 cProfileID_344;                                       // 836
-    // Address: 0x10004A68
-    static const s32 cProfileID_345;                                       // 837
-    // Address: 0x10004A6C
-    static const s32 cProfileID_346;                                       // 838
-    // Address: 0x10004A70
-    static const s32 cProfileID_347;                                       // 839
-    // Address: 0x10004A74
-    static const s32 cProfileID_StaffRollChibiYoshiChar;                   // 840
-    // Address: 0x10004A78
-    static const s32 cProfileID_StaffRollChibiYoshiBalloon;                // 841
-    // Address: 0x10004A7C
-    static const s32 cProfileID_StaffRollChibiYoshiBalloonCheer;           // 842
-    // Address: 0x10004A80
-    static const s32 cProfileID_StaffRollChibiYoshiLight;                  // 843
-    // Address: 0x10004A84
-    static const s32 cProfileID_StaffRollChibiYoshiLightCheer;             // 844
-    // Address: 0x10004A88
-    static const s32 cProfileID_StaffRollAwaChar;                          // 845
-    // Address: 0x10004A8C
-    static const s32 cProfileID_StaffRollAwaCoin;                          // 846
-    // Address: 0x10004A90
-    static const s32 cProfileID_StaffRollTottenKun;                        // 847
-    // Address: 0x10004A94
-    static const s32 cProfileID_350;                                       // 848
-    // Address: 0x10004A98
-    static const s32 cProfileID_351;                                       // 849
-    // Address: 0x10004A9C
-    static const s32 cProfileID_352;                                       // 850
-    // Address: 0x10004AA0
-    static const s32 cProfileID_353;                                       // 851
-    // Address: 0x10004AA4
-    static const s32 cProfileID_RealizeFeverStar;                          // 852
-    // Address: 0x10004AA8
-    static const s32 cProfileID_Star;                                      // 853
-    // Address: 0x10004AAC
-    static const s32 cProfileID_CourseSelectPlayer;                        // 854
-    // Address: 0x10004AB0
-    static const s32 cProfileID_CourseSelectPlayer2PSub;                   // 855 (CS Player 2, 3 or 4)
-    // Address: 0x10004AB4
-    static const s32 cProfileID_CourseSelectChibiYoshi;                    // 856
-    // Address: 0x10004AB8
-    static const s32 cProfileID_CourseSelectCamera;                        // 857
-    // Address: 0x10004ABC
-    static const s32 cProfileID_CourseSelectCastle;                        // 858
-    // Address: 0x10004AC0
-    static const s32 cProfileID_CourseSelectToride;                        // 859
-    // Address: 0x10004AC4
-    static const s32 cProfileID_CourseSelectKinokoHouse1up;                // 860
-    // Address: 0x10004AC8
-    static const s32 cProfileID_CourseSelectKinokoHouseShuffle;            // 861
-    // Address: 0x10004ACC
-    static const s32 cProfileID_CourseSelectKinokoHouseSlot;               // 862
-    // Address: 0x10004AD0
-    static const s32 cProfileID_CourseSelectPeachGates1st;                 // 863
-    // Address: 0x10004AD4
-    static const s32 cProfileID_CourseSelectPeachGates2nd;                 // 864
-    // Address: 0x10004AD8
-    static const s32 cProfileID_CourseSelectCoursePoint;                   // 865
-    // Address: 0x10004ADC
-    static const s32 cProfileID_CourseSelectWorldMoveDokan;                // 866
-    // Address: 0x10004AE0
-    static const s32 cProfileID_CourseSelectW8Cloud;                       // 867
-    // Address: 0x10004AE4
-    static const s32 cProfileID_CourseSelectGhost;                         // 868
-    // Address: 0x10004AE8
-    static const s32 cProfileID_CourseSelectW2Bros;                        // 869 (The Japanese Profile name says "Hammer Bros" LOL)
-    // Address: 0x10004AEC
-    static const s32 cProfileID_CourseSelectShipW1;                        // 870
-    // Address: 0x10004AF0
-    static const s32 cProfileID_CourseSelectShipW2;                        // 871
-    // Address: 0x10004AF4
-    static const s32 cProfileID_CourseSelectShipW3;                        // 872
-    // Address: 0x10004AF8
-    static const s32 cProfileID_CourseSelectShipW4;                        // 873
-    // Address: 0x10004AFC
-    static const s32 cProfileID_CourseSelectShipW5;                        // 874
-    // Address: 0x10004B00
-    static const s32 cProfileID_CourseSelectShipW6;                        // 875
-    // Address: 0x10004B04
-    static const s32 cProfileID_CourseSelectShipW7;                        // 876
-    // Address: 0x10004B08
-    static const s32 cProfileID_CourseSelectShipW8;                        // 877
-    // Address: 0x10004B0C
-    static const s32 cProfileID_CourseSelectShipW8Broken;                  // 878
-    // Address: 0x10004B10
-    static const s32 cProfileID_CourseSelectSurrender;                     // 879
-    // Address: 0x10004B14
-    static const s32 cProfileID_CourseSelectSwitchA;                       // 880
-    // Address: 0x10004B18
-    static const s32 cProfileID_CourseSelectSwitchB;                       // 881
-    // Address: 0x10004B1C
-    static const s32 cProfileID_CourseSelectTeresa;                        // 882
-    // Address: 0x10004B20
-    static const s32 cProfileID_CourseSelectOpeningKameck;                 // 883
-    // Address: 0x10004B24
-    static const s32 cProfileID_CourseSelectTorideBoss;                    // 884
-    // Address: 0x10004B28
-    static const s32 cProfileID_CourseSelectPakkun;                        // 885
-    // Address: 0x10004B2C
-    static const s32 cProfileID_CourseSelectShadowFirstDemoKinopio;        // 886
-    // Address: 0x10004B30
-    static const s32 cProfileID_CourseSelectTobiPuku;                      // 887
-    // Address: 0x10004B34
-    static const s32 cProfileID_CourseSelectChorobon;                      // 888
-    // Address: 0x10004B38
-    static const s32 cProfileID_CourseSelectW7Item;                        // 889
-    // Address: 0x10004B3C
-    static const s32 cProfileID_CourseSelectW5Teresa;                      // 890
-    // Address: 0x10004B40
-    static const s32 cProfileID_CourseSelectFlag;                          // 891
-    // Address: 0x10004B44
-    static const s32 cProfileID_CourseSelectMusasabi;                      // 892
-    // Address: 0x10004B48
-    static const s32 cProfileID_CourseSelectWPillar;                       // 893
-    // Address: 0x10004B4C
-    static const s32 cProfileID_CourseSelectW7Bridge;                      // 894
-    // Address: 0x10004B50
-    static const s32 cProfileID_CourseSelectMiiBalloon;                    // 895
-    // Address: 0x10004B54
-    static const s32 cProfileID_CourseSelectPenguin;                       // 896
-    // Address: 0x10004B58
-    static const s32 cProfileID_CourseSelectW4Item;                        // 897
-    // Address: 0x10004B5C
-    static const s32 cProfileID_CourseSelectW2Kuribo;                      // 898
-    // Address: 0x10004B60
-    static const s32 cProfileID_CourseSelectPakkunBig;                     // 899
-    // Address: 0x10004B64
-    static const s32 cProfileID_CourseSelectShadowKunIcon;                 // 900
-    // Address: 0x10004B68
-    static const s32 cProfileID_CourseSelectDekaUnira;                     // 901
-    // Address: 0x10004B6C
-    static const s32 cProfileID_CourseSelectTomb;                          // 902
-    // Address: 0x10004B70
-    static const s32 cProfileID_CourseSelectShadowFirstDemoShadowKun;      // 903
-    // Address: 0x10004B74
-    static const s32 cProfileID_CourseSelectKotsuCoaster;                  // 904
-    // Address: 0x10004B78
-    static const s32 cProfileID_CourseSelectKoopaJr;                       // 905
-    // Address: 0x10004B7C
-    static const s32 cProfileID_CourseSelectPeach;                         // 906
-    // Address: 0x10004B80
-    static const s32 cProfileID_CourseSelectW1Item;                        // 907
-    // Address: 0x10004B84
-    static const s32 cProfileID_CourseSelectStarGate;                      // 908
-    // Address: 0x10004B88
-    static const s32 cProfileID_CourseSelectEventAssistant;                // 909
+    /**
+     * @brief 0
+     * @par Address: 0x10003D54
+     */
+    static const s32 cProfileID_000;
+    /**
+     * @brief 1
+     * @par Address: 0x10003D58
+     */
+    static const s32 cProfileID_001;
+    /**
+     * @brief 2
+     * @par Address: 0x10003D5C
+     */
+    static const s32 cProfileID_002;
+    /**
+     * @brief 3
+     * @par Address: 0x10003D60
+     */
+    static const s32 cProfileID_003;
+    /**
+     * @brief 4
+     * @par Address: 0x10003D64
+     */
+    static const s32 cProfileID_004;
+    /**
+     * @brief 5
+     * @par Address: 0x10003D68
+     */
+    static const s32 cProfileID_005;
+    /**
+     * @brief 6
+     * @par Address: 0x10003D6C
+     */
+    static const s32 cProfileID_006;
+    /**
+     * @brief 7
+     * @par Address: 0x10003D70
+     */
+    static const s32 cProfileID_007;
+    /**
+     * @brief 8
+     * @par Address: 0x10003D74
+     */
+    static const s32 cProfileID_008;
+    /**
+     * @brief 9
+     * @par Address: 0x10003D78
+     */
+    static const s32 cProfileID_009;
+    /**
+     * @brief 10
+     * @par Address: 0x10003D7C
+     */
+    static const s32 cProfileID_00A;
+    /**
+     * @brief 11
+     * @par Address: 0x10003D80
+     */
+    static const s32 cProfileID_00B;
+    /**
+     * @brief 12
+     * @par Address: 0x10003D84
+     */
+    static const s32 cProfileID_00C;
+    /**
+     * @brief 13
+     * @par Address: 0x10003D88
+     */
+    static const s32 cProfileID_00D;
+    /**
+     * @brief 14
+     * @par Address: 0x10003D8C
+     */
+    static const s32 cProfileID_00E;
+    /**
+     * @brief 15
+     * @par Address: 0x10003D90
+     */
+    static const s32 cProfileID_00F;
+    /**
+     * @brief 16
+     * @par Address: 0x10003D94
+     */
+    static const s32 cProfileID_010;
+    /**
+     * @brief 17
+     * @par Address: 0x10003D98
+     */
+    static const s32 cProfileID_011;
+    /**
+     * @brief 18
+     * @par Address: 0x10003D9C
+     */
+    static const s32 cProfileID_012;
+    /**
+     * @brief 19
+     * @par Address: 0x10003DA0
+     */
+    static const s32 cProfileID_013;
+    /**
+     * @brief 20
+     * @par Address: 0x10003DA4
+     */
+    static const s32 cProfileID_014;
+    /**
+     * @brief 21
+     * @par Address: 0x10003DA8
+     */
+    static const s32 cProfileID_015;
+    /**
+     * @brief 22
+     * @par Address: 0x10003DAC
+     */
+    static const s32 cProfileID_016;
+    /**
+     * @brief 23
+     * @par Address: 0x10003DB0
+     */
+    static const s32 cProfileID_017;
+    /**
+     * @brief 24
+     * @par Address: 0x10003DB4
+     */
+    static const s32 cProfileID_MiniGameMgr;
+    /**
+     * @brief 25
+     * @par Address: 0x10003DB8
+     */
+    static const s32 cProfileID_MiniGameMgrRDash;
+    /**
+     * @brief 26
+     * @par Address: 0x10003DBC
+     */
+    static const s32 cProfileID_ShuffleBlockMgr;
+    /**
+     * @brief 27
+     * @par Address: 0x10003DC0
+     */
+    static const s32 cProfileID_SlotMgr;
+    /**
+     * @brief 28
+     * @par Address: 0x10003DC4
+     */
+    static const s32 cProfileID_CoinmakiMgr;
+    /**
+     * @brief 29
+     * @par Address: 0x10003DC8
+     */
+    static const s32 cProfileID_01D;
+    /**
+     * @brief 30
+     * @par Address: 0x10003DCC
+     */
+    static const s32 cProfileID_01E;
+    /**
+     * @brief 31
+     * @par Address: 0x10003DD0
+     */
+    static const s32 cProfileID_01F;
+    /**
+     * @brief 32
+     * @par Address: 0x10003DD4
+     */
+    static const s32 cProfileID_020;
+    /**
+     * @brief 33
+     * @par Address: 0x10003DD8
+     */
+    static const s32 cProfileID_ShootingStar;
+    /**
+     * @brief 34
+     * @par Address: 0x10003DDC
+     */
+    static const s32 cProfileID_StaffRollMgr;
+    /**
+     * @brief 35
+     * @par Address: 0x10003DE0
+     */
+    static const s32 cProfileID_StaffRollMgrRDash;
+    /**
+     * @brief 36
+     * @par Address: 0x10003DE4
+     */
+    static const s32 cProfileID_024;
+    /**
+     * @brief 37
+     * @par Address: 0x10003DE8
+     */
+    static const s32 cProfileID_025;
+    /**
+     * @brief 38
+     * @par Address: 0x10003DEC
+     */
+    static const s32 cProfileID_026;
+    /**
+     * @brief 39
+     * @par Address: 0x10003DF0
+     */
+    static const s32 cProfileID_027;
+    /**
+     * @brief 40
+     * @par Address: 0x10003DF4
+     */
+    static const s32 cProfileID_028;
+    /**
+     * @brief 41
+     * @par Address: 0x10003DF8
+     */
+    static const s32 cProfileID_029;
+    /**
+     * @brief 42
+     * @par Address: 0x10003DFC
+     */
+    static const s32 cProfileID_02A;
+    /**
+     * @brief 43
+     * @par Address: 0x10003E00
+     */
+    static const s32 cProfileID_02B;
+    /**
+     * @brief 44
+     * @par Address: 0x10003E04
+     */
+    static const s32 cProfileID_02C;
+    /**
+     * @brief 45
+     * @par Address: 0x10003E08
+     */
+    static const s32 cProfileID_02D;
+    /**
+     * @brief 46
+     * @par Address: 0x10003E0C
+     */
+    static const s32 cProfileID_02E;
+    /**
+     * @brief 47
+     * @par Address: 0x10003E10
+     */
+    static const s32 cProfileID_02F;
+    /**
+     * @brief 48
+     * @par Address: 0x10003E14
+     */
+    static const s32 cProfileID_030;
+    /**
+     * @brief 49
+     * @par Address: 0x10003E18
+     */
+    static const s32 cProfileID_031;
+    /**
+     * @brief 50
+     * @par Address: 0x10003E1C
+     */
+    static const s32 cProfileID_032;
+    /**
+     * @brief 51
+     * @par Address: 0x10003E20
+     */
+    static const s32 cProfileID_033;
+    /**
+     * @brief 52
+     * @par Address: 0x10003E24
+     */
+    static const s32 cProfileID_ElasticKinokoParent;
+    /**
+     * @brief 53
+     * @par Address: 0x10003E28
+     */
+    static const s32 cProfileID_FloorGyration;
+    /**
+     * @brief 54
+     * @par Address: 0x10003E2C
+     */
+    static const s32 cProfileID_036;
+    /**
+     * @brief 55
+     * @par Address: 0x10003E30
+     */
+    static const s32 cProfileID_037;
+    /**
+     * @brief 56
+     * @par Address: 0x10003E34
+     */
+    static const s32 cProfileID_038;
+    /**
+     * @brief 57
+     * @par Address: 0x10003E38
+     */
+    static const s32 cProfileID_039;
+    /**
+     * @brief 58
+     * @par Address: 0x10003E3C
+     */
+    static const s32 cProfileID_03A;
+    /**
+     * @brief 59
+     * @par Address: 0x10003E40
+     */
+    static const s32 cProfileID_03B;
+    /**
+     * @brief 60
+     * @par Address: 0x10003E44
+     */
+    static const s32 cProfileID_PairObjChild;
+    /**
+     * @brief 61
+     * @par Address: 0x10003E48
+     */
+    static const s32 cProfileID_03D;
+    /**
+     * @brief 62
+     * @par Address: 0x10003E4C
+     */
+    static const s32 cProfileID_03E;
+    /**
+     * @brief 63
+     * @par Address: 0x10003E50
+     */
+    static const s32 cProfileID_03F;
+    /**
+     * @brief 64
+     * @par Address: 0x10003E54
+     */
+    static const s32 cProfileID_040;
+    /**
+     * @brief 65
+     * @par Address: 0x10003E58
+     */
+    static const s32 cProfileID_041;
+    /**
+     * @brief 66
+     * @par Address: 0x10003E5C
+     */
+    static const s32 cProfileID_042;
+    /**
+     * @brief 67
+     * @par Address: 0x10003E60
+     */
+    static const s32 cProfileID_043;
+    /**
+     * @brief 68
+     * @par Address: 0x10003E64
+     */
+    static const s32 cProfileID_044;
+    /**
+     * @brief 69
+     * @par Address: 0x10003E68
+     */
+    static const s32 cProfileID_045;
+    /**
+     * @brief 70
+     * @par Address: 0x10003E6C
+     */
+    static const s32 cProfileID_046;
+    /**
+     * @brief 71
+     * @par Address: 0x10003E70
+     */
+    static const s32 cProfileID_047;
+    /**
+     * @brief 72
+     * @par Address: 0x10003E74
+     */
+    static const s32 cProfileID_048;
+    /**
+     * @brief 73
+     * @par Address: 0x10003E78
+     */
+    static const s32 cProfileID_049;
+    /**
+     * @brief 74
+     * @par Address: 0x10003E7C
+     */
+    static const s32 cProfileID_04A;
+    /**
+     * @brief 75
+     * @par Address: 0x10003E80
+     */
+    static const s32 cProfileID_04B;
+    /**
+     * @brief 76
+     * @par Address: 0x10003E84
+     */
+    static const s32 cProfileID_04C;
+    /**
+     * @brief 77
+     * @par Address: 0x10003E88
+     */
+    static const s32 cProfileID_KinokoLift;
+    /**
+     * @brief 78
+     * @par Address: 0x10003E8C
+     */
+    static const s32 cProfileID_KinokoLiftColor;
+    /**
+     * @brief 79
+     * @par Address: 0x10003E90
+     */
+    static const s32 cProfileID_LiftZenStar;
+    /**
+     * @brief 80
+     * @par Address: 0x10003E94
+     */
+    static const s32 cProfileID_050;
+    /**
+     * @brief 81
+     * @par Address: 0x10003E98
+     */
+    static const s32 cProfileID_051;
+    /**
+     * @brief 82
+     * @par Address: 0x10003E9C
+     */
+    static const s32 cProfileID_052;
+    /**
+     * @brief 83
+     * @par Address: 0x10003EA0
+     */
+    static const s32 cProfileID_053;
+    /**
+     * @brief 84
+     * @par Address: 0x10003EA4
+     */
+    static const s32 cProfileID_054;
+    /**
+     * @brief 85
+     * @par Address: 0x10003EA8
+     */
+    static const s32 cProfileID_055;
+    /**
+     * @brief 86
+     * @par Address: 0x10003EAC
+     */
+    static const s32 cProfileID_056;
+    /**
+     * @brief 87
+     * @par Address: 0x10003EB0
+     */
+    static const s32 cProfileID_057;
+    /**
+     * @brief 88
+     * @par Address: 0x10003EB4
+     */
+    static const s32 cProfileID_058;
+    /**
+     * @brief 89
+     * @par Address: 0x10003EB8
+     */
+    static const s32 cProfileID_059;
+    /**
+     * @brief 90
+     * @par Address: 0x10003EBC
+     */
+    static const s32 cProfileID_BgActorYukaMario;
+    /**
+     * @brief 91
+     * @par Address: 0x10003EC0
+     */
+    static const s32 cProfileID_05B;
+    /**
+     * @brief 92
+     * @par Address: 0x10003EC4
+     */
+    static const s32 cProfileID_05C;
+    /**
+     * @brief 93
+     * @par Address: 0x10003EC8
+     */
+    static const s32 cProfileID_05D;
+    /**
+     * @brief 94
+     * @par Address: 0x10003ECC
+     */
+    static const s32 cProfileID_05E;
+    /**
+     * @brief 95
+     * @par Address: 0x10003ED0
+     */
+    static const s32 cProfileID_05F;
+    /**
+     * @brief 96
+     * @par Address: 0x10003ED4
+     */
+    static const s32 cProfileID_060;
+    /**
+     * @brief 97
+     * @par Address: 0x10003ED8
+     */
+    static const s32 cProfileID_061;
+    /**
+     * @brief 98
+     * @par Address: 0x10003EDC
+     */
+    static const s32 cProfileID_062;
+    /**
+     * @brief 99
+     * @par Address: 0x10003EE0
+     */
+    static const s32 cProfileID_063;
+    /**
+     * @brief 100
+     * @par Address: 0x10003EE4
+     */
+    static const s32 cProfileID_064;
+    /**
+     * @brief 101
+     * @par Address: 0x10003EE8
+     */
+    static const s32 cProfileID_KillerHoudai;
+    /**
+     * @brief 102
+     * @par Address: 0x10003EEC
+     */
+    static const s32 cProfileID_StretchKillerHoudai;
+    /**
+     * @brief 103
+     * @par Address: 0x10003EF0
+     */
+    static const s32 cProfileID_MagnumKillerHoudai;
+    /**
+     * @brief 104
+     * @par Address: 0x10003EF4
+     */
+    static const s32 cProfileID_MagnumKillerHoudaiDown;
+    /**
+     * @brief 105
+     * @par Address: 0x10003EF8
+     */
+    static const s32 cProfileID_SearchKillerHoudai;
+    /**
+     * @brief 106
+     * @par Address: 0x10003EFC
+     */
+    static const s32 cProfileID_SearchMagnumKillerHoudai;
+    /**
+     * @brief 107
+     * @par Address: 0x10003F00
+     */
+    static const s32 cProfileID_SearchMagnumKillerHoudaiDown;
+    /**
+     * @brief 108
+     * @par Address: 0x10003F04
+     */
+    static const s32 cProfileID_MagnumKillerHoudaiRDash;
+    /**
+     * @brief 109
+     * @par Address: 0x10003F08
+     */
+    static const s32 cProfileID_MagnumKillerHoudaiDownRDash;
+    /**
+     * @brief 110
+     * @par Address: 0x10003F0C
+     */
+    static const s32 cProfileID_SearchMagnumKillerHoudaiRDash;
+    /**
+     * @brief 111
+     * @par Address: 0x10003F10
+     */
+    static const s32 cProfileID_SearchMagnumKillerHoudaiDownRDash;
+    /**
+     * @brief 112
+     * @par Address: 0x10003F14
+     */
+    static const s32 cProfileID_070;
+    /**
+     * @brief 113
+     * @par Address: 0x10003F18
+     */
+    static const s32 cProfileID_071;
+    /**
+     * @brief 114
+     * @par Address: 0x10003F1C
+     */
+    static const s32 cProfileID_072;
+    /**
+     * @brief 115
+     * @par Address: 0x10003F20
+     */
+    static const s32 cProfileID_073;
+    /**
+     * @brief 116
+     * @par Address: 0x10003F24
+     */
+    static const s32 cProfileID_074;
+    /**
+     * @brief 117
+     * @par Address: 0x10003F28
+     */
+    static const s32 cProfileID_075;
+    /**
+     * @brief 118
+     * @par Address: 0x10003F2C
+     */
+    static const s32 cProfileID_076;
+    /**
+     * @brief 119
+     * @par Address: 0x10003F30
+     */
+    static const s32 cProfileID_077;
+    /**
+     * @brief 120
+     * @par Address: 0x10003F34
+     */
+    static const s32 cProfileID_078;
+    /**
+     * @brief 121
+     * @par Address: 0x10003F38
+     */
+    static const s32 cProfileID_Intermittent;
+    /**
+     * @brief 122
+     * @par Address: 0x10003F3C
+     */
+    static const s32 cProfileID_IntermittentPermanent;
+    /**
+     * @brief 123
+     * @par Address: 0x10003F40
+     */
+    static const s32 cProfileID_WaterIntermittent;
+    /**
+     * @brief 124
+     * @par Address: 0x10003F44
+     */
+    static const s32 cProfileID_WaterIntermittentPermanent;
+    /**
+     * @brief 125
+     * @par Address: 0x10003F48
+     */
+    static const s32 cProfileID_WaterIntermittentPermanentRD3_3;
+    /**
+     * @brief 126
+     * @par Address: 0x10003F4C
+     */
+    static const s32 cProfileID_07E;
+    /**
+     * @brief 127
+     * @par Address: 0x10003F50
+     */
+    static const s32 cProfileID_WaterIntermittentBossChild;
+    /**
+     * @brief 128
+     * @par Address: 0x10003F54
+     */
+    static const s32 cProfileID_YoganIntermittent;
+    /**
+     * @brief 129
+     * @par Address: 0x10003F58
+     */
+    static const s32 cProfileID_081;
+    /**
+     * @brief 130
+     * @par Address: 0x10003F5C
+     */
+    static const s32 cProfileID_082;
+    /**
+     * @brief 131
+     * @par Address: 0x10003F60
+     */
+    static const s32 cProfileID_083;
+    /**
+     * @brief 132
+     * @par Address: 0x10003F64
+     */
+    static const s32 cProfileID_084;
+    /**
+     * @brief 133
+     * @par Address: 0x10003F68
+     */
+    static const s32 cProfileID_085;
+    /**
+     * @brief 134
+     * @par Address: 0x10003F6C
+     */
+    static const s32 cProfileID_ObjPipeDownNG;
+    /**
+     * @brief 135
+     * @par Address: 0x10003F70
+     */
+    static const s32 cProfileID_087;
+    /**
+     * @brief 136
+     * @par Address: 0x10003F74
+     */
+    static const s32 cProfileID_088;
+    /**
+     * @brief 137
+     * @par Address: 0x10003F78
+     */
+    static const s32 cProfileID_089;
+    /**
+     * @brief 138
+     * @par Address: 0x10003F7C
+     */
+    static const s32 cProfileID_08A;
+    /**
+     * @brief 139
+     * @par Address: 0x10003F80
+     */
+    static const s32 cProfileID_08B;
+    /**
+     * @brief 140
+     * @par Address: 0x10003F84
+     */
+    static const s32 cProfileID_08C;
+    /**
+     * @brief 141
+     * @par Address: 0x10003F88
+     */
+    static const s32 cProfileID_08D;
+    /**
+     * @brief 142
+     * @par Address: 0x10003F8C
+     */
+    static const s32 cProfileID_08E;
+    /**
+     * @brief 143
+     * @par Address: 0x10003F90
+     */
+    static const s32 cProfileID_08F;
+    /**
+     * @brief 144
+     * @par Address: 0x10003F94
+     */
+    static const s32 cProfileID_090;
+    /**
+     * @brief 145
+     * @par Address: 0x10003F98
+     */
+    static const s32 cProfileID_091;
+    /**
+     * @brief 146
+     * @par Address: 0x10003F9C
+     */
+    static const s32 cProfileID_092;
+    /**
+     * @brief 147
+     * @par Address: 0x10003FA0
+     */
+    static const s32 cProfileID_093;
+    /**
+     * @brief 148
+     * @par Address: 0x10003FA4
+     */
+    static const s32 cProfileID_094;
+    /**
+     * @brief 149
+     * @par Address: 0x10003FA8
+     */
+    static const s32 cProfileID_095;
+    /**
+     * @brief 150
+     * @par Address: 0x10003FAC
+     */
+    static const s32 cProfileID_096;
+    /**
+     * @brief 151
+     * @par Address: 0x10003FB0
+     */
+    static const s32 cProfileID_097;
+    /**
+     * @brief 152
+     * @par Address: 0x10003FB4
+     */
+    static const s32 cProfileID_098;
+    /**
+     * @brief 153
+     * @par Address: 0x10003FB8
+     */
+    static const s32 cProfileID_099;
+    /**
+     * @brief 154
+     * @par Address: 0x10003FBC
+     */
+    static const s32 cProfileID_09A;
+    /**
+     * @brief 155
+     * @par Address: 0x10003FC0
+     */
+    static const s32 cProfileID_09B;
+    /**
+     * @brief 156
+     * @par Address: 0x10003FC4
+     */
+    static const s32 cProfileID_09C;
+    /**
+     * @brief 157
+     * @par Address: 0x10003FC8
+     */
+    static const s32 cProfileID_09D;
+    /**
+     * @brief 158
+     * @par Address: 0x10003FCC
+     */
+    static const s32 cProfileID_09E;
+    /**
+     * @brief 159
+     * @par Address: 0x10003FD0
+     */
+    static const s32 cProfileID_09F;
+    /**
+     * @brief 160
+     * @par Address: 0x10003FD4
+     */
+    static const s32 cProfileID_0A0;
+    /**
+     * @brief 161
+     * @par Address: 0x10003FD8
+     */
+    static const s32 cProfileID_0A1;
+    /**
+     * @brief 162
+     * @par Address: 0x10003FDC
+     */
+    static const s32 cProfileID_0A2;
+    /**
+     * @brief 163
+     * @par Address: 0x10003FE0
+     */
+    static const s32 cProfileID_0A3;
+    /**
+     * @brief 164
+     * @par Address: 0x10003FE4
+     */
+    static const s32 cProfileID_0A4;
+    /**
+     * @brief 165
+     * @par Address: 0x10003FE8
+     */
+    static const s32 cProfileID_0A5;
+    /**
+     * @brief 166
+     * @par Address: 0x10003FEC
+     */
+    static const s32 cProfileID_0A6;
+    /**
+     * @brief 167
+     * @par Address: 0x10003FF0
+     */
+    static const s32 cProfileID_0A7;
+    /**
+     * @brief 168
+     * @par Address: 0x10003FF4
+     */
+    static const s32 cProfileID_0A8;
+    /**
+     * @brief 169
+     * @par Address: 0x10003FF8
+     */
+    static const s32 cProfileID_0A9;
+    /**
+     * @brief 170
+     * @par Address: 0x10003FFC
+     */
+    static const s32 cProfileID_0AA;
+    /**
+     * @brief 171
+     * @par Address: 0x10004000
+     */
+    static const s32 cProfileID_0AB;
+    /**
+     * @brief 172
+     * @par Address: 0x10004004
+     */
+    static const s32 cProfileID_0AC;
+    /**
+     * @brief 173
+     * @par Address: 0x10004008
+     */
+    static const s32 cProfileID_0AD;
+    /**
+     * @brief 174
+     * @par Address: 0x1000400C
+     */
+    static const s32 cProfileID_0AE;
+    /**
+     * @brief 175
+     * @par Address: 0x10004010
+     */
+    static const s32 cProfileID_0AF;
+    /**
+     * @brief 176
+     * @par Address: 0x10004014
+     */
+    static const s32 cProfileID_0B0;
+    /**
+     * @brief 177
+     * @par Address: 0x10004018
+     */
+    static const s32 cProfileID_0B1;
+    /**
+     * @brief 178
+     * @par Address: 0x1000401C
+     */
+    static const s32 cProfileID_0B2;
+    /**
+     * @brief 179
+     * @par Address: 0x10004020
+     */
+    static const s32 cProfileID_0B3;
+    /**
+     * @brief 180
+     * @par Address: 0x10004024
+     */
+    static const s32 cProfileID_0B4;
+    /**
+     * @brief 181
+     * @par Address: 0x10004028
+     */
+    static const s32 cProfileID_0B5;
+    /**
+     * @brief 182
+     * @par Address: 0x1000402C
+     */
+    static const s32 cProfileID_0B6;
+    /**
+     * @brief 183
+     * @par Address: 0x10004030
+     */
+    static const s32 cProfileID_0B7;
+    /**
+     * @brief 184
+     * @par Address: 0x10004034
+     */
+    static const s32 cProfileID_LineSpinLift;
+    /**
+     * @brief 185
+     * @par Address: 0x10004038
+     */
+    static const s32 cProfileID_LineSpinLiftParentRDash;
+    /**
+     * @brief 186
+     * @par Address: 0x1000403C
+     */
+    static const s32 cProfileID_LineSpinLiftChildRDash;
+    /**
+     * @brief 187
+     * @par Address: 0x10004040
+     */
+    static const s32 cProfileID_0BB;
+    /**
+     * @brief 188
+     * @par Address: 0x10004044
+     */
+    static const s32 cProfileID_0BC;
+    /**
+     * @brief 189
+     * @par Address: 0x10004048
+     */
+    static const s32 cProfileID_0BD;
+    /**
+     * @brief 190
+     * @par Address: 0x1000404C
+     */
+    static const s32 cProfileID_0BE;
+    /**
+     * @brief 191
+     * @par Address: 0x10004050
+     */
+    static const s32 cProfileID_0BF;
+    /**
+     * @brief 192
+     * @par Address: 0x10004054
+     */
+    static const s32 cProfileID_0C0;
+    /**
+     * @brief 193
+     * @par Address: 0x10004058
+     */
+    static const s32 cProfileID_0C1;
+    /**
+     * @brief 194
+     * @par Address: 0x1000405C
+     */
+    static const s32 cProfileID_SnakeBlock;
+    /**
+     * @brief 195
+     * @par Address: 0x10004060
+     */
+    static const s32 cProfileID_0C3;
+    /**
+     * @brief 196
+     * @par Address: 0x10004064
+     */
+    static const s32 cProfileID_0C4;
+    /**
+     * @brief 197
+     * @par Address: 0x10004068
+     */
+    static const s32 cProfileID_0C5;
+    /**
+     * @brief 198
+     * @par Address: 0x1000406C
+     */
+    static const s32 cProfileID_0C6;
+    /**
+     * @brief 199
+     * @par Address: 0x10004070
+     */
+    static const s32 cProfileID_0C7;
+    /**
+     * @brief 200
+     * @par Address: 0x10004074
+     */
+    static const s32 cProfileID_0C8;
+    /**
+     * @brief 201
+     * @par Address: 0x10004078
+     */
+    static const s32 cProfileID_0C9;
+    /**
+     * @brief 202
+     * @par Address: 0x1000407C
+     */
+    static const s32 cProfileID_0CA;
+    /**
+     * @brief 203
+     * @par Address: 0x10004080
+     */
+    static const s32 cProfileID_0CB;
+    /**
+     * @brief 204
+     * @par Address: 0x10004084
+     */
+    static const s32 cProfileID_0CC;
+    /**
+     * @brief 205
+     * @par Address: 0x10004088
+     */
+    static const s32 cProfileID_0CD;
+    /**
+     * @brief 206
+     * @par Address: 0x1000408C
+     */
+    static const s32 cProfileID_0CE;
+    /**
+     * @brief 207
+     * @par Address: 0x10004090
+     */
+    static const s32 cProfileID_0CF;
+    /**
+     * @brief 208
+     * @par Address: 0x10004094
+     */
+    static const s32 cProfileID_0D0;
+    /**
+     * @brief 209
+     * @par Address: 0x10004098
+     */
+    static const s32 cProfileID_0D1;
+    /**
+     * @brief 210
+     * @par Address: 0x1000409C
+     */
+    static const s32 cProfileID_FloorHoleDokan;
+    /**
+     * @brief 211
+     * @par Address: 0x100040A0
+     */
+    static const s32 cProfileID_0D3;
+    /**
+     * @brief 212
+     * @par Address: 0x100040A4
+     */
+    static const s32 cProfileID_0D4;
+    /**
+     * @brief 213
+     * @par Address: 0x100040A8
+     */
+    static const s32 cProfileID_0D5;
+    /**
+     * @brief 214
+     * @par Address: 0x100040AC
+     */
+    static const s32 cProfileID_0D6;
+    /**
+     * @brief 215
+     * @par Address: 0x100040B0
+     */
+    static const s32 cProfileID_0D7;
+    /**
+     * @brief 216
+     * @par Address: 0x100040B4
+     */
+    static const s32 cProfileID_0D8;
+    /**
+     * @brief 217
+     * @par Address: 0x100040B8
+     */
+    static const s32 cProfileID_0D9;
+    /**
+     * @brief 218
+     * @par Address: 0x100040BC
+     */
+    static const s32 cProfileID_0DA;
+    /**
+     * @brief 219
+     * @par Address: 0x100040C0
+     */
+    static const s32 cProfileID_0DB;
+    /**
+     * @brief 220
+     * @par Address: 0x100040C4
+     */
+    static const s32 cProfileID_0DC;
+    /**
+     * @brief 221
+     * @par Address: 0x100040C8
+     */
+    static const s32 cProfileID_0DD;
+    /**
+     * @brief 222
+     * @par Address: 0x100040CC
+     */
+    static const s32 cProfileID_Maruta;
+    /**
+     * @brief 223
+     * @par Address: 0x100040D0
+     */
+    static const s32 cProfileID_0DF;
+    /**
+     * @brief 224
+     * @par Address: 0x100040D4
+     */
+    static const s32 cProfileID_Burner;
+    /**
+     * @brief 225
+     * @par Address: 0x100040D8
+     */
+    static const s32 cProfileID_0E1;
+    /**
+     * @brief 226
+     * @par Address: 0x100040DC
+     */
+    static const s32 cProfileID_0E2;
+    /**
+     * @brief 227
+     * @par Address: 0x100040E0
+     */
+    static const s32 cProfileID_0E3;
+    /**
+     * @brief 228
+     * @par Address: 0x100040E4
+     */
+    static const s32 cProfileID_0E4;
+    /**
+     * @brief 229
+     * @par Address: 0x100040E8
+     */
+    static const s32 cProfileID_0E5;
+    /**
+     * @brief 230
+     * @par Address: 0x100040EC
+     */
+    static const s32 cProfileID_0E6;
+    /**
+     * @brief 231
+     * @par Address: 0x100040F0
+     */
+    static const s32 cProfileID_0E7;
+    /**
+     * @brief 232
+     * @par Address: 0x100040F4
+     */
+    static const s32 cProfileID_0E8;
+    /**
+     * @brief 233
+     * @par Address: 0x100040F8
+     */
+    static const s32 cProfileID_0E9;
+    /**
+     * @brief 234
+     * @par Address: 0x100040FC
+     */
+    static const s32 cProfileID_0EA;
+    /**
+     * @brief 235
+     * @par Address: 0x10004100
+     */
+    static const s32 cProfileID_0EB;
+    /**
+     * @brief 236
+     * @par Address: 0x10004104
+     */
+    static const s32 cProfileID_0EC;
+    /**
+     * @brief 237
+     * @par Address: 0x10004108
+     */
+    static const s32 cProfileID_PlayerIce;
+    /**
+     * @brief 238
+     * @par Address: 0x1000410C
+     */
+    static const s32 cProfileID_TarzanIvy;
+    /**
+     * @brief 239
+     * @par Address: 0x10004110
+     */
+    static const s32 cProfileID_0EF;
+    /**
+     * @brief 240
+     * @par Address: 0x10004114
+     */
+    static const s32 cProfileID_0F0;
+    /**
+     * @brief 241
+     * @par Address: 0x10004118
+     */
+    static const s32 cProfileID_0F1;
+    /**
+     * @brief 242
+     * @par Address: 0x1000411C
+     */
+    static const s32 cProfileID_0F2;
+    /**
+     * @brief 243
+     * @par Address: 0x10004120
+     */
+    static const s32 cProfileID_0F3;
+    /**
+     * @brief 244
+     * @par Address: 0x10004124
+     */
+    static const s32 cProfileID_0F4;
+    /**
+     * @brief 245
+     * @par Address: 0x10004128
+     */
+    static const s32 cProfileID_0F5;
+    /**
+     * @brief 246
+     * @par Address: 0x1000412C
+     */
+    static const s32 cProfileID_0F6;
+    /**
+     * @brief 247
+     * @par Address: 0x10004130
+     */
+    static const s32 cProfileID_0F7;
+    /**
+     * @brief 248
+     * @par Address: 0x10004134
+     */
+    static const s32 cProfileID_0F8;
+    /**
+     * @brief 249
+     * @par Address: 0x10004138
+     */
+    static const s32 cProfileID_0F9;
+    /**
+     * @brief 250
+     * @par Address: 0x1000413C
+     */
+    static const s32 cProfileID_0FA;
+    /**
+     * @brief 251
+     * @par Address: 0x10004140
+     */
+    static const s32 cProfileID_0FB;
+    /**
+     * @brief 252
+     * @par Address: 0x10004144
+     */
+    static const s32 cProfileID_0FC;
+    /**
+     * @brief 253
+     * @par Address: 0x10004148
+     */
+    static const s32 cProfileID_0FD;
+    /**
+     * @brief 254
+     * @par Address: 0x1000414C
+     */
+    static const s32 cProfileID_0FE;
+    /**
+     * @brief 255
+     * @par Address: 0x10004150
+     */
+    static const s32 cProfileID_0FF;
+    /**
+     * @brief 256
+     * @par Address: 0x10004154
+     */
+    static const s32 cProfileID_100;
+    /**
+     * @brief 257
+     * @par Address: 0x10004158
+     */
+    static const s32 cProfileID_101;
+    /**
+     * @brief 258
+     * @par Address: 0x1000415C
+     */
+    static const s32 cProfileID_102;
+    /**
+     * @brief 259
+     * @par Address: 0x10004160
+     */
+    static const s32 cProfileID_103;
+    /**
+     * @brief 260
+     * @par Address: 0x10004164
+     */
+    static const s32 cProfileID_104;
+    /**
+     * @brief 261
+     * @par Address: 0x10004168
+     */
+    static const s32 cProfileID_ShuffleBlock;
+    /**
+     * @brief 262
+     * @par Address: 0x1000416C
+     */
+    static const s32 cProfileID_KokoopaShipWarpCannon;
+    /**
+     * @brief 263
+     * @par Address: 0x10004170
+     */
+    static const s32 cProfileID_107;
+    /**
+     * @brief 264
+     * @par Address: 0x10004174
+     */
+    static const s32 cProfileID_108;
+    /**
+     * @brief 265
+     * @par Address: 0x10004178
+     */
+    static const s32 cProfileID_KoopaShutter;
+    /**
+     * @brief 266
+     * @par Address: 0x1000417C
+     */
+    static const s32 cProfileID_10A;
+    /**
+     * @brief 267
+     * @par Address: 0x10004180
+     */
+    static const s32 cProfileID_10B;
+    /**
+     * @brief 268
+     * @par Address: 0x10004184
+     */
+    static const s32 cProfileID_10C;
+    /**
+     * @brief 269
+     * @par Address: 0x10004188
+     */
+    static const s32 cProfileID_PeachFinalCastleKoopaJrLift;
+    /**
+     * @brief 270
+     * @par Address: 0x1000418C
+     */
+    static const s32 cProfileID_PeachFinalCastleKoopaJrLiftHmove;
+    /**
+     * @brief 271
+     * @par Address: 0x10004190
+     */
+    static const s32 cProfileID_PeachFinalCastleKoopaJrLiftPairObj;
+    /**
+     * @brief 272
+     * @par Address: 0x10004194
+     */
+    static const s32 cProfileID_RoyLiftWakiStep;
+    /**
+     * @brief 273
+     * @par Address: 0x10004198
+     */
+    static const s32 cProfileID_WendyFloor;
+    /**
+     * @brief 274
+     * @par Address: 0x1000419C
+     */
+    static const s32 cProfileID_IggyRoom;
+    /**
+     * @brief 275
+     * @par Address: 0x100041A0
+     */
+    static const s32 cProfileID_113;
+    /**
+     * @brief 276
+     * @par Address: 0x100041A4
+     */
+    static const s32 cProfileID_114;
+    /**
+     * @brief 277
+     * @par Address: 0x100041A8
+     */
+    static const s32 cProfileID_115;
+    /**
+     * @brief 278
+     * @par Address: 0x100041AC
+     */
+    static const s32 cProfileID_116;
+    /**
+     * @brief 279
+     * @par Address: 0x100041B0
+     */
+    static const s32 cProfileID_117;
+    /**
+     * @brief 280
+     * @par Address: 0x100041B4
+     */
+    static const s32 cProfileID_118;
+    /**
+     * @brief 281
+     * @par Address: 0x100041B8
+     */
+    static const s32 cProfileID_119;
+    /**
+     * @brief 282
+     * @par Address: 0x100041BC
+     */
+    static const s32 cProfileID_11A;
+    /**
+     * @brief 283
+     * @par Address: 0x100041C0
+     */
+    static const s32 cProfileID_Freezer;
+    /**
+     * @brief 284
+     * @par Address: 0x100041C4
+     */
+    static const s32 cProfileID_11C;
+    /**
+     * @brief 285
+     * @par Address: 0x100041C8
+     */
+    static const s32 cProfileID_11D;
+    /**
+     * @brief 286
+     * @par Address: 0x100041CC
+     */
+    static const s32 cProfileID_11E;
+    /**
+     * @brief 287
+     * @par Address: 0x100041D0
+     */
+    static const s32 cProfileID_Block;
+    /**
+     * @brief 288
+     * @par Address: 0x100041D4
+     */
+    static const s32 cProfileID_120;
+    /**
+     * @brief 289
+     * @par Address: 0x100041D8
+     */
+    static const s32 cProfileID_121;
+    /**
+     * @brief 290
+     * @par Address: 0x100041DC
+     */
+    static const s32 cProfileID_122;
+    /**
+     * @brief 291
+     * @par Address: 0x100041E0
+     */
+    static const s32 cProfileID_ActorBlockRenga;
+    /**
+     * @brief 292
+     * @par Address: 0x100041E4
+     */
+    static const s32 cProfileID_124;
+    /**
+     * @brief 293
+     * @par Address: 0x100041E8
+     */
+    static const s32 cProfileID_125;
+    /**
+     * @brief 294
+     * @par Address: 0x100041EC
+     */
+    static const s32 cProfileID_126;
+    /**
+     * @brief 295
+     * @par Address: 0x100041F0
+     */
+    static const s32 cProfileID_127;
+    /**
+     * @brief 296
+     * @par Address: 0x100041F4
+     */
+    static const s32 cProfileID_128;
+    /**
+     * @brief 297
+     * @par Address: 0x100041F8
+     */
+    static const s32 cProfileID_129;
+    /**
+     * @brief 298
+     * @par Address: 0x100041FC
+     */
+    static const s32 cProfileID_12A;
+    /**
+     * @brief 299
+     * @par Address: 0x10004200
+     */
+    static const s32 cProfileID_12B;
+    /**
+     * @brief 300
+     * @par Address: 0x10004204
+     */
+    static const s32 cProfileID_12C;
+    /**
+     * @brief 301
+     * @par Address: 0x10004208
+     */
+    static const s32 cProfileID_12D;
+    /**
+     * @brief 302
+     * @par Address: 0x1000420C
+     */
+    static const s32 cProfileID_12E;
+    /**
+     * @brief 303
+     * @par Address: 0x10004210
+     */
+    static const s32 cProfileID_12F;
+    /**
+     * @brief 304
+     * @par Address: 0x10004214
+     */
+    static const s32 cProfileID_130;
+    /**
+     * @brief 305
+     * @par Address: 0x10004218
+     */
+    static const s32 cProfileID_131;
+    /**
+     * @brief 306
+     * @par Address: 0x1000421C
+     */
+    static const s32 cProfileID_132;
+    /**
+     * @brief 307
+     * @par Address: 0x10004220
+     */
+    static const s32 cProfileID_133;
+    /**
+     * @brief 308
+     * @par Address: 0x10004224
+     */
+    static const s32 cProfileID_134;
+    /**
+     * @brief 309
+     * @par Address: 0x10004228
+     */
+    static const s32 cProfileID_ActorBlockMakeDRC;
+    /**
+     * @brief 310
+     * @par Address: 0x1000422C
+     */
+    static const s32 cProfileID_136;
+    /**
+     * @brief 311
+     * @par Address: 0x10004230
+     */
+    static const s32 cProfileID_137;
+    /**
+     * @brief 312
+     * @par Address: 0x10004234
+     */
+    static const s32 cProfileID_138;
+    /**
+     * @brief 313
+     * @par Address: 0x10004238
+     */
+    static const s32 cProfileID_139;
+    /**
+     * @brief 314
+     * @par Address: 0x1000423C
+     */
+    static const s32 cProfileID_13A;
+    /**
+     * @brief 315
+     * @par Address: 0x10004240
+     */
+    static const s32 cProfileID_13B;
+    /**
+     * @brief 316
+     * @par Address: 0x10004244
+     */
+    static const s32 cProfileID_13C;
+    /**
+     * @brief 317
+     * @par Address: 0x10004248
+     */
+    static const s32 cProfileID_13D;
+    /**
+     * @brief 318
+     * @par Address: 0x1000424C
+     */
+    static const s32 cProfileID_13E;
+    /**
+     * @brief 319
+     * @par Address: 0x10004250
+     */
+    static const s32 cProfileID_13F;
+    /**
+     * @brief 320
+     * @par Address: 0x10004254
+     */
+    static const s32 cProfileID_140;
+    /**
+     * @brief 321
+     * @par Address: 0x10004258
+     */
+    static const s32 cProfileID_141;
+    /**
+     * @brief 322
+     * @par Address: 0x1000425C
+     */
+    static const s32 cProfileID_142;
+    /**
+     * @brief 323
+     * @par Address: 0x10004260
+     */
+    static const s32 cProfileID_143;
+    /**
+     * @brief 324
+     * @par Address: 0x10004264
+     */
+    static const s32 cProfileID_144;
+    /**
+     * @brief 325
+     * @par Address: 0x10004268
+     */
+    static const s32 cProfileID_145;
+    /**
+     * @brief 326
+     * @par Address: 0x1000426C
+     */
+    static const s32 cProfileID_146;
+    /**
+     * @brief 327
+     * @par Address: 0x10004270
+     */
+    static const s32 cProfileID_147;
+    /**
+     * @brief 328
+     * @par Address: 0x10004274
+     */
+    static const s32 cProfileID_148;
+    /**
+     * @brief 329
+     * @par Address: 0x10004278
+     */
+    static const s32 cProfileID_149;
+    /**
+     * @brief 330
+     * @par Address: 0x1000427C
+     */
+    static const s32 cProfileID_14A;
+    /**
+     * @brief 331
+     * @par Address: 0x10004280
+     */
+    static const s32 cProfileID_14B;
+    /**
+     * @brief 332
+     * @par Address: 0x10004284
+     */
+    static const s32 cProfileID_14C;
+    /**
+     * @brief 333
+     * @par Address: 0x10004288
+     */
+    static const s32 cProfileID_14D;
+    /**
+     * @brief 334
+     * @par Address: 0x1000428C
+     */
+    static const s32 cProfileID_14E;
+    /**
+     * @brief 335
+     * @par Address: 0x10004290
+     */
+    static const s32 cProfileID_14F;
+    /**
+     * @brief 336
+     * @par Address: 0x10004294
+     */
+    static const s32 cProfileID_ObjPipeDown;
+    /**
+     * @brief 337
+     * @par Address: 0x10004298
+     */
+    static const s32 cProfileID_151;
+    /**
+     * @brief 338
+     * @par Address: 0x1000429C
+     */
+    static const s32 cProfileID_152;
+    /**
+     * @brief 339
+     * @par Address: 0x100042A0
+     */
+    static const s32 cProfileID_153;
+    /**
+     * @brief 340
+     * @par Address: 0x100042A4
+     */
+    static const s32 cProfileID_ObjPipeDownGroup;
+    /**
+     * @brief 341
+     * @par Address: 0x100042A8
+     */
+    static const s32 cProfileID_155;
+    /**
+     * @brief 342
+     * @par Address: 0x100042AC
+     */
+    static const s32 cProfileID_156;
+    /**
+     * @brief 343
+     * @par Address: 0x100042B0
+     */
+    static const s32 cProfileID_157;
+    /**
+     * @brief 344
+     * @par Address: 0x100042B4
+     */
+    static const s32 cProfileID_SwitchHatenaButton;
+    /**
+     * @brief 345
+     * @par Address: 0x100042B8
+     */
+    static const s32 cProfileID_SwitchPbutton;
+    /**
+     * @brief 346
+     * @par Address: 0x100042BC
+     */
+    static const s32 cProfileID_SwitchPbuttonRDash;
+    /**
+     * @brief 347
+     * @par Address: 0x100042C0
+     */
+    static const s32 cProfileID_SwitchPbuttonNoWallKick;
+    /**
+     * @brief 348
+     * @par Address: 0x100042C4
+     */
+    static const s32 cProfileID_15C;
+    /**
+     * @brief 349
+     * @par Address: 0x100042C8
+     */
+    static const s32 cProfileID_15D;
+    /**
+     * @brief 350
+     * @par Address: 0x100042CC
+     */
+    static const s32 cProfileID_IcicleBig;
+    /**
+     * @brief 351
+     * @par Address: 0x100042D0
+     */
+    static const s32 cProfileID_LemmyBall;
+    /**
+     * @brief 352
+     * @par Address: 0x100042D4
+     */
+    static const s32 cProfileID_LemmyBomb;
+    /**
+     * @brief 353
+     * @par Address: 0x100042D8
+     */
+    static const s32 cProfileID_161;
+    /**
+     * @brief 354
+     * @par Address: 0x100042DC
+     */
+    static const s32 cProfileID_162;
+    /**
+     * @brief 355
+     * @par Address: 0x100042E0
+     */
+    static const s32 cProfileID_163;
+    /**
+     * @brief 356
+     * @par Address: 0x100042E4
+     */
+    static const s32 cProfileID_164;
+    /**
+     * @brief 357
+     * @par Address: 0x100042E8
+     */
+    static const s32 cProfileID_165;
+    /**
+     * @brief 358
+     * @par Address: 0x100042EC
+     */
+    static const s32 cProfileID_166;
+    /**
+     * @brief 359
+     * @par Address: 0x100042F0
+     */
+    static const s32 cProfileID_167;
+    /**
+     * @brief 360
+     * @par Address: 0x100042F4
+     */
+    static const s32 cProfileID_168;
+    /**
+     * @brief 361
+     * @par Address: 0x100042F8
+     */
+    static const s32 cProfileID_169;
+    /**
+     * @brief 362
+     * @par Address: 0x100042FC
+     */
+    static const s32 cProfileID_PentaroIce;
+    /**
+     * @brief 363
+     * @par Address: 0x10004300
+     */
+    static const s32 cProfileID_16B;
+    /**
+     * @brief 364
+     * @par Address: 0x10004304
+     */
+    static const s32 cProfileID_16C;
+    /**
+     * @brief 365
+     * @par Address: 0x10004308
+     */
+    static const s32 cProfileID_16D;
+    /**
+     * @brief 366
+     * @par Address: 0x1000430C
+     */
+    static const s32 cProfileID_16E;
+    /**
+     * @brief 367
+     * @par Address: 0x10004310
+     */
+    static const s32 cProfileID_16F;
+    /**
+     * @brief 368
+     * @par Address: 0x10004314
+     */
+    static const s32 cProfileID_KameckIce;
+    /**
+     * @brief 369
+     * @par Address: 0x10004318
+     */
+    static const s32 cProfileID_WendyIcicle;
+    /**
+     * @brief 370
+     * @par Address: 0x1000431C
+     */
+    static const s32 cProfileID_PeachFinalCastleKoopaJrClown;
+    /**
+     * @brief 371
+     * @par Address: 0x10004320
+     */
+    static const s32 cProfileID_BoxingKoopaJrClown;
+    /**
+     * @brief 372
+     * @par Address: 0x10004324
+     */
+    static const s32 cProfileID_174;
+    /**
+     * @brief 373
+     * @par Address: 0x10004328
+     */
+    static const s32 cProfileID_FinalKoopaJrClown;
+    /**
+     * @brief 374
+     * @par Address: 0x1000432C
+     */
+    static const s32 cProfileID_FinalKoopa;
+    /**
+     * @brief 375
+     * @par Address: 0x10004330
+     */
+    static const s32 cProfileID_FireBar;
+    /**
+     * @brief 376
+     * @par Address: 0x10004334
+     */
+    static const s32 cProfileID_FireBarSync;
+    /**
+     * @brief 377
+     * @par Address: 0x10004338
+     */
+    static const s32 cProfileID_179;
+    /**
+     * @brief 378
+     * @par Address: 0x1000433C
+     */
+    static const s32 cProfileID_17A;
+    /**
+     * @brief 379
+     * @par Address: 0x10004340
+     */
+    static const s32 cProfileID_17B;
+    /**
+     * @brief 380
+     * @par Address: 0x10004344
+     */
+    static const s32 cProfileID_17C;
+    /**
+     * @brief 381
+     * @par Address: 0x10004348
+     */
+    static const s32 cProfileID_17D;
+    /**
+     * @brief 382
+     * @par Address: 0x1000434C
+     */
+    static const s32 cProfileID_17E;
+    /**
+     * @brief 383
+     * @par Address: 0x10004350
+     */
+    static const s32 cProfileID_17F;
+    /**
+     * @brief 384
+     * @par Address: 0x10004354
+     */
+    static const s32 cProfileID_180;
+    /**
+     * @brief 385
+     * @par Address: 0x10004358
+     */
+    static const s32 cProfileID_181;
+    /**
+     * @brief 386
+     * @par Address: 0x1000435C
+     */
+    static const s32 cProfileID_182;
+    /**
+     * @brief 387
+     * @par Address: 0x10004360
+     */
+    static const s32 cProfileID_183;
+    /**
+     * @brief 388
+     * @par Address: 0x10004364
+     */
+    static const s32 cProfileID_184;
+    /**
+     * @brief 389
+     * @par Address: 0x10004368
+     */
+    static const s32 cProfileID_185;
+    /**
+     * @brief 390
+     * @par Address: 0x1000436C
+     */
+    static const s32 cProfileID_186;
+    /**
+     * @brief 391
+     * @par Address: 0x10004370
+     */
+    static const s32 cProfileID_187;
+    /**
+     * @brief 392
+     * @par Address: 0x10004374
+     */
+    static const s32 cProfileID_188;
+    /**
+     * @brief 393
+     * @par Address: 0x10004378
+     */
+    static const s32 cProfileID_189;
+    /**
+     * @brief 394
+     * @par Address: 0x1000437C
+     */
+    static const s32 cProfileID_18A;
+    /**
+     * @brief 395
+     * @par Address: 0x10004380
+     */
+    static const s32 cProfileID_ActorCoin;
+    /**
+     * @brief 396
+     * @par Address: 0x10004384
+     */
+    static const s32 cProfileID_18C;
+    /**
+     * @brief 397
+     * @par Address: 0x10004388
+     */
+    static const s32 cProfileID_18D;
+    /**
+     * @brief 398
+     * @par Address: 0x1000438C
+     */
+    static const s32 cProfileID_18E;
+    /**
+     * @brief 399
+     * @par Address: 0x10004390
+     */
+    static const s32 cProfileID_18F;
+    /**
+     * @brief 400
+     * @par Address: 0x10004394
+     */
+    static const s32 cProfileID_190;
+    /**
+     * @brief 401
+     * @par Address: 0x10004398
+     */
+    static const s32 cProfileID_191;
+    /**
+     * @brief 402
+     * @par Address: 0x1000439C
+     */
+    static const s32 cProfileID_192;
+    /**
+     * @brief 403
+     * @par Address: 0x100043A0
+     */
+    static const s32 cProfileID_193;
+    /**
+     * @brief 404
+     * @par Address: 0x100043A4
+     */
+    static const s32 cProfileID_194;
+    /**
+     * @brief 405
+     * @par Address: 0x100043A8
+     */
+    static const s32 cProfileID_195;
+    /**
+     * @brief 406
+     * @par Address: 0x100043AC
+     */
+    static const s32 cProfileID_196;
+    /**
+     * @brief 407
+     * @par Address: 0x100043B0
+     */
+    static const s32 cProfileID_197;
+    /**
+     * @brief 408
+     * @par Address: 0x100043B4
+     */
+    static const s32 cProfileID_198;
+    /**
+     * @brief 409
+     * @par Address: 0x100043B8
+     */
+    static const s32 cProfileID_199;
+    /**
+     * @brief 410
+     * @par Address: 0x100043BC
+     */
+    static const s32 cProfileID_19A;
+    /**
+     * @brief 411
+     * @par Address: 0x100043C0
+     */
+    static const s32 cProfileID_19B;
+    /**
+     * @brief 412
+     * @par Address: 0x100043C4
+     */
+    static const s32 cProfileID_19C;
+    /**
+     * @brief 413
+     * @par Address: 0x100043C8
+     */
+    static const s32 cProfileID_19D;
+    /**
+     * @brief 414
+     * @par Address: 0x100043CC
+     */
+    static const s32 cProfileID_19E;
+    /**
+     * @brief 415
+     * @par Address: 0x100043D0
+     */
+    static const s32 cProfileID_19F;
+    /**
+     * @brief 416
+     * @par Address: 0x100043D4
+     */
+    static const s32 cProfileID_1A0;
+    /**
+     * @brief 417
+     * @par Address: 0x100043D8
+     */
+    static const s32 cProfileID_1A1;
+    /**
+     * @brief 418
+     * @par Address: 0x100043DC
+     */
+    static const s32 cProfileID_1A2;
+    /**
+     * @brief 419
+     * @par Address: 0x100043E0
+     */
+    static const s32 cProfileID_1A3;
+    /**
+     * @brief 420
+     * @par Address: 0x100043E4
+     */
+    static const s32 cProfileID_1A4;
+    /**
+     * @brief 421
+     * @par Address: 0x100043E8
+     */
+    static const s32 cProfileID_1A5;
+    /**
+     * @brief 422
+     * @par Address: 0x100043EC
+     */
+    static const s32 cProfileID_1A6;
+    /**
+     * @brief 423
+     * @par Address: 0x100043F0
+     */
+    static const s32 cProfileID_1A7;
+    /**
+     * @brief 424
+     * @par Address: 0x100043F4
+     */
+    static const s32 cProfileID_1A8;
+    /**
+     * @brief 425
+     * @par Address: 0x100043F8
+     */
+    static const s32 cProfileID_BlueCoin;
+    /**
+     * @brief 426
+     * @par Address: 0x100043FC
+     */
+    static const s32 cProfileID_1AA;
+    /**
+     * @brief 427
+     * @par Address: 0x10004400
+     */
+    static const s32 cProfileID_1AB;
+    /**
+     * @brief 428
+     * @par Address: 0x10004404
+     */
+    static const s32 cProfileID_1AC;
+    /**
+     * @brief 429
+     * @par Address: 0x10004408
+     */
+    static const s32 cProfileID_1AD;
+    /**
+     * @brief 430
+     * @par Address: 0x1000440C
+     */
+    static const s32 cProfileID_1AE;
+    /**
+     * @brief 431
+     * @par Address: 0x10004410
+     */
+    static const s32 cProfileID_1AF;
+    /**
+     * @brief 432
+     * @par Address: 0x10004414
+     */
+    static const s32 cProfileID_1B0;
+    /**
+     * @brief 433
+     * @par Address: 0x10004418
+     */
+    static const s32 cProfileID_1B1;
+    /**
+     * @brief 434
+     * @par Address: 0x1000441C
+     */
+    static const s32 cProfileID_1B2;
+    /**
+     * @brief 435
+     * @par Address: 0x10004420
+     */
+    static const s32 cProfileID_1B3;
+    /**
+     * @brief 436
+     * @par Address: 0x10004424
+     */
+    static const s32 cProfileID_1B4;
+    /**
+     * @brief 437
+     * @par Address: 0x10004428
+     */
+    static const s32 cProfileID_1B5;
+    /**
+     * @brief 438
+     * @par Address: 0x1000442C
+     */
+    static const s32 cProfileID_CoinmakiCoin;
+    /**
+     * @brief 439
+     * @par Address: 0x10004430
+     */
+    static const s32 cProfileID_1B7;
+    /**
+     * @brief 440
+     * @par Address: 0x10004434
+     */
+    static const s32 cProfileID_1B8;
+    /**
+     * @brief 441
+     * @par Address: 0x10004438
+     */
+    static const s32 cProfileID_1B9;
+    /**
+     * @brief 442
+     * @par Address: 0x1000443C
+     */
+    static const s32 cProfileID_Yoshi;
+    /**
+     * @brief 443
+     * @par Address: 0x10004440
+     */
+    static const s32 cProfileID_TottenPlayer;
+    /**
+     * @brief 444
+     * @par Address: 0x10004444
+     */
+    static const s32 cProfileID_PlayerObject;
+    /**
+     * @brief 445
+     * @par Address: 0x10004448
+     */
+    static const s32 cProfileID_1BD;
+    /**
+     * @brief 446
+     * @par Address: 0x1000444C
+     */
+    static const s32 cProfileID_1BE;
+    /**
+     * @brief 447
+     * @par Address: 0x10004450
+     */
+    static const s32 cProfileID_1BF;
+    /**
+     * @brief 448
+     * @par Address: 0x10004454
+     */
+    static const s32 cProfileID_1C0;
+    /**
+     * @brief 449
+     * @par Address: 0x10004458
+     */
+    static const s32 cProfileID_1C1;
+    /**
+     * @brief 450
+     * @par Address: 0x1000445C
+     */
+    static const s32 cProfileID_1C2;
+    /**
+     * @brief 451
+     * @par Address: 0x10004460
+     */
+    static const s32 cProfileID_1C3;
+    /**
+     * @brief 452
+     * @par Address: 0x10004464
+     */
+    static const s32 cProfileID_1C4;
+    /**
+     * @brief 453
+     * @par Address: 0x10004468
+     */
+    static const s32 cProfileID_SlotChibiYoshi;
+    /**
+     * @brief 454
+     * @par Address: 0x1000446C
+     */
+    static const s32 cProfileID_1C6;
+    /**
+     * @brief 455
+     * @par Address: 0x10004470
+     */
+    static const s32 cProfileID_1C7;
+    /**
+     * @brief 456
+     * @par Address: 0x10004474
+     */
+    static const s32 cProfileID_1C8;
+    /**
+     * @brief 457
+     * @par Address: 0x10004478
+     */
+    static const s32 cProfileID_1C9;
+    /**
+     * @brief 458
+     * @par Address: 0x1000447C
+     */
+    static const s32 cProfileID_1CA;
+    /**
+     * @brief 459
+     * @par Address: 0x10004480
+     */
+    static const s32 cProfileID_1CB;
+    /**
+     * @brief 460
+     * @par Address: 0x10004484
+     */
+    static const s32 cProfileID_1CC;
+    /**
+     * @brief 461
+     * @par Address: 0x10004488
+     */
+    static const s32 cProfileID_1CD;
+    /**
+     * @brief 462
+     * @par Address: 0x1000448C
+     */
+    static const s32 cProfileID_1CE;
+    /**
+     * @brief 463
+     * @par Address: 0x10004490
+     */
+    static const s32 cProfileID_QuestPrizeItem;
+    /**
+     * @brief 464
+     * @par Address: 0x10004494
+     */
+    static const s32 cProfileID_1D0;
+    /**
+     * @brief 465
+     * @par Address: 0x10004498
+     */
+    static const s32 cProfileID_1D1;
+    /**
+     * @brief 466
+     * @par Address: 0x1000449C
+     */
+    static const s32 cProfileID_1D2;
+    /**
+     * @brief 467
+     * @par Address: 0x100044A0
+     */
+    static const s32 cProfileID_Kuribo;
+    /**
+     * @brief 468
+     * @par Address: 0x100044A4
+     */
+    static const s32 cProfileID_Kakibo;
+    /**
+     * @brief 469
+     * @par Address: 0x100044A8
+     */
+    static const s32 cProfileID_PataKuribo;
+    /**
+     * @brief 470
+     * @par Address: 0x100044AC
+     */
+    static const s32 cProfileID_1D6;
+    /**
+     * @brief 471
+     * @par Address: 0x100044B0
+     */
+    static const s32 cProfileID_1D7;
+    /**
+     * @brief 472
+     * @par Address: 0x100044B4
+     */
+    static const s32 cProfileID_1D8;
+    /**
+     * @brief 473
+     * @par Address: 0x100044B8
+     */
+    static const s32 cProfileID_1D9;
+    /**
+     * @brief 474
+     * @par Address: 0x100044BC
+     */
+    static const s32 cProfileID_IceBall;
+    /**
+     * @brief 475
+     * @par Address: 0x100044C0
+     */
+    static const s32 cProfileID_IceBallPakkun;
+    /**
+     * @brief 476
+     * @par Address: 0x100044C4
+     */
+    static const s32 cProfileID_FireBallPlayer;
+    /**
+     * @brief 477
+     * @par Address: 0x100044C8
+     */
+    static const s32 cProfileID_FireBallPakkun;
+    /**
+     * @brief 478
+     * @par Address: 0x100044CC
+     */
+    static const s32 cProfileID_YoshiFire;
+    /**
+     * @brief 479
+     * @par Address: 0x100044D0
+     */
+    static const s32 cProfileID_1DF;
+    /**
+     * @brief 480
+     * @par Address: 0x100044D4
+     */
+    static const s32 cProfileID_1E0;
+    /**
+     * @brief 481
+     * @par Address: 0x100044D8
+     */
+    static const s32 cProfileID_1E1;
+    /**
+     * @brief 482
+     * @par Address: 0x100044DC
+     */
+    static const s32 cProfileID_1E2;
+    /**
+     * @brief 483
+     * @par Address: 0x100044E0
+     */
+    static const s32 cProfileID_1E3;
+    /**
+     * @brief 484
+     * @par Address: 0x100044E4
+     */
+    static const s32 cProfileID_1E4;
+    /**
+     * @brief 485
+     * @par Address: 0x100044E8
+     */
+    static const s32 cProfileID_1E5;
+    /**
+     * @brief 486
+     * @par Address: 0x100044EC
+     */
+    static const s32 cProfileID_1E6;
+    /**
+     * @brief 487
+     * @par Address: 0x100044F0
+     */
+    static const s32 cProfileID_1E7;
+    /**
+     * @brief 488
+     * @par Address: 0x100044F4
+     */
+    static const s32 cProfileID_1E8;
+    /**
+     * @brief 489
+     * @par Address: 0x100044F8
+     */
+    static const s32 cProfileID_1E9;
+    /**
+     * @brief 490
+     * @par Address: 0x100044FC
+     */
+    static const s32 cProfileID_1EA;
+    /**
+     * @brief 491
+     * @par Address: 0x10004500
+     */
+    static const s32 cProfileID_1EB;
+    /**
+     * @brief 492
+     * @par Address: 0x10004504
+     */
+    static const s32 cProfileID_1EC;
+    /**
+     * @brief 493
+     * @par Address: 0x10004508
+     */
+    static const s32 cProfileID_1ED;
+    /**
+     * @brief 494
+     * @par Address: 0x1000450C
+     */
+    static const s32 cProfileID_1EE;
+    /**
+     * @brief 495
+     * @par Address: 0x10004510
+     */
+    static const s32 cProfileID_1EF;
+    /**
+     * @brief 496
+     * @par Address: 0x10004514
+     */
+    static const s32 cProfileID_1F0;
+    /**
+     * @brief 497
+     * @par Address: 0x10004518
+     */
+    static const s32 cProfileID_1F1;
+    /**
+     * @brief 498
+     * @par Address: 0x1000451C
+     */
+    static const s32 cProfileID_1F2;
+    /**
+     * @brief 499
+     * @par Address: 0x10004520
+     */
+    static const s32 cProfileID_1F3;
+    /**
+     * @brief 500
+     * @par Address: 0x10004524
+     */
+    static const s32 cProfileID_1F4;
+    /**
+     * @brief 501
+     * @par Address: 0x10004528
+     */
+    static const s32 cProfileID_1F5;
+    /**
+     * @brief 502
+     * @par Address: 0x1000452C
+     */
+    static const s32 cProfileID_1F6;
+    /**
+     * @brief 503
+     * @par Address: 0x10004530
+     */
+    static const s32 cProfileID_1F7;
+    /**
+     * @brief 504
+     * @par Address: 0x10004534
+     */
+    static const s32 cProfileID_1F8;
+    /**
+     * @brief 505
+     * @par Address: 0x10004538
+     */
+    static const s32 cProfileID_1F9;
+    /**
+     * @brief 506
+     * @par Address: 0x1000453C
+     */
+    static const s32 cProfileID_1FA;
+    /**
+     * @brief 507
+     * @par Address: 0x10004540
+     */
+    static const s32 cProfileID_1FB;
+    /**
+     * @brief 508
+     * @par Address: 0x10004544
+     */
+    static const s32 cProfileID_1FC;
+    /**
+     * @brief 509
+     * @par Address: 0x10004548
+     */
+    static const s32 cProfileID_1FD;
+    /**
+     * @brief 510
+     * @par Address: 0x1000454C
+     */
+    static const s32 cProfileID_1FE;
+    /**
+     * @brief 511
+     * @par Address: 0x10004550
+     */
+    static const s32 cProfileID_1FF;
+    /**
+     * @brief 512
+     * @par Address: 0x10004554
+     */
+    static const s32 cProfileID_Nokonoko;
+    /**
+     * @brief 513
+     * @par Address: 0x10004558
+     */
+    static const s32 cProfileID_201;
+    /**
+     * @brief 514
+     * @par Address: 0x1000455C
+     */
+    static const s32 cProfileID_202;
+    /**
+     * @brief 515
+     * @par Address: 0x10004560
+     */
+    static const s32 cProfileID_203;
+    /**
+     * @brief 516
+     * @par Address: 0x10004564
+     */
+    static const s32 cProfileID_204;
+    /**
+     * @brief 517
+     * @par Address: 0x10004568
+     */
+    static const s32 cProfileID_205;
+    /**
+     * @brief 518
+     * @par Address: 0x1000456C
+     */
+    static const s32 cProfileID_206;
+    /**
+     * @brief 519
+     * @par Address: 0x10004570
+     */
+    static const s32 cProfileID_207;
+    /**
+     * @brief 520
+     * @par Address: 0x10004574
+     */
+    static const s32 cProfileID_208;
+    /**
+     * @brief 521
+     * @par Address: 0x10004578
+     */
+    static const s32 cProfileID_209;
+    /**
+     * @brief 522
+     * @par Address: 0x1000457C
+     */
+    static const s32 cProfileID_20A;
+    /**
+     * @brief 523
+     * @par Address: 0x10004580
+     */
+    static const s32 cProfileID_20B;
+    /**
+     * @brief 524
+     * @par Address: 0x10004584
+     */
+    static const s32 cProfileID_MechaKoopa;
+    /**
+     * @brief 525
+     * @par Address: 0x10004588
+     */
+    static const s32 cProfileID_20D;
+    /**
+     * @brief 526
+     * @par Address: 0x1000458C
+     */
+    static const s32 cProfileID_20E;
+    /**
+     * @brief 527
+     * @par Address: 0x10004590
+     */
+    static const s32 cProfileID_20F;
+    /**
+     * @brief 528
+     * @par Address: 0x10004594
+     */
+    static const s32 cProfileID_210;
+    /**
+     * @brief 529
+     * @par Address: 0x10004598
+     */
+    static const s32 cProfileID_211;
+    /**
+     * @brief 530
+     * @par Address: 0x1000459C
+     */
+    static const s32 cProfileID_212;
+    /**
+     * @brief 531
+     * @par Address: 0x100045A0
+     */
+    static const s32 cProfileID_213;
+    /**
+     * @brief 532
+     * @par Address: 0x100045A4
+     */
+    static const s32 cProfileID_214;
+    /**
+     * @brief 533
+     * @par Address: 0x100045A8
+     */
+    static const s32 cProfileID_215;
+    /**
+     * @brief 534
+     * @par Address: 0x100045AC
+     */
+    static const s32 cProfileID_216;
+    /**
+     * @brief 535
+     * @par Address: 0x100045B0
+     */
+    static const s32 cProfileID_217;
+    /**
+     * @brief 536
+     * @par Address: 0x100045B4
+     */
+    static const s32 cProfileID_218;
+    /**
+     * @brief 537
+     * @par Address: 0x100045B8
+     */
+    static const s32 cProfileID_219;
+    /**
+     * @brief 538
+     * @par Address: 0x100045BC
+     */
+    static const s32 cProfileID_21A;
+    /**
+     * @brief 539
+     * @par Address: 0x100045C0
+     */
+    static const s32 cProfileID_21B;
+    /**
+     * @brief 540
+     * @par Address: 0x100045C4
+     */
+    static const s32 cProfileID_21C;
+    /**
+     * @brief 541
+     * @par Address: 0x100045C8
+     */
+    static const s32 cProfileID_21D;
+    /**
+     * @brief 542
+     * @par Address: 0x100045CC
+     */
+    static const s32 cProfileID_21E;
+    /**
+     * @brief 543
+     * @par Address: 0x100045D0
+     */
+    static const s32 cProfileID_21F;
+    /**
+     * @brief 544
+     * @par Address: 0x100045D4
+     */
+    static const s32 cProfileID_220;
+    /**
+     * @brief 545
+     * @par Address: 0x100045D8
+     */
+    static const s32 cProfileID_221;
+    /**
+     * @brief 546
+     * @par Address: 0x100045DC
+     */
+    static const s32 cProfileID_222;
+    /**
+     * @brief 547
+     * @par Address: 0x100045E0
+     */
+    static const s32 cProfileID_223;
+    /**
+     * @brief 548
+     * @par Address: 0x100045E4
+     */
+    static const s32 cProfileID_224;
+    /**
+     * @brief 549
+     * @par Address: 0x100045E8
+     */
+    static const s32 cProfileID_225;
+    /**
+     * @brief 550
+     * @par Address: 0x100045EC
+     */
+    static const s32 cProfileID_226;
+    /**
+     * @brief 551
+     * @par Address: 0x100045F0
+     */
+    static const s32 cProfileID_227;
+    /**
+     * @brief 552
+     * @par Address: 0x100045F4
+     */
+    static const s32 cProfileID_228;
+    /**
+     * @brief 553
+     * @par Address: 0x100045F8
+     */
+    static const s32 cProfileID_229;
+    /**
+     * @brief 554
+     * @par Address: 0x100045FC
+     */
+    static const s32 cProfileID_22A;
+    /**
+     * @brief 555
+     * @par Address: 0x10004600
+     */
+    static const s32 cProfileID_22B;
+    /**
+     * @brief 556
+     * @par Address: 0x10004604
+     */
+    static const s32 cProfileID_22C;
+    /**
+     * @brief 557
+     * @par Address: 0x10004608
+     */
+    static const s32 cProfileID_22D;
+    /**
+     * @brief 558
+     * @par Address: 0x1000460C
+     */
+    static const s32 cProfileID_FireBallKeronpa;
+    /**
+     * @brief 559
+     * @par Address: 0x10004610
+     */
+    static const s32 cProfileID_FireBallKeronpaRDash;
+    /**
+     * @brief 560
+     * @par Address: 0x10004614
+     */
+    static const s32 cProfileID_230;
+    /**
+     * @brief 561
+     * @par Address: 0x10004618
+     */
+    static const s32 cProfileID_FireSnake;
+    /**
+     * @brief 562
+     * @par Address: 0x1000461C
+     */
+    static const s32 cProfileID_Grrrol;
+    /**
+     * @brief 563
+     * @par Address: 0x10004620
+     */
+    static const s32 cProfileID_BigGrrrol;
+    /**
+     * @brief 564
+     * @par Address: 0x10004624
+     */
+    static const s32 cProfileID_BigGrrrolRDash;
+    /**
+     * @brief 565
+     * @par Address: 0x10004628
+     */
+    static const s32 cProfileID_235;
+    /**
+     * @brief 566
+     * @par Address: 0x1000462C
+     */
+    static const s32 cProfileID_236;
+    /**
+     * @brief 567
+     * @par Address: 0x10004630
+     */
+    static const s32 cProfileID_237;
+    /**
+     * @brief 568
+     * @par Address: 0x10004634
+     */
+    static const s32 cProfileID_238;
+    /**
+     * @brief 569
+     * @par Address: 0x10004638
+     */
+    static const s32 cProfileID_239;
+    /**
+     * @brief 570
+     * @par Address: 0x1000463C
+     */
+    static const s32 cProfileID_23A;
+    /**
+     * @brief 571
+     * @par Address: 0x10004640
+     */
+    static const s32 cProfileID_23B;
+    /**
+     * @brief 572
+     * @par Address: 0x10004644
+     */
+    static const s32 cProfileID_23C;
+    /**
+     * @brief 573
+     * @par Address: 0x10004648
+     */
+    static const s32 cProfileID_23D;
+    /**
+     * @brief 574
+     * @par Address: 0x1000464C
+     */
+    static const s32 cProfileID_Kazandan;
+    /**
+     * @brief 575
+     * @par Address: 0x10004650
+     */
+    static const s32 cProfileID_23F;
+    /**
+     * @brief 576
+     * @par Address: 0x10004654
+     */
+    static const s32 cProfileID_240;
+    /**
+     * @brief 577
+     * @par Address: 0x10004658
+     */
+    static const s32 cProfileID_241;
+    /**
+     * @brief 578
+     * @par Address: 0x1000465C
+     */
+    static const s32 cProfileID_242;
+    /**
+     * @brief 579
+     * @par Address: 0x10004660
+     */
+    static const s32 cProfileID_243;
+    /**
+     * @brief 580
+     * @par Address: 0x10004664
+     */
+    static const s32 cProfileID_244;
+    /**
+     * @brief 581
+     * @par Address: 0x10004668
+     */
+    static const s32 cProfileID_245;
+    /**
+     * @brief 582
+     * @par Address: 0x1000466C
+     */
+    static const s32 cProfileID_246;
+    /**
+     * @brief 583
+     * @par Address: 0x10004670
+     */
+    static const s32 cProfileID_247;
+    /**
+     * @brief 584
+     * @par Address: 0x10004674
+     */
+    static const s32 cProfileID_248;
+    /**
+     * @brief 585
+     * @par Address: 0x10004678
+     */
+    static const s32 cProfileID_249;
+    /**
+     * @brief 586
+     * @par Address: 0x1000467C
+     */
+    static const s32 cProfileID_24A;
+    /**
+     * @brief 587
+     * @par Address: 0x10004680
+     */
+    static const s32 cProfileID_BgCenter;
+    /**
+     * @brief 588
+     * @par Address: 0x10004684
+     */
+    static const s32 cProfileID_24C;
+    /**
+     * @brief 589
+     * @par Address: 0x10004688
+     */
+    static const s32 cProfileID_24D;
+    /**
+     * @brief 590
+     * @par Address: 0x1000468C
+     */
+    static const s32 cProfileID_24E;
+    /**
+     * @brief 591
+     * @par Address: 0x10004690
+     */
+    static const s32 cProfileID_Kinoko;
+    /**
+     * @brief 592
+     * @par Address: 0x10004694
+     */
+    static const s32 cProfileID_FireFlower;
+    /**
+     * @brief 593
+     * @par Address: 0x10004698
+     */
+    static const s32 cProfileID_MameKinoko;
+    /**
+     * @brief 594
+     * @par Address: 0x1000469C
+     */
+    static const s32 cProfileID_IceFlower;
+    /**
+     * @brief 595
+     * @par Address: 0x100046A0
+     */
+    static const s32 cProfileID_Propeller;
+    /**
+     * @brief 596
+     * @par Address: 0x100046A4
+     */
+    static const s32 cProfileID_Penguin;
+    /**
+     * @brief 597
+     * @par Address: 0x100046A8
+     */
+    static const s32 cProfileID_OneUpKinoko;
+    /**
+     * @brief 598
+     * @par Address: 0x100046AC
+     */
+    static const s32 cProfileID_Musasabi;
+    /**
+     * @brief 599
+     * @par Address: 0x100046B0
+     */
+    static const s32 cProfileID_SuperMoon;
+    /**
+     * @brief 600
+     * @par Address: 0x100046B4
+     */
+    static const s32 cProfileID_TitleDemoItem;
+    /**
+     * @brief 601
+     * @par Address: 0x100046B8
+     */
+    static const s32 cProfileID_259;
+    /**
+     * @brief 602
+     * @par Address: 0x100046BC
+     */
+    static const s32 cProfileID_25A;
+    /**
+     * @brief 603
+     * @par Address: 0x100046C0
+     */
+    static const s32 cProfileID_25B;
+    /**
+     * @brief 604
+     * @par Address: 0x100046C4
+     */
+    static const s32 cProfileID_25C;
+    /**
+     * @brief 605
+     * @par Address: 0x100046C8
+     */
+    static const s32 cProfileID_25D;
+    /**
+     * @brief 606
+     * @par Address: 0x100046CC
+     */
+    static const s32 cProfileID_25E;
+    /**
+     * @brief 607
+     * @par Address: 0x100046D0
+     */
+    static const s32 cProfileID_25F;
+    /**
+     * @brief 608
+     * @par Address: 0x100046D4
+     */
+    static const s32 cProfileID_260;
+    /**
+     * @brief 609
+     * @par Address: 0x100046D8
+     */
+    static const s32 cProfileID_261;
+    /**
+     * @brief 610
+     * @par Address: 0x100046DC
+     */
+    static const s32 cProfileID_262;
+    /**
+     * @brief 611
+     * @par Address: 0x100046E0
+     */
+    static const s32 cProfileID_263;
+    /**
+     * @brief 612
+     * @par Address: 0x100046E4
+     */
+    static const s32 cProfileID_264;
+    /**
+     * @brief 613
+     * @par Address: 0x100046E8
+     */
+    static const s32 cProfileID_265;
+    /**
+     * @brief 614
+     * @par Address: 0x100046EC
+     */
+    static const s32 cProfileID_266;
+    /**
+     * @brief 615
+     * @par Address: 0x100046F0
+     */
+    static const s32 cProfileID_267;
+    /**
+     * @brief 616
+     * @par Address: 0x100046F4
+     */
+    static const s32 cProfileID_268;
+    /**
+     * @brief 617
+     * @par Address: 0x100046F8
+     */
+    static const s32 cProfileID_Spanner;
+    /**
+     * @brief 618
+     * @par Address: 0x100046FC
+     */
+    static const s32 cProfileID_26A;
+    /**
+     * @brief 619
+     * @par Address: 0x10004700
+     */
+    static const s32 cProfileID_26B;
+    /**
+     * @brief 620
+     * @par Address: 0x10004704
+     */
+    static const s32 cProfileID_26C;
+    /**
+     * @brief 621
+     * @par Address: 0x10004708
+     */
+    static const s32 cProfileID_26D;
+    /**
+     * @brief 622
+     * @par Address: 0x1000470C
+     */
+    static const s32 cProfileID_26E;
+    /**
+     * @brief 623
+     * @par Address: 0x10004710
+     */
+    static const s32 cProfileID_26F;
+    /**
+     * @brief 624
+     * @par Address: 0x10004714
+     */
+    static const s32 cProfileID_270;
+    /**
+     * @brief 625
+     * @par Address: 0x10004718
+     */
+    static const s32 cProfileID_271;
+    /**
+     * @brief 626
+     * @par Address: 0x1000471C
+     */
+    static const s32 cProfileID_272;
+    /**
+     * @brief 627
+     * @par Address: 0x10004720
+     */
+    static const s32 cProfileID_273;
+    /**
+     * @brief 628
+     * @par Address: 0x10004724
+     */
+    static const s32 cProfileID_274;
+    /**
+     * @brief 629
+     * @par Address: 0x10004728
+     */
+    static const s32 cProfileID_275;
+    /**
+     * @brief 630
+     * @par Address: 0x1000472C
+     */
+    static const s32 cProfileID_SearchKiller;
+    /**
+     * @brief 631
+     * @par Address: 0x10004730
+     */
+    static const s32 cProfileID_277;
+    /**
+     * @brief 632
+     * @par Address: 0x10004734
+     */
+    static const s32 cProfileID_278;
+    /**
+     * @brief 633
+     * @par Address: 0x10004738
+     */
+    static const s32 cProfileID_279;
+    /**
+     * @brief 634
+     * @par Address: 0x1000473C
+     */
+    static const s32 cProfileID_WakiSearchMagKiller;
+    /**
+     * @brief 635
+     * @par Address: 0x10004740
+     */
+    static const s32 cProfileID_27B;
+    /**
+     * @brief 636
+     * @par Address: 0x10004744
+     */
+    static const s32 cProfileID_27C;
+    /**
+     * @brief 637
+     * @par Address: 0x10004748
+     */
+    static const s32 cProfileID_27D;
+    /**
+     * @brief 638
+     * @par Address: 0x1000474C
+     */
+    static const s32 cProfileID_27E;
+    /**
+     * @brief 639
+     * @par Address: 0x10004750
+     */
+    static const s32 cProfileID_27F;
+    /**
+     * @brief 640
+     * @par Address: 0x10004754
+     */
+    static const s32 cProfileID_GabonRock;
+    /**
+     * @brief 641
+     * @par Address: 0x10004758
+     */
+    static const s32 cProfileID_281;
+    /**
+     * @brief 642
+     * @par Address: 0x1000475C
+     */
+    static const s32 cProfileID_282;
+    /**
+     * @brief 643
+     * @par Address: 0x10004760
+     */
+    static const s32 cProfileID_RockGabonRock;
+    /**
+     * @brief 644
+     * @par Address: 0x10004764
+     */
+    static const s32 cProfileID_284;
+    /**
+     * @brief 645
+     * @par Address: 0x10004768
+     */
+    static const s32 cProfileID_SeichanSnowBall;
+    /**
+     * @brief 646
+     * @par Address: 0x1000476C
+     */
+    static const s32 cProfileID_286;
+    /**
+     * @brief 647
+     * @par Address: 0x10004770
+     */
+    static const s32 cProfileID_287;
+    /**
+     * @brief 648
+     * @par Address: 0x10004774
+     */
+    static const s32 cProfileID_288;
+    /**
+     * @brief 649
+     * @par Address: 0x10004778
+     */
+    static const s32 cProfileID_289;
+    /**
+     * @brief 650
+     * @par Address: 0x1000477C
+     */
+    static const s32 cProfileID_Woochan;
+    /**
+     * @brief 651
+     * @par Address: 0x10004780
+     */
+    static const s32 cProfileID_28B;
+    /**
+     * @brief 652
+     * @par Address: 0x10004784
+     */
+    static const s32 cProfileID_28C;
+    /**
+     * @brief 653
+     * @par Address: 0x10004788
+     */
+    static const s32 cProfileID_28D;
+    /**
+     * @brief 654
+     * @par Address: 0x1000478C
+     */
+    static const s32 cProfileID_Bubble;
+    /**
+     * @brief 655
+     * @par Address: 0x10004790
+     */
+    static const s32 cProfileID_BubbleSync;
+    /**
+     * @brief 656
+     * @par Address: 0x10004794
+     */
+    static const s32 cProfileID_BubbleRDash;
+    /**
+     * @brief 657
+     * @par Address: 0x10004798
+     */
+    static const s32 cProfileID_BubbleSyncRDash;
+    /**
+     * @brief 658
+     * @par Address: 0x1000479C
+     */
+    static const s32 cProfileID_292;
+    /**
+     * @brief 659
+     * @par Address: 0x100047A0
+     */
+    static const s32 cProfileID_293;
+    /**
+     * @brief 660
+     * @par Address: 0x100047A4
+     */
+    static const s32 cProfileID_294;
+    /**
+     * @brief 661
+     * @par Address: 0x100047A8
+     */
+    static const s32 cProfileID_295;
+    /**
+     * @brief 662
+     * @par Address: 0x100047AC
+     */
+    static const s32 cProfileID_296;
+    /**
+     * @brief 663
+     * @par Address: 0x100047B0
+     */
+    static const s32 cProfileID_297;
+    /**
+     * @brief 664
+     * @par Address: 0x100047B4
+     */
+    static const s32 cProfileID_298;
+    /**
+     * @brief 665
+     * @par Address: 0x100047B8
+     */
+    static const s32 cProfileID_299;
+    /**
+     * @brief 666
+     * @par Address: 0x100047BC
+     */
+    static const s32 cProfileID_29A;
+    /**
+     * @brief 667
+     * @par Address: 0x100047C0
+     */
+    static const s32 cProfileID_29B;
+    /**
+     * @brief 668
+     * @par Address: 0x100047C4
+     */
+    static const s32 cProfileID_29C;
+    /**
+     * @brief 669
+     * @par Address: 0x100047C8
+     */
+    static const s32 cProfileID_29D;
+    /**
+     * @brief 670
+     * @par Address: 0x100047CC
+     */
+    static const s32 cProfileID_29E;
+    /**
+     * @brief 671
+     * @par Address: 0x100047D0
+     */
+    static const s32 cProfileID_29F;
+    /**
+     * @brief 672
+     * @par Address: 0x100047D4
+     */
+    static const s32 cProfileID_2A0;
+    /**
+     * @brief 673
+     * @par Address: 0x100047D8
+     */
+    static const s32 cProfileID_2A1;
+    /**
+     * @brief 674
+     * @par Address: 0x100047DC
+     */
+    static const s32 cProfileID_2A2;
+    /**
+     * @brief 675
+     * @par Address: 0x100047E0
+     */
+    static const s32 cProfileID_2A3;
+    /**
+     * @brief 676
+     * @par Address: 0x100047E4
+     */
+    static const s32 cProfileID_2A4;
+    /**
+     * @brief 677
+     * @par Address: 0x100047E8
+     */
+    static const s32 cProfileID_2A5;
+    /**
+     * @brief 678
+     * @par Address: 0x100047EC
+     */
+    static const s32 cProfileID_Bun;
+    /**
+     * @brief 679
+     * @par Address: 0x100047F0
+     */
+    static const s32 cProfileID_BunW2;
+    /**
+     * @brief 680
+     * @par Address: 0x100047F4
+     */
+    static const s32 cProfileID_BunW3;
+    /**
+     * @brief 681
+     * @par Address: 0x100047F8
+     */
+    static const s32 cProfileID_BunW4;
+    /**
+     * @brief 682
+     * @par Address: 0x100047FC
+     */
+    static const s32 cProfileID_BunW5;
+    /**
+     * @brief 683
+     * @par Address: 0x10004800
+     */
+    static const s32 cProfileID_BunW6;
+    /**
+     * @brief 684
+     * @par Address: 0x10004804
+     */
+    static const s32 cProfileID_BunDemo;
+    /**
+     * @brief 685
+     * @par Address: 0x10004808
+     */
+    static const s32 cProfileID_KokoopaDemo;
+    /**
+     * @brief 686
+     * @par Address: 0x1000480C
+     */
+    static const s32 cProfileID_KoopaJrDemo;
+    /**
+     * @brief 687
+     * @par Address: 0x10004810
+     */
+    static const s32 cProfileID_KameckDemo;
+    /**
+     * @brief 688
+     * @par Address: 0x10004814
+     */
+    static const s32 cProfileID_BossKKDemo;
+    /**
+     * @brief 689
+     * @par Address: 0x10004818
+     */
+    static const s32 cProfileID_PeachFinalCastleKoopaJrDemo;
+    /**
+     * @brief 690
+     * @par Address: 0x1000481C
+     */
+    static const s32 cProfileID_KoopaDemo;
+    /**
+     * @brief 691
+     * @par Address: 0x10004820
+     */
+    static const s32 cProfileID_FinalKoopaDemo;
+    /**
+     * @brief 692
+     * @par Address: 0x10004824
+     */
+    static const s32 cProfileID_PeachDemo;
+    /**
+     * @brief 693
+     * @par Address: 0x10004828
+     */
+    static const s32 cProfileID_Larry;
+    /**
+     * @brief 694
+     * @par Address: 0x1000482C
+     */
+    static const s32 cProfileID_KokoopaSearchFire;
+    /**
+     * @brief 695
+     * @par Address: 0x10004830
+     */
+    static const s32 cProfileID_Lemmy;
+    /**
+     * @brief 696
+     * @par Address: 0x10004834
+     */
+    static const s32 cProfileID_Morton;
+    /**
+     * @brief 697
+     * @par Address: 0x10004838
+     */
+    static const s32 cProfileID_MortonSanbo;
+    /**
+     * @brief 698
+     * @par Address: 0x1000483C
+     */
+    static const s32 cProfileID_MortonSanboParts;
+    /**
+     * @brief 699
+     * @par Address: 0x10004840
+     */
+    static const s32 cProfileID_Wendy;
+    /**
+     * @brief 700
+     * @par Address: 0x10004844
+     */
+    static const s32 cProfileID_WendyRing;
+    /**
+     * @brief 701
+     * @par Address: 0x10004848
+     */
+    static const s32 cProfileID_Ludwig;
+    /**
+     * @brief 702
+     * @par Address: 0x1000484C
+     */
+    static const s32 cProfileID_LudwigAlterEgo;
+    /**
+     * @brief 703
+     * @par Address: 0x10004850
+     */
+    static const s32 cProfileID_Iggy;
+    /**
+     * @brief 704
+     * @par Address: 0x10004854
+     */
+    static const s32 cProfileID_IggyMagic;
+    /**
+     * @brief 705
+     * @par Address: 0x10004858
+     */
+    static const s32 cProfileID_Woogan;
+    /**
+     * @brief 706
+     * @par Address: 0x1000485C
+     */
+    static const s32 cProfileID_Roy;
+    /**
+     * @brief 707
+     * @par Address: 0x10004860
+     */
+    static const s32 cProfileID_RoyLiftWaki;
+    /**
+     * @brief 708
+     * @par Address: 0x10004864
+     */
+    static const s32 cProfileID_BossKK;
+    /**
+     * @brief 709
+     * @par Address: 0x10004868
+     */
+    static const s32 cProfileID_BossKKThunder;
+    /**
+     * @brief 710
+     * @par Address: 0x1000486C
+     */
+    static const s32 cProfileID_Kameck;
+    /**
+     * @brief 711
+     * @par Address: 0x10004870
+     */
+    static const s32 cProfileID_KameckIceConfig;
+    /**
+     * @brief 712
+     * @par Address: 0x10004874
+     */
+    static const s32 cProfileID_KameckWarpPos;
+    /**
+     * @brief 713
+     * @par Address: 0x10004878
+     */
+    static const s32 cProfileID_KameckMagic;
+    /**
+     * @brief 714
+     * @par Address: 0x1000487C
+     */
+    static const s32 cProfileID_PeachFinalCastleKoopaJr;
+    /**
+     * @brief 715
+     * @par Address: 0x10004880
+     */
+    static const s32 cProfileID_Koopa;
+    /**
+     * @brief 716
+     * @par Address: 0x10004884
+     */
+    static const s32 cProfileID_KoopaFireWaki;
+    /**
+     * @brief 717
+     * @par Address: 0x10004888
+     */
+    static const s32 cProfileID_KoopaFire;
+    /**
+     * @brief 718
+     * @par Address: 0x1000488C
+     */
+    static const s32 cProfileID_DemoKoopaJrClown;
+    /**
+     * @brief 719
+     * @par Address: 0x10004890
+     */
+    static const s32 cProfileID_DemoKoopaJr;
+    /**
+     * @brief 720
+     * @par Address: 0x10004894
+     */
+    static const s32 cProfileID_BunDemoKameck;
+    /**
+     * @brief 721
+     * @par Address: 0x10004898
+     */
+    static const s32 cProfileID_KoopaDemoKameck;
+    /**
+     * @brief 722
+     * @par Address: 0x1000489C
+     */
+    static const s32 cProfileID_BossKKDemoKameck;
+    /**
+     * @brief 723
+     * @par Address: 0x100048A0
+     */
+    static const s32 cProfileID_BossKKDemoKK;
+    /**
+     * @brief 724
+     * @par Address: 0x100048A4
+     */
+    static const s32 cProfileID_FinalKoopaFire;
+    /**
+     * @brief 725
+     * @par Address: 0x100048A8
+     */
+    static const s32 cProfileID_FinalKoopaJr;
+    /**
+     * @brief 726
+     * @par Address: 0x100048AC
+     */
+    static const s32 cProfileID_FinalKoopaJrFire;
+    /**
+     * @brief 727
+     * @par Address: 0x100048B0
+     */
+    static const s32 cProfileID_FinalBomhei;
+    /**
+     * @brief 728
+     * @par Address: 0x100048B4
+     */
+    static const s32 cProfileID_KokoopaShipLemmy;
+    /**
+     * @brief 729
+     * @par Address: 0x100048B8
+     */
+    static const s32 cProfileID_KokoopaShipMorton;
+    /**
+     * @brief 730
+     * @par Address: 0x100048BC
+     */
+    static const s32 cProfileID_KokoopaShipLarry;
+    /**
+     * @brief 731
+     * @par Address: 0x100048C0
+     */
+    static const s32 cProfileID_KokoopaShipWendy;
+    /**
+     * @brief 732
+     * @par Address: 0x100048C4
+     */
+    static const s32 cProfileID_KokoopaShipIggy;
+    /**
+     * @brief 733
+     * @par Address: 0x100048C8
+     */
+    static const s32 cProfileID_KokoopaShipRoy;
+    /**
+     * @brief 734
+     * @par Address: 0x100048CC
+     */
+    static const s32 cProfileID_KokoopaShipLudwig;
+    /**
+     * @brief 735
+     * @par Address: 0x100048D0
+     */
+    static const s32 cProfileID_Peach;
+    /**
+     * @brief 736
+     * @par Address: 0x100048D4
+     */
+    static const s32 cProfileID_2E0;
+    /**
+     * @brief 737
+     * @par Address: 0x100048D8
+     */
+    static const s32 cProfileID_FinalDVPeach;
+    /**
+     * @brief 738
+     * @par Address: 0x100048DC
+     */
+    static const s32 cProfileID_FinalDVShutter;
+    /**
+     * @brief 739
+     * @par Address: 0x100048E0
+     */
+    static const s32 cProfileID_2E3;
+    /**
+     * @brief 740
+     * @par Address: 0x100048E4
+     */
+    static const s32 cProfileID_2E4;
+    /**
+     * @brief 741
+     * @par Address: 0x100048E8
+     */
+    static const s32 cProfileID_2E5;
+    /**
+     * @brief 742
+     * @par Address: 0x100048EC
+     */
+    static const s32 cProfileID_2E6;
+    /**
+     * @brief 743
+     * @par Address: 0x100048F0
+     */
+    static const s32 cProfileID_2E7;
+    /**
+     * @brief 744
+     * @par Address: 0x100048F4
+     */
+    static const s32 cProfileID_2E8;
+    /**
+     * @brief 745
+     * @par Address: 0x100048F8
+     */
+    static const s32 cProfileID_2E9;
+    /**
+     * @brief 746
+     * @par Address: 0x100048FC
+     */
+    static const s32 cProfileID_2EA;
+    /**
+     * @brief 747
+     * @par Address: 0x10004900
+     */
+    static const s32 cProfileID_2EB;
+    /**
+     * @brief 748
+     * @par Address: 0x10004904
+     */
+    static const s32 cProfileID_2EC;
+    /**
+     * @brief 749
+     * @par Address: 0x10004908
+     */
+    static const s32 cProfileID_2ED;
+    /**
+     * @brief 750
+     * @par Address: 0x1000490C
+     */
+    static const s32 cProfileID_2EE;
+    /**
+     * @brief 751
+     * @par Address: 0x10004910
+     */
+    static const s32 cProfileID_2EF;
+    /**
+     * @brief 752
+     * @par Address: 0x10004914
+     */
+    static const s32 cProfileID_2F0;
+    /**
+     * @brief 753
+     * @par Address: 0x10004918
+     */
+    static const s32 cProfileID_2F1;
+    /**
+     * @brief 754
+     * @par Address: 0x1000491C
+     */
+    static const s32 cProfileID_2F2;
+    /**
+     * @brief 755
+     * @par Address: 0x10004920
+     */
+    static const s32 cProfileID_2F3;
+    /**
+     * @brief 756
+     * @par Address: 0x10004924
+     */
+    static const s32 cProfileID_2F4;
+    /**
+     * @brief 757
+     * @par Address: 0x10004928
+     */
+    static const s32 cProfileID_2F5;
+    /**
+     * @brief 758
+     * @par Address: 0x1000492C
+     */
+    static const s32 cProfileID_Hammer;
+    /**
+     * @brief 759
+     * @par Address: 0x10004930
+     */
+    static const s32 cProfileID_2F7;
+    /**
+     * @brief 760
+     * @par Address: 0x10004934
+     */
+    static const s32 cProfileID_Boomerang;
+    /**
+     * @brief 761
+     * @par Address: 0x10004938
+     */
+    static const s32 cProfileID_2F9;
+    /**
+     * @brief 762
+     * @par Address: 0x1000493C
+     */
+    static const s32 cProfileID_FireBallBros;
+    /**
+     * @brief 763
+     * @par Address: 0x10004940
+     */
+    static const s32 cProfileID_2FB;
+    /**
+     * @brief 764
+     * @par Address: 0x10004944
+     */
+    static const s32 cProfileID_IceBallBros;
+    /**
+     * @brief 765
+     * @par Address: 0x10004948
+     */
+    static const s32 cProfileID_2FD;
+    /**
+     * @brief 766
+     * @par Address: 0x1000494C
+     */
+    static const s32 cProfileID_MegaHammer;
+    /**
+     * @brief 767
+     * @par Address: 0x10004950
+     */
+    static const s32 cProfileID_2FF;
+    /**
+     * @brief 768
+     * @par Address: 0x10004954
+     */
+    static const s32 cProfileID_300;
+    /**
+     * @brief 769
+     * @par Address: 0x10004958
+     */
+    static const s32 cProfileID_301;
+    /**
+     * @brief 770
+     * @par Address: 0x1000495C
+     */
+    static const s32 cProfileID_302;
+    /**
+     * @brief 771
+     * @par Address: 0x10004960
+     */
+    static const s32 cProfileID_303;
+    /**
+     * @brief 772
+     * @par Address: 0x10004964
+     */
+    static const s32 cProfileID_304;
+    /**
+     * @brief 773
+     * @par Address: 0x10004968
+     */
+    static const s32 cProfileID_305;
+    /**
+     * @brief 774
+     * @par Address: 0x1000496C
+     */
+    static const s32 cProfileID_306;
+    /**
+     * @brief 775
+     * @par Address: 0x10004970
+     */
+    static const s32 cProfileID_307;
+    /**
+     * @brief 776
+     * @par Address: 0x10004974
+     */
+    static const s32 cProfileID_308;
+    /**
+     * @brief 777
+     * @par Address: 0x10004978
+     */
+    static const s32 cProfileID_309;
+    /**
+     * @brief 778
+     * @par Address: 0x1000497C
+     */
+    static const s32 cProfileID_30A;
+    /**
+     * @brief 779
+     * @par Address: 0x10004980
+     */
+    static const s32 cProfileID_30B;
+    /**
+     * @brief 780
+     * @par Address: 0x10004984
+     */
+    static const s32 cProfileID_30C;
+    /**
+     * @brief 781
+     * @par Address: 0x10004988
+     */
+    static const s32 cProfileID_30D;
+    /**
+     * @brief 782
+     * @par Address: 0x1000498C
+     */
+    static const s32 cProfileID_30E;
+    /**
+     * @brief 783
+     * @par Address: 0x10004990
+     */
+    static const s32 cProfileID_30F;
+    /**
+     * @brief 784
+     * @par Address: 0x10004994
+     */
+    static const s32 cProfileID_310;
+    /**
+     * @brief 785
+     * @par Address: 0x10004998
+     */
+    static const s32 cProfileID_311;
+    /**
+     * @brief 786
+     * @par Address: 0x1000499C
+     */
+    static const s32 cProfileID_312;
+    /**
+     * @brief 787
+     * @par Address: 0x100049A0
+     */
+    static const s32 cProfileID_313;
+    /**
+     * @brief 788
+     * @par Address: 0x100049A4
+     */
+    static const s32 cProfileID_314;
+    /**
+     * @brief 789
+     * @par Address: 0x100049A8
+     */
+    static const s32 cProfileID_315;
+    /**
+     * @brief 790
+     * @par Address: 0x100049AC
+     */
+    static const s32 cProfileID_316;
+    /**
+     * @brief 791
+     * @par Address: 0x100049B0
+     */
+    static const s32 cProfileID_317;
+    /**
+     * @brief 792
+     * @par Address: 0x100049B4
+     */
+    static const s32 cProfileID_318;
+    /**
+     * @brief 793
+     * @par Address: 0x100049B8
+     */
+    static const s32 cProfileID_319;
+    /**
+     * @brief 794
+     * @par Address: 0x100049BC
+     */
+    static const s32 cProfileID_31A;
+    /**
+     * @brief 795
+     * @par Address: 0x100049C0
+     */
+    static const s32 cProfileID_31B;
+    /**
+     * @brief 796
+     * @par Address: 0x100049C4
+     */
+    static const s32 cProfileID_31C;
+    /**
+     * @brief 797
+     * @par Address: 0x100049C8
+     */
+    static const s32 cProfileID_31D;
+    /**
+     * @brief 798
+     * @par Address: 0x100049CC
+     */
+    static const s32 cProfileID_31E;
+    /**
+     * @brief 799
+     * @par Address: 0x100049D0
+     */
+    static const s32 cProfileID_31F;
+    /**
+     * @brief 800
+     * @par Address: 0x100049D4
+     */
+    static const s32 cProfileID_320;
+    /**
+     * @brief 801
+     * @par Address: 0x100049D8
+     */
+    static const s32 cProfileID_321;
+    /**
+     * @brief 802
+     * @par Address: 0x100049DC
+     */
+    static const s32 cProfileID_322;
+    /**
+     * @brief 803
+     * @par Address: 0x100049E0
+     */
+    static const s32 cProfileID_323;
+    /**
+     * @brief 804
+     * @par Address: 0x100049E4
+     */
+    static const s32 cProfileID_324;
+    /**
+     * @brief 805
+     * @par Address: 0x100049E8
+     */
+    static const s32 cProfileID_325;
+    /**
+     * @brief 806
+     * @par Address: 0x100049EC
+     */
+    static const s32 cProfileID_326;
+    /**
+     * @brief 807
+     * @par Address: 0x100049F0
+     */
+    static const s32 cProfileID_327;
+    /**
+     * @brief 808
+     * @par Address: 0x100049F4
+     */
+    static const s32 cProfileID_328;
+    /**
+     * @brief 809
+     * @par Address: 0x100049F8
+     */
+    static const s32 cProfileID_BattleItem;
+    /**
+     * @brief 810
+     * @par Address: 0x100049FC
+     */
+    static const s32 cProfileID_32A;
+    /**
+     * @brief 811
+     * @par Address: 0x10004A00
+     */
+    static const s32 cProfileID_VsBattleItem;
+    /**
+     * @brief 812
+     * @par Address: 0x10004A04
+     */
+    static const s32 cProfileID_32C;
+    /**
+     * @brief 813
+     * @par Address: 0x10004A08
+     */
+    static const s32 cProfileID_32D;
+    /**
+     * @brief 814
+     * @par Address: 0x10004A0C
+     */
+    static const s32 cProfileID_32E;
+    /**
+     * @brief 815
+     * @par Address: 0x10004A10
+     */
+    static const s32 cProfileID_32F;
+    /**
+     * @brief 816
+     * @par Address: 0x10004A14
+     */
+    static const s32 cProfileID_330;
+    /**
+     * @brief 817
+     * @par Address: 0x10004A18
+     */
+    static const s32 cProfileID_331;
+    /**
+     * @brief 818
+     * @par Address: 0x10004A1C
+     */
+    static const s32 cProfileID_KoopaJrFire;
+    /**
+     * @brief 819
+     * @par Address: 0x10004A20
+     */
+    static const s32 cProfileID_KoopaJrBall;
+    /**
+     * @brief 820
+     * @par Address: 0x10004A24
+     */
+    static const s32 cProfileID_UnderwaterKoopaJr;
+    /**
+     * @brief 821
+     * @par Address: 0x10004A28
+     */
+    static const s32 cProfileID_UnderwaterKoopaJrClown;
+    /**
+     * @brief 822
+     * @par Address: 0x10004A2C
+     */
+    static const s32 cProfileID_UnderwaterKoopaJrRetreatPos;
+    /**
+     * @brief 823
+     * @par Address: 0x10004A30
+     */
+    static const s32 cProfileID_BoxingKoopaJr;
+    /**
+     * @brief 824
+     * @par Address: 0x10004A34
+     */
+    static const s32 cProfileID_BoxingKoopaJrPostBattleDemo;
+    /**
+     * @brief 825
+     * @par Address: 0x10004A38
+     */
+    static const s32 cProfileID_BoxingKoopaJrClownPostBattleDemo;
+    /**
+     * @brief 826
+     * @par Address: 0x10004A3C
+     */
+    static const s32 cProfileID_MiniGamePanelItem;
+    /**
+     * @brief 827
+     * @par Address: 0x10004A40
+     */
+    static const s32 cProfileID_SlotItem;
+    /**
+     * @brief 828
+     * @par Address: 0x10004A44
+     */
+    static const s32 cProfileID_CoinmakiCannon;
+    /**
+     * @brief 829
+     * @par Address: 0x10004A48
+     */
+    static const s32 cProfileID_CoinmakiItem;
+    /**
+     * @brief 830
+     * @par Address: 0x10004A4C
+     */
+    static const s32 cProfileID_MiniGameKinopio;
+    /**
+     * @brief 831
+     * @par Address: 0x10004A50
+     */
+    static const s32 cProfileID_33F;
+    /**
+     * @brief 832
+     * @par Address: 0x10004A54
+     */
+    static const s32 cProfileID_340;
+    /**
+     * @brief 833
+     * @par Address: 0x10004A58
+     */
+    static const s32 cProfileID_341;
+    /**
+     * @brief 834
+     * @par Address: 0x10004A5C
+     */
+    static const s32 cProfileID_342;
+    /**
+     * @brief 835
+     * @par Address: 0x10004A60
+     */
+    static const s32 cProfileID_343;
+    /**
+     * @brief 836
+     * @par Address: 0x10004A64
+     */
+    static const s32 cProfileID_344;
+    /**
+     * @brief 837
+     * @par Address: 0x10004A68
+     */
+    static const s32 cProfileID_345;
+    /**
+     * @brief 838
+     * @par Address: 0x10004A6C
+     */
+    static const s32 cProfileID_346;
+    /**
+     * @brief 839
+     * @par Address: 0x10004A70
+     */
+    static const s32 cProfileID_347;
+    /**
+     * @brief 840
+     * @par Address: 0x10004A74
+     */
+    static const s32 cProfileID_StaffRollChibiYoshiChar;
+    /**
+     * @brief 841
+     * @par Address: 0x10004A78
+     */
+    static const s32 cProfileID_StaffRollChibiYoshiBalloon;
+    /**
+     * @brief 842
+     * @par Address: 0x10004A7C
+     */
+    static const s32 cProfileID_StaffRollChibiYoshiBalloonCheer;
+    /**
+     * @brief 843
+     * @par Address: 0x10004A80
+     */
+    static const s32 cProfileID_StaffRollChibiYoshiLight;
+    /**
+     * @brief 844
+     * @par Address: 0x10004A84
+     */
+    static const s32 cProfileID_StaffRollChibiYoshiLightCheer;
+    /**
+     * @brief 845
+     * @par Address: 0x10004A88
+     */
+    static const s32 cProfileID_StaffRollAwaChar;
+    /**
+     * @brief 846
+     * @par Address: 0x10004A8C
+     */
+    static const s32 cProfileID_StaffRollAwaCoin;
+    /**
+     * @brief 847
+     * @par Address: 0x10004A90
+     */
+    static const s32 cProfileID_StaffRollTottenKun;
+    /**
+     * @brief 848
+     * @par Address: 0x10004A94
+     */
+    static const s32 cProfileID_350;
+    /**
+     * @brief 849
+     * @par Address: 0x10004A98
+     */
+    static const s32 cProfileID_351;
+    /**
+     * @brief 850
+     * @par Address: 0x10004A9C
+     */
+    static const s32 cProfileID_352;
+    /**
+     * @brief 851
+     * @par Address: 0x10004AA0
+     */
+    static const s32 cProfileID_353;
+    /**
+     * @brief 852
+     * @par Address: 0x10004AA4
+     */
+    static const s32 cProfileID_RealizeFeverStar;
+    /**
+     * @brief 853
+     * @par Address: 0x10004AA8
+     */
+    static const s32 cProfileID_Star;
+    /**
+     * @brief 854
+     * @par Address: 0x10004AAC
+     */
+    static const s32 cProfileID_CourseSelectPlayer;
+    /**
+     * @brief 855 (CS Player 2, 3 or 4)
+     * @par Address: 0x10004AB0
+     */
+    static const s32 cProfileID_CourseSelectPlayer2PSub;
+    /**
+     * @brief 856
+     * @par Address: 0x10004AB4
+     */
+    static const s32 cProfileID_CourseSelectChibiYoshi;
+    /**
+     * @brief 857
+     * @par Address: 0x10004AB8
+     */
+    static const s32 cProfileID_CourseSelectCamera;
+    /**
+     * @brief 858
+     * @par Address: 0x10004ABC
+     */
+    static const s32 cProfileID_CourseSelectCastle;
+    /**
+     * @brief 859
+     * @par Address: 0x10004AC0
+     */
+    static const s32 cProfileID_CourseSelectToride;
+    /**
+     * @brief 860
+     * @par Address: 0x10004AC4
+     */
+    static const s32 cProfileID_CourseSelectKinokoHouse1up;
+    /**
+     * @brief 861
+     * @par Address: 0x10004AC8
+     */
+    static const s32 cProfileID_CourseSelectKinokoHouseShuffle;
+    /**
+     * @brief 862
+     * @par Address: 0x10004ACC
+     */
+    static const s32 cProfileID_CourseSelectKinokoHouseSlot;
+    /**
+     * @brief 863
+     * @par Address: 0x10004AD0
+     */
+    static const s32 cProfileID_CourseSelectPeachGates1st;
+    /**
+     * @brief 864
+     * @par Address: 0x10004AD4
+     */
+    static const s32 cProfileID_CourseSelectPeachGates2nd;
+    /**
+     * @brief 865
+     * @par Address: 0x10004AD8
+     */
+    static const s32 cProfileID_CourseSelectCoursePoint;
+    /**
+     * @brief 866
+     * @par Address: 0x10004ADC
+     */
+    static const s32 cProfileID_CourseSelectWorldMoveDokan;
+    /**
+     * @brief 867
+     * @par Address: 0x10004AE0
+     */
+    static const s32 cProfileID_CourseSelectW8Cloud;
+    /**
+     * @brief 868
+     * @par Address: 0x10004AE4
+     */
+    static const s32 cProfileID_CourseSelectGhost;
+    /**
+     * @brief 869 (The Japanese Profile name says "Hammer Bros" LOL)
+     * @par Address: 0x10004AE8
+     */
+    static const s32 cProfileID_CourseSelectW2Bros;
+    /**
+     * @brief 870
+     * @par Address: 0x10004AEC
+     */
+    static const s32 cProfileID_CourseSelectShipW1;
+    /**
+     * @brief 871
+     * @par Address: 0x10004AF0
+     */
+    static const s32 cProfileID_CourseSelectShipW2;
+    /**
+     * @brief 872
+     * @par Address: 0x10004AF4
+     */
+    static const s32 cProfileID_CourseSelectShipW3;
+    /**
+     * @brief 873
+     * @par Address: 0x10004AF8
+     */
+    static const s32 cProfileID_CourseSelectShipW4;
+    /**
+     * @brief 874
+     * @par Address: 0x10004AFC
+     */
+    static const s32 cProfileID_CourseSelectShipW5;
+    /**
+     * @brief 875
+     * @par Address: 0x10004B00
+     */
+    static const s32 cProfileID_CourseSelectShipW6;
+    /**
+     * @brief 876
+     * @par Address: 0x10004B04
+     */
+    static const s32 cProfileID_CourseSelectShipW7;
+    /**
+     * @brief 877
+     * @par Address: 0x10004B08
+     */
+    static const s32 cProfileID_CourseSelectShipW8;
+    /**
+     * @brief 878
+     * @par Address: 0x10004B0C
+     */
+    static const s32 cProfileID_CourseSelectShipW8Broken;
+    /**
+     * @brief 879
+     * @par Address: 0x10004B10
+     */
+    static const s32 cProfileID_CourseSelectSurrender;
+    /**
+     * @brief 880
+     * @par Address: 0x10004B14
+     */
+    static const s32 cProfileID_CourseSelectSwitchA;
+    /**
+     * @brief 881
+     * @par Address: 0x10004B18
+     */
+    static const s32 cProfileID_CourseSelectSwitchB;
+    /**
+     * @brief 882
+     * @par Address: 0x10004B1C
+     */
+    static const s32 cProfileID_CourseSelectTeresa;
+    /**
+     * @brief 883
+     * @par Address: 0x10004B20
+     */
+    static const s32 cProfileID_CourseSelectOpeningKameck;
+    /**
+     * @brief 884
+     * @par Address: 0x10004B24
+     */
+    static const s32 cProfileID_CourseSelectTorideBoss;
+    /**
+     * @brief 885
+     * @par Address: 0x10004B28
+     */
+    static const s32 cProfileID_CourseSelectPakkun;
+    /**
+     * @brief 886
+     * @par Address: 0x10004B2C
+     */
+    static const s32 cProfileID_CourseSelectShadowFirstDemoKinopio;
+    /**
+     * @brief 887
+     * @par Address: 0x10004B30
+     */
+    static const s32 cProfileID_CourseSelectTobiPuku;
+    /**
+     * @brief 888
+     * @par Address: 0x10004B34
+     */
+    static const s32 cProfileID_CourseSelectChorobon;
+    /**
+     * @brief 889
+     * @par Address: 0x10004B38
+     */
+    static const s32 cProfileID_CourseSelectW7Item;
+    /**
+     * @brief 890
+     * @par Address: 0x10004B3C
+     */
+    static const s32 cProfileID_CourseSelectW5Teresa;
+    /**
+     * @brief 891
+     * @par Address: 0x10004B40
+     */
+    static const s32 cProfileID_CourseSelectFlag;
+    /**
+     * @brief 892
+     * @par Address: 0x10004B44
+     */
+    static const s32 cProfileID_CourseSelectMusasabi;
+    /**
+     * @brief 893
+     * @par Address: 0x10004B48
+     */
+    static const s32 cProfileID_CourseSelectWPillar;
+    /**
+     * @brief 894
+     * @par Address: 0x10004B4C
+     */
+    static const s32 cProfileID_CourseSelectW7Bridge;
+    /**
+     * @brief 895
+     * @par Address: 0x10004B50
+     */
+    static const s32 cProfileID_CourseSelectMiiBalloon;
+    /**
+     * @brief 896
+     * @par Address: 0x10004B54
+     */
+    static const s32 cProfileID_CourseSelectPenguin;
+    /**
+     * @brief 897
+     * @par Address: 0x10004B58
+     */
+    static const s32 cProfileID_CourseSelectW4Item;
+    /**
+     * @brief 898
+     * @par Address: 0x10004B5C
+     */
+    static const s32 cProfileID_CourseSelectW2Kuribo;
+    /**
+     * @brief 899
+     * @par Address: 0x10004B60
+     */
+    static const s32 cProfileID_CourseSelectPakkunBig;
+    /**
+     * @brief 900
+     * @par Address: 0x10004B64
+     */
+    static const s32 cProfileID_CourseSelectShadowKunIcon;
+    /**
+     * @brief 901
+     * @par Address: 0x10004B68
+     */
+    static const s32 cProfileID_CourseSelectDekaUnira;
+    /**
+     * @brief 902
+     * @par Address: 0x10004B6C
+     */
+    static const s32 cProfileID_CourseSelectTomb;
+    /**
+     * @brief 903
+     * @par Address: 0x10004B70
+     */
+    static const s32 cProfileID_CourseSelectShadowFirstDemoShadowKun;
+    /**
+     * @brief 904
+     * @par Address: 0x10004B74
+     */
+    static const s32 cProfileID_CourseSelectKotsuCoaster;
+    /**
+     * @brief 905
+     * @par Address: 0x10004B78
+     */
+    static const s32 cProfileID_CourseSelectKoopaJr;
+    /**
+     * @brief 906
+     * @par Address: 0x10004B7C
+     */
+    static const s32 cProfileID_CourseSelectPeach;
+    /**
+     * @brief 907
+     * @par Address: 0x10004B80
+     */
+    static const s32 cProfileID_CourseSelectW1Item;
+    /**
+     * @brief 908
+     * @par Address: 0x10004B84
+     */
+    static const s32 cProfileID_CourseSelectStarGate;
+    /**
+     * @brief 909
+     * @par Address: 0x10004B88
+     */
+    static const s32 cProfileID_CourseSelectEventAssistant;
 };

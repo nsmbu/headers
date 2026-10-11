@@ -7,8 +7,11 @@ class PlayerMgr;
 class PlayerHIO_Gravity
 {
 public:
-    // Address: 0x1016A7FC
-    static const PlayerGravityData cData[2 * 2 + 1]; // [mario/luigi][normal/mini] + Unk (+ Peachette + Another Unk in NSMBUDX)
+    /**
+     * @brief [mario/luigi][normal/mini] + Unk (+ Peachette + Another Unk in NSMBUDX)
+     * @par Address: 0x1016A7FC
+     */
+    static const PlayerGravityData cData[2 * 2 + 1];
 
 public:
     // Address: 0x02914938

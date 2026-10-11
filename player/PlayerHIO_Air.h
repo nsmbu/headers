@@ -7,8 +7,11 @@ class PlayerMgr;
 class PlayerHIO_Air
 {
 public:
-    // Address: 0x10169664
-    static const PlayerAirData cData[2][2]; // [mario/luigi][normal/star]
+    /**
+     * @brief [mario/luigi][normal/star]
+     * @par Address: 0x10169664
+     */
+    static const PlayerAirData cData[2][2];
 
 public:
     // Address: 0x029120F0

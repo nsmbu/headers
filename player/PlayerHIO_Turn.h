@@ -7,8 +7,11 @@ class PlayerMgr;
 class PlayerHIO_Turn
 {
 public:
-    // Address: 0x1016AA7C
-    static const PlayerTurnData cData[2]; // [mario/luigi(/toadette/toadette star/nabbit/nabbit star in NSMBUDX)]
+    /**
+     * @brief [mario/luigi(/toadette/toadette star/nabbit/nabbit star in NSMBUDX)]
+     * @par Address: 0x1016AA7C
+     */
+    static const PlayerTurnData cData[2];
 
 public:
     // Address: 0x02914ABC

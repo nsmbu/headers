@@ -21,8 +21,11 @@ public:
     static_assert(sizeof(Arg) == 0x18);
 
 public:
-    // Address: 0x101CE360
-    static Arg sDefaultArg; // { { 1.5f, 3.9f }, -4.0f, -0.24375f, nullptr, -1, 0, -1 }
+    /**
+     * @brief { { 1.5f, 3.9f }, -4.0f, -0.24375f, nullptr, -1, 0, -1 }
+     * @par Address: 0x101CE360
+     */
+    static Arg sDefaultArg;
 
 public:
     EnemyDeathInfo()

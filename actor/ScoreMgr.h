@@ -89,10 +89,16 @@ public:
     static_assert(cScoreType2_Point_Num == 5);
     static_assert(cScoreType2_Num == 10);
 
-    // Address: 0x10004E20
-    static const f32 cScoreX;   // 0.0f
-    // Address: 0x10004E24
-    static const f32 cScoreY;   // 24.0f
+    /**
+     * @brief 0.0f
+     * @par Address: 0x10004E20
+     */
+    static const f32 cScoreX;
+    /**
+     * @brief 24.0f
+     * @par Address: 0x10004E24
+     */
+    static const f32 cScoreY;
 
 public:
     // Address: 0x020279E0

@@ -299,10 +299,16 @@ protected:
 public:
     static const s32 cTurnSpeed = 0x2000000;
 
-    // Address: 0x10091658
-    static const f32 cMaxSpeedX;    // 1.0f
-    // Address: 0x1009165C
-    static const f32 cMaxSpeedY;    // -4.0f
+    /**
+     * @brief 1.0f
+     * @par Address: 0x10091658
+     */
+    static const f32 cMaxSpeedX;
+    /**
+     * @brief -4.0f
+     * @par Address: 0x1009165C
+     */
+    static const f32 cMaxSpeedY;
 
     // Address: 0x10091660
     static const ActorCreateInfo cActorCreateInfo;

@@ -628,8 +628,11 @@ public:
     // finalizeState_DieAwa     Address: 0x0232EEF0
     DECLARE_STATE_VIRTUAL_ID_BASE(Enemy, DieAwa)
 
-    // Address: 0x102010AC
-    static const f32 cDieFallGravity; // 1.3 * cDefaultGravity
+    /**
+     * @brief 1.3 * cDefaultGravity
+     * @par Address: 0x102010AC
+     */
+    static const f32 cDieFallGravity;
     // Address: 0x10072EA8
     static const f32 cDieFallInitSpeedY;
     // Address: 0x10072EAC

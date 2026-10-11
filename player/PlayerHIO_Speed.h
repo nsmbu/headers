@@ -16,8 +16,11 @@ public:
     // Address: 0x1016A970
     static const f32 cMaxRunSpeedHi_Star;
 
-    // Address: 0x101E5078
-    static const PlayerSpeedData cData[2 * 2 * 2]; // [mario/luigi][mini/normal][normal/star]
+    /**
+     * @brief [mario/luigi][mini/normal][normal/star]
+     * @par Address: 0x101E5078
+     */
+    static const PlayerSpeedData cData[2 * 2 * 2];
                                                    // ({[normal/toadette][mario/luigi][mini/normal] + nabbit mario + nabbit luigi}[normal/star] in NSMBUDX)
 
 public:

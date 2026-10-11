@@ -7,47 +7,95 @@ class PlayerMgr;
 class PlayerHIO_General
 {
 public:
-    // Address: 0x10169620
-    static const s32 cDefaultStarTime;              // 11 seconds
+    /**
+     * @brief 11 seconds
+     * @par Address: 0x10169620
+     */
+    static const s32 cDefaultStarTime;
 
-    // Address: 0x10169624
-    static const s32 cFaceAngleDefaultTarget;       // 60.2628866 degrees
-    // Address: 0x10169628
-    static const s32 cFaceAngleDefaultTargetCloud;  // 42.37040067 degrees
+    /**
+     * @brief 60.2628866 degrees
+     * @par Address: 0x10169624
+     */
+    static const s32 cFaceAngleDefaultTarget;
+    /**
+     * @brief 42.37040067 degrees
+     * @par Address: 0x10169628
+     */
+    static const s32 cFaceAngleDefaultTargetCloud;
 
-    // Address: 0x1016962C
-    static const f32 cFaceAngleYtoXRatio;           // -0.02f
-    // Address: 0x10169630
-    static const s32 cFaceAngleYtoZRatio;           // -0.12f
+    /**
+     * @brief -0.02f
+     * @par Address: 0x1016962C
+     */
+    static const f32 cFaceAngleYtoXRatio;
+    /**
+     * @brief -0.12f
+     * @par Address: 0x10169630
+     */
+    static const s32 cFaceAngleYtoZRatio;
 
-    // Address: 0x10169634
-    static const s32 cFaceAngleMaxStep;             // 8.8492267 degrees
-    // Address: 0x10169638
-    static const s32 cFaceAngleRevertMaxStep;       // 16.875 degrees
+    /**
+     * @brief 8.8492267 degrees
+     * @par Address: 0x10169634
+     */
+    static const s32 cFaceAngleMaxStep;
+    /**
+     * @brief 16.875 degrees
+     * @par Address: 0x10169638
+     */
+    static const s32 cFaceAngleRevertMaxStep;
 
-    // Address: 0x1016963C
-    static const u32 cFaceAngleTurnTimeDefault;     // 10 seconds
-    // Address: 0x10169640
-    static const u32 cFaceAngleTurnTimeShort;       // 1/3 seconds
+    /**
+     * @brief 10 seconds
+     * @par Address: 0x1016963C
+     */
+    static const u32 cFaceAngleTurnTimeDefault;
+    /**
+     * @brief 1/3 seconds
+     * @par Address: 0x10169640
+     */
+    static const u32 cFaceAngleTurnTimeShort;
 
-    // Address: 0x10169644
-    static const s32 cDefaultWaterFunsuiEffectTime; // 1/6 seconds
+    /**
+     * @brief 1/6 seconds
+     * @par Address: 0x10169644
+     */
+    static const s32 cDefaultWaterFunsuiEffectTime;
 
-    // Address: 0x10169648
-    static const s32 cMaxAngleZ_1;                  // 30 degrees
-    // Address: 0x1016964C
-    static const s32 cMinAngleZ_1;                  // -45 degrees
+    /**
+     * @brief 30 degrees
+     * @par Address: 0x10169648
+     */
+    static const s32 cMaxAngleZ_1;
+    /**
+     * @brief -45 degrees
+     * @par Address: 0x1016964C
+     */
+    static const s32 cMinAngleZ_1;
 
-    // Address: 0x10169650
-    static const s32 cMaxAngleZ_2;                  // 17 degrees
-    // Address: 0x10169654
-    static const s32 cMinAngleZ_2;                  // -17 degrees
+    /**
+     * @brief 17 degrees
+     * @par Address: 0x10169650
+     */
+    static const s32 cMaxAngleZ_2;
+    /**
+     * @brief -17 degrees
+     * @par Address: 0x10169654
+     */
+    static const s32 cMinAngleZ_2;
 
-    // Address: 0x10169658
-    static const s32 cMaxAngleY;                    // 113 degrees
+    /**
+     * @brief 113 degrees
+     * @par Address: 0x10169658
+     */
+    static const s32 cMaxAngleY;
 
-    // Address: 0x1016965C
-    static const f32 cSandSinkRate;                 // -1.26f
+    /**
+     * @brief -1.26f
+     * @par Address: 0x1016965C
+     */
+    static const f32 cSandSinkRate;
 
 public:
     // Address: 0x02911F74
