@@ -5,6 +5,7 @@
 #include <collision/ActorBoxBgCollision.h>
 #include <map_obj/Wave.h>
 
+// vtbl Address: 0x100FCF48
 class BgActorBase : public ActorMultiState
 {
 public:
@@ -45,9 +46,9 @@ protected:
     u32                      _1aa8;
     f32                      _1aac;
     f32                      _1ab0;
-    f32                      mWidth;             // used to call it mWidth
-    f32                      mBaselineHeight;    // used to call it mBaselineHeight
-    f32                      mEffectiveHeight;   // used to call it mEffectiveHeight
+    f32                      _1ab4; // used to call it mWidth
+    f32                      _1ab8; // used to call it mBaselineHeight
+    f32                      _1abc; // used to call it mEffectiveHeight
     f32                      _1ac0;
     f32                      _1ac4;
     f32                      _1ac8;
