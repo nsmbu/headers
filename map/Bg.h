@@ -61,6 +61,15 @@ public:
     };
     static_assert(sizeof(Gust) == 0x14, "Bg::Gust size mismatch");
 
+    enum WaveType : u8
+    {
+        cWaveType_None      = 0,
+        cWaveType_Lava      = 1,
+        cWaveType_Water     = 2,
+        cWaveType_Poison    = 3,
+        cWaveType_Quicksand = 4
+    };
+
 public:
     // Address: 0x02684480
     Bg();
@@ -72,6 +81,7 @@ public:
     // Address: 0x02685000
     static u16* getUnitCurrentCdFile(u16 x, u16 y, u8 layer, s32* block_idx = nullptr);
 
+    // Address: 0x026850F0
     u64 getBgCheckData(u16 x, u16 y, u8 layer, bool with_p_sw = true);  // See BgUnitCode
     u64 getBgCheckData(f32 x, f32 y, u8 layer, bool with_p_sw = true)   // ^^^
     {
@@ -132,6 +142,9 @@ public:
      */
     s8 checkGust(GustType type, const sead::Vector3f& pos, f32* dist);
 
+    // Address: 0x026854C0
+    u32 FUN_026854c0(u16, u16, u8 layer, bool);
+
     f32 getWaveSurfaceX(s32 index) const
     {
         return mWaveSurfaceX[index];
@@ -177,33 +190,57 @@ public:
         return mBgDeco;
     }
 
+    bool getHasLavaWaves() const
+    {
+        return mHasLavaWaves;
+    }
+
+    void setHasLavaWaves(u8 has_waves)
+    {
+        mHasLavaWaves = has_waves;
+    }
+
+    bool getHasLiquid() const
+    {
+        return mHasLiquid;
+    }
+
+    void setHasLiquid(bool has_liquid)
+    {
+        mHasLiquid = has_liquid;
+    }
+
 private:
-    u32 _10;
-    f32 _14;
-    f32 _18;
-    f32 mWaveSurfaceX[1280];
-    f32 mWaveSurfaceY[1280];
-    bool mHasLavaWaves;
-    bool mHasTerrain;
-    u32 _2820;
-    u8 _2824[0x558];
-    u8 _2d7c[0x558];
-    u8 _32d4[0x88];
-    u8 _335c[800];
-    u8 _367c[100];
-    u8 _36e0[100];
-    u32 _3744[100];
+    u32             _10;
+    f32             _14;
+    f32             _18;
+    f32             mWaveSurfaceX[1280];
+    f32             mWaveSurfaceY[1280];
+    union
+    {
+        bool     mHasLavaWaves;
+        WaveType mWaveType;
+    };
+    bool            mHasLiquid;
+    u32             _2820;
+    u8              _2824[0x558];
+    u8              _2d7c[0x558];
+    u8              _32d4[0x88];
+    u8              _335c[800];
+    u8              _367c[100];
+    u8              _36e0[100];
+    u32             _3744[100];
     DecorationInfo* mGrassDecorationInfo;
     DecorationInfo* mFlowerDecorationInfo;
     DecorationInfo* mButterflyDecorationInfo;
-    u32 mFlowerNo;
-    Gust mGust[40];
-    sead::Vector2f mFlowerPositions[100];
-    u8 _3f24[100];
-    u32 _3f88;
-    u8 mFlowerType;
-    bool mHasFlowers;
-    BgDeco mBgDeco;
-    u8 _7e20[0x1D64];
+    u32             mFlowerNo;
+    Gust            mGust[40];
+    sead::Vector2f  mFlowerPositions[100];
+    u8              _3f24[100];
+    u32             _3f88;
+    u8              mFlowerType;
+    bool            mHasFlowers;
+    BgDeco          mBgDeco;
+    u8              _7e20[0x1D64];
 };
 static_assert(sizeof(Bg) == 0x9B88, "Bg size mismatch");
