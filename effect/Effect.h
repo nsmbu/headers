@@ -87,6 +87,9 @@ public:
     // Address: 0x022AAE8C
     void setVisible(bool visible, s32 emitter_controller_index);
 
+    // Address: 0x022AB980
+    bool spawn(EffectID id, const sead::Vector3f* trans = nullptr, const Angle3* angle = nullptr, const sead::Vector3f* scale = nullptr);
+
     const PtclParam* getParam() const { return mParam; }
 
 protected:
