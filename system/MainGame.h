@@ -1,8 +1,11 @@
 #pragma once
 
+#include <container/seadSafeArray.h>
 #include <heap/seadDisposer.h>
 #include <prim/seadBitFlag.h>
 
+#include <graphics/Mii_IconFacelineObj.h>
+#include <graphics/Mii_IconRenderBuffer.h>
 #include <system/SaveMgr.h>
 
 enum CourseExitType
@@ -104,27 +107,74 @@ public:
         return mCSSwitchState;
     }
 
+    SaveData::CSLocation& getAirshipLocation()
+    {
+        return mAirshipLocation;
+    }
+
+    /**
+     * @return Bitfield of type @c SaveData::WorldCompletionFlag
+     */
+    sead::BitFlag16& getWorldCompletionFlag()
+    {
+        return mWorldCompletionFlag;
+    }
+
+    /**
+     * @return Bitfield of type @c SaveData::ChibiYoshiAvailableFlag
+     */
+    sead::BitFlag8& getChibiYoshiAvailableFlag()
+    {
+        return mChibiYoshiAvailableFlag;
+    }
+
     SaveData::LevelStat& getLevelStat()
     {
         return mLevelStat;
     }
 
+    /**
+     * @return Bitfield of type @c SaveData::GameCompletionFlag
+     */
+    sead::BitFlag8& getGameCompletionFlag()
+    {
+        return mGameCompletionFlag;
+    }
+
 protected:
-    u32                 _10;
-    bool                mIsSinglePlayerDRC;
-    u32                 _18;
-    bool                mIsNewGame;
-    CourseExitType      mCourseExitType;
-    CourseBeatenType    mCourseBeatenType;
-    u32                 _28;
-    sead::BitFlag32     mReplayFlag;
-    u32                 _30[(0x78 - 0x30) / sizeof(u32)];
-    CSSwitchState       mCSSwitchState;
-    u32                 _7c[(0x31C - 0x7C) / sizeof(u32)];
-    SaveData::LevelStat mLevelStat;
-    u32                 _3d8[(0x21DDC - 0x3D8) / sizeof(u32)];
-    u8                  _21ddc[30];
-    bool                mIsShadowkunQuest;
-    u32                 _21dfc[(0x21E18 - 0x21DFC) / sizeof(u32)];
+    u32                                         _10;
+    bool                                        mIsSinglePlayerDRC;
+    u32                                         _18;
+    bool                                        mIsNewGame;
+    CourseExitType                              mCourseExitType;
+    CourseBeatenType                            mCourseBeatenType;
+    u32                                         _28;
+    sead::BitFlag32                             mReplayFlag;
+    u32                                         _30[(0x78 - 0x30) / sizeof(u32)];
+    CSSwitchState                               mCSSwitchState;
+    u32                                         _7c[(0x1C8 - 0x7C) / sizeof(u32)];
+    SaveData::CSLocation                        mAirshipLocation;
+    u32                                         _1cc[(0x208 - 0x1CC) / sizeof(u32)];
+    sead::BitFlag16                             mWorldCompletionFlag;
+    bool                                        _20a;
+    u8                                          _20b;
+    u8                                          _20c;
+    sead::BitFlag8                              mChibiYoshiAvailableFlag;
+    u32                                         _210[(0x31C - 0x210) / sizeof(u32)];
+    SaveData::LevelStat                         mLevelStat;
+    u32                                         _3d8[(0x82C - 0x3D8) / sizeof(u32)];
+    sead::BitFlag8                              mGameCompletionFlag;
+    u8                                          _82d;
+    bool                                        mPlayAsNabbitOrMii;
+    bool                                        mPlayAsMii;
+    u32                                         _830[(0x180E4 - 0x830) / sizeof(u32)];
+    Mii::IconRenderBuffer                       _180e4;
+    u32                                         _18544[(0x18548 - 0x18544) / sizeof(u32)];
+    Mii::IconFacelineObj                        _18548;
+    sead::SafeArray<Mii::IconRenderBuffer, 4>   _1891c;
+    sead::SafeArray<Mii::IconRenderBuffer, 30>  _19a9c;
+    u8                                          _21ddc[30];
+    bool                                        mIsShadowkunQuest;
+    u32                                         _21dfc[(0x21E18 - 0x21DFC) / sizeof(u32)];
 };
 static_assert(sizeof(MainGame) == 0x21E18, "MainGame size mismatch");
