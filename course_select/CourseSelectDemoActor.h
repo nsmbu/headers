@@ -17,7 +17,7 @@ public:
         s32 sub_world_no;    //< Per-world worldmap sections. Used for W5 Haunted section, W8 and W9.
         s32 point_idx;       //< 0-indexed.
     };
-    static_assert(sizeof(Location) == 0x3, "CourseSelectDemoActor::Location size mismatch");
+    static_assert(sizeof(Location) == 0xC, "CourseSelectDemoActor::Location size mismatch");
 
 protected:
     // Address: 0x021D4CB4
