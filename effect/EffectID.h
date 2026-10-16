@@ -5,9 +5,7 @@
 constexpr f32 EFFECT_Z_POS_DEFAULT        = 4500.0f;
 constexpr f32 EFFECT_Z_POS_BEHIND_LAYER_0 = 3300.0f;
 
-typedef s32 EffectID;
-
-enum EffectID_
+enum EffectID : s32
 {
     // RP_1upGet
     // User Data: 0x00200000

@@ -3,7 +3,7 @@
 #include <heap/seadDisposer.h>
 #include <math/seadVector.h>
 
-typedef s32 EffectID;
+#include <effect/EffectID.h>
 
 // vtbl Address: 0x100B6098
 class FragmentMgr

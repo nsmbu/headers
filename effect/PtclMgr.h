@@ -4,6 +4,7 @@
 
 #include <container/seadPtrArray.h>
 #include <container/seadTList.h>
+#include <effect/EffectID.h>
 #include <heap/seadDisposer.h>
 #include <math/seadMatrix.h>
 
@@ -30,8 +31,6 @@ namespace lyr {
 class RenderInfo;
 
 } } // namespace agl::lyr
-
-typedef s32 EffectID;
 
 class   EffectObj;
 class   EffectObjBase;

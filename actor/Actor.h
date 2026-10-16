@@ -3,6 +3,7 @@
 #include <actor/ActorBase.h>
 #include <actor/ActorCullRange.h>
 #include <collision/ActorCollisionCheck.h>
+#include <effect/EffectID.h>
 #include <utility/Angle3.h>
 #include <utility/Direction.h>
 
@@ -15,8 +16,6 @@ class ChibiYoshiAwaData;
 class ChibiYoshiEatData;
 class EatData;
 class PropelParts;
-
-typedef s32 EffectID;
 
 // vtbl Address: 0x10000268
 class Actor : public ActorBase
