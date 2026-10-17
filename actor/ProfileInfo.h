@@ -31,169 +31,169 @@ public:
 protected:
     enum DrawPriority
     {
-        cDrawPriority_1B9                                       =   0,
+        cDrawPriority_Balloon                                   =   0,
         cDrawPriority_PlayerObject                              =   1,
         cDrawPriority_TottenPlayer                              =   2,
         cDrawPriority_Yoshi                                     =   3,
-        cDrawPriority_1BD                                       =   4,
+        cDrawPriority_GoalDemoKinopio                           =   4,
         cDrawPriority_Kuribo                                    =   5,
         cDrawPriority_Kakibo                                    =   6,
         cDrawPriority_PataKuribo                                =   7,
-        cDrawPriority_1D6                                       =   8,
-        cDrawPriority_1D7                                       =   9,
-        cDrawPriority_1D8                                       =  10,
-        cDrawPriority_1D9                                       =  11,
+        cDrawPriority_IgaKuribo                                 =   8,
+        cDrawPriority_BeansKuribo                               =   9,
+        cDrawPriority_MiddleKuribo                              =  10,
+        cDrawPriority_LargeKuribo                               =  11,
         cDrawPriority_IceBall                                   =  12,
         cDrawPriority_IceBallPakkun                             =  13,
         cDrawPriority_FireBallPlayer                            =  14,
         cDrawPriority_FireBallPakkun                            =  15,
         cDrawPriority_YoshiFire                                 =  16,
-        cDrawPriority_1DF                                       =  17,
-        cDrawPriority_1E0                                       =  18,
-        cDrawPriority_1E1                                       =  19,
-        cDrawPriority_1E2                                       =  20,
-        cDrawPriority_305                                       =  21,
-        cDrawPriority_306                                       =  22,
-        cDrawPriority_307                                       =  23,
-        cDrawPriority_308                                       =  24,
-        cDrawPriority_309                                       =  25,
-        cDrawPriority_1E3                                       =  26,
-        cDrawPriority_1E4                                       =  27,
-        cDrawPriority_1E5                                       =  28,
-        cDrawPriority_1E6                                       =  29,
-        cDrawPriority_1E7                                       =  30,
-        cDrawPriority_1E8                                       =  31,
-        cDrawPriority_1E9                                       =  32,
-        cDrawPriority_1EA                                       =  33,
-        cDrawPriority_1EB                                       =  34,
-        cDrawPriority_1EC                                       =  35,
-        cDrawPriority_1ED                                       =  36,
-        cDrawPriority_1EE                                       =  37,
-        cDrawPriority_1EF                                       =  38,
-        cDrawPriority_1F0                                       =  39,
-        cDrawPriority_1F1                                       =  40,
-        cDrawPriority_1F2                                       =  41,
-        cDrawPriority_1F3                                       =  42,
-        cDrawPriority_1F4                                       =  43,
-        cDrawPriority_1F5                                       =  44,
-        cDrawPriority_1F6                                       =  45,
-        cDrawPriority_1F7                                       =  46,
-        cDrawPriority_11B                                       =  47,
-        cDrawPriority_14D                                       =  48,
-        cDrawPriority_14E                                       =  49,
-        cDrawPriority_14F                                       =  50,
-        cDrawPriority_ObjPipeDown                               =  51,
-        cDrawPriority_151                                       =  52,
-        cDrawPriority_152                                       =  53,
-        cDrawPriority_153                                       =  54,
-        cDrawPriority_ObjPipeDownGroup                          =  55,
-        cDrawPriority_082                                       =  56,
-        cDrawPriority_083                                       =  57,
-        cDrawPriority_084                                       =  58,
-        cDrawPriority_085                                       =  59,
-        cDrawPriority_155                                       =  60,
-        cDrawPriority_156                                       =  61,
-        cDrawPriority_157                                       =  62,
-        cDrawPriority_ObjPipeDownNG                             =  63,
-        cDrawPriority_087                                       =  64,
-        cDrawPriority_088                                       =  65,
-        cDrawPriority_089                                       =  66,
-        cDrawPriority_08A                                       =  67,
-        cDrawPriority_08B                                       =  68,
-        cDrawPriority_08C                                       =  69,
-        cDrawPriority_08D                                       =  70,
-        cDrawPriority_08E                                       =  71,
-        cDrawPriority_05F                                       =  72,
-        cDrawPriority_060                                       =  73,
-        cDrawPriority_061                                       =  74,
-        cDrawPriority_102                                       =  75,
-        cDrawPriority_08F                                       =  76,
-        cDrawPriority_090                                       =  77,
-        cDrawPriority_062                                       =  78,
-        cDrawPriority_063                                       =  79,
-        cDrawPriority_05C                                       =  80,
-        cDrawPriority_05D                                       =  81,
-        cDrawPriority_05E                                       =  82,
-        cDrawPriority_064                                       =  83,
-        cDrawPriority_091                                       =  84,
-        cDrawPriority_092                                       =  85,
-        cDrawPriority_1FF                                       =  86,
+        cDrawPriority_DokanPakkunUp                             =  17,
+        cDrawPriority_DokanPakkunDown                           =  18,
+        cDrawPriority_DokanPakkunLeft                           =  19,
+        cDrawPriority_DokanPakkunRight                          =  20,
+        cDrawPriority_RotationDokanFPakkun                      =  21,
+        cDrawPriority_RotationDokanPakkunUp                     =  22,
+        cDrawPriority_RotationDokanPakkunDown                   =  23,
+        cDrawPriority_RotationDokanPakkunLeft                   =  24,
+        cDrawPriority_RotationDokanPakkunRight                  =  25,
+        cDrawPriority_DokanFPakkunUp                            =  26,
+        cDrawPriority_DokanFPakkunDown                          =  27,
+        cDrawPriority_DokanFPakkunLeft                          =  28,
+        cDrawPriority_DokanFPakkunRight                         =  29,
+        cDrawPriority_DokanIPakkunUp                            =  30,
+        cDrawPriority_DokanIPakkunDown                          =  31,
+        cDrawPriority_DokanIPakkunLeft                          =  32,
+        cDrawPriority_DokanIPakkunRight                         =  33,
+        cDrawPriority_DokanPakkunBig                            =  34,
+        cDrawPriority_JimenPakkun                               =  35,
+        cDrawPriority_JimenPakkunRDash                          =  36,
+        cDrawPriority_JimenPakkunR33                            =  37,
+        cDrawPriority_JimenFPakkun                              =  38,
+        cDrawPriority_JimenIPakkun                              =  39,
+        cDrawPriority_JimenBigPakkun                            =  40,
+        cDrawPriority_JimenBigFPakkun                           =  41,
+        cDrawPriority_WalkPakkun                                =  42,
+        cDrawPriority_WaterPakkun                               =  43,
+        cDrawPriority_WaterPakkunRDash                          =  44,
+        cDrawPriority_PakkunBlack                               =  45,
+        cDrawPriority_PakkunBlackObj                            =  46,
+        cDrawPriority_Freezer                                   =  47,
+        cDrawPriority_ObjDokanRight                             =  48,
+        cDrawPriority_ObjDokanLeft                              =  49,
+        cDrawPriority_ObjDokanUp                                =  50,
+        cDrawPriority_ObjDokanDown                              =  51,
+        cDrawPriority_ObjDokanRightGroup                        =  52,
+        cDrawPriority_ObjDokanLeftGroup                         =  53,
+        cDrawPriority_ObjDokanUpGroup                           =  54,
+        cDrawPriority_ObjDokanDownGroup                         =  55,
+        cDrawPriority_ObjDokanMameRight                         =  56,
+        cDrawPriority_ObjDokanMameLeft                          =  57,
+        cDrawPriority_ObjDokanMameUp                            =  58,
+        cDrawPriority_ObjDokanMameDown                          =  59,
+        cDrawPriority_ObjDokanRightNG                           =  60,
+        cDrawPriority_ObjDokanLeftNG                            =  61,
+        cDrawPriority_ObjDokanUpNG                              =  62,
+        cDrawPriority_ObjDokanDownNG                            =  63,
+        cDrawPriority_CoinBattleDokanUpNG                       =  64,
+        cDrawPriority_CoinBattleDokanDownNG                     =  65,
+        cDrawPriority_CoinBattleDokanLeftNG                     =  66,
+        cDrawPriority_CoinBattleDokanRightNG                    =  67,
+        cDrawPriority_ZoomDokanRight                            =  68,
+        cDrawPriority_ZoomDokanLeft                             =  69,
+        cDrawPriority_ZoomDokanUp                               =  70,
+        cDrawPriority_ZoomDokanDown                             =  71,
+        cDrawPriority_LiftRotationHuriko                        =  72,
+        cDrawPriority_LiftRotationHurikoRDash                   =  73,
+        cDrawPriority_LiftHanRotateLight                        =  74,
+        cDrawPriority_RotationLiftSemisolid                     =  75,
+        cDrawPriority_RotationObjDokan                          =  76,
+        cDrawPriority_RotationObjDokanRDash                     =  77,
+        cDrawPriority_LiftHuriko                                =  78,
+        cDrawPriority_LiftHurikoRDash                           =  79,
+        cDrawPriority_LineSpinLift                              =  80,
+        cDrawPriority_LineKinokoBlock                           =  81,
+        cDrawPriority_GroupLineKinokoLift                       =  82,
+        cDrawPriority_RailPolygon                               =  83,
+        cDrawPriority_CannonPipe                                =  84,
+        cDrawPriority_CannonPipeRDash                           =  85,
+        cDrawPriority_FooBall                                   =  86,
         cDrawPriority_Nokonoko                                  =  87,
-        cDrawPriority_201                                       =  88,
-        cDrawPriority_202                                       =  89,
-        cDrawPriority_203                                       =  90,
-        cDrawPriority_204                                       =  91,
-        cDrawPriority_17D                                       =  92,
-        cDrawPriority_17E                                       =  93,
-        cDrawPriority_205                                       =  94,
-        cDrawPriority_206                                       =  95,
-        cDrawPriority_208                                       =  96,
-        cDrawPriority_207                                       =  97,
-        cDrawPriority_209                                       =  98,
-        cDrawPriority_20A                                       =  99,
-        cDrawPriority_20B                                       = 100,
+        cDrawPriority_NokonokoHorizontalSpawn                   =  88,
+        cDrawPriority_BigNokonoko                               =  89,
+        cDrawPriority_Patapata                                  =  90,
+        cDrawPriority_PatapataGroup                             =  91,
+        cDrawPriority_Met                                       =  92,
+        cDrawPriority_BigMet                                    =  93,
+        cDrawPriority_Togezo                                    =  94,
+        cDrawPriority_SakasaTogezo                              =  95,
+        cDrawPriority_Kanitama                                  =  96,
+        cDrawPriority_Kanibo                                    =  97,
+        cDrawPriority_Bomhei                                    =  98,
+        cDrawPriority_ParaBomhei                                =  99,
+        cDrawPriority_ParaBomheiRDash                           = 100,
         cDrawPriority_MechaKoopa                                = 101,
-        cDrawPriority_20D                                       = 102,
-        cDrawPriority_20E                                       = 103,
+        cDrawPriority_Pentaro                                   = 102,
+        cDrawPriority_PentaroSunglasses                         = 103,
         cDrawPriority_PentaroIce                                = 104,
-        cDrawPriority_210                                       = 105,
-        cDrawPriority_211                                       = 106,
-        cDrawPriority_212                                       = 107,
-        cDrawPriority_213                                       = 108,
-        cDrawPriority_214                                       = 109,
-        cDrawPriority_215                                       = 110,
-        cDrawPriority_216                                       = 111,
-        cDrawPriority_217                                       = 112,
-        cDrawPriority_218                                       = 113,
-        cDrawPriority_219                                       = 114,
-        cDrawPriority_21A                                       = 115,
-        cDrawPriority_21B                                       = 116,
-        cDrawPriority_21C                                       = 117,
-        cDrawPriority_21D                                       = 118,
-        cDrawPriority_224                                       = 119,
-        cDrawPriority_17F                                       = 120,
-        cDrawPriority_180                                       = 121,
-        cDrawPriority_181                                       = 122,
-        cDrawPriority_182                                       = 123,
-        cDrawPriority_225                                       = 124,
-        cDrawPriority_226                                       = 125,
-        cDrawPriority_229                                       = 126,
-        cDrawPriority_22A                                       = 127,
+        cDrawPriority_Honemet                                   = 105,
+        cDrawPriority_HonemetHead                               = 106,
+        cDrawPriority_Puku                                      = 107,
+        cDrawPriority_PukuGroup                                 = 108,
+        cDrawPriority_MiddlePuku                                = 109,
+        cDrawPriority_MiddlePukuGroup                           = 110,
+        cDrawPriority_SachiPuku                                 = 111,
+        cDrawPriority_SachiMiddlePuku                           = 112,
+        cDrawPriority_NigePuku                                  = 113,
+        cDrawPriority_NigeMiddlePuku                            = 114,
+        cDrawPriority_MechaPuku                                 = 115,
+        cDrawPriority_TogePuku                                  = 116,
+        cDrawPriority_TobiPuku                                  = 117,
+        cDrawPriority_TobiMechaPuku                             = 118,
+        cDrawPriority_Kopone                                    = 119,
+        cDrawPriority_Unira                                     = 120,
+        cDrawPriority_UniraRDashNarrowBGCheck                   = 121,
+        cDrawPriority_Unizoo                                    = 122,
+        cDrawPriority_UniraRDash                                = 123,
+        cDrawPriority_IgaPuku                                   = 124,
+        cDrawPriority_BigIgaPuku                                = 125,
+        cDrawPriority_JellyFish                                 = 126,
+        cDrawPriority_Chochin                                   = 127,
         cDrawPriority_FireBar                                   = 128,
         cDrawPriority_FireBarSync                               = 129,
-        cDrawPriority_179                                       = 130,
-        cDrawPriority_17A                                       = 131,
-        cDrawPriority_Burner                                    = 132,
-        cDrawPriority_0E1                                       = 133,
-        cDrawPriority_0E2                                       = 134,
-        cDrawPriority_0E3                                       = 135,
-        cDrawPriority_0EB                                       = 136,
-        cDrawPriority_22C                                       = 137,
-        cDrawPriority_22D                                       = 138,
+        cDrawPriority_FireBar2                                  = 130,
+        cDrawPriority_PivotFireBar                              = 131,
+        cDrawPriority_Barnar                                    = 132,
+        cDrawPriority_BarnarLarge                               = 133,
+        cDrawPriority_BarnarSync                                = 134,
+        cDrawPriority_BarnarPivot                               = 135,
+        cDrawPriority_IceLump                                   = 136,
+        cDrawPriority_Keronpa                                   = 137,
+        cDrawPriority_KeronpaRDash                              = 138,
         cDrawPriority_FireBallKeronpa                           = 139,
         cDrawPriority_FireBallKeronpaRDash                      = 140,
         cDrawPriority_FireSnake                                 = 141,
-        cDrawPriority_27D                                       = 142,
-        cDrawPriority_27E                                       = 143,
-        cDrawPriority_27F                                       = 144,
+        cDrawPriority_Gabon                                     = 142,
+        cDrawPriority_GabonRDash                                = 143,
+        cDrawPriority_GabonResident                             = 144,
         cDrawPriority_GabonRock                                 = 145,
-        cDrawPriority_281                                       = 146,
-        cDrawPriority_282                                       = 147,
+        cDrawPriority_RockGabon                                 = 146,
+        cDrawPriority_RockGabonResident                         = 147,
         cDrawPriority_RockGabonRock                             = 148,
-        cDrawPriority_284                                       = 149,
+        cDrawPriority_Seichan                                   = 149,
         cDrawPriority_SeichanSnowBall                           = 150,
-        cDrawPriority_286                                       = 151,
-        cDrawPriority_232                                       = 152,
-        cDrawPriority_233                                       = 153,
-        cDrawPriority_234                                       = 154,
-        cDrawPriority_236                                       = 155,
-        cDrawPriority_237                                       = 156,
-        cDrawPriority_238                                       = 157,
-        cDrawPriority_239                                       = 158,
-        cDrawPriority_23A                                       = 159,
-        cDrawPriority_23B                                       = 160,
-        cDrawPriority_23C                                       = 161,
-        cDrawPriority_23D                                       = 162,
+        cDrawPriority_SnowBall                                  = 151,
+        cDrawPriority_GoroGoro                                  = 152,
+        cDrawPriority_GoroGoroKyodai                            = 153,
+        cDrawPriority_GoroGoroKyodaiRDash                       = 154,
+        cDrawPriority_BigPileDir1                               = 155,
+        cDrawPriority_BigPileDir2                               = 156,
+        cDrawPriority_BigPileDir3                               = 157,
+        cDrawPriority_BigPileDir4                               = 158,
+        cDrawPriority_SuperBigPileDir1                          = 159,
+        cDrawPriority_SuperBigPileDir2                          = 160,
+        cDrawPriority_KazandanMgr                               = 161,
+        cDrawPriority_WakiKazadan                               = 162,
         cDrawPriority_Kazandan                                  = 163,
         cDrawPriority_Bun                                       = 164,
         cDrawPriority_BunW2                                     = 165,
@@ -231,7 +231,7 @@ protected:
         cDrawPriority_PeachFinalCastleKoopaJr                   = 197,
         cDrawPriority_PeachFinalCastleKoopaJrClown              = 198,
         cDrawPriority_PeachFinalCastleKoopaJrLift               = 199,
-        cDrawPriority_PeachFinalCastleKoopaJrLiftHmove          = 200,
+        cDrawPriority_PeachFinalCastleKoopaJrLiftHMove          = 200,
         cDrawPriority_PeachFinalCastleKoopaJrLiftPairObj        = 201,
         cDrawPriority_RoyLiftWakiStep                           = 202,
         cDrawPriority_Koopa                                     = 203,
@@ -249,42 +249,42 @@ protected:
         cDrawPriority_KinokoLift                                = 215,
         cDrawPriority_KinokoLiftColor                           = 216,
         cDrawPriority_LiftZenStar                               = 217,
-        cDrawPriority_033                                       = 218,
-        cDrawPriority_0AD                                       = 219,
-        cDrawPriority_0AE                                       = 220,
-        cDrawPriority_0AF                                       = 221,
-        cDrawPriority_0B0                                       = 222,
-        cDrawPriority_0B1                                       = 223,
-        cDrawPriority_050                                       = 224,
-        cDrawPriority_17C                                       = 225,
-        cDrawPriority_051                                       = 226,
-        cDrawPriority_235                                       = 227,
-        cDrawPriority_16D                                       = 228,
+        cDrawPriority_ObjSpinBolt                               = 218,
+        cDrawPriority_ObjSpinBoltChild                          = 219,
+        cDrawPriority_ObjSpinBoltChildPyramid                   = 220,
+        cDrawPriority_ObjSpinBoltChildPyramidResident           = 221,
+        cDrawPriority_ObjSpinAshiba                             = 222,
+        cDrawPriority_SpinWire                                  = 223,
+        cDrawPriority_ObjKinoko                                 = 224,
+        cDrawPriority_TamanoriLift                              = 225,
+        cDrawPriority_FlyingKinoko                              = 226,
+        cDrawPriority_CheckPointFlag                            = 227,
+        cDrawPriority_HardIceBlock                              = 228,
         cDrawPriority_Block                                     = 229,
-        cDrawPriority_1BE                                       = 230,
-        cDrawPriority_1BF                                       = 231,
-        cDrawPriority_1C4                                       = 232,
-        cDrawPriority_1C3                                       = 233,
-        cDrawPriority_1C0                                       = 234,
-        cDrawPriority_1C1                                       = 235,
-        cDrawPriority_1C2                                       = 236,
-        cDrawPriority_1C7                                       = 237,
-        cDrawPriority_1C8                                       = 238,
-        cDrawPriority_1C9                                       = 239,
-        cDrawPriority_1CA                                       = 240,
-        cDrawPriority_1CB                                       = 241,
-        cDrawPriority_1CC                                       = 242,
-        cDrawPriority_1CD                                       = 243,
-        cDrawPriority_1CE                                       = 244,
+        cDrawPriority_ChibiYoshiEgg                             = 230,
+        cDrawPriority_ChibiYoshiAwa                             = 231,
+        cDrawPriority_FruitCookie                               = 232,
+        cDrawPriority_BubbleChibiYoshi                          = 233,
+        cDrawPriority_BalloonChibiYoshi                         = 234,
+        cDrawPriority_LightChibiYoshi                           = 235,
+        cDrawPriority_CloudChibiYoshi                           = 236,
+        cDrawPriority_PipeNextGotoTimerAddTag                   = 237,
+        cDrawPriority_QuestActorPlacementTag                    = 238,
+        cDrawPriority_QuestDemoLocationTag                      = 239,
+        cDrawPriority_ShadowkunRetreatTag                       = 240,
+        cDrawPriority_Shadowkun                                 = 241,
+        cDrawPriority_ShadowkunFukuro                           = 242,
+        cDrawPriority_QuestKey                                  = 243,
+        cDrawPriority_QuestKinopio                              = 244,
         cDrawPriority_QuestPrizeItem                            = 245,
-        cDrawPriority_1D0                                       = 246,
-        cDrawPriority_1D1                                       = 247,
-        cDrawPriority_183                                       = 248,
-        cDrawPriority_184                                       = 249,
-        cDrawPriority_185                                       = 250,
-        cDrawPriority_186                                       = 251,
-        cDrawPriority_22B                                       = 252,
-        cDrawPriority_187                                       = 253,
+        cDrawPriority_EnemyCourseDemoShadowkun                  = 246,
+        cDrawPriority_TitleDemoShadowkun                        = 247,
+        cDrawPriority_PowBlock                                  = 248,
+        cDrawPriority_LightBlock                                = 249,
+        cDrawPriority_PropBlock                                 = 250,
+        cDrawPriority_SlideBlock                                = 251,
+        cDrawPriority_Jumpdai                                   = 252,
+        cDrawPriority_CarryBlockTaru                            = 253,
         cDrawPriority_Kinoko                                    = 254,
         cDrawPriority_FireFlower                                = 255,
         cDrawPriority_RealizeFeverStar                          = 256,
@@ -297,180 +297,180 @@ protected:
         cDrawPriority_Musasabi                                  = 263,
         cDrawPriority_SuperMoon                                 = 264,
         cDrawPriority_TitleDemoItem                             = 265,
-        cDrawPriority_097                                       = 266,
-        cDrawPriority_036                                       = 267,
-        cDrawPriority_037                                       = 268,
-        cDrawPriority_038                                       = 269,
-        cDrawPriority_039                                       = 270,
-        cDrawPriority_03A                                       = 271,
-        cDrawPriority_03B                                       = 272,
+        cDrawPriority_RailPolyChild                             = 266,
+        cDrawPriority_ObjPol                                    = 267,
+        cDrawPriority_ObjPolToride                              = 268,
+        cDrawPriority_ObjPolNohara                              = 269,
+        cDrawPriority_ObjPolKogen                               = 270,
+        cDrawPriority_ObjPolAshiba                              = 271,
+        cDrawPriority_LiftZenKaihei                             = 272,
         cDrawPriority_PairObjChild                              = 273,
-        cDrawPriority_03D                                       = 274,
-        cDrawPriority_03E                                       = 275,
-        cDrawPriority_03F                                       = 276,
-        cDrawPriority_040                                       = 277,
-        cDrawPriority_041                                       = 278,
-        cDrawPriority_042                                       = 279,
-        cDrawPriority_043                                       = 280,
-        cDrawPriority_044                                       = 281,
-        cDrawPriority_045                                       = 282,
-        cDrawPriority_046                                       = 283,
-        cDrawPriority_047                                       = 284,
-        cDrawPriority_048                                       = 285,
-        cDrawPriority_049                                       = 286,
-        cDrawPriority_04A                                       = 287,
-        cDrawPriority_04B                                       = 288,
-        cDrawPriority_04C                                       = 289,
-        cDrawPriority_188                                       = 290,
-        cDrawPriority_113                                       = 291,
-        cDrawPriority_114                                       = 292,
-        cDrawPriority_115                                       = 293,
-        cDrawPriority_116                                       = 294,
-        cDrawPriority_2E4                                       = 295,
-        cDrawPriority_2E5                                       = 296,
-        cDrawPriority_2E6                                       = 297,
-        cDrawPriority_2E7                                       = 298,
-        cDrawPriority_2E8                                       = 299,
-        cDrawPriority_2E9                                       = 300,
-        cDrawPriority_2EA                                       = 301,
-        cDrawPriority_259                                       = 302,
-        cDrawPriority_2EE                                       = 303,
-        cDrawPriority_2EF                                       = 304,
-        cDrawPriority_2F0                                       = 305,
-        cDrawPriority_2F1                                       = 306,
-        cDrawPriority_2F2                                       = 307,
-        cDrawPriority_02B                                       = 308,
-        cDrawPriority_02C                                       = 309,
-        cDrawPriority_25A                                       = 310,
-        cDrawPriority_25B                                       = 311,
-        cDrawPriority_25C                                       = 312,
-        cDrawPriority_25D                                       = 313,
-        cDrawPriority_25E                                       = 314,
-        cDrawPriority_25F                                       = 315,
-        cDrawPriority_260                                       = 316,
-        cDrawPriority_261                                       = 317,
-        cDrawPriority_1AA                                       = 318,
-        cDrawPriority_1AB                                       = 319,
-        cDrawPriority_1AC                                       = 320,
-        cDrawPriority_1AD                                       = 321,
-        cDrawPriority_1AE                                       = 322,
-        cDrawPriority_1AF                                       = 323,
-        cDrawPriority_1B0                                       = 324,
-        cDrawPriority_1B1                                       = 325,
-        cDrawPriority_1B2                                       = 326,
-        cDrawPriority_1B3                                       = 327,
-        cDrawPriority_076                                       = 328,
-        cDrawPriority_077                                       = 329,
-        cDrawPriority_078                                       = 330,
-        cDrawPriority_1B5                                       = 331,
-        cDrawPriority_1B4                                       = 332,
-        cDrawPriority_262                                       = 333,
-        cDrawPriority_263                                       = 334,
-        cDrawPriority_2F3                                       = 335,
-        cDrawPriority_0BF                                       = 336,
-        cDrawPriority_0C0                                       = 337,
-        cDrawPriority_0C1                                       = 338,
+        cDrawPriority_PairObjChildToride                        = 274,
+        cDrawPriority_PairObjChildIwa                           = 275,
+        cDrawPriority_PairObjChildIron                          = 276,
+        cDrawPriority_PairObjChildNohara                        = 277,
+        cDrawPriority_PairObjChildKogen                         = 278,
+        cDrawPriority_LiftZenKumiawase                          = 279,
+        cDrawPriority_LiftZenTagaichigai                        = 280,
+        cDrawPriority_LiftZenTagaichigaiGear                    = 281,
+        cDrawPriority_LiftZenShiroYogan                         = 282,
+        cDrawPriority_PairObjChildSabakuIseki                   = 283,
+        cDrawPriority_PairObjChildTorideRock                    = 284,
+        cDrawPriority_PairObjChildTorideRockRDash               = 285,
+        cDrawPriority_LiftZenShiro                              = 286,
+        cDrawPriority_PairObjChildWarning                       = 287,
+        cDrawPriority_PairObjChildNoharaHanAtari                = 288,
+        cDrawPriority_PairObjChildKinokoAshibaHMove             = 289,
+        cDrawPriority_Ice                                       = 290,
+        cDrawPriority_GoalPole                                  = 291,
+        cDrawPriority_GoalPoleForPaintingStage                  = 292,
+        cDrawPriority_GoalPoleRDash                             = 293,
+        cDrawPriority_GoalPoleForPaintingStageRDash             = 294,
+        cDrawPriority_KanbanArrow                               = 295,
+        cDrawPriority_KanbanArrowRDash                          = 296,
+        cDrawPriority_KanbanArrowNarrowSpawnRange               = 297,
+        cDrawPriority_LuigiKanban11                             = 298,
+        cDrawPriority_LuigiKanban99                             = 299,
+        cDrawPriority_FollowGrassFlower                         = 300,
+        cDrawPriority_DVKusabanaHassei                          = 301,
+        cDrawPriority_SeaWakame                                 = 302,
+        cDrawPriority_RedRing                                   = 303,
+        cDrawPriority_GreenRing                                 = 304,
+        cDrawPriority_PurpleRing                                = 305,
+        cDrawPriority_BlueRing                                  = 306,
+        cDrawPriority_GoalRing                                  = 307,
+        cDrawPriority_RotationGuruGuru                          = 308,
+        cDrawPriority_RotationGuruGuruRDash                     = 309,
+        cDrawPriority_DoorNormal                                = 310,
+        cDrawPriority_DoorObake                                 = 311,
+        cDrawPriority_DoorToride                                = 312,
+        cDrawPriority_DoorTorideRDash                           = 313,
+        cDrawPriority_DoorCastle                                = 314,
+        cDrawPriority_DoorCastleRDash                           = 315,
+        cDrawPriority_DoorKoopa                                 = 316,
+        cDrawPriority_DoorKoopaRDash                            = 317,
+        cDrawPriority_CollectionCoin                            = 318,
+        cDrawPriority_CollectionCoinLine                        = 319,
+        cDrawPriority_CollectionCoinLineGroup                   = 320,
+        cDrawPriority_CollectionCoinBolt                        = 321,
+        cDrawPriority_CollectionCoinParent                      = 322,
+        cDrawPriority_CollectionCoinParentRDash                 = 323,
+        cDrawPriority_CollectionCoinParentRDashExtendedSpawnRange = 324,
+        cDrawPriority_CollectionCoinParentR6Castle              = 325,
+        cDrawPriority_CollectionCoinSnake                       = 326,
+        cDrawPriority_CollectionCoinSpin                        = 327,
+        cDrawPriority_RedCoin                                   = 328,
+        cDrawPriority_GreenCoin                                 = 329,
+        cDrawPriority_GreenCoinChild                            = 330,
+        cDrawPriority_CoinNankinTamasudareChild                 = 331,
+        cDrawPriority_CoinNankinTamasudareParent                = 332,
+        cDrawPriority_Choropu                                   = 333,
+        cDrawPriority_ChoropooShadow                            = 334,
+        cDrawPriority_Fruit                                     = 335,
+        cDrawPriority_IronBallHole                              = 336,
+        cDrawPriority_IronBallHoleRDashW2Toride                 = 337,
+        cDrawPriority_WakiDokanTogeTekkyu                       = 338,
         cDrawPriority_Hammer                                    = 339,
-        cDrawPriority_2F5                                       = 340,
+        cDrawPriority_HammerBros                                = 340,
         cDrawPriority_Boomerang                                 = 341,
-        cDrawPriority_2F7                                       = 342,
+        cDrawPriority_BoomerangBros                             = 342,
         cDrawPriority_FireBallBros                              = 343,
-        cDrawPriority_2F9                                       = 344,
+        cDrawPriority_FireBros                                  = 344,
         cDrawPriority_IceBallBros                               = 345,
-        cDrawPriority_2FB                                       = 346,
+        cDrawPriority_IceBros                                   = 346,
         cDrawPriority_MegaHammer                                = 347,
-        cDrawPriority_2FD                                       = 348,
-        cDrawPriority_2FF                                       = 349,
-        cDrawPriority_300                                       = 350,
-        cDrawPriority_301                                       = 351,
-        cDrawPriority_121                                       = 352,
-        cDrawPriority_122                                       = 353,
+        cDrawPriority_HimanBros                                 = 348,
+        cDrawPriority_Birikyu                                   = 349,
+        cDrawPriority_DensenKoopa                               = 350,
+        cDrawPriority_DensenKoopaTantai                         = 351,
+        cDrawPriority_ActorBlockHatena                          = 352,
+        cDrawPriority_ActorBlockHatenaRDash                     = 353,
         cDrawPriority_ActorBlockRenga                           = 354,
-        cDrawPriority_124                                       = 355,
-        cDrawPriority_125                                       = 356,
-        cDrawPriority_126                                       = 357,
-        cDrawPriority_127                                       = 358,
-        cDrawPriority_128                                       = 359,
-        cDrawPriority_129                                       = 360,
-        cDrawPriority_12A                                       = 361,
-        cDrawPriority_12B                                       = 362,
-        cDrawPriority_12C                                       = 363,
-        cDrawPriority_12D                                       = 364,
-        cDrawPriority_12E                                       = 365,
-        cDrawPriority_12F                                       = 366,
-        cDrawPriority_130                                       = 367,
-        cDrawPriority_131                                       = 368,
-        cDrawPriority_132                                       = 369,
-        cDrawPriority_133                                       = 370,
-        cDrawPriority_134                                       = 371,
-        cDrawPriority_13F                                       = 372,
-        cDrawPriority_140                                       = 373,
+        cDrawPriority_ActorBlockRengaRDash                      = 355,
+        cDrawPriority_ActorBlockRengaRailVMove                  = 356,
+        cDrawPriority_ActorBlockClear                           = 357,
+        cDrawPriority_ActorBlockClearRDash                      = 358,
+        cDrawPriority_ActorHatenaBlockLine                      = 359,
+        cDrawPriority_ActorRengaBlockLine                       = 360,
+        cDrawPriority_ActorHatenaBlockLineGroup                 = 361,
+        cDrawPriority_ActorRengaBlockLineGroup                  = 362,
+        cDrawPriority_ActorBlockHatenaAngle                     = 363,
+        cDrawPriority_ActorBlockHatenaAngleR99                  = 364,
+        cDrawPriority_ActorBlockRengaAngle                      = 365,
+        cDrawPriority_ActorBlockRengaAngleRDash                 = 366,
+        cDrawPriority_ActorBlockRengaAngleR99                   = 367,
+        cDrawPriority_ActorBlockHatenaPairChild                 = 368,
+        cDrawPriority_ActorBlockRengaPairChild                  = 369,
+        cDrawPriority_ActorBlockHatenaFollow                    = 370,
+        cDrawPriority_ActorBlockRengaFollow                     = 371,
+        cDrawPriority_ActorBlockHatenaEnemyCourse               = 372,
+        cDrawPriority_ActorBlockPataEnemyCourse                 = 373,
         cDrawPriority_ActorBlockMakeDRC                         = 374,
-        cDrawPriority_136                                       = 375,
-        cDrawPriority_137                                       = 376,
-        cDrawPriority_138                                       = 377,
-        cDrawPriority_13A                                       = 378,
-        cDrawPriority_13B                                       = 379,
-        cDrawPriority_0E4                                       = 380,
-        cDrawPriority_0F5                                       = 381,
-        cDrawPriority_0F6                                       = 382,
-        cDrawPriority_0F7                                       = 383,
-        cDrawPriority_0F8                                       = 384,
-        cDrawPriority_0F9                                       = 385,
-        cDrawPriority_139                                       = 386,
-        cDrawPriority_13C                                       = 387,
-        cDrawPriority_13D                                       = 388,
-        cDrawPriority_13E                                       = 389,
-        cDrawPriority_141                                       = 390,
-        cDrawPriority_142                                       = 391,
-        cDrawPriority_143                                       = 392,
-        cDrawPriority_14B                                       = 393,
+        cDrawPriority_ActorBlockPata                            = 375,
+        cDrawPriority_ActorBlockWater                           = 376,
+        cDrawPriority_ActorBlockCloud                           = 377,
+        cDrawPriority_ActorBlockSwitch                          = 378,
+        cDrawPriority_ActorBlockPSwitch                         = 379,
+        cDrawPriority_ActorBlockJump                            = 380,
+        cDrawPriority_ActorBlockStone                           = 381,
+        cDrawPriority_ActorBlockHard                            = 382,
+        cDrawPriority_ActorBlockWood                            = 383,
+        cDrawPriority_ActorBlockGuide                           = 384,
+        cDrawPriority_RDashLuigiBlock                           = 385,
+        cDrawPriority_ActorBlockSnakeCoin                       = 386,
+        cDrawPriority_ActorBlockChibiYoshi                      = 387,
+        cDrawPriority_ActorBlockBigRenga                        = 388,
+        cDrawPriority_ActorBlockBigHatena                       = 389,
+        cDrawPriority_RuletBlock                                = 390,
+        cDrawPriority_ChikuwaBlock                              = 391,
+        cDrawPriority_KameckBlock                               = 392,
+        cDrawPriority_DRCHiddenBlock                            = 393,
         cDrawPriority_ActorCoin                                 = 394,
-        cDrawPriority_18C                                       = 395,
-        cDrawPriority_18D                                       = 396,
-        cDrawPriority_18E                                       = 397,
-        cDrawPriority_18F                                       = 398,
-        cDrawPriority_190                                       = 399,
-        cDrawPriority_191                                       = 400,
-        cDrawPriority_192                                       = 401,
-        cDrawPriority_193                                       = 402,
-        cDrawPriority_194                                       = 403,
-        cDrawPriority_195                                       = 404,
-        cDrawPriority_196                                       = 405,
-        cDrawPriority_197                                       = 406,
-        cDrawPriority_198                                       = 407,
-        cDrawPriority_199                                       = 408,
-        cDrawPriority_19A                                       = 409,
-        cDrawPriority_19B                                       = 410,
-        cDrawPriority_19C                                       = 411,
-        cDrawPriority_19D                                       = 412,
-        cDrawPriority_19E                                       = 413,
-        cDrawPriority_1A0                                       = 414,
-        cDrawPriority_19F                                       = 415,
-        cDrawPriority_032                                       = 416,
-        cDrawPriority_1A1                                       = 417,
-        cDrawPriority_1A2                                       = 418,
-        cDrawPriority_1A3                                       = 419,
-        cDrawPriority_1A4                                       = 420,
-        cDrawPriority_1A5                                       = 421,
-        cDrawPriority_1A6                                       = 422,
-        cDrawPriority_1A7                                       = 423,
-        cDrawPriority_1A8                                       = 424,
+        cDrawPriority_ActorCoinRDash                            = 395,
+        cDrawPriority_ActorCoinFrozen                           = 396,
+        cDrawPriority_ActorCoinPairObj                          = 397,
+        cDrawPriority_ActorCoinDemoJump                         = 398,
+        cDrawPriority_ActorCoinHopJump                          = 399,
+        cDrawPriority_ActorCoinJump                             = 400,
+        cDrawPriority_ActorCoinJumpBattle                       = 401,
+        cDrawPriority_ActorCoinJumpUnabon                       = 402,
+        cDrawPriority_ActorCoinShowerJump                       = 403,
+        cDrawPriority_ActorCoinAngle                            = 404,
+        cDrawPriority_ActorCoinKaitenita                        = 405,
+        cDrawPriority_ActorCoinWater                            = 406,
+        cDrawPriority_ActorCoinFollow                           = 407,
+        cDrawPriority_ActorCoinBubble                           = 408,
+        cDrawPriority_ActorCoinJugem                            = 409,
+        cDrawPriority_ActorCoinPass                             = 410,
+        cDrawPriority_ActorCoinAkoya                            = 411,
+        cDrawPriority_ActorCoinRotation                         = 412,
+        cDrawPriority_ActorCoinRotationPass                     = 413,
+        cDrawPriority_ActorCoinRotationFloor                    = 414,
+        cDrawPriority_ActorCoinSpin                             = 415,
+        cDrawPriority_ActorCoinParachuteParent                  = 416,
+        cDrawPriority_ActorCoinParachute                        = 417,
+        cDrawPriority_ActorCoinSnake                            = 418,
+        cDrawPriority_ActorCoinKinokoLift                       = 419,
+        cDrawPriority_ActorCoinBalloon                          = 420,
+        cDrawPriority_ActorCoinGravity                          = 421,
+        cDrawPriority_ActorCoinShock                            = 422,
+        cDrawPriority_ActorCoinDRCAppearance                    = 423,
+        cDrawPriority_ActorCoinEat                              = 424,
         cDrawPriority_BlueCoin                                  = 425,
-        cDrawPriority_264                                       = 426,
-        cDrawPriority_1F9                                       = 427,
-        cDrawPriority_1FA                                       = 428,
-        cDrawPriority_1FB                                       = 429,
-        cDrawPriority_1FC                                       = 430,
-        cDrawPriority_1FD                                       = 431,
-        cDrawPriority_1FE                                       = 432,
-        cDrawPriority_311                                       = 433,
-        cDrawPriority_312                                       = 434,
-        cDrawPriority_052                                       = 435,
-        cDrawPriority_053                                       = 436,
-        cDrawPriority_0C5                                       = 437,
-        cDrawPriority_0C6                                       = 438,
-        cDrawPriority_265                                       = 439,
+        cDrawPriority_Basabasa                                  = 426,
+        cDrawPriority_Sanbo                                     = 427,
+        cDrawPriority_SanboParts                                = 428,
+        cDrawPriority_WakiBigHanachan                           = 429,
+        cDrawPriority_Hanachan                                  = 430,
+        cDrawPriority_HanachanRDash                             = 431,
+        cDrawPriority_BigHanachan                               = 432,
+        cDrawPriority_Kirifuki                                  = 433,
+        cDrawPriority_KirifukiRDash                             = 434,
+        cDrawPriority_TrampolineCloud                           = 435,
+        cDrawPriority_TrampolineCloudMove                       = 436,
+        cDrawPriority_LiftSpinRotation                          = 437,
+        cDrawPriority_LiftSpinRotationSync                      = 438,
+        cDrawPriority_TorchiLight                               = 439,
         cDrawPriority_KillerHoudai                              = 440,
         cDrawPriority_StretchKillerHoudai                       = 441,
         cDrawPriority_MagnumKillerHoudai                        = 442,
@@ -482,221 +482,221 @@ protected:
         cDrawPriority_MagnumKillerHoudaiDownRDash               = 448,
         cDrawPriority_SearchMagnumKillerHoudaiRDash             = 449,
         cDrawPriority_SearchMagnumKillerHoudaiDownRDash         = 450,
-        cDrawPriority_070                                       = 451,
-        cDrawPriority_071                                       = 452,
-        cDrawPriority_072                                       = 453,
-        cDrawPriority_073                                       = 454,
-        cDrawPriority_074                                       = 455,
-        cDrawPriority_273                                       = 456,
-        cDrawPriority_075                                       = 457,
-        cDrawPriority_274                                       = 458,
-        cDrawPriority_275                                       = 459,
+        cDrawPriority_KaitenHoudai                              = 451,
+        cDrawPriority_TahoshinKaitenHoudai                      = 452,
+        cDrawPriority_CannonShip                                = 453,
+        cDrawPriority_CannonRot                                 = 454,
+        cDrawPriority_CannonRotDokan                            = 455,
+        cDrawPriority_CannonBullet                              = 456,
+        cDrawPriority_CannonDokan                               = 457,
+        cDrawPriority_Killer                                    = 458,
+        cDrawPriority_MagnumKiller                              = 459,
         cDrawPriority_SearchKiller                              = 460,
-        cDrawPriority_277                                       = 461,
-        cDrawPriority_278                                       = 462,
-        cDrawPriority_279                                       = 463,
-        cDrawPriority_27B                                       = 464,
-        cDrawPriority_27C                                       = 465,
+        cDrawPriority_SearchMagnumKiller                        = 461,
+        cDrawPriority_KingKiller                                = 462,
+        cDrawPriority_KingKillerRDash                           = 463,
+        cDrawPriority_Dosun                                     = 464,
+        cDrawPriority_BigDosun                                  = 465,
         cDrawPriority_SwitchHatenaButton                        = 466,
-        cDrawPriority_SwitchPbutton                             = 467,
-        cDrawPriority_SwitchPbuttonRDash                        = 468,
-        cDrawPriority_SwitchPbuttonNoWallKick                   = 469,
-        cDrawPriority_15C                                       = 470,
-        cDrawPriority_15D                                       = 471,
-        cDrawPriority_313                                       = 472,
-        cDrawPriority_314                                       = 473,
-        cDrawPriority_315                                       = 474,
-        cDrawPriority_316                                       = 475,
-        cDrawPriority_317                                       = 476,
-        cDrawPriority_318                                       = 477,
-        cDrawPriority_319                                       = 478,
+        cDrawPriority_SwitchPButton                             = 467,
+        cDrawPriority_SwitchPButtonRDash                        = 468,
+        cDrawPriority_SwitchPButtonNoWallKick                   = 469,
+        cDrawPriority_SwitchBossKoopaButton                     = 470,
+        cDrawPriority_SwitchBossKoopaButtonAxe                  = 471,
+        cDrawPriority_Cloud                                     = 472,
+        cDrawPriority_PoisonCloud                               = 473,
+        cDrawPriority_CloudLight                                = 474,
+        cDrawPriority_BubbleCreateMgr                           = 475,
+        cDrawPriority_ObjSnow                                   = 476,
+        cDrawPriority_ObjSparks                                 = 477,
+        cDrawPriority_TagWind                                   = 478,
         cDrawPriority_TarzanIvy                                 = 479,
-        cDrawPriority_0EF                                       = 480,
-        cDrawPriority_0F0                                       = 481,
+        cDrawPriority_TarzanKusari                              = 480,
+        cDrawPriority_Ladder                                    = 481,
         cDrawPriority_SnakeBlock                                = 482,
-        cDrawPriority_0C3                                       = 483,
-        cDrawPriority_0C4                                       = 484,
-        cDrawPriority_0C8                                       = 485,
-        cDrawPriority_31E                                       = 486,
-        cDrawPriority_31D                                       = 487,
-        cDrawPriority_0C7                                       = 488,
-        cDrawPriority_0E5                                       = 489,
-        cDrawPriority_117                                       = 490,
-        cDrawPriority_31F                                       = 491,
-        cDrawPriority_166                                       = 492,
-        cDrawPriority_2F4                                       = 493,
-        cDrawPriority_303                                       = 494,
-        cDrawPriority_304                                       = 495,
+        cDrawPriority_SnakeBlockR76                             = 483,
+        cDrawPriority_SnakeBlockRDash                           = 484,
+        cDrawPriority_BlockLightLift                            = 485,
+        cDrawPriority_CircleLight                               = 486,
+        cDrawPriority_LightWater                                = 487,
+        cDrawPriority_RotChikeiObake                            = 488,
+        cDrawPriority_NoboribouObake                            = 489,
+        cDrawPriority_WaterStream                               = 490,
+        cDrawPriority_BigShell                                  = 491,
+        cDrawPriority_LiftWaterWheel                            = 492,
+        cDrawPriority_FruitTree                                 = 493,
+        cDrawPriority_Koton                                     = 494,
+        cDrawPriority_KotonGroup                                = 495,
         cDrawPriority_Intermittent                              = 496,
         cDrawPriority_IntermittentPermanent                     = 497,
         cDrawPriority_WaterIntermittent                         = 498,
         cDrawPriority_WaterIntermittentPermanent                = 499,
         cDrawPriority_WaterIntermittentPermanentRD3_3           = 500,
-        cDrawPriority_07E                                       = 501,
+        cDrawPriority_WaterIntermittentBoss                     = 501,
         cDrawPriority_WaterIntermittentBossChild                = 502,
         cDrawPriority_YoganIntermittent                         = 503,
         cDrawPriority_Woochan                                   = 504,
-        cDrawPriority_268                                       = 505,
+        cDrawPriority_ManholeChoropu                            = 505,
         cDrawPriority_Spanner                                   = 506,
-        cDrawPriority_26A                                       = 507,
-        cDrawPriority_26B                                       = 508,
-        cDrawPriority_26C                                       = 509,
-        cDrawPriority_26D                                       = 510,
-        cDrawPriority_26E                                       = 511,
-        cDrawPriority_26F                                       = 512,
-        cDrawPriority_270                                       = 513,
-        cDrawPriority_0B2                                       = 514,
-        cDrawPriority_100                                       = 515,
-        cDrawPriority_101                                       = 516,
-        cDrawPriority_0B3                                       = 517,
-        cDrawPriority_16B                                       = 518,
-        cDrawPriority_16C                                       = 519,
-        cDrawPriority_0B4                                       = 520,
-        cDrawPriority_0B5                                       = 521,
-        cDrawPriority_0B6                                       = 522,
-        cDrawPriority_0B7                                       = 523,
-        cDrawPriority_LineSpinLift                              = 524,
-        cDrawPriority_LineSpinLiftParentRDash                   = 525,
-        cDrawPriority_LineSpinLiftChildRDash                    = 526,
-        cDrawPriority_0BC                                       = 527,
-        cDrawPriority_081                                       = 528,
-        cDrawPriority_093                                       = 529,
-        cDrawPriority_094                                       = 530,
-        cDrawPriority_095                                       = 531,
-        cDrawPriority_096                                       = 532,
+        cDrawPriority_Manhole                                   = 507,
+        cDrawPriority_JugemThrowActor                           = 508,
+        cDrawPriority_Jugem                                     = 509,
+        cDrawPriority_JugemCoin                                 = 510,
+        cDrawPriority_JugemMultiplayer                          = 511,
+        cDrawPriority_JugemBody                                 = 512,
+        cDrawPriority_JugemBodyMultiplayer                      = 513,
+        cDrawPriority_LiftMoveOn                                = 514,
+        cDrawPriority_LiftRideMove                              = 515,
+        cDrawPriority_LiftRideMoveSky                           = 516,
+        cDrawPriority_ObjMoveOnGhost                            = 517,
+        cDrawPriority_LiftMoveOnNormal                          = 518,
+        cDrawPriority_LiftDirectionSwitch                       = 519,
+        cDrawPriority_LiftRideOffYogan                          = 520,
+        cDrawPriority_BlockForChallenge                         = 521,
+        cDrawPriority_BlockOdai                                 = 522,
+        cDrawPriority_QuestBlock                                = 523,
+        cDrawPriority_LineTrain                                 = 524,
+        cDrawPriority_LineTrainParentRDash                      = 525,
+        cDrawPriority_LineTrainChildRDash                       = 526,
+        cDrawPriority_BlockChallenge                            = 527,
+        cDrawPriority_LiftZenKaitenita                          = 528,
+        cDrawPriority_LiftZenHashi                              = 529,
+        cDrawPriority_LiftZenHashiShichu                        = 530,
+        cDrawPriority_LiftZenHashiTomegu                        = 531,
+        cDrawPriority_LiftZenYoko                               = 532,
         cDrawPriority_ElasticKinokoParent                       = 533,
-        cDrawPriority_0CB                                       = 534,
-        cDrawPriority_0CC                                       = 535,
-        cDrawPriority_0E7                                       = 536,
-        cDrawPriority_0E8                                       = 537,
-        cDrawPriority_0E6                                       = 538,
-        cDrawPriority_0EA                                       = 539,
-        cDrawPriority_287                                       = 540,
-        cDrawPriority_288                                       = 541,
-        cDrawPriority_289                                       = 542,
-        cDrawPriority_28B                                       = 543,
-        cDrawPriority_28C                                       = 544,
-        cDrawPriority_28D                                       = 545,
-        cDrawPriority_098                                       = 546,
-        cDrawPriority_099                                       = 547,
-        cDrawPriority_09A                                       = 548,
-        cDrawPriority_09B                                       = 549,
-        cDrawPriority_09C                                       = 550,
-        cDrawPriority_09D                                       = 551,
-        cDrawPriority_09E                                       = 552,
-        cDrawPriority_09F                                       = 553,
-        cDrawPriority_0A1                                       = 554,
-        cDrawPriority_0A2                                       = 555,
-        cDrawPriority_0A3                                       = 556,
-        cDrawPriority_0A4                                       = 557,
-        cDrawPriority_0A5                                       = 558,
-        cDrawPriority_0A6                                       = 559,
-        cDrawPriority_0A0                                       = 560,
-        cDrawPriority_0A7                                       = 561,
-        cDrawPriority_0A8                                       = 562,
-        cDrawPriority_0A9                                       = 563,
-        cDrawPriority_0AA                                       = 564,
-        cDrawPriority_0AB                                       = 565,
-        cDrawPriority_0AC                                       = 566,
-        cDrawPriority_0BE                                       = 567,
-        cDrawPriority_0BD                                       = 568,
-        cDrawPriority_0BB                                       = 569,
-        cDrawPriority_320                                       = 570,
-        cDrawPriority_0D3                                       = 571,
-        cDrawPriority_0D6                                       = 572,
-        cDrawPriority_0D4                                       = 573,
-        cDrawPriority_0D5                                       = 574,
-        cDrawPriority_0D7                                       = 575,
-        cDrawPriority_0D8                                       = 576,
-        cDrawPriority_0D9                                       = 577,
-        cDrawPriority_0DA                                       = 578,
-        cDrawPriority_0DB                                       = 579,
-        cDrawPriority_103                                       = 580,
-        cDrawPriority_0DC                                       = 581,
-        cDrawPriority_0DD                                       = 582,
-        cDrawPriority_0FA                                       = 583,
-        cDrawPriority_0FB                                       = 584,
-        cDrawPriority_162                                       = 585,
-        cDrawPriority_29F                                       = 586,
-        cDrawPriority_0E9                                       = 587,
-        cDrawPriority_29E                                       = 588,
-        cDrawPriority_2A1                                       = 589,
-        cDrawPriority_2A2                                       = 590,
-        cDrawPriority_1F8                                       = 591,
-        cDrawPriority_2A3                                       = 592,
-        cDrawPriority_104                                       = 593,
-        cDrawPriority_16E                                       = 594,
-        cDrawPriority_16F                                       = 595,
-        cDrawPriority_29D                                       = 596,
-        cDrawPriority_30A                                       = 597,
+        cDrawPriority_ElasticKinokoHorizontal                   = 534,
+        cDrawPriority_ElasticKinokoVertical                     = 535,
+        cDrawPriority_LiftScales                                = 536,
+        cDrawPriority_LiftScalesReturn                          = 537,
+        cDrawPriority_LiftScalesStep                            = 538,
+        cDrawPriority_WireMove                                  = 539,
+        cDrawPriority_KaronHead                                 = 540,
+        cDrawPriority_Karon                                     = 541,
+        cDrawPriority_BigKaron                                  = 542,
+        cDrawPriority_Mouse                                     = 543,
+        cDrawPriority_Chorobon                                  = 544,
+        cDrawPriority_ChorobonGroup                             = 545,
+        cDrawPriority_LiftRotationFull                          = 546,
+        cDrawPriority_LiftRotationFullChika                     = 547,
+        cDrawPriority_LiftRotationFullKinoko                    = 548,
+        cDrawPriority_LiftRotationFullWood                      = 549,
+        cDrawPriority_LiftRotationFullWoodRDash                 = 550,
+        cDrawPriority_LiftRotationFullStone                     = 551,
+        cDrawPriority_LiftRotationFullGhost                     = 552,
+        cDrawPriority_LiftRotationFullGhostRD4                  = 553,
+        cDrawPriority_LiftObakeChikeiHeya                       = 554,
+        cDrawPriority_LiftRotationFullColor                     = 555,
+        cDrawPriority_LiftRotationFullIron                      = 556,
+        cDrawPriority_LiftRotationFullIronRDash                 = 557,
+        cDrawPriority_LiftRotationFullIronRDash2                = 558,
+        cDrawPriority_LiftRotationFullGhostShip                 = 559,
+        cDrawPriority_ObjPolYashiki                             = 560,
+        cDrawPriority_LiftZenHammer                             = 561,
+        cDrawPriority_Moai                                      = 562,
+        cDrawPriority_MoaiRDash24                               = 563,
+        cDrawPriority_MoaiDown                                  = 564,
+        cDrawPriority_MoaiDownRDash24                           = 565,
+        cDrawPriority_MoaiRDash55                               = 566,
+        cDrawPriority_PalmTree                                  = 567,
+        cDrawPriority_BlockOutIvy                               = 568,
+        cDrawPriority_HandLight                                 = 569,
+        cDrawPriority_LiftZenYokoTomegu                         = 570,
+        cDrawPriority_LiftRideVMove                             = 571,
+        cDrawPriority_LiftRideVMoveSync                         = 572,
+        cDrawPriority_LiftRideHMove                             = 573,
+        cDrawPriority_LiftRideHMoveSync                         = 574,
+        cDrawPriority_LiftWaki                                  = 575,
+        cDrawPriority_LiftWakiStep                              = 576,
+        cDrawPriority_LiftLine                                  = 577,
+        cDrawPriority_LiftLineSync                              = 578,
+        cDrawPriority_LiftLineRDash                             = 579,
+        cDrawPriority_LiftWheel                                 = 580,
+        cDrawPriority_LiftSeesaw                                = 581,
+        cDrawPriority_LiftSeesawRDash                           = 582,
+        cDrawPriority_LiftObjbgHMove                            = 583,
+        cDrawPriority_LiftObjbgVMove                            = 584,
+        cDrawPriority_IceBlock                                  = 585,
+        cDrawPriority_Stand                                     = 586,
+        cDrawPriority_GuraRock                                  = 587,
+        cDrawPriority_Polter                                    = 588,
+        cDrawPriority_Bakubaku                                  = 589,
+        cDrawPriority_Ibaramushi                                = 590,
+        cDrawPriority_Musasabi                                  = 591,
+        cDrawPriority_Crow                                      = 592,
+        cDrawPriority_LiftLeaf                                  = 593,
+        cDrawPriority_WanwanPile                                = 594,
+        cDrawPriority_WanwanPileRDash                           = 595,
+        cDrawPriority_Wanwan                                    = 596,
+        cDrawPriority_Icicle                                    = 597,
         cDrawPriority_IcicleBig                                 = 598,
-        cDrawPriority_30B                                       = 599,
-        cDrawPriority_30C                                       = 600,
-        cDrawPriority_30D                                       = 601,
-        cDrawPriority_30E                                       = 602,
-        cDrawPriority_30F                                       = 603,
-        cDrawPriority_310                                       = 604,
-        cDrawPriority_163                                       = 605,
-        cDrawPriority_164                                       = 606,
-        cDrawPriority_165                                       = 607,
-        cDrawPriority_11D                                       = 608,
-        cDrawPriority_11E                                       = 609,
+        cDrawPriority_IcicleFixation                            = 599,
+        cDrawPriority_Teresa                                    = 600,
+        cDrawPriority_BigTeresa                                 = 601,
+        cDrawPriority_TeresaRotation                            = 602,
+        cDrawPriority_TeresaRotationParent                      = 603,
+        cDrawPriority_TeresaRotationParentRDash                 = 604,
+        cDrawPriority_IceAshiba                                 = 605,
+        cDrawPriority_IceAshibaWater                            = 606,
+        cDrawPriority_IceAshibaRail                             = 607,
+        cDrawPriority_FloatIceBlock                             = 608,
+        cDrawPriority_FloatIceBlockLarge                        = 609,
         cDrawPriority_Maruta                                    = 610,
-        cDrawPriority_0DF                                       = 611,
-        cDrawPriority_0EC                                       = 612,
+        cDrawPriority_Barrel                                    = 611,
+        cDrawPriority_WaterMove                                 = 612,
         cDrawPriority_FloorGyration                             = 613,
         cDrawPriority_FloorHoleDokan                            = 614,
-        cDrawPriority_0D0                                       = 615,
-        cDrawPriority_0D1                                       = 616,
-        cDrawPriority_0C9                                       = 617,
-        cDrawPriority_0CA                                       = 618,
-        cDrawPriority_107                                       = 619,
-        cDrawPriority_0CD                                       = 620,
-        cDrawPriority_0CE                                       = 621,
-        cDrawPriority_0CF                                       = 622,
+        cDrawPriority_GearGyration                              = 615,
+        cDrawPriority_GearGyrationRDash                         = 616,
+        cDrawPriority_LiftSlideKinoko                           = 617,
+        cDrawPriority_LiftSlideKinokoResident                   = 618,
+        cDrawPriority_LiftSlideTsuru                            = 619,
+        cDrawPriority_Patamet                                   = 620,
+        cDrawPriority_PatametBig                                = 621,
+        cDrawPriority_PatametRDash                              = 622,
         cDrawPriority_Bubble                                    = 623,
         cDrawPriority_BubbleSync                                = 624,
         cDrawPriority_BubbleRDash                               = 625,
         cDrawPriority_BubbleSyncRDash                           = 626,
-        cDrawPriority_292                                       = 627,
-        cDrawPriority_293                                       = 628,
-        cDrawPriority_294                                       = 629,
-        cDrawPriority_295                                       = 630,
-        cDrawPriority_298                                       = 631,
-        cDrawPriority_299                                       = 632,
-        cDrawPriority_29A                                       = 633,
-        cDrawPriority_29B                                       = 634,
-        cDrawPriority_29C                                       = 635,
-        cDrawPriority_161                                       = 636,
-        cDrawPriority_168                                       = 637,
-        cDrawPriority_169                                       = 638,
-        cDrawPriority_0F3                                       = 639,
-        cDrawPriority_0F4                                       = 640,
-        cDrawPriority_322                                       = 641,
-        cDrawPriority_323                                       = 642,
-        cDrawPriority_324                                       = 643,
-        cDrawPriority_325                                       = 644,
+        cDrawPriority_Crasher                                   = 627,
+        cDrawPriority_Unabon                                    = 628,
+        cDrawPriority_ChukanUnabon                              = 629,
+        cDrawPriority_DokanUnabon                               = 630,
+        cDrawPriority_UnabonRDash                               = 631,
+        cDrawPriority_KK                                        = 632,
+        cDrawPriority_KKResident                                = 633,
+        cDrawPriority_KKLiftFix                                 = 634,
+        cDrawPriority_KKLightning                               = 635,
+        cDrawPriority_Akoya                                     = 636,
+        cDrawPriority_LiftRemoconBalance                        = 637,
+        cDrawPriority_LiftRemoconBalanceRDash                   = 638,
+        cDrawPriority_LiftRemoconSeesaw                         = 639,
+        cDrawPriority_LiftRemoconXline                          = 640,
+        cDrawPriority_GuruGuru                                  = 641,
+        cDrawPriority_Gesso                                     = 642,
+        cDrawPriority_GessoChild                                = 643,
+        cDrawPriority_BaramakiGesso                             = 644,
         cDrawPriority_PlayerIce                                 = 645,
-        cDrawPriority_326                                       = 646,
-        cDrawPriority_144                                       = 647,
-        cDrawPriority_145                                       = 648,
-        cDrawPriority_146                                       = 649,
-        cDrawPriority_147                                       = 650,
-        cDrawPriority_0F1                                       = 651,
-        cDrawPriority_0F2                                       = 652,
-        cDrawPriority_327                                       = 653,
-        cDrawPriority_328                                       = 654,
+        cDrawPriority_Nut                                       = 646,
+        cDrawPriority_WoodBox                                   = 647,
+        cDrawPriority_IronBox                                   = 648,
+        cDrawPriority_IronBoxRDash                              = 649,
+        cDrawPriority_IronBoxRDashNarrowSpawnRange              = 650,
+        cDrawPriority_WoodBoxWaki                               = 651,
+        cDrawPriority_IronBoxWaki                               = 652,
+        cDrawPriority_StrongBox                                 = 653,
+        cDrawPriority_StrongBoxKey                              = 654,
         cDrawPriority_BattleItem                                = 655,
         cDrawPriority_VsBattleItem                              = 656,
-        cDrawPriority_2A4                                       = 657,
-        cDrawPriority_2A5                                       = 658,
-        cDrawPriority_321                                       = 659,
-        cDrawPriority_32C                                       = 660,
-        cDrawPriority_32D                                       = 661,
-        cDrawPriority_32F                                       = 662,
-        cDrawPriority_330                                       = 663,
-        cDrawPriority_331                                       = 664,
-        cDrawPriority_32A                                       = 665,
+        cDrawPriority_TogeMet                                   = 657,
+        cDrawPriority_TogeMetGroup                              = 658,
+        cDrawPriority_LiftHurikoCenter                          = 659,
+        cDrawPriority_TorpedoBase                               = 660,
+        cDrawPriority_SearchTorpedoBase                         = 661,
+        cDrawPriority_NormalTorpedo                             = 662,
+        cDrawPriority_NormalTorpedoGroup                        = 663,
+        cDrawPriority_SearchTorpedo                             = 664,
+        cDrawPriority_YoshiEgg                                  = 665,
         cDrawPriority_KokoopaShipLemmy                          = 666,
         cDrawPriority_KokoopaShipMorton                         = 667,
         cDrawPriority_KokoopaShipLarry                          = 668,
@@ -706,21 +706,21 @@ protected:
         cDrawPriority_KokoopaShipLudwig                         = 672,
         cDrawPriority_KokoopaShipWarpCannon                     = 673,
         cDrawPriority_Peach                                     = 674,
-        cDrawPriority_2E0                                       = 675,
+        cDrawPriority_PeachDemoShadowkun                        = 675,
         cDrawPriority_FinalDVPeach                              = 676,
         cDrawPriority_FinalDVShutter                            = 677,
-        cDrawPriority_2E3                                       = 678,
-        cDrawPriority_1D2                                       = 679,
-        cDrawPriority_148                                       = 680,
-        cDrawPriority_149                                       = 681,
-        cDrawPriority_14A                                       = 682,
-        cDrawPriority_119                                       = 683,
-        cDrawPriority_11A                                       = 684,
-        cDrawPriority_108                                       = 685,
+        cDrawPriority_ShortResultPeach                          = 678,
+        cDrawPriority_BalloonHangActor                          = 679,
+        cDrawPriority_MagicHandPa                               = 680,
+        cDrawPriority_MagicHandGu                               = 681,
+        cDrawPriority_MagicHandGuRDash                          = 682,
+        cDrawPriority_MagicHandUnderwaterKoopaJrDemo            = 683,
+        cDrawPriority_MagicHandBoxingKoopaJrDemo                = 684,
+        cDrawPriority_BossKoopaPlatform                         = 685,
         cDrawPriority_KoopaJrFire                               = 686,
         cDrawPriority_KoopaJrBall                               = 687,
-        cDrawPriority_174                                       = 688,
-        cDrawPriority_025                                       = 689,
+        cDrawPriority_KoopaJrBoxingFloor                        = 688,
+        cDrawPriority_KoopaJrBoxingFloorMgr                     = 689,
         cDrawPriority_UnderwaterKoopaJr                         = 690,
         cDrawPriority_UnderwaterKoopaJrClown                    = 691,
         cDrawPriority_UnderwaterKoopaJrRetreatPos               = 692,
@@ -728,18 +728,18 @@ protected:
         cDrawPriority_BoxingKoopaJrClown                        = 694,
         cDrawPriority_BoxingKoopaJrPostBattleDemo               = 695,
         cDrawPriority_BoxingKoopaJrClownPostBattleDemo          = 696,
-        cDrawPriority_054                                       = 697,
-        cDrawPriority_055                                       = 698,
-        cDrawPriority_056                                       = 699,
-        cDrawPriority_057                                       = 700,
-        cDrawPriority_058                                       = 701,
-        cDrawPriority_059                                       = 702,
+        cDrawPriority_BgActorWater                              = 697,
+        cDrawPriority_BgActorLava                               = 698,
+        cDrawPriority_BgActorPoison                             = 699,
+        cDrawPriority_BgActorQuicksand                          = 700,
+        cDrawPriority_BgActorCloud                              = 701,
+        cDrawPriority_BgActorMoya                               = 702,
         cDrawPriority_BgActorYukaMario                          = 703,
-        cDrawPriority_05B                                       = 704,
-        cDrawPriority_0FC                                       = 705,
-        cDrawPriority_0FD                                       = 706,
-        cDrawPriority_0FE                                       = 707,
-        cDrawPriority_0FF                                       = 708,
+        cDrawPriority_BgActorYukaWave                           = 704,
+        cDrawPriority_YoganJimen                                = 705,
+        cDrawPriority_YoganJimenRDash                           = 706,
+        cDrawPriority_MonorailBlock                             = 707,
+        cDrawPriority_MonorailBlockRail                         = 708,
         cDrawPriority_SlotChibiYoshi                            = 709,
         cDrawPriority_MiniGamePanelItem                         = 710,
         cDrawPriority_SlotItem                                  = 711,
@@ -748,16 +748,16 @@ protected:
         cDrawPriority_CoinmakiItem                              = 714,
         cDrawPriority_CoinmakiCannon                            = 715,
         cDrawPriority_MiniGameKinopio                           = 716,
-        cDrawPriority_33F                                       = 717,
-        cDrawPriority_340                                       = 718,
-        cDrawPriority_341                                       = 719,
-        cDrawPriority_342                                       = 720,
-        cDrawPriority_10A                                       = 721,
-        cDrawPriority_10B                                       = 722,
-        cDrawPriority_10C                                       = 723,
-        cDrawPriority_118                                       = 724,
-        cDrawPriority_17B                                       = 725,
-        cDrawPriority_350                                       = 726,
+        cDrawPriority_Tsuru                                     = 717,
+        cDrawPriority_DokanJoint                                = 718,
+        cDrawPriority_DokanJointMame                            = 719,
+        cDrawPriority_GoalKinokoHouse                           = 720,
+        cDrawPriority_AirshipBottom                             = 721,
+        cDrawPriority_AirshipBottomWaku                         = 722,
+        cDrawPriority_AirshipBottomRDash                        = 723,
+        cDrawPriority_Cookie                                    = 724,
+        cDrawPriority_Gattan                                    = 725,
+        cDrawPriority_TouchDrcMaskLight                         = 726,
         cDrawPriority_StaffRollMgr                              = 727,
         cDrawPriority_StaffRollMgrRDash                         = 728,
         cDrawPriority_StaffRollChibiYoshiChar                   = 729,
@@ -824,64 +824,64 @@ protected:
         cDrawPriority_CourseSelectPeach                         = 791,
         cDrawPriority_CourseSelectW1Item                        = 792,
         cDrawPriority_CourseSelectStarGate                      = 793,
-        cDrawPriority_38E                                       = 794,
-        cDrawPriority_38F                                       = 795,
+        cDrawPriority_Null1                                     = 794,
+        cDrawPriority_Null2                                     = 795,
 
         // No Draw
-        cDrawPriority_390                                       =   0 - 0x3ff,
-        cDrawPriority_120                                       =   1 - 0x3ff,
-        cDrawPriority_23F                                       =   2 - 0x3ff,
-        cDrawPriority_240                                       =   3 - 0x3ff,
-        cDrawPriority_241                                       =   4 - 0x3ff,
-        cDrawPriority_242                                       =   5 - 0x3ff,
-        cDrawPriority_243                                       =   6 - 0x3ff,
-        cDrawPriority_244                                       =   7 - 0x3ff,
-        cDrawPriority_245                                       =   8 - 0x3ff,
-        cDrawPriority_246                                       =   9 - 0x3ff,
-        cDrawPriority_247                                       =  10 - 0x3ff,
-        cDrawPriority_248                                       =  11 - 0x3ff,
-        cDrawPriority_249                                       =  12 - 0x3ff,
-        cDrawPriority_24A                                       =  13 - 0x3ff,
+        cDrawPriority_Null3                                     =   0 - 0x3ff,
+        cDrawPriority_BrokenBlock                               =   1 - 0x3ff,
+        cDrawPriority_Zoom                                      =   2 - 0x3ff,
+        cDrawPriority_ZoomRDash                                 =   3 - 0x3ff,
+        cDrawPriority_KyokaiVelAdj                              =   4 - 0x3ff,
+        cDrawPriority_MaxUeLeft                                 =   5 - 0x3ff,
+        cDrawPriority_MaxUeRight                                =   6 - 0x3ff,
+        cDrawPriority_StopLrUp                                  =   7 - 0x3ff,
+        cDrawPriority_StopLrDw                                  =   8 - 0x3ff,
+        cDrawPriority_MaxUe2Left                                =   9 - 0x3ff,
+        cDrawPriority_MaxUe2Right                               =  10 - 0x3ff,
+        cDrawPriority_AutoScrollTag                             =  11 - 0x3ff,
+        cDrawPriority_SpecialScrollTag                          =  12 - 0x3ff,
+        cDrawPriority_KoopaAreaObj                              =  13 - 0x3ff,
         cDrawPriority_BgCenter                                  =  14 - 0x3ff,
-        cDrawPriority_24C                                       =  15 - 0x3ff,
-        cDrawPriority_24E                                       =  16 - 0x3ff,
-        cDrawPriority_000                                       =  17 - 0x3ff,
-        cDrawPriority_001                                       =  18 - 0x3ff,
-        cDrawPriority_002                                       =  19 - 0x3ff,
-        cDrawPriority_003                                       =  20 - 0x3ff,
-        cDrawPriority_004                                       =  21 - 0x3ff,
-        cDrawPriority_005                                       =  22 - 0x3ff,
-        cDrawPriority_006                                       =  23 - 0x3ff,
-        cDrawPriority_007                                       =  24 - 0x3ff,
-        cDrawPriority_008                                       =  25 - 0x3ff,
-        cDrawPriority_009                                       =  26 - 0x3ff,
-        cDrawPriority_00B                                       =  27 - 0x3ff,
-        cDrawPriority_00C                                       =  28 - 0x3ff,
-        cDrawPriority_00D                                       =  29 - 0x3ff,
-        cDrawPriority_027                                       =  30 - 0x3ff,
-        cDrawPriority_028                                       =  31 - 0x3ff,
-        cDrawPriority_029                                       =  32 - 0x3ff,
-        cDrawPriority_02A                                       =  33 - 0x3ff,
-        cDrawPriority_189                                       =  34 - 0x3ff,
-        cDrawPriority_18A                                       =  35 - 0x3ff,
-        cDrawPriority_267                                       =  36 - 0x3ff,
-        cDrawPriority_266                                       =  37 - 0x3ff,
-        cDrawPriority_21E                                       =  38 - 0x3ff,
-        cDrawPriority_21F                                       =  39 - 0x3ff,
-        cDrawPriority_220                                       =  40 - 0x3ff,
-        cDrawPriority_026                                       =  41 - 0x3ff,
-        cDrawPriority_223                                       =  42 - 0x3ff,
-        cDrawPriority_2EB                                       =  43 - 0x3ff,
-        cDrawPriority_271                                       =  44 - 0x3ff,
-        cDrawPriority_272                                       =  45 - 0x3ff,
-        cDrawPriority_221                                       =  46 - 0x3ff,
-        cDrawPriority_222                                       =  47 - 0x3ff,
-        cDrawPriority_20F                                       =  48 - 0x3ff,
-        cDrawPriority_02D                                       =  49 - 0x3ff,
-        cDrawPriority_02E                                       =  50 - 0x3ff,
-        cDrawPriority_00E                                       =  51 - 0x3ff,
-        cDrawPriority_00F                                       =  52 - 0x3ff,
-        cDrawPriority_010                                       =  53 - 0x3ff,
+        cDrawPriority_EnvSoundPhenomenaTag                      =  15 - 0x3ff,
+        cDrawPriority_EnvSoundTag                               =  16 - 0x3ff,
+        cDrawPriority_FlagSwitchTag                             =  17 - 0x3ff,
+        cDrawPriority_FlagSwitchAnd                             =  18 - 0x3ff,
+        cDrawPriority_FlagSwitchOr                              =  19 - 0x3ff,
+        cDrawPriority_FlagSwitchRandom                          =  20 - 0x3ff,
+        cDrawPriority_FlagSwitchChange                          =  21 - 0x3ff,
+        cDrawPriority_FlagSwitchIf                              =  22 - 0x3ff,
+        cDrawPriority_FlagSwitchIfRDash                         =  23 - 0x3ff,
+        cDrawPriority_FlagSwitchIfR63                           =  24 - 0x3ff,
+        cDrawPriority_FlagSwitchContinuous                      =  25 - 0x3ff,
+        cDrawPriority_FlagSwitchTimed                           =  26 - 0x3ff,
+        cDrawPriority_PairObjParent                             =  27 - 0x3ff,
+        cDrawPriority_RDashPairObjParent                        =  28 - 0x3ff,
+        cDrawPriority_RailPolyParent                            =  29 - 0x3ff,
+        cDrawPriority_CenterSwing                               =  30 - 0x3ff,
+        cDrawPriority_CenterRotation                            =  31 - 0x3ff,
+        cDrawPriority_CenterSwingRail                           =  32 - 0x3ff,
+        cDrawPriority_CenterRotateRail                          =  33 - 0x3ff,
+        cDrawPriority_ActorCoinSpring                           =  34 - 0x3ff,
+        cDrawPriority_ActorCoinSpringFunsui                     =  35 - 0x3ff,
+        cDrawPriority_FlyingKinokoWakidashi                     =  36 - 0x3ff,
+        cDrawPriority_WakiDokan                                 =  37 - 0x3ff,
+        cDrawPriority_WakiPuku                                  =  38 - 0x3ff,
+        cDrawPriority_WakiSachiPuku                             =  39 - 0x3ff,
+        cDrawPriority_WakiNigePuku                              =  40 - 0x3ff,
+        cDrawPriority_PukuGroupTag                              =  41 - 0x3ff,
+        cDrawPriority_PukuParent                                =  42 - 0x3ff,
+        cDrawPriority_NextGotoBlock                             =  43 - 0x3ff,
+        cDrawPriority_WakiJugem                                 =  44 - 0x3ff,
+        cDrawPriority_WakiJugemMultiplayer                      =  45 - 0x3ff,
+        cDrawPriority_WakiTobiPuku                              =  46 - 0x3ff,
+        cDrawPriority_WakiTobiMechaPuku                         =  47 - 0x3ff,
+        cDrawPriority_WakiPentaro                               =  48 - 0x3ff,
+        cDrawPriority_CoinCenterCircle                          =  49 - 0x3ff,
+        cDrawPriority_CoinCenterCirclePass                      =  50 - 0x3ff,
+        cDrawPriority_NiceCoinRegular                           =  51 - 0x3ff,
+        cDrawPriority_NiceCoinRegularResident                   =  52 - 0x3ff,
+        cDrawPriority_NiceCoin                                  =  53 - 0x3ff,
         cDrawPriority_BunDemo                                   =  54 - 0x3ff,
         cDrawPriority_KokoopaDemo                               =  55 - 0x3ff,
         cDrawPriority_KoopaJrDemo                               =  56 - 0x3ff,
@@ -893,59 +893,59 @@ protected:
         cDrawPriority_PeachDemo                                 =  62 - 0x3ff,
         cDrawPriority_KameckIceConfig                           =  63 - 0x3ff,
         cDrawPriority_KameckWarpPos                             =  64 - 0x3ff,
-        cDrawPriority_011                                       =  65 - 0x3ff,
-        cDrawPriority_012                                       =  66 - 0x3ff,
-        cDrawPriority_02F                                       =  67 - 0x3ff,
-        cDrawPriority_030                                       =  68 - 0x3ff,
-        cDrawPriority_2EC                                       =  69 - 0x3ff,
-        cDrawPriority_2ED                                       =  70 - 0x3ff,
-        cDrawPriority_00A                                       =  71 - 0x3ff,
-        cDrawPriority_014                                       =  72 - 0x3ff,
-        cDrawPriority_031                                       =  73 - 0x3ff,
-        cDrawPriority_167                                       =  74 - 0x3ff,
-        cDrawPriority_015                                       =  75 - 0x3ff,
-        cDrawPriority_016                                       =  76 - 0x3ff,
-        cDrawPriority_017                                       =  77 - 0x3ff,
+        cDrawPriority_GroupId                                   =  65 - 0x3ff,
+        cDrawPriority_GroupIdTogemet                            =  66 - 0x3ff,
+        cDrawPriority_RotControl                                =  67 - 0x3ff,
+        cDrawPriority_RotControlFlag                            =  68 - 0x3ff,
+        cDrawPriority_ChangeBlock                               =  69 - 0x3ff,
+        cDrawPriority_ChangeBlockRDash                          =  70 - 0x3ff,
+        cDrawPriority_ActorDrcTouch                             =  71 - 0x3ff,
+        cDrawPriority_BarnarSyncMgr                             =  72 - 0x3ff,
+        cDrawPriority_KinokoLiftParent                          =  73 - 0x3ff,
+        cDrawPriority_LiftRemoconBalanceClinch                  =  74 - 0x3ff,
+        cDrawPriority_WakiCoinParachute                         =  75 - 0x3ff,
+        cDrawPriority_SnakeCoinParent                           =  76 - 0x3ff,
+        cDrawPriority_ChoropuCoinMgr                            =  77 - 0x3ff,
         cDrawPriority_MiniGameMgr                               =  78 - 0x3ff,
         cDrawPriority_MiniGameMgrRDash                          =  79 - 0x3ff,
         cDrawPriority_ShuffleBlockMgr                           =  80 - 0x3ff,
         cDrawPriority_SlotMgr                                   =  81 - 0x3ff,
         cDrawPriority_CoinmakiMgr                               =  82 - 0x3ff,
-        cDrawPriority_1C6                                       =  83 - 0x3ff,
+        cDrawPriority_WakiHipAttack                             =  83 - 0x3ff,
         cDrawPriority_WakiSearchMagKiller                       =  84 - 0x3ff,
-        cDrawPriority_32E                                       =  85 - 0x3ff,
-        cDrawPriority_01D                                       =  86 - 0x3ff,
-        cDrawPriority_01E                                       =  87 - 0x3ff,
-        cDrawPriority_01F                                       =  88 - 0x3ff,
+        cDrawPriority_TorpedoWakiTag                            =  85 - 0x3ff,
+        cDrawPriority_MagicHandTagPa                            =  86 - 0x3ff,
+        cDrawPriority_MagicHandTagGu                            =  87 - 0x3ff,
+        cDrawPriority_MagicHandTagGuFast                        =  88 - 0x3ff,
         cDrawPriority_KoopaFireWaki                             =  89 - 0x3ff,
-        cDrawPriority_31A                                       =  90 - 0x3ff,
-        cDrawPriority_020                                       =  91 - 0x3ff,
-        cDrawPriority_013                                       =  92 - 0x3ff,
-        cDrawPriority_31B                                       =  93 - 0x3ff,
-        cDrawPriority_31C                                       =  94 - 0x3ff,
+        cDrawPriority_TagFrameSet                               =  90 - 0x3ff,
+        cDrawPriority_WaterDownTag                              =  91 - 0x3ff,
+        cDrawPriority_DensenKoopaTag                            =  92 - 0x3ff,
+        cDrawPriority_ShadowkunHouseReadTag                     =  93 - 0x3ff,
+        cDrawPriority_TagResultDemo                             =  94 - 0x3ff,
         cDrawPriority_ShootingStar                              =  95 - 0x3ff,
-        cDrawPriority_302                                       =  96 - 0x3ff,
-        cDrawPriority_227                                       =  97 - 0x3ff,
-        cDrawPriority_228                                       =  98 - 0x3ff,
-        cDrawPriority_343                                       =  99 - 0x3ff,
-        cDrawPriority_344                                       = 100 - 0x3ff,
-        cDrawPriority_345                                       = 101 - 0x3ff,
+        cDrawPriority_DensenKoopaShock                          =  96 - 0x3ff,
+        cDrawPriority_WakiIgaPuku                               =  97 - 0x3ff,
+        cDrawPriority_WakiBigIgaPuku                            =  98 - 0x3ff,
+        cDrawPriority_WaterEffectFilter                         =  99 - 0x3ff,
+        cDrawPriority_WaterEffectFilterRDash                    = 100 - 0x3ff,
+        cDrawPriority_WaterAwa                                  = 101 - 0x3ff,
         cDrawPriority_RoyLiftWaki                               = 102 - 0x3ff,
-        cDrawPriority_2A0                                       = 103 - 0x3ff,
-        cDrawPriority_346                                       = 104 - 0x3ff,
-        cDrawPriority_024                                       = 105 - 0x3ff,
-        cDrawPriority_24D                                       = 106 - 0x3ff,
-        cDrawPriority_230                                       = 107 - 0x3ff,
-        cDrawPriority_296                                       = 108 - 0x3ff,
-        cDrawPriority_297                                       = 109 - 0x3ff,
-        cDrawPriority_351                                       = 110 - 0x3ff,
-        cDrawPriority_11C                                       = 111 - 0x3ff,
-        cDrawPriority_1B8                                       = 112 - 0x3ff,
-        cDrawPriority_352                                       = 113 - 0x3ff,
-        cDrawPriority_353                                       = 114 - 0x3ff,
-        cDrawPriority_14C                                       = 115 - 0x3ff,
-        cDrawPriority_347                                       = 116 - 0x3ff,
-        cDrawPriority_1B7                                       = 117 - 0x3ff
+        cDrawPriority_WakiBakubaku                              = 103 - 0x3ff,
+        cDrawPriority_FlyingMusabiPlayerTag                     = 104 - 0x3ff,
+        cDrawPriority_ShortResultDemoTag                        = 105 - 0x3ff,
+        cDrawPriority_TagKusaTypeSet                            = 106 - 0x3ff,
+        cDrawPriority_WakiKeronpa                               = 107 - 0x3ff,
+        cDrawPriority_WakiUnabon                                = 108 - 0x3ff,
+        cDrawPriority_WakiUnabonRDash                           = 109 - 0x3ff,
+        cDrawPriority_TouchMukoActor                            = 110 - 0x3ff,
+        cDrawPriority_PMusasabiBlock                            = 111 - 0x3ff,
+        cDrawPriority_TagShabonProtectArea                      = 112 - 0x3ff,
+        cDrawPriority_EditCoinPlacementTag                      = 113 - 0x3ff,
+        cDrawPriority_FeverEffect                               = 114 - 0x3ff,
+        cDrawPriority_RailEffectGeneratorBlock                  = 115 - 0x3ff,
+        cDrawPriority_PlayerScrollLrFlagTag                     = 116 - 0x3ff,
+        cDrawPriority_TottenHouseReadTagRDash                   = 117 - 0x3ff
     };
 
     // Address: 0x10001940
@@ -962,122 +962,122 @@ public:
      * @brief 0
      * @par Address: 0x10003D54
      */
-    static const s32 cProfileID_000;
+    static const s32 cProfileID_FlagSwitchTag;
     /**
      * @brief 1
      * @par Address: 0x10003D58
      */
-    static const s32 cProfileID_001;
+    static const s32 cProfileID_FlagSwitchAnd;
     /**
      * @brief 2
      * @par Address: 0x10003D5C
      */
-    static const s32 cProfileID_002;
+    static const s32 cProfileID_FlagSwitchOr;
     /**
      * @brief 3
      * @par Address: 0x10003D60
      */
-    static const s32 cProfileID_003;
+    static const s32 cProfileID_FlagSwitchRandom;
     /**
      * @brief 4
      * @par Address: 0x10003D64
      */
-    static const s32 cProfileID_004;
+    static const s32 cProfileID_FlagSwitchChange;
     /**
      * @brief 5
      * @par Address: 0x10003D68
      */
-    static const s32 cProfileID_005;
+    static const s32 cProfileID_FlagSwitchIf;
     /**
      * @brief 6
      * @par Address: 0x10003D6C
      */
-    static const s32 cProfileID_006;
+    static const s32 cProfileID_FlagSwitchIfRDash;
     /**
      * @brief 7
      * @par Address: 0x10003D70
      */
-    static const s32 cProfileID_007;
+    static const s32 cProfileID_FlagSwitchIfR63;
     /**
      * @brief 8
      * @par Address: 0x10003D74
      */
-    static const s32 cProfileID_008;
+    static const s32 cProfileID_FlagSwitchContinuous;
     /**
      * @brief 9
      * @par Address: 0x10003D78
      */
-    static const s32 cProfileID_009;
+    static const s32 cProfileID_FlagSwitchTimed;
     /**
      * @brief 10
      * @par Address: 0x10003D7C
      */
-    static const s32 cProfileID_00A;
+    static const s32 cProfileID_ActorDrcTouch;
     /**
      * @brief 11
      * @par Address: 0x10003D80
      */
-    static const s32 cProfileID_00B;
+    static const s32 cProfileID_PairObjParent;
     /**
      * @brief 12
      * @par Address: 0x10003D84
      */
-    static const s32 cProfileID_00C;
+    static const s32 cProfileID_RDashPairObjParent;
     /**
      * @brief 13
      * @par Address: 0x10003D88
      */
-    static const s32 cProfileID_00D;
+    static const s32 cProfileID_RailPolyParent;
     /**
      * @brief 14
      * @par Address: 0x10003D8C
      */
-    static const s32 cProfileID_00E;
+    static const s32 cProfileID_NiceCoinRegular;
     /**
      * @brief 15
      * @par Address: 0x10003D90
      */
-    static const s32 cProfileID_00F;
+    static const s32 cProfileID_NiceCoinRegularResident;
     /**
      * @brief 16
      * @par Address: 0x10003D94
      */
-    static const s32 cProfileID_010;
+    static const s32 cProfileID_NiceCoin;
     /**
      * @brief 17
      * @par Address: 0x10003D98
      */
-    static const s32 cProfileID_011;
+    static const s32 cProfileID_GroupId;
     /**
      * @brief 18
      * @par Address: 0x10003D9C
      */
-    static const s32 cProfileID_012;
+    static const s32 cProfileID_GroupIdTogemet;
     /**
      * @brief 19
      * @par Address: 0x10003DA0
      */
-    static const s32 cProfileID_013;
+    static const s32 cProfileID_DensenKoopaTag;
     /**
      * @brief 20
      * @par Address: 0x10003DA4
      */
-    static const s32 cProfileID_014;
+    static const s32 cProfileID_BarnarSyncMgr;
     /**
      * @brief 21
      * @par Address: 0x10003DA8
      */
-    static const s32 cProfileID_015;
+    static const s32 cProfileID_WakiCoinParachute;
     /**
      * @brief 22
      * @par Address: 0x10003DAC
      */
-    static const s32 cProfileID_016;
+    static const s32 cProfileID_SnakeCoinParent;
     /**
      * @brief 23
      * @par Address: 0x10003DB0
      */
-    static const s32 cProfileID_017;
+    static const s32 cProfileID_ChoropuCoinMgr;
     /**
      * @brief 24
      * @par Address: 0x10003DB4
@@ -1107,22 +1107,22 @@ public:
      * @brief 29
      * @par Address: 0x10003DC8
      */
-    static const s32 cProfileID_01D;
+    static const s32 cProfileID_MagicHandTagPa;
     /**
      * @brief 30
      * @par Address: 0x10003DCC
      */
-    static const s32 cProfileID_01E;
+    static const s32 cProfileID_MagicHandTagGu;
     /**
      * @brief 31
      * @par Address: 0x10003DD0
      */
-    static const s32 cProfileID_01F;
+    static const s32 cProfileID_MagicHandTagGuFast;
     /**
      * @brief 32
      * @par Address: 0x10003DD4
      */
-    static const s32 cProfileID_020;
+    static const s32 cProfileID_WaterDownTag;
     /**
      * @brief 33
      * @par Address: 0x10003DD8
@@ -1142,82 +1142,82 @@ public:
      * @brief 36
      * @par Address: 0x10003DE4
      */
-    static const s32 cProfileID_024;
+    static const s32 cProfileID_ShortResultDemoTag;
     /**
      * @brief 37
      * @par Address: 0x10003DE8
      */
-    static const s32 cProfileID_025;
+    static const s32 cProfileID_KoopaJrBoxingFloorMgr;
     /**
      * @brief 38
      * @par Address: 0x10003DEC
      */
-    static const s32 cProfileID_026;
+    static const s32 cProfileID_PukuGroupTag;
     /**
      * @brief 39
      * @par Address: 0x10003DF0
      */
-    static const s32 cProfileID_027;
+    static const s32 cProfileID_CenterSwing;
     /**
      * @brief 40
      * @par Address: 0x10003DF4
      */
-    static const s32 cProfileID_028;
+    static const s32 cProfileID_CenterRotation;
     /**
      * @brief 41
      * @par Address: 0x10003DF8
      */
-    static const s32 cProfileID_029;
+    static const s32 cProfileID_CenterSwingRail;
     /**
      * @brief 42
      * @par Address: 0x10003DFC
      */
-    static const s32 cProfileID_02A;
+    static const s32 cProfileID_CenterRotateRail;
     /**
      * @brief 43
      * @par Address: 0x10003E00
      */
-    static const s32 cProfileID_02B;
+    static const s32 cProfileID_RotationGuruGuru;
     /**
      * @brief 44
      * @par Address: 0x10003E04
      */
-    static const s32 cProfileID_02C;
+    static const s32 cProfileID_RotationGuruGuruRDash;
     /**
      * @brief 45
      * @par Address: 0x10003E08
      */
-    static const s32 cProfileID_02D;
+    static const s32 cProfileID_CoinCenterCircle;
     /**
      * @brief 46
      * @par Address: 0x10003E0C
      */
-    static const s32 cProfileID_02E;
+    static const s32 cProfileID_CoinCenterCirclePass;
     /**
      * @brief 47
      * @par Address: 0x10003E10
      */
-    static const s32 cProfileID_02F;
+    static const s32 cProfileID_RotControl;
     /**
      * @brief 48
      * @par Address: 0x10003E14
      */
-    static const s32 cProfileID_030;
+    static const s32 cProfileID_RotControlFlag;
     /**
      * @brief 49
      * @par Address: 0x10003E18
      */
-    static const s32 cProfileID_031;
+    static const s32 cProfileID_KinokoLiftParent;
     /**
      * @brief 50
      * @par Address: 0x10003E1C
      */
-    static const s32 cProfileID_032;
+    static const s32 cProfileID_ActorCoinParachuteParent;
     /**
      * @brief 51
      * @par Address: 0x10003E20
      */
-    static const s32 cProfileID_033;
+    static const s32 cProfileID_ObjSpinBolt;
     /**
      * @brief 52
      * @par Address: 0x10003E24
@@ -1232,32 +1232,32 @@ public:
      * @brief 54
      * @par Address: 0x10003E2C
      */
-    static const s32 cProfileID_036;
+    static const s32 cProfileID_ObjPol;
     /**
      * @brief 55
      * @par Address: 0x10003E30
      */
-    static const s32 cProfileID_037;
+    static const s32 cProfileID_ObjPolToride;
     /**
      * @brief 56
      * @par Address: 0x10003E34
      */
-    static const s32 cProfileID_038;
+    static const s32 cProfileID_ObjPolNohara;
     /**
      * @brief 57
      * @par Address: 0x10003E38
      */
-    static const s32 cProfileID_039;
+    static const s32 cProfileID_ObjPolKogen;
     /**
      * @brief 58
      * @par Address: 0x10003E3C
      */
-    static const s32 cProfileID_03A;
+    static const s32 cProfileID_ObjPolAshiba;
     /**
      * @brief 59
      * @par Address: 0x10003E40
      */
-    static const s32 cProfileID_03B;
+    static const s32 cProfileID_LiftZenKaihei;
     /**
      * @brief 60
      * @par Address: 0x10003E44
@@ -1267,82 +1267,82 @@ public:
      * @brief 61
      * @par Address: 0x10003E48
      */
-    static const s32 cProfileID_03D;
+    static const s32 cProfileID_PairObjChildToride;
     /**
      * @brief 62
      * @par Address: 0x10003E4C
      */
-    static const s32 cProfileID_03E;
+    static const s32 cProfileID_PairObjChildIwa;
     /**
      * @brief 63
      * @par Address: 0x10003E50
      */
-    static const s32 cProfileID_03F;
+    static const s32 cProfileID_PairObjChildIron;
     /**
      * @brief 64
      * @par Address: 0x10003E54
      */
-    static const s32 cProfileID_040;
+    static const s32 cProfileID_PairObjChildNohara;
     /**
      * @brief 65
      * @par Address: 0x10003E58
      */
-    static const s32 cProfileID_041;
+    static const s32 cProfileID_PairObjChildKogen;
     /**
      * @brief 66
      * @par Address: 0x10003E5C
      */
-    static const s32 cProfileID_042;
+    static const s32 cProfileID_LiftZenKumiawase;
     /**
      * @brief 67
      * @par Address: 0x10003E60
      */
-    static const s32 cProfileID_043;
+    static const s32 cProfileID_LiftZenTagaichigai;
     /**
      * @brief 68
      * @par Address: 0x10003E64
      */
-    static const s32 cProfileID_044;
+    static const s32 cProfileID_LiftZenTagaichigaiGear;
     /**
      * @brief 69
      * @par Address: 0x10003E68
      */
-    static const s32 cProfileID_045;
+    static const s32 cProfileID_LiftZenShiroYogan;
     /**
      * @brief 70
      * @par Address: 0x10003E6C
      */
-    static const s32 cProfileID_046;
+    static const s32 cProfileID_PairObjChildSabakuIseki;
     /**
      * @brief 71
      * @par Address: 0x10003E70
      */
-    static const s32 cProfileID_047;
+    static const s32 cProfileID_PairObjChildTorideRock;
     /**
      * @brief 72
      * @par Address: 0x10003E74
      */
-    static const s32 cProfileID_048;
+    static const s32 cProfileID_PairObjChildTorideRockRDash;
     /**
      * @brief 73
      * @par Address: 0x10003E78
      */
-    static const s32 cProfileID_049;
+    static const s32 cProfileID_LiftZenShiro;
     /**
      * @brief 74
      * @par Address: 0x10003E7C
      */
-    static const s32 cProfileID_04A;
+    static const s32 cProfileID_PairObjChildWarning;
     /**
      * @brief 75
      * @par Address: 0x10003E80
      */
-    static const s32 cProfileID_04B;
+    static const s32 cProfileID_PairObjChildNoharaHanAtari;
     /**
      * @brief 76
      * @par Address: 0x10003E84
      */
-    static const s32 cProfileID_04C;
+    static const s32 cProfileID_PairObjChildKinokoAshibaHMove;
     /**
      * @brief 77
      * @par Address: 0x10003E88
@@ -1362,52 +1362,52 @@ public:
      * @brief 80
      * @par Address: 0x10003E94
      */
-    static const s32 cProfileID_050;
+    static const s32 cProfileID_ObjKinoko;
     /**
      * @brief 81
      * @par Address: 0x10003E98
      */
-    static const s32 cProfileID_051;
+    static const s32 cProfileID_FlyingKinoko;
     /**
      * @brief 82
      * @par Address: 0x10003E9C
      */
-    static const s32 cProfileID_052;
+    static const s32 cProfileID_TrampolineCloud;
     /**
      * @brief 83
      * @par Address: 0x10003EA0
      */
-    static const s32 cProfileID_053;
+    static const s32 cProfileID_TrampolineCloudMovesWhenRiding;
     /**
      * @brief 84
      * @par Address: 0x10003EA4
      */
-    static const s32 cProfileID_054;
+    static const s32 cProfileID_BgActorWater;
     /**
      * @brief 85
      * @par Address: 0x10003EA8
      */
-    static const s32 cProfileID_055;
+    static const s32 cProfileID_BgActorLava;
     /**
      * @brief 86
      * @par Address: 0x10003EAC
      */
-    static const s32 cProfileID_056;
+    static const s32 cProfileID_BgActorPoison;
     /**
      * @brief 87
      * @par Address: 0x10003EB0
      */
-    static const s32 cProfileID_057;
+    static const s32 cProfileID_BgActorQuicksand;
     /**
      * @brief 88
      * @par Address: 0x10003EB4
      */
-    static const s32 cProfileID_058;
+    static const s32 cProfileID_BgActorCloud;
     /**
      * @brief 89
      * @par Address: 0x10003EB8
      */
-    static const s32 cProfileID_059;
+    static const s32 cProfileID_BgActorMoya;
     /**
      * @brief 90
      * @par Address: 0x10003EBC
@@ -1417,52 +1417,52 @@ public:
      * @brief 91
      * @par Address: 0x10003EC0
      */
-    static const s32 cProfileID_05B;
+    static const s32 cProfileID_BgActorYukaWave;
     /**
      * @brief 92
      * @par Address: 0x10003EC4
      */
-    static const s32 cProfileID_05C;
+    static const s32 cProfileID_LineSpinLift;
     /**
      * @brief 93
      * @par Address: 0x10003EC8
      */
-    static const s32 cProfileID_05D;
+    static const s32 cProfileID_LineKinokoBlock;
     /**
      * @brief 94
      * @par Address: 0x10003ECC
      */
-    static const s32 cProfileID_05E;
+    static const s32 cProfileID_GroupLineKinokoLift;
     /**
      * @brief 95
      * @par Address: 0x10003ED0
      */
-    static const s32 cProfileID_05F;
+    static const s32 cProfileID_LiftRotationHuriko;
     /**
      * @brief 96
      * @par Address: 0x10003ED4
      */
-    static const s32 cProfileID_060;
+    static const s32 cProfileID_LiftRotationHurikoRDash;
     /**
      * @brief 97
      * @par Address: 0x10003ED8
      */
-    static const s32 cProfileID_061;
+    static const s32 cProfileID_LiftHanRotateLight;
     /**
      * @brief 98
      * @par Address: 0x10003EDC
      */
-    static const s32 cProfileID_062;
+    static const s32 cProfileID_LiftHuriko;
     /**
      * @brief 99
      * @par Address: 0x10003EE0
      */
-    static const s32 cProfileID_063;
+    static const s32 cProfileID_LiftHurikoRDash;
     /**
      * @brief 100
      * @par Address: 0x10003EE4
      */
-    static const s32 cProfileID_064;
+    static const s32 cProfileID_RailPolygon;
     /**
      * @brief 101
      * @par Address: 0x10003EE8
@@ -1522,47 +1522,47 @@ public:
      * @brief 112
      * @par Address: 0x10003F14
      */
-    static const s32 cProfileID_070;
+    static const s32 cProfileID_KaitenHoudai;
     /**
      * @brief 113
      * @par Address: 0x10003F18
      */
-    static const s32 cProfileID_071;
+    static const s32 cProfileID_TahoshinKaitenHoudai;
     /**
      * @brief 114
      * @par Address: 0x10003F1C
      */
-    static const s32 cProfileID_072;
+    static const s32 cProfileID_CannonShip;
     /**
      * @brief 115
      * @par Address: 0x10003F20
      */
-    static const s32 cProfileID_073;
+    static const s32 cProfileID_CannonRot;
     /**
      * @brief 116
      * @par Address: 0x10003F24
      */
-    static const s32 cProfileID_074;
+    static const s32 cProfileID_CannonRotDokan;
     /**
      * @brief 117
      * @par Address: 0x10003F28
      */
-    static const s32 cProfileID_075;
+    static const s32 cProfileID_CannonDokan;
     /**
      * @brief 118
      * @par Address: 0x10003F2C
      */
-    static const s32 cProfileID_076;
+    static const s32 cProfileID_RedCoin;
     /**
      * @brief 119
      * @par Address: 0x10003F30
      */
-    static const s32 cProfileID_077;
+    static const s32 cProfileID_GreenCoin;
     /**
      * @brief 120
      * @par Address: 0x10003F34
      */
-    static const s32 cProfileID_078;
+    static const s32 cProfileID_GreenCoinChild;
     /**
      * @brief 121
      * @par Address: 0x10003F38
@@ -1592,7 +1592,7 @@ public:
      * @brief 126
      * @par Address: 0x10003F4C
      */
-    static const s32 cProfileID_07E;
+    static const s32 cProfileID_WaterIntermittentBoss;
     /**
      * @brief 127
      * @par Address: 0x10003F50
@@ -1607,327 +1607,327 @@ public:
      * @brief 129
      * @par Address: 0x10003F58
      */
-    static const s32 cProfileID_081;
+    static const s32 cProfileID_LiftZenKaitenita;
     /**
      * @brief 130
      * @par Address: 0x10003F5C
      */
-    static const s32 cProfileID_082;
+    static const s32 cProfileID_ObjDokanMameRight;
     /**
      * @brief 131
      * @par Address: 0x10003F60
      */
-    static const s32 cProfileID_083;
+    static const s32 cProfileID_ObjDokanMameLeft;
     /**
      * @brief 132
      * @par Address: 0x10003F64
      */
-    static const s32 cProfileID_084;
+    static const s32 cProfileID_ObjDokanMameUp;
     /**
      * @brief 133
      * @par Address: 0x10003F68
      */
-    static const s32 cProfileID_085;
+    static const s32 cProfileID_ObjDokanMameDown;
     /**
      * @brief 134
      * @par Address: 0x10003F6C
      */
-    static const s32 cProfileID_ObjPipeDownNG;
+    static const s32 cProfileID_ObjDokanDownNG;
     /**
      * @brief 135
      * @par Address: 0x10003F70
      */
-    static const s32 cProfileID_087;
+    static const s32 cProfileID_CoinBattleDokanUpNG;
     /**
      * @brief 136
      * @par Address: 0x10003F74
      */
-    static const s32 cProfileID_088;
+    static const s32 cProfileID_CoinBattleDokanDownNG;
     /**
      * @brief 137
      * @par Address: 0x10003F78
      */
-    static const s32 cProfileID_089;
+    static const s32 cProfileID_CoinBattleDokanLeftNG;
     /**
      * @brief 138
      * @par Address: 0x10003F7C
      */
-    static const s32 cProfileID_08A;
+    static const s32 cProfileID_CoinBattleDokanRightNG;
     /**
      * @brief 139
      * @par Address: 0x10003F80
      */
-    static const s32 cProfileID_08B;
+    static const s32 cProfileID_ZoomDokanRight;
     /**
      * @brief 140
      * @par Address: 0x10003F84
      */
-    static const s32 cProfileID_08C;
+    static const s32 cProfileID_ZoomDokanLeft;
     /**
      * @brief 141
      * @par Address: 0x10003F88
      */
-    static const s32 cProfileID_08D;
+    static const s32 cProfileID_ZoomDokanUp;
     /**
      * @brief 142
      * @par Address: 0x10003F8C
      */
-    static const s32 cProfileID_08E;
+    static const s32 cProfileID_ZoomDokanDown;
     /**
      * @brief 143
      * @par Address: 0x10003F90
      */
-    static const s32 cProfileID_08F;
+    static const s32 cProfileID_RotationObjDokan;
     /**
      * @brief 144
      * @par Address: 0x10003F94
      */
-    static const s32 cProfileID_090;
+    static const s32 cProfileID_RotationObjDokanRDash;
     /**
      * @brief 145
      * @par Address: 0x10003F98
      */
-    static const s32 cProfileID_091;
+    static const s32 cProfileID_CannonPipe;
     /**
      * @brief 146
      * @par Address: 0x10003F9C
      */
-    static const s32 cProfileID_092;
+    static const s32 cProfileID_CannonPipeRDash;
     /**
      * @brief 147
      * @par Address: 0x10003FA0
      */
-    static const s32 cProfileID_093;
+    static const s32 cProfileID_LiftZenHashi;
     /**
      * @brief 148
      * @par Address: 0x10003FA4
      */
-    static const s32 cProfileID_094;
+    static const s32 cProfileID_LiftZenHashiShichu;
     /**
      * @brief 149
      * @par Address: 0x10003FA8
      */
-    static const s32 cProfileID_095;
+    static const s32 cProfileID_LiftZenHashiTomegu;
     /**
      * @brief 150
      * @par Address: 0x10003FAC
      */
-    static const s32 cProfileID_096;
+    static const s32 cProfileID_LiftZenYoko;
     /**
      * @brief 151
      * @par Address: 0x10003FB0
      */
-    static const s32 cProfileID_097;
+    static const s32 cProfileID_RailPolyChild;
     /**
      * @brief 152
      * @par Address: 0x10003FB4
      */
-    static const s32 cProfileID_098;
+    static const s32 cProfileID_LiftRotationFull;
     /**
      * @brief 153
      * @par Address: 0x10003FB8
      */
-    static const s32 cProfileID_099;
+    static const s32 cProfileID_LiftRotationFullChika;
     /**
      * @brief 154
      * @par Address: 0x10003FBC
      */
-    static const s32 cProfileID_09A;
+    static const s32 cProfileID_LiftRotationFullKinoko;
     /**
      * @brief 155
      * @par Address: 0x10003FC0
      */
-    static const s32 cProfileID_09B;
+    static const s32 cProfileID_LiftRotationFullWood;
     /**
      * @brief 156
      * @par Address: 0x10003FC4
      */
-    static const s32 cProfileID_09C;
+    static const s32 cProfileID_LiftRotationFullWoodRDash;
     /**
      * @brief 157
      * @par Address: 0x10003FC8
      */
-    static const s32 cProfileID_09D;
+    static const s32 cProfileID_LiftRotationFullStone;
     /**
      * @brief 158
      * @par Address: 0x10003FCC
      */
-    static const s32 cProfileID_09E;
+    static const s32 cProfileID_LiftRotationFullGhost;
     /**
      * @brief 159
      * @par Address: 0x10003FD0
      */
-    static const s32 cProfileID_09F;
+    static const s32 cProfileID_LiftRotationFullGhostRD4;
     /**
      * @brief 160
      * @par Address: 0x10003FD4
      */
-    static const s32 cProfileID_0A0;
+    static const s32 cProfileID_ObjPolYashiki;
     /**
      * @brief 161
      * @par Address: 0x10003FD8
      */
-    static const s32 cProfileID_0A1;
+    static const s32 cProfileID_LiftObakeChikeiHeya;
     /**
      * @brief 162
      * @par Address: 0x10003FDC
      */
-    static const s32 cProfileID_0A2;
+    static const s32 cProfileID_LiftRotationFullColor;
     /**
      * @brief 163
      * @par Address: 0x10003FE0
      */
-    static const s32 cProfileID_0A3;
+    static const s32 cProfileID_LiftRotationFullIron;
     /**
      * @brief 164
      * @par Address: 0x10003FE4
      */
-    static const s32 cProfileID_0A4;
+    static const s32 cProfileID_LiftRotationFullIronRDash;
     /**
      * @brief 165
      * @par Address: 0x10003FE8
      */
-    static const s32 cProfileID_0A5;
+    static const s32 cProfileID_LiftRotationFullIronRDash2;
     /**
      * @brief 166
      * @par Address: 0x10003FEC
      */
-    static const s32 cProfileID_0A6;
+    static const s32 cProfileID_LiftRotationFullGhostShip;
     /**
      * @brief 167
      * @par Address: 0x10003FF0
      */
-    static const s32 cProfileID_0A7;
+    static const s32 cProfileID_LiftZenHammer;
     /**
      * @brief 168
      * @par Address: 0x10003FF4
      */
-    static const s32 cProfileID_0A8;
+    static const s32 cProfileID_Moai;
     /**
      * @brief 169
      * @par Address: 0x10003FF8
      */
-    static const s32 cProfileID_0A9;
+    static const s32 cProfileID_MoaiRDash24;
     /**
      * @brief 170
      * @par Address: 0x10003FFC
      */
-    static const s32 cProfileID_0AA;
+    static const s32 cProfileID_MoaiDown;
     /**
      * @brief 171
      * @par Address: 0x10004000
      */
-    static const s32 cProfileID_0AB;
+    static const s32 cProfileID_MoaiDownRDash24;
     /**
      * @brief 172
      * @par Address: 0x10004004
      */
-    static const s32 cProfileID_0AC;
+    static const s32 cProfileID_MoaiRDash55;
     /**
      * @brief 173
      * @par Address: 0x10004008
      */
-    static const s32 cProfileID_0AD;
+    static const s32 cProfileID_ObjSpinBoltChild;
     /**
      * @brief 174
      * @par Address: 0x1000400C
      */
-    static const s32 cProfileID_0AE;
+    static const s32 cProfileID_ObjSpinBoltChildPyramid;
     /**
      * @brief 175
      * @par Address: 0x10004010
      */
-    static const s32 cProfileID_0AF;
+    static const s32 cProfileID_ObjSpinBoltChildPyramidResident;
     /**
      * @brief 176
      * @par Address: 0x10004014
      */
-    static const s32 cProfileID_0B0;
+    static const s32 cProfileID_ObjSpinAshiba;
     /**
      * @brief 177
      * @par Address: 0x10004018
      */
-    static const s32 cProfileID_0B1;
+    static const s32 cProfileID_SpinWire;
     /**
      * @brief 178
      * @par Address: 0x1000401C
      */
-    static const s32 cProfileID_0B2;
+    static const s32 cProfileID_LiftMoveOn;
     /**
      * @brief 179
      * @par Address: 0x10004020
      */
-    static const s32 cProfileID_0B3;
+    static const s32 cProfileID_ObjMoveOnGhost;
     /**
      * @brief 180
      * @par Address: 0x10004024
      */
-    static const s32 cProfileID_0B4;
+    static const s32 cProfileID_LiftRideOffYogan;
     /**
      * @brief 181
      * @par Address: 0x10004028
      */
-    static const s32 cProfileID_0B5;
+    static const s32 cProfileID_BlockForChallenge;
     /**
      * @brief 182
      * @par Address: 0x1000402C
      */
-    static const s32 cProfileID_0B6;
+    static const s32 cProfileID_BlockOdai;
     /**
      * @brief 183
      * @par Address: 0x10004030
      */
-    static const s32 cProfileID_0B7;
+    static const s32 cProfileID_QuestBlock;
     /**
      * @brief 184
      * @par Address: 0x10004034
      */
-    static const s32 cProfileID_LineSpinLift;
+    static const s32 cProfileID_LineTrain;
     /**
      * @brief 185
      * @par Address: 0x10004038
      */
-    static const s32 cProfileID_LineSpinLiftParentRDash;
+    static const s32 cProfileID_LineTrainParentRDash;
     /**
      * @brief 186
      * @par Address: 0x1000403C
      */
-    static const s32 cProfileID_LineSpinLiftChildRDash;
+    static const s32 cProfileID_LineTrainChildRDash;
     /**
      * @brief 187
      * @par Address: 0x10004040
      */
-    static const s32 cProfileID_0BB;
+    static const s32 cProfileID_HandLight;
     /**
      * @brief 188
      * @par Address: 0x10004044
      */
-    static const s32 cProfileID_0BC;
+    static const s32 cProfileID_BlockChallenge;
     /**
      * @brief 189
      * @par Address: 0x10004048
      */
-    static const s32 cProfileID_0BD;
+    static const s32 cProfileID_BlockOutIvy;
     /**
      * @brief 190
      * @par Address: 0x1000404C
      */
-    static const s32 cProfileID_0BE;
+    static const s32 cProfileID_PalmTree;
     /**
      * @brief 191
      * @par Address: 0x10004050
      */
-    static const s32 cProfileID_0BF;
+    static const s32 cProfileID_IronBallHole;
     /**
      * @brief 192
      * @par Address: 0x10004054
      */
-    static const s32 cProfileID_0C0;
+    static const s32 cProfileID_IronBallHoleRDashW2Toride;
     /**
      * @brief 193
      * @par Address: 0x10004058
      */
-    static const s32 cProfileID_0C1;
+    static const s32 cProfileID_WakiDokanTogeTekkyu;
     /**
      * @brief 194
      * @par Address: 0x1000405C
@@ -1937,77 +1937,77 @@ public:
      * @brief 195
      * @par Address: 0x10004060
      */
-    static const s32 cProfileID_0C3;
+    static const s32 cProfileID_SnakeBlockR76;
     /**
      * @brief 196
      * @par Address: 0x10004064
      */
-    static const s32 cProfileID_0C4;
+    static const s32 cProfileID_SnakeBlockRDash;
     /**
      * @brief 197
      * @par Address: 0x10004068
      */
-    static const s32 cProfileID_0C5;
+    static const s32 cProfileID_LiftSpinRotation;
     /**
      * @brief 198
      * @par Address: 0x1000406C
      */
-    static const s32 cProfileID_0C6;
+    static const s32 cProfileID_LiftSpinRotationSync;
     /**
      * @brief 199
      * @par Address: 0x10004070
      */
-    static const s32 cProfileID_0C7;
+    static const s32 cProfileID_RotChikeiObake;
     /**
      * @brief 200
      * @par Address: 0x10004074
      */
-    static const s32 cProfileID_0C8;
+    static const s32 cProfileID_BlockLightLift;
     /**
      * @brief 201
      * @par Address: 0x10004078
      */
-    static const s32 cProfileID_0C9;
+    static const s32 cProfileID_LiftSlideKinoko;
     /**
      * @brief 202
      * @par Address: 0x1000407C
      */
-    static const s32 cProfileID_0CA;
+    static const s32 cProfileID_LiftSlideKinokoResident;
     /**
      * @brief 203
      * @par Address: 0x10004080
      */
-    static const s32 cProfileID_0CB;
+    static const s32 cProfileID_ElasticKinokoHorizontal;
     /**
      * @brief 204
      * @par Address: 0x10004084
      */
-    static const s32 cProfileID_0CC;
+    static const s32 cProfileID_ElasticKinokoVertical;
     /**
      * @brief 205
      * @par Address: 0x10004088
      */
-    static const s32 cProfileID_0CD;
+    static const s32 cProfileID_Patamet;
     /**
      * @brief 206
      * @par Address: 0x1000408C
      */
-    static const s32 cProfileID_0CE;
+    static const s32 cProfileID_PatametBig;
     /**
      * @brief 207
      * @par Address: 0x10004090
      */
-    static const s32 cProfileID_0CF;
+    static const s32 cProfileID_PatametRDash;
     /**
      * @brief 208
      * @par Address: 0x10004094
      */
-    static const s32 cProfileID_0D0;
+    static const s32 cProfileID_GearGyration;
     /**
      * @brief 209
      * @par Address: 0x10004098
      */
-    static const s32 cProfileID_0D1;
+    static const s32 cProfileID_GearGyrationRDash;
     /**
      * @brief 210
      * @par Address: 0x1000409C
@@ -2017,57 +2017,57 @@ public:
      * @brief 211
      * @par Address: 0x100040A0
      */
-    static const s32 cProfileID_0D3;
+    static const s32 cProfileID_LiftRideVMove;
     /**
      * @brief 212
      * @par Address: 0x100040A4
      */
-    static const s32 cProfileID_0D4;
+    static const s32 cProfileID_LiftRideHMove;
     /**
      * @brief 213
      * @par Address: 0x100040A8
      */
-    static const s32 cProfileID_0D5;
+    static const s32 cProfileID_LiftRideHMoveSync;
     /**
      * @brief 214
      * @par Address: 0x100040AC
      */
-    static const s32 cProfileID_0D6;
+    static const s32 cProfileID_LiftRideVMoveSync;
     /**
      * @brief 215
      * @par Address: 0x100040B0
      */
-    static const s32 cProfileID_0D7;
+    static const s32 cProfileID_LiftWaki;
     /**
      * @brief 216
      * @par Address: 0x100040B4
      */
-    static const s32 cProfileID_0D8;
+    static const s32 cProfileID_LiftWakiStep;
     /**
      * @brief 217
      * @par Address: 0x100040B8
      */
-    static const s32 cProfileID_0D9;
+    static const s32 cProfileID_LiftLine;
     /**
      * @brief 218
      * @par Address: 0x100040BC
      */
-    static const s32 cProfileID_0DA;
+    static const s32 cProfileID_LiftLineSync;
     /**
      * @brief 219
      * @par Address: 0x100040C0
      */
-    static const s32 cProfileID_0DB;
+    static const s32 cProfileID_LiftLineRDash;
     /**
      * @brief 220
      * @par Address: 0x100040C4
      */
-    static const s32 cProfileID_0DC;
+    static const s32 cProfileID_LiftSeesaw;
     /**
      * @brief 221
      * @par Address: 0x100040C8
      */
-    static const s32 cProfileID_0DD;
+    static const s32 cProfileID_LiftSeesawRDash;
     /**
      * @brief 222
      * @par Address: 0x100040CC
@@ -2077,72 +2077,72 @@ public:
      * @brief 223
      * @par Address: 0x100040D0
      */
-    static const s32 cProfileID_0DF;
+    static const s32 cProfileID_Barrel;
     /**
      * @brief 224
      * @par Address: 0x100040D4
      */
-    static const s32 cProfileID_Burner;
+    static const s32 cProfileID_Barnar;
     /**
      * @brief 225
      * @par Address: 0x100040D8
      */
-    static const s32 cProfileID_0E1;
+    static const s32 cProfileID_BarnarLarge;
     /**
      * @brief 226
      * @par Address: 0x100040DC
      */
-    static const s32 cProfileID_0E2;
+    static const s32 cProfileID_BarnarSync;
     /**
      * @brief 227
      * @par Address: 0x100040E0
      */
-    static const s32 cProfileID_0E3;
+    static const s32 cProfileID_BarnarPivot;
     /**
      * @brief 228
      * @par Address: 0x100040E4
      */
-    static const s32 cProfileID_0E4;
+    static const s32 cProfileID_ActorBlockJump;
     /**
      * @brief 229
      * @par Address: 0x100040E8
      */
-    static const s32 cProfileID_0E5;
+    static const s32 cProfileID_NoboribouObake;
     /**
      * @brief 230
      * @par Address: 0x100040EC
      */
-    static const s32 cProfileID_0E6;
+    static const s32 cProfileID_LiftScalesStep;
     /**
      * @brief 231
      * @par Address: 0x100040F0
      */
-    static const s32 cProfileID_0E7;
+    static const s32 cProfileID_LiftScales;
     /**
      * @brief 232
      * @par Address: 0x100040F4
      */
-    static const s32 cProfileID_0E8;
+    static const s32 cProfileID_LiftScalesReturn;
     /**
      * @brief 233
      * @par Address: 0x100040F8
      */
-    static const s32 cProfileID_0E9;
+    static const s32 cProfileID_GuraRock;
     /**
      * @brief 234
      * @par Address: 0x100040FC
      */
-    static const s32 cProfileID_0EA;
+    static const s32 cProfileID_WireMove;
     /**
      * @brief 235
      * @par Address: 0x10004100
      */
-    static const s32 cProfileID_0EB;
+    static const s32 cProfileID_IceLump;
     /**
      * @brief 236
      * @par Address: 0x10004104
      */
-    static const s32 cProfileID_0EC;
+    static const s32 cProfileID_WaterMove;
     /**
      * @brief 237
      * @par Address: 0x10004108
@@ -2157,112 +2157,112 @@ public:
      * @brief 239
      * @par Address: 0x10004110
      */
-    static const s32 cProfileID_0EF;
+    static const s32 cProfileID_TarzanKusari;
     /**
      * @brief 240
      * @par Address: 0x10004114
      */
-    static const s32 cProfileID_0F0;
+    static const s32 cProfileID_Ladder;
     /**
      * @brief 241
      * @par Address: 0x10004118
      */
-    static const s32 cProfileID_0F1;
+    static const s32 cProfileID_WoodBoxWaki;
     /**
      * @brief 242
      * @par Address: 0x1000411C
      */
-    static const s32 cProfileID_0F2;
+    static const s32 cProfileID_IronBoxWaki;
     /**
      * @brief 243
      * @par Address: 0x10004120
      */
-    static const s32 cProfileID_0F3;
+    static const s32 cProfileID_LiftRemoconSeesaw;
     /**
      * @brief 244
      * @par Address: 0x10004124
      */
-    static const s32 cProfileID_0F4;
+    static const s32 cProfileID_LiftRemoconXline;
     /**
      * @brief 245
      * @par Address: 0x10004128
      */
-    static const s32 cProfileID_0F5;
+    static const s32 cProfileID_ActorBlockStone;
     /**
      * @brief 246
      * @par Address: 0x1000412C
      */
-    static const s32 cProfileID_0F6;
+    static const s32 cProfileID_ActorBlockHard;
     /**
      * @brief 247
      * @par Address: 0x10004130
      */
-    static const s32 cProfileID_0F7;
+    static const s32 cProfileID_ActorBlockWood;
     /**
      * @brief 248
      * @par Address: 0x10004134
      */
-    static const s32 cProfileID_0F8;
+    static const s32 cProfileID_ActorBlockGuide;
     /**
      * @brief 249
      * @par Address: 0x10004138
      */
-    static const s32 cProfileID_0F9;
+    static const s32 cProfileID_RDashLuigiBlock;
     /**
      * @brief 250
      * @par Address: 0x1000413C
      */
-    static const s32 cProfileID_0FA;
+    static const s32 cProfileID_LiftObjbgHMove;
     /**
      * @brief 251
      * @par Address: 0x10004140
      */
-    static const s32 cProfileID_0FB;
+    static const s32 cProfileID_LiftObjbgVMove;
     /**
      * @brief 252
      * @par Address: 0x10004144
      */
-    static const s32 cProfileID_0FC;
+    static const s32 cProfileID_YoganJimen;
     /**
      * @brief 253
      * @par Address: 0x10004148
      */
-    static const s32 cProfileID_0FD;
+    static const s32 cProfileID_YoganJimenRDash;
     /**
      * @brief 254
      * @par Address: 0x1000414C
      */
-    static const s32 cProfileID_0FE;
+    static const s32 cProfileID_MonorailBlock;
     /**
      * @brief 255
      * @par Address: 0x10004150
      */
-    static const s32 cProfileID_0FF;
+    static const s32 cProfileID_MonorailBlockRail;
     /**
      * @brief 256
      * @par Address: 0x10004154
      */
-    static const s32 cProfileID_100;
+    static const s32 cProfileID_LiftRideMove;
     /**
      * @brief 257
      * @par Address: 0x10004158
      */
-    static const s32 cProfileID_101;
+    static const s32 cProfileID_LiftRideMoveSky;
     /**
      * @brief 258
      * @par Address: 0x1000415C
      */
-    static const s32 cProfileID_102;
+    static const s32 cProfileID_RotationLiftSemisolid;
     /**
      * @brief 259
      * @par Address: 0x10004160
      */
-    static const s32 cProfileID_103;
+    static const s32 cProfileID_LiftWheel;
     /**
      * @brief 260
      * @par Address: 0x10004164
      */
-    static const s32 cProfileID_104;
+    static const s32 cProfileID_LiftLeaf;
     /**
      * @brief 261
      * @par Address: 0x10004168
@@ -2277,12 +2277,12 @@ public:
      * @brief 263
      * @par Address: 0x10004170
      */
-    static const s32 cProfileID_107;
+    static const s32 cProfileID_LiftSlideTsuru;
     /**
      * @brief 264
      * @par Address: 0x10004174
      */
-    static const s32 cProfileID_108;
+    static const s32 cProfileID_BossKoopaPlatform;
     /**
      * @brief 265
      * @par Address: 0x10004178
@@ -2292,17 +2292,17 @@ public:
      * @brief 266
      * @par Address: 0x1000417C
      */
-    static const s32 cProfileID_10A;
+    static const s32 cProfileID_AirshipBottom;
     /**
      * @brief 267
      * @par Address: 0x10004180
      */
-    static const s32 cProfileID_10B;
+    static const s32 cProfileID_AirshipBottomWaku;
     /**
      * @brief 268
      * @par Address: 0x10004184
      */
-    static const s32 cProfileID_10C;
+    static const s32 cProfileID_AirshipBottomRDash;
     /**
      * @brief 269
      * @par Address: 0x10004188
@@ -2312,7 +2312,7 @@ public:
      * @brief 270
      * @par Address: 0x1000418C
      */
-    static const s32 cProfileID_PeachFinalCastleKoopaJrLiftHmove;
+    static const s32 cProfileID_PeachFinalCastleKoopaJrLiftHMove;
     /**
      * @brief 271
      * @par Address: 0x10004190
@@ -2337,42 +2337,42 @@ public:
      * @brief 275
      * @par Address: 0x100041A0
      */
-    static const s32 cProfileID_113;
+    static const s32 cProfileID_GoalPole;
     /**
      * @brief 276
      * @par Address: 0x100041A4
      */
-    static const s32 cProfileID_114;
+    static const s32 cProfileID_GoalPoleForPaintingStage;
     /**
      * @brief 277
      * @par Address: 0x100041A8
      */
-    static const s32 cProfileID_115;
+    static const s32 cProfileID_GoalPoleRDash;
     /**
      * @brief 278
      * @par Address: 0x100041AC
      */
-    static const s32 cProfileID_116;
+    static const s32 cProfileID_GoalPoleForPaintingStageRDash;
     /**
      * @brief 279
      * @par Address: 0x100041B0
      */
-    static const s32 cProfileID_117;
+    static const s32 cProfileID_WaterStream;
     /**
      * @brief 280
      * @par Address: 0x100041B4
      */
-    static const s32 cProfileID_118;
+    static const s32 cProfileID_Cookie;
     /**
      * @brief 281
      * @par Address: 0x100041B8
      */
-    static const s32 cProfileID_119;
+    static const s32 cProfileID_MagicHandUnderwaterKoopaJrDemo;
     /**
      * @brief 282
      * @par Address: 0x100041BC
      */
-    static const s32 cProfileID_11A;
+    static const s32 cProfileID_MagicHandBoxingKoopaJrDemo;
     /**
      * @brief 283
      * @par Address: 0x100041C0
@@ -2382,17 +2382,17 @@ public:
      * @brief 284
      * @par Address: 0x100041C4
      */
-    static const s32 cProfileID_11C;
+    static const s32 cProfileID_PMusasabiBlock;
     /**
      * @brief 285
      * @par Address: 0x100041C8
      */
-    static const s32 cProfileID_11D;
+    static const s32 cProfileID_FloatIceBlock;
     /**
      * @brief 286
      * @par Address: 0x100041CC
      */
-    static const s32 cProfileID_11E;
+    static const s32 cProfileID_FloatIceBlockLarge;
     /**
      * @brief 287
      * @par Address: 0x100041D0
@@ -2402,17 +2402,17 @@ public:
      * @brief 288
      * @par Address: 0x100041D4
      */
-    static const s32 cProfileID_120;
+    static const s32 cProfileID_BrokenBlock;
     /**
      * @brief 289
      * @par Address: 0x100041D8
      */
-    static const s32 cProfileID_121;
+    static const s32 cProfileID_ActorBlockHatena;
     /**
      * @brief 290
      * @par Address: 0x100041DC
      */
-    static const s32 cProfileID_122;
+    static const s32 cProfileID_ActorBlockHatenaRDash;
     /**
      * @brief 291
      * @par Address: 0x100041E0
@@ -2422,87 +2422,87 @@ public:
      * @brief 292
      * @par Address: 0x100041E4
      */
-    static const s32 cProfileID_124;
+    static const s32 cProfileID_ActorBlockRengaRDash;
     /**
      * @brief 293
      * @par Address: 0x100041E8
      */
-    static const s32 cProfileID_125;
+    static const s32 cProfileID_ActorBlockRengaRailVMove;
     /**
      * @brief 294
      * @par Address: 0x100041EC
      */
-    static const s32 cProfileID_126;
+    static const s32 cProfileID_ActorBlockClear;
     /**
      * @brief 295
      * @par Address: 0x100041F0
      */
-    static const s32 cProfileID_127;
+    static const s32 cProfileID_ActorBlockClearRDash;
     /**
      * @brief 296
      * @par Address: 0x100041F4
      */
-    static const s32 cProfileID_128;
+    static const s32 cProfileID_ActorHatenaBlockLine;
     /**
      * @brief 297
      * @par Address: 0x100041F8
      */
-    static const s32 cProfileID_129;
+    static const s32 cProfileID_ActorRengaBlockLine;
     /**
      * @brief 298
      * @par Address: 0x100041FC
      */
-    static const s32 cProfileID_12A;
+    static const s32 cProfileID_ActorHatenaBlockLineGroup;
     /**
      * @brief 299
      * @par Address: 0x10004200
      */
-    static const s32 cProfileID_12B;
+    static const s32 cProfileID_ActorRengaBlockLineGroup;
     /**
      * @brief 300
      * @par Address: 0x10004204
      */
-    static const s32 cProfileID_12C;
+    static const s32 cProfileID_ActorBlockHatenaAngle;
     /**
      * @brief 301
      * @par Address: 0x10004208
      */
-    static const s32 cProfileID_12D;
+    static const s32 cProfileID_ActorBlockHatenaAngleR99;
     /**
      * @brief 302
      * @par Address: 0x1000420C
      */
-    static const s32 cProfileID_12E;
+    static const s32 cProfileID_ActorBlockRengaAngle;
     /**
      * @brief 303
      * @par Address: 0x10004210
      */
-    static const s32 cProfileID_12F;
+    static const s32 cProfileID_ActorBlockRengaAngleRDash;
     /**
      * @brief 304
      * @par Address: 0x10004214
      */
-    static const s32 cProfileID_130;
+    static const s32 cProfileID_ActorBlockRengaAngleR99;
     /**
      * @brief 305
      * @par Address: 0x10004218
      */
-    static const s32 cProfileID_131;
+    static const s32 cProfileID_ActorBlockHatenaPairChild;
     /**
      * @brief 306
      * @par Address: 0x1000421C
      */
-    static const s32 cProfileID_132;
+    static const s32 cProfileID_ActorBlockRengaPairChild;
     /**
      * @brief 307
      * @par Address: 0x10004220
      */
-    static const s32 cProfileID_133;
+    static const s32 cProfileID_ActorBlockHatenaFollow;
     /**
      * @brief 308
      * @par Address: 0x10004224
      */
-    static const s32 cProfileID_134;
+    static const s32 cProfileID_ActorBlockRengaFollow;
     /**
      * @brief 309
      * @par Address: 0x10004228
@@ -2512,132 +2512,132 @@ public:
      * @brief 310
      * @par Address: 0x1000422C
      */
-    static const s32 cProfileID_136;
+    static const s32 cProfileID_ActorBlockPata;
     /**
      * @brief 311
      * @par Address: 0x10004230
      */
-    static const s32 cProfileID_137;
+    static const s32 cProfileID_ActorBlockWater;
     /**
      * @brief 312
      * @par Address: 0x10004234
      */
-    static const s32 cProfileID_138;
+    static const s32 cProfileID_ActorBlockCloud;
     /**
      * @brief 313
      * @par Address: 0x10004238
      */
-    static const s32 cProfileID_139;
+    static const s32 cProfileID_ActorBlockSnakeCoin;
     /**
      * @brief 314
      * @par Address: 0x1000423C
      */
-    static const s32 cProfileID_13A;
+    static const s32 cProfileID_ActorBlockSwitch;
     /**
      * @brief 315
      * @par Address: 0x10004240
      */
-    static const s32 cProfileID_13B;
+    static const s32 cProfileID_ActorBlockPSwitch;
     /**
      * @brief 316
      * @par Address: 0x10004244
      */
-    static const s32 cProfileID_13C;
+    static const s32 cProfileID_ActorBlockChibiYoshi;
     /**
      * @brief 317
      * @par Address: 0x10004248
      */
-    static const s32 cProfileID_13D;
+    static const s32 cProfileID_ActorBlockBigRenga;
     /**
      * @brief 318
      * @par Address: 0x1000424C
      */
-    static const s32 cProfileID_13E;
+    static const s32 cProfileID_ActorBlockBigHatena;
     /**
      * @brief 319
      * @par Address: 0x10004250
      */
-    static const s32 cProfileID_13F;
+    static const s32 cProfileID_ActorBlockHatenaEnemyCourse;
     /**
      * @brief 320
      * @par Address: 0x10004254
      */
-    static const s32 cProfileID_140;
+    static const s32 cProfileID_ActorBlockPataEnemyCourse;
     /**
      * @brief 321
      * @par Address: 0x10004258
      */
-    static const s32 cProfileID_141;
+    static const s32 cProfileID_RuletBlock;
     /**
      * @brief 322
      * @par Address: 0x1000425C
      */
-    static const s32 cProfileID_142;
+    static const s32 cProfileID_ChikuwaBlock;
     /**
      * @brief 323
      * @par Address: 0x10004260
      */
-    static const s32 cProfileID_143;
+    static const s32 cProfileID_KameckBlock;
     /**
      * @brief 324
      * @par Address: 0x10004264
      */
-    static const s32 cProfileID_144;
+    static const s32 cProfileID_WoodBox;
     /**
      * @brief 325
      * @par Address: 0x10004268
      */
-    static const s32 cProfileID_145;
+    static const s32 cProfileID_IronBox;
     /**
      * @brief 326
      * @par Address: 0x1000426C
      */
-    static const s32 cProfileID_146;
+    static const s32 cProfileID_IronBoxRDash;
     /**
      * @brief 327
      * @par Address: 0x10004270
      */
-    static const s32 cProfileID_147;
+    static const s32 cProfileID_IronBoxRDashNarrowSpawnRange;
     /**
      * @brief 328
      * @par Address: 0x10004274
      */
-    static const s32 cProfileID_148;
+    static const s32 cProfileID_MagicHandPa;
     /**
      * @brief 329
      * @par Address: 0x10004278
      */
-    static const s32 cProfileID_149;
+    static const s32 cProfileID_MagicHandGu;
     /**
      * @brief 330
      * @par Address: 0x1000427C
      */
-    static const s32 cProfileID_14A;
+    static const s32 cProfileID_MagicHandGuRDash;
     /**
      * @brief 331
      * @par Address: 0x10004280
      */
-    static const s32 cProfileID_14B;
+    static const s32 cProfileID_DRCHiddenBlock;
     /**
      * @brief 332
      * @par Address: 0x10004284
      */
-    static const s32 cProfileID_14C;
+    static const s32 cProfileID_RailEffectGeneratorBlock;
     /**
      * @brief 333
      * @par Address: 0x10004288
      */
-    static const s32 cProfileID_14D;
+    static const s32 cProfileID_ObjPipeRight;
     /**
      * @brief 334
      * @par Address: 0x1000428C
      */
-    static const s32 cProfileID_14E;
+    static const s32 cProfileID_ObjPipeLeft;
     /**
      * @brief 335
      * @par Address: 0x10004290
      */
-    static const s32 cProfileID_14F;
+    static const s32 cProfileID_ObjPipeUp;
     /**
      * @brief 336
      * @par Address: 0x10004294
@@ -2647,17 +2647,17 @@ public:
      * @brief 337
      * @par Address: 0x10004298
      */
-    static const s32 cProfileID_151;
+    static const s32 cProfileID_ObjPipeRightGroup;
     /**
      * @brief 338
      * @par Address: 0x1000429C
      */
-    static const s32 cProfileID_152;
+    static const s32 cProfileID_ObjPipeLeftGroup;
     /**
      * @brief 339
      * @par Address: 0x100042A0
      */
-    static const s32 cProfileID_153;
+    static const s32 cProfileID_ObjPipeUpGroup;
     /**
      * @brief 340
      * @par Address: 0x100042A4
@@ -2667,17 +2667,17 @@ public:
      * @brief 341
      * @par Address: 0x100042A8
      */
-    static const s32 cProfileID_155;
+    static const s32 cProfileID_ObjPipeRightNG;
     /**
      * @brief 342
      * @par Address: 0x100042AC
      */
-    static const s32 cProfileID_156;
+    static const s32 cProfileID_ObjPipeLeftNG;
     /**
      * @brief 343
      * @par Address: 0x100042B0
      */
-    static const s32 cProfileID_157;
+    static const s32 cProfileID_ObjPipeUpNG;
     /**
      * @brief 344
      * @par Address: 0x100042B4
@@ -2687,27 +2687,27 @@ public:
      * @brief 345
      * @par Address: 0x100042B8
      */
-    static const s32 cProfileID_SwitchPbutton;
+    static const s32 cProfileID_SwitchPButton;
     /**
      * @brief 346
      * @par Address: 0x100042BC
      */
-    static const s32 cProfileID_SwitchPbuttonRDash;
+    static const s32 cProfileID_SwitchPButtonRDash;
     /**
      * @brief 347
      * @par Address: 0x100042C0
      */
-    static const s32 cProfileID_SwitchPbuttonNoWallKick;
+    static const s32 cProfileID_SwitchPButtonNoWallKick;
     /**
      * @brief 348
      * @par Address: 0x100042C4
      */
-    static const s32 cProfileID_15C;
+    static const s32 cProfileID_SwitchBossKoopaButton;
     /**
      * @brief 349
      * @par Address: 0x100042C8
      */
-    static const s32 cProfileID_15D;
+    static const s32 cProfileID_SwitchBossKoopaButtonAxe;
     /**
      * @brief 350
      * @par Address: 0x100042CC
@@ -2727,47 +2727,47 @@ public:
      * @brief 353
      * @par Address: 0x100042D8
      */
-    static const s32 cProfileID_161;
+    static const s32 cProfileID_Akoya;
     /**
      * @brief 354
      * @par Address: 0x100042DC
      */
-    static const s32 cProfileID_162;
+    static const s32 cProfileID_IceBlock;
     /**
      * @brief 355
      * @par Address: 0x100042E0
      */
-    static const s32 cProfileID_163;
+    static const s32 cProfileID_IceAshiba;
     /**
      * @brief 356
      * @par Address: 0x100042E4
      */
-    static const s32 cProfileID_164;
+    static const s32 cProfileID_IceAshibaWater;
     /**
      * @brief 357
      * @par Address: 0x100042E8
      */
-    static const s32 cProfileID_165;
+    static const s32 cProfileID_IceAshibaRail;
     /**
      * @brief 358
      * @par Address: 0x100042EC
      */
-    static const s32 cProfileID_166;
+    static const s32 cProfileID_LiftWaterWheel;
     /**
      * @brief 359
      * @par Address: 0x100042F0
      */
-    static const s32 cProfileID_167;
+    static const s32 cProfileID_LiftRemoconBalanceClinch;
     /**
      * @brief 360
      * @par Address: 0x100042F4
      */
-    static const s32 cProfileID_168;
+    static const s32 cProfileID_LiftRemoconBalance;
     /**
      * @brief 361
      * @par Address: 0x100042F8
      */
-    static const s32 cProfileID_169;
+    static const s32 cProfileID_LiftRemoconBalanceRDash;
     /**
      * @brief 362
      * @par Address: 0x100042FC
@@ -2777,27 +2777,27 @@ public:
      * @brief 363
      * @par Address: 0x10004300
      */
-    static const s32 cProfileID_16B;
+    static const s32 cProfileID_LiftMoveOnNormal;
     /**
      * @brief 364
      * @par Address: 0x10004304
      */
-    static const s32 cProfileID_16C;
+    static const s32 cProfileID_LiftDirectionSwitch;
     /**
      * @brief 365
      * @par Address: 0x10004308
      */
-    static const s32 cProfileID_16D;
+    static const s32 cProfileID_HardIceBlock;
     /**
      * @brief 366
      * @par Address: 0x1000430C
      */
-    static const s32 cProfileID_16E;
+    static const s32 cProfileID_WanwanPile;
     /**
      * @brief 367
      * @par Address: 0x10004310
      */
-    static const s32 cProfileID_16F;
+    static const s32 cProfileID_WanwanPileRDash;
     /**
      * @brief 368
      * @par Address: 0x10004314
@@ -2822,7 +2822,7 @@ public:
      * @brief 372
      * @par Address: 0x10004324
      */
-    static const s32 cProfileID_174;
+    static const s32 cProfileID_KoopaJrBoxingFloor;
     /**
      * @brief 373
      * @par Address: 0x10004328
@@ -2847,92 +2847,92 @@ public:
      * @brief 377
      * @par Address: 0x10004338
      */
-    static const s32 cProfileID_179;
+    static const s32 cProfileID_FireBar2;
     /**
      * @brief 378
      * @par Address: 0x1000433C
      */
-    static const s32 cProfileID_17A;
+    static const s32 cProfileID_PivotFireBar;
     /**
      * @brief 379
      * @par Address: 0x10004340
      */
-    static const s32 cProfileID_17B;
+    static const s32 cProfileID_Gattan;
     /**
      * @brief 380
      * @par Address: 0x10004344
      */
-    static const s32 cProfileID_17C;
+    static const s32 cProfileID_TamanoriLift;
     /**
      * @brief 381
      * @par Address: 0x10004348
      */
-    static const s32 cProfileID_17D;
+    static const s32 cProfileID_Met;
     /**
      * @brief 382
      * @par Address: 0x1000434C
      */
-    static const s32 cProfileID_17E;
+    static const s32 cProfileID_BigMet;
     /**
      * @brief 383
      * @par Address: 0x10004350
      */
-    static const s32 cProfileID_17F;
+    static const s32 cProfileID_Unira;
     /**
      * @brief 384
      * @par Address: 0x10004354
      */
-    static const s32 cProfileID_180;
+    static const s32 cProfileID_UniraRDashNarrowBGCheck;
     /**
      * @brief 385
      * @par Address: 0x10004358
      */
-    static const s32 cProfileID_181;
+    static const s32 cProfileID_Unizoo;
     /**
      * @brief 386
      * @par Address: 0x1000435C
      */
-    static const s32 cProfileID_182;
+    static const s32 cProfileID_UniraRDash;
     /**
      * @brief 387
      * @par Address: 0x10004360
      */
-    static const s32 cProfileID_183;
+    static const s32 cProfileID_PowBlock;
     /**
      * @brief 388
      * @par Address: 0x10004364
      */
-    static const s32 cProfileID_184;
+    static const s32 cProfileID_LightBlock;
     /**
      * @brief 389
      * @par Address: 0x10004368
      */
-    static const s32 cProfileID_185;
+    static const s32 cProfileID_PropBlock;
     /**
      * @brief 390
      * @par Address: 0x1000436C
      */
-    static const s32 cProfileID_186;
+    static const s32 cProfileID_SlideBlock;
     /**
      * @brief 391
      * @par Address: 0x10004370
      */
-    static const s32 cProfileID_187;
+    static const s32 cProfileID_CarryBlockTaru;
     /**
      * @brief 392
      * @par Address: 0x10004374
      */
-    static const s32 cProfileID_188;
+    static const s32 cProfileID_Ice;
     /**
      * @brief 393
      * @par Address: 0x10004378
      */
-    static const s32 cProfileID_189;
+    static const s32 cProfileID_ActorCoinSpring;
     /**
      * @brief 394
      * @par Address: 0x1000437C
      */
-    static const s32 cProfileID_18A;
+    static const s32 cProfileID_ActorCoinSpringFunsui;
     /**
      * @brief 395
      * @par Address: 0x10004380
@@ -2942,147 +2942,147 @@ public:
      * @brief 396
      * @par Address: 0x10004384
      */
-    static const s32 cProfileID_18C;
+    static const s32 cProfileID_ActorCoinRDash;
     /**
      * @brief 397
      * @par Address: 0x10004388
      */
-    static const s32 cProfileID_18D;
+    static const s32 cProfileID_ActorCoinFrozen;
     /**
      * @brief 398
      * @par Address: 0x1000438C
      */
-    static const s32 cProfileID_18E;
+    static const s32 cProfileID_ActorCoinPairObj;
     /**
      * @brief 399
      * @par Address: 0x10004390
      */
-    static const s32 cProfileID_18F;
+    static const s32 cProfileID_ActorCoinDemoJump;
     /**
      * @brief 400
      * @par Address: 0x10004394
      */
-    static const s32 cProfileID_190;
+    static const s32 cProfileID_ActorCoinHopJump;
     /**
      * @brief 401
      * @par Address: 0x10004398
      */
-    static const s32 cProfileID_191;
+    static const s32 cProfileID_ActorCoinJump;
     /**
      * @brief 402
      * @par Address: 0x1000439C
      */
-    static const s32 cProfileID_192;
+    static const s32 cProfileID_ActorCoinJumpBattle;
     /**
      * @brief 403
      * @par Address: 0x100043A0
      */
-    static const s32 cProfileID_193;
+    static const s32 cProfileID_ActorCoinJumpUnabon;
     /**
      * @brief 404
      * @par Address: 0x100043A4
      */
-    static const s32 cProfileID_194;
+    static const s32 cProfileID_ActorCoinShowerJump;
     /**
      * @brief 405
      * @par Address: 0x100043A8
      */
-    static const s32 cProfileID_195;
+    static const s32 cProfileID_ActorCoinAngle;
     /**
      * @brief 406
      * @par Address: 0x100043AC
      */
-    static const s32 cProfileID_196;
+    static const s32 cProfileID_ActorCoinKaitenita;
     /**
      * @brief 407
      * @par Address: 0x100043B0
      */
-    static const s32 cProfileID_197;
+    static const s32 cProfileID_ActorCoinWater;
     /**
      * @brief 408
      * @par Address: 0x100043B4
      */
-    static const s32 cProfileID_198;
+    static const s32 cProfileID_ActorCoinFollow;
     /**
      * @brief 409
      * @par Address: 0x100043B8
      */
-    static const s32 cProfileID_199;
+    static const s32 cProfileID_ActorCoinBubble;
     /**
      * @brief 410
      * @par Address: 0x100043BC
      */
-    static const s32 cProfileID_19A;
+    static const s32 cProfileID_ActorCoinJugem;
     /**
      * @brief 411
      * @par Address: 0x100043C0
      */
-    static const s32 cProfileID_19B;
+    static const s32 cProfileID_ActorCoinPass;
     /**
      * @brief 412
      * @par Address: 0x100043C4
      */
-    static const s32 cProfileID_19C;
+    static const s32 cProfileID_ActorCoinAkoya;
     /**
      * @brief 413
      * @par Address: 0x100043C8
      */
-    static const s32 cProfileID_19D;
+    static const s32 cProfileID_ActorCoinRotation;
     /**
      * @brief 414
      * @par Address: 0x100043CC
      */
-    static const s32 cProfileID_19E;
+    static const s32 cProfileID_ActorCoinRotationPass;
     /**
      * @brief 415
      * @par Address: 0x100043D0
      */
-    static const s32 cProfileID_19F;
+    static const s32 cProfileID_ActorCoinSpin;
     /**
      * @brief 416
      * @par Address: 0x100043D4
      */
-    static const s32 cProfileID_1A0;
+    static const s32 cProfileID_ActorCoinRotationFloor;
     /**
      * @brief 417
      * @par Address: 0x100043D8
      */
-    static const s32 cProfileID_1A1;
+    static const s32 cProfileID_ActorCoinParachute;
     /**
      * @brief 418
      * @par Address: 0x100043DC
      */
-    static const s32 cProfileID_1A2;
+    static const s32 cProfileID_ActorCoinSnake;
     /**
      * @brief 419
      * @par Address: 0x100043E0
      */
-    static const s32 cProfileID_1A3;
+    static const s32 cProfileID_ActorCoinKinokoLift;
     /**
      * @brief 420
      * @par Address: 0x100043E4
      */
-    static const s32 cProfileID_1A4;
+    static const s32 cProfileID_ActorCoinBalloon;
     /**
      * @brief 421
      * @par Address: 0x100043E8
      */
-    static const s32 cProfileID_1A5;
+    static const s32 cProfileID_ActorCoinGravity;
     /**
      * @brief 422
      * @par Address: 0x100043EC
      */
-    static const s32 cProfileID_1A6;
+    static const s32 cProfileID_ActorCoinShock;
     /**
      * @brief 423
      * @par Address: 0x100043F0
      */
-    static const s32 cProfileID_1A7;
+    static const s32 cProfileID_ActorCoinDRCAppearance;
     /**
      * @brief 424
      * @par Address: 0x100043F4
      */
-    static const s32 cProfileID_1A8;
+    static const s32 cProfileID_ActorCoinEat;
     /**
      * @brief 425
      * @par Address: 0x100043F8
@@ -3092,62 +3092,62 @@ public:
      * @brief 426
      * @par Address: 0x100043FC
      */
-    static const s32 cProfileID_1AA;
+    static const s32 cProfileID_CollectionCoin;
     /**
      * @brief 427
      * @par Address: 0x10004400
      */
-    static const s32 cProfileID_1AB;
+    static const s32 cProfileID_CollectionCoinLine;
     /**
      * @brief 428
      * @par Address: 0x10004404
      */
-    static const s32 cProfileID_1AC;
+    static const s32 cProfileID_CollectionCoinLineGroup;
     /**
      * @brief 429
      * @par Address: 0x10004408
      */
-    static const s32 cProfileID_1AD;
+    static const s32 cProfileID_CollectionCoinBolt;
     /**
      * @brief 430
      * @par Address: 0x1000440C
      */
-    static const s32 cProfileID_1AE;
+    static const s32 cProfileID_CollectionCoinParent;
     /**
      * @brief 431
      * @par Address: 0x10004410
      */
-    static const s32 cProfileID_1AF;
+    static const s32 cProfileID_CollectionCoinParentRDash;
     /**
      * @brief 432
      * @par Address: 0x10004414
      */
-    static const s32 cProfileID_1B0;
+    static const s32 cProfileID_CollectionCoinParentRDashExtendedSpawnRange;
     /**
      * @brief 433
      * @par Address: 0x10004418
      */
-    static const s32 cProfileID_1B1;
+    static const s32 cProfileID_CollectionCoinParentR6Castle;
     /**
      * @brief 434
      * @par Address: 0x1000441C
      */
-    static const s32 cProfileID_1B2;
+    static const s32 cProfileID_CollectionCoinSnake;
     /**
      * @brief 435
      * @par Address: 0x10004420
      */
-    static const s32 cProfileID_1B3;
+    static const s32 cProfileID_CollectionCoinSpin;
     /**
      * @brief 436
      * @par Address: 0x10004424
      */
-    static const s32 cProfileID_1B4;
+    static const s32 cProfileID_CoinNankinTamasudareParent;
     /**
      * @brief 437
      * @par Address: 0x10004428
      */
-    static const s32 cProfileID_1B5;
+    static const s32 cProfileID_CoinNankinTamasudareChild;
     /**
      * @brief 438
      * @par Address: 0x1000442C
@@ -3157,17 +3157,17 @@ public:
      * @brief 439
      * @par Address: 0x10004430
      */
-    static const s32 cProfileID_1B7;
+    static const s32 cProfileID_TottenHouseReadTagRDash;
     /**
      * @brief 440
      * @par Address: 0x10004434
      */
-    static const s32 cProfileID_1B8;
+    static const s32 cProfileID_TagShabonProtectArea;
     /**
      * @brief 441
      * @par Address: 0x10004438
      */
-    static const s32 cProfileID_1B9;
+    static const s32 cProfileID_Balloon;
     /**
      * @brief 442
      * @par Address: 0x1000443C
@@ -3187,42 +3187,42 @@ public:
      * @brief 445
      * @par Address: 0x10004448
      */
-    static const s32 cProfileID_1BD;
+    static const s32 cProfileID_GoalDemoKinopio;
     /**
      * @brief 446
      * @par Address: 0x1000444C
      */
-    static const s32 cProfileID_1BE;
+    static const s32 cProfileID_ChibiYoshiEgg;
     /**
      * @brief 447
      * @par Address: 0x10004450
      */
-    static const s32 cProfileID_1BF;
+    static const s32 cProfileID_ChibiYoshiAwa;
     /**
      * @brief 448
      * @par Address: 0x10004454
      */
-    static const s32 cProfileID_1C0;
+    static const s32 cProfileID_BalloonChibiYoshi;
     /**
      * @brief 449
      * @par Address: 0x10004458
      */
-    static const s32 cProfileID_1C1;
+    static const s32 cProfileID_LightChibiYoshi;
     /**
      * @brief 450
      * @par Address: 0x1000445C
      */
-    static const s32 cProfileID_1C2;
+    static const s32 cProfileID_CloudChibiYoshi;
     /**
      * @brief 451
      * @par Address: 0x10004460
      */
-    static const s32 cProfileID_1C3;
+    static const s32 cProfileID_BubbleChibiYoshi;
     /**
      * @brief 452
      * @par Address: 0x10004464
      */
-    static const s32 cProfileID_1C4;
+    static const s32 cProfileID_FruitCookie;
     /**
      * @brief 453
      * @par Address: 0x10004468
@@ -3232,47 +3232,47 @@ public:
      * @brief 454
      * @par Address: 0x1000446C
      */
-    static const s32 cProfileID_1C6;
+    static const s32 cProfileID_WakiHipAttack;
     /**
      * @brief 455
      * @par Address: 0x10004470
      */
-    static const s32 cProfileID_1C7;
+    static const s32 cProfileID_PipeNextGotoTimerAddTag;
     /**
      * @brief 456
      * @par Address: 0x10004474
      */
-    static const s32 cProfileID_1C8;
+    static const s32 cProfileID_QuestActorPlacementTag;
     /**
      * @brief 457
      * @par Address: 0x10004478
      */
-    static const s32 cProfileID_1C9;
+    static const s32 cProfileID_QuestDemoLocationTag;
     /**
      * @brief 458
      * @par Address: 0x1000447C
      */
-    static const s32 cProfileID_1CA;
+    static const s32 cProfileID_ShadowkunRetreatTag;
     /**
      * @brief 459
      * @par Address: 0x10004480
      */
-    static const s32 cProfileID_1CB;
+    static const s32 cProfileID_Shadowkun;
     /**
      * @brief 460
      * @par Address: 0x10004484
      */
-    static const s32 cProfileID_1CC;
+    static const s32 cProfileID_ShadowkunFukuro;
     /**
      * @brief 461
      * @par Address: 0x10004488
      */
-    static const s32 cProfileID_1CD;
+    static const s32 cProfileID_QuestKey;
     /**
      * @brief 462
      * @par Address: 0x1000448C
      */
-    static const s32 cProfileID_1CE;
+    static const s32 cProfileID_QuestKinopio;
     /**
      * @brief 463
      * @par Address: 0x10004490
@@ -3282,17 +3282,17 @@ public:
      * @brief 464
      * @par Address: 0x10004494
      */
-    static const s32 cProfileID_1D0;
+    static const s32 cProfileID_EnemyCourseDemoShadowkun;
     /**
      * @brief 465
      * @par Address: 0x10004498
      */
-    static const s32 cProfileID_1D1;
+    static const s32 cProfileID_TitleDemoShadowkun;
     /**
      * @brief 466
      * @par Address: 0x1000449C
      */
-    static const s32 cProfileID_1D2;
+    static const s32 cProfileID_BalloonHangActor;
     /**
      * @brief 467
      * @par Address: 0x100044A0
@@ -3312,22 +3312,22 @@ public:
      * @brief 470
      * @par Address: 0x100044AC
      */
-    static const s32 cProfileID_1D6;
+    static const s32 cProfileID_IgaKuribo;
     /**
      * @brief 471
      * @par Address: 0x100044B0
      */
-    static const s32 cProfileID_1D7;
+    static const s32 cProfileID_BeansKuribo;
     /**
      * @brief 472
      * @par Address: 0x100044B4
      */
-    static const s32 cProfileID_1D8;
+    static const s32 cProfileID_MiddleKuribo;
     /**
      * @brief 473
      * @par Address: 0x100044B8
      */
-    static const s32 cProfileID_1D9;
+    static const s32 cProfileID_LargeKuribo;
     /**
      * @brief 474
      * @par Address: 0x100044BC
@@ -3357,167 +3357,167 @@ public:
      * @brief 479
      * @par Address: 0x100044D0
      */
-    static const s32 cProfileID_1DF;
+    static const s32 cProfileID_DokanPakkunUp;
     /**
      * @brief 480
      * @par Address: 0x100044D4
      */
-    static const s32 cProfileID_1E0;
+    static const s32 cProfileID_DokanPakkunDown;
     /**
      * @brief 481
      * @par Address: 0x100044D8
      */
-    static const s32 cProfileID_1E1;
+    static const s32 cProfileID_DokanPakkunLeft;
     /**
      * @brief 482
      * @par Address: 0x100044DC
      */
-    static const s32 cProfileID_1E2;
+    static const s32 cProfileID_DokanPakkunRight;
     /**
      * @brief 483
      * @par Address: 0x100044E0
      */
-    static const s32 cProfileID_1E3;
+    static const s32 cProfileID_DokanFPakkunUp;
     /**
      * @brief 484
      * @par Address: 0x100044E4
      */
-    static const s32 cProfileID_1E4;
+    static const s32 cProfileID_DokanFPakkunDown;
     /**
      * @brief 485
      * @par Address: 0x100044E8
      */
-    static const s32 cProfileID_1E5;
+    static const s32 cProfileID_DokanFPakkunLeft;
     /**
      * @brief 486
      * @par Address: 0x100044EC
      */
-    static const s32 cProfileID_1E6;
+    static const s32 cProfileID_DokanFPakkunRight;
     /**
      * @brief 487
      * @par Address: 0x100044F0
      */
-    static const s32 cProfileID_1E7;
+    static const s32 cProfileID_DokanIPakkunUp;
     /**
      * @brief 488
      * @par Address: 0x100044F4
      */
-    static const s32 cProfileID_1E8;
+    static const s32 cProfileID_DokanIPakkunDown;
     /**
      * @brief 489
      * @par Address: 0x100044F8
      */
-    static const s32 cProfileID_1E9;
+    static const s32 cProfileID_DokanIPakkunLeft;
     /**
      * @brief 490
      * @par Address: 0x100044FC
      */
-    static const s32 cProfileID_1EA;
+    static const s32 cProfileID_DokanIPakkunRight;
     /**
      * @brief 491
      * @par Address: 0x10004500
      */
-    static const s32 cProfileID_1EB;
+    static const s32 cProfileID_DokanPakkunBig;
     /**
      * @brief 492
      * @par Address: 0x10004504
      */
-    static const s32 cProfileID_1EC;
+    static const s32 cProfileID_JimenPakkun;
     /**
      * @brief 493
      * @par Address: 0x10004508
      */
-    static const s32 cProfileID_1ED;
+    static const s32 cProfileID_JimenPakkunRDash;
     /**
      * @brief 494
      * @par Address: 0x1000450C
      */
-    static const s32 cProfileID_1EE;
+    static const s32 cProfileID_JimenPakkunR33;
     /**
      * @brief 495
      * @par Address: 0x10004510
      */
-    static const s32 cProfileID_1EF;
+    static const s32 cProfileID_JimenFPakkun;
     /**
      * @brief 496
      * @par Address: 0x10004514
      */
-    static const s32 cProfileID_1F0;
+    static const s32 cProfileID_JimenIPakkun;
     /**
      * @brief 497
      * @par Address: 0x10004518
      */
-    static const s32 cProfileID_1F1;
+    static const s32 cProfileID_JimenBigPakkun;
     /**
      * @brief 498
      * @par Address: 0x1000451C
      */
-    static const s32 cProfileID_1F2;
+    static const s32 cProfileID_JimenBigFPakkun;
     /**
      * @brief 499
      * @par Address: 0x10004520
      */
-    static const s32 cProfileID_1F3;
+    static const s32 cProfileID_WalkPakkun;
     /**
      * @brief 500
      * @par Address: 0x10004524
      */
-    static const s32 cProfileID_1F4;
+    static const s32 cProfileID_WaterPakkun;
     /**
      * @brief 501
      * @par Address: 0x10004528
      */
-    static const s32 cProfileID_1F5;
+    static const s32 cProfileID_WaterPakkunRDash;
     /**
      * @brief 502
      * @par Address: 0x1000452C
      */
-    static const s32 cProfileID_1F6;
+    static const s32 cProfileID_PakkunBlack;
     /**
      * @brief 503
      * @par Address: 0x10004530
      */
-    static const s32 cProfileID_1F7;
+    static const s32 cProfileID_PakkunBlackObj;
     /**
      * @brief 504
      * @par Address: 0x10004534
      */
-    static const s32 cProfileID_1F8;
+    static const s32 cProfileID_Musasabi;
     /**
      * @brief 505
      * @par Address: 0x10004538
      */
-    static const s32 cProfileID_1F9;
+    static const s32 cProfileID_Sanbo;
     /**
      * @brief 506
      * @par Address: 0x1000453C
      */
-    static const s32 cProfileID_1FA;
+    static const s32 cProfileID_SanboParts;
     /**
      * @brief 507
      * @par Address: 0x10004540
      */
-    static const s32 cProfileID_1FB;
+    static const s32 cProfileID_WakiBigHanachan;
     /**
      * @brief 508
      * @par Address: 0x10004544
      */
-    static const s32 cProfileID_1FC;
+    static const s32 cProfileID_Hanachan;
     /**
      * @brief 509
      * @par Address: 0x10004548
      */
-    static const s32 cProfileID_1FD;
+    static const s32 cProfileID_Hanachan2;
     /**
      * @brief 510
      * @par Address: 0x1000454C
      */
-    static const s32 cProfileID_1FE;
+    static const s32 cProfileID_BigHanachan;
     /**
      * @brief 511
      * @par Address: 0x10004550
      */
-    static const s32 cProfileID_1FF;
+    static const s32 cProfileID_FooBall;
     /**
      * @brief 512
      * @par Address: 0x10004554
@@ -3527,57 +3527,57 @@ public:
      * @brief 513
      * @par Address: 0x10004558
      */
-    static const s32 cProfileID_201;
+    static const s32 cProfileID_NokonokoHorizontalSpawn;
     /**
      * @brief 514
      * @par Address: 0x1000455C
      */
-    static const s32 cProfileID_202;
+    static const s32 cProfileID_BigNokonoko;
     /**
      * @brief 515
      * @par Address: 0x10004560
      */
-    static const s32 cProfileID_203;
+    static const s32 cProfileID_Patapata;
     /**
      * @brief 516
      * @par Address: 0x10004564
      */
-    static const s32 cProfileID_204;
+    static const s32 cProfileID_PatapataGroup;
     /**
      * @brief 517
      * @par Address: 0x10004568
      */
-    static const s32 cProfileID_205;
+    static const s32 cProfileID_Togezo;
     /**
      * @brief 518
      * @par Address: 0x1000456C
      */
-    static const s32 cProfileID_206;
+    static const s32 cProfileID_SakasaTogezo;
     /**
      * @brief 519
      * @par Address: 0x10004570
      */
-    static const s32 cProfileID_207;
+    static const s32 cProfileID_Kanibo;
     /**
      * @brief 520
      * @par Address: 0x10004574
      */
-    static const s32 cProfileID_208;
+    static const s32 cProfileID_Kanitama;
     /**
      * @brief 521
      * @par Address: 0x10004578
      */
-    static const s32 cProfileID_209;
+    static const s32 cProfileID_Bomhei;
     /**
      * @brief 522
      * @par Address: 0x1000457C
      */
-    static const s32 cProfileID_20A;
+    static const s32 cProfileID_ParaBomhei;
     /**
      * @brief 523
      * @par Address: 0x10004580
      */
-    static const s32 cProfileID_20B;
+    static const s32 cProfileID_ParaBomheiRDash;
     /**
      * @brief 524
      * @par Address: 0x10004584
@@ -3587,167 +3587,167 @@ public:
      * @brief 525
      * @par Address: 0x10004588
      */
-    static const s32 cProfileID_20D;
+    static const s32 cProfileID_Pentaro;
     /**
      * @brief 526
      * @par Address: 0x1000458C
      */
-    static const s32 cProfileID_20E;
+    static const s32 cProfileID_PentaroSunglasses;
     /**
      * @brief 527
      * @par Address: 0x10004590
      */
-    static const s32 cProfileID_20F;
+    static const s32 cProfileID_WakiPentaro;
     /**
      * @brief 528
      * @par Address: 0x10004594
      */
-    static const s32 cProfileID_210;
+    static const s32 cProfileID_Honemet;
     /**
      * @brief 529
      * @par Address: 0x10004598
      */
-    static const s32 cProfileID_211;
+    static const s32 cProfileID_HonemetHead;
     /**
      * @brief 530
      * @par Address: 0x1000459C
      */
-    static const s32 cProfileID_212;
+    static const s32 cProfileID_Puku;
     /**
      * @brief 531
      * @par Address: 0x100045A0
      */
-    static const s32 cProfileID_213;
+    static const s32 cProfileID_PukuGroup;
     /**
      * @brief 532
      * @par Address: 0x100045A4
      */
-    static const s32 cProfileID_214;
+    static const s32 cProfileID_MiddlePuku;
     /**
      * @brief 533
      * @par Address: 0x100045A8
      */
-    static const s32 cProfileID_215;
+    static const s32 cProfileID_MiddlePukuGroup;
     /**
      * @brief 534
      * @par Address: 0x100045AC
      */
-    static const s32 cProfileID_216;
+    static const s32 cProfileID_SachiPuku;
     /**
      * @brief 535
      * @par Address: 0x100045B0
      */
-    static const s32 cProfileID_217;
+    static const s32 cProfileID_SachiMiddlePuku;
     /**
      * @brief 536
      * @par Address: 0x100045B4
      */
-    static const s32 cProfileID_218;
+    static const s32 cProfileID_NigePuku;
     /**
      * @brief 537
      * @par Address: 0x100045B8
      */
-    static const s32 cProfileID_219;
+    static const s32 cProfileID_NigeMiddlePuku;
     /**
      * @brief 538
      * @par Address: 0x100045BC
      */
-    static const s32 cProfileID_21A;
+    static const s32 cProfileID_MechaPuku;
     /**
      * @brief 539
      * @par Address: 0x100045C0
      */
-    static const s32 cProfileID_21B;
+    static const s32 cProfileID_TogePuku;
     /**
      * @brief 540
      * @par Address: 0x100045C4
      */
-    static const s32 cProfileID_21C;
+    static const s32 cProfileID_TobiPuku;
     /**
      * @brief 541
      * @par Address: 0x100045C8
      */
-    static const s32 cProfileID_21D;
+    static const s32 cProfileID_TobiMechaPuku;
     /**
      * @brief 542
      * @par Address: 0x100045CC
      */
-    static const s32 cProfileID_21E;
+    static const s32 cProfileID_WakiPuku;
     /**
      * @brief 543
      * @par Address: 0x100045D0
      */
-    static const s32 cProfileID_21F;
+    static const s32 cProfileID_WakiSachiPuku;
     /**
      * @brief 544
      * @par Address: 0x100045D4
      */
-    static const s32 cProfileID_220;
+    static const s32 cProfileID_WakiNigePuku;
     /**
      * @brief 545
      * @par Address: 0x100045D8
      */
-    static const s32 cProfileID_221;
+    static const s32 cProfileID_WakiTobiPuku;
     /**
      * @brief 546
      * @par Address: 0x100045DC
      */
-    static const s32 cProfileID_222;
+    static const s32 cProfileID_WakiTobiMechaPuku;
     /**
      * @brief 547
      * @par Address: 0x100045E0
      */
-    static const s32 cProfileID_223;
+    static const s32 cProfileID_PukuParent;
     /**
      * @brief 548
      * @par Address: 0x100045E4
      */
-    static const s32 cProfileID_224;
+    static const s32 cProfileID_Kopone;
     /**
      * @brief 549
      * @par Address: 0x100045E8
      */
-    static const s32 cProfileID_225;
+    static const s32 cProfileID_IgaPuku;
     /**
      * @brief 550
      * @par Address: 0x100045EC
      */
-    static const s32 cProfileID_226;
+    static const s32 cProfileID_BigIgaPuku;
     /**
      * @brief 551
      * @par Address: 0x100045F0
      */
-    static const s32 cProfileID_227;
+    static const s32 cProfileID_WakiIgaPuku;
     /**
      * @brief 552
      * @par Address: 0x100045F4
      */
-    static const s32 cProfileID_228;
+    static const s32 cProfileID_WakiBigIgaPuku;
     /**
      * @brief 553
      * @par Address: 0x100045F8
      */
-    static const s32 cProfileID_229;
+    static const s32 cProfileID_JellyFish;
     /**
      * @brief 554
      * @par Address: 0x100045FC
      */
-    static const s32 cProfileID_22A;
+    static const s32 cProfileID_Chochin;
     /**
      * @brief 555
      * @par Address: 0x10004600
      */
-    static const s32 cProfileID_22B;
+    static const s32 cProfileID_Jumpdai;
     /**
      * @brief 556
      * @par Address: 0x10004604
      */
-    static const s32 cProfileID_22C;
+    static const s32 cProfileID_Keronpa;
     /**
      * @brief 557
      * @par Address: 0x10004608
      */
-    static const s32 cProfileID_22D;
+    static const s32 cProfileID_KeronpaRDash;
     /**
      * @brief 558
      * @par Address: 0x1000460C
@@ -3762,7 +3762,7 @@ public:
      * @brief 560
      * @par Address: 0x10004614
      */
-    static const s32 cProfileID_230;
+    static const s32 cProfileID_WakiKeronpa;
     /**
      * @brief 561
      * @par Address: 0x10004618
@@ -3772,62 +3772,62 @@ public:
      * @brief 562
      * @par Address: 0x1000461C
      */
-    static const s32 cProfileID_Grrrol;
+    static const s32 cProfileID_GoroGoro;
     /**
      * @brief 563
      * @par Address: 0x10004620
      */
-    static const s32 cProfileID_BigGrrrol;
+    static const s32 cProfileID_GoroGoroKyodai;
     /**
      * @brief 564
      * @par Address: 0x10004624
      */
-    static const s32 cProfileID_BigGrrrolRDash;
+    static const s32 cProfileID_GoroGoroKyodaiRDash;
     /**
      * @brief 565
      * @par Address: 0x10004628
      */
-    static const s32 cProfileID_235;
+    static const s32 cProfileID_CheckPointFlag;
     /**
      * @brief 566
      * @par Address: 0x1000462C
      */
-    static const s32 cProfileID_236;
+    static const s32 cProfileID_BigPileDir1;
     /**
      * @brief 567
      * @par Address: 0x10004630
      */
-    static const s32 cProfileID_237;
+    static const s32 cProfileID_BigPileDir2;
     /**
      * @brief 568
      * @par Address: 0x10004634
      */
-    static const s32 cProfileID_238;
+    static const s32 cProfileID_BigPileRight;
     /**
      * @brief 569
      * @par Address: 0x10004638
      */
-    static const s32 cProfileID_239;
+    static const s32 cProfileID_BigPileDir4;
     /**
      * @brief 570
      * @par Address: 0x1000463C
      */
-    static const s32 cProfileID_23A;
+    static const s32 cProfileID_SuperBigPileDir1;
     /**
      * @brief 571
      * @par Address: 0x10004640
      */
-    static const s32 cProfileID_23B;
+    static const s32 cProfileID_SuperBigPileDir2;
     /**
      * @brief 572
      * @par Address: 0x10004644
      */
-    static const s32 cProfileID_23C;
+    static const s32 cProfileID_KazandanMgr;
     /**
      * @brief 573
      * @par Address: 0x10004648
      */
-    static const s32 cProfileID_23D;
+    static const s32 cProfileID_WakiKazadan;
     /**
      * @brief 574
      * @par Address: 0x1000464C
@@ -3837,62 +3837,62 @@ public:
      * @brief 575
      * @par Address: 0x10004650
      */
-    static const s32 cProfileID_23F;
+    static const s32 cProfileID_Zoom;
     /**
      * @brief 576
      * @par Address: 0x10004654
      */
-    static const s32 cProfileID_240;
+    static const s32 cProfileID_ZoomRDash;
     /**
      * @brief 577
      * @par Address: 0x10004658
      */
-    static const s32 cProfileID_241;
+    static const s32 cProfileID_KyokaiVelAdj;
     /**
      * @brief 578
      * @par Address: 0x1000465C
      */
-    static const s32 cProfileID_242;
+    static const s32 cProfileID_MaxUeLeft;
     /**
      * @brief 579
      * @par Address: 0x10004660
      */
-    static const s32 cProfileID_243;
+    static const s32 cProfileID_MaxUeRight;
     /**
      * @brief 580
      * @par Address: 0x10004664
      */
-    static const s32 cProfileID_244;
+    static const s32 cProfileID_StopLrUp;
     /**
      * @brief 581
      * @par Address: 0x10004668
      */
-    static const s32 cProfileID_245;
+    static const s32 cProfileID_StopLrDw;
     /**
      * @brief 582
      * @par Address: 0x1000466C
      */
-    static const s32 cProfileID_246;
+    static const s32 cProfileID_MaxUe2Left;
     /**
      * @brief 583
      * @par Address: 0x10004670
      */
-    static const s32 cProfileID_247;
+    static const s32 cProfileID_MaxUe2Right;
     /**
      * @brief 584
      * @par Address: 0x10004674
      */
-    static const s32 cProfileID_248;
+    static const s32 cProfileID_AutoScrollTag;
     /**
      * @brief 585
      * @par Address: 0x10004678
      */
-    static const s32 cProfileID_249;
+    static const s32 cProfileID_SpecialScrollTag;
     /**
      * @brief 586
      * @par Address: 0x1000467C
      */
-    static const s32 cProfileID_24A;
+    static const s32 cProfileID_KoopaAreaObj;
     /**
      * @brief 587
      * @par Address: 0x10004680
@@ -3902,17 +3902,17 @@ public:
      * @brief 588
      * @par Address: 0x10004684
      */
-    static const s32 cProfileID_24C;
+    static const s32 cProfileID_EnvSoundPhenomenaTag;
     /**
      * @brief 589
      * @par Address: 0x10004688
      */
-    static const s32 cProfileID_24D;
+    static const s32 cProfileID_TagKusaTypeSet;
     /**
      * @brief 590
      * @par Address: 0x1000468C
      */
-    static const s32 cProfileID_24E;
+    static const s32 cProfileID_EnvSoundTag;
     /**
      * @brief 591
      * @par Address: 0x10004690
@@ -3967,82 +3967,82 @@ public:
      * @brief 601
      * @par Address: 0x100046B8
      */
-    static const s32 cProfileID_259;
+    static const s32 cProfileID_SeaWakame;
     /**
      * @brief 602
      * @par Address: 0x100046BC
      */
-    static const s32 cProfileID_25A;
+    static const s32 cProfileID_DoorNormal;
     /**
      * @brief 603
      * @par Address: 0x100046C0
      */
-    static const s32 cProfileID_25B;
+    static const s32 cProfileID_DoorObake;
     /**
      * @brief 604
      * @par Address: 0x100046C4
      */
-    static const s32 cProfileID_25C;
+    static const s32 cProfileID_DoorToride;
     /**
      * @brief 605
      * @par Address: 0x100046C8
      */
-    static const s32 cProfileID_25D;
+    static const s32 cProfileID_DoorTorideRDash;
     /**
      * @brief 606
      * @par Address: 0x100046CC
      */
-    static const s32 cProfileID_25E;
+    static const s32 cProfileID_DoorCastle;
     /**
      * @brief 607
      * @par Address: 0x100046D0
      */
-    static const s32 cProfileID_25F;
+    static const s32 cProfileID_DoorCastleRDash;
     /**
      * @brief 608
      * @par Address: 0x100046D4
      */
-    static const s32 cProfileID_260;
+    static const s32 cProfileID_DoorKoopa;
     /**
      * @brief 609
      * @par Address: 0x100046D8
      */
-    static const s32 cProfileID_261;
+    static const s32 cProfileID_DoorKoopaRDash;
     /**
      * @brief 610
      * @par Address: 0x100046DC
      */
-    static const s32 cProfileID_262;
+    static const s32 cProfileID_Choropu;
     /**
      * @brief 611
      * @par Address: 0x100046E0
      */
-    static const s32 cProfileID_263;
+    static const s32 cProfileID_ChoropooShadow;
     /**
      * @brief 612
      * @par Address: 0x100046E4
      */
-    static const s32 cProfileID_264;
+    static const s32 cProfileID_Basabasa;
     /**
      * @brief 613
      * @par Address: 0x100046E8
      */
-    static const s32 cProfileID_265;
+    static const s32 cProfileID_TorchiLight;
     /**
      * @brief 614
      * @par Address: 0x100046EC
      */
-    static const s32 cProfileID_266;
+    static const s32 cProfileID_WakiDokan;
     /**
      * @brief 615
      * @par Address: 0x100046F0
      */
-    static const s32 cProfileID_267;
+    static const s32 cProfileID_FlyingKinokoWakidashi;
     /**
      * @brief 616
      * @par Address: 0x100046F4
      */
-    static const s32 cProfileID_268;
+    static const s32 cProfileID_ManholeChoropu;
     /**
      * @brief 617
      * @par Address: 0x100046F8
@@ -4052,62 +4052,62 @@ public:
      * @brief 618
      * @par Address: 0x100046FC
      */
-    static const s32 cProfileID_26A;
+    static const s32 cProfileID_Manhole;
     /**
      * @brief 619
      * @par Address: 0x10004700
      */
-    static const s32 cProfileID_26B;
+    static const s32 cProfileID_JugemThrowActor;
     /**
      * @brief 620
      * @par Address: 0x10004704
      */
-    static const s32 cProfileID_26C;
+    static const s32 cProfileID_Jugem;
     /**
      * @brief 621
      * @par Address: 0x10004708
      */
-    static const s32 cProfileID_26D;
+    static const s32 cProfileID_JugemCoin;
     /**
      * @brief 622
      * @par Address: 0x1000470C
      */
-    static const s32 cProfileID_26E;
+    static const s32 cProfileID_JugemMultiplayer;
     /**
      * @brief 623
      * @par Address: 0x10004710
      */
-    static const s32 cProfileID_26F;
+    static const s32 cProfileID_JugemBody;
     /**
      * @brief 624
      * @par Address: 0x10004714
      */
-    static const s32 cProfileID_270;
+    static const s32 cProfileID_JugemBodyMultiplayer;
     /**
      * @brief 625
      * @par Address: 0x10004718
      */
-    static const s32 cProfileID_271;
+    static const s32 cProfileID_WakiJugem;
     /**
      * @brief 626
      * @par Address: 0x1000471C
      */
-    static const s32 cProfileID_272;
+    static const s32 cProfileID_WakiJugemMultiplayer;
     /**
      * @brief 627
      * @par Address: 0x10004720
      */
-    static const s32 cProfileID_273;
+    static const s32 cProfileID_CannonBullet;
     /**
      * @brief 628
      * @par Address: 0x10004724
      */
-    static const s32 cProfileID_274;
+    static const s32 cProfileID_Killer;
     /**
      * @brief 629
      * @par Address: 0x10004728
      */
-    static const s32 cProfileID_275;
+    static const s32 cProfileID_MagnumKiller;
     /**
      * @brief 630
      * @par Address: 0x1000472C
@@ -4117,17 +4117,17 @@ public:
      * @brief 631
      * @par Address: 0x10004730
      */
-    static const s32 cProfileID_277;
+    static const s32 cProfileID_SearchMagnumKiller;
     /**
      * @brief 632
      * @par Address: 0x10004734
      */
-    static const s32 cProfileID_278;
+    static const s32 cProfileID_KingKiller;
     /**
      * @brief 633
      * @par Address: 0x10004738
      */
-    static const s32 cProfileID_279;
+    static const s32 cProfileID_KingKillerRDash;
     /**
      * @brief 634
      * @par Address: 0x1000473C
@@ -4137,27 +4137,27 @@ public:
      * @brief 635
      * @par Address: 0x10004740
      */
-    static const s32 cProfileID_27B;
+    static const s32 cProfileID_Dosun;
     /**
      * @brief 636
      * @par Address: 0x10004744
      */
-    static const s32 cProfileID_27C;
+    static const s32 cProfileID_BigDosun;
     /**
      * @brief 637
      * @par Address: 0x10004748
      */
-    static const s32 cProfileID_27D;
+    static const s32 cProfileID_Gabon;
     /**
      * @brief 638
      * @par Address: 0x1000474C
      */
-    static const s32 cProfileID_27E;
+    static const s32 cProfileID_GabonRDash;
     /**
      * @brief 639
      * @par Address: 0x10004750
      */
-    static const s32 cProfileID_27F;
+    static const s32 cProfileID_GabonResident;
     /**
      * @brief 640
      * @par Address: 0x10004754
@@ -4167,12 +4167,12 @@ public:
      * @brief 641
      * @par Address: 0x10004758
      */
-    static const s32 cProfileID_281;
+    static const s32 cProfileID_RockGabon;
     /**
      * @brief 642
      * @par Address: 0x1000475C
      */
-    static const s32 cProfileID_282;
+    static const s32 cProfileID_RockGabonResident;
     /**
      * @brief 643
      * @par Address: 0x10004760
@@ -4182,7 +4182,7 @@ public:
      * @brief 644
      * @par Address: 0x10004764
      */
-    static const s32 cProfileID_284;
+    static const s32 cProfileID_Seichan;
     /**
      * @brief 645
      * @par Address: 0x10004768
@@ -4192,22 +4192,22 @@ public:
      * @brief 646
      * @par Address: 0x1000476C
      */
-    static const s32 cProfileID_286;
+    static const s32 cProfileID_SnowBall;
     /**
      * @brief 647
      * @par Address: 0x10004770
      */
-    static const s32 cProfileID_287;
+    static const s32 cProfileID_KaronHead;
     /**
      * @brief 648
      * @par Address: 0x10004774
      */
-    static const s32 cProfileID_288;
+    static const s32 cProfileID_Karon;
     /**
      * @brief 649
      * @par Address: 0x10004778
      */
-    static const s32 cProfileID_289;
+    static const s32 cProfileID_BigKaron;
     /**
      * @brief 650
      * @par Address: 0x1000477C
@@ -4217,17 +4217,17 @@ public:
      * @brief 651
      * @par Address: 0x10004780
      */
-    static const s32 cProfileID_28B;
+    static const s32 cProfileID_Mouse;
     /**
      * @brief 652
      * @par Address: 0x10004784
      */
-    static const s32 cProfileID_28C;
+    static const s32 cProfileID_Chorobon;
     /**
      * @brief 653
      * @par Address: 0x10004788
      */
-    static const s32 cProfileID_28D;
+    static const s32 cProfileID_ChorobonGroup;
     /**
      * @brief 654
      * @par Address: 0x1000478C
@@ -4252,102 +4252,102 @@ public:
      * @brief 658
      * @par Address: 0x1000479C
      */
-    static const s32 cProfileID_292;
+    static const s32 cProfileID_Crasher;
     /**
      * @brief 659
      * @par Address: 0x100047A0
      */
-    static const s32 cProfileID_293;
+    static const s32 cProfileID_Unabon;
     /**
      * @brief 660
      * @par Address: 0x100047A4
      */
-    static const s32 cProfileID_294;
+    static const s32 cProfileID_ChukanUnabon;
     /**
      * @brief 661
      * @par Address: 0x100047A8
      */
-    static const s32 cProfileID_295;
+    static const s32 cProfileID_DokanUnabon;
     /**
      * @brief 662
      * @par Address: 0x100047AC
      */
-    static const s32 cProfileID_296;
+    static const s32 cProfileID_WakiUnabon;
     /**
      * @brief 663
      * @par Address: 0x100047B0
      */
-    static const s32 cProfileID_297;
+    static const s32 cProfileID_WakiUnabonRDash;
     /**
      * @brief 664
      * @par Address: 0x100047B4
      */
-    static const s32 cProfileID_298;
+    static const s32 cProfileID_UnabonRDash;
     /**
      * @brief 665
      * @par Address: 0x100047B8
      */
-    static const s32 cProfileID_299;
+    static const s32 cProfileID_KK;
     /**
      * @brief 666
      * @par Address: 0x100047BC
      */
-    static const s32 cProfileID_29A;
+    static const s32 cProfileID_KKResident;
     /**
      * @brief 667
      * @par Address: 0x100047C0
      */
-    static const s32 cProfileID_29B;
+    static const s32 cProfileID_KKLiftFix;
     /**
      * @brief 668
      * @par Address: 0x100047C4
      */
-    static const s32 cProfileID_29C;
+    static const s32 cProfileID_KKLightning;
     /**
      * @brief 669
      * @par Address: 0x100047C8
      */
-    static const s32 cProfileID_29D;
+    static const s32 cProfileID_Wanwan;
     /**
      * @brief 670
      * @par Address: 0x100047CC
      */
-    static const s32 cProfileID_29E;
+    static const s32 cProfileID_Polter;
     /**
      * @brief 671
      * @par Address: 0x100047D0
      */
-    static const s32 cProfileID_29F;
+    static const s32 cProfileID_Stand;
     /**
      * @brief 672
      * @par Address: 0x100047D4
      */
-    static const s32 cProfileID_2A0;
+    static const s32 cProfileID_WakiBakubaku;
     /**
      * @brief 673
      * @par Address: 0x100047D8
      */
-    static const s32 cProfileID_2A1;
+    static const s32 cProfileID_Bakubaku;
     /**
      * @brief 674
      * @par Address: 0x100047DC
      */
-    static const s32 cProfileID_2A2;
+    static const s32 cProfileID_Ibaramushi;
     /**
      * @brief 675
      * @par Address: 0x100047E0
      */
-    static const s32 cProfileID_2A3;
+    static const s32 cProfileID_Crow;
     /**
      * @brief 676
      * @par Address: 0x100047E4
      */
-    static const s32 cProfileID_2A4;
+    static const s32 cProfileID_TogeMet;
     /**
      * @brief 677
      * @par Address: 0x100047E8
      */
-    static const s32 cProfileID_2A5;
+    static const s32 cProfileID_TogeMetGroup;
     /**
      * @brief 678
      * @par Address: 0x100047EC
@@ -4642,7 +4642,7 @@ public:
      * @brief 736
      * @par Address: 0x100048D4
      */
-    static const s32 cProfileID_2E0;
+    static const s32 cProfileID_PeachDemoShadowkun;
     /**
      * @brief 737
      * @par Address: 0x100048D8
@@ -4657,97 +4657,97 @@ public:
      * @brief 739
      * @par Address: 0x100048E0
      */
-    static const s32 cProfileID_2E3;
+    static const s32 cProfileID_ShortResultPeach;
     /**
      * @brief 740
      * @par Address: 0x100048E4
      */
-    static const s32 cProfileID_2E4;
+    static const s32 cProfileID_KanbanArrow;
     /**
      * @brief 741
      * @par Address: 0x100048E8
      */
-    static const s32 cProfileID_2E5;
+    static const s32 cProfileID_KanbanArrowRDash;
     /**
      * @brief 742
      * @par Address: 0x100048EC
      */
-    static const s32 cProfileID_2E6;
+    static const s32 cProfileID_KanbanArrowNarrowSpawnRange;
     /**
      * @brief 743
      * @par Address: 0x100048F0
      */
-    static const s32 cProfileID_2E7;
+    static const s32 cProfileID_LuigiKanban11;
     /**
      * @brief 744
      * @par Address: 0x100048F4
      */
-    static const s32 cProfileID_2E8;
+    static const s32 cProfileID_LuigiKanban99;
     /**
      * @brief 745
      * @par Address: 0x100048F8
      */
-    static const s32 cProfileID_2E9;
+    static const s32 cProfileID_FollowGrassFlower;
     /**
      * @brief 746
      * @par Address: 0x100048FC
      */
-    static const s32 cProfileID_2EA;
+    static const s32 cProfileID_DVKusabanaHassei;
     /**
      * @brief 747
      * @par Address: 0x10004900
      */
-    static const s32 cProfileID_2EB;
+    static const s32 cProfileID_NextGotoBlock;
     /**
      * @brief 748
      * @par Address: 0x10004904
      */
-    static const s32 cProfileID_2EC;
+    static const s32 cProfileID_ChangeBlock;
     /**
      * @brief 749
      * @par Address: 0x10004908
      */
-    static const s32 cProfileID_2ED;
+    static const s32 cProfileID_ChangeBlockRDash;
     /**
      * @brief 750
      * @par Address: 0x1000490C
      */
-    static const s32 cProfileID_2EE;
+    static const s32 cProfileID_RedRing;
     /**
      * @brief 751
      * @par Address: 0x10004910
      */
-    static const s32 cProfileID_2EF;
+    static const s32 cProfileID_GreenRing;
     /**
      * @brief 752
      * @par Address: 0x10004914
      */
-    static const s32 cProfileID_2F0;
+    static const s32 cProfileID_PurpleRing;
     /**
      * @brief 753
      * @par Address: 0x10004918
      */
-    static const s32 cProfileID_2F1;
+    static const s32 cProfileID_BlueRing;
     /**
      * @brief 754
      * @par Address: 0x1000491C
      */
-    static const s32 cProfileID_2F2;
+    static const s32 cProfileID_GoalRing;
     /**
      * @brief 755
      * @par Address: 0x10004920
      */
-    static const s32 cProfileID_2F3;
+    static const s32 cProfileID_Fruit;
     /**
      * @brief 756
      * @par Address: 0x10004924
      */
-    static const s32 cProfileID_2F4;
+    static const s32 cProfileID_FruitTree;
     /**
      * @brief 757
      * @par Address: 0x10004928
      */
-    static const s32 cProfileID_2F5;
+    static const s32 cProfileID_HammerBros;
     /**
      * @brief 758
      * @par Address: 0x1000492C
@@ -4757,7 +4757,7 @@ public:
      * @brief 759
      * @par Address: 0x10004930
      */
-    static const s32 cProfileID_2F7;
+    static const s32 cProfileID_BoomerangBros;
     /**
      * @brief 760
      * @par Address: 0x10004934
@@ -4767,7 +4767,7 @@ public:
      * @brief 761
      * @par Address: 0x10004938
      */
-    static const s32 cProfileID_2F9;
+    static const s32 cProfileID_FireBros;
     /**
      * @brief 762
      * @par Address: 0x1000493C
@@ -4777,7 +4777,7 @@ public:
      * @brief 763
      * @par Address: 0x10004940
      */
-    static const s32 cProfileID_2FB;
+    static const s32 cProfileID_IceBros;
     /**
      * @brief 764
      * @par Address: 0x10004944
@@ -4787,7 +4787,7 @@ public:
      * @brief 765
      * @par Address: 0x10004948
      */
-    static const s32 cProfileID_2FD;
+    static const s32 cProfileID_HimanBros;
     /**
      * @brief 766
      * @par Address: 0x1000494C
@@ -4797,212 +4797,212 @@ public:
      * @brief 767
      * @par Address: 0x10004950
      */
-    static const s32 cProfileID_2FF;
+    static const s32 cProfileID_Birikyu;
     /**
      * @brief 768
      * @par Address: 0x10004954
      */
-    static const s32 cProfileID_300;
+    static const s32 cProfileID_DensenKoopa;
     /**
      * @brief 769
      * @par Address: 0x10004958
      */
-    static const s32 cProfileID_301;
+    static const s32 cProfileID_DensenKoopaTantai;
     /**
      * @brief 770
      * @par Address: 0x1000495C
      */
-    static const s32 cProfileID_302;
+    static const s32 cProfileID_DensenKoopaShock;
     /**
      * @brief 771
      * @par Address: 0x10004960
      */
-    static const s32 cProfileID_303;
+    static const s32 cProfileID_Koton;
     /**
      * @brief 772
      * @par Address: 0x10004964
      */
-    static const s32 cProfileID_304;
+    static const s32 cProfileID_KotonGroup;
     /**
      * @brief 773
      * @par Address: 0x10004968
      */
-    static const s32 cProfileID_305;
+    static const s32 cProfileID_RotationDokanFPakkun;
     /**
      * @brief 774
      * @par Address: 0x1000496C
      */
-    static const s32 cProfileID_306;
+    static const s32 cProfileID_RotationDokanPakkunUp;
     /**
      * @brief 775
      * @par Address: 0x10004970
      */
-    static const s32 cProfileID_307;
+    static const s32 cProfileID_RotationDokanPakkunDown;
     /**
      * @brief 776
      * @par Address: 0x10004974
      */
-    static const s32 cProfileID_308;
+    static const s32 cProfileID_RotationDokanPakkunLeft;
     /**
      * @brief 777
      * @par Address: 0x10004978
      */
-    static const s32 cProfileID_309;
+    static const s32 cProfileID_RotationDokanPakkunRight;
     /**
      * @brief 778
      * @par Address: 0x1000497C
      */
-    static const s32 cProfileID_30A;
+    static const s32 cProfileID_Icicle;
     /**
      * @brief 779
      * @par Address: 0x10004980
      */
-    static const s32 cProfileID_30B;
+    static const s32 cProfileID_IcicleFixation;
     /**
      * @brief 780
      * @par Address: 0x10004984
      */
-    static const s32 cProfileID_30C;
+    static const s32 cProfileID_Teresa;
     /**
      * @brief 781
      * @par Address: 0x10004988
      */
-    static const s32 cProfileID_30D;
+    static const s32 cProfileID_BigTeresa;
     /**
      * @brief 782
      * @par Address: 0x1000498C
      */
-    static const s32 cProfileID_30E;
+    static const s32 cProfileID_TeresaRotation;
     /**
      * @brief 783
      * @par Address: 0x10004990
      */
-    static const s32 cProfileID_30F;
+    static const s32 cProfileID_TeresaRotationParent;
     /**
      * @brief 784
      * @par Address: 0x10004994
      */
-    static const s32 cProfileID_310;
+    static const s32 cProfileID_TeresaRotationParentRDash;
     /**
      * @brief 785
      * @par Address: 0x10004998
      */
-    static const s32 cProfileID_311;
+    static const s32 cProfileID_Kirifuki;
     /**
      * @brief 786
      * @par Address: 0x1000499C
      */
-    static const s32 cProfileID_312;
+    static const s32 cProfileID_KirifukiRDash;
     /**
      * @brief 787
      * @par Address: 0x100049A0
      */
-    static const s32 cProfileID_313;
+    static const s32 cProfileID_Cloud;
     /**
      * @brief 788
      * @par Address: 0x100049A4
      */
-    static const s32 cProfileID_314;
+    static const s32 cProfileID_PoisonCloud;
     /**
      * @brief 789
      * @par Address: 0x100049A8
      */
-    static const s32 cProfileID_315;
+    static const s32 cProfileID_CloudLight;
     /**
      * @brief 790
      * @par Address: 0x100049AC
      */
-    static const s32 cProfileID_316;
+    static const s32 cProfileID_BubbleCreateMgr;
     /**
      * @brief 791
      * @par Address: 0x100049B0
      */
-    static const s32 cProfileID_317;
+    static const s32 cProfileID_ObjSnow;
     /**
      * @brief 792
      * @par Address: 0x100049B4
      */
-    static const s32 cProfileID_318;
+    static const s32 cProfileID_ObjSparks;
     /**
      * @brief 793
      * @par Address: 0x100049B8
      */
-    static const s32 cProfileID_319;
+    static const s32 cProfileID_TagWind;
     /**
      * @brief 794
      * @par Address: 0x100049BC
      */
-    static const s32 cProfileID_31A;
+    static const s32 cProfileID_TagFrameSet;
     /**
      * @brief 795
      * @par Address: 0x100049C0
      */
-    static const s32 cProfileID_31B;
+    static const s32 cProfileID_ShadowkunHouseReadTag;
     /**
      * @brief 796
      * @par Address: 0x100049C4
      */
-    static const s32 cProfileID_31C;
+    static const s32 cProfileID_TagResultDemo;
     /**
      * @brief 797
      * @par Address: 0x100049C8
      */
-    static const s32 cProfileID_31D;
+    static const s32 cProfileID_LightWater;
     /**
      * @brief 798
      * @par Address: 0x100049CC
      */
-    static const s32 cProfileID_31E;
+    static const s32 cProfileID_CircleLight;
     /**
      * @brief 799
      * @par Address: 0x100049D0
      */
-    static const s32 cProfileID_31F;
+    static const s32 cProfileID_BigShell;
     /**
      * @brief 800
      * @par Address: 0x100049D4
      */
-    static const s32 cProfileID_320;
+    static const s32 cProfileID_LiftZenYokoTomegu;
     /**
      * @brief 801
      * @par Address: 0x100049D8
      */
-    static const s32 cProfileID_321;
+    static const s32 cProfileID_LiftHurikoCenter;
     /**
      * @brief 802
      * @par Address: 0x100049DC
      */
-    static const s32 cProfileID_322;
+    static const s32 cProfileID_GuruGuru;
     /**
      * @brief 803
      * @par Address: 0x100049E0
      */
-    static const s32 cProfileID_323;
+    static const s32 cProfileID_Gesso;
     /**
      * @brief 804
      * @par Address: 0x100049E4
      */
-    static const s32 cProfileID_324;
+    static const s32 cProfileID_GessoChild;
     /**
      * @brief 805
      * @par Address: 0x100049E8
      */
-    static const s32 cProfileID_325;
+    static const s32 cProfileID_BaramakiGesso;
     /**
      * @brief 806
      * @par Address: 0x100049EC
      */
-    static const s32 cProfileID_326;
+    static const s32 cProfileID_Nut;
     /**
      * @brief 807
      * @par Address: 0x100049F0
      */
-    static const s32 cProfileID_327;
+    static const s32 cProfileID_StrongBox;
     /**
      * @brief 808
      * @par Address: 0x100049F4
      */
-    static const s32 cProfileID_328;
+    static const s32 cProfileID_StrongBoxKey;
     /**
      * @brief 809
      * @par Address: 0x100049F8
@@ -5012,7 +5012,7 @@ public:
      * @brief 810
      * @par Address: 0x100049FC
      */
-    static const s32 cProfileID_32A;
+    static const s32 cProfileID_YoshiEgg;
     /**
      * @brief 811
      * @par Address: 0x10004A00
@@ -5022,32 +5022,32 @@ public:
      * @brief 812
      * @par Address: 0x10004A04
      */
-    static const s32 cProfileID_32C;
+    static const s32 cProfileID_TorpedoBase;
     /**
      * @brief 813
      * @par Address: 0x10004A08
      */
-    static const s32 cProfileID_32D;
+    static const s32 cProfileID_SearchTorpedoBase;
     /**
      * @brief 814
      * @par Address: 0x10004A0C
      */
-    static const s32 cProfileID_32E;
+    static const s32 cProfileID_TorpedoWakiTag;
     /**
      * @brief 815
      * @par Address: 0x10004A10
      */
-    static const s32 cProfileID_32F;
+    static const s32 cProfileID_NormalTorpedo;
     /**
      * @brief 816
      * @par Address: 0x10004A14
      */
-    static const s32 cProfileID_330;
+    static const s32 cProfileID_NormalTorpedoGroup;
     /**
      * @brief 817
      * @par Address: 0x10004A18
      */
-    static const s32 cProfileID_331;
+    static const s32 cProfileID_SearchTorpedo;
     /**
      * @brief 818
      * @par Address: 0x10004A1C
@@ -5117,47 +5117,47 @@ public:
      * @brief 831
      * @par Address: 0x10004A50
      */
-    static const s32 cProfileID_33F;
+    static const s32 cProfileID_Tsuru;
     /**
      * @brief 832
      * @par Address: 0x10004A54
      */
-    static const s32 cProfileID_340;
+    static const s32 cProfileID_DokanJoint;
     /**
      * @brief 833
      * @par Address: 0x10004A58
      */
-    static const s32 cProfileID_341;
+    static const s32 cProfileID_DokanJointMame;
     /**
      * @brief 834
      * @par Address: 0x10004A5C
      */
-    static const s32 cProfileID_342;
+    static const s32 cProfileID_GoalKinokoHouse;
     /**
      * @brief 835
      * @par Address: 0x10004A60
      */
-    static const s32 cProfileID_343;
+    static const s32 cProfileID_WaterEffectFilter;
     /**
      * @brief 836
      * @par Address: 0x10004A64
      */
-    static const s32 cProfileID_344;
+    static const s32 cProfileID_WaterEffectFilterRDash;
     /**
      * @brief 837
      * @par Address: 0x10004A68
      */
-    static const s32 cProfileID_345;
+    static const s32 cProfileID_WaterAwa;
     /**
      * @brief 838
      * @par Address: 0x10004A6C
      */
-    static const s32 cProfileID_346;
+    static const s32 cProfileID_FlyingMusabiPlayerTag;
     /**
      * @brief 839
      * @par Address: 0x10004A70
      */
-    static const s32 cProfileID_347;
+    static const s32 cProfileID_PlayerScrollLrFlagTag;
     /**
      * @brief 840
      * @par Address: 0x10004A74
@@ -5167,12 +5167,12 @@ public:
      * @brief 841
      * @par Address: 0x10004A78
      */
-    static const s32 cProfileID_StaffRollChibiYoshiBalloon;
+    static const s32 cProfileID_StaffRollBalloonChibiYoshi;
     /**
      * @brief 842
      * @par Address: 0x10004A7C
      */
-    static const s32 cProfileID_StaffRollChibiYoshiBalloonCheer;
+    static const s32 cProfileID_StaffRollBalloonChibiYoshiCheer;
     /**
      * @brief 843
      * @par Address: 0x10004A80
@@ -5202,22 +5202,22 @@ public:
      * @brief 848
      * @par Address: 0x10004A94
      */
-    static const s32 cProfileID_350;
+    static const s32 cProfileID_TouchDrcMaskLight;
     /**
      * @brief 849
      * @par Address: 0x10004A98
      */
-    static const s32 cProfileID_351;
+    static const s32 cProfileID_TouchMukoActor;
     /**
      * @brief 850
      * @par Address: 0x10004A9C
      */
-    static const s32 cProfileID_352;
+    static const s32 cProfileID_EditCoinPlacementTag;
     /**
      * @brief 851
      * @par Address: 0x10004AA0
      */
-    static const s32 cProfileID_353;
+    static const s32 cProfileID_FeverEffect;
     /**
      * @brief 852
      * @par Address: 0x10004AA4
