@@ -622,7 +622,7 @@ protected:
         cDrawPriority_Polter                                    = 588,
         cDrawPriority_Bakubaku                                  = 589,
         cDrawPriority_Ibaramushi                                = 590,
-        cDrawPriority_Musasabi                                  = 591,
+        cDrawPriority_Nisemusa                                  = 591,
         cDrawPriority_Crow                                      = 592,
         cDrawPriority_LiftLeaf                                  = 593,
         cDrawPriority_WanwanPile                                = 594,
@@ -3482,7 +3482,7 @@ public:
      * @brief 504
      * @par Address: 0x10004534
      */
-    static const s32 cProfileID_Musasabi;
+    static const s32 cProfileID_Nisemusa;
     /**
      * @brief 505
      * @par Address: 0x10004538
