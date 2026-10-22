@@ -9,7 +9,7 @@ public:
     Ride2Point();
     
     // Address: 0x021AF794
-    Ride2Point* ConvertRide2Point(const sead::Vector3f& p1_pos, const sead::Vector3f& p2_pos);
+    Ride2Point* convertRide2Point(const sead::Vector3f& p1_pos, const sead::Vector3f& p2_pos);
 
 private:
     Segment mSegment;
