@@ -11,6 +11,17 @@ public:
     // Address: 0x021AF794
     Ride2Point* convertRide2Point(const sead::Vector2f& p1_pos, const sead::Vector2f& p2_pos);
 
+public:
+    Segment getSegment() const
+    {
+        return mSegment;
+    }
+
+    void setSegment(Segment segment)
+    {
+        mSegment = segment;
+    }
+    
 private:
     Segment mSegment;
 
