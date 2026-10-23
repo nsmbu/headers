@@ -128,7 +128,7 @@ public:
 
 public:
     // Address: Deleted
-    virtual void vf58C();
+    virtual sead::Vector3f vf58C();
 
     virtual f32 getCreateWeaponFrm() const
     {
@@ -247,6 +247,9 @@ public:
 public:
     // Address: 0x022DBEEC
     bool calcTurnAngle();
+
+    // Address: 0x022DA2EC
+    void initModel();
 
 protected:
     JointBlendModel*            mBlendModel;

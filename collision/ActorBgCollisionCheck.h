@@ -529,6 +529,9 @@ public:
     // Address: 0x0218E2B8
     Angle getWallAngle(DirType dir);
 
+    // Address: 0x0218E48C
+    bool checkBombBreak(const sead::Vector2f& top_left, const sead::Vector2f& bottom_right);
+
     BasicBgCollisionCheck& getBgCheck()
     {
         return mBgCheck;
