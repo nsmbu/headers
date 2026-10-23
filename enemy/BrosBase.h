@@ -128,7 +128,7 @@ public:
 
 public:
     // Address: Deleted
-    virtual sead::Vector3f vf58C();
+    virtual sead::Vector3f getCreateWeaponPos();
 
     virtual f32 getCreateWeaponFrm() const
     {
