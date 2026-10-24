@@ -347,7 +347,7 @@ public:
         return mAngle;
     }
 
-    sead::Vector2f getPosDelta() const
+    const sead::Vector2f& getPosDelta() const
     {
         return mPosDelta;
     }
