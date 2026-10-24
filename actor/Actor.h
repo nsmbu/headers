@@ -347,6 +347,11 @@ public:
         return mAngle;
     }
 
+    const sead::Vector2f& getPosDelta() const
+    {
+        return mPosDelta;
+    }
+
     ActorKind getKind() const
     {
         return ActorKind(mActorKind);
