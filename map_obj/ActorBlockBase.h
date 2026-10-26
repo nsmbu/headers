@@ -21,33 +21,13 @@ public:
     /**
      * @brief Persistent state of the block across area reloads.
      */
-    enum ActiveState
+    enum ObjBlockInfo
     {
-        cActiveState_Active           = 0,
-        cActiveState_Used             = 1,
-        cActiveState_Destroyed        = 2,
-        cActiveState_MultiCoinExpired = 3
+        cObjBlockInfo_Active           = 0,
+        cObjBlockInfo_Used             = 1,
+        cObjBlockInfo_Destroyed        = 2,
+        cObjBlockInfo_MultiCoinExpired = 3
     };
-
-    struct DestroyedParam
-    {
-        sead::Vector2f  position;
-        u8              destroy_direction;
-        u8              state_type;
-        u8              _a;
-        s8              player_no;
-        u16             fragment_idx;
-    };
-    static_assert(sizeof(DestroyedParam) == 0x10, "DestroyedParam size mismatch");
-
-    struct DestroyedParam2
-    {
-        sead::Vector2f  position;
-        u8              destroy_direction;
-        s8              player_no;
-        u16             fragment_idx;
-    };
-    static_assert(sizeof(DestroyedParam2) == 0xC, "DestroyedParam2 size mismatch");   
 
 public:
     ActorBlockBase(const ActorCreateParam& param);
