@@ -184,10 +184,6 @@ public:
     void createYoshiEgg(sead::Vector3f& pos, u32, u32, signed char);
     // Address: 0x0270D604
     void createSanboEatYoshiEgg(sead::Vector3f& pos, u32, u32, signed char, u32);
-    // Address: 0x
-    // Address: 0x
-    // Address: 0x
-
 
 protected:
     u8         _0[101][16];
