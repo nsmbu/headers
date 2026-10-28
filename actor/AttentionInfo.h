@@ -1,34 +1,37 @@
 #pragma once
 
-#include <actor/ActorUniqueID.h>
+#include <actor/UniqueID.h>
 
 #include <container/seadListImpl.h>
 #include <heap/seadDisposer.h>
 #include <math/seadVector.h>
 #include <prim/seadBitFlag.h>
 
-class AttentionMgr;
-
 // vtbl Address: 0x10001340
-class AttentionLookat : public sead::IDisposer
+class AttentionInfo : public sead::IDisposer
 {
 public:
-    enum DistanceType
+    enum DistType
     {
         cDistance_10_blocks = 0,
         cDistance_15_blocks,
-        cDistance_32_blocks,        // The maximum of all values
+        cDistance_32_blocks,
         cDistance_16_blocks,
         cDistance_Num
     };
 
 public:
     // Address: 0x0200CA58
-    AttentionLookat(ActorUniqueID id);
+    AttentionInfo(UniqueID owner_id);
+    // Address: Deleted
+    AttentionInfo(UniqueID owner_id, sead::Vector2f pos, DistType max_dist_type, sead::BitFlag32 flag);
     // Address: 0x0200CB10
-    ~AttentionLookat() override;
+    ~AttentionInfo() override;
 
-    const ActorUniqueID& getOwnerID() const
+    // Address: Deleted
+    bool operator()(const AttentionInfo&);
+
+    const UniqueID& getOwnerID() const
     {
         return mOwnerID;
     }
@@ -43,14 +46,14 @@ public:
         return mPos;
     }
 
-    void setMaxDistanceType(DistanceType distance)
+    void setMaxDistType(DistType distance)
     {
-        mMaxDistanceType = distance;
+        mMaxDistType = distance;
     }
 
-    DistanceType getMaxDistanceType() const
+    DistType getMaxDistType() const
     {
-        return mMaxDistanceType;
+        return mMaxDistType;
     }
 
     // TODO: Figure out flags and do this properly
@@ -65,12 +68,12 @@ public:
     }
 
 protected:
-    ActorUniqueID   mOwnerID;
+    UniqueID        mOwnerID;
     sead::Vector2f  mPos;
-    DistanceType    mMaxDistanceType;   // Maximum distance to catch player's attention
+    DistType        mMaxDistType; ///< Maximum distance to catch player's attention
     sead::BitFlag32 mFlag;
     sead::ListNode  mListNode;
 
     friend class AttentionMgr;
 };
-static_assert(sizeof(AttentionLookat) == 0x2C);
+static_assert(sizeof(AttentionInfo) == 0x2C, "AttentionInfo size mismatch");

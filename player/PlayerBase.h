@@ -1,7 +1,7 @@
 #pragma once
 
 #include <actor/Actor.h>
-#include <actor/AttentionLookat.h>
+#include <actor/AttentionInfo.h>
 #include <audio/GameAudio.h>
 #include <collision/ActorBgCollisionPlayerCheck.h>
 #include <effect/EffectObj.h>
@@ -1017,7 +1017,7 @@ public:
     // ------------------------------------ PlayerBase.cpp (1) ------------------------------------ //
 
     // Address: 0x028F23C0
-    PlayerBase(const ActorCreateParam& param);
+    PlayerBase(const ActorCreateParameter& param);
     // Address: 0x028F2CA8
     virtual ~PlayerBase();
 
@@ -2779,7 +2779,7 @@ protected:
     s32                                 _2a4;
     PlayerKey                           mPlayerKey;
     GameAudio::AudioObjctPly            mAudioObj;
-    AttentionLookat                     mAttentionLookat;
+    AttentionInfo                     mAttentionLookat;
     Bitfield<cStatus_MaxBitNum>         mStatus;
     f32                                 mHeight;
     u32                                 _4b8;
@@ -2831,10 +2831,10 @@ protected:
     bool                                mIsBgDamageEnable;
     BgUnitCode::TypeInfo_Damage         mDamageBgTypeInfo;
     sead::FixedRingBuffer<
-        ActorUniqueID,
+        UniqueID,
         2
     >                                   mBgPressIDBuffer;
-    ActorUniqueID                       mLineSpinLiftID;
+    UniqueID                       mLineSpinLiftID;
     u32                                 _1b9c;
     s32                                 mNoHitObjBgTimer;
     f32                                 mAirDriftSpeedFStart;
@@ -2860,7 +2860,7 @@ protected:
     bool                                _2084;
     bool                                _2085;
     s32                                 mNoHitPlayerTimer;
-    ActorUniqueID                       mNoHitPlayerID;
+    UniqueID                       mNoHitPlayerID;
     ReductionMode                       mReductionMode;
     u32                                 mReductionStep;
     f32                                 mReductionScale;
@@ -2881,7 +2881,7 @@ protected:
     s32                                 mDemoSubAction;         // See DemoSubActionType
     s32                                 mDemoActionTimer;
     s32                                 _20ec;
-    ActorUniqueID                       mPlayerJumpDaiID;
+    UniqueID                       mPlayerJumpDaiID;
     s32                                 mDstNextGotoID;
     NextGotoType                        mNextGotoType;          // i.e., "Create Action"
     NextGotoBlockDelay                  mNextGotoDelay;
@@ -2919,7 +2919,7 @@ protected:
     s32                                 mAction;                // See ActionType
     s32                                 mActionTimer;
     s32                                 mActionSubTimer;
-    ActorUniqueID                       mRideActorID;
+    UniqueID                       mRideActorID;
     s32                                 _21d8;
     u32                                 _21dc;
     s32                                 _21e0;

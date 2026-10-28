@@ -1,6 +1,6 @@
 #pragma once
 
-#include <actor/ActorUniqueID.h>
+#include <actor/UniqueID.h>
 #include <state/FStateMgr.h>
 #include <utility/Angle.h>
 #include <utility/Direction.h>
@@ -88,7 +88,7 @@ public:
         return mPosition;
     }
 
-    ActorUniqueID getParentActorID() const
+    UniqueID getParentActorID() const
     {
         return mParentActorID;
     }
@@ -215,7 +215,7 @@ private:
     sead::Vector3f   mPivotCenter;
     u32              _30;
     u32              _34;
-    ActorUniqueID    mParentActorID;
+    UniqueID    mParentActorID;
     u32              _3c;
     u32              _40;
     u32              _44;

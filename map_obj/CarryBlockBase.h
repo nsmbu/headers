@@ -11,7 +11,7 @@ class CarryBlockBase : public CarryObjBase
 
 public:
     // Address: 0x0271DB3C
-    CarryBlockBase(const ActorCreateParam& param, ActorBoxBgCollision& bg_collision, s32 fukidashi_action);
+    CarryBlockBase(const ActorCreateParameter& param, ActorBoxBgCollision& bg_collision, s32 fukidashi_action);
     // Address: 0x0271F260
     ~CarryBlockBase() override { }
 

@@ -44,7 +44,7 @@ public:
 
 protected:
     // Address: 0x021B2310
-    CourseSelectActor(const ActorCreateParam& param);
+    CourseSelectActor(const ActorCreateParameter& param);
     // Address: 0x021B35A4
     ~CourseSelectActor() override;
     

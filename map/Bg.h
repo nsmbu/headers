@@ -1,7 +1,8 @@
 #pragma once
 
-#include <map/BgDeco.h>
 #include <collision/BgUnitCode.h>
+#include <map/BgDeco.h>
+#include <map/WaveType.h>
 #include <utility/Direction.h>
 
 #include <heap/seadDisposer.h>
@@ -61,15 +62,6 @@ public:
     };
     static_assert(sizeof(Gust) == 0x14, "Bg::Gust size mismatch");
 
-    enum WaveType : u8
-    {
-        cWaveType_None      = 0,
-        cWaveType_Lava      = 1,
-        cWaveType_Water     = 2,
-        cWaveType_Poison    = 3,
-        cWaveType_Quicksand = 4
-    };
-
 public:
     // Address: 0x02684480
     Bg();
@@ -112,7 +104,7 @@ public:
     void setUnitCurrentCdFile(u16 x, u16 y, u8 layer, u16 unit);
 
     // Address: 0x0268B71C
-    void setWaterInWave(const sead::Vector2f& pos, u8 wave_scale);
+    void setWaterWave(const sead::Vector2f& pos, WaveType type);
 
     // Address: 0x0268B8E4
     u8 getNextFlowerIndex();
@@ -216,11 +208,7 @@ private:
     f32             _18;
     f32             mWaveSurfaceX[1280];
     f32             mWaveSurfaceY[1280];
-    union
-    {
-        bool     mHasLavaWaves;
-        WaveType mWaveType;
-    };
+    bool            mHasLavaWaves;
     bool            mHasLiquid;
     u32             _2820;
     u8              _2824[0x558];

@@ -11,7 +11,7 @@ class ActorBlockHatena : public ActorBlockBase
 
 public:
     // Address: 0x026A4FAC
-    ActorBlockHatena(const ActorCreateParam& param);
+    ActorBlockHatena(const ActorCreateParameter& param);
     // Address: 0x026A58C8
     ~ActorBlockHatena() override { }
 

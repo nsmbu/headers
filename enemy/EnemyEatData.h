@@ -1,15 +1,15 @@
 #pragma once
 
-#include <actor/EatData.h>
+#include <actor/EatCallback.h>
 
 class Enemy;
 
 // vtbl Address: 0x10072F9C
-class EnemyEatData : public EatData
+class EnemyEatData : public EatCallback
 {
 public:
     // Address: 0x0232F00C
-    EnemyEatData(ActorUniqueID owner_id);
+    EnemyEatData(UniqueID owner_id);
 
     // Address: 0x0232F124
     bool setEatTongue(Actor* yoshi) override;
@@ -22,4 +22,4 @@ protected:
     // Address: 0x0232F074
     Enemy* getOwner_() const;
 };
-static_assert(sizeof(EnemyEatData) == sizeof(EatData));
+static_assert(sizeof(EnemyEatData) == sizeof(EatCallback));

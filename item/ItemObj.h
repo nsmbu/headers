@@ -8,7 +8,7 @@ class ItemObj : public ItemBase
 
 public:
     // Address: 0x0251EBFC
-    ItemObj(const ActorCreateParam& param);
+    ItemObj(const ActorCreateParameter& param);
     // Address: 0x0251FE04
     virtual ~ItemObj();
 

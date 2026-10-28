@@ -1,6 +1,6 @@
 #pragma once
 
-#include <actor/ActorUniqueID.h>
+#include <actor/UniqueID.h>
 
 // vtbl Address: 0x100D3C2C
 class GamesceneBase
@@ -52,7 +52,7 @@ public:
     virtual void vf64();
 
     // Address: 0x025DA288
-    void registerActor(ActorUniqueID id);
+    void registerActor(UniqueID id);
 
 protected:
     u32 _0[0x14A0 / sizeof(u32)];

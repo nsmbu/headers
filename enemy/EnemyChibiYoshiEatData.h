@@ -1,15 +1,15 @@
 #pragma once
 
-#include <actor/ChibiYoshiEatData.h>
+#include <actor/ChibiEatCallback.h>
 
 class Enemy;
 
 // vtbl Address: 0x10072738
-class EnemyChibiYoshiEatData : public ChibiYoshiEatData
+class EnemyChibiYoshiEatData : public ChibiEatCallback
 {
 public:
     // Address: 0x0232ADAC
-    EnemyChibiYoshiEatData(ActorUniqueID owner_id);
+    EnemyChibiYoshiEatData(UniqueID owner_id);
 
     // Address: 0x0232AEAC
     u32 vf0C() override;
@@ -22,4 +22,4 @@ protected:
     // Address: 0x0232AE14
     Enemy* getOwner_() const;
 };
-static_assert(sizeof(EnemyChibiYoshiEatData) == sizeof(ChibiYoshiEatData));
+static_assert(sizeof(EnemyChibiYoshiEatData) == sizeof(ChibiEatCallback));

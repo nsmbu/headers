@@ -1,6 +1,6 @@
 #pragma once
 
-#include <actor/EatData.h>
+#include <actor/EatCallback.h>
 #include <collision/ActorBgCollisionEnemyCheck.h>
 #include <collision/ActorCollisionDrcTouchCallback.h>
 #include <effect/EffectObj.h>
@@ -31,7 +31,7 @@ class BrosBase : public Enemy
 
 public:
     // Address: 0x022DA0AC
-    BrosBase(const ActorCreateParam& param);
+    BrosBase(const ActorCreateParameter& param);
 
     ~BrosBase() override
     {
@@ -272,10 +272,10 @@ protected:
     u32                         _19a0;
     sead::Vector3f              mStartPos;
     u8                          mMoveDir;
-    ActorUniqueID               mWeaponID;              // I think?
+    UniqueID               mWeaponID;              // I think?
     bool                        _19b8;
     EffectObj                   mEffect;
-    EatData                     mEatData;
+    EatCallback                     mEatData;
     u32                         _1a48;
     ActorBgCollisionEnemyCheck  mBgCheckEnemy;
     u32                         _2f30;

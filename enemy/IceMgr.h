@@ -1,6 +1,6 @@
 #pragma once
 
-#include <actor/ActorUniqueID.h>
+#include <actor/UniqueID.h>
 
 #include <container/seadSafeArray.h>
 #include <math/seadVector.h>
@@ -171,7 +171,7 @@ public:
 
 protected:
     u8                                          mIceNum;
-    sead::SafeArray<ActorUniqueID, cIceMaxNum>  mIceID;
+    sead::SafeArray<UniqueID, cIceMaxNum>  mIceID;
     IceStatus                                   mIceStatus;
     TimeInfo*                                   mTimeInfo;
     Enemy*                                      mOwner;

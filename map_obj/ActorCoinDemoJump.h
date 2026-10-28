@@ -11,7 +11,7 @@ class ActorCoinDemoJump : public ActorCoinDemoBase
 
 public:
     // Address: 0x026C3F18
-    ActorCoinDemoJump(const ActorCreateParam& param);
+    ActorCoinDemoJump(const ActorCreateParameter& param);
     // Address: 0x026C43D4
     ~ActorCoinDemoJump() override { }
 

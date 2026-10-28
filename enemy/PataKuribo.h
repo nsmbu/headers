@@ -11,7 +11,7 @@ class PataKuribo : public KuriboBase
 
 public:
     // Address: 0x0240A0B4
-    PataKuribo(const ActorCreateParam& param);
+    PataKuribo(const ActorCreateParameter& param);
 
     // Address: 0x0240AD78
     bool createIceActor() override;

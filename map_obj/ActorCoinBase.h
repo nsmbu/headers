@@ -2,7 +2,7 @@
 
 #include <map_obj/ChangeBlockCoinBase.h>
 #include <graphics/AnimModel.h>
-#include <actor/EatData.h>
+#include <actor/EatCallback.h>
 
 // vtbl Address: 0x100F1AF0
 class ActorCoinBase : public ChangeBlockCoinBase
@@ -13,7 +13,7 @@ class ActorCoinBase : public ChangeBlockCoinBase
 
 public:
     // Address: 0x026BF78C
-    ActorCoinBase(const ActorCreateParam& param);
+    ActorCoinBase(const ActorCreateParameter& param);
     // Address: 0x026C1DE8
     ~ActorCoinBase() override { }
 
@@ -97,7 +97,7 @@ protected:
     f32             _1ce8;
     f32             _1cec;
     u8              _1cf0;
-    EatData         mEatData;
+    EatCallback         mEatData;
     u8              _1d18;
     u8              _1d19;
     u8              _1d1a;

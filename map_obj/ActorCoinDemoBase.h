@@ -12,7 +12,7 @@ class ActorCoinDemoBase : public ActorMultiState
 
 public:
     // Address: 0x026C3F18
-    ActorCoinDemoBase(const ActorCreateParam& param);
+    ActorCoinDemoBase(const ActorCreateParameter& param);
     // Address: 0x026C43D4
     ~ActorCoinDemoBase() override { }
 

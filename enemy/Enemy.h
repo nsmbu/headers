@@ -244,7 +244,7 @@ public:
 
 public:
     // Address: 0x02328494
-    Enemy(const ActorCreateParam& param);
+    Enemy(const ActorCreateParameter& param);
 
 protected:
     // Address: 0x02328644

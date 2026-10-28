@@ -11,7 +11,7 @@ class ChibiYoshiAwa : public Actor
 
 public:
     // Address: 0x027296B4
-    ChibiYoshiAwa(const ActorCreateParam& param);
+    ChibiYoshiAwa(const ActorCreateParameter& param);
 
     // Address: 0x0272A30C
     bool setBreak(Actor* actor = nullptr);

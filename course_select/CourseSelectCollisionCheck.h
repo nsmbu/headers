@@ -1,6 +1,6 @@
 #pragma once
 
-#include <actor/ActorUniqueID.h>
+#include <actor/UniqueID.h>
 #include <math/seadVector.h>
 
 class CourseSelectActor; // TODO: This might be CourseSelectEnemy instead
@@ -32,12 +32,12 @@ public:
     // Address: //!!!
     void set(CourseSelectActor* owner, const CollisionData& collision_data);
 
-    ActorUniqueID& getOwnerID()
+    UniqueID& getOwnerID()
     {
         return mOwnerID;
     }
     
-    const ActorUniqueID& getOwnerID() const
+    const UniqueID& getOwnerID() const
     {
         return mOwnerID;
     }
@@ -79,7 +79,7 @@ public:
     }
     
 private:
-    ActorUniqueID mOwnerID;
+    UniqueID mOwnerID;
     u32 _4;
     CollisionData mCollisionData;
 };

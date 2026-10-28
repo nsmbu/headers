@@ -15,13 +15,13 @@ class KillerHoudai : public ActorState
 
 public:
     // Address: 0x1008C03C
-    static const ActorCreateInfo cActorCreateInfo;
+    static const ActorData cActorCreateInfo;
     // Address: 0x1008C060
-    static const ActorCreateInfo cActorCreateInfoMagnum;
+    static const ActorData cActorCreateInfoMagnum;
 
 public:
     // Address: 0x023BCC74
-    KillerHoudai(const ActorCreateParam& param);
+    KillerHoudai(const ActorCreateParameter& param);
     virtual ~KillerHoudai() { }
 
 protected:

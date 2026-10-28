@@ -8,7 +8,7 @@
 struct BlockState
 {
     sead::Vector3f                  position;
-    ActorBlockBase::ActiveState     state;
+    ActorBlockBase::ObjBlockInfo    state;
     u16                             area_no;
     u8                              _12[2];
 };
@@ -17,12 +17,12 @@ static_assert(sizeof(BlockState) == 0x14, "BlockState size mismatch");
 class BlockMgr
 {
     // createInstance() Address: 0x0270B65C
-    // deleteInstance() Address: Deleted
+    // deleteInstance() Address: 0x0270D608
     // sInstance        Address: 0x101DB964
     SEAD_SINGLETON_DISPOSER(BlockMgr);
 
 public:
-    struct DestroyParam
+    struct BlockBreakCheckInfo
     {
         sead::Vector2f          position;
         u32                     fragment_type;
@@ -33,7 +33,7 @@ public:
         u8                      _13;
         ActorBgCollisionCheck*  collision_check;
     };
-    static_assert(sizeof(DestroyParam) == 0x18, "DestroyParam size mismatch");
+    static_assert(sizeof(BlockBreakCheckInfo) == 0x18, "BlockBreakCheckInfo size mismatch");
 
     /**
      * @brief Content enum for cType_BreakBlock units.
@@ -79,7 +79,7 @@ public:
         cHatenaContent_Num              = 12,
     };
 
-    struct HitParam
+    struct BlockCreateInfo
     {
         sead::Vector2f          position;
         union
@@ -98,34 +98,92 @@ public:
         s8                      player_type;
         ActorBgCollisionCheck*  collision_check;
     };
-    static_assert(sizeof(HitParam) == 0x14, "HitParam size mismatch");
+    static_assert(sizeof(BlockCreateInfo) == 0x14, "BlockCreateInfo size mismatch");
+
+    struct BlockBreakActorCreateInfo
+    {
+        sead::Vector2f  position;
+        u8              destroy_direction;
+        u8              state_type;
+        u8              _a;
+        s8              player_no;
+        u16             fragment_idx;
+    };
+    static_assert(sizeof(BlockBreakActorCreateInfo) == 0x10, "BlockBreakActorCreateInfo size mismatch");
+
+    struct BlockBreakEffectCreateInfo
+    {
+        sead::Vector2f  position;
+        u8              destroy_direction;
+        s8              player_no;
+        u16             fragment_idx;
+    };
+    static_assert(sizeof(BlockBreakEffectCreateInfo) == 0xC, "BlockBreakEffectCreateInfo size mismatch");   
+
+    struct ItemCreateDirInfo
+    {
+        f32 _0;
+        f32 _4;
+        u8  _8;
+        u8  _9;
+    };
+    static_assert(sizeof(ItemCreateDirInfo) == 0xC, "ItemCreateDirInfo size mismatch");   
+
+    // Address: 0x1010280C
+    static const u16 cQuestionItemNo[18];
+    // Address: 0x10102830
+    static const u16 cRengaItemNo[18];
+    // Address: 0x10102854
+    static const u16 cClarityItemNo[18];
+    // Address: 0x10102804
+    static const u16 cBreakBlockColorType[4];
 
 public:
     // Address: 0x0270B90C
-    void destroy(ActorBlockBase::DestroyedParam& param, bool no_add_score);
+    void brokenBlockActorCreate(BlockBreakActorCreateInfo& info, bool no_add_score);
     // Address: 0x0270C61C
-    void destroy2(ActorBlockBase::DestroyedParam2& param, bool no_play_sound, bool no_add_score);
+    void brokenBlockEffectCreate(BlockBreakEffectCreateInfo& info, bool no_play_sound, bool no_add_score);
     // Address: 0x0270C798
-    void doDestroyAt(DestroyParam& param);
+    void blockBreakCheck(BlockBreakCheckInfo& info);
     
     // Address: 0x0270C18C
-    void feverModeBlockReact(sead::Vector2f& at);
+    void checkDrcTouchBlockCreate(sead::Vector2f& pos);
     // Address: 0x0270BBB4
-    void feverModeHitBlockAt(sead::Vector2f& at);
+    void DrcTouchBlockCreate(sead::Vector2f& pos);
     // Address: 0x0270C9D0
-    bool hitBlockAt(HitParam& hit_param);
+    bool blockCreate(BlockCreateInfo& create_info);
 
     // Address: 0x0270D2F4
-    ActorBlockBase::ActiveState getBlockActiveState(sead::Vector3f& pos_for_state, u32 area_no);
+    ActorBlockBase::ObjBlockInfo getObjBlockInfo(sead::Vector3f& pos, u32 area_no);
+
+    // Address: 0x0270D294
+    void executeTenCoin();
     // Address: 0x0270B7EC
-    ActorBlockBase::ActiveState getMultiCoinStateAt(sead::Vector3f& at);
+    ActorBlockBase::ObjBlockInfo checkTenCoin(sead::Vector3f& pos);
 
     // Address: 0x0270D420
-    void setStateForBlockAt(sead::Vector3f& at, ActorBlockBase::ActiveState state, u32 area_no);
+    void setObjBlockInfo(sead::Vector3f& pos, ActorBlockBase::ObjBlockInfo block_info, u32 area_no);
     // Address: 0x0270B6E0
-    ActorBlockBase::Type unitToType(u16 unit);
-    // Address: 0x0270D294
-    void update();
+    ActorBlockBase::Type blockPanelTypeNoChenge(u16 unit);
+
+    // Address: 0x0270C3B4
+    bool setblockBreakEffect(sead::Vector3f& pos);
+    // Address: 0x0270D130
+    void chikuwaCreateSet(const sead::Vector2f& pos);
+    // Address: 0x0270D24C
+    u32 chengeItemFromCoin(u32, BlockCoinBase::Content content); // TODO: Rename BlockCoinBase::Content to BlockInItem
+    // Address: 0x0270B89C
+    void createTouchBlockBreakCoin(sead::Vector3f& pos);
+    // Address: 0x0270BB28
+    void getYossyCount();
+    // Address: 0x0270C2F0
+    bool itemDirCheck(const ItemCreateDirInfo* dir_info);
+    // Address: 0x0270D4A0
+    void createCommonYoshiEgg(sead::Vector3f& pos, u32, u32, signed char, u32);
+    // Address: 0x0270D5FC
+    void createYoshiEgg(sead::Vector3f& pos, u32, u32, signed char);
+    // Address: 0x0270D604
+    void createSanboEatYoshiEgg(sead::Vector3f& pos, u32, u32, signed char, u32);
 
 protected:
     u8         _0[101][16];

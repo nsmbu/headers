@@ -19,7 +19,7 @@ public:
 
 public:
     // Address: 0x026BA304
-    ActorBlockSwitch(const ActorCreateParam& param);
+    ActorBlockSwitch(const ActorCreateParameter& param);
     // Address: 0x026BAF80
     virtual ~ActorBlockSwitch() { }
 
@@ -50,7 +50,7 @@ public:
 
 public:
     // Address: 0x100EF29C
-    static const ActorCreateInfo cCreateInfo;
+    static const ActorData cCreateInfo;
 
 protected:
     SwitchType  mSwitchType;

@@ -10,7 +10,7 @@ class CourseSelectObjActor : public CourseSelectDemoActor   // vtbl: Address: 0x
 
 protected:
     // Address: 0x02201C04
-    CourseSelectObjActor(const ActorCreateParam& param);
+    CourseSelectObjActor(const ActorCreateParameter& param);
     // Address: 0x02201D08
     ~CourseSelectObjActor() override;
 

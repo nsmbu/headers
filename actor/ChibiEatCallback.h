@@ -1,13 +1,13 @@
 #pragma once
 
-#include <actor/ActorUniqueID.h>
+#include <actor/UniqueID.h>
 
 #include <math/seadVector.h>
 
 class Actor;
 
 // vtbl Address: 0x1000145C
-class ChibiYoshiEatData
+class ChibiEatCallback
 {
 public:
     enum State
@@ -17,14 +17,14 @@ public:
         cState_EatMouth,
         // ...?
     };
-    static_assert(sizeof(State) == 4);
+    static_assert(sizeof(State) == 4, "ChibiEatCallback::State size mismatch");
 
     enum EatType
     {
         cEatType_None = 0,  ///< Damages the player when trying to eat
         cEatType_Drink,     ///< Swallow the food
     };
-    static_assert(sizeof(EatType) == 4);
+    static_assert(sizeof(EatType) == 4, "ChibiEatCallback::EatType size mismatch");
 
     enum ScoreType
     {
@@ -32,25 +32,28 @@ public:
         cScoreType_Point_1000,
         cScoreType_None,
     };
-    static_assert(sizeof(ScoreType) == 4);
+    static_assert(sizeof(ScoreType) == 4, "ChibiEatCallback::ScoreType size mismatch");
 
     // Address: 0x0200CF1C
-    ChibiYoshiEatData(ActorUniqueID owner_id);
+    ChibiEatCallback(UniqueID owner_id);
+
+    // Address: Deleted
+    Actor* getParentActorPtr_() const;
 
     // Address: 0x0200D308
-    virtual u32 vf0C();
+    virtual bool isEatEnable();
     // Address: 0x0200D034
-    virtual void* vf14(void*);
+    virtual void* setEatIn(Actor* chibi_yoshi);
     // Address: 0x0200D094
-    virtual void* vf1C(void*);
+    virtual void* eatMove(Actor* chibi_yoshi);
     // Address: 0x0200D310
-    virtual void vf24();
+    virtual void setEatMouth(Actor* chibi_yoshi);
     // Address: 0x0200D314
     virtual void setEatSpitOut(Actor* chibi_yoshi);
     // Address: 0x0200D1B4
-    virtual bool handleEaten(Actor* chibi_yoshi);
+    virtual bool setEatGlupDown(Actor* chibi_yoshi);
     // Address: 0x0200D318
-    virtual void vf3C();
+    virtual void replaceEatActor();
 
     State getState() const
     {
@@ -93,11 +96,11 @@ public:
     }
 
 protected:
-    ActorUniqueID   mOwnerID;
+    UniqueID        mOwnerID;
     u32             mYoshiChibiID;
     sead::Vector3f  mScale;
     State           mState;
     EatType         mEatType;
     ScoreType       mScoreType;
 };
-static_assert(sizeof(ChibiYoshiEatData) == 0x24);
+static_assert(sizeof(ChibiEatCallback) == 0x24, "ChibiEatCallback size mismatch");

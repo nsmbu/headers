@@ -6,8 +6,8 @@
 #include <audio/GameAudio.h>
 #include <collision/BgCollisionCheckHitResult.h>
 #include <map_obj/MaskDraw.h>
-#include <actor/EatData.h>
-#include <actor/ChibiYoshiEatData.h>
+#include <actor/EatCallback.h>
+#include <actor/ChibiEatCallback.h>
 #include <effect/EffectObj.h>
 #include <graphics/Light.h>
 
@@ -32,7 +32,7 @@ protected:
 
 public:
     // Address: 0x0216FED0
-    FireBallBase(const ActorCreateParam& param);
+    FireBallBase(const ActorCreateParameter& param);
     ~FireBallBase() override { }
 
     // Address: 0x0217001C
@@ -153,8 +153,8 @@ public:
 protected:
     CircleLightMask             mLightMask;
     f32                         mLightRadius;
-    EatData                     mEatData;
-    ChibiYoshiEatData           mChibiEatData;
+    EatCallback                     mEatData;
+    ChibiEatCallback           mChibiEatData;
     sead::Vector3f              _183c;
     sead::Vector3f              _1848;
     bool                        mIsKill;

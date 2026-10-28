@@ -1,13 +1,13 @@
 #pragma once
 
-#include <actor/EatData.h>
+#include <actor/EatCallback.h>
 
 // vtbl Address: 0x10169524
-class PlayerEatData : public EatData
+class PlayerEatData : public EatCallback
 {
 public:
     // Address: 0x02911918
-    PlayerEatData(ActorUniqueID owner_id);
+    PlayerEatData(UniqueID owner_id);
 
     // Address: 0x02911980
     void eatMove(Actor* yoshi) override;
@@ -20,4 +20,4 @@ public:
     // Address: 0x02911DB4
     bool setEatSpitOut(Actor* yoshi) override;
 };
-static_assert(sizeof(PlayerEatData) == sizeof(EatData));
+static_assert(sizeof(PlayerEatData) == sizeof(EatCallback));

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <actor/ActorUniqueID.h>
+#include <actor/UniqueID.h>
 
 #include <container/seadSafeArray.h>
 #include <heap/seadDisposer.h>
@@ -53,7 +53,7 @@ protected:
     u32     _20;
     u32     _24;
     sead::SafeArray<
-        ActorUniqueID,
+        UniqueID,
         5
     >       mBalloonItemID;
 };

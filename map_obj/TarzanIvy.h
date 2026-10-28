@@ -21,7 +21,7 @@ class TarzanIvyBase : public Actor
 
 public:
     [[clang::noinline]]
-    TarzanIvyBase(const ActorCreateParam& param)
+    TarzanIvyBase(const ActorCreateParameter& param)
         : Actor(param)
     {
         _2c4 = 0;
@@ -64,7 +64,7 @@ static_assert(sizeof(TarzanIvyBase) == 0xA08);
 class TarzanIvy : public TarzanIvyBase
 {
 public:
-    TarzanIvy(const ActorCreateParam& param)
+    TarzanIvy(const ActorCreateParameter& param)
         : TarzanIvyBase(param)
     {
         _2c4 = 0;

@@ -1,12 +1,12 @@
 #pragma once
 
-#include <actor/ActorUniqueID.h>
+#include <actor/UniqueID.h>
 #include <utility/Angle.h>
 
 #include <math/seadVector.h>
 #include <prim/seadMemUtil.h>
 
-struct ActorParamEx0
+struct ActorParameterEx0
 {
     // It is a mystery whether this struct/union originally existed or not,
     // but it would be quite difficult to manage this data without it.
@@ -33,18 +33,18 @@ struct ActorParamEx0
         }   course_select;
     };
 
-    ActorParamEx0()
+    ActorParameterEx0()
     {
     }
 
-    ActorParamEx0(const ActorParamEx0& param)
+    ActorParameterEx0(const ActorParameterEx0& param)
     {
         general._0 = param.general._0;
         general._1 = param.general._1;
         general._2 = param.general._2;
     }
 
-    ActorParamEx0& operator=(const ActorParamEx0& param)
+    ActorParameterEx0& operator=(const ActorParameterEx0& param)
     {
         general._0 = param.general._0;
         general._1 = param.general._1;
@@ -52,9 +52,9 @@ struct ActorParamEx0
         return *this;
     }
 };
-static_assert(sizeof(ActorParamEx0) == 3);
+static_assert(sizeof(ActorParameterEx0) == 3);
 
-struct ActorParamEx1
+struct ActorParameterEx1
 {
     // It is a mystery whether this struct/union originally existed or not,
     // but it would be quite difficult to manage this data without it.
@@ -81,18 +81,18 @@ struct ActorParamEx1
         }   course_select;
     };
 
-    ActorParamEx1()
+    ActorParameterEx1()
     {
     }
 
-    ActorParamEx1(const ActorParamEx1& param)
+    ActorParameterEx1(const ActorParameterEx1& param)
     {
         general._0 = param.general._0;
         general._1 = param.general._1;
         general._2 = param.general._2;
     }
 
-    ActorParamEx1& operator=(const ActorParamEx1& param)
+    ActorParameterEx1& operator=(const ActorParameterEx1& param)
     {
         general._0 = param.general._0;
         general._1 = param.general._1;
@@ -100,27 +100,22 @@ struct ActorParamEx1
         return *this;
     }
 };
-static_assert(sizeof(ActorParamEx1) == 3);
+static_assert(sizeof(ActorParameterEx1) == 3);
 
 class Profile;
 
-struct ActorCreateParam
+struct ActorCreateParameter
 {
-    u32             param_0;
-    u32             param_1;
-    ActorUniqueID   parent_id;
-    Profile*        profile;
-    sead::Vector3f  position;
-    Angle           angle;
-    ActorParamEx0   param_ex_0;
-    u8              _pad1[1];
-    ActorParamEx1   param_ex_1;
-    u8              _pad2[1];
-    u8*             _28;
-
-    ActorCreateParam()
-    {
-        sead::MemUtil::fillZero(this, sizeof(ActorCreateParam));
-    }
+    u32                 param_0;
+    u32                 param_1;
+    UniqueID            parent_id;
+    Profile*            profile;
+    sead::Vector3f      position;
+    Angle               angle;
+    ActorParameterEx0   param_ex_0;
+    u8                  _pad1[1];
+    ActorParameterEx1   param_ex_1;
+    u8                  _pad2[1];
+    u8*                 _28;
 };
-static_assert(sizeof(ActorCreateParam) == 0x2C);
+static_assert(sizeof(ActorCreateParameter) == 0x2C, "ActorCreateParameter size mismatch");

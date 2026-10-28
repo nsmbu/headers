@@ -8,6 +8,7 @@
 #include <container/seadRingBuffer.h>
 #include <heap/seadDisposer.h>
 #include <heap/seadUnitHeap.h>
+#include <heap/seadFrameHeap.h>
 
 class ActorMgr
 {
@@ -20,12 +21,12 @@ class ActorMgr
     SEAD_SINGLETON_DISPOSER(ActorMgr)
 
 public:
-    enum CreateOption
+    enum ImmediatelyType
     {
-        cCreateOption_ActiveLater = 0,
-        cCreateOption_ActiveImmediately,
+        cImmediatelyType_ActiveLater = 0,
+        cImmediatelyType_ActiveImmediately,
         // Anything else other than above:
-      //cCreateOption_Independent (most likely unintentional)
+      //cImmediatelyType_Independent (most likely unintentional)
     };
 
 public:
@@ -41,42 +42,42 @@ public:
 
 private:
     // Address: 0x020090CC
-    ActorBase* doConstructActor_(const ActorCreateParam& param, bool create_immediately);
+    ActorBase* constructActor_(const ActorCreateParameter& param, bool create_immediately);
     // Address: 0x02009218
-    ActorBase::MainState doCreate_(ActorBase* actor);
+    ActorBase::MainState createActor_(ActorBase* actor);
 
     // Address: 0x0200932C
     static void delete_(ActorBase* actor);
     // Address: 0x02009338
-    void doDelete_(ActorBase* actor);
+    void moveActorToDestroyList_(ActorBase* actor);
 
     // Address: 0x0200940C
-    void pushExecuteAndDrawList_(ActorBase* actor);
+    void insertToExecuteAndDrawList_(ActorBase* actor);
 
     // Address: 0x02009590
-    bool deleteNotRequested_(ActorBase* actor);
+    bool isValidExec_(const ActorBase& actor);
 
     // Address: 0x02008D34
-    void moveActorOnCreateListToDestoryList_();
+    void moveCreateToDestroyList_();
     // Address: 0x02008DC8
-    void doDeleteActors_(bool destroy);
+    void procDestroy_(bool destroy);
 
 public:
     // Address: 0x0200959C
-    void initialize(sead::Heap* heap);
+    void prepare(sead::Heap* heap);
 
     // Address: 0x02009648
-    void createAdditionalHeap(sead::Heap** heap);
+    void createAdditionalHeap(sead::FrameHeap** heap);
     // Address: 0x020096B0
-    void destroyAdditionalHeap(sead::Heap** heap);
+    void destroyAdditionalHeap(sead::FrameHeap** heap);
 
     // Address: 0x020098A8
-    void destroy();
+    void areaOut();
 
     // Address: 0x02009954
-    void createLater(const ActorCreateParam& param);
+    void createLater(const ActorCreateParameter& param);
     // Address: 0x02009A58
-    ActorBase* createImmediately(const ActorCreateParam& param, CreateOption option = cCreateOption_ActiveLater);
+    ActorBase* createImmediately(const ActorCreateParameter& param, ImmediatelyType option = cImmediatelyType_ActiveLater);
 
 public:
     // Address: 0x02009B6C
@@ -89,12 +90,12 @@ public:
     // Address: 0x02009BA4
     u32 count(s32 i_profile_id) const;
 
-    iterator find(ActorFindFunc* io_find_func, iterator it_begin) const
+    iterator find(ActorFindFunc& io_find_func, iterator it_begin) const
     {
         return mActorPtrCache.find(io_find_func, it_begin);
     }
 
-    iterator find(ActorFindFunc* io_find_func) const
+    iterator find(ActorFindFunc& io_find_func) const
     {
         return mActorPtrCache.find(io_find_func);
     }
@@ -109,18 +110,18 @@ public:
         return mActorPtrCache.getActorEnd();
     }
 
-    ActorBase* getActorPtr(ActorUniqueID id) const
+    ActorBase* getActorPtr(UniqueID id) const
     {
         return mActorPtrCache.getActorPtr(id);
     }
 
     template <typename T>
-    T* getActorPtr(ActorUniqueID id) const
+    T* getActorPtr(UniqueID id) const
     {
         return static_cast<T*>(mActorPtrCache.getActorPtr(id));
     }
 
-    u32 count(ActorFindFunc* io_find_func) const
+    u32 count(ActorFindFunc& io_find_func) const
     {
         return mActorPtrCache.count(io_find_func);
     }
@@ -132,22 +133,23 @@ public:
 
 private:
     // Address: 0x02009BDC
-    void calcCreateDelete_();
+    void calcCreate();
+    // procCreate_() is inlined into the above in NSMBU
 
 public:
     // Address: 0x02009D58
-    void execute();
+    void calc();
 
     // Address: 0x02009EA0
-    void addToFinalUpdate(ActorBase* actor);
+    void entryLastExecute(ActorBase* actor);
 
     // Address: 0x02009ECC
-    void draw();
+    void draw(/* const agl::lyr::RenderInfo* renderInfo */);
 
 private:
     sead::UnitHeap*                                 mPlayerUnitHeap;
     sead::UnitHeap*                                 mActorUnitHeap;
-    sead::FixedRingBuffer<ActorCreateParam, 520>    mDeferredActorCreate;
+    sead::FixedRingBuffer<ActorCreateParameter, 520> mDeferredActorCreate;
     ActorBase::List                                 mCreateManage;
     ActorBase::List                                 mDeleteManage;
     ActorBase::List                                 mExecuteManage;
@@ -155,7 +157,7 @@ private:
     sead::FixedPtrArray<sead::Heap, 520>            mActorDeleteHeap;
     sead::FixedPtrArray<ActorBase, 520>             mActorFinalUpdate;
     ActorPtrCache                                   mActorPtrCache;
-    ActorUniqueID                                   mActorCreateID;
+    UniqueID                                        mActorCreateID;
     bool                                            mActorCreateImmediately;
     u8                                              _6a3d[3];
     bool                                            mActorDrawDone;
@@ -163,4 +165,4 @@ private:
 
     friend class ActorBase;
 };
-static_assert(sizeof(ActorMgr) == 0x6A44);
+static_assert(sizeof(ActorMgr) == 0x6A44, "ActorMgr size mismatch");

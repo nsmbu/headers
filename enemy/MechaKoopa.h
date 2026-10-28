@@ -28,11 +28,11 @@ class MechaKoopa : public CarryEnemy
 
 public:
     // Address: 0x10093DD4
-    static const ActorCreateInfo cActorCreateInfo;
+    static const ActorData cActorCreateInfo;
 
 public:
     // Address: 0x023E8A00
-    MechaKoopa(const ActorCreateParam& param);
+    MechaKoopa(const ActorCreateParameter& param);
 
 protected:
     // Address: 0x023E92E0

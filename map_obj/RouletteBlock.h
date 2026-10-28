@@ -23,7 +23,7 @@ protected:
 
 public:
     // Address: 0x02879078
-    RouletteBlock(const ActorCreateParam& param);
+    RouletteBlock(const ActorCreateParameter& param);
     // Address: 0x0287A0FC
     ~RouletteBlock() override { }
 
@@ -87,7 +87,7 @@ public:
 
 public:
     // Address: 0x10151098
-    static const ActorCreateInfo cCreateInfo;
+    static const ActorData cCreateInfo;
 
 protected:
     AnimModel*               mModelActive;

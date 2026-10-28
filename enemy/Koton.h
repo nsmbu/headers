@@ -1,6 +1,6 @@
 #pragma once
 
-#include <actor/EatData.h>
+#include <actor/EatCallback.h>
 #include <actor/Profile.h>
 #include <collision/ActorCollisionDrcTouchCallback.h>
 #include <effect/EffectObj.h>
@@ -26,10 +26,10 @@ class Koton : public Enemy
 {
 public:
     // Address: 0x100904E0
-    static const ActorCreateInfo cActorCreateInfo;
+    static const ActorData cActorCreateInfo;
 
 public:
-    Koton(const ActorCreateParam& param)
+    Koton(const ActorCreateParameter& param)
         : Enemy(param)
         , mEatData(mActorUniqueID)
         , mChibiYoshiEatData(mActorUniqueID)
@@ -87,7 +87,7 @@ protected:
     u8                      _188d;
     f32                     _1890;
     f32                     _1894;
-    EatData                 mEatData;
+    EatCallback                 mEatData;
     EnemyChibiYoshiEatData  mChibiYoshiEatData;
     u32                     _18e0;
     sead::Vector3f          _18e4;

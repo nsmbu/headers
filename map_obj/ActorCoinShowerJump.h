@@ -13,7 +13,7 @@ class ActorCoinShowerJump : public ActorCoinBase
 
 public:
     // Address: 0x026D586C
-    ActorCoinShowerJump(const ActorCreateParam& param);
+    ActorCoinShowerJump(const ActorCreateParameter& param);
     // Address: 0x026D6590
     ~ActorCoinShowerJump() override { }
 

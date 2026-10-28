@@ -1,13 +1,13 @@
 #pragma once
 
-#include <actor/ActorUniqueID.h>
+#include <actor/UniqueID.h>
 
 #include <math/seadVector.h>
 
 class Actor;
 
 // vtbl Address: 0x10001594
-class EatData
+class EatCallback
 {
 public:
     enum State
@@ -18,7 +18,7 @@ public:
         cState_DamageSpitOut,
         cState_SpitOut
     };
-    static_assert(sizeof(State) == 4);
+    static_assert(sizeof(State) == 0x4, "EatCallback::State size mismatch");
 
     enum EatType
     {
@@ -30,7 +30,7 @@ public:
         cEatType_YoshiFire,     ///< Hold the food in Yoshi's mouth, turns into fire when spat
         cEatType_YoshiFire_Ice  ///< Hold the food in Yoshi's mouth, turns into ice when spat
     };
-    static_assert(sizeof(EatType) == 4);
+    static_assert(sizeof(EatType) == 0x4, "EatCallback::EatType size mismatch");
 
     enum ScoreType
     {
@@ -38,10 +38,15 @@ public:
         cScoreType_Point_1000,
         cScoreType_None,
     };
-    static_assert(sizeof(ScoreType) == 4);
+    static_assert(sizeof(ScoreType) == 0x4, "EatCallback::ScoreType size mismatch");
 
     // Address: 0x0200D6C4
-    EatData(ActorUniqueID owner_id);
+    EatCallback(UniqueID owner_id);
+
+    // Address: Deleted
+    Actor* getParentActorConstPtr_() const;
+    // Address: Deleted
+    Actor* getParentActorPtr_();
 
     // Address: 0x0200D4B8
     virtual void setAfterEatScale();
@@ -52,7 +57,7 @@ public:
     // Address: 0x0200D76C
     virtual void eatMove(Actor* yoshi);
     // Address: 0x0200DA8C
-    virtual void vf2C();
+    virtual void replaceEatActor(Actor* yoshi);
     // Address: 0x0200D830
     virtual bool setEatTongue(Actor* yoshi);
     // Address: 0x0200DA90
@@ -66,7 +71,7 @@ public:
     // Address: 0x0200D9AC
     virtual void calcEatInScale(Actor* yoshi);
 
-    const ActorUniqueID& getYoshiID() const
+    const UniqueID& getYoshiID() const
     {
         return mYoshiID;
     }
@@ -112,11 +117,11 @@ public:
     }
 
 protected:
-    ActorUniqueID   mOwnerID;
-    ActorUniqueID   mYoshiID;
+    UniqueID        mOwnerID;
+    UniqueID        mYoshiID;
     State           mState;
     EatType         mEatType;
     sead::Vector3f  mScale;
     ScoreType       mScoreType;
 };
-static_assert(sizeof(EatData) == 0x24);
+static_assert(sizeof(EatCallback) == 0x24, "EatCallback size mismatch");

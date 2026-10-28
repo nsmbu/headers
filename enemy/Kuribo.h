@@ -38,7 +38,7 @@ public:
 
 public:
     // Address: 0x023D60C8
-    Kuribo(const ActorCreateParam& param);
+    Kuribo(const ActorCreateParameter& param);
 
     // Address: 0x023D66F0
     void initialize() override;
@@ -259,7 +259,7 @@ protected:
     f32                             mPreFunsuiSpeedX;
     f32                             mGroundDistance;    // When Kuribo is set to spawn on ground
     BalloonHangActor*               mpBalloon;
-    ActorUniqueID                   mBalloonID;
+    UniqueID                   mBalloonID;
 
     /**
      * @brief 0.5f, -0.5f

@@ -13,7 +13,7 @@ class IceBallBros : public IceBallBase
 
 public:
     // Address: 0x02180EEC
-    IceBallBros(const ActorCreateParam& param);
+    IceBallBros(const ActorCreateParameter& param);
 
     // Address: 0x02180F70
     static void collcheck(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);

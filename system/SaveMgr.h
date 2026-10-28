@@ -265,7 +265,7 @@ struct SaveData
         u8 file;
         u8 area;
         bool exists;
-        u8 _3;
+        u8 _3; // TODO: padding that can be removed?
         struct
         {
             u16 x;

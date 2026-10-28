@@ -41,7 +41,7 @@ protected:
 
 public:
     // Address: 0x023DAF04
-    KuriboBase(const ActorCreateParam& param);
+    KuriboBase(const ActorCreateParameter& param);
 
 protected:
     // Address: 0x023DB070
@@ -311,7 +311,7 @@ public:
     static const f32 cMaxSpeedY;
 
     // Address: 0x10091660
-    static const ActorCreateInfo cActorCreateInfo;
+    static const ActorData cActorCreateInfo;
 
     // Address: 0x10091684
     static const ActorCollisionCheck::CollisionData cCcData_Normal;

@@ -13,13 +13,13 @@ public:
 
     virtual ~ActorAdditionalHeap()
     {
-        destroy();
+        destroyHeap();
     }
 
     // Address: 0x02002C70
-    void create();
+    void createHeap();
     // Address: 0x02002C54
-    void destroy();
+    void destroyHeap();
 
     sead::Heap* getHeap() const
     {
@@ -29,4 +29,4 @@ public:
 protected:
     sead::Heap* mHeap;
 };
-static_assert(sizeof(ActorAdditionalHeap) == 0x14);
+static_assert(sizeof(ActorAdditionalHeap) == 0x14, "ActorAdditionalHeap size mismatch");

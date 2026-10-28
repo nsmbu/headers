@@ -10,11 +10,24 @@ class Actor;
 class PropelParts
 {
 public:
-    class Part
+    class PropelEffect
     {
     public:
+        enum EffectType
+        {
+        };
+
         // Address: 0x020271B8
-        Part();
+        PropelEffect();
+
+        // Address: 0x020272CC
+        void initialize(EffectType type, bool is_player, s32 player_no);
+
+        // Address: 0x02027660
+        void createEffect();
+
+        // Address: 0x0202766C
+        void update(const sead::Vector3f& position);
 
     private:
         s32         mIndex;
@@ -24,15 +37,14 @@ public:
         bool        mIsForPlayer;
         u8          _75;
     };
-    static_assert(sizeof(Part) == 0x78);
+    static_assert(sizeof(PropelEffect) == 0x78);
 
+public:
     enum Mode
     {
         cMode_Num = 7
     };
-    static_assert(sizeof(Mode) == 4);
 
-public:
     // Address: 0x0202722C
     PropelParts();
 
@@ -43,14 +55,23 @@ public:
     // Address: 0x020272DC
     void create(Actor* owner);
 
+    // Address: 0x02027390
+    void update();
+
     // Address: 0x02027790
-    void setSpinEffect(const sead::Matrixf& mtx);
+    void updateEffect(const sead::Matrixf& mtx);
+
+    // Address: 0x02027868
+    bool isMode(Mode mode);
+
+    // Address: 0x0202787C
+    void finalizePropelFly(Angle angle);
 
 private:
-    Actor*                      mOwner;
-    Mode                        mMode;
-    Angle                       mRollSpeed;
-    f32                         mScale;
-    sead::SafeArray<Part, 3>    mParts;
+    Actor*                              mOwner;
+    Mode                                mMode;
+    Angle                               mRollSpeed;
+    f32                                 mScale;
+    sead::SafeArray<PropelEffect, 3>    mPropelEffect;
 };
-static_assert(sizeof(PropelParts) == 0x17C);
+static_assert(sizeof(PropelParts) == 0x17C, "PropelParts size mismatch");
