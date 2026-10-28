@@ -4,8 +4,8 @@
 #include <collision/ActorCollisionDrcTouchCallback.h>
 #include <state/FStateVirtualID.h>
 #include <audio/GameAudio.h>
-#include <actor/EatData.h>
-#include <actor/ChibiYoshiEatData.h>
+#include <actor/EatCallback.h>
+#include <actor/ChibiEatCallback.h>
 #include <map_obj/MaskDraw.h>
 #include <effect/EffectObj.h>
 #include <graphics/Light.h>
@@ -31,7 +31,7 @@ protected:
 
 public:
     // Address: 0x0217FA5C
-    IceBallBase(const ActorCreateParam& param);
+    IceBallBase(const ActorCreateParameter& param);
     ~IceBallBase() override { }
 
     // Address: 0x0217FB8C
@@ -120,8 +120,8 @@ protected:
     u32                         _17cc;
     sead::Vector3f              _17d0;
     u32                         mKillTimer;
-    EatData                     mEatData;
-    ChibiYoshiEatData           mChibiEatData;
+    EatCallback                     mEatData;
+    ChibiEatCallback           mChibiEatData;
     CircleLightMask             mLightMask;
     f32                         mLightRadius;
     Angle3                      mEffectAngle;

@@ -13,7 +13,7 @@ class FireBallBros : public FireBallBase
 
 public:
     // Address: 0x021719B4
-    FireBallBros(const ActorCreateParam& param);
+    FireBallBros(const ActorCreateParameter& param);
 
     // Address: 0x02171A34
     static void collcheck(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);

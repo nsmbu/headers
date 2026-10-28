@@ -11,7 +11,7 @@ class ActorBlockRenga : public ActorBlockBase
 
 public:
     // Address: 0x026B5134
-    ActorBlockRenga(const ActorCreateParam& param);
+    ActorBlockRenga(const ActorCreateParameter& param);
     // Address: 0x026B5A40
     ~ActorBlockRenga() override { }
 

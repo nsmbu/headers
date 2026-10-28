@@ -3,7 +3,7 @@
 #include <actor/ActorState.h>
 #include <state/FStateVirtualID.h>
 #include <graphics/AnimModel.h>
-#include <actor/EatData.h>
+#include <actor/EatCallback.h>
 #include <collision/BgCollisionCheckHitResult.h>
 
 class Yoshi;
@@ -29,7 +29,7 @@ protected:
     };
 
 public:
-    ItemBase(const ActorCreateParam& param);
+    ItemBase(const ActorCreateParameter& param);
     virtual ~ItemBase();
 
     // Address: 0x025176EC
@@ -156,7 +156,7 @@ protected:
     u8                              _185e;                               
     bool                            mCollidedWithGiantWiggler;                 
     u8                              _1860[0x1864 - 0x1860];                  
-    EatData                         mEatData;                    
+    EatCallback                         mEatData;                    
     u8                              _1888[0x188C - 0x1888]; 
     u8                              mScaler[0x20];
     ActorCollisionCheck             mACollider2;  

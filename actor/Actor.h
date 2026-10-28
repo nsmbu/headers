@@ -1,20 +1,22 @@
 #pragma once
 
 #include <actor/ActorBase.h>
-#include <actor/ActorCullRange.h>
+#include <actor/ActorCulling.h>
 #include <collision/ActorCollisionCheck.h>
 #include <effect/EffectID.h>
+#include <fukidashi/FukidashiType.h>
+#include <map/WaveType.h>
 #include <utility/Angle3.h>
 #include <utility/Direction.h>
 
-constexpr f32 ACTOR_DEFAULT_GRAVITY =           -0.1875f;
-constexpr f32 ACTOR_DEFAULT_MAX_FALL_SPEED =    -4.0f;
+#define ACTOR_DEFAULT_GRAVITY                   -0.1875f
+#define ACTOR_DEFAULT_MAX_FALL_SPEED            -4.0f
 
 class ActorBgCollisionCheck;
 class BgCollision;
 class ChibiYoshiAwaData;
-class ChibiYoshiEatData;
-class EatData;
+class ChibiEatCallback;
+class EatCallback;
 class PropelParts;
 
 // vtbl Address: 0x10000268
@@ -45,34 +47,34 @@ public:
     };
     
     /**
-     * @brief Flags to pass to `screenOutCheck` to skip checks or actions during the evaluation.
+     * @brief Flags to pass to `actorExecCullCheck` to skip checks or actions during the evaluation.
      */
-    enum ScreenOutFlag : u16
+    enum ExecCullFlag : u16
     {
-        cScreenOutFlag_SkipNone           = 0,      ///< Perform all checks and delete the actor if they pass.
-        cScreenOutFlag_SkipDeletion       = 1 << 1, ///< Skip deleting the actor if the checks do pass. 
-        cScreenOutFlag_SkipCameraCheck    = 1 << 2, ///< Skip checking if the actor is outside of the visible camera.
-        cScreenOutFlag_SkipRideCheck      = 1 << 3, ///< Skip checking if the actor is riding another actor/platform.
-        cScreenOutFlag_SkipTottenCheck    = 1 << 4  ///< Skip checking if Nabbit has passed to the right of the actor's visible range.
+        cExecCullFlag_SkipNone           = 0,      ///< Perform all checks and delete the actor if they pass.
+        cExecCullFlag_SkipDeletion       = 1 << 1, ///< Skip deleting the actor if the checks do pass. 
+        cExecCullFlag_SkipCameraCheck    = 1 << 2, ///< Skip checking if the actor is outside of the visible camera.
+        cExecCullFlag_SkipRideCheck      = 1 << 3, ///< Skip checking if the actor is riding another actor/platform.
+        cExecCullFlag_SkipTottenCheck    = 1 << 4  ///< Skip checking if Nabbit has passed to the right of the actor's visible range.
     };
 
 public:
-    virtual void setPlayerNo(s8 id)
+    virtual void setPlrNo(s32 id)
     {
         mPlayerNo = id;
     }
 
-    s8 getPlayerNo() const
+    s8 getPlrNo() const
     {
         return mPlayerNo;
     }
 
     // Address: 0x020002CC
-    virtual void removeCollisionCheck();
+    virtual void removeCc();
     // Address: 0x02000328
-    virtual void reviveCollisionCheck();
+    virtual void reviveCc();
 
-    virtual ActorBgCollisionCheck* getBgCheck()
+    virtual const ActorBgCollisionCheck* getBcConstPtr() const
     {
         return nullptr;
     }
@@ -81,7 +83,7 @@ public:
     {
     }
 
-    virtual bool isSpinLiftUpEnable()
+    virtual bool isSpinLiftUpEnable() const
     {
         return true;
     }
@@ -93,19 +95,19 @@ public:
     /**
      * @brief Called by Group Controller when "activating" the target group.
      */
-    virtual void groupActivate()
+    virtual void startGroupid()
     {
     }
 
     /**
      * @brief Called by Group Controller when "deactivating" the target group.
      */
-    virtual void groupDeactivate()
+    virtual void stopGroupid()
     {
     }
 
     // Address: 0x02000394
-    bool checkCarried(s32* player_no);
+    bool checkCarried(s32* player_no) const;
 
     s32 getComboCnt() const
     {
@@ -121,26 +123,26 @@ public:
     void slideComboSE(s32 combo_cnt, bool combo_type_2);
 
     // Address: 0x020005A4
-    s32 searchNearPlayer(sead::Vector2f& out); // Returns -1 if no player found
+    s32 searchNearPlayer(sead::Vector2f* out) const; // Returns -1 if no player found
 
     // Address: 0x020005EC
-    DirType getPlayerDirLR(const sead::Vector3f& position);
+    DirType getDir2PlayerLR(const sead::Vector3f& position) const;
     // Address: 0x020006B4
-    DirType getPlayerDirUD(const sead::Vector3f& position);
+    DirType getDir2PlayerUD(const sead::Vector3f& position) const;
 
-    DirType getPlayerDirLR()
+    DirType getDir2PlayerLR()
     {
-        return getPlayerDirLR(mPos);
+        return getDir2PlayerLR(mPos);
     }
 
-    DirType getPlayerDirUD()
+    DirType getDir2PlayerUD()
     {
-        return getPlayerDirUD(mPos);
+        return getDir2PlayerUD(mPos);
     }
     
     /**
      * @brief Checks if the actor is out of gameplay and optionally deletes it.
-     * @param flag Specify checks to skip, and whether to delete the actor if they all passed.
+     * @param flag Specify checks to skip, and whether to delete the actor if they all passed. See @c ExecCullFlag
      * @return Whether the actor is out of gameplay.
      * @details The actor is considered "out of gameplay" if:
      * * It has not been eaten.
@@ -149,7 +151,7 @@ public:
      * * The actor is out of the zone bounds OR the actor is outside of the visible camera.
      * @par Address: 0x020007A0
      */
-    bool screenOutCheck(ScreenOutFlag flag);
+    bool actorExecCullCheck(u16 flag);
 
     // Address: 0x02002AD8
     virtual void allEnemyDeathEffSet(); // Spawn burst effect at instances where all enemies die (such as touching goal pole or defeating boss), called if profile flag bit 4, 5 or 7 is set
@@ -163,17 +165,17 @@ public:
     virtual void poisonSplashEffect(const sead::Vector3f& pos);
 
     // Address: 0x02000970
-    f32 getEffectZPos() const;
+    f32 getEffectZpos_() const;
 
     // Address: 0x02000A70
-    bool checkEat() const;
+    bool checkEatenYoshi() const;
 
     /**
      * @brief Schedule this actor for deletion on the next frame.
      * @param manual_deleted Prevents respawning.
      * @par Address: 0x02000774
      */
-    void deleteActor(bool manual_deleted);
+    void deleteActor_(bool manual_deleted);
 
 public:
     ActorCollisionCheck& getCollisionCheck()
@@ -429,7 +431,7 @@ public:
 
 protected:
     // Address: 0x02000AC8
-    Actor(const ActorCreateParam& param);
+    Actor(const ActorCreateParameter& param);
     // Address: 0x02000F18
     ~Actor() override;
 
@@ -446,14 +448,14 @@ protected:
     bool preDraw() override;
 
     // Address: 0x02001254
-    virtual bool drawCullCheck_();
+    virtual bool actorDrawCullCheck();
 
-    virtual void blockHitInit_()
+    virtual void blockHitInit()
     {
     }
 
     // Address: 0x02001304
-    void splashEffect_(const sead::Vector3f& pos, EffectID effect_id, u8 wave_scale, const char* sound_label);
+    void waterSplashCommon_(const sead::Vector3f& pos, s32 effect_id, WaveType wave_type, const char* sound_label);
 
     // Address: 0x020013D4
     void setAreaNo_();
@@ -487,54 +489,61 @@ protected:
     }
 
     // Address: 0x02001A28
-    void carryFukidashiCheck_(s32 action);
+    void carryFukidashiCheck_(FukidashiType action);
     // Address: 0x02001490
-    void carryFukidashiCheck_(s32 action, const sead::Vector2f& range);
+    void carryFukidashiCheck_(FukidashiType action, const sead::Vector2f& range);
     // Address: 0x02001A64
-    void carryFukidashiCancel_(s32 action, s32 player_no);
+    void carryFukidashiCancel_(FukidashiType action, s32 player_no);
 
     // Address: 0x02001DC4
-    bool isEnablePressLR_(const ActorBgCollisionCheck& bc);
+    bool checkPressBgLR_(const ActorBgCollisionCheck& bc);
     // Address: 0x0200222C
-    bool isEnablePressUD_(const ActorBgCollisionCheck& bc);
+    bool checkPressBgUD_(const ActorBgCollisionCheck& bc);
 
     // Address: 0x02002594
-    bool setPressBreakLR_(const ActorBgCollisionCheck& bc);
+    bool setBreakPressObjBgLR_(const ActorBgCollisionCheck& bc);
     // Address: 0x02002664
-    bool setPressBreakUD_(const ActorBgCollisionCheck& bc);
+    bool setBreakPressObjBgUD_(const ActorBgCollisionCheck& bc);
 
     // Address: 0x0200272C
-    bool setPressIceHeadBreak_(const ActorBgCollisionCheck& bc);
+    bool checkInternalIceBlock_(const ActorBgCollisionCheck& bc);
 
     // Address: 0x02002390
-    bool setPressBreakIce_(const BgCollision* bg_collision);
+    bool setEnemyIceBreakReq_(const BgCollision* bg_collision);
     // Address: 0x020024E0
-    bool setPressBreakBlockDRC_(const BgCollision* bg_collision);
+    bool setDrcBlockBreakReq_(const BgCollision* bg_collision);
 
-private:
-    inline Actor* searchCarryFukidashiPlayer_(s32 action);
+    void setPosSuddenly_(const sead::Vector3f& position)
+    {
+        mPos.set(position);
+        mPosPrev.set(position);
+        mPosPrev2.set(position);
+    }
+
+protected:
+    Actor* searchCarryFukidashiPlayer_(FukidashiType action) const;
 
     // Address: 0x02001AF4
-    bool canPress_(const BgCollision* bg_collision);
+    bool isEnablePressObjBg_(const BgCollision* bg_collision) const;
 
     // Address: 0x02001C08
-    bool checkPressLR_(const ActorBgCollisionCheck& bc, DirType direction);
+    bool checkPressBgWall_(const ActorBgCollisionCheck& bc, DirType direction) const;
     // Address: 0x02002098
-    bool checkPressU_(const ActorBgCollisionCheck& bc);
+    bool checkPressBgHead_(const ActorBgCollisionCheck& bc) const;
     // Address: 0x02001F04
-    bool checkPressD_(const ActorBgCollisionCheck& bc);
+    bool checkPressBgFoot_(const ActorBgCollisionCheck& bc) const;
 
     // Address: 0x02001B2C
-    bool canPressIfApproaching_(const BgCollision* bgcol_approaching_side, const BgCollision* bgcol_fixed_side);
+    bool isBreakPressObjBg_(const BgCollision* bgcol_approaching_side, const BgCollision* bgcol_fixed_side) const;
 
     // Address: 0x02000720
-    u32 calcTottenToSrcDir_(const sead::BoundBox2f& src_range) const;
+    u32 checkAvailableCullCheckOnQuest(const sead::BoundBox2f& src_range);
 
 protected:
     DirType                 mDirection;
     s8                      mPlayerNo;
     s8                      mControllerLytPlayerNo;
-    u8                      mLayer;                     // Inited to ActorCreateParam::layer
+    u8                      mLayer;                     // Inited to ActorCreateParameter::layer
     sead::BitFlag8          mCollisionMask;
     f32                     mSpeedF;                    // Horizontal speed
     f32                     mMaxSpeedF;                 // Maximum horizontal speed
@@ -549,13 +558,13 @@ protected:
     Angle3                  mAnglePrev;
     sead::Vector2f          mPosDelta;                  // At start of every frame
     ActorCollisionCheck     mCollisionCheck;
-    sead::Vector2f          mVisibleAreaOffset;         // Inited to ActorCreateInfo::spawn_range.offset
-    sead::Vector2f          mVisibleAreaSize;           // Inited to ActorCreateInfo::spawn_range.half_size * 2
+    sead::Vector2f          mVisibleAreaOffset;         // Inited to ActorData::spawn_range.offset
+    sead::Vector2f          mVisibleAreaSize;           // Inited to ActorData::spawn_range.half_size * 2
     sead::Vector2f          mSize;
-    ActorCullRange          mCullLimit;                 // Inited to { 256.0 + ActorCreateInfo::cull_range.up,
-                                                        //             256.0 + ActorCreateInfo::cull_range.down,
-                                                        //              80.0 + ActorCreateInfo::cull_range.left,
-                                                        //              80.0 + ActorCreateInfo::cull_range.right }
+    ActorCulling::ActorCullUsable mCullLimit;           // Inited to { 256.0 + ActorData::cull_range.up,
+                                                        //             256.0 + ActorData::cull_range.down,
+                                                        //              80.0 + ActorData::cull_range.left,
+                                                        //              80.0 + ActorData::cull_range.right }
     u8                      mAreaNo;
     u8                      mActorKind;                 // ActorKind
     bool                    mIsExecEnable;
@@ -565,7 +574,7 @@ protected:
     u8                      mCarryFlag;                 // CarryFlag
     u8                      mSwitchFlag0;
     u8                      mSwitchFlag1;
-    u16                     mCreateFlag;                // Inited to ActorCreateInfo::flag
+    u16                     mCreateFlag;                // Inited to ActorData::flag
     u32                     mBlockHitTimer;
     DirType                 mBlockHitDirection;
     u8                      _220;
@@ -577,16 +586,11 @@ protected:
     sead::Vector3f          mPosPrev;                   // At frame start
     sead::Vector3f          mPosPrevPostExec;
     sead::Vector3f          mPosPrev2;                  // At frame end
-    EatData*                mEatDataPtr;
-    ChibiYoshiEatData*      mChibiYoshiEatDataPtr;
+    EatCallback*            mEatCallbackPtr;
+    ChibiEatCallback*       mChibiEatCallbackPtr;
     PropelParts*            mPropelParts;
-    u8*                     _270;                       // Inited to ActorCreateParam::_28
+    u8*                     _270;                       // Inited to ActorCreateParameter::_28
     f32                     mAddSpeedF;
     ChibiYoshiAwaData*      mChibiYoshiAwaDataPtr;
-
-    // Address: 0x10000B64
-    static const f32 cCullXLimit;
-    // Address: 0x10000B68
-    static const f32 cCullYLimit;
 };
-static_assert(sizeof(Actor) == 0x27C);
+static_assert(sizeof(Actor) == 0x27C, "Actor size mismatch");

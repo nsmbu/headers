@@ -18,7 +18,7 @@ public:
 
 public:
     // Address: 0x022EB09C
-    CarryEnemy(const ActorCreateParam& param);
+    CarryEnemy(const ActorCreateParameter& param);
 
 protected:
     // Address: 0x022EB18C
@@ -157,7 +157,7 @@ protected:
     u32                         _18a0;                      // Unused
     u32                         _18a4;                      // ^^^
     s8                          mCarryPlayerNo;
-    ActorUniqueID               mCarryPlayerID;
+    UniqueID               mCarryPlayerID;
     bool                        mForceSetShellDamageEffect;
     bool                        mIsLiftUp;
 };

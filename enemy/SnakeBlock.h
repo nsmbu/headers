@@ -132,7 +132,7 @@ public:
     static_assert(sizeof(EdgePiece) == 0x318, "SnakeBlock::EdgePiece size mismatch");
 
 public:
-    SnakeBlock(const ActorCreateParam& param)
+    SnakeBlock(const ActorCreateParameter& param)
         : Enemy(param)
         , mEdgePiece()
         , mMiddlePiece()

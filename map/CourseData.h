@@ -123,10 +123,8 @@ struct NextGoto
 };
 static_assert(sizeof(NextGoto) == 0x18);
 
-struct MapActorData
+struct ActorInitDat
 {
-    // Speculated official name.
-
     u16 type;
     struct
     {
@@ -143,7 +141,7 @@ struct MapActorData
     u8  init_state;
     u8  _pad[3];
 };
-static_assert(sizeof(MapActorData) == 0x18);
+static_assert(sizeof(ActorInitDat) == 0x18);
 
 struct AreaData
 {
@@ -184,10 +182,8 @@ struct AreaData
 };
 static_assert(sizeof(AreaData) == 0x1C);
 
-struct Location
+struct Range
 {
-    // Official name not known.
-
     struct
     {
         u16 x;
@@ -201,7 +197,7 @@ struct Location
     u8  id;
     u8  _pad[3];
 };
-static_assert(sizeof(Location) == 0xC);
+static_assert(sizeof(Range) == 0xC, "Range size mismatch");
 
 struct RailInfo
 {
@@ -258,7 +254,7 @@ public:
         cBlock_MapActor         =   8 - 1,
         cBlock_MapActorLoadRes  =   9 - 1,
         cBlock_AreaData         =  10 - 1,
-        cBlock_Location         =  11 - 1,
+        cBlock_Range            =  11 - 1,
                                 // 12
                                 // 13
         cBlock_RailInfo         =  14 - 1,
@@ -284,10 +280,10 @@ public:
     // Address: 0x02699BD8
     const NextGoto* getNextGoto(u8 id) const;
     // Address: 0x02699C08
-    const MapActorData* getMapActor(u16 type, const MapActorData* start = nullptr) const;
+    const ActorInitDat* getMapActor(u16 type, const ActorInitDat* start = nullptr) const;
     const AreaData* getAreaData(u8 id, sead::BoundBox2f* box = nullptr) const;
     // Address: 0x0269A020
-    const Location* getLocation(sead::BoundBox2f* box, u8 id) const;
+    const Range* getRange(sead::BoundBox2f* box, u8 id) const;
     // Address: 0x0269A0A8
     const RailInfo* getRailInfo(u8 id) const;
     // Address: 0x0269A0F4
@@ -301,7 +297,7 @@ private:
     sead::SafeArray<const void*,    cBlock_Num> mBlock;
     sead::SafeArray<u32,            cBlock_Num> mBlockSize;
     sead::SafeArray<u32,            cBlock_Num> mBlockEntryNum;
-    sead::SafeArray<MapActorData*,  64>         _b8;
+    sead::SafeArray<ActorInitDat*,  64>         _b8;
     sead::SafeArray<u32,            64>         _1b8;
     sead::SafeArray<u32,            64>         _2b8;
 };

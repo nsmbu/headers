@@ -41,11 +41,11 @@ class Bomhei : public CarryEnemy
 
 public:
     // Address: 0x1005D49C
-    static const ActorCreateInfo cActorCreateInfo;
+    static const ActorData cActorCreateInfo;
 
 public:
     // Address: 0x022D0334
-    Bomhei(const ActorCreateParam& param);
+    Bomhei(const ActorCreateParameter& param);
     virtual ~Bomhei() { }
 
 protected:

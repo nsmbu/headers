@@ -1,11 +1,12 @@
 #pragma once
 
-#include <actor/ActorCreateParam.h>
+#include <actor/ActorCreateParameter.h>
 
 #include <container/seadOffsetList.h>
 #include <heap/seadHeap.h>
 #include <prim/seadBitFlag.h>
 #include <prim/seadRuntimeTypeInfo.h>
+#include <audio/GameAudio.h>
 
 class ActorMgr;
 
@@ -83,9 +84,9 @@ public:
     /**
      * @brief The unique identifier handle for this actor.
      */
-    ActorUniqueID getActorUniqueID() const
+    UniqueID getUniqueID() const
     {
-        return mActorUniqueID;
+        return mUniqueID;
     }
 
     /**
@@ -137,7 +138,7 @@ public:
     /**
      * @brief Extra level designer configuration. Also known as "nybbles" or "spritedata".
      */
-    ActorParamEx1 getParamEx() const
+    ActorParameterEx1 getParamEx() const
     {
         return mParamEx;
     }
@@ -183,20 +184,33 @@ public:
      */
     void removeChild(ActorBase* child);
 
-protected:
+    /**
+     * @brief Plays the coin-get sound.
+     * @param player_no The target player whose controller's speaker to broadcast the sound from.
+     * @param position The spatial position from which to emit the sound.
+     */
+    void getCoinSE(s32 player_no, const sead::Vector3f& position)
+    {
+        GameAudio::getAudioObjMap()->startSound(
+            "SE_OBJ_GET_COIN",
+            position,
+            GameAudio::getRemotePlayer(player_no)
+        );
+    }
+
+public:
     /**
      * @brief Constructs an actor from configuration data.
      * @param param Parameters and user configuration to pass to the actor.
      * @par Address: 0x02002CE0
      */
-    ActorBase(const ActorCreateParam& param);
+    ActorBase(const ActorCreateParameter& param);
     /**
      * @brief Destroys the actor and orphans all of its children.
      * @par Address: 0x02002E68
      */
     virtual ~ActorBase();
 
-protected:
     /**
      * @brief Callback invoked before the @c create operation.
      * @return Whether to continue to the main @c create callback, rather than skip to @c postExecute().
@@ -243,7 +257,7 @@ protected:
      * @details The actor must subscribe to the @c finalUpdate signal on a per-frame basis via @c ActorMgr::addToFinalUpdate().
      * @par Address: 0x02002F94
      */
-    virtual void finalUpdate();
+    virtual void lastExecute();
 
     /**
      * @brief Callback invoked before the @c draw operation.
@@ -273,21 +287,21 @@ protected:
      * @details Returns @c true by default.
      * @par Address: 0x02002FA8
      */
-    virtual bool preDelete();
+    virtual bool preDestroy();
     /**
      * @brief Main deletion callback for the actor.
      * @return A signal for how to handle the operation.
      * @details @c Failure and @c Success both result in deletion. Only @c Wait results in a stall.
      * @par Address: 0x02002FB0
      */
-    virtual Result doDelete();
+    virtual Result destroy();
     /**
      * @brief Unconditionally called callback for after the @c delete operation.
      * @param state The signal which @c doDelete() returned, or @c cState_None if @c preDelete() skipped it.
      * @note The actor has still technically not been deleted yet at this point, that occurs right after this call.
      * @par Address: 0x02002F3C
      */
-    virtual void postDelete(MainState state);
+    virtual void postDestroy(MainState state);
 
 protected:
     void setActive_(bool active)
@@ -296,29 +310,29 @@ protected:
     }
 
 protected:
-    sead::Heap*     mActorHeap;             ///< Personal heap for this actor of type @c sead::FrameHeap. Capacity of @c 0x20200, but profiles in the player whitelist get @c 0x1A0200.
-    ActorUniqueID   mActorUniqueID;         ///< The unique identifier handle for this actor.
-    Profile*        mActorProfile;          ///< The specific profile which this actor was instantiated from.
-    bool            mCreatedImmediately;    ///< Whether the actor was created with @c ActorMgr::createImmediately(), rather than deferred with @c ActorMgr::createLater().
-    bool            mIsMapActor;            ///< Whether the actor was spawned from the level with @c ActorCreateMgr, rather than dynamically spawned by another actor.
-    bool            mIsActive;              ///< Whether the @c create operation has completed and the actor is executing.
-    bool            mDeleteRequestFlag;     ///< Whether to delete this actor on the next frame.
-    u32             mParam0;                ///< Level designer configuration. Also known as "nybbles" or "spritedata".
-    u32             mParam1;                ///< Level designer configuration. Also known as "nybbles" or "spritedata".
-    ActorParamEx1   mParamEx;               ///< Extra level designer configuration. Also known as "nybbles" or "spritedata".
-    List            mChildList;             ///< @c sead::OffsetList used for holding child actors spawned by this actor. Managed automatically if @c param.parent_id is set when spawning.
-    sead::ListNode  mChildNode;             ///< Implementation detail. Used to track our position in the parent's @c mChildList.
-    ActorBase*      mParent;                ///< The parent actor if this actor is a child. Automatically set to @c nullptr if orphaned.
-    sead::ListNode  mExecuteNode;           ///< Implementation detail. Used to track our position in @c ActorMgr lists.
-    sead::ListNode  mDrawNode;              ///< Implementation detail. Used to track our position in @c ActorMgr `mDrawManage` list.
-    sead::BitFlag32 mFlag;                  ///< Properties which control execution policy during events. See @c ActorBase::Flag enum.
+    sead::Heap*         mActorHeap;             ///< Personal heap for this actor of type @c sead::FrameHeap. Capacity of @c 0x20200, but profiles in the player whitelist get @c 0x1A0200.
+    UniqueID            mUniqueID;              ///< The unique identifier handle for this actor.
+    Profile*            mActorProfile;          ///< The specific profile which this actor was instantiated from.
+    bool                mCreatedImmediately;    ///< Whether the actor was created with @c ActorMgr::createImmediately(), rather than deferred with @c ActorMgr::createLater().
+    bool                mIsMapActor;            ///< Whether the actor was spawned from the level with @c ActorCreateMgr, rather than dynamically spawned by another actor.
+    bool                mIsActive;              ///< Whether the @c create operation has completed and the actor is executing.
+    bool                mDeleteRequestFlag;     ///< Whether to delete this actor on the next frame.
+    u32                 mParam0;                ///< Level designer configuration. Also known as "nybbles" or "spritedata".
+    u32                 mParam1;                ///< Level designer configuration. Also known as "nybbles" or "spritedata".
+    ActorParameterEx1   mParamEx;               ///< Extra level designer configuration. Also known as "nybbles" or "spritedata".
+    List                mChildList;             ///< @c sead::OffsetList used for holding child actors spawned by this actor. Managed automatically if @c param.parent_id is set when spawning.
+    sead::ListNode      mChildNode;             ///< Implementation detail. Used to track our position in the parent's @c mChildList.
+    ActorBase*          mParent;                ///< The parent actor if this actor is a child. Automatically set to @c nullptr if orphaned.
+    sead::ListNode      mExecuteNode;           ///< Implementation detail. Used to track our position in @c ActorMgr lists.
+    sead::ListNode      mDrawNode;              ///< Implementation detail. Used to track our position in @c ActorMgr `mDrawManage` list.
+    sead::BitFlag32     mFlag;                  ///< Properties which control execution policy during events. See @c ActorBase::Flag enum.
 
     friend class ActorMgr;
 };
-static_assert(sizeof(ActorBase) == 0x50);
+static_assert(sizeof(ActorBase) == 0x50, "ActorBase size mismatch");
 
 template <typename T>
-ActorBase* TActorFactory(const ActorCreateParam& param)
+ActorBase* TActorFactory(const ActorCreateParameter& param)
 {
     return new T(param);
 }

@@ -93,31 +93,53 @@ public:
      * @brief 0.0f
      * @par Address: 0x10004E20
      */
-    static const f32 cScoreX;
+    static const f32 cScoreDispXPos;
     /**
      * @brief 24.0f
      * @par Address: 0x10004E24
      */
-    static const f32 cScoreY;
+    static const f32 cScoreDispYPos;
 
 public:
     // Address: 0x020279E0
     ScoreMgr();
 
+    // Address: Deleted
+    void allOneUpSmallScore(const sead::Vector3f& pos);
+    // Address: 0x02027A8C
+    void addPlayerRest(s32 player_no, s32, bool sound);
     // Address: 0x02027BD8
-    void incRestAll(bool sound);
-    // Address: 0x02027C80
-    void ScoreSet(const sead::Vector3f& small_score_pos, ScoreType type, s32 player_no, bool rest_sound = true);
-    // Address: 0x02027DA8
-    void ScoreSet(Actor* actor_for_small_score_pos, ScoreType type, s32 player_no, f32 small_score_offset_x = cScoreX, f32 small_score_offset_y = cScoreY);
-    // Address: 0x02027DF4
-    void ScoreSet2(const sead::Vector3f& small_score_pos, ScoreType type, s32 player_no);
-    // Address: 0x02027EBC
-    void ScoreSet2(Actor* actor_for_small_score_pos, ScoreType type, s32 player_no, f32 small_score_offset_x = cScoreX, f32 small_score_offset_y = cScoreY);
-    // Address: 0x02027F04
-    void UnKnownScoreCreate(const sead::Vector3f& small_score_pos, ScoreType type);
-    // Address: 0x02027FCC
-    void UnKnownScoreSet(Actor* actor_for_small_score_pos, ScoreType type, f32 small_score_offset_x = 0.0f, f32 small_score_offset_y = 24.0f);
+    void setAllOneUp(bool sound);
     // Address: 0x0202821C
-    void incRestAllWithSmallScore(bool sound);
+    void setEntryAllPlayerOneUp(bool sound);
+    // Address: Deleted
+    void setEntryPlayerOneUp_(s32 player_no, bool sound);
+    // Address: 0x02028140
+    void playerScoreSet(u32 type, s32 player_no, bool sound);
+    // Address: 0x0202839C
+    void setAllPlayerOneUpForZorome(f32 small_score_offset_y, bool sound);
+    // Address: 0x020282E0
+    void setPlayerOneUpForZorome_(s32 player_no, f32*, bool sound);
+    // Address: Deleted
+    void baloonPlayerSetOneUpForZorome_(s32 player_no, f32, bool sound);
+    // Address: 0x02027C80
+    void scoreSet(const sead::Vector3f& pos, u32 type, s32 player_no, bool);
+    // Address: 0x02027DA8
+    void chengePosScoreSet(Actor* actor_for_small_score_pos, u32 type, s32 player_no, f32 small_score_offset_x = cScoreDispXPos, f32 small_score_offset_y = cScoreDispYPos);
+    // Address: 0x02027DF4
+    void comboScoreSet(const sead::Vector3f& small_score_pos, u32 type, s32 player_no);
+    // Address: 0x02027EBC
+    void chengePosComboScoreSet(const Actor* actor_for_small_score_pos, u32 type, s32 player_no, f32 small_score_offset_x = cScoreDispXPos, f32 small_score_offset_y = cScoreDispYPos);
+    // Address: 0x02027F04
+    void unKnownScoreSet(const sead::Vector3f& small_score_pos, u32 type);
+    // Address: 0x02027FCC
+    void chengePosUnKnownScoreSet(const Actor* actor_for_small_score_pos, u32 type, f32 small_score_offset_x = 0.0f, f32 small_score_offset_y = 24.0f);
+    // Address: Deleted
+    void miniGameScoreSet(const sead::Vector3f&, u32 type, s32 player_no);
+    // Address: 0x02028014
+    bool getScorePlayerHeadPos(sead::Vector3f& pos, s32 player_no);
+    // Address: Deleted
+    void goalComboScoreSet(sead::Vector3f& pos, u32 type, s32 player_no);
+    // Address: Deleted
+    void chengePosGoalComboScoreSet(const Actor*, u32 type, s32 player_no, f32, f32);
 };

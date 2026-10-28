@@ -1,13 +1,11 @@
 #pragma once
 
-#include <actor/ProfileInfo.h>
-
 #include <basis/seadAssert.h>
 #include <container/seadSafeArray.h>
 #include <heap/seadHeap.h>
 #include <math/seadVector.h>
 
-struct ActorCreateInfo
+struct ActorData
 {
     enum Flag : u16
     {
@@ -21,7 +19,7 @@ struct ActorCreateInfo
         cFlag_CoinBlock                  = 1 << 8,  ///< Participates in coin-block counting routines, but only if nybble 20 is 0 and nybble 13 & 1 is 0 (aka mParam1 & 0x1000000F)
         cFlag_PakkunBlack                = 1 << 9,  ///< Spawns as a muncher tile instead of constructing an Actor instance.
         cFlag_ManagedChildTemplate       = 1 << 10, ///< Treats creation of the map actor as a reusable operation from an external manager actor.
-        cFlag_GroupedScrollSetupDeferred = 1 << 11, ///< Both @c cFlag_ScrollSetupDeferred and @c cFlag_Grouped
+        cFlag_Jouchu                     = 1 << 11, ///< Both @c cFlag_ScrollSetupDeferred and @c cFlag_Grouped
 
         cFlag_None = 0
     };
@@ -50,15 +48,17 @@ struct ActorCreateInfo
     Flag flag;
 
     // Address: 0x100018F4
-    static const ActorCreateInfo cDefault;
+    static const ActorData cDefault;
 };
-static_assert(sizeof(ActorCreateInfo) == 0x24, "ActorCreateInfo size mismatch");
+static_assert(sizeof(ActorData) == 0x24, "ActorData size mismatch");
 
 class ActorBase;
-struct ActorCreateParam;
+struct ActorCreateParameter;
 class ModelResource;
 
-typedef ActorBase* (*ActorFactory)(const ActorCreateParam&);
+typedef ActorBase* (*ActorFactory)(const ActorCreateParameter&);
+
+typedef s32 ProfileID;
 
 class Profile
 {
@@ -84,6 +84,12 @@ public:
         cFlag_None              = 0
     };
     static_assert(sizeof(Flag) == 4);
+
+public:
+    enum
+    {
+        cProfileID_Max = 913 // Profiles 910, 911 and 912 are extra (samples)
+    };
 
 public:
     friend Flag operator|(const Flag& lhs, const Flag& rhs)
@@ -114,7 +120,7 @@ public:
     }
 
 public:
-    Profile(ActorFactory factory, s32 id, const sead::SafeString& name, const ActorCreateInfo* create_info = nullptr, Flag flag = cFlag_None);
+    Profile(ActorFactory factory, ProfileID id, const sead::SafeString& name, const ActorData* create_info = nullptr, u32 flag = cFlag_None, void (*)(sead::hostio::Context*) = nullptr);
 
     ActorFactory getActorFactory() const
     {
@@ -122,12 +128,12 @@ public:
         return mFactory;
     }
 
-    s32 getID() const
+    ProfileID getID() const
     {
         return mID;
     }
 
-    const ActorCreateInfo& getActorCreateInfo() const
+    const ActorData& getActorCreateInfo() const
     {
         return *mActorCreateInfo;
     }
@@ -145,23 +151,23 @@ public:
     // Address: 0x020195FC
     void loadResource(sead::Heap* heap);
     // Address: 0x020196CC
-    void unloadResource(sead::Heap* heap);
+    void unloadResource();
     // Address: 0x020196E4
-    ModelResource* getResource(u32 index) const;
+    ModelResource* getMdlResource(u32 index) const;
 
-    static Profile* get(s32 id);
+    static Profile* getProfile(ProfileID id);
 
 protected:
     ActorFactory            mFactory;
-    s32                     mID;
-    const ActorCreateInfo*  mActorCreateInfo;
+    ProfileID               mID;
+    const ActorData*  mActorCreateInfo;
     bool                    mIsResLoaded;
     Flag                    mFlag;
 
     // Address: 0x101ED8DC
     static sead::SafeArray<
         Profile*,
-        ProfileInfo::cProfileID_Max
+        cProfileID_Max
     >   sProfileList;
 };
 static_assert(sizeof(Profile) == 0x14, "Profile size mismatch");

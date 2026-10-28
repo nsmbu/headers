@@ -9,40 +9,40 @@
  *          counter. This ensures that recycled array slots are never misidentified
  *          as the original actor.
  */
-class ActorUniqueID
+class UniqueID
 {
 public:
     /// Represents an invalid or uninitialized ID.
     static const u32 cInvalidID         = 0;
     /// The maximum allowed array index (10 bits; 1023).
-    static const u32 cArrayIndexMax     = 0x3ff;
+    static const u32 cArrayIndexMax     = 0x3FF;
     /// The maximum allowed global create index (22 bits; 4,194,303)
-    static const u32 cCreateIndexMax    = 0x3fffff;
+    static const u32 cCreateIndexMax    = 0x3FFFFF;
 
 public:
     /**
-     * @brief Constructs an invalid ActorUniqueID.
+     * @brief Constructs an invalid UniqueID.
      */
-    ActorUniqueID()
+    UniqueID()
     {
         setValue(cInvalidID);
     }
 
     /**
-     * @brief Constructs an ActorUniqueID from a raw 32-bit packed value containing both the array index and create index.
+     * @brief Constructs an UniqueID from a raw 32-bit packed value containing both the array index and create index.
      * @param id The raw 32-bit representation of the desired ID to create.
      */
-    explicit ActorUniqueID(u32 id)
+    explicit UniqueID(u32 id)
     {
         setValue(id);
     }
 
     /**
-     * @brief Constructs an ActorUniqueID by packing a physical index and a global generation index.
+     * @brief Constructs an UniqueID by packing a physical index and a global generation index.
      * @param i_array_index The 10-bit physical index in the ActorPtrCache array.
      * @param i_create_index The 22-bit global generation counter.
      */
-    ActorUniqueID(u32 i_array_index, u32 i_create_index)
+    UniqueID(u32 i_array_index, u32 i_create_index)
     {
         setValue(i_array_index, i_create_index);
     }
@@ -111,23 +111,22 @@ public:
     }
 
     /**
-     * @brief Compares two ActorUniqueIDs for equality.
+     * @brief Compares two UniqueIDs for equality.
      */
-    friend bool operator==(const ActorUniqueID& lhs, const ActorUniqueID& rhs)
+    friend bool operator==(const UniqueID& lhs, const UniqueID& rhs)
     {
         return lhs.mValue == rhs.mValue;
     }
 
     /**
-    * @brief Compares two ActorUniqueIDs for inequality.
+    * @brief Compares two UniqueIDs for inequality.
     */
-    friend bool operator!=(const ActorUniqueID& lhs, const ActorUniqueID& rhs)
+    friend bool operator!=(const UniqueID& lhs, const UniqueID& rhs)
     {
         return lhs.mValue != rhs.mValue;
     }
 
 private:
-    /// The raw 32-bit packed value containing both the array index and create index.
-    u32 mValue;
+    u32 mValue; ///< The raw 32-bit packed value containing both the array index and create index.
 };
-static_assert(sizeof(ActorUniqueID) == 4);
+static_assert(sizeof(UniqueID) == 0x4, "UniqueID size mismatch");

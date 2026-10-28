@@ -15,7 +15,7 @@ class ChikuwaBlockBase : public ActorMultiState
 {
 public:
     // Address: 0x02747DE4
-    ChikuwaBlockBase(const ActorCreateParam& param);
+    ChikuwaBlockBase(const ActorCreateParameter& param);
     // Address: 0x02748EC4
     ~ChikuwaBlockBase() override { };
 

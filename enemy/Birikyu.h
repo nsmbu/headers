@@ -1,7 +1,7 @@
 #pragma once
 
-#include <actor/ChibiYoshiEatData.h>
-#include <actor/EatData.h>
+#include <actor/ChibiEatCallback.h>
+#include <actor/EatCallback.h>
 #include <actor/Profile.h>
 #include <collision/ActorCollisionDrcTouchCallback.h>
 #include <effect/EffectObj.h>
@@ -27,10 +27,10 @@ class Birikyu : public Enemy
 {
 public:
     // Address: 0x1005CC30
-    static const ActorCreateInfo cActorCreateInfo;
+    static const ActorData cActorCreateInfo;
 
 public:
-    Birikyu(const ActorCreateParam& param)
+    Birikyu(const ActorCreateParameter& param)
         : Enemy(param)
         , _18fc(0)
         , _1900(0.0f)
@@ -115,8 +115,8 @@ protected:
     s32                 mAttackTimer;
     u32                 _18fc;
     f32                 _1900;
-    EatData             mEatData;
-    ChibiYoshiEatData   mChibiYoshiEatData;
+    EatCallback             mEatData;
+    ChibiEatCallback   mChibiYoshiEatData;
     Light               mLight;
     u8                  _1994; // bool?
     ActorCollisionCheck mCollisionCheck2;

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <actor/ActorUniqueID.h>
+#include <actor/UniqueID.h>
 
 #include <math/seadVector.h>
 
@@ -52,7 +52,7 @@ public:
      * @param owner_id The ID of the actor which this data belongs to.
      * @par Address: 0x0272D5EC
      */
-    ChibiYoshiAwaData(ActorUniqueID owner_id);
+    ChibiYoshiAwaData(UniqueID owner_id);
 
     /**
      * @brief Called when a bubble hits the actor and either catches it or breaks.
@@ -140,8 +140,8 @@ public:
     }
 
 protected:
-    ActorUniqueID   mOwnerID;           ///< The ID of the actor which this data belongs to.
-    ActorUniqueID   mChibiYoshiAwaID;   ///< The ID of the bubble which we are currently interacting with.
+    UniqueID   mOwnerID;           ///< The ID of the actor which this data belongs to.
+    UniqueID   mChibiYoshiAwaID;   ///< The ID of the bubble which we are currently interacting with.
     AwaType         mAwaType;           ///< The type of interaction the bubble will have upon contact with the actor.
     State           mState;             ///< Which stage of interaction we are currently in.
     ItemType        mItemType;          ///< The type of powerup item which has a chance to spawn in the bubble when caught.

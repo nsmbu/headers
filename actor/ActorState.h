@@ -13,7 +13,7 @@ class ActorState : public ActorCollision
 
 public:
     // Address: 0x0200A9C0
-    ActorState(const ActorCreateParam& param);
+    ActorState(const ActorCreateParameter& param);
     ~ActorState() override { }
 
     void executeState()
@@ -45,7 +45,7 @@ protected:
     FStateMgr<ActorState>   mStateMgr;
   //u32                     _17c4[4 / sizeof(u32)]; // Alignment???
 };
-static_assert(sizeof(ActorState) == 0x17C8);
+static_assert(sizeof(ActorState) == 0x17C8, "ActorState size mismatch");
 
 // vtbl Address: 0x10001048
 class ActorMultiState : public ActorCollision
@@ -56,7 +56,7 @@ class ActorMultiState : public ActorCollision
 
 public:
     // Address: 0x0200AA8C
-    ActorMultiState(const ActorCreateParam& param);
+    ActorMultiState(const ActorCreateParameter& param);
     ~ActorMultiState() override { }
 
     void executeState()
@@ -87,4 +87,4 @@ public:
 protected:
     FStateStateMgr<ActorMultiState> mStateMgr;
 };
-static_assert(sizeof(ActorMultiState) == 0x17C8);
+static_assert(sizeof(ActorMultiState) == 0x17C8, "ActorMultiState size mismatch");

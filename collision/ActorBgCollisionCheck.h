@@ -1,6 +1,6 @@
 #pragma once
 
-#include <actor/ActorUniqueID.h>
+#include <actor/UniqueID.h>
 #include <collision/ActorBgHitCheckCallback.h>
 #include <collision/BasicBgCollisionCheck.h>
 #include <collision/BgCollisionCat.h>
@@ -43,7 +43,7 @@ private:
     Angle           mAngle;
     sead::Vector2f  _c;
     sead::Vector2f  _14;
-    ActorUniqueID   mActorUniqueID;
+    UniqueID   mActorUniqueID;
     BgCollision*    mOwner;
   //u32             _24[4 / sizeof(u32)];   // Alignment???
     u64             mBgCheckData;           // See BgUnitCode

@@ -25,7 +25,7 @@ class Boss : public Enemy
 
 public:
     // Address: 0x0202B968
-    Boss(const ActorCreateParam& param);
+    Boss(const ActorCreateParameter& param);
 
 protected:
     // Address: 0x0202BB68
@@ -573,7 +573,7 @@ protected:
     >                           _1890;
     GameAudio::AudioObjctEmy    mAudioObj;
     s16                         mAudioObjSeqVar;
-    AttentionLookat             mAttentionLookat;
+    AttentionInfo             mAttentionLookat;
     EnemyBoyoMgr                mBoyoMgr;
     ActorCollisionCheck         mCollisionCheckDrcTouch;    // Maybe?
     BossDrcTouchCB              mDrcTouchCallback;

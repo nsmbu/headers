@@ -28,7 +28,7 @@ public:
     static_assert(sizeof(Form) == 4);
 
 public:
-    ChangeBlockCoinBase(const ActorCreateParam& param);
+    ChangeBlockCoinBase(const ActorCreateParameter& param);
     virtual ~ChangeBlockCoinBase() { }
 
     // Address: 0x02726610

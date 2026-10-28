@@ -155,7 +155,7 @@ public:
     // ------------------------------------ PlayerObject.cpp ------------------------------------ //
 
     // Address: 0x02923520
-    PlayerObject(const ActorCreateParam& param);
+    PlayerObject(const ActorCreateParameter& param);
 
     virtual ~PlayerObject()
     {
@@ -886,9 +886,9 @@ public:
     void releaseCarryActor();
 
     // Address: 0x0292C70C
-    void setCarryBase(ActorUniqueID actor_id, CarryType type);
+    void setCarryBase(UniqueID actor_id, CarryType type);
     // Address: 0x0292D060
-    void setLiftUpBase(ActorUniqueID actor_id, CarryType type);
+    void setLiftUpBase(UniqueID actor_id, CarryType type);
     // Address: 0x0292D138
     virtual bool setCarry(Actor* actor, CarryType type);
 
@@ -924,7 +924,7 @@ public:
     // Address: 0x0292DAE8
     void calcLiftUpOffsetScale();
 
-    ActorUniqueID getCarryActorID() const
+    UniqueID getCarryActorID() const
     {
         return mCarryActorID;
     }
@@ -1178,7 +1178,7 @@ protected:
     sead::Vector2f                  _2774;
     s32                             mStarTimer;
     s32                             mStarCnt;
-    ActorUniqueID                   mCarryActorID;
+    UniqueID                   mCarryActorID;
     CarryStep                       mCarryStep;
     CarryStep                       mCarryStepPrev;
     f32                             mCarryStepTimer;
@@ -1233,7 +1233,7 @@ protected:
     s32                             mSlideAttackBgTimer;
     f32                             _2a48;
     DirType                         mWallSlideDir;
-    ActorUniqueID                   mLiftUpActorID;
+    UniqueID                   mLiftUpActorID;
     f32                             mLiftUpReserveSpeed;
     f32                             mLiftUpOffsetRatio;
     CarryType                       mCarryType;
@@ -1287,7 +1287,7 @@ protected:
     EffectObj                       mSpinHipAttackEffect;
     u32                             _2cc4;
     u32                             _2cc8;
-    ActorUniqueID                   mPlayerIceActorID;
+    UniqueID                   mPlayerIceActorID;
     QuakeMode                       mQuakeMode;
     s32                             mQuakeRumbleTimer;
     f32                             _2cd8;
@@ -1328,8 +1328,8 @@ protected:
     bool                            _2d84;
     sead::Vector2f                  mEatPosReserve;
     DirType                         _2d90;
-    ActorUniqueID                   mPlayerHangChildActorID;
-    ActorUniqueID                   mPlayerHangParentActorID;
+    UniqueID                   mPlayerHangChildActorID;
+    UniqueID                   mPlayerHangParentActorID;
     u32                             _2d9c;
     sead::Matrixf                   mJrCrownMtx;
     u32                             _2dd0;

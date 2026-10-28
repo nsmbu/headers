@@ -13,7 +13,7 @@ class RingBase : public ActorMultiState
 
 public:
     // Address: 0x02871254
-    RingBase(const ActorCreateParam& param);
+    RingBase(const ActorCreateParameter& param);
     // Address: 0x02872288
     ~RingBase() override { }
 

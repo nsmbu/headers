@@ -7,7 +7,7 @@
 
 class ActorBase;
 class ActorFindFunc;
-class ActorUniqueID;
+class UniqueID;
 
 class ActorPtrCache
 {
@@ -23,8 +23,8 @@ public:
     ~ActorPtrCache();
 
     // Address: 0x0200A300
-    iterator find(ActorFindFunc* io_find_func, iterator it_begin) const;
-    iterator find(ActorFindFunc* io_find_func) const
+    iterator find(ActorFindFunc& io_find_func, iterator it_begin) const;
+    iterator find(ActorFindFunc& io_find_func) const
     {
         return find(io_find_func, getActorBegin());
     }
@@ -45,15 +45,18 @@ public:
     // Address: 0x0200A550
     void popActor(const ActorBase* i_actor);
     // Address: 0x0200A5C8
-    ActorBase* getActorPtr(ActorUniqueID id) const;
+    ActorBase* getActorPtr(UniqueID id) const;
     // Address: Deleted
-    ActorBase* getActorPtrIncludingAboutToBeErased(ActorUniqueID id) const;
+    ActorBase* getActorPtrIncludingAboutToBeErased(UniqueID id) const;
 
     // Address: 0x0200A608
-    u32 count(ActorFindFunc* io_find_func) const;
+    u32 count(ActorFindFunc& io_find_func) const;
 
     // Address: 0x0200A6AC
     void forEach(ActorForEachCallback callback, ActorForEachParam param) const;
+
+    // Address: Deleted
+    void forEachPtr(ActorForEachCallback callback, ActorForEachParam param) const;
 
     u32 getEmptyHeadIndex() const
     {
@@ -72,4 +75,4 @@ private:
     u32                         mNextCreateIndex;
     bool                        mCreateIndexOverflow;
 };
-static_assert(sizeof(ActorPtrCache) == 0x18);
+static_assert(sizeof(ActorPtrCache) == 0x18, "ActorPtrCache size mismatch");

@@ -1,10 +1,10 @@
 #pragma once
 
-#include <actor/AttentionLookat.h>
+#include <actor/AttentionInfo.h>
 
 #include <container/seadOffsetList.h>
 
-class ActorBase;
+class Actor;
 
 // vtbl Address: 0x10001364
 class AttentionMgr
@@ -26,22 +26,24 @@ public:
     }
 
     // Address: 0x0200CC8C
-    void entry(const AttentionLookat& lookat);
+    void entry(AttentionInfo* info);
     // Address: 0x0200CCD0
-    void release(const AttentionLookat& lookat);
+    void release(AttentionInfo* info);
 
     // Address: 0x0200CD2C
-    const AttentionLookat* search(const ActorBase& actor_self, const sead::Vector2f& pos_self);
+    const AttentionInfo* searchActor(const Actor* actor_self, const sead::Vector2f& pos_self) const;
 
 protected:
-    sead::OffsetList<AttentionLookat>   mLookatList;
+    sead::OffsetList<AttentionInfo>   mLookatList;
 
     /**
      * @brief Square of maximum possible value of all max-distances (square of 32 blocks = 262144 sq units)
+     * @details 262144.0f
      * @par Address: 0x10001350
      */
     static const f32 cMaxDistanceSqMax;
+
     // Address: 0x101C30D8
-    static f32 sMaxDistanceSq[AttentionLookat::cDistance_Num];
+    static f32 sMaxDistanceSq[AttentionInfo::cDistance_Num];
 };
-static_assert(sizeof(AttentionMgr) == 0x24);
+static_assert(sizeof(AttentionMgr) == 0x24, "AttentionMgr size mismatch");

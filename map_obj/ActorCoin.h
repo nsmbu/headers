@@ -11,7 +11,7 @@ class ActorCoin : public ActorCoinBase
 
 public:
     // Address: 0x026BC2E8
-    ActorCoin(const ActorCreateParam& param);
+    ActorCoin(const ActorCreateParameter& param);
     // Address: 0x026BCC1C
     ~ActorCoin() override { }
 

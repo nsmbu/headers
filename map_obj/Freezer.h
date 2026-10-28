@@ -12,7 +12,7 @@ class Freezer : public ActorState
 
 public:
     // Address: 0x02779968
-    Freezer(const ActorCreateParam& param);
+    Freezer(const ActorCreateParameter& param);
 
     // TODO: other methods, states
 

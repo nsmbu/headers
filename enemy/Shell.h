@@ -2,7 +2,7 @@
 
 #include <collision/ActorCollisionDrcTouchCallback.h>
 #include <enemy/EnemyBoyoMgr.h>
-#include <actor/EatData.h>
+#include <actor/EatCallback.h>
 #include <effect/EffectObj.h>
 #include <enemy/CarryEnemy.h>
 #include <enemy/EnemyChibiYoshiEatData.h>
@@ -53,7 +53,7 @@ public:
 
 public:
     // Address: 0x024521A0
-    Shell(const ActorCreateParam& param);
+    Shell(const ActorCreateParameter& param);
     // Address: 0x02459724
     virtual ~Shell();
 
@@ -269,7 +269,7 @@ protected:
     u8          	       _18e2;
     u8                     _18e3;
     f32                    _18e4;
-    ActorUniqueID          _18e8;
+    UniqueID          _18e8;
     u32                    _18ec;
     bool                   _18f0;
     u8                     _18f1;
@@ -283,7 +283,7 @@ protected:
     u32                    _1908;
     u32                    _190c;
     u32                    _1910;
-    EatData                mYoshiEatData;
+    EatCallback                mYoshiEatData;
     EnemyChibiYoshiEatData mChibiYoshiEatData;
     DrcTouchCB             mDrcTouchCallback;
     EnemyBoyoMgr           mBoyoMgr;

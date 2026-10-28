@@ -21,7 +21,7 @@ public:
 
 public:
     // Address: 0x02721B68
-    CarryObjBase(const ActorCreateParam& param, const FukidashiInfo& fukidashi_info);
+    CarryObjBase(const ActorCreateParameter& param, const FukidashiInfo& fukidashi_info);
     // Address: 0x02722AE4
     ~CarryObjBase() override { }
 

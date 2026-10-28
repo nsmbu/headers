@@ -82,7 +82,7 @@ public:
     static_assert(sizeof(PlayerHit) == 0xC);
 
 public:
-    BlockCoinBase(const ActorCreateParam& param);
+    BlockCoinBase(const ActorCreateParameter& param);
     virtual ~BlockCoinBase() { }
 
     /**

@@ -7,7 +7,7 @@ class ActorBlockAngle : public ActorBlockBase
     SEAD_RTTI_OVERRIDE(ActorBlockAngle, ActorBlockBase)
 
 public:
-    ActorBlockAngle(const ActorCreateParam& param);
+    ActorBlockAngle(const ActorCreateParameter& param);
     virtual ~ActorBlockAngle() { }
 
     bool init();

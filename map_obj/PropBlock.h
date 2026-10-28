@@ -11,7 +11,7 @@ class PropBlock : public CarryBlockBase
 
 public:
     // Address: 0x02868440
-    PropBlock(const ActorCreateParam& param);
+    PropBlock(const ActorCreateParameter& param);
 
 private:
     u32 _1800[(0x1C4C - 0x1800) / sizeof(u32)];
